@@ -8,15 +8,17 @@ This block is written and re-added by `next dev` — verify at `node_modules/nex
 
 <!-- END:nextjs-agent-rules -->
 
-## Working rules
+## Environment
 
-- **Always run `bun run lint` then `bun run typecheck`** after changing code.
-- **Never install a new dependency without asking first.**
+Copy `.env.example` to `.env` (gitignored via `.env*`) and fill in the token:
 
-## Conventions
+```bash
+REGION_SERVICE_URL="http://localhost:8085/api/v1"
+REGION_SERVICE_TOKEN="<jwt>"
+```
 
-- **Server Components by default.** Add `"use client"` only when a component needs state, effects, or browser APIs — push it to the leaf, not the page.
-- **English** for code, comments, commit messages, and identifiers.
+- Server-only: never prefix with `NEXT_PUBLIC_` and never read them in a `"use client"` file — the token must not reach the browser.
+- Never hardcode the URL or token, and never commit or paste the token into code or docs.
 
 ## Commands
 
@@ -30,6 +32,74 @@ bun run lint
 bun run typecheck
 ```
 
+## Architecture
+
+```
+app/                      # Routes only: thin page.tsx wrappers + `metadata`
+components/
+  ui/                     # shadcn components only. Never edit by hand.
+  shared/                 # Custom reusable pieces + small client leaves
+  sections/               # Sections composed from ui/ + shared/
+  pages/                  # Pages composed from sections/
+  layouts/                # Navbar, footer, etc. Rendered from app/layout.tsx
+data/                     # Section props, one file per section
+public/                   # Static assets (e.g. logo-akademi-asn.webp)
+```
+
+- **Use shadcn first.** If shadcn has the component, add it with `bunx shadcn add <name>`. Otherwise build it in `components/shared/` on top of `radix-ui` primitives. Never modify files in `components/ui/`; customize via `className` or a wrapper in `shared/`.
+- **`app/**/page.tsx`stays thin:** export`metadata`(SEO lives here, not in`data/`) and render one component from `components/pages/`.
+- **Sections are Server Components.** Move interactive parts (carousel, tabs, …) into a separate `"use client"` file in `components/shared/`.
+- **Naming:** every file under `components/` is kebab-case (`program-bimbel-online.tsx`). The component inside is a PascalCase arrow function with a default export:
+  ```tsx
+  const ProgramBimbelOnline = () => { … };
+  export default ProgramBimbelOnline;
+  ```
+  Indonesian domain terms are fine in names (`bimbel`, `cpns`); treat acronyms as words (`Cpns`, not `CPNS`).
+- **Props describe content, not tags:** `title` / `description`, not `h1` / `p`.
+- **Images:** reference by string path from `public/` and always render with `next/image`.
+
+### Routes
+
+| Page component            | Route                              |
+| ------------------------- | ---------------------------------- |
+| `pages/home.tsx`          | `app/page.tsx`                     |
+| `pages/home-location.tsx` | `app/[...locations]/page.tsx`      |
+| `pages/cpns.tsx`          | `app/cpns/page.tsx`                |
+| `pages/cpns-location.tsx` | `app/cpns/[...locations]/page.tsx` |
+
+`pppk` and `bumn` follow the same pattern as `cpns`. `[...locations]` segments are province / regency / district / village.
+
+## Data pattern
+
+Pages never pass literal values to sections. All section content lives in `data/`.
+
+- `data/<section-file-name>.ts` mirrors `components/sections/<section-file-name>.tsx`.
+- The section exports its props type; each data entry is named `<section><Page>` and checked with `satisfies`:
+
+  ```tsx
+  // components/sections/jumbotron.tsx
+  export type JumbotronProps = { title: string; description: string; backgroundImage: string; heroImage: string };
+  const Jumbotron = ({ title, description, backgroundImage, heroImage }: JumbotronProps) => { … };
+  export default Jumbotron;
+
+  // data/jumbotron.ts
+  import type { JumbotronProps } from "@/components/sections/jumbotron";
+  export const jumbotronHome = { … } satisfies JumbotronProps;
+  export const jumbotronCpns = { … } satisfies JumbotronProps;
+
+  // components/pages/home.tsx
+  <Jumbotron {...jumbotronHome} />
+  ```
+
+- **Location pages** use data functions that fill in the location name: `export const jumbotronCpnsLocation = (location: string) => ({ … }) satisfies JumbotronProps;`.
+- **Location data** (region names, hierarchy) comes from the internal `region-service` API. Everything else is static in `data/`.
+
+## Conventions
+
+- **Server Components by default.** Add `"use client"` only when a component needs state, effects, or browser APIs — push it to the leaf, not the page.
+- **English** for code, comments, commit messages, and identifiers.
+- **No `any`.** Use a real type, a generic, or `unknown` + narrowing (e.g. for API responses). Lint already errors on it (`@typescript-eslint/no-explicit-any`); never silence it with `eslint-disable` or `@ts-ignore`.
+
 ## Stack gotchas
 
 - Next.js 16.3 App Router (`app/`), React 19.2, TypeScript.
@@ -37,6 +107,18 @@ bun run typecheck
 - shadcn/ui uses style `radix-vega` and imports primitives from the `radix-ui` package, not `@radix-ui/*`. Add components with `bunx shadcn add <name>`; they land in `components/ui/`.
 - `cn` (`lib/utils.ts`) re-exports the `cn` npm package, which replaces clsx and tailwind-merge. Do not add clsx or tailwind-merge.
 - Icons: `lucide-react`.
+
+## Working rules
+
+- **Always run `bun run lint` then `bun run typecheck`** after changing code.
+- **Never install a new dependency without asking first.**
+
+## Commits
+
+Conventional Commits without scope (`<type>: <description>`), enforced by commitlint (`commitlint.config.mjs`) in the `.githooks/commit-msg` hook. Never bypass it with `--no-verify`.
+
+- Write the description in the imperative mood. Use the body to explain _why_ the change was made.
+- Breaking change: `feat!: …` plus a `BREAKING CHANGE: …` footer.
 
 ## graphify
 
