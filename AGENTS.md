@@ -120,6 +120,20 @@ Conventional Commits without scope (`<type>: <description>`), enforced by commit
 - Write the description in the imperative mood. Use the body to explain _why_ the change was made.
 - Breaking change: `feat!: …` plus a `BREAKING CHANGE: …` footer.
 
+## Agent skills
+
+### Issue tracker
+
+Issues live as local markdown files under `.scratch/<feature>/`. See `docs/agents/issue-tracker.md`.
+
+### Triage labels
+
+Default vocabulary: `needs-triage`, `needs-info`, `ready-for-agent`, `ready-for-human`, `wontfix`. See `docs/agents/triage-labels.md`.
+
+### Domain docs
+
+Single-context: `CONTEXT.md` + `docs/adr/` at the repo root. See `docs/agents/domain.md`.
+
 ## graphify
 
 This project has a knowledge graph at graphify-out/ with god nodes, community structure, and cross-file relationships.
