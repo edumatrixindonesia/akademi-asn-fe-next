@@ -1,5 +1,5 @@
 const Home = () => {
-  return <div>CPNS PPPK BUMN</div>;
+  return <div>Bimbel CPNS PPPK BUMN</div>;
 };
 
 export default Home;
