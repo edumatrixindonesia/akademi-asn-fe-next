@@ -5,11 +5,10 @@ export const footerDefault = (konsultasiUrl: string) => ({
   name: "AKADEMI ASN",
   address:
     "Ruko Permai Monjali, Jalan Monjali No 3, Kutu Dukuh, Sinduadi, Mlati, Sleman, Yogyakarta 55241",
-  // TODO: replace "#" with the real social media URLs.
   socials: [
-    { platform: "instagram", label: "Instagram", href: "#" },
-    { platform: "tiktok", label: "TikTok", href: "#" },
-    { platform: "youtube", label: "YouTube", href: "#" },
+    { platform: "instagram", label: "Instagram", href: "https://www.instagram.com/akademiasnofficial" },
+    { platform: "tiktok", label: "TikTok", href: "https://www.tiktok.com/@akademi.asn" },
+    { platform: "youtube", label: "YouTube", href: "https://www.youtube.com/@edumatrixindonesia" },
   ],
   consultation: {
     title: "KONSULTASI PROGRAM GRATIS",

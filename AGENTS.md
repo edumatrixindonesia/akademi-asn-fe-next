@@ -22,11 +22,13 @@ This is a landing-page site for Akademi ASN. It targets people who search Google
 Copy `.env.example` to `.env` (gitignored via `.env*`) and fill in the token:
 
 ```bash
+NEXT_PUBLIC_SITE_URL="http://localhost:3000"
 REGION_SERVICE_URL="http://localhost:8085/api/v1"
 REGION_SERVICE_TOKEN="<jwt>"
 ```
 
-- Server-only: never prefix with `NEXT_PUBLIC_` and never read them in a `"use client"` file — the token must not reach the browser.
+- `NEXT_PUBLIC_SITE_URL` is the site's absolute URL, used for `metadataBase` and the Konsultasi message. The build fails when it is missing or empty.
+- `REGION_SERVICE_*` are server-only: never prefix with `NEXT_PUBLIC_` and never read them in a `"use client"` file — the token must not reach the browser.
 - Never hardcode the URL or token, and never commit or paste the token into code or docs.
 
 ## Commands

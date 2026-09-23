@@ -1,6 +1,6 @@
 import { expect, test } from "bun:test";
 
-test("home HTML declares Indonesian and an absolute canonical URL", async () => {
+test("home HTML declares Indonesian and absolute canonical and Open Graph URLs", async () => {
   const response = await fetch(process.env.TEST_BASE_URL ?? "http://localhost:3000/");
   expect(response.ok).toBe(true);
 
@@ -50,6 +50,10 @@ test("home HTML declares Indonesian and an absolute canonical URL", async () => 
   const canonical = html.match(/<link rel="canonical" href="([^"]+)"/);
   expect(canonical).not.toBeNull();
   expect(new URL(canonical[1]).protocol).toMatch(/^https?:$/);
+
+  const ogUrl = html.match(/<meta property="og:url" content="([^"]+)"/);
+  expect(ogUrl).not.toBeNull();
+  expect(new URL(ogUrl[1]).protocol).toMatch(/^https?:$/);
 
   const whatsappUrls = [...html.matchAll(/<a\b[^>]*href="([^"]*(?:wa\.me|api\.whatsapp\.com)[^"]*)"[^>]*>/g)]
     .map((match) => new URL(match[1].replaceAll("&amp;", "&")));

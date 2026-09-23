@@ -1,6 +1,6 @@
 # Spec: Design system and home landing page
 
-Status: ready-for-agent
+Status: done
 
 ## Problem Statement
 

@@ -11,8 +11,8 @@ const FeatureCard = ({ illustration, title, description }: FeatureCardProps) => 
     <Image
       src={illustration}
       alt=""
-      width={640}
-      height={640}
+      width={224}
+      height={224}
       loading="lazy"
       unoptimized
       className="mx-auto mb-4 h-28 w-28"

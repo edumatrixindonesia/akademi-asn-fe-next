@@ -20,3 +20,4 @@
 ## Comments
 
 - 2026-09-23: Please review the five drafted descriptions in `data/keunggulan.ts`. GIF total: 3,329,369 bytes; animated WebP total: 2,777,704 bytes (16.6% smaller). All five animations played in the browser.
+- 2026-09-23: Re-encoded the five animated WebPs at 224×224 (2× the 112px display size), quality 60, so they are small enough for mobile. Total: 2,777,704 bytes to 986,054 bytes (64.5% smaller). The largest file, `jadwal-belajar-fleksibel`, went from 1,045,630 to 378,202 bytes. `FeatureCard` now declares 224×224.
