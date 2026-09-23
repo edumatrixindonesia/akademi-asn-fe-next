@@ -95,6 +95,23 @@
   @apply mx-auto w-full max-w-7xl px-4 py-12 md:px-8 md:py-16;
 }
 
+@keyframes lembaga-marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@utility animate-lembaga-marquee {
+  animation: lembaga-marquee 30s linear infinite;
+
+  @media (prefers-reduced-motion: reduce) {
+    animation: none;
+  }
+}
+
 @layer base {
   * {
     @apply border-border outline-ring/50;

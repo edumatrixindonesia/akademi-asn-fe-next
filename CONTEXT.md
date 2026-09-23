@@ -35,6 +35,12 @@ The CPNS exam stages, including SKD (TWK, TIU, TKP) and SKB, shown on landing pa
 **Passing Grade**:
 The minimum score for each SKD sub-test. Passing the threshold alone does not guarantee a place in the next stage.
 
+**Lembaga**:
+The institutions (government ministries and agencies) that alumni joined after passing the selection exam, shown as a logo marquee on the home page.
+
+**Media Massa**:
+The news outlets that covered Akademi ASN, shown as a logo grid on the home page.
+
 **Keunggulan**:
 The reasons to choose Akademi ASN tutoring (e.g. private 1-on-1 sessions, master teachers, flexible schedules), shown as a section on landing pages.
 _Avoid_: features, benefits
