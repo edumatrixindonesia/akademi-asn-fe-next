@@ -39,7 +39,6 @@ const Navbar = ({ logo, links, cta }: NavbarProps) => {
             alt={logo.alt}
             width={256}
             height={75}
-            priority
             className="h-10 w-auto"
           />
         </Link>

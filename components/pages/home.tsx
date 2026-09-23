@@ -1,10 +1,11 @@
 import Jumbotron from "@/components/sections/jumbotron";
 import { jumbotronHome } from "@/data/jumbotron";
+import { getKonsultasiUrl } from "@/data/contact";
 
 const Home = () => {
   return (
-    <main className="container-section flex-1">
-      <Jumbotron {...jumbotronHome} />
+    <main className="flex-1">
+      <Jumbotron {...jumbotronHome(getKonsultasiUrl())} />
     </main>
   );
 };
