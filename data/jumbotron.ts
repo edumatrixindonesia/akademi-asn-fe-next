@@ -2,13 +2,12 @@ import type { JumbotronProps } from "@/components/sections/jumbotron";
 
 export const jumbotronHome = (konsultasiUrl: string) =>
   ({
-    title: "Bimbel CPNS, PPPK, & BUMN",
+    title: "Bimbel CPNS PPPK BUMN Terbaik untuk Persiapan Seleksi",
     description:
-      "Pembelajaran intensif dengan simulasi Tryout berbasis CAT dibantu oleh tutor berpengalaman. Persiapan yang matang akan mempermudah Lolos CPNS, dengan les privat SKD CPNS kamu akan lebih percaya diri mengikuti seleksinya.",
+      "Persiapkan seleksi CPNS, PPPK, dan Rekrutmen Bersama BUMN melalui program belajar terarah, materi sesuai jenis tes, latihan soal, tryout, dan pendampingan tutor.",
     backgroundImage: "/img/section/bg-bimbel-cpns-pppk-bumn.webp",
-    heroImage: "/img/section/display-akademi-asn.webp",
-    heroImageAlt:
-      "Dua orang berseragam ASN merayakan keberhasilan di depan gedung BKN",
-    ctaLabel: "Daftarkan Sekarang",
+    heroImage: "/img/section/bimbel-cpns-pppk-bumn-terbaik.webp",
+    heroImageAlt: "Bimbel CPNS PPPK BUMN Terbaik",
+    ctaLabel: "Daftar Sekarang",
     ctaHref: konsultasiUrl,
   }) satisfies JumbotronProps;

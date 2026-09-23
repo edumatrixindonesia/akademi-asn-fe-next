@@ -20,24 +20,34 @@ const Jumbotron = ({
   ctaLabel,
   ctaHref,
 }: JumbotronProps) => (
-  <section className="relative isolate overflow-hidden bg-linear-to-r from-primary-dark to-primary text-primary-foreground">
+  <section className="relative isolate overflow-hidden text-primary-foreground text-shadow-sm">
     <Image
       src={backgroundImage}
       alt=""
       fill
       sizes="100vw"
-      className="pointer-events-none -z-10 object-cover object-bottom opacity-30"
+      className="pointer-events-none -z-10 object-cover object-bottom bg-linear-to-r from-primary-dark to-primary opacity-90"
     />
-    <div className="container-section grid items-center gap-8 md:grid-cols-2">
-      <div className="space-y-6 text-center md:text-left">
-        <h1 className="text-4xl font-bold leading-tight md:text-5xl">{title}</h1>
-        <p className="text-lg leading-relaxed">{description}</p>
-        <Button asChild size="lg" className="bg-cta px-6 text-cta-foreground hover:bg-cta/90">
+
+    <div className="container-section grid items-center gap-8 md:gap-12 xl:gap-24 md:grid-cols-2">
+      <div className="order-1 md:order-2 space-y-6 text-left">
+        <h1 className="text-4xl font-bold leading-tight md:text-5xl">
+          {title}
+        </h1>
+
+        <p className="text-md md:text-lg leading-relaxed">{description}</p>
+
+        <Button
+          asChild
+          size="lg"
+          className="bg-cta text-md md:text-lg text-shadow-none px-6 hover:bg-cta/90"
+        >
           <a href={ctaHref} target="_blank" rel="noopener noreferrer">
             {ctaLabel}
           </a>
         </Button>
       </div>
+
       <Image
         src={heroImage}
         alt={heroImageAlt}
@@ -45,7 +55,7 @@ const Jumbotron = ({
         height={609}
         sizes="(max-width: 768px) 100vw, 50vw"
         preload
-        className="h-auto w-full"
+        className="order-2 md:order-1 h-auto w-full"
       />
     </div>
   </section>
