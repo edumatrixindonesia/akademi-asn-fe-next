@@ -57,7 +57,9 @@ const Navbar = ({ logo, links, cta }: NavbarProps) => {
               </li>
             ))}
           </ul>
-          <Button asChild>{ctaLink}</Button>
+          <Button asChild className="bg-cta text-cta-foreground hover:bg-cta/90">
+            {ctaLink}
+          </Button>
         </div>
 
         <Sheet>
@@ -87,7 +89,11 @@ const Navbar = ({ logo, links, cta }: NavbarProps) => {
             </ul>
             <SheetFooter>
               <SheetClose asChild>
-                <Button asChild size="lg">
+                <Button
+                  asChild
+                  size="lg"
+                  className="bg-cta text-cta-foreground hover:bg-cta/90"
+                >
                   {ctaLink}
                 </Button>
               </SheetClose>

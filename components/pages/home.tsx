@@ -1,5 +1,12 @@
+import Jumbotron from "@/components/sections/jumbotron";
+import { jumbotronHome } from "@/data/jumbotron";
+
 const Home = () => {
-  return <div>Bimbel CPNS PPPK BUMN</div>;
+  return (
+    <main className="container-section flex-1">
+      <Jumbotron {...jumbotronHome} />
+    </main>
+  );
 };
 
 export default Home;

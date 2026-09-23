@@ -30,8 +30,8 @@ const Footer = ({
   examTracks,
   copyright,
 }: FooterProps) => (
-  <footer className="mt-auto bg-foreground text-background/70">
-    <div className="mx-auto grid max-w-7xl gap-10 px-4 py-12 lg:grid-cols-4">
+  <footer className="mt-auto bg-linear-to-r from-primary to-primary-dark text-background">
+    <div className="container-section grid gap-10 lg:grid-cols-4">
       <div className="flex flex-col gap-4">
         <Link href="/" className="w-fit rounded-lg bg-white p-3">
           <Image
