@@ -6,12 +6,12 @@
 
 **Blocked by:** 01 (Brand foundation and live home route)
 
-**Status:** ready-for-agent
+**Status:** done
 
-- [ ] The FAQ uses native `<details>` / `<summary>`; every answer is in the initial HTML and is keyboard-accessible
-- [ ] Copy follows the reference wording, including "Akademi ASN by Edumatrix"
-- [ ] A FAQPage JSON-LD script is generated from the same FAQ data
-- [ ] The seam 1 test asserts that the FAQPage JSON-LD exists and that its questions also appear as visible text
-- [ ] The section is placed in its correct position in the home page order from the spec
-- [ ] Section copy lives in the section's data file and is checked with `satisfies`
-- [ ] `bun run lint`, `bun run typecheck`, and `bun test` pass
+- [x] The FAQ uses native `<details>` / `<summary>`; every answer is in the initial HTML and is keyboard-accessible
+- [x] Copy follows the reference wording, including "Akademi ASN by Edumatrix"
+- [x] A FAQPage JSON-LD script is generated from the same FAQ data
+- [x] The seam 1 test asserts that the FAQPage JSON-LD exists and that its questions also appear as visible text
+- [x] The section is placed in its correct position in the home page order from the spec
+- [x] Section copy lives in the section's data file and is checked with `satisfies`
+- [x] `bun run lint`, `bun run typecheck`, and `bun test` pass

@@ -8,6 +8,7 @@ import TantanganSeleksi from "@/components/sections/tantangan-seleksi";
 import Lembaga from "@/components/sections/lembaga";
 import Testimoni from "@/components/sections/testimoni";
 import CtaFooter from "@/components/sections/cta-footer";
+import Faq from "@/components/sections/faq";
 import MediaMassa from "@/components/sections/media-massa";
 import { jumbotronHome } from "@/data/jumbotron";
 import { keunggulanHome } from "@/data/keunggulan";
@@ -19,6 +20,7 @@ import { tantanganSeleksiHome } from "@/data/tantangan-seleksi";
 import { lembagaHome } from "@/data/lembaga";
 import { testimoniHome } from "@/data/testimoni";
 import { ctaFooterHome } from "@/data/cta-footer";
+import { faqHome } from "@/data/faq";
 import { mediaMassaHome } from "@/data/media-massa";
 import { getKonsultasiUrl } from "@/data/contact";
 
@@ -36,6 +38,7 @@ const Home = () => {
       <Lembaga {...lembagaHome} />
       <Testimoni {...testimoniHome} />
       <CtaFooter {...ctaFooterHome(konsultasiUrl)} />
+      <Faq {...faqHome} />
       <MediaMassa {...mediaMassaHome} />
     </main>
   );

@@ -59,4 +59,16 @@ test("home HTML declares Indonesian and an absolute canonical URL", async () => 
     expect(url.searchParams.get("phone")).toMatch(/^628\d+$/);
     expect(url.searchParams.get("text")).toContain(process.env.NEXT_PUBLIC_SITE_URL);
   }
+
+  const jsonLdMatch = html.match(
+    /<script type="application\/ld\+json">(\{"@context":"https:\/\/schema\.org","@type":"FAQPage".*?\})<\/script>/,
+  );
+  expect(jsonLdMatch).not.toBeNull();
+  const faqJsonLd = JSON.parse(jsonLdMatch[1]);
+  expect(faqJsonLd["@type"]).toBe("FAQPage");
+  expect(faqJsonLd.mainEntity.length).toBeGreaterThan(0);
+  for (const question of faqJsonLd.mainEntity) {
+    expect(html).toContain(question.name);
+    expect(question.acceptedAnswer["@type"]).toBe("Answer");
+  }
 });
