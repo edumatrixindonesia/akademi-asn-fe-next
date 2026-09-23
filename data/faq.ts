@@ -2,7 +2,7 @@ import type { FaqProps } from "@/components/sections/faq";
 
 export const faqHome = {
   title: "Pertanyaan yang Sering Diajukan",
-  icon: "/assets/img/logo/faq-question-icon-bimbel-cpns-ppk-bumn.webp",
+  icon: "/img/logo/faq-question-icon-bimbel-cpns-ppk-bumn.webp",
   items: [
     {
       question: "Apa Kelebihan Bimbel Akademi ASN by Edumatrix?",
