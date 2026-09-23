@@ -40,7 +40,7 @@ const Jumbotron = ({
         <Button
           asChild
           size="lg"
-          className="bg-cta text-md md:text-lg text-shadow-none px-6 hover:bg-cta/90"
+          className="bg-cta text-md md:text-lg text-shadow-none px-6 hover:bg-cta/90 text-white"
         >
           <a href={ctaHref} target="_blank" rel="noopener noreferrer">
             {ctaLabel}
