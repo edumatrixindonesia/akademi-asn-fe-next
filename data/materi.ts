@@ -16,9 +16,6 @@ export const materiHome = (konsultasiUrl: string) =>
       "Psikotes & Wawancara",
       "Bimbingan & Konsultasi",
     ],
-    illustration: "/img/section/program-materi-bimbel-cpns-pppk-bumn.png",
-    illustrationAlt:
-      "Perempuan berbaju batik biru memegang dan menunjuk laptop",
     ctaLabel: "Daftarkan Sekarang",
     ctaHref: konsultasiUrl,
   }) satisfies MateriProps;
