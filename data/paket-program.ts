@@ -11,16 +11,17 @@ const offlineIncluded = [
 export const paketProgramHome = (konsultasiUrl: string) =>
   ({
     title: "Paket Program Akademi ASN",
-    offlineTitle: "Program Bimbel/Kelas Offline",
-    onlineTitle: "Program Online & Tryout",
+    offlineTitle: "Program Bimbel Offline",
+    onlineTitle: "Program Bimbel Online & Tryout",
     backgroundImage: "/img/section/bg-bimbel-cpns-pppk-bumn.webp",
     offlinePackages: [
       {
         name: "Optima",
-        category: "Kelas Offline",
         sessions: "8 Sesi Pembelajaran",
         price: "Rp1.960.000",
         originalPrice: "Rp2.000.000",
+        headerImage:
+          "/img/section/paket-optima-bimbel-cpns-pppk-bumn-terbaik.webp",
         included: [
           "8 Sesi Pembelajaran",
           "Gratis Tryout 1x",
@@ -31,10 +32,11 @@ export const paketProgramHome = (konsultasiUrl: string) =>
       },
       {
         name: "Maxima",
-        category: "Kelas Offline",
         sessions: "12 Sesi Pembelajaran",
         price: "Rp2.793.000",
         originalPrice: "Rp2.800.000",
+        headerImage:
+          "/img/section/paket-maxima-bimbel-cpns-pppk-bumn-terbaik.webp",
         included: [
           "12 Sesi Pembelajaran",
           "Gratis Tryout 2x",
@@ -45,10 +47,11 @@ export const paketProgramHome = (konsultasiUrl: string) =>
       },
       {
         name: "Ultima",
-        category: "Kelas Offline",
         sessions: "24 Sesi Pembelajaran",
         price: "Rp5.292.000",
         originalPrice: "Rp5.300.000",
+        headerImage:
+          "/img/section/paket-ultima-bimbel-cpns-pppk-bumn-terbaik.webp",
         included: [
           "24 Sesi Pembelajaran",
           "Gratis Tryout 3x",
@@ -61,9 +64,7 @@ export const paketProgramHome = (konsultasiUrl: string) =>
     onlinePackages: [
       {
         name: "Bootcamp Online",
-        category: "Kelas Online",
         sessions: "24 Sesi Intensif",
-        price: "Tanya Harga",
         included: [
           "Tryout Mingguan",
           "Grup Diskusi",
@@ -76,18 +77,14 @@ export const paketProgramHome = (konsultasiUrl: string) =>
       },
       {
         name: "Paket Tryout 1",
-        category: "Tryout",
         sessions: "1 Paket Tryout",
-        price: "Tanya Harga",
         included: ["1 Paket Tryout"],
         ctaLabel: "Tanyakan Kelas",
         ctaHref: konsultasiUrl,
       },
       {
         name: "Paket Tryout 5",
-        category: "Tryout",
         sessions: "5 Paket Tryout",
-        price: "Tanya Harga",
         included: ["5 Paket Tryout"],
         ctaLabel: "Tanyakan Kelas",
         ctaHref: konsultasiUrl,

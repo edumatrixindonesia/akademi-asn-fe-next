@@ -1,11 +1,13 @@
+import Image from "next/image";
 import { Button } from "@/components/ui/button";
 
 export type PaketCardProps = {
   name: string;
-  category: string;
   sessions: string;
-  price: string;
+  price?: string;
   originalPrice?: string;
+  headerImage?: string;
+  variant?: "offline" | "online";
   included: string[];
   ctaLabel: string;
   ctaHref: string;
@@ -13,30 +15,78 @@ export type PaketCardProps = {
 
 const PaketCard = ({
   name,
-  category,
   sessions,
   price,
   originalPrice,
+  headerImage,
+  variant = "offline",
   included,
   ctaLabel,
   ctaHref,
 }: PaketCardProps) => (
-  <article className="flex h-full flex-col rounded-xl bg-background p-6 text-foreground shadow-sm">
-    <p className="text-sm font-medium text-primary">{category}</p>
-    <h3 className="mt-1 text-xl font-bold text-primary-dark">{name}</h3>
-    <p className="mt-2 text-sm text-foreground/80">{sessions}</p>
-    <div className="mt-5">
-      {originalPrice && <del className="block text-sm text-foreground/60">{originalPrice}</del>}
-      <p className="text-2xl font-bold text-primary-dark">{price}</p>
+  <article className="flex h-full flex-col overflow-hidden rounded-xl bg-background text-foreground shadow-sm">
+    <div
+      className={`relative isolate flex flex-col justify-center gap-1 px-6 py-8 text-white ${
+        variant === "online"
+          ? "items-center bg-linear-to-b from-primary to-primary-dark text-center"
+          : "items-end text-right"
+      }`}
+    >
+      {headerImage && (
+        <Image
+          src={headerImage}
+          alt=""
+          fill
+          sizes="(min-width: 1024px) 400px, 100vw"
+          className="-z-10 object-cover object-bottom-right"
+        />
+      )}
+
+      <h3 className="text-3xl font-bold">{name}</h3>
+
+      <p
+        className={`text-sm font-medium py-1 px-3 rounded-full ${
+          variant === "online" ? "bg-cta mt-4" : "bg-primary my-4"
+        }`}
+      >
+        {sessions}
+      </p>
+
+      {price && (
+        <>
+          {originalPrice && (
+            <del className="block text-sm">{originalPrice}</del>
+          )}
+
+          <p className="text-lg font-semibold bg-cta px-2.5 py-0.5 rounded-full">
+            {price}
+          </p>
+        </>
+      )}
     </div>
-    <ul className="my-6 list-disc space-y-2 pl-5 text-sm leading-relaxed text-foreground/80 marker:text-primary">
-      {included.map((item) => <li key={item}>{item}</li>)}
-    </ul>
-    <Button asChild size="lg" className="mt-auto w-full bg-cta text-cta-foreground hover:bg-cta/90">
-      <a href={ctaHref} target="_blank" rel="noopener noreferrer" aria-label={`${ctaLabel}: ${name}`}>
-        {ctaLabel}
-      </a>
-    </Button>
+
+    <div className="flex flex-1 flex-col p-6 pt-0">
+      <ul className="my-6 list-disc space-y-2 pl-5 text-sm leading-relaxed text-foreground/80 marker:text-primary">
+        {included.map((item) => (
+          <li key={item}>{item}</li>
+        ))}
+      </ul>
+
+      <Button
+        asChild
+        size="lg"
+        className="mt-auto w-full bg-cta hover:bg-cta/90"
+      >
+        <a
+          href={ctaHref}
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label={`${ctaLabel}: ${name}`}
+        >
+          {ctaLabel}
+        </a>
+      </Button>
+    </div>
   </article>
 );
 
