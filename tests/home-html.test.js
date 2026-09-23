@@ -8,6 +8,19 @@ test("home HTML declares Indonesian and an absolute canonical URL", async () => 
   expect(html).toMatch(/<html\b[^>]*\blang="id"/);
   expect([...html.matchAll(/<h1\b/g)]).toHaveLength(1);
   expect(html).toContain("Keunggulan Bimbel Akademi ASN");
+  expect(html).toContain("Program Persiapan Siap Lulus CPNS");
+  expect(html.indexOf("Keunggulan Bimbel Akademi ASN")).toBeLessThan(
+    html.indexOf("Program Persiapan Siap Lulus CPNS"),
+  );
+  for (const item of [
+    "Pengetahuan Umum", "Bahasa Indonesia", "Tes Kemampuan Dasar (TKD)",
+    "Tes Bidang Studi", "Teknik Menjawab Soal", "Simulasi Ujian",
+    "Psikotes &amp; Wawancara", "Bimbingan &amp; Konsultasi",
+  ]) {
+    expect(html).toContain(item);
+  }
+  expect(html).toContain('alt="Perempuan berbaju batik biru memegang dan menunjuk laptop"');
+  expect([...html.matchAll(/>Daftarkan Sekarang<\/a>/g)]).toHaveLength(2);
   expect(html).not.toMatch(/\.gif(?:["?])/i);
 
   const canonical = html.match(/<link rel="canonical" href="([^"]+)"/);
