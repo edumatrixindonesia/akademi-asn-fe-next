@@ -10,4 +10,13 @@ test("home HTML declares Indonesian and an absolute canonical URL", async () => 
   const canonical = html.match(/<link rel="canonical" href="([^"]+)"/);
   expect(canonical).not.toBeNull();
   expect(new URL(canonical[1]).protocol).toMatch(/^https?:$/);
+
+  const whatsappUrls = [...html.matchAll(/<a\b[^>]*href="([^"]*(?:wa\.me|api\.whatsapp\.com)[^"]*)"[^>]*>/g)]
+    .map((match) => new URL(match[1].replaceAll("&amp;", "&")));
+  expect(whatsappUrls.length).toBeGreaterThanOrEqual(2);
+  expect(new Set(whatsappUrls.map((url) => url.searchParams.get("phone"))).size).toBe(1);
+  for (const url of whatsappUrls) {
+    expect(url.searchParams.get("phone")).toMatch(/^628\d+$/);
+    expect(url.searchParams.get("text")).toContain(process.env.NEXT_PUBLIC_SITE_URL);
+  }
 });

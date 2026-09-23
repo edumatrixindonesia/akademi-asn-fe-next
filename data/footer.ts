@@ -1,7 +1,6 @@
 import type { FooterProps } from "@/components/layouts/footer";
-import { navbarDefault } from "@/data/navbar";
 
-export const footerDefault = {
+export const footerDefault = (konsultasiUrl: string) => ({
   logo: { src: "/logo-akademi-asn.webp", alt: "Akademi ASN" },
   name: "AKADEMI ASN",
   address:
@@ -15,7 +14,7 @@ export const footerDefault = {
   consultation: {
     title: "KONSULTASI PROGRAM GRATIS",
     label: "Call Center",
-    phone: { label: "0858-1509-5359", href: navbarDefault.cta.href },
+    phone: { label: "Chat via WhatsApp", href: konsultasiUrl },
   },
   otherWebsite: {
     title: "OTHER WEBSITE",
@@ -33,4 +32,4 @@ export const footerDefault = {
     ],
   },
   copyright: "© 2026 Akademi ASN",
-} satisfies FooterProps;
+}) satisfies FooterProps;

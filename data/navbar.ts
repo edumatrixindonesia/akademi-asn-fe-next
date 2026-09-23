@@ -1,6 +1,6 @@
 import type { NavbarProps } from "@/components/layouts/navbar";
 
-export const navbarDefault = {
+export const navbarDefault = (konsultasiUrl: string) => ({
   logo: { src: "/logo-akademi-asn.webp", alt: "Akademi ASN" },
   links: [
     { label: "Paket", href: "#paket-program" },
@@ -10,6 +10,6 @@ export const navbarDefault = {
   ],
   cta: {
     label: "Konsultasi Gratis",
-    href: "https://wa.me/6285815095359?text=Halo%20Akademi%20ASN%2C%20saya%20ingin%20konsultasi",
+    href: konsultasiUrl,
   },
-} satisfies NavbarProps;
+}) satisfies NavbarProps;
