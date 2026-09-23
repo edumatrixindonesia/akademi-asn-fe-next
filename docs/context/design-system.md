@@ -1,6 +1,6 @@
 # Design System — bimbelcpnsindonesia.com (Beranda)
 
-Sumber: `https://bimbelcpnsindonesia.com/` dan `/assets/css/globals.css`, dianalisis 2026-09-23.
+Sumber: `https://bimbelcpnsindonesia.com/` dan `/css/globals.css`, dianalisis 2026-09-23.
 Situs memakai CSS murni (BEM-ish) dengan CSS custom properties di `:root`, tanpa framework CSS.
 
 ## Warna
@@ -115,17 +115,17 @@ Utama `768px` (17x) dan `991px`/`992px` (10x). Lainnya: 1024, 900, 640, 576px.
 
 Semua gambar berformat **WebP**, kecuali ikon benefit (**GIF** animasi) dan satu PNG. Tidak ada icon font atau library ikon. Hanya ada satu inline `<svg>` (stroke 24×24, gaya Lucide/Feather).
 
-### Logo & ikon (`/assets/img/logo/`)
+### Logo & ikon (`/img/logo/`)
 
 - `logo-akademi-asn-footer.webp`
-- `logo-kedinasan.webp`
+- `logo-akademi-asn.webp`
 - `whatsapp.webp`
 - `faq-question-icon-bimbel-cpns-ppk-bumn.webp` (3x)
 - `x-icon-bimbel-cpns-ppk-bumn.webp`
 - `forbidden-icon-bimbel-cpns-ppk-bumn.webp`
 - `/favicon.ico`
 
-### Gambar section (`/assets/img/section/`)
+### Gambar section (`/img/section/`)
 
 - `program-materi-bimbel-cpns-pppk-bumn.png`
 - `Paket Online Bimbel Les Privat CPNS & PPPK BUMN Terbaik di Indonesia.webp`
