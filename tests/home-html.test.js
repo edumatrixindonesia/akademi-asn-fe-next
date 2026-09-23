@@ -9,8 +9,19 @@ test("home HTML declares Indonesian and an absolute canonical URL", async () => 
   expect([...html.matchAll(/<h1\b/g)]).toHaveLength(1);
   expect(html).toContain("Keunggulan Bimbel Akademi ASN");
   expect(html).toContain("Program Persiapan Siap Lulus CPNS");
+  expect(html).toContain('id="paket-program"');
+  expect(html).toMatch(/<h2\b[^>]*>Paket Program Akademi ASN<\/h2>/);
+  expect(html).toContain("Program Bimbel/Kelas Offline");
+  expect(html).toContain("Program Online &amp; Tryout");
+  for (const price of ["Rp1.960.000", "Rp2.000.000", "Rp2.793.000", "Rp2.800.000", "Rp5.292.000", "Rp5.300.000"]) {
+    expect(html).toContain(price);
+  }
+  expect([...html.matchAll(/>Tanyakan Kelas<\/a>/g)]).toHaveLength(6);
   expect(html.indexOf("Keunggulan Bimbel Akademi ASN")).toBeLessThan(
     html.indexOf("Program Persiapan Siap Lulus CPNS"),
+  );
+  expect(html.indexOf("Program Persiapan Siap Lulus CPNS")).toBeLessThan(
+    html.indexOf("Program Bimbel/Kelas Offline"),
   );
   for (const item of [
     "Pengetahuan Umum", "Bahasa Indonesia", "Tes Kemampuan Dasar (TKD)",
