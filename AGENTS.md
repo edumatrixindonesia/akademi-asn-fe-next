@@ -8,6 +8,15 @@ This block is written and re-added by `next dev` — verify at `node_modules/nex
 
 <!-- END:nextjs-agent-rules -->
 
+## Project goal
+
+This is a landing-page site for Akademi ASN. It targets people who search Google for CPNS, PPPK, and BUMN tutoring (`bimbel`). **The top priority is to rank #1 in Google search for those queries.** When a trade-off comes up, choose the option that is better for search ranking.
+
+- Treat SEO as part of every change, not a later pass. Check `metadata`, the heading hierarchy (one `h1` per page), semantic HTML, and image `alt` text.
+- Keep page content in Server Components so it appears in the initial HTML that crawlers read.
+- Protect Core Web Vitals (LCP, CLS, INP). Avoid client JS on landing pages unless it is needed.
+- Location pages exist to capture local searches such as "bimbel cpns <city>". Each one needs unique, location-specific content, not only a swapped name.
+
 ## Environment
 
 Copy `.env.example` to `.env` (gitignored via `.env*`) and fill in the token:
