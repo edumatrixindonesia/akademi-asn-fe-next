@@ -7,7 +7,7 @@ export type FeatureCardProps = {
 };
 
 const FeatureCard = ({ illustration, title, description }: FeatureCardProps) => (
-  <article className="rounded-xl bg-background p-6 text-center shadow-sm">
+  <article className="h-full rounded-xl bg-background p-6 text-center shadow-sm">
     <Image
       src={illustration}
       alt=""
