@@ -6,10 +6,10 @@
 
 **Blocked by:** 02 (Konsultasi rotation across four CS admins)
 
-**Status:** ready-for-agent
+**Status:** done
 
-- [ ] The section shows the copy, the CTA image, and the Konsultasi CTA on the BKN building background
-- [ ] The data entry is a function of the Konsultasi URL
-- [ ] The section is placed in its correct position in the home page order from the spec
-- [ ] Section copy lives in the section's data file and is checked with `satisfies`
-- [ ] `bun run lint`, `bun run typecheck`, and `bun test` pass
+- [x] The section shows the copy, the CTA image, and the Konsultasi CTA on the BKN building background
+- [x] The data entry is a function of the Konsultasi URL
+- [x] The section is placed in its correct position in the home page order from the spec
+- [x] Section copy lives in the section's data file and is checked with `satisfies`
+- [x] `bun run lint`, `bun run typecheck`, and `bun test` pass

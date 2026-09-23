@@ -7,6 +7,7 @@ import PassingGrade from "@/components/sections/passing-grade";
 import TantanganSeleksi from "@/components/sections/tantangan-seleksi";
 import Lembaga from "@/components/sections/lembaga";
 import Testimoni from "@/components/sections/testimoni";
+import CtaFooter from "@/components/sections/cta-footer";
 import MediaMassa from "@/components/sections/media-massa";
 import { jumbotronHome } from "@/data/jumbotron";
 import { keunggulanHome } from "@/data/keunggulan";
@@ -17,6 +18,7 @@ import { passingGradeHome } from "@/data/passing-grade";
 import { tantanganSeleksiHome } from "@/data/tantangan-seleksi";
 import { lembagaHome } from "@/data/lembaga";
 import { testimoniHome } from "@/data/testimoni";
+import { ctaFooterHome } from "@/data/cta-footer";
 import { mediaMassaHome } from "@/data/media-massa";
 import { getKonsultasiUrl } from "@/data/contact";
 
@@ -33,6 +35,7 @@ const Home = () => {
       <TantanganSeleksi {...tantanganSeleksiHome(konsultasiUrl)} />
       <Lembaga {...lembagaHome} />
       <Testimoni {...testimoniHome} />
+      <CtaFooter {...ctaFooterHome(konsultasiUrl)} />
       <MediaMassa {...mediaMassaHome} />
     </main>
   );
