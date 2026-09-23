@@ -7,6 +7,8 @@ test("home HTML declares Indonesian and an absolute canonical URL", async () => 
   const html = await response.text();
   expect(html).toMatch(/<html\b[^>]*\blang="id"/);
   expect([...html.matchAll(/<h1\b/g)]).toHaveLength(1);
+  expect(html).toContain("Keunggulan Bimbel Akademi ASN");
+  expect(html).not.toMatch(/\.gif(?:["?])/i);
 
   const canonical = html.match(/<link rel="canonical" href="([^"]+)"/);
   expect(canonical).not.toBeNull();
