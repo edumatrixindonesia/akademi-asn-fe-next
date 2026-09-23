@@ -6,6 +6,7 @@ import Seleksi from "@/components/sections/seleksi";
 import PassingGrade from "@/components/sections/passing-grade";
 import TantanganSeleksi from "@/components/sections/tantangan-seleksi";
 import Lembaga from "@/components/sections/lembaga";
+import Testimoni from "@/components/sections/testimoni";
 import MediaMassa from "@/components/sections/media-massa";
 import { jumbotronHome } from "@/data/jumbotron";
 import { keunggulanHome } from "@/data/keunggulan";
@@ -15,6 +16,7 @@ import { seleksiHome } from "@/data/seleksi";
 import { passingGradeHome } from "@/data/passing-grade";
 import { tantanganSeleksiHome } from "@/data/tantangan-seleksi";
 import { lembagaHome } from "@/data/lembaga";
+import { testimoniHome } from "@/data/testimoni";
 import { mediaMassaHome } from "@/data/media-massa";
 import { getKonsultasiUrl } from "@/data/contact";
 
@@ -30,6 +32,7 @@ const Home = () => {
       <PassingGrade {...passingGradeHome} />
       <TantanganSeleksi {...tantanganSeleksiHome(konsultasiUrl)} />
       <Lembaga {...lembagaHome} />
+      <Testimoni {...testimoniHome} />
       <MediaMassa {...mediaMassaHome} />
     </main>
   );

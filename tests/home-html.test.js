@@ -10,6 +10,7 @@ test("home HTML declares Indonesian and an absolute canonical URL", async () => 
   expect(html).toContain("Keunggulan Bimbel Akademi ASN");
   expect(html).toContain("Program Persiapan Siap Lulus CPNS");
   expect(html).toContain('id="paket-program"');
+  expect(html).toContain('id="testimoni"');
   expect(html).toContain("SKD (Seleksi Kompetensi Dasar)");
   for (const score of ["65", "80", "166"]) {
     expect(html).toMatch(new RegExp(`<strong[^>]*>${score}</strong>`));
