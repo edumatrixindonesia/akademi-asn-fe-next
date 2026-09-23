@@ -16,7 +16,9 @@ const poppins = Poppins({
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL?.trim();
 if (!siteUrl) {
-  throw new Error("NEXT_PUBLIC_SITE_URL must be set to the site's absolute URL.");
+  throw new Error(
+    "NEXT_PUBLIC_SITE_URL must be set to the site's absolute URL.",
+  );
 }
 
 export const revalidate = 3600;
@@ -24,11 +26,11 @@ export const revalidate = 3600;
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: "Akademi ASN",
+    default: "Bimbel CPNS PPPK BUMN Terbaik",
     template: "%s | Akademi ASN",
   },
   description:
-    "Akademi ASN menyediakan bimbel CPNS, PPPK, dan BUMN dengan pengajar berpengalaman dan program belajar terarah.",
+    "Persiapkan seleksi CPNS, PPPK, dan Rekrutmen Bersama BUMN bersama Akademi ASN. Tersedia kelas online & offline, materi terarah, latihan soal, tryout CAT, dan pendampingan tutor.",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
