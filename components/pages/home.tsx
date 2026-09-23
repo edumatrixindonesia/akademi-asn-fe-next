@@ -4,12 +4,14 @@ import Materi from "@/components/sections/materi";
 import PaketProgram from "@/components/sections/paket-program";
 import Seleksi from "@/components/sections/seleksi";
 import PassingGrade from "@/components/sections/passing-grade";
+import TantanganSeleksi from "@/components/sections/tantangan-seleksi";
 import { jumbotronHome } from "@/data/jumbotron";
 import { keunggulanHome } from "@/data/keunggulan";
 import { materiHome } from "@/data/materi";
 import { paketProgramHome } from "@/data/paket-program";
 import { seleksiHome } from "@/data/seleksi";
 import { passingGradeHome } from "@/data/passing-grade";
+import { tantanganSeleksiHome } from "@/data/tantangan-seleksi";
 import { getKonsultasiUrl } from "@/data/contact";
 
 const Home = () => {
@@ -22,6 +24,7 @@ const Home = () => {
       <PaketProgram {...paketProgramHome(konsultasiUrl)} />
       <Seleksi {...seleksiHome} />
       <PassingGrade {...passingGradeHome} />
+      <TantanganSeleksi {...tantanganSeleksiHome(konsultasiUrl)} />
     </main>
   );
 };

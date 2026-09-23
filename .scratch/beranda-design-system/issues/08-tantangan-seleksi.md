@@ -6,11 +6,11 @@
 
 **Blocked by:** 02 (Konsultasi rotation across four CS admins)
 
-**Status:** ready-for-agent
+**Status:** done
 
-- [ ] The section shows the image, the reasons with the X icon, the forbidden icon, the closing copy, and the Konsultasi link
-- [ ] The background is the orange wave image on `muted`
-- [ ] The data entry is a function of the Konsultasi URL
-- [ ] The section is placed in its correct position in the home page order from the spec
-- [ ] Section copy lives in the section's data file and is checked with `satisfies`
-- [ ] `bun run lint`, `bun run typecheck`, and `bun test` pass
+- [x] The section shows the image, the reasons with the X icon, the forbidden icon, the closing copy, and the Konsultasi link
+- [x] The background is the orange wave image on `muted`
+- [x] The data entry is a function of the Konsultasi URL
+- [x] The section is placed in its correct position in the home page order from the spec
+- [x] Section copy lives in the section's data file and is checked with `satisfies`
+- [x] `bun run lint`, `bun run typecheck`, and `bun test` pass

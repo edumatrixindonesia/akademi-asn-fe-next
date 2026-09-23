@@ -17,6 +17,11 @@ test("home HTML declares Indonesian and an absolute canonical URL", async () => 
   expect(html).toContain("3 kali jumlah formasi");
   expect(html.indexOf("Paket Program Akademi ASN")).toBeLessThan(html.indexOf("SKD (Seleksi Kompetensi Dasar)"));
   expect(html.indexOf("SKD (Seleksi Kompetensi Dasar)")).toBeLessThan(html.indexOf("Mengenal Konsep Passing Grade"));
+  expect(html.indexOf("Mengenal Konsep Passing Grade")).toBeLessThan(html.indexOf("Kenapa Banyak Peserta Gagal?"));
+  expect(html).toContain("Terlalu Fokus pada Satu Sub-Tes");
+  expect(html).toContain("Gagal Manajemen Waktu");
+  expect(html).toContain('alt="Pria berseragam cokelat menulis pada papan catatan"');
+  expect(html).toContain("Konsultasi Pola Soal");
   expect(html).toMatch(/<h2\b[^>]*>Paket Program Akademi ASN<\/h2>/);
   expect(html).toContain("Program Bimbel/Kelas Offline");
   expect(html).toContain("Program Online &amp; Tryout");
