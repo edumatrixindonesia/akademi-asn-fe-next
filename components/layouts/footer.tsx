@@ -1,7 +1,10 @@
 import Image from "next/image";
 import Link from "next/link";
+import { MessageCircle } from "lucide-react";
 
-import SocialIcon, { type SocialPlatform } from "@/components/shared/social-icon";
+import SocialIcon, {
+  type SocialPlatform,
+} from "@/components/shared/social-icon";
 
 type FooterLink = { label: string; href: string };
 
@@ -42,13 +45,17 @@ const Footer = ({
             className="h-10 w-auto"
           />
         </Link>
+
         <p className="font-bold text-background">{name}</p>
-        <address className="text-sm not-italic">{address}</address>
+
+        <address className="text-sm">{address}</address>
+
         <ul className="flex gap-4">
           {socials.map((social) => (
             <li key={social.platform}>
               <a href={social.href} {...external} className={linkClassName}>
                 <SocialIcon platform={social.platform} className="size-6" />
+
                 <span className="sr-only">{social.label}</span>
               </a>
             </li>
@@ -57,23 +64,30 @@ const Footer = ({
       </div>
 
       <div className="flex flex-col gap-3">
-        <h2 className="text-sm font-semibold uppercase tracking-wide text-background">
+        <h2 className="text-md font-bold uppercase tracking-wide text-background">
           {consultation.title}
         </h2>
-        <p className="text-sm">{consultation.label}</p>
-        <a
-          href={consultation.phone.href}
-          {...external}
-          className={`w-fit text-lg font-semibold ${linkClassName}`}
-        >
-          {consultation.phone.label}
-        </a>
+        <div className="px-4 py-2 bg-linear-to-r from-[#ff7c44] to-[#ED743F] rounded-xl flex flex-col justify-center">
+          <p className="text-center my-2 text-md font-bold">
+            {consultation.label}
+          </p>
+
+          <a
+            href={consultation.phone.href}
+            {...external}
+            className={`w-fit text-xl font-semibold ${linkClassName} bg-radial from-cta/80 to-cta text-center mx-auto px-4 py-1 rounded-lg mb-3 inline-flex items-center gap-2`}
+          >
+            <MessageCircle className="size-5" />
+            {consultation.phone.label}
+          </a>
+        </div>
       </div>
 
       <div className="flex flex-col gap-3">
-        <h2 className="text-sm font-semibold uppercase tracking-wide text-background">
+        <h2 className="text-md font-bold uppercase tracking-wide text-background">
           {otherWebsite.title}
         </h2>
+
         <a
           href={otherWebsite.link.href}
           {...external}
@@ -84,13 +98,17 @@ const Footer = ({
       </div>
 
       <div className="flex flex-col gap-3">
-        <h2 className="text-sm font-semibold uppercase tracking-wide text-background">
+        <h2 className="text-md font-bold uppercase tracking-wide text-background">
           {examTracks.title}
         </h2>
-        <ul className="flex flex-col gap-2 text-sm">
+
+        <ul className="flex flex-col gap-5 text-sm">
           {examTracks.links.map((link) => (
             <li key={link.href}>
-              <Link href={link.href} className={linkClassName}>
+              <Link
+                href={link.href}
+                className={`bg-white py-1.5 pe-1.5 ps-3 rounded-full text-primary-dark text-md font-bold text-center ${linkClassName}`}
+              >
                 {link.label}
               </Link>
             </li>
