@@ -116,13 +116,15 @@ const Footer = ({
         </ul>
       </div>
 
-      <Image
-        src={image.src}
-        alt={image.alt}
-        width={691}
-        height={608}
-        className="h-auto w-full"
-      />
+      <Link href="/">
+        <Image
+          src={image.src}
+          alt={image.alt}
+          width={691}
+          height={608}
+          className="h-auto w-full"
+        />
+      </Link>
     </div>
 
     <div className="border-t border-background/10">
