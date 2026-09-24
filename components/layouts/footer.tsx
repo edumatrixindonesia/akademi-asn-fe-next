@@ -118,7 +118,7 @@ const Footer = ({
     </div>
 
     <div className="border-t border-background/10">
-      <p className="mx-auto max-w-7xl px-4 py-4 text-center text-xs">
+      <p className="mx-auto w-full max-w-7xl px-4 py-4 text-center text-xs md:px-8 lg:px-12">
         {copyright}
       </p>
     </div>
