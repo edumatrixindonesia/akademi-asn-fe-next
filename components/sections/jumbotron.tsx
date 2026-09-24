@@ -29,7 +29,7 @@ const Jumbotron = ({
       className="pointer-events-none -z-10 object-cover object-bottom bg-linear-to-r from-primary-dark to-primary opacity-90"
     />
 
-    <div className="container-section grid items-center gap-8 md:gap-12 xl:gap-24 md:grid-cols-2">
+    <div className="container-section grid items-center gap-8 md:gap-12 xl:gap-18 md:grid-cols-2">
       <div className="order-1 md:order-2 space-y-6 text-left">
         <h1 className="text-4xl font-bold leading-tight md:text-5xl">
           {title}
@@ -55,7 +55,7 @@ const Jumbotron = ({
         height={609}
         sizes="(max-width: 768px) 100vw, 50vw"
         preload
-        className="order-2 md:order-1 h-auto w-full"
+        className="order-2 md:order-1 h-auto w-full max-w-md mx-auto"
       />
     </div>
   </section>
