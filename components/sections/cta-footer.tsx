@@ -29,7 +29,7 @@ const CtaFooter = ({
       alt=""
       fill
       sizes="100vw"
-      className="pointer-events-none -z-10 object-cover opacity-25"
+      className="pointer-events-none -z-10 object-cover bg-linear-to-r from-primary-dark to-primary opacity-40"
     />
 
     <div className="container-section flex flex-col-reverse items-center md:grid md:grid-cols-2">

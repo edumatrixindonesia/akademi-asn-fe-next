@@ -26,7 +26,7 @@ const Jumbotron = ({
       alt=""
       fill
       sizes="100vw"
-      className="pointer-events-none -z-10 object-cover object-bottom bg-linear-to-r from-primary-dark to-primary opacity-90"
+      className="pointer-events-none -z-10 object-cover object-bottom bg-linear-to-r from-primary-dark to-primary"
     />
 
     <div className="container-section grid items-center gap-8 md:gap-12 xl:gap-18 md:grid-cols-2">
