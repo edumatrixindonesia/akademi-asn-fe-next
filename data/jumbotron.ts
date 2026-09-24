@@ -11,3 +11,27 @@ export const jumbotronHome = (konsultasiUrl: string) =>
     ctaLabel: "Daftar Sekarang",
     ctaHref: konsultasiUrl,
   }) satisfies JumbotronProps;
+
+export const jumbotronCpns = (konsultasiUrl: string) =>
+  ({
+    ...jumbotronHome(konsultasiUrl),
+    title: "Bimbel CPNS Online & Offline Terbaik untuk Persiapan SKD & SKB",
+    description:
+      "Kelas intensif persiapan tes CPNS dengan materi TWK, TIU, TKP, latihan soal, tryout CAT, serta pendampingan tutor.",
+  }) satisfies JumbotronProps;
+
+export const jumbotronPppk = (konsultasiUrl: string) =>
+  ({
+    ...jumbotronHome(konsultasiUrl),
+    title: "Bimbel PPPK untuk Teknis Guru & Tenaga Kesehatan",
+    description:
+      "Persiapkan seleksi PPPK dengan program belajar terarah, kelas bersama mentor, latihan soal, dan simulasi Tryout CAT sesuai kebutuhan formasi yang Anda pilih.",
+  }) satisfies JumbotronProps;
+
+export const jumbotronBumn = (konsultasiUrl: string) =>
+  ({
+    ...jumbotronHome(konsultasiUrl),
+    title: "Bimbel BUMN untuk Persiapan Tes Rekrutmen Bersama BUMN",
+    description:
+      "Persiapkan TKD, AKHLAK, Wawasan Kebangsaan, Bahasa Inggris, dan Learning Agility bersama tutor melalui kelas online maupun les privat yang disesuaikan dengan kebutuhan belajar Anda.",
+  }) satisfies JumbotronProps;
