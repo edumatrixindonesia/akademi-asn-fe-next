@@ -24,7 +24,7 @@ const PaketCard = ({
   ctaLabel,
   ctaHref,
 }: PaketCardProps) => (
-  <article className="flex h-full flex-col overflow-hidden rounded-xl bg-background text-foreground shadow-sm">
+  <article className="row-span-2 grid grid-rows-subgrid gap-y-0 overflow-hidden rounded-xl bg-background text-foreground shadow-sm md:col-span-2 lg:col-span-1">
     <div
       className={`relative isolate flex flex-col justify-center gap-1 px-6 py-8 text-white ${
         variant === "online"

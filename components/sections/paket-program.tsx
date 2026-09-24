@@ -43,7 +43,7 @@ const PaketProgram = ({
         {offlineTitle}
       </p>
 
-      <div className="mt-8 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
+      <div className="mt-8 grid gap-5 md:grid-cols-4 md:[&>:last-child:nth-child(odd)]:col-start-2 lg:grid-cols-3 lg:[&>:last-child:nth-child(odd)]:col-start-auto">
         {offlinePackages.map((paket) => (
           <PaketCard key={paket.name} {...paket} variant="offline" />
         ))}
@@ -53,7 +53,7 @@ const PaketProgram = ({
         {onlineTitle}
       </p>
 
-      <div className="mt-8 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
+      <div className="mt-8 grid gap-5 md:grid-cols-4 md:[&>:last-child:nth-child(odd)]:col-start-2 lg:grid-cols-3 lg:[&>:last-child:nth-child(odd)]:col-start-auto">
         {onlinePackages.map((paket) => (
           <PaketCard key={paket.name} {...paket} variant="online" />
         ))}
