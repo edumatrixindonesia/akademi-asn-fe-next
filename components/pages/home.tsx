@@ -38,8 +38,8 @@ const Home = () => {
       <Lembaga {...lembagaHome} />
       <Testimoni {...testimoniHome} />
       <CtaFooter {...ctaFooterHome(konsultasiUrl)} />
-      <Faq {...faqHome} />
       <MediaMassa {...mediaMassaHome} />
+      <Faq {...faqHome} />
     </main>
   );
 };

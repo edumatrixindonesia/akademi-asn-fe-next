@@ -42,7 +42,7 @@ const CtaFooter = ({
         className="mx-auto h-auto w-full max-w-sm -mb-12 md:-mb-16"
       />
 
-      <div className="space-y-6 text-center md:text-left">
+      <div className="space-y-6 text-center md:text-left pe-0 md:pe-6 lg:pe-10">
         <h2 id="cta-footer-title" className="text-3xl font-bold md:text-4xl">
           {title}
         </h2>
