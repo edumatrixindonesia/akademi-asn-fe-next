@@ -1,10 +1,11 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Poppins } from "next/font/google";
 import Footer from "@/components/layouts/footer";
 import Navbar from "@/components/layouts/navbar";
 import { footerDefault } from "@/data/footer";
 import { navbarDefault } from "@/data/navbar";
 import { getKonsultasiUrl } from "@/data/contact";
+import { openGraphBase, organizationJsonLd, siteUrl } from "./shared-metadata";
 import "./globals.css";
 
 const poppins = Poppins({
@@ -13,13 +14,6 @@ const poppins = Poppins({
   weight: ["400", "500", "600", "700"],
   display: "swap",
 });
-
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL?.trim();
-if (!siteUrl) {
-  throw new Error(
-    "NEXT_PUBLIC_SITE_URL must be set to the site's absolute URL.",
-  );
-}
 
 export const revalidate = 3600;
 
@@ -31,6 +25,25 @@ export const metadata: Metadata = {
   },
   description:
     "Persiapkan seleksi CPNS, PPPK, dan Rekrutmen Bersama BUMN bersama Akademi ASN. Tersedia kelas online & offline, materi terarah, latihan soal, tryout CAT, dan pendampingan tutor.",
+  applicationName: "Akademi ASN",
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+  openGraph: openGraphBase,
+  // Title, description, and image are filled in from openGraph by Next.js.
+  twitter: { card: "summary_large_image" },
+};
+
+export const viewport: Viewport = {
+  themeColor: "#237DC1",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
@@ -39,8 +52,17 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html lang="id" className={`${poppins.variable} h-full antialiased`}>
       <body className="min-h-full flex flex-col">
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(organizationJsonLd).replace(/</g, "\\u003c"),
+          }}
+        />
+
         <Navbar {...navbarDefault(konsultasiUrl)} />
+
         {children}
+
         <Footer {...footerDefault(konsultasiUrl)} />
       </body>
     </html>
