@@ -38,7 +38,7 @@ const PaketCard = ({
           alt=""
           fill
           sizes="(min-width: 1024px) 400px, 100vw"
-          className="-z-10 object-cover object-bottom-right"
+          className="-z-10 object-cover object-center-right"
         />
       )}
 

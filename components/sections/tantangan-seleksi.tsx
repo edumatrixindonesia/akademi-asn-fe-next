@@ -95,7 +95,7 @@ const TantanganSeleksi = ({
         </div>
       </div>
 
-      <div className="mt-12 flex flex-col items-start gap-5 rounded-xl bg-background/90 p-6 sm:flex-row md:p-8">
+      <div className="mt-12 flex flex-col items-start gap-5 rounded-xl bg-linear-to-r from-primary to-primary-dark p-6 sm:flex-row md:p-8">
         <Image
           src={forbiddenIcon}
           alt=""
@@ -105,15 +105,13 @@ const TantanganSeleksi = ({
         />
 
         <div>
-          <h3 className="text-xl font-semibold text-primary-dark">
-            {closingTitle}
-          </h3>
+          <h3 className="text-xl font-bold text-cta">{closingTitle}</h3>
 
-          <p className="mt-3 leading-relaxed text-foreground/85">
+          <p className="mt-3 leading-relaxed text-white">
             {closingDescription}
           </p>
 
-          <ul className="mt-4 list-disc space-y-1 pl-5 text-foreground/85">
+          <ul className="mt-4 list-disc space-y-1 pl-5 text-white">
             {closingPoints.map((point) => (
               <li key={point}>{point}</li>
             ))}

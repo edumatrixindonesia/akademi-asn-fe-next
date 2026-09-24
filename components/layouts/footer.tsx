@@ -22,8 +22,6 @@ export type FooterProps = {
 
 const external = { target: "_blank", rel: "noopener noreferrer" } as const;
 
-const linkClassName = "transition-colors hover:text-background";
-
 const Footer = ({
   logo,
   name,
@@ -55,7 +53,11 @@ const Footer = ({
         <ul className="flex gap-4">
           {socials.map((social) => (
             <li key={social.platform}>
-              <a href={social.href} {...external} className={linkClassName}>
+              <a
+                href={social.href}
+                {...external}
+                className="transition-colors hover:text-white/80"
+              >
                 <SocialIcon platform={social.platform} className="size-6" />
 
                 <span className="sr-only">{social.label}</span>
@@ -77,7 +79,7 @@ const Footer = ({
           <a
             href={consultation.phone.href}
             {...external}
-            className={`w-fit text-xl font-semibold ${linkClassName} bg-radial from-cta/80 to-cta text-center mx-auto px-4 py-1 rounded-lg mb-3 inline-flex items-center gap-2`}
+            className={`w-fit text-xl font-semibold transition-colors bg-radial from-cta/80 to-cta text-center mx-auto px-4 py-1 rounded-lg mb-3 inline-flex items-center gap-2 hover:text-white/80`}
           >
             <MessageCircle className="size-5" />
             {consultation.phone.label}
@@ -93,7 +95,7 @@ const Footer = ({
         <a
           href={otherWebsite.link.href}
           {...external}
-          className={`w-fit text-sm ${linkClassName}`}
+          className={`w-fit text-sm transition-colors hover:text-white/80`}
         >
           {otherWebsite.link.label}
         </a>
@@ -107,7 +109,7 @@ const Footer = ({
             <li key={link.href}>
               <Link
                 href={link.href}
-                className={`bg-white py-1.5 pe-1.5 ps-3 rounded-full text-primary-dark text-md font-bold text-center ${linkClassName}`}
+                className={`bg-white py-1.5 pe-1.5 ps-3 rounded-full text-primary-dark hover:text-primary text-md font-bold text-center transition-colors`}
               >
                 {link.label}
               </Link>

@@ -26,6 +26,9 @@ const Jumbotron = ({
       alt=""
       fill
       sizes="100vw"
+      // The background is the LCP element on mobile, so skip lazy loading.
+      loading="eager"
+      fetchPriority="high"
       className="pointer-events-none -z-10 object-cover object-bottom bg-linear-to-r from-primary-dark to-primary"
     />
 
