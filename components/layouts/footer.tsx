@@ -35,7 +35,7 @@ const Footer = ({
 }: FooterProps) => (
   <footer className="mt-auto bg-linear-to-r from-primary to-primary-dark text-background">
     <div className="container-section grid gap-10 lg:grid-cols-4">
-      <div className="flex flex-col gap-4">
+      <div className="flex flex-col gap-3 ps-0 lg:ps-6">
         <Link href="/" className="w-fit rounded-lg bg-white p-3">
           <Image
             src={logo.src}
@@ -83,7 +83,7 @@ const Footer = ({
         </div>
       </div>
 
-      <div className="flex flex-col gap-3">
+      <div className="flex flex-col gap-3 ps-0 lg:ps-6">
         <h2 className="text-md font-bold uppercase tracking-wide text-background">
           {otherWebsite.title}
         </h2>

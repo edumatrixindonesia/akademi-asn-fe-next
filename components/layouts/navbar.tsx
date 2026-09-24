@@ -31,7 +31,7 @@ const Navbar = ({ logo, links, cta }: NavbarProps) => {
   );
 
   return (
-    <header className="sticky top-0 z-40 border-b bg-background">
+    <header className="sticky top-0 z-40 border-b bg-background drop-shadow-2xl">
       <nav className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4">
         <Link href="/" className="shrink-0">
           <Image
@@ -49,30 +49,34 @@ const Navbar = ({ logo, links, cta }: NavbarProps) => {
               <li key={link.href}>
                 <Link
                   href={link.href}
-                  className="text-sm font-medium transition-colors hover:text-muted-foreground"
+                  className="text-sm font-medium transition-colors text-primary-dark hover:text-primary"
                 >
                   {link.label}
                 </Link>
               </li>
             ))}
           </ul>
-          <Button asChild className="bg-cta text-cta-foreground hover:bg-cta/90">
+          <Button asChild className="bg-cta text-white hover:bg-cta/90">
             {ctaLink}
           </Button>
         </div>
 
         <Sheet>
           <SheetTrigger asChild>
-            <Button variant="ghost" size="icon" className="lg:hidden">
+            <Button
+              variant="ghost"
+              size="icon"
+              className="lg:hidden text-primary dark hover:text-primary"
+            >
               <MenuIcon />
               <span className="sr-only">Buka menu</span>
             </Button>
           </SheetTrigger>
           <SheetContent side="right">
             <SheetHeader>
-              <SheetTitle>Menu</SheetTitle>
+              <SheetTitle className="text-primary-dark">Menu</SheetTitle>
             </SheetHeader>
-            <ul className="flex flex-col px-4">
+            <ul className="flex flex-col px-4 text-primary-dark hover:text-primary">
               {links.map((link) => (
                 <li key={link.href}>
                   <SheetClose asChild>
@@ -91,7 +95,7 @@ const Navbar = ({ logo, links, cta }: NavbarProps) => {
                 <Button
                   asChild
                   size="lg"
-                  className="bg-cta text-cta-foreground hover:bg-cta/90"
+                  className="bg-cta text-white hover:bg-cta/90"
                 >
                   {ctaLink}
                 </Button>
