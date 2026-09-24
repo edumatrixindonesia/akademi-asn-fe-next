@@ -16,6 +16,7 @@ export type FooterProps = {
   consultation: { title: string; label: string; phone: FooterLink };
   otherWebsite: { title: string; link: FooterLink };
   examTracks: { title: string; links: FooterLink[] };
+  image: { src: string; alt: string };
   copyright: string;
 };
 
@@ -31,11 +32,12 @@ const Footer = ({
   consultation,
   otherWebsite,
   examTracks,
+  image,
   copyright,
 }: FooterProps) => (
   <footer className="mt-auto bg-linear-to-r from-primary to-primary-dark text-background">
     <div className="container-section grid gap-10 lg:grid-cols-4">
-      <div className="flex flex-col gap-3 ps-0 lg:ps-6">
+      <div className="flex flex-col gap-3">
         <Link href="/" className="w-fit rounded-lg bg-white p-3">
           <Image
             src={logo.src}
@@ -83,7 +85,7 @@ const Footer = ({
         </div>
       </div>
 
-      <div className="flex flex-col gap-3 ps-0 lg:ps-6">
+      <div className="flex flex-col gap-3">
         <h2 className="text-md font-bold uppercase tracking-wide text-background">
           {otherWebsite.title}
         </h2>
@@ -95,10 +97,8 @@ const Footer = ({
         >
           {otherWebsite.link.label}
         </a>
-      </div>
 
-      <div className="flex flex-col gap-3">
-        <h2 className="text-md font-bold uppercase tracking-wide text-background">
+        <h2 className="text-md font-bold uppercase tracking-wide text-background mt-4">
           {examTracks.title}
         </h2>
 
@@ -115,6 +115,14 @@ const Footer = ({
           ))}
         </ul>
       </div>
+
+      <Image
+        src={image.src}
+        alt={image.alt}
+        width={691}
+        height={608}
+        className="h-auto w-full"
+      />
     </div>
 
     <div className="border-t border-background/10">
