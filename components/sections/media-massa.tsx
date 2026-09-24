@@ -17,7 +17,7 @@ const MediaMassa = ({ title, logos }: MediaMassaProps) => (
         {title}
       </h2>
 
-      <div className="mt-10 grid grid-cols-2 items-center gap-8 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-7">
+      <div className="mt-10 flex flex-wrap items-center justify-center gap-3">
         {logos.map((logo) => (
           <Image
             key={logo.src}
@@ -25,7 +25,7 @@ const MediaMassa = ({ title, logos }: MediaMassaProps) => (
             alt={logo.alt}
             width={160}
             height={48}
-            className="mx-auto h-10 w-auto object-contain grayscale"
+            className="h-14 w-[calc((100%-0.75rem)/2)] sm:w-[calc((100%-1.5rem)/3)] md:h-16 md:w-[calc((100%-2.25rem)/4)] lg:w-[calc((100%-4.5rem)/7)] object-contain border-muted border-4 p-2 rounded-xl"
           />
         ))}
       </div>
