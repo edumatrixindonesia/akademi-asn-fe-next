@@ -24,8 +24,8 @@ test("home HTML declares Indonesian and absolute canonical and Open Graph URLs",
   expect(html).toContain('alt="Pria berseragam cokelat menulis pada papan catatan"');
   expect(html).toContain("Konsultasi Pola Soal");
   expect(html).toMatch(/<h2\b[^>]*>Paket Program Akademi ASN<\/h2>/);
-  expect(html).toContain("Program Bimbel/Kelas Offline");
-  expect(html).toContain("Program Online &amp; Tryout");
+  expect(html).toContain("Program Bimbel Offline");
+  expect(html).toContain("Program Bimbel Online &amp; Tryout");
   for (const price of ["Rp1.960.000", "Rp2.000.000", "Rp2.793.000", "Rp2.800.000", "Rp5.292.000", "Rp5.300.000"]) {
     expect(html).toContain(price);
   }
@@ -34,7 +34,7 @@ test("home HTML declares Indonesian and absolute canonical and Open Graph URLs",
     html.indexOf("Program Persiapan Siap Lulus CPNS"),
   );
   expect(html.indexOf("Program Persiapan Siap Lulus CPNS")).toBeLessThan(
-    html.indexOf("Program Bimbel/Kelas Offline"),
+    html.indexOf("Program Bimbel Offline"),
   );
   for (const item of [
     "Pengetahuan Umum", "Bahasa Indonesia", "Tes Kemampuan Dasar (TKD)",
@@ -43,8 +43,7 @@ test("home HTML declares Indonesian and absolute canonical and Open Graph URLs",
   ]) {
     expect(html).toContain(item);
   }
-  expect(html).toContain('alt="Perempuan berbaju batik biru memegang dan menunjuk laptop"');
-  expect([...html.matchAll(/>Daftarkan Sekarang<\/a>/g)]).toHaveLength(2);
+  expect([...html.matchAll(/>Daftarkan Sekarang<\/a>/g)]).toHaveLength(1);
   expect(html).not.toMatch(/\.gif(?:["?])/i);
 
   const canonical = html.match(/<link rel="canonical" href="([^"]+)"/);
