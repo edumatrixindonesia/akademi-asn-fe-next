@@ -8,7 +8,7 @@
 
 **Status:** done
 
-- [x] Brand tokens `primary` (#237DC1), `primary-dark` (#00559F), `muted` (#F6F7FC), and `cta` / `cta-foreground` (#FFAF50) are defined and exposed to Tailwind; `secondary` keeps its neutral value
+- [x] Brand tokens `primary` (#237DC1), `primary-dark` (#00559F), `muted` (#F6F7FC), and `cta` / `cta-foreground` (#FFB04F) are defined and exposed to Tailwind; `secondary` keeps its neutral value
 - [x] A `container-section` utility provides the section wrapper (centered, max-w-7xl, px 4/8, py 12/16)
 - [x] Poppins 400–700 is loaded through `next/font`; Geist and Geist Mono are removed
 - [x] The root layout sets `lang="id"`, a `metadataBase` from `NEXT_PUBLIC_SITE_URL`, a title template, a default description, and `revalidate = 3600`

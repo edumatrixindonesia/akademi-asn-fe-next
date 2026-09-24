@@ -11,7 +11,7 @@ Situs memakai CSS murni (BEM-ish) dengan CSS custom properties di `:root`, tanpa
 | ------------------ | --------- | -------------------------------------------------------------- | ---------------- |
 | `--color-primary`  | `#237DC1` | **Warna utama.** Tombol navbar, gradien footer/section, link   | 20               |
 | `--color-darker`   | `#00559F` | Primary gelap: hover, ujung gradien                            | 13               |
-| `--primary-yellow` | `#FFAF50` | **Warna sekunder (aksen CTA).** Tombol hero, badge, CTA footer | 10               |
+| `--primary-yellow` | `#FFB04F` | **Warna sekunder (aksen CTA).** Tombol hero, badge, CTA footer | 10               |
 | `--primary-orange` | `#ED743F` | Aksen kedua: tombol tryout, call-box footer                    | 3                |
 | `--primary-green`  | `#22C55E` | Ikon centang/list benefit                                      | 4                |
 | `--white-custom`   | `#F6F7FC` | Latar section alternatif (off-white kebiruan)                  | 6                |
@@ -21,7 +21,7 @@ Situs memakai CSS murni (BEM-ish) dengan CSS custom properties di `:root`, tanpa
 ### Ringkasan
 
 - **Primary:** `#237DC1` (biru), varian gelap `#00559F`.
-- **Secondary / aksen:** `#FFAF50` (kuning-oranye), varian `#ED743F` (oranye).
+- **Secondary / aksen:** `#FFB04F` (kuning-oranye), varian `#ED743F` (oranye).
 - **Success:** `#22C55E` / `#16A34A`.
 - **Danger:** `#EF4444`.
 - **Latar:** `#FFFFFF` (dominan) dan `#F6F7FC` (section selang-seling). Varian terang lain: `#F4F8FF`, `#F3F8FD`, `#F1F5F9`.
