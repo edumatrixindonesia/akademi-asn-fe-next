@@ -52,3 +52,30 @@ export const passingGradePppk = {
     },
   ],
 } satisfies PassingGradeProps;
+
+export const passingGradeBumn = {
+  title: "Passing Grade Rekrutmen Bersama BUMN",
+  description:
+    "Nilai ambang batas Tes Online Tahap 1 Rekrutmen Bersama BUMN 2025 yang diumumkan FHCI:",
+  note: "Peserta yang tidak memenuhi ambang batas pada salah satu tes tidak dapat melanjutkan ke tahap berikutnya. Di tahap 2, tes Learning Agility memiliki ambang batas 36.",
+  sourceLabel: "Sumber: FHCI, Rekrutmen Bersama BUMN 2025 (Kompas.com)",
+  sourceHref:
+    "https://www.kompas.com/tren/read/2025/04/18/101500665/ini-passing-grade-twk-tkd-dan-tes-akhlak-dalam-rekrutmen-bersama-bumn-2025",
+  scores: [
+    {
+      title: "Tes Kemampuan Dasar (TKD)",
+      score: "58",
+      description: "100 soal logika dasar, verbal, dan numerik; 73 menit.",
+    },
+    {
+      title: "Tes AKHLAK",
+      score: "65",
+      description: "90 soal core values AKHLAK; 30 menit.",
+    },
+    {
+      title: "Tes Wawasan Kebangsaan",
+      score: "50",
+      description: "10 soal wawasan kebangsaan; 10 menit.",
+    },
+  ],
+} satisfies PassingGradeProps;

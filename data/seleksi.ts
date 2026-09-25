@@ -90,3 +90,65 @@ export const seleksiPppk = {
     },
   ],
 } satisfies SeleksiProps;
+
+export const seleksiBumn = {
+  title: "Pahami Tahapan Seleksi & Sistem Penilaian Rekrutmen Bersama BUMN",
+  description:
+    "Rekrutmen Bersama BUMN (RBB) diselenggarakan Kementerian BUMN bersama Forum Human Capital Indonesia (FHCI). Pada RBB 2025, peserta yang lolos seleksi administrasi mengikuti dua tahap tes online, lalu tes lanjutan di BUMN yang dilamar.",
+  stages: [
+    {
+      title: "Tes Online Tahap 1",
+      description:
+        "Setiap tes punya nilai ambang batas yang harus dipenuhi untuk lanjut ke tahap 2.",
+      tests: [
+        {
+          title: "Tes Kemampuan Dasar (TKD)",
+          description: "100 soal logika dasar, verbal, dan numerik dalam 73 menit.",
+          image: `${imageBase}tiu${imageSuffix}`,
+        },
+        {
+          title: "Tes AKHLAK",
+          description:
+            "90 soal tentang perilaku dan pemahaman nilai Amanah, Kompeten, Harmonis, Loyal, Adaptif, dan Kolaboratif dalam 30 menit.",
+          image: `${imageBase}tkp${imageSuffix}`,
+        },
+        {
+          title: "Tes Wawasan Kebangsaan",
+          description:
+            "10 soal tentang nilai kebangsaan, Pancasila, konstitusi, sejarah perjuangan bangsa, dan Bhinneka Tunggal Ika dalam 10 menit.",
+          image: `${imageBase}twk${imageSuffix}`,
+        },
+      ],
+    },
+    {
+      title: "Tes Online Tahap 2",
+      description: "Diikuti peserta yang lulus Tes Online Tahap 1.",
+      tests: [
+        {
+          title: "Tes Bahasa Inggris",
+          description:
+            "Mengukur kemampuan berbahasa Inggris. Pelamar lulusan SMA/sederajat tidak mengikuti tes ini.",
+          image: `${imageBase}teknis${imageSuffix}`,
+        },
+        {
+          title: "Learning Agility",
+          description:
+            "Mengukur kemampuan belajar, beradaptasi, dan berkembang dalam situasi kerja yang baru dan kompleks.",
+          image: `${imageBase}tiu${imageSuffix}`,
+        },
+      ],
+    },
+    {
+      title: "Tes Kemampuan Bidang (TKB)",
+      description: "Diselenggarakan oleh masing-masing BUMN yang dilamar.",
+      tests: [
+        {
+          title: "Psikotes, Wawancara & Tes Kesehatan",
+          description:
+            "Jenis tes lanjutan ditentukan oleh BUMN yang dilamar sesuai kebutuhan posisinya.",
+          image: `${imageBase}wawancara${imageSuffix}`,
+        },
+      ],
+    },
+  ],
+} satisfies SeleksiProps;
