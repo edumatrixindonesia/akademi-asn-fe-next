@@ -20,7 +20,7 @@ import { tantanganSeleksiHome } from "@/data/tantangan-seleksi";
 import { lembaga } from "@/data/lembaga";
 import { testimoni } from "@/data/testimoni";
 import { ctaFooter } from "@/data/cta-footer";
-import { faqHome } from "@/data/faq";
+import { faqCpns } from "@/data/faq";
 import { mediaMassa } from "@/data/media-massa";
 import { getKonsultasiUrl } from "@/data/contact";
 
@@ -39,7 +39,7 @@ const BimbelCpns = () => {
       <Testimoni {...testimoni} />
       <CtaFooter {...ctaFooter(konsultasiUrl)} />
       <MediaMassa {...mediaMassa} />
-      <Faq {...faqHome} />
+      <Faq {...faqCpns} />
     </main>
   );
 };
