@@ -27,6 +27,7 @@ _Avoid_: failure
 
 **Paket Program**:
 The tutoring packages offered for sale, shown as a section on every landing page. Offline packages (Optima, Maxima, Ultima) can each be taken as Kelas Offline or Privat Home Visit. Online and tryout packages are available everywhere.
+_Avoid_: pricing, plans
 
 **Kelas Offline**:
 An offline package taken at the Akademi ASN office. Available only in DI Yogyakarta.
@@ -35,13 +36,12 @@ _Avoid_: offline (on its own, "offline" covers both Kelas Offline and Privat Hom
 **Privat Home Visit**:
 An offline package where the tutor travels to the student's home or office. Available anywhere.
 _Avoid_: offline (on its own)
-_Avoid_: pricing, plans
 
 **Seleksi**:
-The CPNS exam stages, including SKD (TWK, TIU, TKP) and SKB, shown on landing pages except the BUMN exam-track pages.
+The selection stages of an exam track, shown on every landing page: SKD (TWK, TIU, TKP) and SKB for CPNS; the competency test (technical, managerial, socio-cultural, and interview) for PPPK; and the Rekrutmen Bersama BUMN online tests and each company's follow-up tests for BUMN.
 
 **Passing Grade**:
-The minimum score for each SKD sub-test. Passing the threshold alone does not guarantee a place in the next stage. Not shown on the BUMN exam-track pages.
+The minimum score for each test in a selection stage: the SKD sub-tests for CPNS and the Rekrutmen Bersama BUMN online tests for BUMN. Passing the threshold alone does not guarantee a place in the next stage. PPPK selection has no passing grade (candidates pass by ranking), so the PPPK page shows its scoring system in this section instead.
 
 **Lembaga**:
 The institutions (government ministries and agencies) that alumni joined after passing the selection exam, shown as a logo marquee on every landing page.
