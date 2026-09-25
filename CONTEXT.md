@@ -17,6 +17,19 @@ A page that sells tutoring: the home page, an exam-track page (`/bimbel-cpns`, `
 **Location page**:
 A landing page scoped to a region (province, regency, district, or village), with region names from region-service.
 
+**Jangkauan**:
+The section that links to the location pages one level below the current page, within the same page family: provinces on the home and exam-track pages, then that region's regencies, districts, or villages on a location page. Pages at the deepest level show no Jangkauan.
+
+**Lokasi Lain**:
+The section on a location page that links to the other regions under the same parent, within the same page family (e.g. the other districts of Kota Bandung). Its heading names the parent ("Lokasi lain di Kota Bandung"), or reads "Provinsi lain" on a province page.
+_Avoid_: lokasi terdekat (siblings are not necessarily near)
+
+**Kabupaten Besar**:
+The regencies and cities whose districts get location pages. Every province and every regency gets a location page; districts only in Kabupaten Besar.
+
+**Jabodetabekjur**:
+The Jakarta metro regencies and cities (Jakarta, Bogor, Depok, Tangerang, Bekasi, Cianjur) whose villages also get location pages. Every Jabodetabekjur regency is also a Kabupaten Besar.
+
 **Materi**:
 The subjects covered by the tutoring (e.g. TKD, Bahasa Indonesia, psikotes & wawancara), shown as a section on landing pages.
 _Avoid_: program materi (program is reserved for Paket Program)
