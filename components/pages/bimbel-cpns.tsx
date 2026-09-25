@@ -12,11 +12,11 @@ import Faq from "@/components/sections/faq";
 import MediaMassa from "@/components/sections/media-massa";
 import { jumbotronCpns } from "@/data/jumbotron";
 import { keunggulan } from "@/data/keunggulan";
-import { materiHome } from "@/data/materi";
+import { materiCpns } from "@/data/materi";
 import { paketProgram } from "@/data/paket-program";
 import { seleksiHome } from "@/data/seleksi";
 import { passingGradeHome } from "@/data/passing-grade";
-import { tantanganSeleksiHome } from "@/data/tantangan-seleksi";
+import { tantanganSeleksiCpns } from "@/data/tantangan-seleksi";
 import { lembaga } from "@/data/lembaga";
 import { testimoni } from "@/data/testimoni";
 import { ctaFooter } from "@/data/cta-footer";
@@ -30,11 +30,11 @@ const BimbelCpns = () => {
     <main className="flex-1">
       <Jumbotron {...jumbotronCpns(konsultasiUrl)} />
       <Keunggulan {...keunggulan} />
-      <Materi {...materiHome(konsultasiUrl)} />
+      <Materi {...materiCpns(konsultasiUrl)} />
       <PaketProgram {...paketProgram(konsultasiUrl)} />
       <Seleksi {...seleksiHome} />
       <PassingGrade {...passingGradeHome} />
-      <TantanganSeleksi {...tantanganSeleksiHome(konsultasiUrl)} />
+      <TantanganSeleksi {...tantanganSeleksiCpns(konsultasiUrl)} />
       <Lembaga {...lembaga} />
       <Testimoni {...testimoni} />
       <CtaFooter {...ctaFooter(konsultasiUrl)} />

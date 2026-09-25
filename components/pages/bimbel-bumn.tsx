@@ -10,9 +10,9 @@ import Faq from "@/components/sections/faq";
 import MediaMassa from "@/components/sections/media-massa";
 import { jumbotronBumn } from "@/data/jumbotron";
 import { keunggulan } from "@/data/keunggulan";
-import { materiHome } from "@/data/materi";
+import { materiBumn } from "@/data/materi";
 import { paketProgram } from "@/data/paket-program";
-import { tantanganSeleksiHome } from "@/data/tantangan-seleksi";
+import { tantanganSeleksiBumn } from "@/data/tantangan-seleksi";
 import { lembaga } from "@/data/lembaga";
 import { testimoni } from "@/data/testimoni";
 import { ctaFooter } from "@/data/cta-footer";
@@ -26,9 +26,9 @@ const BimbelBumn = () => {
     <main className="flex-1">
       <Jumbotron {...jumbotronBumn(konsultasiUrl)} />
       <Keunggulan {...keunggulan} />
-      <Materi {...materiHome(konsultasiUrl)} />
+      <Materi {...materiBumn(konsultasiUrl)} />
       <PaketProgram {...paketProgram(konsultasiUrl)} />
-      <TantanganSeleksi {...tantanganSeleksiHome(konsultasiUrl)} />
+      <TantanganSeleksi {...tantanganSeleksiBumn(konsultasiUrl)} />
       <Lembaga {...lembaga} />
       <Testimoni {...testimoni} />
       <CtaFooter {...ctaFooter(konsultasiUrl)} />
