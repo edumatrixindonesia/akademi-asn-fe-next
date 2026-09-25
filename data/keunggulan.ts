@@ -1,6 +1,6 @@
 import type { KeunggulanProps } from "@/components/sections/keunggulan";
 
-export const keunggulanHome = {
+export const keunggulan = {
   title: "Keunggulan Bimbel Akademi ASN",
   description:
     "Belajar lebih terarah untuk menghadapi seleksi CPNS, PPPK, dan BUMN.",

@@ -1,6 +1,6 @@
 import type { LembagaProps } from "@/components/sections/lembaga";
 
-export const lembagaHome = {
+export const lembaga = {
   title: "Lembaga yang Diikuti Alumni Kami",
   logos: [
     {

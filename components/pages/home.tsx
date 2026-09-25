@@ -11,17 +11,17 @@ import CtaFooter from "@/components/sections/cta-footer";
 import Faq from "@/components/sections/faq";
 import MediaMassa from "@/components/sections/media-massa";
 import { jumbotronHome } from "@/data/jumbotron";
-import { keunggulanHome } from "@/data/keunggulan";
+import { keunggulan } from "@/data/keunggulan";
 import { materiHome } from "@/data/materi";
-import { paketProgramHome } from "@/data/paket-program";
+import { paketProgram } from "@/data/paket-program";
 import { seleksiHome } from "@/data/seleksi";
 import { passingGradeHome } from "@/data/passing-grade";
 import { tantanganSeleksiHome } from "@/data/tantangan-seleksi";
-import { lembagaHome } from "@/data/lembaga";
-import { testimoniHome } from "@/data/testimoni";
-import { ctaFooterHome } from "@/data/cta-footer";
+import { lembaga } from "@/data/lembaga";
+import { testimoni } from "@/data/testimoni";
+import { ctaFooter } from "@/data/cta-footer";
 import { faqHome } from "@/data/faq";
-import { mediaMassaHome } from "@/data/media-massa";
+import { mediaMassa } from "@/data/media-massa";
 import { getKonsultasiUrl } from "@/data/contact";
 
 const Home = () => {
@@ -29,16 +29,16 @@ const Home = () => {
   return (
     <main className="flex-1">
       <Jumbotron {...jumbotronHome(konsultasiUrl)} />
-      <Keunggulan {...keunggulanHome} />
+      <Keunggulan {...keunggulan} />
       <Materi {...materiHome(konsultasiUrl)} />
-      <PaketProgram {...paketProgramHome(konsultasiUrl)} />
+      <PaketProgram {...paketProgram(konsultasiUrl)} />
       <Seleksi {...seleksiHome} />
       <PassingGrade {...passingGradeHome} />
       <TantanganSeleksi {...tantanganSeleksiHome(konsultasiUrl)} />
-      <Lembaga {...lembagaHome} />
-      <Testimoni {...testimoniHome} />
-      <CtaFooter {...ctaFooterHome(konsultasiUrl)} />
-      <MediaMassa {...mediaMassaHome} />
+      <Lembaga {...lembaga} />
+      <Testimoni {...testimoni} />
+      <CtaFooter {...ctaFooter(konsultasiUrl)} />
+      <MediaMassa {...mediaMassa} />
       <Faq {...faqHome} />
     </main>
   );

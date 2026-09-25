@@ -8,7 +8,7 @@ const offlineIncluded = [
   "E-Book soal & Pembahasan",
 ];
 
-export const paketProgramHome = (konsultasiUrl: string) =>
+export const paketProgram = (konsultasiUrl: string) =>
   ({
     title: "Paket Program Akademi ASN",
     offlineTitle: "Program Bimbel Offline",

@@ -1,6 +1,6 @@
 import type { MediaMassaProps } from "@/components/sections/media-massa";
 
-export const mediaMassaHome = {
+export const mediaMassa = {
   title: "Telah Diliput",
   logos: [
     {

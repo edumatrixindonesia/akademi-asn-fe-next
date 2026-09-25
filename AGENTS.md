@@ -102,7 +102,8 @@ Pages never pass literal values to sections. All section content lives in `data/
   <Jumbotron {...jumbotronHome} />
   ```
 
-- **Location pages** use data functions that fill in the location name: `export const jumbotronCpnsLocation = (location: string) => ({ … }) satisfies JumbotronProps;`.
+- **Shared entries** used unchanged on every landing page drop the page suffix: `keunggulan`, `paketProgram(konsultasiUrl)`. Page-specific entries keep `<section><Page>` (`jumbotronCpns`). `*Home` entries used on exam-track pages are placeholders until they are split per exam track.
+- **Location pages** use data functions that fill in the location name: `export const jumbotronCpnsLocation = (location: string) => ({ … }) satisfies JumbotronProps;`. Location variants of shared entries are named `<section>Location(location)`, spread the static entry, and override only the text that names the location.
 - **Location data** (region names, hierarchy) comes from the internal `region-service` API. Everything else is static in `data/`.
 
 ## Conventions

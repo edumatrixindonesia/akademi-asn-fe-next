@@ -1,6 +1,6 @@
 import type { TestimoniProps } from "@/components/sections/testimoni";
 
-export const testimoniHome = {
+export const testimoni = {
   title: "Testimoni Siswa",
   screenshots: [
     {

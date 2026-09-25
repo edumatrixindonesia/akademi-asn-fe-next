@@ -1,6 +1,6 @@
 import type { CtaFooterProps } from "@/components/sections/cta-footer";
 
-export const ctaFooterHome = (konsultasiUrl: string) =>
+export const ctaFooter = (konsultasiUrl: string) =>
   ({
     title: "Jangan Tunda Persiapanmu",
     description:
