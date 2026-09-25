@@ -25,3 +25,30 @@ export const passingGradeHome = {
     },
   ],
 } satisfies PassingGradeProps;
+
+export const passingGradePppk = {
+  title: "Sistem Penilaian Seleksi PPPK",
+  description:
+    "Nilai maksimal seleksi kompetensi PPPK 2024 adalah 670 (445 untuk jabatan Pengelola Umum Operasional). Jawaban benar soal teknis bernilai 5, sedangkan setiap pilihan jawaban soal manajerial, sosial kultural, dan wawancara bernilai 1 sampai 4.",
+  note: "Seleksi PPPK 2024 tidak memakai nilai ambang batas (passing grade). Pelamar dinyatakan lulus jika berperingkat terbaik pada formasi yang dilamar.",
+  sourceLabel: "Sumber: Kementerian PANRB, Seleksi PPPK 2024",
+  sourceHref:
+    "https://menpan.go.id/site/berita-terkini/pendaftaran-seleksi-pppk-2024-dibuka-2-periode-menteri-panrb-komitmen-pemerintah-tuntaskan-penataan-non-asn",
+  scores: [
+    {
+      title: "Kompetensi Teknis",
+      score: "450",
+      description: "Nilai maksimal dari 90 soal, masing-masing bernilai 5.",
+    },
+    {
+      title: "Manajerial & Sosial Kultural",
+      score: "180",
+      description: "Nilai maksimal dari 45 soal, masing-masing bernilai 1–4.",
+    },
+    {
+      title: "Wawancara",
+      score: "40",
+      description: "Nilai maksimal dari 10 soal, masing-masing bernilai 1–4.",
+    },
+  ],
+} satisfies PassingGradeProps;

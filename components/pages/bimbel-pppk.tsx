@@ -14,8 +14,8 @@ import { jumbotronPppk } from "@/data/jumbotron";
 import { keunggulan } from "@/data/keunggulan";
 import { materiPppk } from "@/data/materi";
 import { paketProgram } from "@/data/paket-program";
-import { seleksiHome } from "@/data/seleksi";
-import { passingGradeHome } from "@/data/passing-grade";
+import { seleksiPppk } from "@/data/seleksi";
+import { passingGradePppk } from "@/data/passing-grade";
 import { tantanganSeleksiPppk } from "@/data/tantangan-seleksi";
 import { lembaga } from "@/data/lembaga";
 import { testimoni } from "@/data/testimoni";
@@ -32,8 +32,8 @@ const BimbelPppk = () => {
       <Keunggulan {...keunggulan} />
       <Materi {...materiPppk(konsultasiUrl)} />
       <PaketProgram {...paketProgram(konsultasiUrl)} />
-      <Seleksi {...seleksiHome} />
-      <PassingGrade {...passingGradeHome} />
+      <Seleksi {...seleksiPppk} />
+      <PassingGrade {...passingGradePppk} />
       <TantanganSeleksi {...tantanganSeleksiPppk(konsultasiUrl)} />
       <Lembaga {...lembaga} />
       <Testimoni {...testimoni} />
