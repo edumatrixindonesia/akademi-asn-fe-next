@@ -71,14 +71,14 @@ public/                   # Static assets (e.g. logo-akademi-asn.webp)
 
 ### Routes
 
-| Page component            | Route                              |
-| ------------------------- | ---------------------------------- |
-| `pages/home.tsx`          | `app/page.tsx`                     |
-| `pages/home-location.tsx` | `app/[...locations]/page.tsx`      |
-| `pages/cpns.tsx`          | `app/cpns/page.tsx`                |
-| `pages/cpns-location.tsx` | `app/cpns/[...locations]/page.tsx` |
+| Page component                   | Route                                     |
+| -------------------------------- | ----------------------------------------- |
+| `pages/home.tsx`                 | `app/page.tsx`                            |
+| `pages/home-location.tsx`        | `app/[...locations]/page.tsx`             |
+| `pages/bimbel-cpns.tsx`          | `app/bimbel-cpns/page.tsx`                |
+| `pages/bimbel-cpns-location.tsx` | `app/bimbel-cpns/[...locations]/page.tsx` |
 
-`pppk` and `bumn` follow the same pattern as `cpns`. `[...locations]` segments are province / regency / district / village.
+`bimbel-pppk` and `bimbel-bumn` follow the same pattern as `bimbel-cpns`. `[...locations]` segments are province / regency / district / village. The `[...locations]` routes are not created yet; their page components are stubs.
 
 ## Data pattern
 
