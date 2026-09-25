@@ -124,7 +124,7 @@ export const faqPppk = {
     },
     {
       question: "Berapa biaya bimbel PPPK dan bagaimana cara mendaftarnya?",
-      answer: `Biaya les privat di Akademi ASN adalah ${hargaPaketPrivat}. Untuk mendaftar, hubungi admin Akademi ASN lewat tombol WhatsApp di halaman ini, atau datang langsung ke kantor kami di Ruko Permai Monjali, Jalan Monjali No. 3, Sinduadi, Mlati, Sleman, Yogyakarta (Senin–Jumat 09.00–16.00 WIB, Sabtu 09.00–13.00 WIB).`,
+      answer: `Biaya les privat di Akademi ASN adalah ${hargaPaketPrivat}. Untuk mendaftar, hubungi admin Akademi ASN lewat tombol WhatsApp di halaman ini, atau datang langsung ke kantor kami di Ruko Permai Monjali, Jalan Monjali No. 3, Sinduadi, Mlati, Sleman, Yogyakarta (Senin–Jumat 08.00–17.00 WIB, Sabtu 08.00–14.00 WIB).`,
     },
   ],
 } satisfies FaqProps;
