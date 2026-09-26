@@ -8,9 +8,9 @@ Rotation is not synchronized across pages under ISR: each page shows the admin f
 
 **Blocked by:** None (can start immediately)
 
-**Status:** ready-for-agent
+**Status:** done
 
-- [ ] `getKonsultasiUrl` in `data/contact.ts` picks the admin by day (`Math.floor(now / 86_400_000) % 4`) instead of by hour
-- [ ] `app/layout.tsx` exports `revalidate = 86400` instead of `3600`
-- [ ] No page or route sets a lower `revalidate` that would override the daily period
-- [ ] `bun run lint`, `bun run typecheck`, and `bun test` pass
+- [x] `getKonsultasiUrl` in `data/contact.ts` picks the admin by day (`Math.floor(now / 86_400_000) % 4`) instead of by hour
+- [x] `app/layout.tsx` exports `revalidate = 86400` instead of `3600`
+- [x] No page or route sets a lower `revalidate` that would override the daily period
+- [x] `bun run lint`, `bun run typecheck`, and `bun test` pass
