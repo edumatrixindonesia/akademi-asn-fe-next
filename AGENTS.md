@@ -78,7 +78,7 @@ public/                   # Static assets (e.g. logo-akademi-asn.webp)
 | `pages/bimbel-cpns.tsx`          | `app/bimbel-cpns/page.tsx`                |
 | `pages/bimbel-cpns-location.tsx` | `app/bimbel-cpns/[...locations]/page.tsx` |
 
-`bimbel-pppk` and `bimbel-bumn` follow the same pattern as `bimbel-cpns`. `[...locations]` segments are province / regency / district / village. The `[...locations]` routes are not created yet; their page components are stubs.
+`bimbel-pppk` and `bimbel-bumn` follow the same pattern as `bimbel-cpns`. `[...locations]` segments are province / regency / district / village. Only paths in the location page set (`docs/adr/0001-location-page-depth.md`) render; any other path 404s.
 
 ## Data pattern
 
