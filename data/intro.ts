@@ -3,8 +3,94 @@ import type { ResolvedLocation } from "@/lib/location-tree";
 
 // Hand-written base texts, keyed by region `kode` (stable across slug
 // changes). Each one lands here after the owner reviews it; any region
-// without an entry falls back to the template in `baseText`.
-export const introTexts: Record<string, string> = {};
+// without an entry falls back to the template in `baseText`. Drafts and
+// their sources live in `.scratch/jangkauan-lokasi/intro-drafts/`.
+export const introTexts: Record<string, string> = {
+  // DI Yogyakarta
+  "34":
+    "Daerah Istimewa Yogyakarta dikenal sebagai kota pelajar, dengan banyak perguruan tinggi seperti UGM dan UNY. Pusat pemerintahannya berada di Kompleks Kepatihan, Kota Yogyakarta. Kantor Akademi ASN ada di Sleman, jadi peserta dari DIY bisa memilih Kelas Offline, Privat Home Visit, atau kelas online.",
+  // Kota Yogyakarta
+  "34.71":
+    "Kota Yogyakarta adalah pusat pemerintahan DIY, tempat Keraton Yogyakarta, Kompleks Kepatihan, dan kawasan Malioboro berada. Kantor Akademi ASN berada di Jalan Monjali, Sleman, sehingga peserta dari Kota Yogyakarta bisa ikut Kelas Offline. Jika lebih nyaman belajar di rumah, pilih Privat Home Visit atau kelas online.",
+  // Kabupaten Sleman
+  "34.04":
+    "Kabupaten Sleman membentang dari lereng Gunung Merapi di utara hingga berbatasan dengan Kota Yogyakarta di selatan, dan menjadi lokasi kampus UGM dan UNY. Kantor Akademi ASN berada di Sinduadi, Mlati, Sleman, jadi peserta dari Sleman bisa ikut Kelas Offline. Privat Home Visit dan kelas online juga tersedia.",
+  // Kabupaten Bantul
+  "34.02":
+    "Kabupaten Bantul di selatan Yogyakarta dikenal dengan Pantai Parangtritis, sentra gerabah Kasongan, serta kampus ISI Yogyakarta dan UMY. Peserta dari Bantul bisa belajar di kantor Akademi ASN di Sleman lewat Kelas Offline. Jika ingin belajar dari rumah, tutor Privat Home Visit bisa datang ke tempatmu.",
+  // Kabupaten Kulon Progo
+  "34.01":
+    "Kabupaten Kulon Progo, dengan ibu kota Wates, menjadi lokasi Yogyakarta International Airport di Kapanewon Temon, gerbang udara utama DIY sejak 2019. Peserta dari Kulon Progo bisa memilih Privat Home Visit agar tutor datang ke rumah, ikut kelas online, atau datang ke Kelas Offline di kantor Akademi ASN di Sleman.",
+  // Kabupaten Gunungkidul
+  "34.03":
+    "Kabupaten Gunungkidul, dengan ibu kota Wonosari, adalah kabupaten terluas di DIY, dengan bentang alam karst Pegunungan Sewu dan deretan pantai di pesisir selatan. Wonosari berjarak sekitar 39 km dari Kota Yogyakarta, jadi peserta dari Gunungkidul bisa belajar lewat Privat Home Visit atau kelas online. Kelas Offline di Sleman tetap terbuka bagi yang ingin belajar tatap muka.",
+  // Jawa Barat
+  "32":
+    "Jawa Barat adalah provinsi dengan jumlah penduduk terbanyak di Indonesia, beribu kota di Bandung. Wilayahnya mencakup kota seperti Bandung, Bekasi, Depok, dan Bogor, hingga kabupaten di pegunungan dan pesisir selatan. Peserta dari seluruh Jawa Barat bisa belajar bersama tutor Akademi ASN lewat Privat Home Visit atau kelas online.",
+  // Kota Bandung
+  "32.73":
+    "Kota Bandung adalah ibu kota Jawa Barat, dengan Gedung Sate sebagai kantor Gubernur. Kota ini juga menjadi lokasi kampus Ganesha Institut Teknologi Bandung (ITB). Tutor Privat Home Visit Akademi ASN bisa datang ke rumah atau kantormu di Bandung, atau kamu bisa ikut kelas online.",
+  // Kabupaten Bandung
+  "32.04":
+    "Kabupaten Bandung, dengan ibu kota di Soreang, berbatasan langsung dengan Kota Bandung. Wilayah pegunungannya di selatan, seperti Ciwidey dan Pangalengan, dikenal dengan perkebunan teh dan udaranya yang sejuk. Peserta dari Kabupaten Bandung bisa belajar lewat Privat Home Visit tanpa perlu ke pusat kota, atau lewat kelas online.",
+  // Kabupaten Bandung Barat
+  "32.17":
+    "Kabupaten Bandung Barat, dengan ibu kota Ngamprah, dibentuk pada 2007 sebagai pemekaran Kabupaten Bandung. Wilayahnya mencakup kawasan Lembang, Padalarang, dan Cililin. Peserta dari Bandung Barat bisa belajar bersama tutor Akademi ASN lewat Privat Home Visit atau kelas online.",
+  // Kabupaten Sumedang
+  "32.11":
+    "Kabupaten Sumedang dikenal dengan tahu Sumedang dan kawasan pendidikan Jatinangor, tempat kampus IPDN, Unpad, dan ITB Jatinangor berada. IPDN adalah lembaga pendidikan kedinasan di bawah Kementerian Dalam Negeri yang mendidik kader pemerintahan. Peserta dari Sumedang bisa menyiapkan seleksi lewat Privat Home Visit atau kelas online Akademi ASN.",
+  // Kabupaten Bogor
+  "32.01":
+    "Kabupaten Bogor, dengan ibu kota Cibinong, mengelilingi Kota Bogor dan menjadi wilayah penyangga Jakarta. Wilayahnya mencakup sebagian kawasan Puncak, seperti Cisarua dan Megamendung. Privat Home Visit dan kelas online Akademi ASN membantu kamu belajar sesuai jadwal tanpa perlu menempuh perjalanan jauh.",
+  // Kota Bogor
+  "32.71":
+    "Kota Bogor dijuluki Kota Hujan dan menjadi lokasi Kebun Raya Bogor serta Istana Kepresidenan Bogor. Kota ini terhubung dengan Jakarta lewat KRL Commuter Line Bogor. Peserta dari Kota Bogor bisa belajar lewat Privat Home Visit atau kelas online di sela kesibukan harian.",
+  // Kabupaten Cianjur
+  "32.03":
+    "Kabupaten Cianjur dikenal dengan beras Pandan Wangi, dan wilayahnya membentang dari kawasan Puncak di Cipanas hingga pesisir Samudra Hindia di selatan. Wilayah yang luas membuat jarak ke pusat kota tidak selalu dekat. Privat Home Visit Akademi ASN mendatangkan tutor ke rumahmu, dan kelas online bisa diikuti dari mana saja di Cianjur.",
+  // Kabupaten Bekasi
+  "32.16":
+    "Kabupaten Bekasi, dengan pusat pemerintahan di Cikarang Pusat, dikenal sebagai salah satu kawasan industri terbesar di Indonesia, dengan kawasan seperti Jababeka dan MM2100. Bagi kamu yang bekerja dengan jadwal padat, Privat Home Visit dan kelas online Akademi ASN memungkinkan persiapan seleksi di luar jam kerja.",
+  // Kota Bekasi
+  "32.75":
+    "Kota Bekasi berbatasan langsung dengan Jakarta Timur di sebelah barat dan menjadi bagian dari kawasan metropolitan Jabodetabek. Tutor Privat Home Visit Akademi ASN bisa datang ke rumahmu di Bekasi, atau kamu bisa ikut kelas online sesuai jadwalmu.",
+  // Kota Depok
+  "32.76":
+    "Kota Depok adalah lokasi kampus utama Universitas Indonesia dan terhubung dengan Jakarta lewat KRL Commuter Line Bogor. Peserta dari Depok bisa belajar bersama tutor Akademi ASN lewat Privat Home Visit atau kelas online.",
+  // DKI Jakarta
+  "31":
+    "Jakarta terbagi atas lima kota administrasi dan satu kabupaten administrasi, yaitu Kepulauan Seribu, dan merupakan provinsi dengan kepadatan penduduk tertinggi di Indonesia. Di wilayah ini berdiri Monas, Istana Merdeka, dan Pelabuhan Tanjung Priok. Peserta dari seluruh Jakarta bisa belajar bersama tutor Akademi ASN lewat Privat Home Visit atau kelas online.",
+  // Kota Jakarta Pusat
+  "31.71":
+    "Jakarta Pusat adalah lokasi Monumen Nasional di Kecamatan Gambir, Istana Merdeka, dan Balai Kota Jakarta di Jalan Medan Merdeka Selatan. Kawasan Gambir juga dikelilingi berbagai kantor kementerian dan lembaga nasional. Tutor Privat Home Visit Akademi ASN bisa datang ke rumah atau kantormu di Jakarta Pusat, atau kamu bisa ikut kelas online.",
+  // Kota Jakarta Utara
+  "31.72":
+    "Jakarta Utara adalah lokasi Pelabuhan Tanjung Priok, pelabuhan terbesar dan tersibuk di Indonesia, serta kawasan wisata Taman Impian Jaya Ancol. Peserta dari Jakarta Utara bisa belajar bersama tutor Akademi ASN lewat Privat Home Visit di rumah atau kantor, atau lewat kelas online.",
+  // Kota Jakarta Barat
+  "31.73":
+    "Jakarta Barat adalah lokasi kawasan Kota Tua dengan Museum Fatahillah di Kecamatan Taman Sari. Di Kecamatan Grogol Petamburan terdapat kampus Universitas Trisakti dan Universitas Tarumanagara. Peserta dari Jakarta Barat bisa belajar bersama tutor Akademi ASN lewat Privat Home Visit atau kelas online.",
+  // Kota Jakarta Selatan
+  "31.74":
+    "Jakarta Selatan adalah lokasi kawasan bisnis Sudirman Central Business District (SCBD) di Kebayoran Baru dan Taman Margasatwa Ragunan di Pasar Minggu. Tutor Privat Home Visit Akademi ASN bisa datang ke rumah atau kantormu di Jakarta Selatan, sehingga persiapan seleksi bisa berjalan di sela jam kerja. Kelas online juga tersedia.",
+  // Kota Jakarta Timur
+  "31.75":
+    "Jakarta Timur adalah wilayah terluas di Jakarta dan lokasi Bandar Udara Halim Perdanakusuma, satu-satunya bandara di Jakarta, serta Taman Mini Indonesia Indah. Peserta dari Jakarta Timur bisa belajar bersama tutor Akademi ASN lewat Privat Home Visit di rumah atau lewat kelas online.",
+  // Kabupaten Kepulauan Seribu
+  "31.01":
+    "Kepulauan Seribu adalah satu-satunya kabupaten administrasi di Jakarta, berupa gugusan pulau di Teluk Jakarta dengan pusat pemerintahan di Pulau Pramuka. Karena letaknya di kepulauan, kelas online Akademi ASN memungkinkan peserta dari Kepulauan Seribu menyiapkan seleksi tanpa harus menyeberang ke daratan Jakarta.",
+  // Banten
+  "36":
+    "Provinsi Banten dibentuk pada tahun 2000 sebagai pemekaran dari Jawa Barat, dengan ibu kota di Serang. Wilayahnya terdiri atas empat kota, yaitu Serang, Tangerang, Cilegon, dan Tangerang Selatan, serta empat kabupaten. Peserta dari seluruh Banten bisa belajar bersama tutor Akademi ASN lewat Privat Home Visit atau kelas online.",
+  // Kabupaten Tangerang
+  "36.03":
+    "Kabupaten Tangerang, dengan pusat pemerintahan di Tigaraksa, membentang dari pesisir Laut Jawa di utara hingga berbatasan dengan Kabupaten Bogor di selatan. Kabupaten ini menjadi bagian dari wilayah metropolitan Jabodetabek. Privat Home Visit dan kelas online Akademi ASN membantu kamu belajar sesuai jadwal tanpa perlu menempuh perjalanan jauh.",
+  // Kota Tangerang
+  "36.71":
+    "Kota Tangerang dibentuk pada tahun 1993 dan menjadi lokasi Bandar Udara Internasional Soekarno–Hatta di Kecamatan Benda, pintu gerbang utama penerbangan internasional Indonesia. Peserta dari Kota Tangerang bisa belajar bersama tutor Akademi ASN lewat Privat Home Visit atau kelas online.",
+  // Kota Tangerang Selatan
+  "36.74":
+    "Kota Tangerang Selatan dibentuk pada tahun 2008 sebagai pemekaran dari Kabupaten Tangerang, dengan pusat pemerintahan di Ciputat. Kota ini menjadi lokasi kampus UIN Syarif Hidayatullah Jakarta dan Universitas Terbuka. Peserta dari Tangerang Selatan bisa belajar bersama tutor Akademi ASN lewat Privat Home Visit atau kelas online.",
+};
 
 const baseText = ({ region, ancestors }: ResolvedLocation, texts: Record<string, string>) =>
   texts[region.kode] ??
