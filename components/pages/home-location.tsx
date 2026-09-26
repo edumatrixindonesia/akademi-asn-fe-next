@@ -1,8 +1,10 @@
 import Breadcrumb from "@/components/sections/breadcrumb";
 import Jumbotron from "@/components/sections/jumbotron";
+import Intro from "@/components/sections/intro";
 import Keunggulan from "@/components/sections/keunggulan";
 import Materi from "@/components/sections/materi";
 import PaketProgram from "@/components/sections/paket-program";
+import KelasOffline from "@/components/sections/kelas-offline";
 import Seleksi from "@/components/sections/seleksi";
 import PassingGrade from "@/components/sections/passing-grade";
 import TantanganSeleksi from "@/components/sections/tantangan-seleksi";
@@ -15,9 +17,11 @@ import Faq from "@/components/sections/faq";
 import MediaMassa from "@/components/sections/media-massa";
 import { breadcrumbHomeLocation } from "@/data/breadcrumb";
 import { jumbotronHomeLocation } from "@/data/jumbotron";
-import { keunggulan } from "@/data/keunggulan";
+import { introHomeLocation } from "@/data/intro";
+import { keunggulanLocation } from "@/data/keunggulan";
 import { materiHome } from "@/data/materi";
-import { paketProgram } from "@/data/paket-program";
+import { paketProgramLocation } from "@/data/paket-program";
+import { kelasOfflineLocation } from "@/data/kelas-offline";
 import { seleksiHome } from "@/data/seleksi";
 import { passingGradeHome } from "@/data/passing-grade";
 import { tantanganSeleksiHome } from "@/data/tantangan-seleksi";
@@ -25,7 +29,7 @@ import { lembaga } from "@/data/lembaga";
 import { testimoni } from "@/data/testimoni";
 import { jangkauanHomeLocation } from "@/data/jangkauan";
 import { lokasiLainHomeLocation } from "@/data/lokasi-lain";
-import { ctaFooter } from "@/data/cta-footer";
+import { ctaFooterLocation } from "@/data/cta-footer";
 import { faqHome } from "@/data/faq";
 import { mediaMassa } from "@/data/media-massa";
 import { getKonsultasiUrl } from "@/data/contact";
@@ -36,13 +40,16 @@ type HomeLocationProps = { location: ResolvedLocation };
 const HomeLocation = ({ location }: HomeLocationProps) => {
   const konsultasiUrl = getKonsultasiUrl();
   const label = locationLabel(location);
+  const kelasOffline = kelasOfflineLocation(location);
   return (
     <main className="flex-1">
       <Breadcrumb {...breadcrumbHomeLocation(location)} />
       <Jumbotron {...jumbotronHomeLocation(konsultasiUrl, label)} />
-      <Keunggulan {...keunggulan} />
+      <Intro {...introHomeLocation(location)} />
+      <Keunggulan {...keunggulanLocation(label)} />
       <Materi {...materiHome(konsultasiUrl)} />
-      <PaketProgram {...paketProgram(konsultasiUrl)} />
+      <PaketProgram {...paketProgramLocation(konsultasiUrl, label)} />
+      {kelasOffline && <KelasOffline {...kelasOffline} />}
       <Seleksi {...seleksiHome} />
       <PassingGrade {...passingGradeHome} />
       <TantanganSeleksi {...tantanganSeleksiHome(konsultasiUrl)} />
@@ -50,7 +57,7 @@ const HomeLocation = ({ location }: HomeLocationProps) => {
       <Testimoni {...testimoni} />
       <Jangkauan {...jangkauanHomeLocation(location)} />
       <LokasiLain {...lokasiLainHomeLocation(location)} />
-      <CtaFooter {...ctaFooter(konsultasiUrl)} />
+      <CtaFooter {...ctaFooterLocation(konsultasiUrl, label)} />
       <MediaMassa {...mediaMassa} />
       <Faq {...faqHome} />
     </main>

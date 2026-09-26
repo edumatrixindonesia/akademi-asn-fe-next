@@ -42,3 +42,10 @@ export const keunggulan = {
     },
   ],
 } satisfies KeunggulanProps;
+
+export const keunggulanLocation = (location: string) =>
+  ({
+    ...keunggulan,
+    title: `Keunggulan Bimbel Akademi ASN di ${location}`,
+    description: `Belajar lebih terarah dari ${location} untuk menghadapi seleksi CPNS, PPPK, dan BUMN.`,
+  }) satisfies KeunggulanProps;

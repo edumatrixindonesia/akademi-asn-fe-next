@@ -1,8 +1,10 @@
 import Breadcrumb from "@/components/sections/breadcrumb";
 import Jumbotron from "@/components/sections/jumbotron";
+import Intro from "@/components/sections/intro";
 import Keunggulan from "@/components/sections/keunggulan";
 import Materi from "@/components/sections/materi";
 import PaketProgram from "@/components/sections/paket-program";
+import KelasOffline from "@/components/sections/kelas-offline";
 import Seleksi from "@/components/sections/seleksi";
 import PassingGrade from "@/components/sections/passing-grade";
 import TantanganSeleksi from "@/components/sections/tantangan-seleksi";
@@ -15,9 +17,11 @@ import Faq from "@/components/sections/faq";
 import MediaMassa from "@/components/sections/media-massa";
 import { breadcrumbPppkLocation } from "@/data/breadcrumb";
 import { jumbotronPppkLocation } from "@/data/jumbotron";
-import { keunggulan } from "@/data/keunggulan";
+import { introPppkLocation } from "@/data/intro";
+import { keunggulanLocation } from "@/data/keunggulan";
 import { materiPppk } from "@/data/materi";
-import { paketProgram } from "@/data/paket-program";
+import { paketProgramLocation } from "@/data/paket-program";
+import { kelasOfflineLocation } from "@/data/kelas-offline";
 import { seleksiPppk } from "@/data/seleksi";
 import { passingGradePppk } from "@/data/passing-grade";
 import { tantanganSeleksiPppk } from "@/data/tantangan-seleksi";
@@ -25,7 +29,7 @@ import { lembaga } from "@/data/lembaga";
 import { testimoni } from "@/data/testimoni";
 import { jangkauanPppkLocation } from "@/data/jangkauan";
 import { lokasiLainPppkLocation } from "@/data/lokasi-lain";
-import { ctaFooter } from "@/data/cta-footer";
+import { ctaFooterLocation } from "@/data/cta-footer";
 import { faqPppk } from "@/data/faq";
 import { mediaMassa } from "@/data/media-massa";
 import { getKonsultasiUrl } from "@/data/contact";
@@ -36,13 +40,16 @@ type BimbelPppkLocationProps = { location: ResolvedLocation };
 const BimbelPppkLocation = ({ location }: BimbelPppkLocationProps) => {
   const konsultasiUrl = getKonsultasiUrl();
   const label = locationLabel(location);
+  const kelasOffline = kelasOfflineLocation(location);
   return (
     <main className="flex-1">
       <Breadcrumb {...breadcrumbPppkLocation(location)} />
       <Jumbotron {...jumbotronPppkLocation(konsultasiUrl, label)} />
-      <Keunggulan {...keunggulan} />
+      <Intro {...introPppkLocation(location)} />
+      <Keunggulan {...keunggulanLocation(label)} />
       <Materi {...materiPppk(konsultasiUrl)} />
-      <PaketProgram {...paketProgram(konsultasiUrl)} />
+      <PaketProgram {...paketProgramLocation(konsultasiUrl, label)} />
+      {kelasOffline && <KelasOffline {...kelasOffline} />}
       <Seleksi {...seleksiPppk} />
       <PassingGrade {...passingGradePppk} />
       <TantanganSeleksi {...tantanganSeleksiPppk(konsultasiUrl)} />
@@ -50,7 +57,7 @@ const BimbelPppkLocation = ({ location }: BimbelPppkLocationProps) => {
       <Testimoni {...testimoni} />
       <Jangkauan {...jangkauanPppkLocation(location)} />
       <LokasiLain {...lokasiLainPppkLocation(location)} />
-      <CtaFooter {...ctaFooter(konsultasiUrl)} />
+      <CtaFooter {...ctaFooterLocation(konsultasiUrl, label)} />
       <MediaMassa {...mediaMassa} />
       <Faq {...faqPppk} />
     </main>

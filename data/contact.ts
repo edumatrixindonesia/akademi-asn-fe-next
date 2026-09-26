@@ -5,6 +5,11 @@ export const konsultasiAdmins = [
   { name: "Sari", phone: "6285712217876" },
 ] as const;
 
+// The Akademi ASN office, where Kelas Offline is held. Keep it identical
+// everywhere it appears (NAP consistency for local search).
+export const officeAddress =
+  "Ruko Permai Monjali, Jalan Monjali No 3, Kutu Dukuh, Sinduadi, Mlati, Sleman, Yogyakarta 55241";
+
 export const getKonsultasiUrl = (now = Date.now()): string => {
   const siteUrl = process.env.NEXT_PUBLIC_SITE_URL?.trim();
   if (!siteUrl) {

@@ -1,11 +1,11 @@
 import type { FooterProps } from "@/components/layouts/footer";
+import { officeAddress } from "@/data/contact";
 
 export const footerDefault = (konsultasiUrl: string) =>
   ({
     logo: { src: "/img/logo/logo-akademi-asn.webp", alt: "Akademi ASN" },
     name: "AKADEMI ASN",
-    address:
-      "Ruko Permai Monjali, Jalan Monjali No 3, Kutu Dukuh, Sinduadi, Mlati, Sleman, Yogyakarta 55241",
+    address: officeAddress,
     socials: [
       {
         platform: "instagram",

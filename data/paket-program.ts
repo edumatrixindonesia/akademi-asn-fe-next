@@ -91,3 +91,11 @@ export const paketProgram = (konsultasiUrl: string) =>
       },
     ],
   }) satisfies PaketProgramProps;
+
+// Privat Home Visit is available anywhere, so the offline heading can name
+// any location.
+export const paketProgramLocation = (konsultasiUrl: string, location: string) =>
+  ({
+    ...paketProgram(konsultasiUrl),
+    offlineTitle: `Program Bimbel Privat di ${location}`,
+  }) satisfies PaketProgramProps;

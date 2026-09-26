@@ -12,3 +12,9 @@ export const ctaFooter = (konsultasiUrl: string) =>
     ctaLabel: "Daftar Sekarang",
     ctaHref: konsultasiUrl,
   }) satisfies CtaFooterProps;
+
+export const ctaFooterLocation = (konsultasiUrl: string, location: string) =>
+  ({
+    ...ctaFooter(konsultasiUrl),
+    description: `Dapatkan kelas trial gratis dan rasakan langsung metode belajar privat 1-on-1 bersama master teacher Akademi ASN di ${location} sebelum kamu memutuskan untuk bergabung.`,
+  }) satisfies CtaFooterProps;

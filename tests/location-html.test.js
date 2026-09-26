@@ -105,3 +105,28 @@ test("landing pages list the provinces in Jangkauan before CTA Footer", async ()
     expect(html).not.toContain('id="lokasi-lain"');
   }
 });
+
+test("a location page names the location in the intro and section variants", async () => {
+  const html = await (await get("/bimbel-cpns/jawa-barat/kota-bandung")).text();
+  const label = "Kota Bandung, Jawa Barat";
+
+  const intro = block(html, 'id="intro"');
+  expect(intro).toMatch(/<h2\b[^>]*>Bimbel CPNS di Kota Bandung<\/h2>/);
+  expect(intro).toContain("Formasi CPNS di Kota Bandung");
+  expect(html.indexOf('id="intro"')).toBeGreaterThan(html.indexOf("<h1"));
+  expect(html.indexOf('id="intro"')).toBeLessThan(html.indexOf('id="keunggulan-title"'));
+
+  expect(block(html, 'id="keunggulan-title"')).toContain(label);
+  expect(block(html, 'id="paket-program"')).toContain(`Program Bimbel Privat di ${label}`);
+  expect(block(html, 'id="cta-footer-title"')).toContain(label);
+});
+
+test("only DI Yogyakarta location pages show the Kelas Offline office content", async () => {
+  const sleman = await (await get("/di-yogyakarta/kabupaten-sleman")).text();
+  const kelasOffline = block(sleman, 'id="kelas-offline"');
+  expect(kelasOffline).toContain("<address");
+  expect(kelasOffline).toContain("Jalan Monjali No 3");
+
+  const jawaBarat = await (await get("/jawa-barat")).text();
+  expect(jawaBarat).not.toContain('id="kelas-offline"');
+});
