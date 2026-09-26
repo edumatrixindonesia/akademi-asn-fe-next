@@ -125,7 +125,7 @@ export const introTexts: Record<string, string> = {
     "Kota Medan adalah ibu kota Sumatera Utara dan lokasi Istana Maimun, kampus Universitas Sumatera Utara di Padang Bulan, serta Pelabuhan Belawan, pelabuhan tersibuk di Indonesia di luar Pulau Jawa. Peserta dari Medan bisa belajar bersama tutor Akademi ASN lewat Privat Home Visit atau kelas online.",
   // Sumatera Selatan
   "16":
-    "Sumatera Selatan beribu kota di Palembang dan terdiri atas 13 kabupaten dan 4 kota. Sungai Musi, sungai terpanjang di Pulau Sumatra, mengalir melintasi provinsi ini hingga membelah Kota Palembang. Peserta dari seluruh Sumatera Selatan bisa belajar bersama tutor Akademi ASN lewat Privat Home Visit atau kelas online.",
+    "Sumatera Selatan beribu kota di Palembang dan terdiri atas 13 kabupaten dan 4 kota. Sungai Musi, sungai terpanjang kedua di Pulau Sumatra, mengalir melintasi provinsi ini hingga membelah Kota Palembang. Peserta dari seluruh Sumatera Selatan bisa belajar bersama tutor Akademi ASN lewat Privat Home Visit atau kelas online.",
   // Kota Palembang
   "16.71":
     "Kota Palembang, ibu kota Sumatera Selatan, disebut sebagai kota tertua di Indonesia berdasarkan Prasasti Kedukan Bukit peninggalan Kerajaan Sriwijaya dari tahun 682 Masehi. Ikon kotanya, Jembatan Ampera, membentang di atas Sungai Musi. Peserta dari Palembang bisa belajar bersama tutor Akademi ASN lewat Privat Home Visit atau kelas online.",

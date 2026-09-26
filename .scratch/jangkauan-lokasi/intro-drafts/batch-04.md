@@ -11,6 +11,8 @@ Drafts for `introTexts` in `data/intro.ts`, keyed by region `kode`. Same rules a
 - Left out Bandara Kualanamu for Kota Medan: it serves Medan but lies in Kabupaten Deli Serdang.
 - Left out Universitas Sriwijaya for Kota Palembang: its main campus is in Indralaya, Kabupaten Ogan Ilir.
 
+- Correction (revision 2): Sungai Musi is the second-longest river in Sumatra, after Batanghari (±800 km vs ±750 km). The first draft followed a single Wikipedia sentence that called Musi the longest; Kompas, detik, and Wikipedia's own Batang Hari article say otherwise.
+
 ## Sumatera Utara
 
 ### 12 · Sumatera Utara
@@ -29,9 +31,9 @@ Sources: [usu.ac.id: Istana Maimun di Medan Maimun](https://www.usu.ac.id/id/keh
 
 ### 16 · Sumatera Selatan
 
-Sumatera Selatan beribu kota di Palembang dan terdiri atas 13 kabupaten dan 4 kota. Sungai Musi, sungai terpanjang di Pulau Sumatra, mengalir melintasi provinsi ini hingga membelah Kota Palembang. Peserta dari seluruh Sumatera Selatan bisa belajar bersama tutor Akademi ASN lewat Privat Home Visit atau kelas online.
+Sumatera Selatan beribu kota di Palembang dan terdiri atas 13 kabupaten dan 4 kota. Sungai Musi, sungai terpanjang kedua di Pulau Sumatra, mengalir melintasi provinsi ini hingga membelah Kota Palembang. Peserta dari seluruh Sumatera Selatan bisa belajar bersama tutor Akademi ASN lewat Privat Home Visit atau kelas online.
 
-Sources: [sumselprov.go.id: Sekilas Sumatera Selatan (13 kabupaten, 4 kota)](https://sumselprov.go.id/page/content/sekilas-sumatera-selatan), [Dinkes Sumsel: profil 2024 (Palembang ibu kota)](https://pdf2.sumselgo.id/ppiddinkes/unggah/2025/7889454-PROV%20SUMSEL%202024.pdf), [Wikipedia: Kota Palembang (Sungai Musi terpanjang di Sumatra, membelah Palembang)](https://id.wikipedia.org/wiki/Kota_Palembang)
+Sources: [sumselprov.go.id: Sekilas Sumatera Selatan (13 kabupaten, 4 kota)](https://sumselprov.go.id/page/content/sekilas-sumatera-selatan), [Dinkes Sumsel: profil 2024 (Palembang ibu kota)](https://pdf2.sumselgo.id/ppiddinkes/unggah/2025/7889454-PROV%20SUMSEL%202024.pdf), [Wikipedia: Kota Palembang (Sungai Musi membelah Palembang)](https://id.wikipedia.org/wiki/Kota_Palembang), [detik.com: Sungai Musi terpanjang kedua di Sumatra setelah Batanghari](https://www.detik.com/sumbagsel/berita/d-7915826/berapa-panjang-sungai-musi-simak-7-faktanya), [Kompas: 5 sungai terpanjang di Sumatra](https://medan.kompas.com/read/2022/01/19/092504178/5-sungai-terpanjang-di-sumatera-ada-yang-mengalir-dari-sumbar-hingga-jambi?page=all)
 
 ### 16.71 · Kota Palembang
 
