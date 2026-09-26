@@ -70,8 +70,12 @@ export const getLocationOrNotFound = async (slugs: string[]) => {
   return location;
 };
 
+export const getProvinces = async () =>
+  (await fetchRegionList("type=provinsi")).map((province) => ({
+    ...province,
+    nama: province.nama.trim(),
+  }));
+
 // Only province pages are prerendered; the rest render on first visit (ISR).
 export const getProvinceParams = async () =>
-  (await fetchRegionList("type=provinsi")).map((province) => ({
-    locations: [province.slug],
-  }));
+  (await getProvinces()).map((province) => ({ locations: [province.slug] }));

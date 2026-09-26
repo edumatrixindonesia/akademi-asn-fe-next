@@ -23,5 +23,5 @@ export async function generateMetadata({
 
 export default async function Page({ params }: PageProps<"/[...locations]">) {
   const found = await getLocationOrNotFound((await params).locations);
-  return <HomeLocationPage location={locationLabel(found)} />;
+  return <HomeLocationPage location={found} />;
 }

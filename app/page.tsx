@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import HomePage from "@/components/pages/home";
+import { getProvinces } from "@/lib/region-service";
 import { openGraphBase } from "./shared-metadata";
 
 export const metadata: Metadata = {
@@ -10,6 +11,6 @@ export const metadata: Metadata = {
   openGraph: { ...openGraphBase, url: "/" },
 };
 
-export default function Home() {
-  return <HomePage />;
+export default async function Home() {
+  return <HomePage provinces={await getProvinces()} />;
 }

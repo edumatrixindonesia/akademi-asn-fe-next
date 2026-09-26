@@ -1,3 +1,4 @@
+import Breadcrumb from "@/components/sections/breadcrumb";
 import Jumbotron from "@/components/sections/jumbotron";
 import Keunggulan from "@/components/sections/keunggulan";
 import Materi from "@/components/sections/materi";
@@ -7,9 +8,12 @@ import PassingGrade from "@/components/sections/passing-grade";
 import TantanganSeleksi from "@/components/sections/tantangan-seleksi";
 import Lembaga from "@/components/sections/lembaga";
 import Testimoni from "@/components/sections/testimoni";
+import Jangkauan from "@/components/sections/jangkauan";
+import LokasiLain from "@/components/sections/lokasi-lain";
 import CtaFooter from "@/components/sections/cta-footer";
 import Faq from "@/components/sections/faq";
 import MediaMassa from "@/components/sections/media-massa";
+import { breadcrumbPppkLocation } from "@/data/breadcrumb";
 import { jumbotronPppkLocation } from "@/data/jumbotron";
 import { keunggulan } from "@/data/keunggulan";
 import { materiPppk } from "@/data/materi";
@@ -19,18 +23,23 @@ import { passingGradePppk } from "@/data/passing-grade";
 import { tantanganSeleksiPppk } from "@/data/tantangan-seleksi";
 import { lembaga } from "@/data/lembaga";
 import { testimoni } from "@/data/testimoni";
+import { jangkauanPppkLocation } from "@/data/jangkauan";
+import { lokasiLainPppkLocation } from "@/data/lokasi-lain";
 import { ctaFooter } from "@/data/cta-footer";
 import { faqPppk } from "@/data/faq";
 import { mediaMassa } from "@/data/media-massa";
 import { getKonsultasiUrl } from "@/data/contact";
+import { locationLabel, type ResolvedLocation } from "@/lib/location-tree";
 
-type BimbelPppkLocationProps = { location: string };
+type BimbelPppkLocationProps = { location: ResolvedLocation };
 
 const BimbelPppkLocation = ({ location }: BimbelPppkLocationProps) => {
   const konsultasiUrl = getKonsultasiUrl();
+  const label = locationLabel(location);
   return (
     <main className="flex-1">
-      <Jumbotron {...jumbotronPppkLocation(konsultasiUrl, location)} />
+      <Breadcrumb {...breadcrumbPppkLocation(location)} />
+      <Jumbotron {...jumbotronPppkLocation(konsultasiUrl, label)} />
       <Keunggulan {...keunggulan} />
       <Materi {...materiPppk(konsultasiUrl)} />
       <PaketProgram {...paketProgram(konsultasiUrl)} />
@@ -39,6 +48,8 @@ const BimbelPppkLocation = ({ location }: BimbelPppkLocationProps) => {
       <TantanganSeleksi {...tantanganSeleksiPppk(konsultasiUrl)} />
       <Lembaga {...lembaga} />
       <Testimoni {...testimoni} />
+      <Jangkauan {...jangkauanPppkLocation(location)} />
+      <LokasiLain {...lokasiLainPppkLocation(location)} />
       <CtaFooter {...ctaFooter(konsultasiUrl)} />
       <MediaMassa {...mediaMassa} />
       <Faq {...faqPppk} />

@@ -23,5 +23,5 @@ export async function generateMetadata({
 
 export default async function Page({ params }: PageProps<"/bimbel-bumn/[...locations]">) {
   const found = await getLocationOrNotFound((await params).locations);
-  return <BimbelBumnLocationPage location={locationLabel(found)} />;
+  return <BimbelBumnLocationPage location={found} />;
 }

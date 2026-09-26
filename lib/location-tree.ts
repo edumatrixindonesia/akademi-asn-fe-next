@@ -65,3 +65,12 @@ export const locationLabel = ({ region, ancestors }: ResolvedLocation) => {
   const parent = ancestors.at(-1);
   return parent ? `${region.nama}, ${parent.nama}` : region.nama;
 };
+
+// What a region's level is called, indexed by its depth (ancestors.length).
+export const regionLevels = ["provinsi", "kabupaten/kota", "kecamatan", "kelurahan/desa"];
+
+// A link to a region's location page within a page family ("" for home).
+export const regionLink = (basePath: string) => (region: Region) => ({
+  name: region.nama,
+  href: `${basePath}${region.path}`,
+});

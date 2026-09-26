@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import BimbelPppkPage from "@/components/pages/bimbel-pppk";
+import { getProvinces } from "@/lib/region-service";
 import { openGraphBase } from "../shared-metadata";
 
 export const metadata: Metadata = {
@@ -13,6 +14,6 @@ export const metadata: Metadata = {
   openGraph: { ...openGraphBase, url: "/bimbel-pppk" },
 };
 
-export default function Page() {
-  return <BimbelPppkPage />;
+export default async function Page() {
+  return <BimbelPppkPage provinces={await getProvinces()} />;
 }
