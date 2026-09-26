@@ -15,7 +15,7 @@ const poppins = Poppins({
   display: "swap",
 });
 
-export const revalidate = 3600;
+export const revalidate = 86400;
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
