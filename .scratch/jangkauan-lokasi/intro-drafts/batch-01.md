@@ -24,6 +24,11 @@ Revision 2 (2026-09-26), after a web check with Exa:
 - 32.04: "surrounds Kota Bandung from the south" replaced with "borders Kota Bandung directly" (UU 103/2024).
 - Removed unverifiable claims: graduates choosing ASN careers (34), competition level and the 15-minute travel time (34.71), demand for civil servants (34.01, 32.17), applicant volume (32), BUMN employers (32.16), career aspirations (32.11, 32.76), and daily commuting (32.01, 32.71, 32.75).
 
+Revision 3 (2026-09-26), final cross-check with Exa:
+
+- 34.01: dropped "sejak 2019". YIA opened on 6 May 2019 with a few flights, but it became the main gateway only on 29 March 2020, when the jet flights moved from Adisutjipto (Antara, Kompas).
+- 32.76: added ui.ac.id for the Depok campus next to Wikipedia.
+
 ## DI Yogyakarta
 
 ### 34 · DI Yogyakarta
@@ -52,9 +57,9 @@ Sources: [Wikipedia: Kabupaten Bantul (Parangtritis, Kasongan, ISI, UMY)](https:
 
 ### 34.01 · Kabupaten Kulon Progo
 
-Kabupaten Kulon Progo, dengan ibu kota Wates, menjadi lokasi Yogyakarta International Airport di Kapanewon Temon, gerbang udara utama DIY sejak 2019. Peserta dari Kulon Progo bisa memilih Privat Home Visit agar tutor datang ke rumah, ikut kelas online, atau datang ke Kelas Offline di kantor Akademi ASN di Sleman.
+Kabupaten Kulon Progo, dengan ibu kota Wates, menjadi lokasi Yogyakarta International Airport di Kapanewon Temon, gerbang udara utama DIY. Peserta dari Kulon Progo bisa memilih Privat Home Visit agar tutor datang ke rumah, ikut kelas online, atau datang ke Kelas Offline di kantor Akademi ASN di Sleman.
 
-Sources: [Kemenhub Hubud: Bandara YIA, Temon, Kulon Progo](https://hubud.kemenhub.go.id/bandara/475), [Wikipedia: Bandar Udara Internasional Yogyakarta (dibuka 2019, gerbang utama)](https://id.wikipedia.org/wiki/Bandar_Udara_Internasional_Yogyakarta)
+Sources: [Kemenhub Hubud: Bandara YIA, Temon, Kulon Progo](https://hubud.kemenhub.go.id/bandara/475), [Antara: YIA beroperasi penuh 29 Maret 2020](https://www.antaranews.com/berita/1376306/bandara-internasional-yogyakarta-beroperasi-penuh-29-maret), [Kompas: seluruh penerbangan jet Adisutjipto pindah ke YIA](https://regional.kompas.com/read/2020/03/28/17093801/bandara-yia-beroperasi-penuh-29-maret-168-penerbangan-pindah-dari-yogyakarta)
 
 ### 34.03 · Kabupaten Gunungkidul
 
@@ -128,7 +133,7 @@ Sources: [bekasikota.go.id: kondisi geografis](https://www.bekasikota.go.id/page
 
 Kota Depok adalah lokasi kampus utama Universitas Indonesia dan terhubung dengan Jakarta lewat KRL Commuter Line Bogor. Peserta dari Depok bisa belajar bersama tutor Akademi ASN lewat Privat Home Visit atau kelas online.
 
-Sources: [Wikipedia: Kampus UI Depok (kampus utama)](https://id.wikipedia.org/wiki/Kampus_Universitas_Indonesia_Depok), [Wikipedia: Commuter Line Bogor (stasiun di Kota Depok)](https://id.wikipedia.org/wiki/Lin_Bogor_(KRL_Commuter_Line))
+Sources: [Wikipedia: Kampus UI Depok (kampus utama)](https://id.wikipedia.org/wiki/Kampus_Universitas_Indonesia_Depok), [Wikipedia: Commuter Line Bogor (stasiun di Kota Depok)](https://id.wikipedia.org/wiki/Lin_Bogor_(KRL_Commuter_Line)), [ui.ac.id: fakultas di Kampus UI Depok](https://www.ui.ac.id/struktur/dekan-fakultas/)
 
 ## Next batches
 

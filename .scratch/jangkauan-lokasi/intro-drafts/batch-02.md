@@ -10,6 +10,8 @@ Drafts for `introTexts` in `data/intro.ts`, keyed by region `kode`. Same rules a
 
 - Jakarta's capital status is in transition. UU 2/2024 (DKJ) takes effect only when the Keppres moving the capital to IKN is issued. The Constitutional Court confirmed in May 2026 that Jakarta is still the capital until then. The texts avoid the word "ibu kota negara" so they stay true after the Keppres.
 - Region names follow region-service `nama` (for example "Kota Jakarta Pusat"). The texts use the everyday names ("Jakarta Pusat").
+- Revision 3 (final cross-check): added a second, non-Wikipedia source for Tanjung Priok, Kepulauan Seribu in Teluk Jakarta, and Soekarno–Hatta.
+- Revision 3 (final cross-check): 31.75 drops "satu-satunya bandara di Jakarta". The Kemenhub airport register still lists Bandar Udara Pulau Panjang (WIHG) in Kepulauan Seribu, although it has not operated since the 2010 BPK finding ([Wikipedia](https://id.wikipedia.org/wiki/Bandar_Udara_Pulau_Panjang), [Antara](https://www.antaranews.com/berita/2467969/tak-jadi-bandara-pulau-panjang-jadi-destinasi-wisata-religi)).
 
 ## DKI Jakarta
 
@@ -29,7 +31,7 @@ Sources: [jakarta.go.id: Landmark Jakarta (Monas di Gambir, Istana Merdeka, Bala
 
 Jakarta Utara adalah lokasi Pelabuhan Tanjung Priok, pelabuhan terbesar dan tersibuk di Indonesia, serta kawasan wisata Taman Impian Jaya Ancol. Peserta dari Jakarta Utara bisa belajar bersama tutor Akademi ASN lewat Privat Home Visit di rumah atau kantor, atau lewat kelas online.
 
-Sources: [Wikipedia: Pelabuhan Tanjung Priok (terbesar dan tersibuk, Jakarta Utara)](https://id.wikipedia.org/wiki/Pelabuhan_Tanjung_Priok), [Wikipedia: Taman Impian Jaya Ancol (Pademangan, Jakarta Utara)](https://id.wikipedia.org/wiki/Taman_Impian_Jaya_Ancol)
+Sources: [Wikipedia: Pelabuhan Tanjung Priok (terbesar dan tersibuk, Jakarta Utara)](https://id.wikipedia.org/wiki/Pelabuhan_Tanjung_Priok), [Wikipedia: Taman Impian Jaya Ancol (Pademangan, Jakarta Utara)](https://id.wikipedia.org/wiki/Taman_Impian_Jaya_Ancol), [jakarta.go.id: akses pelabuhan (Tanjung Priok tersibuk)](https://www.jakarta.go.id/akses-pelabuhan), [Indonesia Shipping Gazette: Tanjung Priok 6,4 juta TEUs 2022, pelabuhan tersibuk](https://indoshippinggazette.com/2023/arus-petikemas-tanjung-priok-pada-2022-mencapai-64-juta-teus/)
 
 ### 31.73 · Kota Jakarta Barat
 
@@ -45,15 +47,15 @@ Sources: [Wikipedia: SCBD (Senayan, Kebayoran Baru, Jakarta Selatan)](https://id
 
 ### 31.75 · Kota Jakarta Timur
 
-Jakarta Timur adalah wilayah terluas di Jakarta dan lokasi Bandar Udara Halim Perdanakusuma, satu-satunya bandara di Jakarta, serta Taman Mini Indonesia Indah. Peserta dari Jakarta Timur bisa belajar bersama tutor Akademi ASN lewat Privat Home Visit di rumah atau lewat kelas online.
+Jakarta Timur adalah wilayah terluas di Jakarta dan lokasi Bandar Udara Halim Perdanakusuma serta Taman Mini Indonesia Indah. Peserta dari Jakarta Timur bisa belajar bersama tutor Akademi ASN lewat Privat Home Visit di rumah atau lewat kelas online.
 
-Sources: [jakarta.go.id: Kota Administrasi Jakarta Timur (terluas, Halim, TMII)](https://www.jakarta.go.id/kota-administrasi-jakarta-timur), [Wikipedia: Jakarta Timur (satu-satunya bandara di DKI Jakarta)](https://id.wikipedia.org/wiki/Kota_Administrasi_Jakarta_Timur)
+Sources: [jakarta.go.id: Kota Administrasi Jakarta Timur (terluas, Halim, TMII)](https://www.jakarta.go.id/kota-administrasi-jakarta-timur), [Wikipedia: Jakarta Timur (Halim Perdanakusuma)](https://id.wikipedia.org/wiki/Kota_Administrasi_Jakarta_Timur)
 
 ### 31.01 · Kabupaten Kepulauan Seribu
 
 Kepulauan Seribu adalah satu-satunya kabupaten administrasi di Jakarta, berupa gugusan pulau di Teluk Jakarta dengan pusat pemerintahan di Pulau Pramuka. Kelas online Akademi ASN bisa diikuti dari pulau mana pun di Kepulauan Seribu, dan Privat Home Visit mendatangkan tutor ke rumahmu.
 
-Sources: [jakarta.go.id: Kepulauan Seribu (satu-satunya gugusan pulau milik Jakarta)](https://www.jakarta.go.id/kabupaten-administrasi-kepulauan-seribu), [Wikipedia: Kabupaten Administrasi Kepulauan Seribu (Teluk Jakarta, Pulau Pramuka)](https://id.wikipedia.org/wiki/Kabupaten_Administrasi_Kepulauan_Seribu), [PP 55/2001: ibu kota di Pulau Pramuka](https://www.flevin.com/id/lgso/legislation/Mirror/czoyNDoiZD0yMDAwKzEmZj1wcDU1LTIwMDEucGRmIjs=.pdf)
+Sources: [jakarta.go.id: Kepulauan Seribu (satu-satunya gugusan pulau milik Jakarta)](https://www.jakarta.go.id/kabupaten-administrasi-kepulauan-seribu), [Wikipedia: Kabupaten Administrasi Kepulauan Seribu (Teluk Jakarta, Pulau Pramuka)](https://id.wikipedia.org/wiki/Kabupaten_Administrasi_Kepulauan_Seribu), [PP 55/2001: ibu kota di Pulau Pramuka](https://www.flevin.com/id/lgso/legislation/Mirror/czoyNDoiZD0yMDAwKzEmZj1wcDU1LTIwMDEucGRmIjs=.pdf), [Kemenko Marves: Kepulauan Seribu, gugusan kepulauan di Teluk Jakarta, pusat pemerintahan di Pulau Pramuka](https://www.maritim.go.id/detail/pulau-seribu-penuh-pesona)
 
 Note: Privat Home Visit added after the owner confirmed it is available anywhere (`CONTEXT.md`).
 
@@ -75,7 +77,7 @@ Sources: [BPK Perwakilan Banten: Kabupaten Tangerang (ibu kota Tigaraksa, batas 
 
 Kota Tangerang dibentuk pada tahun 1993 dan menjadi lokasi Bandar Udara Internasional Soekarno–Hatta di Kecamatan Benda, pintu gerbang utama penerbangan internasional Indonesia. Peserta dari Kota Tangerang bisa belajar bersama tutor Akademi ASN lewat Privat Home Visit atau kelas online.
 
-Sources: [Kemenhub Hubud: Bandara Soekarno-Hatta, Benda, Kota Tangerang](https://hubud.kemenhub.go.id/bandara/222), [Wikipedia: Bandar Udara Internasional Soekarno–Hatta (pintu gerbang utama internasional)](https://id.wikipedia.org/wiki/Bandar_Udara_Internasional_Soekarno%E2%80%93Hatta), [Wikipedia: Kabupaten Tangerang (Kota Tangerang dibentuk 28 Februari 1993, UU 2/1993)](https://id.wikipedia.org/wiki/Kabupaten_Tangerang)
+Sources: [Kemenhub Hubud: Bandara Soekarno-Hatta, Benda, Kota Tangerang](https://hubud.kemenhub.go.id/bandara/222), [Wikipedia: Bandar Udara Internasional Soekarno–Hatta (pintu gerbang utama internasional)](https://id.wikipedia.org/wiki/Bandar_Udara_Internasional_Soekarno%E2%80%93Hatta), [Wikipedia: Kabupaten Tangerang (Kota Tangerang dibentuk 28 Februari 1993, UU 2/1993)](https://id.wikipedia.org/wiki/Kabupaten_Tangerang), [Antara: Soekarno-Hatta pintu gerbang utama Indonesia](https://www.antaranews.com/berita/5081653/kepala-barantin-cek-penerapan-all-indonesia-di-bandara-soekarno-hatta)
 
 ### 36.74 · Kota Tangerang Selatan
 

@@ -9,6 +9,7 @@ Drafts for `introTexts` in `data/intro.ts`, keyed by region `kode`. Same rules a
 ## Validation notes
 
 - Left out claims that the search could not confirm: the Universitas Muhammadiyah Surakarta campus (its main campus is in Kartasura, Sukoharjo, not Kota Surakarta) and the Universitas Jember campus location.
+- Revision 3 (final cross-check): added a second, non-Wikipedia source for each superlative (Borobudur, Semeru, the kabupaten/kota count, and the yearly JFC, which ran virtual in 2020 and hybrid in 2021).
 
 ## Jawa Tengah
 
@@ -16,7 +17,7 @@ Drafts for `introTexts` in `data/intro.ts`, keyed by region `kode`. Same rules a
 
 Jawa Tengah beribu kota di Semarang dan terdiri atas 29 kabupaten dan 6 kota. Provinsi ini adalah lokasi Candi Borobudur di Kabupaten Magelang, monumen Buddha terbesar di dunia. Peserta dari seluruh Jawa Tengah bisa belajar bersama tutor Akademi ASN lewat Privat Home Visit atau kelas online.
 
-Sources: [jatengprov.go.id: Sejarah (29 kabupaten, 6 kota)](https://jatengprov.go.id/sejarah/), [UU Provinsi Jawa Tengah Pasal 3–4 (ibu kota di Kota Semarang)](https://ppidnew.esdm.jatengprov.go.id/pdf/regulasi/regulasi-6a1137806bbc3.pdf), [Wikipedia: Jawa Tengah (Borobudur di Kabupaten Magelang)](https://id.wikipedia.org/wiki/Jawa_Tengah)
+Sources: [jatengprov.go.id: Sejarah (29 kabupaten, 6 kota)](https://jatengprov.go.id/sejarah/), [UU Provinsi Jawa Tengah Pasal 3–4 (ibu kota di Kota Semarang)](https://ppidnew.esdm.jatengprov.go.id/pdf/regulasi/regulasi-6a1137806bbc3.pdf), [Wikipedia: Jawa Tengah (Borobudur di Kabupaten Magelang)](https://id.wikipedia.org/wiki/Jawa_Tengah), [Kemenag Bimas Buddha: Borobudur monumen Buddhis terbesar di dunia](https://bimasbuddha.kemenag.go.id/borobudur/360/tentang-borobudur.html), [Kompas: Borobudur monumen Buddha terbesar di dunia](https://www.kompas.com/stori/read/2022/06/06/080000779/candi-borobudur-sejarah-relief-dan-mitos-kunto-bimo)
 
 ### 33.74 · Kota Semarang
 
@@ -42,7 +43,7 @@ Sources: [Kompas: Keraton Solo di Pasar Kliwon, Pura Mangkunegaran di Banjarsari
 
 Jawa Timur beribu kota di Surabaya dan terdiri atas 29 kabupaten dan 9 kota, jumlah kabupaten/kota terbanyak di Indonesia. Provinsi ini adalah lokasi Taman Nasional Bromo Tengger Semeru dengan Gunung Semeru, gunung tertinggi di Pulau Jawa. Peserta dari seluruh Jawa Timur bisa belajar bersama tutor Akademi ASN lewat Privat Home Visit atau kelas online.
 
-Sources: [Wikipedia: Jawa Timur (ibu kota, 29 kabupaten 9 kota, terbanyak di Indonesia)](https://id.wikipedia.org/wiki/Jawa_Timur), [Kemendagri (arsip): profil Provinsi Jawa Timur](https://web.archive.org/web/20180728160951/http:/www.kemendagri.go.id/pages/profil-daerah/provinsi/detail/35/jawa-timur), [Wikipedia: Taman Nasional Bromo Tengger Semeru (Semeru tertinggi di Jawa)](https://id.wikipedia.org/wiki/Taman_Nasional_Bromo_Tengger_Semeru)
+Sources: [Wikipedia: Jawa Timur (ibu kota, 29 kabupaten 9 kota, terbanyak di Indonesia)](https://id.wikipedia.org/wiki/Jawa_Timur), [Kemendagri (arsip): profil Provinsi Jawa Timur](https://web.archive.org/web/20180728160951/http:/www.kemendagri.go.id/pages/profil-daerah/provinsi/detail/35/jawa-timur), [Wikipedia: Taman Nasional Bromo Tengger Semeru (Semeru tertinggi di Jawa)](https://id.wikipedia.org/wiki/Taman_Nasional_Bromo_Tengger_Semeru), [Antara: Semeru gunung tertinggi di Pulau Jawa (BB TNBTS)](https://jatim.antaranews.com/berita/801801/balai-besar-tnbts-lakukan-persiapan-pembukaan-pendakian-gunung-semeru), [Kontan: Semeru gunung berapi tertinggi di Pulau Jawa (laman TNBTS)](https://caritahu.kontan.co.id/news/profil-lengkap-gunung-semeru-catatan-erupsi-sejarah-dan-jalur-pendakian), region-service (Jawa Timur 38 kabupaten/kota, terbanyak dari 38 provinsi)
 
 ### 35.78 · Kota Surabaya
 
@@ -66,4 +67,4 @@ Sources: [malangkab.go.id: Selayang Pandang (terluas kedua, batas selatan Samudr
 
 Kabupaten Jember, bagian dari kawasan Tapal Kuda Jawa Timur, dikenal sebagai salah satu sentra tembakau terbesar di Indonesia dan tuan rumah Jember Fashion Carnaval yang digelar setiap tahun sejak 2003. Peserta dari Jember bisa belajar bersama tutor Akademi ASN lewat Privat Home Visit atau kelas online.
 
-Sources: [Tugu Jatim: julukan Jember (sentra tembakau, Tapal Kuda, JFC)](https://tugujatim.id/mengenal-lima-julukan-kota-jember/), [Wikipedia: Jember Fashion Carnaval (setiap tahun, dimulai 2003)](https://id.wikipedia.org/wiki/Jember_Fashion_Carnaval)
+Sources: [Tugu Jatim: julukan Jember (sentra tembakau, Tapal Kuda, JFC)](https://tugujatim.id/mengenal-lima-julukan-kota-jember/), [Wikipedia: Jember Fashion Carnaval (setiap tahun, dimulai 2003)](https://id.wikipedia.org/wiki/Jember_Fashion_Carnaval), [Antara: JFC 2021 digelar hybrid](https://jatim.antaranews.com/berita/548241/jfc-2021-dibuka-bupati-jember-sebut-sebagai-aset-daerah-yang-mendunia), [Pemprov Jatim: JFC 2022 kembali di jalan setelah dua tahun hybrid](https://ro-ekonomi.jatimprov.go.id/berita/1669648394-gelaran-jember-fashion-carnaval-jfc-kembali-dilaksanakan-secara-langsung-dijalan-setelah-dua-tahun-digelar-secara-hybrid-karena-pandemi-covid-19)

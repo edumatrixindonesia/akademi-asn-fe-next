@@ -20,7 +20,7 @@ export const introTexts: Record<string, string> = {
     "Kabupaten Bantul di selatan Yogyakarta dikenal dengan Pantai Parangtritis, sentra gerabah Kasongan, serta kampus ISI Yogyakarta dan UMY. Peserta dari Bantul bisa belajar di kantor Akademi ASN di Sleman lewat Kelas Offline. Jika ingin belajar dari rumah, tutor Privat Home Visit bisa datang ke tempatmu.",
   // Kabupaten Kulon Progo
   "34.01":
-    "Kabupaten Kulon Progo, dengan ibu kota Wates, menjadi lokasi Yogyakarta International Airport di Kapanewon Temon, gerbang udara utama DIY sejak 2019. Peserta dari Kulon Progo bisa memilih Privat Home Visit agar tutor datang ke rumah, ikut kelas online, atau datang ke Kelas Offline di kantor Akademi ASN di Sleman.",
+    "Kabupaten Kulon Progo, dengan ibu kota Wates, menjadi lokasi Yogyakarta International Airport di Kapanewon Temon, gerbang udara utama DIY. Peserta dari Kulon Progo bisa memilih Privat Home Visit agar tutor datang ke rumah, ikut kelas online, atau datang ke Kelas Offline di kantor Akademi ASN di Sleman.",
   // Kabupaten Gunungkidul
   "34.03":
     "Kabupaten Gunungkidul, dengan ibu kota Wonosari, adalah kabupaten terluas di DIY, dengan bentang alam karst Pegunungan Sewu dan deretan pantai di pesisir selatan. Wonosari berjarak sekitar 39 km dari Kota Yogyakarta, jadi peserta dari Gunungkidul bisa belajar lewat Privat Home Visit atau kelas online. Kelas Offline di Sleman tetap terbuka bagi yang ingin belajar tatap muka.",
@@ -74,7 +74,7 @@ export const introTexts: Record<string, string> = {
     "Jakarta Selatan adalah lokasi kawasan bisnis Sudirman Central Business District (SCBD) di Kebayoran Baru dan Taman Margasatwa Ragunan di Pasar Minggu. Tutor Privat Home Visit Akademi ASN bisa datang ke rumah atau kantormu di Jakarta Selatan, sehingga persiapan seleksi bisa berjalan di sela jam kerja. Kelas online juga tersedia.",
   // Kota Jakarta Timur
   "31.75":
-    "Jakarta Timur adalah wilayah terluas di Jakarta dan lokasi Bandar Udara Halim Perdanakusuma, satu-satunya bandara di Jakarta, serta Taman Mini Indonesia Indah. Peserta dari Jakarta Timur bisa belajar bersama tutor Akademi ASN lewat Privat Home Visit di rumah atau lewat kelas online.",
+    "Jakarta Timur adalah wilayah terluas di Jakarta dan lokasi Bandar Udara Halim Perdanakusuma serta Taman Mini Indonesia Indah. Peserta dari Jakarta Timur bisa belajar bersama tutor Akademi ASN lewat Privat Home Visit di rumah atau lewat kelas online.",
   // Kabupaten Kepulauan Seribu
   "31.01":
     "Kepulauan Seribu adalah satu-satunya kabupaten administrasi di Jakarta, berupa gugusan pulau di Teluk Jakarta dengan pusat pemerintahan di Pulau Pramuka. Kelas online Akademi ASN bisa diikuti dari pulau mana pun di Kepulauan Seribu, dan Privat Home Visit mendatangkan tutor ke rumahmu.",
@@ -122,7 +122,7 @@ export const introTexts: Record<string, string> = {
     "Sumatera Utara beribu kota di Medan dan terdiri atas 25 kabupaten dan 8 kota. Provinsi ini adalah lokasi Danau Toba, danau terbesar di Indonesia dan danau vulkanik terbesar di dunia, yang diakui sebagai UNESCO Global Geopark sejak 2020. Peserta dari seluruh Sumatera Utara bisa belajar bersama tutor Akademi ASN lewat Privat Home Visit atau kelas online.",
   // Kota Medan
   "12.71":
-    "Kota Medan adalah ibu kota Sumatera Utara dan lokasi Istana Maimun, kampus Universitas Sumatera Utara di Padang Bulan, serta Pelabuhan Belawan, pelabuhan tersibuk di Indonesia di luar Pulau Jawa. Peserta dari Medan bisa belajar bersama tutor Akademi ASN lewat Privat Home Visit atau kelas online.",
+    "Kota Medan adalah ibu kota Sumatera Utara dan lokasi Istana Maimun, kampus Universitas Sumatera Utara di Padang Bulan, serta Pelabuhan Belawan, pelabuhan utama di Pulau Sumatra. Peserta dari Medan bisa belajar bersama tutor Akademi ASN lewat Privat Home Visit atau kelas online.",
   // Sumatera Selatan
   "16":
     "Sumatera Selatan beribu kota di Palembang dan terdiri atas 13 kabupaten dan 4 kota. Sungai Musi, sungai terpanjang kedua di Pulau Sumatra, mengalir melintasi provinsi ini hingga membelah Kota Palembang. Peserta dari seluruh Sumatera Selatan bisa belajar bersama tutor Akademi ASN lewat Privat Home Visit atau kelas online.",
@@ -131,7 +131,7 @@ export const introTexts: Record<string, string> = {
     "Kota Palembang, ibu kota Sumatera Selatan, disebut sebagai kota tertua di Indonesia berdasarkan Prasasti Kedukan Bukit peninggalan Kerajaan Sriwijaya dari tahun 682 Masehi. Ikon kotanya, Jembatan Ampera, membentang di atas Sungai Musi. Peserta dari Palembang bisa belajar bersama tutor Akademi ASN lewat Privat Home Visit atau kelas online.",
   // Kepulauan Riau
   "21":
-    "Provinsi Kepulauan Riau dibentuk pada tahun 2002 sebagai pemekaran dari Provinsi Riau, dengan ibu kota di Tanjungpinang. Sekitar 96% wilayahnya berupa lautan dengan ribuan pulau, dan provinsi ini berbatasan dengan Singapura, Malaysia, dan Vietnam. Kelas online Akademi ASN bisa diikuti dari pulau mana pun, dan Privat Home Visit mendatangkan tutor ke rumahmu.",
+    "Provinsi Kepulauan Riau dibentuk pada tahun 2002 sebagai pemekaran dari Provinsi Riau, dengan ibu kota di Tanjungpinang. Sekitar 96% wilayahnya berupa lautan dengan ribuan pulau, dan provinsi ini berbatasan dengan Singapura, Malaysia, Vietnam, dan Kamboja. Kelas online Akademi ASN bisa diikuti dari pulau mana pun, dan Privat Home Visit mendatangkan tutor ke rumahmu.",
   // Kota Batam
   "21.71":
     "Kota Batam ditetapkan sebagai Kawasan Perdagangan Bebas dan Pelabuhan Bebas dan terletak sekitar 20 km dari Singapura di jalur Selat Malaka. Ikonnya, Jembatan Barelang, menghubungkan Pulau Batam, Rempang, dan Galang. Peserta dari Batam bisa belajar bersama tutor Akademi ASN lewat Privat Home Visit atau kelas online.",
@@ -146,7 +146,7 @@ export const introTexts: Record<string, string> = {
     "Riau beribu kota di Pekanbaru dan terdiri atas 10 kabupaten dan 2 kota. Provinsi ini dikenal dengan sumber daya minyak bumi dan perkebunan kelapa sawit, serta peninggalan Kesultanan Siak berupa Istana Siak Sri Indrapura. Peserta dari seluruh Riau bisa belajar bersama tutor Akademi ASN lewat Privat Home Visit atau kelas online.",
   // Jambi
   "15":
-    "Jambi beribu kota di Kota Jambi dan terdiri atas 9 kabupaten dan 2 kota, dilintasi Sungai Batanghari, sungai terpanjang di Pulau Sumatra. Di tepi sungai ini terdapat Kawasan Cagar Budaya Nasional Muaro Jambi, kompleks percandian terluas di Asia Tenggara. Peserta dari seluruh Jambi bisa belajar bersama tutor Akademi ASN lewat Privat Home Visit atau kelas online.",
+    "Jambi beribu kota di Kota Jambi dan terdiri atas 9 kabupaten dan 2 kota, dilintasi Sungai Batanghari, sungai terpanjang di Pulau Sumatra. Di tepi sungai ini terdapat Kawasan Cagar Budaya Nasional Muaro Jambi, kompleks percandian seluas sekitar 3.981 hektare. Peserta dari seluruh Jambi bisa belajar bersama tutor Akademi ASN lewat Privat Home Visit atau kelas online.",
   // Bengkulu
   "17":
     "Bengkulu beribu kota di Kota Bengkulu dan terdiri atas 9 kabupaten dan 1 kota. Provinsi yang dijuluki Bumi Rafflesia ini menyimpan Benteng Marlborough peninggalan Inggris dan Rumah Pengasingan Bung Karno. Peserta dari seluruh Bengkulu bisa belajar bersama tutor Akademi ASN lewat Privat Home Visit atau kelas online.",
