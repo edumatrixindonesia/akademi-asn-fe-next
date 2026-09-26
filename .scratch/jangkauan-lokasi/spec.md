@@ -30,8 +30,14 @@ The reference site's home page ends with a Jangkauan section that links to one p
 
 ### Rendering
 
-- The production build reaches a deployed region-service URL. All location paths are statically generated with `generateStaticParams`, and `dynamicParams = false` makes unknown paths 404.
-- `app/sitemap.ts` lists every location page of every family.
+- Location routes use Incremental Static Regeneration (ISR). Prerendering all ~12,000 pages at build time is too heavy for the server that builds and runs the site.
+- `generateStaticParams` returns only the 38 province paths per family (152 pages prerendered at build). `dynamicParams` stays at its default `true`, so every other path is rendered on its first visit and then served from the cache.
+- Because `dynamicParams` is `true`, unknown paths do not 404 by themselves. The page and `generateMetadata` look the path up in the location tree and call `notFound()` for any path outside the page set.
+- Location routes set no `revalidate` of their own. They inherit the root layout's `revalidate`, which follows the Konsultasi rotation period (daily after issue 05).
+- The four region-service lists are cached for 7 days (`next: { revalidate: 604800 }`), so each list is fetched about once per 7 days per container, not once per page. The production build still reaches a deployed region-service URL (for the province pages and the sitemap).
+- If region-service fails while a page that is not yet cached is being rendered, the render throws and the visitor gets a 5xx. The page is not cached and the next request retries. It never falls back to `notFound()`, because a cached 404 on a valid page could drop it from Google's index. Once a page is cached, a failed revalidation keeps serving the stale page.
+- Hosting is Dokploy with Nixpacks on a single VPS, one replica, using Next's default filesystem cache (no custom `cacheHandler`). Each deploy starts a new container, so pages rendered at runtime are rendered again on their next visit. Nixpacks keeps `.next/cache` between builds, so cached region lists can survive a deploy; clear the build cache in Dokploy to force fresh region data.
+- `app/sitemap.ts` lists every location page of every family, built from the same cached lists.
 
 ### Keywords and names
 
@@ -79,7 +85,7 @@ The reference site's home page ends with a Jangkauan section that links to one p
 
 **Current behavior:** Only `/`, `/bimbel-cpns`, `/bimbel-pppk`, and `/bimbel-bumn` exist. The four `*-location` page components are empty stubs, no `[...locations]` routes exist, nothing reads region-service, and the sitemap lists only the four pages.
 
-**Desired behavior:** Every path in the page set above renders a statically generated location page in each family, with location-specific metadata, `h1`, intro, section variants, breadcrumb with `BreadcrumbList` JSON-LD, Jangkauan (when the region has children in the page set), and Lokasi Lain. Every other path returns 404. The sitemap lists all location pages. Home and exam-track pages gain a Jangkauan section listing the 38 provinces.
+**Desired behavior:** Every path in the page set above renders a location page in each family (province pages prerendered at build, the rest rendered on first visit and cached via ISR), with location-specific metadata, `h1`, intro, section variants, breadcrumb with `BreadcrumbList` JSON-LD, Jangkauan (when the region has children in the page set), and Lokasi Lain. Every other path returns 404. The sitemap lists all location pages. Home and exam-track pages gain a Jangkauan section listing the 38 provinces.
 
 **Key interfaces:**
 
@@ -100,7 +106,9 @@ The reference site's home page ends with a Jangkauan section that links to one p
 - [ ] A region with a hand-written intro in `data/` shows it; any other region shows the template intro; both are followed by the track sentence.
 - [ ] DIY location pages show the Kelas Offline office content; no other region does.
 - [ ] `app/sitemap.ts` includes every location page of every family.
-- [ ] A full build makes no more than a handful of region-service requests (well under 32 per minute).
+- [ ] The build prerenders only the 152 province pages; other location pages render on first visit and are served from the cache afterwards.
+- [ ] Region-service is called about 4 times per 7 days per container (well under 32 per minute), not once per page.
+- [ ] A region-service failure on an uncached page returns 5xx, never 404.
 - [ ] `bun run lint` and `bun run typecheck` pass.
 
 **Out of scope:** see the Out of scope section above. Writing the 72 hand-written intros is a separate, ongoing content task.

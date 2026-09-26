@@ -21,6 +21,6 @@ That is about 3,009 pages per family and about 12,000 in total.
 ## Consequences
 
 - Page depth varies by region. Whether a page is a leaf (and so shows no Jangkauan) depends on its group membership, not only on its level.
-- The owner controls depth through region-service group membership. Adding a regency to `kabupaten-besar` adds its district pages on the next build, with no code change.
+- The owner controls depth through region-service group membership. Adding a regency to `kabupaten-besar` adds its district pages within 7 days (the region-list cache period), with no build or code change.
 - District and village searches outside these groups are not targeted. Revisit if indexed Kabupaten Besar and Jabodetabekjur pages show traction.
 - Hand-written intros cover the 72 regions that carry most search volume (38 provinces, 34 Kabupaten Besar). The rest rely on templates plus Jangkauan, Lokasi Lain, and breadcrumb links.
