@@ -130,3 +130,21 @@ test("only DI Yogyakarta location pages show the Kelas Offline office content", 
   const jawaBarat = await (await get("/jawa-barat")).text();
   expect(jawaBarat).not.toContain('id="kelas-offline"');
 });
+
+test("the sitemap lists every location page with absolute URLs", async () => {
+  const response = await get("/sitemap.xml");
+  expect(response.status).toBe(200);
+  const locs = new Set([...(await response.text()).matchAll(/<loc>(.*?)<\/loc>/g)].map((m) => m[1]));
+  const origin = new URL(baseUrl).origin;
+
+  for (const path of [
+    "/bimbel-cpns",
+    "/di-yogyakarta",
+    "/bimbel-cpns/jawa-barat/kota-bandung/coblong",
+    "/bimbel-bumn/dki-jakarta/kota-jakarta-pusat/gambir/gambir",
+  ]) {
+    expect(locs).toContain(`${origin}${path}`);
+  }
+  expect(locs).not.toContain(`${origin}/aceh/kabupaten-aceh-selatan/bakongan`);
+  expect(locs.size).toBeGreaterThan(10_000);
+});
