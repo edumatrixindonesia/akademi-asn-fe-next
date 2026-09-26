@@ -135,6 +135,51 @@ export const introTexts: Record<string, string> = {
   // Kota Batam
   "21.71":
     "Kota Batam ditetapkan sebagai Kawasan Perdagangan Bebas dan Pelabuhan Bebas dan terletak sekitar 20 km dari Singapura di jalur Selat Malaka. Ikonnya, Jembatan Barelang, menghubungkan Pulau Batam, Rempang, dan Galang. Peserta dari Batam bisa belajar bersama tutor Akademi ASN lewat Privat Home Visit atau kelas online.",
+  // Aceh
+  "11":
+    "Aceh beribu kota di Banda Aceh dan terdiri atas 18 kabupaten dan 5 kota. Menurut UU Nomor 11 Tahun 2006 tentang Pemerintahan Aceh, Aceh adalah satuan pemerintahan daerah yang bersifat khusus atau istimewa, termasuk dalam pelaksanaan syariat Islam bagi pemeluknya. Peserta dari seluruh Aceh bisa belajar bersama tutor Akademi ASN lewat Privat Home Visit atau kelas online.",
+  // Sumatera Barat
+  "13":
+    "Sumatera Barat beribu kota di Padang dan terdiri atas 12 kabupaten dan 7 kota. Provinsi ini adalah rumah bagi etnis Minangkabau dan Mentawai, dan di wilayah ini berdiri Jam Gadang, ikon Kota Bukittinggi. Peserta dari seluruh Sumatera Barat bisa belajar bersama tutor Akademi ASN lewat Privat Home Visit atau kelas online.",
+  // Riau
+  "14":
+    "Riau beribu kota di Pekanbaru dan terdiri atas 10 kabupaten dan 2 kota. Provinsi ini dikenal dengan sumber daya minyak bumi dan perkebunan kelapa sawit, serta peninggalan Kesultanan Siak berupa Istana Siak Sri Indrapura. Peserta dari seluruh Riau bisa belajar bersama tutor Akademi ASN lewat Privat Home Visit atau kelas online.",
+  // Jambi
+  "15":
+    "Jambi beribu kota di Kota Jambi dan terdiri atas 9 kabupaten dan 2 kota, dilintasi Sungai Batanghari, sungai terpanjang di Pulau Sumatra. Di tepi sungai ini terdapat Kawasan Cagar Budaya Nasional Muaro Jambi, kompleks percandian terluas di Asia Tenggara. Peserta dari seluruh Jambi bisa belajar bersama tutor Akademi ASN lewat Privat Home Visit atau kelas online.",
+  // Bengkulu
+  "17":
+    "Bengkulu beribu kota di Kota Bengkulu dan terdiri atas 9 kabupaten dan 1 kota. Provinsi yang dijuluki Bumi Rafflesia ini menyimpan Benteng Marlborough peninggalan Inggris dan Rumah Pengasingan Bung Karno. Peserta dari seluruh Bengkulu bisa belajar bersama tutor Akademi ASN lewat Privat Home Visit atau kelas online.",
+  // Lampung
+  "18":
+    "Lampung beribu kota di Bandar Lampung dan terdiri atas 13 kabupaten dan 2 kota. Provinsi di ujung selatan Sumatra ini terhubung dengan Pulau Jawa lewat Pelabuhan Bakauheni, dan menjadi lokasi Taman Nasional Way Kambas, pusat konservasi gajah Sumatra. Peserta dari seluruh Lampung bisa belajar bersama tutor Akademi ASN lewat Privat Home Visit atau kelas online.",
+  // Kepulauan Bangka Belitung
+  "19":
+    "Kepulauan Bangka Belitung dibentuk pada tahun 2000 sebagai pemekaran dari Sumatera Selatan, dengan ibu kota di Pangkalpinang. Provinsi yang terdiri atas Pulau Bangka, Pulau Belitung, dan pulau-pulau kecil ini sudah lebih dari tiga abad dikenal sebagai penghasil timah. Peserta dari Bangka Belitung bisa belajar bersama tutor Akademi ASN lewat Privat Home Visit atau kelas online.",
+  // Bali
+  "51":
+    "Bali beribu kota di Denpasar dan terdiri atas 8 kabupaten dan 1 kota. Sistem irigasi subak di Bali, yang mencerminkan filosofi Tri Hita Karana, ditetapkan UNESCO sebagai Warisan Budaya Dunia pada tahun 2012. Peserta dari seluruh Bali bisa belajar bersama tutor Akademi ASN lewat Privat Home Visit atau kelas online.",
+  // Nusa Tenggara Barat
+  "52":
+    "Nusa Tenggara Barat beribu kota di Mataram dan terdiri atas 8 kabupaten dan 2 kota, dengan dua pulau utama, Lombok dan Sumbawa. Di provinsi ini terdapat Taman Nasional Gunung Rinjani dan Taman Nasional Gunung Tambora. Peserta dari seluruh NTB bisa belajar bersama tutor Akademi ASN lewat Privat Home Visit atau kelas online.",
+  // Nusa Tenggara Timur
+  "53":
+    "Nusa Tenggara Timur beribu kota di Kupang dan terdiri atas 21 kabupaten dan 1 kota, dengan pulau utama Flores, Sumba, dan bagian barat Pulau Timor. Provinsi ini adalah lokasi Taman Nasional Komodo, yang ditetapkan UNESCO sebagai Situs Warisan Dunia pada tahun 1991. Peserta dari seluruh NTT bisa belajar bersama tutor Akademi ASN lewat Privat Home Visit atau kelas online.",
+  // Kalimantan Barat
+  "61":
+    "Kalimantan Barat beribu kota di Pontianak dan terdiri atas 12 kabupaten dan 2 kota. Garis khatulistiwa melintas tepat di atas Kota Pontianak, dan Sungai Kapuas di provinsi ini adalah sungai terpanjang di Indonesia. Peserta dari seluruh Kalimantan Barat bisa belajar bersama tutor Akademi ASN lewat Privat Home Visit atau kelas online.",
+  // Kalimantan Tengah
+  "62":
+    "Kalimantan Tengah beribu kota di Palangka Raya dan terdiri atas 13 kabupaten dan 1 kota. Provinsi ini adalah lokasi Taman Nasional Tanjung Puting, kawasan konservasi orangutan yang dikenal dunia. Peserta dari seluruh Kalimantan Tengah bisa belajar bersama tutor Akademi ASN lewat Privat Home Visit atau kelas online.",
+  // Kalimantan Selatan
+  "63":
+    "Kalimantan Selatan terdiri atas 11 kabupaten dan 2 kota, dan sejak berlakunya UU Nomor 8 Tahun 2022 ibu kotanya berkedudukan di Kota Banjarbaru. Kota lain di provinsi ini adalah Banjarmasin. Peserta dari seluruh Kalimantan Selatan bisa belajar bersama tutor Akademi ASN lewat Privat Home Visit atau kelas online.",
+  // Kalimantan Timur
+  "64":
+    "Kalimantan Timur beribu kota di Samarinda dan terdiri atas 7 kabupaten dan 3 kota, termasuk Balikpapan dan Bontang. Wilayahnya dahulu menjadi tempat berdirinya Kerajaan Kutai dan Kesultanan Kutai Kartanegara. Peserta dari seluruh Kalimantan Timur bisa belajar bersama tutor Akademi ASN lewat Privat Home Visit atau kelas online.",
+  // Kalimantan Utara
+  "65":
+    "Kalimantan Utara dibentuk pada tahun 2012 sebagai pemekaran dari Kalimantan Timur, dengan ibu kota di Tanjung Selor, Kabupaten Bulungan. Provinsi yang terdiri atas 4 kabupaten dan Kota Tarakan ini berbatasan langsung dengan Sabah dan Sarawak, Malaysia. Peserta dari seluruh Kalimantan Utara bisa belajar bersama tutor Akademi ASN lewat Privat Home Visit atau kelas online.",
 };
 
 const baseText = ({ region, ancestors }: ResolvedLocation, texts: Record<string, string>) =>
