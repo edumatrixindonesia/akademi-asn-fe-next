@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import HomeLocationPage from "@/components/pages/home-location";
-import { locationLabel } from "@/lib/location-tree";
+import { headlineLabel } from "@/lib/location-tree";
 import { getLocationOrNotFound, getProvinceParams } from "@/lib/region-service";
 import { openGraphBase } from "../shared-metadata";
 
@@ -10,12 +10,12 @@ export async function generateMetadata({
   params,
 }: PageProps<"/[...locations]">): Promise<Metadata> {
   const found = await getLocationOrNotFound((await params).locations);
-  const location = locationLabel(found);
+  const location = headlineLabel(found);
   const url = `${found.region.path}`;
 
   return {
-    title: `Bimbel CPNS, PPPK & BUMN ${location}`,
-    description: `Bimbel CPNS, PPPK, dan BUMN untuk peserta dari ${location}. Kelas online & les privat, materi terarah, latihan soal, tryout CAT, dan pendampingan tutor Akademi ASN.`,
+    title: { absolute: `Bimbel CPNS PPPK BUMN Terbaik di ${location} | Akademi ASN` },
+    description: `Persiapkan seleksi CPNS, PPPK, dan Rekrutmen Bersama BUMN di ${location} bersama Akademi ASN. Tersedia kelas online & les privat, materi terarah, latihan soal, tryout CAT, dan pendampingan tutor.`,
     alternates: { canonical: url },
     openGraph: { ...openGraphBase, url },
   };

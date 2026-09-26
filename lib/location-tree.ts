@@ -66,6 +66,11 @@ export const locationLabel = ({ region, ancestors }: ResolvedLocation) => {
   return parent ? `${region.nama}, ${parent.nama}` : region.nama;
 };
 
+// The location named in titles and h1s: provinces and regencies stand alone
+// (names are unique there), districts and villages keep the parent.
+export const headlineLabel = (location: ResolvedLocation) =>
+  location.ancestors.length < 2 ? location.region.nama : locationLabel(location);
+
 // What a region's level is called, indexed by its depth (ancestors.length).
 export const regionLevels = ["provinsi", "kabupaten/kota", "kecamatan", "kelurahan/desa"];
 

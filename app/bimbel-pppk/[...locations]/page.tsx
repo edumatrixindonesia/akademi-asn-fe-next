@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import BimbelPppkLocationPage from "@/components/pages/bimbel-pppk-location";
-import { locationLabel } from "@/lib/location-tree";
+import { headlineLabel } from "@/lib/location-tree";
 import { getLocationOrNotFound, getProvinceParams } from "@/lib/region-service";
 import { openGraphBase } from "../../shared-metadata";
 
@@ -10,12 +10,12 @@ export async function generateMetadata({
   params,
 }: PageProps<"/bimbel-pppk/[...locations]">): Promise<Metadata> {
   const found = await getLocationOrNotFound((await params).locations);
-  const location = locationLabel(found);
+  const location = headlineLabel(found);
   const url = `/bimbel-pppk${found.region.path}`;
 
   return {
-    title: `Bimbel PPPK ${location}`,
-    description: `Bimbel PPPK untuk peserta dari ${location}. Persiapan kompetensi teknis, manajerial, sosial kultural, dan wawancara dengan latihan soal dan tryout CAT.`,
+    title: { absolute: `Bimbel PPPK Online & Offline Terbaik di ${location} - Teknis Guru & Kesehatan | Akademi ASN` },
+    description: `Bimbel PPPK online di ${location} untuk formasi teknis, guru, dan tenaga kesehatan. Belajar terarah dengan mentor, materi, latihan soal, dan tryout CAT.`,
     alternates: { canonical: url },
     openGraph: { ...openGraphBase, url },
   };

@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import BimbelCpnsLocationPage from "@/components/pages/bimbel-cpns-location";
-import { locationLabel } from "@/lib/location-tree";
+import { headlineLabel } from "@/lib/location-tree";
 import { getLocationOrNotFound, getProvinceParams } from "@/lib/region-service";
 import { openGraphBase } from "../../shared-metadata";
 
@@ -10,12 +10,12 @@ export async function generateMetadata({
   params,
 }: PageProps<"/bimbel-cpns/[...locations]">): Promise<Metadata> {
   const found = await getLocationOrNotFound((await params).locations);
-  const location = locationLabel(found);
+  const location = headlineLabel(found);
   const url = `/bimbel-cpns${found.region.path}`;
 
   return {
-    title: `Bimbel CPNS ${location}`,
-    description: `Bimbel CPNS untuk peserta dari ${location}. Persiapan SKD & SKB dengan materi TWK, TIU, TKP, tryout CAT, pembahasan soal, dan pendampingan tutor.`,
+    title: { absolute: `Bimbel CPNS Online & Offline Terbaik di ${location} - Persiapan SKD & SKB | Akademi ASN` },
+    description: `Ikuti bimbel CPNS online & offline terbaik di ${location} untuk persiapan SKD & SKB. Materi TWK, TIU, TKP, tryout CAT, pembahasan soal, dan pendampingan tutor.`,
     alternates: { canonical: url },
     openGraph: { ...openGraphBase, url },
   };

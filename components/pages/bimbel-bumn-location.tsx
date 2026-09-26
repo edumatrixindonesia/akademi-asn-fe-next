@@ -33,7 +33,7 @@ import { ctaFooterLocation } from "@/data/cta-footer";
 import { faqBumn } from "@/data/faq";
 import { mediaMassa } from "@/data/media-massa";
 import { getKonsultasiUrl } from "@/data/contact";
-import { locationLabel, type ResolvedLocation } from "@/lib/location-tree";
+import { headlineLabel, locationLabel, type ResolvedLocation } from "@/lib/location-tree";
 
 type BimbelBumnLocationProps = { location: ResolvedLocation };
 
@@ -44,7 +44,7 @@ const BimbelBumnLocation = ({ location }: BimbelBumnLocationProps) => {
   return (
     <main className="flex-1">
       <Breadcrumb {...breadcrumbBumnLocation(location)} />
-      <Jumbotron {...jumbotronBumnLocation(konsultasiUrl, label)} />
+      <Jumbotron {...jumbotronBumnLocation(konsultasiUrl, headlineLabel(location))} />
       <Intro {...introBumnLocation(location)} />
       <Keunggulan {...keunggulanLocation(label)} />
       <Materi {...materiBumn(konsultasiUrl)} />
