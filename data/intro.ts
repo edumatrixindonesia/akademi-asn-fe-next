@@ -180,6 +180,48 @@ export const introTexts: Record<string, string> = {
   // Kalimantan Utara
   "65":
     "Kalimantan Utara dibentuk pada tahun 2012 sebagai pemekaran dari Kalimantan Timur, dengan ibu kota di Tanjung Selor, Kabupaten Bulungan. Provinsi yang terdiri atas 4 kabupaten dan Kota Tarakan ini berbatasan langsung dengan Sabah dan Sarawak, Malaysia. Peserta dari seluruh Kalimantan Utara bisa belajar bersama tutor Akademi ASN lewat Privat Home Visit atau kelas online.",
+  // Sulawesi Utara
+  "71":
+    "Sulawesi Utara beribu kota di Manado dan terdiri atas 11 kabupaten dan 4 kota. Provinsi di ujung Pulau Sulawesi ini berbatasan dengan Filipina di sebelah utara, dan Pulau Bunaken menjadi salah satu tujuan wisatanya. Peserta dari seluruh Sulawesi Utara bisa belajar bersama tutor Akademi ASN lewat Privat Home Visit atau kelas online.",
+  // Sulawesi Tengah
+  "72":
+    "Sulawesi Tengah beribu kota di Palu dan terdiri atas 12 kabupaten dan 1 kota. Provinsi ini adalah lokasi Taman Nasional Lore Lindu. Peserta dari seluruh Sulawesi Tengah bisa belajar bersama tutor Akademi ASN lewat Privat Home Visit atau kelas online.",
+  // Sulawesi Selatan
+  "73":
+    "Sulawesi Selatan beribu kota di Makassar dan terdiri atas 21 kabupaten dan 3 kota, termasuk Kabupaten Tana Toraja dan Kabupaten Toraja Utara. Penduduknya antara lain suku Makassar, Bugis, dan Toraja. Peserta dari seluruh Sulawesi Selatan bisa belajar bersama tutor Akademi ASN lewat Privat Home Visit atau kelas online.",
+  // Sulawesi Tenggara
+  "74":
+    "Sulawesi Tenggara beribu kota di Kendari dan terdiri atas 15 kabupaten dan 2 kota, yaitu Kendari dan Baubau. Wilayahnya mencakup antara lain Kabupaten Buton dan Kabupaten Wakatobi. Peserta dari seluruh Sulawesi Tenggara bisa belajar bersama tutor Akademi ASN lewat Privat Home Visit atau kelas online.",
+  // Gorontalo
+  "75":
+    "Provinsi Gorontalo dibentuk pada tahun 2000 sebagai pemekaran dari Sulawesi Utara, dengan ibu kota di Kota Gorontalo. Kini provinsi ini terdiri atas 5 kabupaten dan 1 kota, dan berbatasan dengan Teluk Tomini di sebelah selatan. Peserta dari seluruh Gorontalo bisa belajar bersama tutor Akademi ASN lewat Privat Home Visit atau kelas online.",
+  // Sulawesi Barat
+  "76":
+    "Provinsi Sulawesi Barat dibentuk pada tahun 2004 sebagai pemekaran dari Sulawesi Selatan, dengan ibu kota di Mamuju. Pembentukan provinsi ini lahir dari keinginan masyarakat Mandar untuk memiliki provinsi sendiri. Peserta dari seluruh Sulawesi Barat bisa belajar bersama tutor Akademi ASN lewat Privat Home Visit atau kelas online.",
+  // Maluku
+  "81":
+    "Maluku beribu kota di Ambon dan terdiri atas 9 kabupaten dan 2 kota. Kepulauan Banda di provinsi ini adalah asal tanaman pala, rempah yang sejak berabad-abad lalu diperdagangkan hingga Asia dan Eropa. Peserta dari seluruh Maluku bisa belajar bersama tutor Akademi ASN lewat Privat Home Visit atau kelas online.",
+  // Maluku Utara
+  "82":
+    "Maluku Utara dibentuk pada tahun 1999 sebagai pemekaran dari Provinsi Maluku. Ibu kotanya dipindahkan dari Ternate ke Sofifi di Pulau Halmahera pada 2010, dan provinsi ini dikenal sebagai penghasil cengkih dan pala. Peserta dari seluruh Maluku Utara bisa belajar bersama tutor Akademi ASN lewat Privat Home Visit atau kelas online.",
+  // Papua
+  "91":
+    "Provinsi Papua beribu kota di Jayapura. Pada tahun 2022, sebagian wilayahnya dimekarkan menjadi Provinsi Papua Selatan, Papua Tengah, dan Papua Pegunungan. Peserta dari seluruh Papua bisa belajar bersama tutor Akademi ASN lewat Privat Home Visit atau kelas online.",
+  // Papua Barat
+  "92":
+    "Papua Barat beribu kota di Manokwari dan kini terdiri atas 7 kabupaten, termasuk Fakfak, Kaimana, dan Teluk Bintuni. Pada tahun 2022, sebagian wilayahnya dimekarkan menjadi Provinsi Papua Barat Daya. Peserta dari seluruh Papua Barat bisa belajar bersama tutor Akademi ASN lewat Privat Home Visit atau kelas online.",
+  // Papua Selatan
+  "93":
+    "Provinsi Papua Selatan dibentuk pada tahun 2022 dengan ibu kota di Kabupaten Merauke. Provinsi ini terdiri atas empat kabupaten: Merauke, Boven Digoel, Mappi, dan Asmat. Peserta dari seluruh Papua Selatan bisa belajar bersama tutor Akademi ASN lewat Privat Home Visit atau kelas online.",
+  // Papua Tengah
+  "94":
+    "Provinsi Papua Tengah dibentuk pada tahun 2022 dengan ibu kota di Kabupaten Nabire. Provinsi ini terdiri atas delapan kabupaten, di antaranya Nabire, Mimika, Paniai, dan Puncak Jaya. Peserta dari seluruh Papua Tengah bisa belajar bersama tutor Akademi ASN lewat Privat Home Visit atau kelas online.",
+  // Papua Pegunungan
+  "95":
+    "Provinsi Papua Pegunungan dibentuk pada tahun 2022 dengan ibu kota di Kabupaten Jayawijaya. Provinsi yang terdiri atas delapan kabupaten ini berbatasan dengan Papua Nugini di sebelah timur. Peserta dari seluruh Papua Pegunungan bisa belajar bersama tutor Akademi ASN lewat Privat Home Visit atau kelas online.",
+  // Papua Barat Daya
+  "96":
+    "Provinsi Papua Barat Daya dibentuk pada tahun 2022 sebagai pemekaran dari Papua Barat, dengan ibu kota di Kota Sorong. Provinsi ini terdiri atas lima kabupaten dan satu kota, termasuk Kabupaten Raja Ampat. Peserta dari seluruh Papua Barat Daya bisa belajar bersama tutor Akademi ASN lewat Privat Home Visit atau kelas online.",
 };
 
 const baseText = ({ region, ancestors }: ResolvedLocation, texts: Record<string, string>) =>
