@@ -90,6 +90,33 @@ export const introTexts: Record<string, string> = {
   // Kota Tangerang Selatan
   "36.74":
     "Kota Tangerang Selatan dibentuk pada tahun 2008 sebagai pemekaran dari Kabupaten Tangerang, dengan pusat pemerintahan di Ciputat. Kota ini menjadi lokasi kampus UIN Syarif Hidayatullah Jakarta dan Universitas Terbuka. Peserta dari Tangerang Selatan bisa belajar bersama tutor Akademi ASN lewat Privat Home Visit atau kelas online.",
+  // Jawa Tengah
+  "33":
+    "Jawa Tengah beribu kota di Semarang dan terdiri atas 29 kabupaten dan 6 kota. Provinsi ini adalah lokasi Candi Borobudur di Kabupaten Magelang, monumen Buddha terbesar di dunia. Peserta dari seluruh Jawa Tengah bisa belajar bersama tutor Akademi ASN lewat Privat Home Visit atau kelas online.",
+  // Kota Semarang
+  "33.74":
+    "Kota Semarang adalah ibu kota Jawa Tengah dan lokasi Lawang Sewu, bangunan peninggalan Belanda yang kini menjadi museum. Kota ini dilayani Pelabuhan Tanjung Emas serta menjadi lokasi kampus Universitas Diponegoro di Tembalang. Peserta dari Semarang bisa belajar bersama tutor Akademi ASN lewat Privat Home Visit atau kelas online.",
+  // Kabupaten Semarang
+  "33.22":
+    "Kabupaten Semarang, dengan ibu kota Ungaran, berbatasan langsung dengan Kota Semarang. Kabupaten ini dikenal dengan Candi Gedong Songo di Bandungan, Rawa Pening, dan Museum Kereta Api Ambarawa. Peserta dari Kabupaten Semarang bisa belajar lewat Privat Home Visit tanpa perlu ke kota, atau lewat kelas online.",
+  // Kota Surakarta
+  "33.72":
+    "Kota Surakarta, atau Solo, adalah lokasi Keraton Kasunanan Surakarta dan Pura Mangkunegaran, serta sentra batik Kampung Batik Laweyan. Kampus Universitas Sebelas Maret juga berada di Kentingan, Jebres. Peserta dari Solo bisa belajar bersama tutor Akademi ASN lewat Privat Home Visit atau kelas online.",
+  // Jawa Timur
+  "35":
+    "Jawa Timur beribu kota di Surabaya dan terdiri atas 29 kabupaten dan 9 kota, jumlah kabupaten/kota terbanyak di Indonesia. Provinsi ini adalah lokasi Taman Nasional Bromo Tengger Semeru dengan Gunung Semeru, gunung tertinggi di Pulau Jawa. Peserta dari seluruh Jawa Timur bisa belajar bersama tutor Akademi ASN lewat Privat Home Visit atau kelas online.",
+  // Kota Surabaya
+  "35.78":
+    "Kota Surabaya, ibu kota Jawa Timur, dijuluki Kota Pahlawan karena Pertempuran 10 November 1945. Kota ini dilayani Pelabuhan Tanjung Perak dan menjadi lokasi kampus seperti Universitas Airlangga dan Institut Teknologi Sepuluh Nopember. Peserta dari Surabaya bisa belajar bersama tutor Akademi ASN lewat Privat Home Visit atau kelas online.",
+  // Kota Malang
+  "35.73":
+    "Kota Malang dikenal sebagai salah satu kota pendidikan terpenting di Indonesia, dengan kampus seperti Universitas Brawijaya dan Universitas Negeri Malang di Kecamatan Lowokwaru. Peserta dari Kota Malang bisa belajar bersama tutor Akademi ASN lewat Privat Home Visit atau kelas online di sela kegiatan kuliah maupun kerja.",
+  // Kabupaten Malang
+  "35.07":
+    "Kabupaten Malang, dengan ibu kota Kepanjen, adalah kabupaten terluas kedua di Jawa Timur setelah Banyuwangi. Wilayahnya membentang hingga pesisir Samudra Hindia dengan pantai seperti Balekambang, dan sebagian wilayahnya masuk Taman Nasional Bromo Tengger Semeru. Privat Home Visit Akademi ASN mendatangkan tutor ke rumahmu, dan kelas online bisa diikuti dari mana saja.",
+  // Kabupaten Jember
+  "35.09":
+    "Kabupaten Jember, bagian dari kawasan Tapal Kuda Jawa Timur, dikenal sebagai salah satu sentra tembakau terbesar di Indonesia dan tuan rumah Jember Fashion Carnaval yang digelar setiap tahun sejak 2003. Peserta dari Jember bisa belajar bersama tutor Akademi ASN lewat Privat Home Visit atau kelas online.",
 };
 
 const baseText = ({ region, ancestors }: ResolvedLocation, texts: Record<string, string>) =>
