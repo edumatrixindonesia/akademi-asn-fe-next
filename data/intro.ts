@@ -96,6 +96,10 @@ const baseText = ({ region, ancestors }: ResolvedLocation, texts: Record<string,
   texts[region.kode] ??
   `${region.nama} berada di ${ancestors.at(-1)?.nama ?? "Indonesia"}. Peserta dari ${region.nama} bisa belajar bersama Akademi ASN lewat kelas online atau les privat dengan tutor yang datang ke rumah.`;
 
+// Track sentences follow each page's base text on every location, down to
+// villages, so they only state what is true everywhere: the test content.
+// Sources: PermenPANRB 27/2021 (SKD), PP 49/2018 and BKN PPPK materi pokok
+// 2024 (PPPK), and RBB 2025/2026 test outlines (TKD and AKHLAK in both).
 const introLocation =
   (track: string, trackSentence: (nama: string) => string) =>
   (location: ResolvedLocation, texts = introTexts) =>
@@ -107,23 +111,23 @@ const introLocation =
 export const introHomeLocation = introLocation(
   "Bimbel CPNS, PPPK & BUMN",
   (nama) =>
-    `Formasi CPNS, PPPK, dan lowongan Rekrutmen Bersama BUMN terbuka untuk pelamar dari ${nama}, dan persaingannya ketat, jadi persiapan sejak awal akan sangat membantu.`,
+    `Bagi peserta dari ${nama}, SKD CPNS terdiri atas TWK, TIU, dan TKP; seleksi PPPK menguji kompetensi teknis, manajerial, sosial kultural, dan wawancara; sedangkan Rekrutmen Bersama BUMN menguji kemampuan dasar dan nilai inti AKHLAK.`,
 );
 
 export const introCpnsLocation = introLocation(
   "Bimbel CPNS",
   (nama) =>
-    `Formasi CPNS di ${nama} diperebutkan banyak pelamar, jadi kuasai TWK, TIU, dan TKP untuk melewati passing grade SKD.`,
+    `Peserta CPNS dari ${nama} menghadapi SKD berbasis CAT yang terdiri atas Tes Wawasan Kebangsaan (TWK), Tes Intelegensia Umum (TIU), dan Tes Karakteristik Pribadi (TKP).`,
 );
 
 export const introPppkLocation = introLocation(
   "Bimbel PPPK",
   (nama) =>
-    `Formasi PPPK di ${nama} dibuka untuk guru, tenaga kesehatan, dan tenaga teknis, jadi siapkan kompetensi teknis, manajerial, sosial kultural, dan wawancara sejak dini.`,
+    `Peserta PPPK dari ${nama} menghadapi seleksi kompetensi teknis, kompetensi manajerial, kompetensi sosial kultural, dan wawancara.`,
 );
 
 export const introBumnLocation = introLocation(
   "Bimbel BUMN",
   (nama) =>
-    `Pelamar Rekrutmen Bersama BUMN dari ${nama} bersaing secara nasional, jadi latih TKD, AKHLAK, dan Learning Agility sebelum tes dimulai.`,
+    `Peserta Rekrutmen Bersama BUMN dari ${nama} perlu menyiapkan Tes Kemampuan Dasar (TKD) dan tes nilai inti AKHLAK yang menjadi budaya kerja BUMN.`,
 );

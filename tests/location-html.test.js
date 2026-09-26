@@ -112,7 +112,7 @@ test("a location page names the location in the intro and section variants", asy
 
   const intro = block(html, 'id="intro"');
   expect(intro).toMatch(/<h2\b[^>]*>Bimbel CPNS di Kota Bandung<\/h2>/);
-  expect(intro).toContain("Formasi CPNS di Kota Bandung");
+  expect(intro).toContain("Peserta CPNS dari Kota Bandung menghadapi SKD");
   expect(html.indexOf('id="intro"')).toBeGreaterThan(html.indexOf("<h1"));
   expect(html.indexOf('id="intro"')).toBeLessThan(html.indexOf('id="keunggulan-title"'));
 
