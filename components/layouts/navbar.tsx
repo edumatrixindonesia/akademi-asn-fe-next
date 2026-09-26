@@ -31,7 +31,7 @@ const Navbar = ({ logo, links, cta }: NavbarProps) => {
   );
 
   return (
-    <header className="sticky top-0 z-40 border-b bg-background drop-shadow-2xl">
+    <header className="sticky top-0 z-40 bg-background drop-shadow-sm">
       <nav className="mx-auto flex h-16 w-full max-w-7xl items-center justify-between px-4 md:px-8 lg:px-12">
         <Link href="/" className="shrink-0">
           <Image

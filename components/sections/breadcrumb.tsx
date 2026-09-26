@@ -33,9 +33,16 @@ const Breadcrumb = ({ items }: BreadcrumbProps) => {
             {index > 0 && <BreadcrumbSeparator />}
             <BreadcrumbItem>
               {index === items.length - 1 ? (
-                <BreadcrumbPage>{item.name}</BreadcrumbPage>
+                <BreadcrumbPage className="text-primary-dark">
+                  {item.name}
+                </BreadcrumbPage>
               ) : (
-                <BreadcrumbLink href={item.href}>{item.name}</BreadcrumbLink>
+                <BreadcrumbLink
+                  href={item.href}
+                  className="text-primary/80 hover:text-primary-dark"
+                >
+                  {item.name}
+                </BreadcrumbLink>
               )}
             </BreadcrumbItem>
           </Fragment>

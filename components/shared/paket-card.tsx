@@ -75,7 +75,7 @@ const PaketCard = ({
       <Button
         asChild
         size="lg"
-        className="mt-auto w-full bg-cta hover:bg-cta/90"
+        className="mt-auto w-full bg-cta text-white hover:bg-cta/90"
       >
         <a
           href={ctaHref}
