@@ -1,6 +1,6 @@
 # Jangkauan section and location pages
 
-Status: ready-for-agent
+Status: done
 
 ## Summary
 
@@ -96,19 +96,32 @@ The reference site's home page ends with a Jangkauan section that links to one p
 
 **Acceptance criteria:**
 
-- [ ] `/di-yogyakarta`, `/bimbel-cpns/jawa-barat/kota-bandung`, `/bimbel-pppk/jawa-barat/kota-bandung/coblong`, and `/bimbel-bumn/dki-jakarta/kota-jakarta-pusat/gambir/<village>` render with the region name in `<title>`, `h1`, and intro.
-- [ ] `/aceh/kabupaten-aceh-selatan/bakongan` and `/not-a-province` return 404.
-- [ ] Each page has exactly one `h1`; content is in the initial HTML (Server Components).
-- [ ] Home-location metadata names all three tracks; exam-track location metadata names only its track.
-- [ ] Breadcrumb renders with valid `BreadcrumbList` JSON-LD.
-- [ ] Jangkauan lists the correct children and is absent on leaf pages (e.g. `/aceh/kabupaten-aceh-selatan`, `/jawa-barat/kota-bandung/coblong`).
-- [ ] Lokasi Lain lists the siblings, with the parent named in its heading ("Provinsi lain" on province pages).
-- [ ] A region with a hand-written intro in `data/` shows it; any other region shows the template intro; both are followed by the track sentence.
-- [ ] DIY location pages show the Kelas Offline office content; no other region does.
-- [ ] `app/sitemap.ts` includes every location page of every family.
-- [ ] The build prerenders only the 152 province pages; other location pages render on first visit and are served from the cache afterwards.
-- [ ] Region-service is called about 4 times per 7 days per container (well under 32 per minute), not once per page.
-- [ ] A region-service failure on an uncached page returns 5xx, never 404.
-- [ ] `bun run lint` and `bun run typecheck` pass.
+- [x] `/di-yogyakarta`, `/bimbel-cpns/jawa-barat/kota-bandung`, `/bimbel-pppk/jawa-barat/kota-bandung/coblong`, and `/bimbel-bumn/dki-jakarta/kota-jakarta-pusat/gambir/<village>` render with the region name in `<title>`, `h1`, and intro.
+- [x] `/aceh/kabupaten-aceh-selatan/bakongan` and `/not-a-province` return 404.
+- [x] Each page has exactly one `h1`; content is in the initial HTML (Server Components).
+- [x] Home-location metadata names all three tracks; exam-track location metadata names only its track.
+- [x] Breadcrumb renders with valid `BreadcrumbList` JSON-LD.
+- [x] Jangkauan lists the correct children and is absent on leaf pages (e.g. `/aceh/kabupaten-aceh-selatan`, `/jawa-barat/kota-bandung/coblong`).
+- [x] Lokasi Lain lists the siblings, with the parent named in its heading ("Provinsi lain" on province pages).
+- [x] A region with a hand-written intro in `data/` shows it; any other region shows the template intro; both are followed by the track sentence.
+- [x] DIY location pages show the Kelas Offline office content; no other region does.
+- [x] `app/sitemap.ts` includes every location page of every family.
+- [x] The build prerenders only the 152 province pages; other location pages render on first visit and are served from the cache afterwards.
+- [x] Region-service is called about 4 times per 7 days per container (well under 32 per minute), not once per page.
+- [x] A region-service failure on an uncached page returns 5xx, never 404.
+- [x] `bun run lint` and `bun run typecheck` pass.
 
 **Out of scope:** see the Out of scope section above. Writing the 72 hand-written intros is a separate, ongoing content task.
+
+### Verification (2026-09-26)
+
+All five tickets are done. Every acceptance criterion above was checked against a production build (`bun run build` + `next start`) and the local region-service:
+
+- Build: 152 province pages prerendered (4 families × 38), every other location route ISR; `bun run lint`, `bun run typecheck`, and all 23 `bun test` tests pass.
+- 96 sampled pages (provinces, regencies, districts, villages, DIY, leaves) across the four families match region-service: one `h1`, title, description tracks, intro `h2`, Jangkauan children, Lokasi Lain siblings and heading, `BreadcrumbList` JSON-LD, canonical, Kelas Offline only under DI Yogyakarta, and section order.
+- `sitemap.xml` has exactly 12,040 URLs (4 landing pages + 4 × 3,009 location pages), no duplicates, none outside the page set. Seven out-of-set paths return 404.
+- Region-service outage (dead `REGION_SERVICE_URL`): an uncached page returns 500 twice (not cached), a prerendered province page still returns 200, and the page renders 200 once the service is back.
+- The fetch cache holds four list entries, unchanged while new pages render. A cold build makes 22 requests in about 5 seconds with 15 build workers, under the 32-per-minute limit; a build machine with many more CPUs could exceed it.
+- The token does not appear in `.next/static`; the only `"use client"` file is `components/ui/sheet.tsx`.
+- At 390 px width the page has no horizontal overflow, no image without `alt`, and no console errors.
+- The 72 intro texts in `data/intro.ts` match the approved drafts and cover exactly the 38 provinces and 34 Kabupaten Besar in region-service. Every kabupaten/kota count matches region-service. An Exa cross-check corrected five claims (YIA's year, Halim as the only airport, Kepri's neighbours, the Muaro Jambi superlative, and the Belawan superlative) and added a second, non-Wikipedia source to every remaining superlative (revision 3 notes in batches 01–05).
