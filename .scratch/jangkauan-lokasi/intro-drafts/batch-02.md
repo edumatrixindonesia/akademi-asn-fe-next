@@ -51,11 +51,11 @@ Sources: [jakarta.go.id: Kota Administrasi Jakarta Timur (terluas, Halim, TMII)]
 
 ### 31.01 · Kabupaten Kepulauan Seribu
 
-Kepulauan Seribu adalah satu-satunya kabupaten administrasi di Jakarta, berupa gugusan pulau di Teluk Jakarta dengan pusat pemerintahan di Pulau Pramuka. Karena letaknya di kepulauan, kelas online Akademi ASN memungkinkan peserta dari Kepulauan Seribu menyiapkan seleksi tanpa harus menyeberang ke daratan Jakarta.
+Kepulauan Seribu adalah satu-satunya kabupaten administrasi di Jakarta, berupa gugusan pulau di Teluk Jakarta dengan pusat pemerintahan di Pulau Pramuka. Kelas online Akademi ASN bisa diikuti dari pulau mana pun di Kepulauan Seribu, dan Privat Home Visit mendatangkan tutor ke rumahmu.
 
 Sources: [jakarta.go.id: Kepulauan Seribu (satu-satunya gugusan pulau milik Jakarta)](https://www.jakarta.go.id/kabupaten-administrasi-kepulauan-seribu), [Wikipedia: Kabupaten Administrasi Kepulauan Seribu (Teluk Jakarta, Pulau Pramuka)](https://id.wikipedia.org/wiki/Kabupaten_Administrasi_Kepulauan_Seribu), [PP 55/2001: ibu kota di Pulau Pramuka](https://www.flevin.com/id/lgso/legislation/Mirror/czoyNDoiZD0yMDAwKzEmZj1wcDU1LTIwMDEucGRmIjs=.pdf)
 
-Note: this text names only kelas online, because Privat Home Visit coverage of the islands is unconfirmed. Add it once the owner confirms.
+Note: Privat Home Visit added after the owner confirmed it is available anywhere (`CONTEXT.md`).
 
 ## Banten
 
