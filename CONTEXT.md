@@ -76,4 +76,11 @@ Practice exams that simulate the real selection test. Has its own page, not a la
 The catalog of all sellable products. Has its own page.
 
 **Konsultasi**:
-A free chat with an Akademi ASN admin over WhatsApp. It is the primary call to action across the site.
+A free chat with an Admin Konsultasi over WhatsApp. It is the primary call to action across the site.
+
+**Admin Konsultasi**:
+One of the Akademi ASN admins who answer Konsultasi chats. Konsultasi links rotate between them, one admin per day.
+_Avoid_: CS, call center (the UI label "Call Center" stays)
+
+**Nomor Call Center**:
+The one published Akademi ASN phone number, identical on every page and in structured data so local search sees a consistent NAP. It may differ from the Admin Konsultasi who receives that day's Konsultasi chats.

@@ -5,6 +5,13 @@ export const konsultasiAdmins = [
   { name: "Sari", phone: "6285712217876" },
 ] as const;
 
+// The Nomor Call Center: the one published phone number, identical in the
+// footer and JSON-LD (NAP consistency). Konsultasi links still rotate daily.
+export const callCenterPhone = {
+  e164: "+6281215523902",
+  display: "0812-1552-3902",
+};
+
 // The Akademi ASN office, where Kelas Offline is held. Keep it identical
 // everywhere it appears (NAP consistency for local search).
 export const officeAddress =

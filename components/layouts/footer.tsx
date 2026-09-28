@@ -13,7 +13,11 @@ export type FooterProps = {
   name: string;
   address: string;
   socials: (FooterLink & { platform: SocialPlatform })[];
-  consultation: { title: string; label: string; phone: FooterLink };
+  consultation: {
+    title: string;
+    label: string;
+    phone: FooterLink & { ariaLabel: string };
+  };
   otherWebsite: { title: string; link: FooterLink };
   examTracks: { title: string; links: FooterLink[] };
   image: { src: string; alt: string };
@@ -78,6 +82,7 @@ const Footer = ({
 
           <a
             href={consultation.phone.href}
+            aria-label={consultation.phone.ariaLabel}
             {...external}
             className={`w-fit text-xl font-semibold transition-colors bg-radial from-cta/80 to-cta text-center mx-auto px-4 py-1 rounded-lg mb-3 inline-flex items-center gap-2 hover:text-white/80`}
           >

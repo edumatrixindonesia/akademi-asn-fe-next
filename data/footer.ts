@@ -1,5 +1,5 @@
 import type { FooterProps } from "@/components/layouts/footer";
-import { officeAddress } from "@/data/contact";
+import { callCenterPhone, officeAddress } from "@/data/contact";
 
 export const footerDefault = (konsultasiUrl: string) =>
   ({
@@ -26,7 +26,11 @@ export const footerDefault = (konsultasiUrl: string) =>
     consultation: {
       title: "KONSULTASI PROGRAM GRATIS",
       label: "Call Center",
-      phone: { label: "Chat via WhatsApp", href: konsultasiUrl },
+      phone: {
+        label: callCenterPhone.display,
+        ariaLabel: `Chat via WhatsApp ${callCenterPhone.display}`,
+        href: konsultasiUrl,
+      },
     },
     otherWebsite: {
       title: "OTHER WEBSITE",

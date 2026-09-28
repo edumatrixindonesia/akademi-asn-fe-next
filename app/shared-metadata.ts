@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 
+import { callCenterPhone } from "@/data/contact";
+
 const envSiteUrl = process.env.NEXT_PUBLIC_SITE_URL?.trim();
 if (!envSiteUrl) {
   throw new Error(
@@ -35,7 +37,7 @@ export const organizationJsonLd = {
       url: siteUrl,
       logo: `${siteUrl}/img/logo/logo-utama-akademi-asn.webp`,
       image: `${siteUrl}/img/section/og-bimbel-cpns-pppk-bumn-terbaik-akademi-asn.jpeg`,
-      telephone: "+6281215523902",
+      telephone: callCenterPhone.e164,
       openingHoursSpecification: [
         {
           "@type": "OpeningHoursSpecification",
