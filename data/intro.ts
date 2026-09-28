@@ -7,8 +7,7 @@ import type { ResolvedLocation } from "@/lib/location-tree";
 // their sources live in `.scratch/jangkauan-lokasi/intro-drafts/`.
 export const introTexts: Record<string, string> = {
   // DI Yogyakarta
-  "34":
-    "Daerah Istimewa Yogyakarta dikenal sebagai kota pelajar, dengan banyak perguruan tinggi seperti UGM dan UNY. Pusat pemerintahannya berada di Kompleks Kepatihan, Kota Yogyakarta. Kantor Akademi ASN ada di Sleman, jadi peserta dari DIY bisa memilih Kelas Offline, Privat Home Visit, atau kelas online.",
+  "34": "Daerah Istimewa Yogyakarta dikenal sebagai kota pelajar, dengan banyak perguruan tinggi seperti UGM dan UNY. Pusat pemerintahannya berada di Kompleks Kepatihan, Kota Yogyakarta. Kantor Akademi ASN ada di Sleman, jadi peserta dari DIY bisa memilih Kelas Offline, Privat Home Visit, atau kelas online.",
   // Kota Yogyakarta
   "34.71":
     "Kota Yogyakarta adalah pusat pemerintahan DIY, tempat Keraton Yogyakarta, Kompleks Kepatihan, dan kawasan Malioboro berada. Kantor Akademi ASN berada di Jalan Monjali, Sleman, sehingga peserta dari Kota Yogyakarta bisa ikut Kelas Offline. Jika lebih nyaman belajar di rumah, pilih Privat Home Visit atau kelas online.",
@@ -25,8 +24,7 @@ export const introTexts: Record<string, string> = {
   "34.03":
     "Kabupaten Gunungkidul, dengan ibu kota Wonosari, adalah kabupaten terluas di DIY, dengan bentang alam karst Pegunungan Sewu dan deretan pantai di pesisir selatan. Wonosari berjarak sekitar 39 km dari Kota Yogyakarta, jadi peserta dari Gunungkidul bisa belajar lewat Privat Home Visit atau kelas online. Kelas Offline di Sleman tetap terbuka bagi yang ingin belajar tatap muka.",
   // Jawa Barat
-  "32":
-    "Jawa Barat adalah provinsi dengan jumlah penduduk terbanyak di Indonesia, beribu kota di Bandung. Wilayahnya mencakup kota seperti Bandung, Bekasi, Depok, dan Bogor, hingga kabupaten di pegunungan dan pesisir selatan. Peserta dari seluruh Jawa Barat bisa belajar bersama tutor Akademi ASN lewat Privat Home Visit atau kelas online.",
+  "32": "Jawa Barat adalah provinsi dengan jumlah penduduk terbanyak di Indonesia, beribu kota di Bandung. Wilayahnya mencakup kota seperti Bandung, Bekasi, Depok, dan Bogor, hingga kabupaten di pegunungan dan pesisir selatan. Peserta dari seluruh Jawa Barat bisa belajar bersama tutor Akademi ASN lewat Privat Home Visit atau kelas online.",
   // Kota Bandung
   "32.73":
     "Kota Bandung adalah ibu kota Jawa Barat, dengan Gedung Sate sebagai kantor Gubernur. Kota ini juga menjadi lokasi kampus Ganesha Institut Teknologi Bandung (ITB). Tutor Privat Home Visit Akademi ASN bisa datang ke rumah atau kantormu di Bandung, atau kamu bisa ikut kelas online.",
@@ -58,8 +56,7 @@ export const introTexts: Record<string, string> = {
   "32.76":
     "Kota Depok adalah lokasi kampus utama Universitas Indonesia dan terhubung dengan Jakarta lewat KRL Commuter Line Bogor. Peserta dari Depok bisa belajar bersama tutor Akademi ASN lewat Privat Home Visit atau kelas online.",
   // DKI Jakarta
-  "31":
-    "Jakarta terbagi atas lima kota administrasi dan satu kabupaten administrasi, yaitu Kepulauan Seribu, dan merupakan provinsi dengan kepadatan penduduk tertinggi di Indonesia. Di wilayah ini berdiri Monas, Istana Merdeka, dan Pelabuhan Tanjung Priok. Peserta dari seluruh Jakarta bisa belajar bersama tutor Akademi ASN lewat Privat Home Visit atau kelas online.",
+  "31": "Jakarta terbagi atas lima kota administrasi dan satu kabupaten administrasi, yaitu Kepulauan Seribu, dan merupakan provinsi dengan kepadatan penduduk tertinggi di Indonesia. Di wilayah ini berdiri Monas, Istana Merdeka, dan Pelabuhan Tanjung Priok. Peserta dari seluruh Jakarta bisa belajar bersama tutor Akademi ASN lewat Privat Home Visit atau kelas online.",
   // Kota Jakarta Pusat
   "31.71":
     "Jakarta Pusat adalah lokasi Monumen Nasional di Kecamatan Gambir, Istana Merdeka, dan Balai Kota Jakarta di Jalan Medan Merdeka Selatan. Kawasan Gambir juga dikelilingi berbagai kantor kementerian dan lembaga nasional. Tutor Privat Home Visit Akademi ASN bisa datang ke rumah atau kantormu di Jakarta Pusat, atau kamu bisa ikut kelas online.",
@@ -79,8 +76,7 @@ export const introTexts: Record<string, string> = {
   "31.01":
     "Kepulauan Seribu adalah satu-satunya kabupaten administrasi di Jakarta, berupa gugusan pulau di Teluk Jakarta dengan pusat pemerintahan di Pulau Pramuka. Kelas online Akademi ASN bisa diikuti dari pulau mana pun di Kepulauan Seribu, dan Privat Home Visit mendatangkan tutor ke rumahmu.",
   // Banten
-  "36":
-    "Provinsi Banten dibentuk pada tahun 2000 sebagai pemekaran dari Jawa Barat, dengan ibu kota di Serang. Wilayahnya terdiri atas empat kota, yaitu Serang, Tangerang, Cilegon, dan Tangerang Selatan, serta empat kabupaten. Peserta dari seluruh Banten bisa belajar bersama tutor Akademi ASN lewat Privat Home Visit atau kelas online.",
+  "36": "Provinsi Banten dibentuk pada tahun 2000 sebagai pemekaran dari Jawa Barat, dengan ibu kota di Serang. Wilayahnya terdiri atas empat kota, yaitu Serang, Tangerang, Cilegon, dan Tangerang Selatan, serta empat kabupaten. Peserta dari seluruh Banten bisa belajar bersama tutor Akademi ASN lewat Privat Home Visit atau kelas online.",
   // Kabupaten Tangerang
   "36.03":
     "Kabupaten Tangerang, dengan pusat pemerintahan di Tigaraksa, membentang dari pesisir Laut Jawa di utara hingga berbatasan dengan Kabupaten Bogor di selatan. Kabupaten ini menjadi bagian dari wilayah metropolitan Jabodetabek. Privat Home Visit dan kelas online Akademi ASN membantu kamu belajar sesuai jadwal tanpa perlu menempuh perjalanan jauh.",
@@ -91,8 +87,7 @@ export const introTexts: Record<string, string> = {
   "36.74":
     "Kota Tangerang Selatan dibentuk pada tahun 2008 sebagai pemekaran dari Kabupaten Tangerang, dengan pusat pemerintahan di Ciputat. Kota ini menjadi lokasi kampus UIN Syarif Hidayatullah Jakarta dan Universitas Terbuka. Peserta dari Tangerang Selatan bisa belajar bersama tutor Akademi ASN lewat Privat Home Visit atau kelas online.",
   // Jawa Tengah
-  "33":
-    "Jawa Tengah beribu kota di Semarang dan terdiri atas 29 kabupaten dan 6 kota. Provinsi ini adalah lokasi Candi Borobudur di Kabupaten Magelang, monumen Buddha terbesar di dunia. Peserta dari seluruh Jawa Tengah bisa belajar bersama tutor Akademi ASN lewat Privat Home Visit atau kelas online.",
+  "33": "Jawa Tengah beribu kota di Semarang dan terdiri atas 29 kabupaten dan 6 kota. Provinsi ini adalah lokasi Candi Borobudur di Kabupaten Magelang, monumen Buddha terbesar di dunia. Peserta dari seluruh Jawa Tengah bisa belajar bersama tutor Akademi ASN lewat Privat Home Visit atau kelas online.",
   // Kota Semarang
   "33.74":
     "Kota Semarang adalah ibu kota Jawa Tengah dan lokasi Lawang Sewu, bangunan peninggalan Belanda yang kini menjadi museum. Kota ini dilayani Pelabuhan Tanjung Emas serta menjadi lokasi kampus Universitas Diponegoro di Tembalang. Peserta dari Semarang bisa belajar bersama tutor Akademi ASN lewat Privat Home Visit atau kelas online.",
@@ -103,8 +98,7 @@ export const introTexts: Record<string, string> = {
   "33.72":
     "Kota Surakarta, atau Solo, adalah lokasi Keraton Kasunanan Surakarta dan Pura Mangkunegaran, serta sentra batik Kampung Batik Laweyan. Kampus Universitas Sebelas Maret juga berada di Kentingan, Jebres. Peserta dari Solo bisa belajar bersama tutor Akademi ASN lewat Privat Home Visit atau kelas online.",
   // Jawa Timur
-  "35":
-    "Jawa Timur beribu kota di Surabaya dan terdiri atas 29 kabupaten dan 9 kota, jumlah kabupaten/kota terbanyak di Indonesia. Provinsi ini adalah lokasi Taman Nasional Bromo Tengger Semeru dengan Gunung Semeru, gunung tertinggi di Pulau Jawa. Peserta dari seluruh Jawa Timur bisa belajar bersama tutor Akademi ASN lewat Privat Home Visit atau kelas online.",
+  "35": "Jawa Timur beribu kota di Surabaya dan terdiri atas 29 kabupaten dan 9 kota, jumlah kabupaten/kota terbanyak di Indonesia. Provinsi ini adalah lokasi Taman Nasional Bromo Tengger Semeru dengan Gunung Semeru, gunung tertinggi di Pulau Jawa. Peserta dari seluruh Jawa Timur bisa belajar bersama tutor Akademi ASN lewat Privat Home Visit atau kelas online.",
   // Kota Surabaya
   "35.78":
     "Kota Surabaya, ibu kota Jawa Timur, dijuluki Kota Pahlawan karena Pertempuran 10 November 1945. Kota ini dilayani Pelabuhan Tanjung Perak dan menjadi lokasi kampus seperti Universitas Airlangga dan Institut Teknologi Sepuluh Nopember. Peserta dari Surabaya bisa belajar bersama tutor Akademi ASN lewat Privat Home Visit atau kelas online.",
@@ -118,113 +112,84 @@ export const introTexts: Record<string, string> = {
   "35.09":
     "Kabupaten Jember, bagian dari kawasan Tapal Kuda Jawa Timur, dikenal sebagai salah satu sentra tembakau terbesar di Indonesia dan tuan rumah Jember Fashion Carnaval yang digelar setiap tahun sejak 2003. Peserta dari Jember bisa belajar bersama tutor Akademi ASN lewat Privat Home Visit atau kelas online.",
   // Sumatera Utara
-  "12":
-    "Sumatera Utara beribu kota di Medan dan terdiri atas 25 kabupaten dan 8 kota. Provinsi ini adalah lokasi Danau Toba, danau terbesar di Indonesia dan danau vulkanik terbesar di dunia, yang diakui sebagai UNESCO Global Geopark sejak 2020. Peserta dari seluruh Sumatera Utara bisa belajar bersama tutor Akademi ASN lewat Privat Home Visit atau kelas online.",
+  "12": "Sumatera Utara beribu kota di Medan dan terdiri atas 25 kabupaten dan 8 kota. Provinsi ini adalah lokasi Danau Toba, danau terbesar di Indonesia dan danau vulkanik terbesar di dunia, yang diakui sebagai UNESCO Global Geopark sejak 2020. Peserta dari seluruh Sumatera Utara bisa belajar bersama tutor Akademi ASN lewat Privat Home Visit atau kelas online.",
   // Kota Medan
   "12.71":
     "Kota Medan adalah ibu kota Sumatera Utara dan lokasi Istana Maimun, kampus Universitas Sumatera Utara di Padang Bulan, serta Pelabuhan Belawan, pelabuhan utama di Pulau Sumatra. Peserta dari Medan bisa belajar bersama tutor Akademi ASN lewat Privat Home Visit atau kelas online.",
   // Sumatera Selatan
-  "16":
-    "Sumatera Selatan beribu kota di Palembang dan terdiri atas 13 kabupaten dan 4 kota. Sungai Musi, sungai terpanjang kedua di Pulau Sumatra, mengalir melintasi provinsi ini hingga membelah Kota Palembang. Peserta dari seluruh Sumatera Selatan bisa belajar bersama tutor Akademi ASN lewat Privat Home Visit atau kelas online.",
+  "16": "Sumatera Selatan beribu kota di Palembang dan terdiri atas 13 kabupaten dan 4 kota. Sungai Musi, sungai terpanjang kedua di Pulau Sumatra, mengalir melintasi provinsi ini hingga membelah Kota Palembang. Peserta dari seluruh Sumatera Selatan bisa belajar bersama tutor Akademi ASN lewat Privat Home Visit atau kelas online.",
   // Kota Palembang
   "16.71":
     "Kota Palembang, ibu kota Sumatera Selatan, disebut sebagai kota tertua di Indonesia berdasarkan Prasasti Kedukan Bukit peninggalan Kerajaan Sriwijaya dari tahun 682 Masehi. Ikon kotanya, Jembatan Ampera, membentang di atas Sungai Musi. Peserta dari Palembang bisa belajar bersama tutor Akademi ASN lewat Privat Home Visit atau kelas online.",
   // Kepulauan Riau
-  "21":
-    "Provinsi Kepulauan Riau dibentuk pada tahun 2002 sebagai pemekaran dari Provinsi Riau, dengan ibu kota di Tanjungpinang. Sekitar 96% wilayahnya berupa lautan dengan ribuan pulau, dan provinsi ini berbatasan dengan Singapura, Malaysia, Vietnam, dan Kamboja. Kelas online Akademi ASN bisa diikuti dari pulau mana pun, dan Privat Home Visit mendatangkan tutor ke rumahmu.",
+  "21": "Provinsi Kepulauan Riau dibentuk pada tahun 2002 sebagai pemekaran dari Provinsi Riau, dengan ibu kota di Tanjungpinang. Sekitar 96% wilayahnya berupa lautan dengan ribuan pulau, dan provinsi ini berbatasan dengan Singapura, Malaysia, Vietnam, dan Kamboja. Kelas online Akademi ASN bisa diikuti dari pulau mana pun, dan Privat Home Visit mendatangkan tutor ke rumahmu.",
   // Kota Batam
   "21.71":
     "Kota Batam ditetapkan sebagai Kawasan Perdagangan Bebas dan Pelabuhan Bebas dan terletak sekitar 20 km dari Singapura di jalur Selat Malaka. Ikonnya, Jembatan Barelang, menghubungkan Pulau Batam, Rempang, dan Galang. Peserta dari Batam bisa belajar bersama tutor Akademi ASN lewat Privat Home Visit atau kelas online.",
   // Aceh
-  "11":
-    "Aceh beribu kota di Banda Aceh dan terdiri atas 18 kabupaten dan 5 kota. Menurut UU Nomor 11 Tahun 2006 tentang Pemerintahan Aceh, Aceh adalah satuan pemerintahan daerah yang bersifat khusus atau istimewa, termasuk dalam pelaksanaan syariat Islam bagi pemeluknya. Peserta dari seluruh Aceh bisa belajar bersama tutor Akademi ASN lewat Privat Home Visit atau kelas online.",
+  "11": "Aceh beribu kota di Banda Aceh dan terdiri atas 18 kabupaten dan 5 kota. Menurut UU Nomor 11 Tahun 2006 tentang Pemerintahan Aceh, Aceh adalah satuan pemerintahan daerah yang bersifat khusus atau istimewa, termasuk dalam pelaksanaan syariat Islam bagi pemeluknya. Peserta dari seluruh Aceh bisa belajar bersama tutor Akademi ASN lewat Privat Home Visit atau kelas online.",
   // Sumatera Barat
-  "13":
-    "Sumatera Barat beribu kota di Padang dan terdiri atas 12 kabupaten dan 7 kota. Provinsi ini adalah rumah bagi etnis Minangkabau dan Mentawai, dan di wilayah ini berdiri Jam Gadang, ikon Kota Bukittinggi. Peserta dari seluruh Sumatera Barat bisa belajar bersama tutor Akademi ASN lewat Privat Home Visit atau kelas online.",
+  "13": "Sumatera Barat beribu kota di Padang dan terdiri atas 12 kabupaten dan 7 kota. Provinsi ini adalah rumah bagi etnis Minangkabau dan Mentawai, dan di wilayah ini berdiri Jam Gadang, ikon Kota Bukittinggi. Peserta dari seluruh Sumatera Barat bisa belajar bersama tutor Akademi ASN lewat Privat Home Visit atau kelas online.",
   // Riau
-  "14":
-    "Riau beribu kota di Pekanbaru dan terdiri atas 10 kabupaten dan 2 kota. Provinsi ini dikenal dengan sumber daya minyak bumi dan perkebunan kelapa sawit, serta peninggalan Kesultanan Siak berupa Istana Siak Sri Indrapura. Peserta dari seluruh Riau bisa belajar bersama tutor Akademi ASN lewat Privat Home Visit atau kelas online.",
+  "14": "Riau beribu kota di Pekanbaru dan terdiri atas 10 kabupaten dan 2 kota. Provinsi ini dikenal dengan sumber daya minyak bumi dan perkebunan kelapa sawit, serta peninggalan Kesultanan Siak berupa Istana Siak Sri Indrapura. Peserta dari seluruh Riau bisa belajar bersama tutor Akademi ASN lewat Privat Home Visit atau kelas online.",
   // Jambi
-  "15":
-    "Jambi beribu kota di Kota Jambi dan terdiri atas 9 kabupaten dan 2 kota, dilintasi Sungai Batanghari, sungai terpanjang di Pulau Sumatra. Di tepi sungai ini terdapat Kawasan Cagar Budaya Nasional Muaro Jambi, kompleks percandian seluas sekitar 3.981 hektare. Peserta dari seluruh Jambi bisa belajar bersama tutor Akademi ASN lewat Privat Home Visit atau kelas online.",
+  "15": "Jambi beribu kota di Kota Jambi dan terdiri atas 9 kabupaten dan 2 kota, dilintasi Sungai Batanghari, sungai terpanjang di Pulau Sumatra. Di tepi sungai ini terdapat Kawasan Cagar Budaya Nasional Muaro Jambi, kompleks percandian seluas sekitar 3.981 hektare. Peserta dari seluruh Jambi bisa belajar bersama tutor Akademi ASN lewat Privat Home Visit atau kelas online.",
   // Bengkulu
-  "17":
-    "Bengkulu beribu kota di Kota Bengkulu dan terdiri atas 9 kabupaten dan 1 kota. Provinsi yang dijuluki Bumi Rafflesia ini menyimpan Benteng Marlborough peninggalan Inggris dan Rumah Pengasingan Bung Karno. Peserta dari seluruh Bengkulu bisa belajar bersama tutor Akademi ASN lewat Privat Home Visit atau kelas online.",
+  "17": "Bengkulu beribu kota di Kota Bengkulu dan terdiri atas 9 kabupaten dan 1 kota. Provinsi yang dijuluki Bumi Rafflesia ini menyimpan Benteng Marlborough peninggalan Inggris dan Rumah Pengasingan Bung Karno. Peserta dari seluruh Bengkulu bisa belajar bersama tutor Akademi ASN lewat Privat Home Visit atau kelas online.",
   // Lampung
-  "18":
-    "Lampung beribu kota di Bandar Lampung dan terdiri atas 13 kabupaten dan 2 kota. Provinsi di ujung selatan Sumatra ini terhubung dengan Pulau Jawa lewat Pelabuhan Bakauheni, dan menjadi lokasi Taman Nasional Way Kambas, pusat konservasi gajah Sumatra. Peserta dari seluruh Lampung bisa belajar bersama tutor Akademi ASN lewat Privat Home Visit atau kelas online.",
+  "18": "Lampung beribu kota di Bandar Lampung dan terdiri atas 13 kabupaten dan 2 kota. Provinsi di ujung selatan Sumatra ini terhubung dengan Pulau Jawa lewat Pelabuhan Bakauheni, dan menjadi lokasi Taman Nasional Way Kambas, pusat konservasi gajah Sumatra. Peserta dari seluruh Lampung bisa belajar bersama tutor Akademi ASN lewat Privat Home Visit atau kelas online.",
   // Kepulauan Bangka Belitung
-  "19":
-    "Kepulauan Bangka Belitung dibentuk pada tahun 2000 sebagai pemekaran dari Sumatera Selatan, dengan ibu kota di Pangkalpinang. Provinsi yang terdiri atas Pulau Bangka, Pulau Belitung, dan pulau-pulau kecil ini sudah lebih dari tiga abad dikenal sebagai penghasil timah. Peserta dari Bangka Belitung bisa belajar bersama tutor Akademi ASN lewat Privat Home Visit atau kelas online.",
+  "19": "Kepulauan Bangka Belitung dibentuk pada tahun 2000 sebagai pemekaran dari Sumatera Selatan, dengan ibu kota di Pangkalpinang. Provinsi yang terdiri atas Pulau Bangka, Pulau Belitung, dan pulau-pulau kecil ini sudah lebih dari tiga abad dikenal sebagai penghasil timah. Peserta dari Bangka Belitung bisa belajar bersama tutor Akademi ASN lewat Privat Home Visit atau kelas online.",
   // Bali
-  "51":
-    "Bali beribu kota di Denpasar dan terdiri atas 8 kabupaten dan 1 kota. Sistem irigasi subak di Bali, yang mencerminkan filosofi Tri Hita Karana, ditetapkan UNESCO sebagai Warisan Budaya Dunia pada tahun 2012. Peserta dari seluruh Bali bisa belajar bersama tutor Akademi ASN lewat Privat Home Visit atau kelas online.",
+  "51": "Bali beribu kota di Denpasar dan terdiri atas 8 kabupaten dan 1 kota. Sistem irigasi subak di Bali, yang mencerminkan filosofi Tri Hita Karana, ditetapkan UNESCO sebagai Warisan Budaya Dunia pada tahun 2012. Peserta dari seluruh Bali bisa belajar bersama tutor Akademi ASN lewat Privat Home Visit atau kelas online.",
   // Nusa Tenggara Barat
-  "52":
-    "Nusa Tenggara Barat beribu kota di Mataram dan terdiri atas 8 kabupaten dan 2 kota, dengan dua pulau utama, Lombok dan Sumbawa. Di provinsi ini terdapat Taman Nasional Gunung Rinjani dan Taman Nasional Gunung Tambora. Peserta dari seluruh NTB bisa belajar bersama tutor Akademi ASN lewat Privat Home Visit atau kelas online.",
+  "52": "Nusa Tenggara Barat beribu kota di Mataram dan terdiri atas 8 kabupaten dan 2 kota, dengan dua pulau utama, Lombok dan Sumbawa. Di provinsi ini terdapat Taman Nasional Gunung Rinjani dan Taman Nasional Gunung Tambora. Peserta dari seluruh NTB bisa belajar bersama tutor Akademi ASN lewat Privat Home Visit atau kelas online.",
   // Nusa Tenggara Timur
-  "53":
-    "Nusa Tenggara Timur beribu kota di Kupang dan terdiri atas 21 kabupaten dan 1 kota, dengan pulau utama Flores, Sumba, dan bagian barat Pulau Timor. Provinsi ini adalah lokasi Taman Nasional Komodo, yang ditetapkan UNESCO sebagai Situs Warisan Dunia pada tahun 1991. Peserta dari seluruh NTT bisa belajar bersama tutor Akademi ASN lewat Privat Home Visit atau kelas online.",
+  "53": "Nusa Tenggara Timur beribu kota di Kupang dan terdiri atas 21 kabupaten dan 1 kota, dengan pulau utama Flores, Sumba, dan bagian barat Pulau Timor. Provinsi ini adalah lokasi Taman Nasional Komodo, yang ditetapkan UNESCO sebagai Situs Warisan Dunia pada tahun 1991. Peserta dari seluruh NTT bisa belajar bersama tutor Akademi ASN lewat Privat Home Visit atau kelas online.",
   // Kalimantan Barat
-  "61":
-    "Kalimantan Barat beribu kota di Pontianak dan terdiri atas 12 kabupaten dan 2 kota. Garis khatulistiwa melintas tepat di atas Kota Pontianak, dan Sungai Kapuas di provinsi ini adalah sungai terpanjang di Indonesia. Peserta dari seluruh Kalimantan Barat bisa belajar bersama tutor Akademi ASN lewat Privat Home Visit atau kelas online.",
+  "61": "Kalimantan Barat beribu kota di Pontianak dan terdiri atas 12 kabupaten dan 2 kota. Garis khatulistiwa melintas tepat di atas Kota Pontianak, dan Sungai Kapuas di provinsi ini adalah sungai terpanjang di Indonesia. Peserta dari seluruh Kalimantan Barat bisa belajar bersama tutor Akademi ASN lewat Privat Home Visit atau kelas online.",
   // Kalimantan Tengah
-  "62":
-    "Kalimantan Tengah beribu kota di Palangka Raya dan terdiri atas 13 kabupaten dan 1 kota. Provinsi ini adalah lokasi Taman Nasional Tanjung Puting, kawasan konservasi orangutan yang dikenal dunia. Peserta dari seluruh Kalimantan Tengah bisa belajar bersama tutor Akademi ASN lewat Privat Home Visit atau kelas online.",
+  "62": "Kalimantan Tengah beribu kota di Palangka Raya dan terdiri atas 13 kabupaten dan 1 kota. Provinsi ini adalah lokasi Taman Nasional Tanjung Puting, kawasan konservasi orangutan yang dikenal dunia. Peserta dari seluruh Kalimantan Tengah bisa belajar bersama tutor Akademi ASN lewat Privat Home Visit atau kelas online.",
   // Kalimantan Selatan
-  "63":
-    "Kalimantan Selatan terdiri atas 11 kabupaten dan 2 kota, dan sejak berlakunya UU Nomor 8 Tahun 2022 ibu kotanya berkedudukan di Kota Banjarbaru. Kota lain di provinsi ini adalah Banjarmasin. Peserta dari seluruh Kalimantan Selatan bisa belajar bersama tutor Akademi ASN lewat Privat Home Visit atau kelas online.",
+  "63": "Kalimantan Selatan terdiri atas 11 kabupaten dan 2 kota, dan sejak berlakunya UU Nomor 8 Tahun 2022 ibu kotanya berkedudukan di Kota Banjarbaru. Kota lain di provinsi ini adalah Banjarmasin. Peserta dari seluruh Kalimantan Selatan bisa belajar bersama tutor Akademi ASN lewat Privat Home Visit atau kelas online.",
   // Kalimantan Timur
-  "64":
-    "Kalimantan Timur beribu kota di Samarinda dan terdiri atas 7 kabupaten dan 3 kota, termasuk Balikpapan dan Bontang. Wilayahnya dahulu menjadi tempat berdirinya Kerajaan Kutai dan Kesultanan Kutai Kartanegara. Peserta dari seluruh Kalimantan Timur bisa belajar bersama tutor Akademi ASN lewat Privat Home Visit atau kelas online.",
+  "64": "Kalimantan Timur beribu kota di Samarinda dan terdiri atas 7 kabupaten dan 3 kota, termasuk Balikpapan dan Bontang. Wilayahnya dahulu menjadi tempat berdirinya Kerajaan Kutai dan Kesultanan Kutai Kartanegara. Peserta dari seluruh Kalimantan Timur bisa belajar bersama tutor Akademi ASN lewat Privat Home Visit atau kelas online.",
   // Kalimantan Utara
-  "65":
-    "Kalimantan Utara dibentuk pada tahun 2012 sebagai pemekaran dari Kalimantan Timur, dengan ibu kota di Tanjung Selor, Kabupaten Bulungan. Provinsi yang terdiri atas 4 kabupaten dan Kota Tarakan ini berbatasan langsung dengan Sabah dan Sarawak, Malaysia. Peserta dari seluruh Kalimantan Utara bisa belajar bersama tutor Akademi ASN lewat Privat Home Visit atau kelas online.",
+  "65": "Kalimantan Utara dibentuk pada tahun 2012 sebagai pemekaran dari Kalimantan Timur, dengan ibu kota di Tanjung Selor, Kabupaten Bulungan. Provinsi yang terdiri atas 4 kabupaten dan Kota Tarakan ini berbatasan langsung dengan Sabah dan Sarawak, Malaysia. Peserta dari seluruh Kalimantan Utara bisa belajar bersama tutor Akademi ASN lewat Privat Home Visit atau kelas online.",
   // Sulawesi Utara
-  "71":
-    "Sulawesi Utara beribu kota di Manado dan terdiri atas 11 kabupaten dan 4 kota. Provinsi di ujung Pulau Sulawesi ini berbatasan dengan Filipina di sebelah utara, dan Pulau Bunaken menjadi salah satu tujuan wisatanya. Peserta dari seluruh Sulawesi Utara bisa belajar bersama tutor Akademi ASN lewat Privat Home Visit atau kelas online.",
+  "71": "Sulawesi Utara beribu kota di Manado dan terdiri atas 11 kabupaten dan 4 kota. Provinsi di ujung Pulau Sulawesi ini berbatasan dengan Filipina di sebelah utara, dan Pulau Bunaken menjadi salah satu tujuan wisatanya. Peserta dari seluruh Sulawesi Utara bisa belajar bersama tutor Akademi ASN lewat Privat Home Visit atau kelas online.",
   // Sulawesi Tengah
-  "72":
-    "Sulawesi Tengah beribu kota di Palu dan terdiri atas 12 kabupaten dan 1 kota. Provinsi ini adalah lokasi Taman Nasional Lore Lindu. Peserta dari seluruh Sulawesi Tengah bisa belajar bersama tutor Akademi ASN lewat Privat Home Visit atau kelas online.",
+  "72": "Sulawesi Tengah beribu kota di Palu dan terdiri atas 12 kabupaten dan 1 kota. Provinsi ini adalah lokasi Taman Nasional Lore Lindu. Peserta dari seluruh Sulawesi Tengah bisa belajar bersama tutor Akademi ASN lewat Privat Home Visit atau kelas online.",
   // Sulawesi Selatan
-  "73":
-    "Sulawesi Selatan beribu kota di Makassar dan terdiri atas 21 kabupaten dan 3 kota, termasuk Kabupaten Tana Toraja dan Kabupaten Toraja Utara. Penduduknya antara lain suku Makassar, Bugis, dan Toraja. Peserta dari seluruh Sulawesi Selatan bisa belajar bersama tutor Akademi ASN lewat Privat Home Visit atau kelas online.",
+  "73": "Sulawesi Selatan beribu kota di Makassar dan terdiri atas 21 kabupaten dan 3 kota, termasuk Kabupaten Tana Toraja dan Kabupaten Toraja Utara. Penduduknya antara lain suku Makassar, Bugis, dan Toraja. Peserta dari seluruh Sulawesi Selatan bisa belajar bersama tutor Akademi ASN lewat Privat Home Visit atau kelas online.",
   // Sulawesi Tenggara
-  "74":
-    "Sulawesi Tenggara beribu kota di Kendari dan terdiri atas 15 kabupaten dan 2 kota, yaitu Kendari dan Baubau. Wilayahnya mencakup antara lain Kabupaten Buton dan Kabupaten Wakatobi. Peserta dari seluruh Sulawesi Tenggara bisa belajar bersama tutor Akademi ASN lewat Privat Home Visit atau kelas online.",
+  "74": "Sulawesi Tenggara beribu kota di Kendari dan terdiri atas 15 kabupaten dan 2 kota, yaitu Kendari dan Baubau. Wilayahnya mencakup antara lain Kabupaten Buton dan Kabupaten Wakatobi. Peserta dari seluruh Sulawesi Tenggara bisa belajar bersama tutor Akademi ASN lewat Privat Home Visit atau kelas online.",
   // Gorontalo
-  "75":
-    "Provinsi Gorontalo dibentuk pada tahun 2000 sebagai pemekaran dari Sulawesi Utara, dengan ibu kota di Kota Gorontalo. Kini provinsi ini terdiri atas 5 kabupaten dan 1 kota, dan berbatasan dengan Teluk Tomini di sebelah selatan. Peserta dari seluruh Gorontalo bisa belajar bersama tutor Akademi ASN lewat Privat Home Visit atau kelas online.",
+  "75": "Provinsi Gorontalo dibentuk pada tahun 2000 sebagai pemekaran dari Sulawesi Utara, dengan ibu kota di Kota Gorontalo. Kini provinsi ini terdiri atas 5 kabupaten dan 1 kota, dan berbatasan dengan Teluk Tomini di sebelah selatan. Peserta dari seluruh Gorontalo bisa belajar bersama tutor Akademi ASN lewat Privat Home Visit atau kelas online.",
   // Sulawesi Barat
-  "76":
-    "Provinsi Sulawesi Barat dibentuk pada tahun 2004 sebagai pemekaran dari Sulawesi Selatan, dengan ibu kota di Mamuju. Pembentukan provinsi ini lahir dari keinginan masyarakat Mandar untuk memiliki provinsi sendiri. Peserta dari seluruh Sulawesi Barat bisa belajar bersama tutor Akademi ASN lewat Privat Home Visit atau kelas online.",
+  "76": "Provinsi Sulawesi Barat dibentuk pada tahun 2004 sebagai pemekaran dari Sulawesi Selatan, dengan ibu kota di Mamuju. Pembentukan provinsi ini lahir dari keinginan masyarakat Mandar untuk memiliki provinsi sendiri. Peserta dari seluruh Sulawesi Barat bisa belajar bersama tutor Akademi ASN lewat Privat Home Visit atau kelas online.",
   // Maluku
-  "81":
-    "Maluku beribu kota di Ambon dan terdiri atas 9 kabupaten dan 2 kota. Kepulauan Banda di provinsi ini adalah asal tanaman pala, rempah yang sejak berabad-abad lalu diperdagangkan hingga Asia dan Eropa. Peserta dari seluruh Maluku bisa belajar bersama tutor Akademi ASN lewat Privat Home Visit atau kelas online.",
+  "81": "Maluku beribu kota di Ambon dan terdiri atas 9 kabupaten dan 2 kota. Kepulauan Banda di provinsi ini adalah asal tanaman pala, rempah yang sejak berabad-abad lalu diperdagangkan hingga Asia dan Eropa. Peserta dari seluruh Maluku bisa belajar bersama tutor Akademi ASN lewat Privat Home Visit atau kelas online.",
   // Maluku Utara
-  "82":
-    "Maluku Utara dibentuk pada tahun 1999 sebagai pemekaran dari Provinsi Maluku. Ibu kotanya dipindahkan dari Ternate ke Sofifi di Pulau Halmahera pada 2010, dan provinsi ini dikenal sebagai penghasil cengkih dan pala. Peserta dari seluruh Maluku Utara bisa belajar bersama tutor Akademi ASN lewat Privat Home Visit atau kelas online.",
+  "82": "Maluku Utara dibentuk pada tahun 1999 sebagai pemekaran dari Provinsi Maluku. Ibu kotanya dipindahkan dari Ternate ke Sofifi di Pulau Halmahera pada 2010, dan provinsi ini dikenal sebagai penghasil cengkih dan pala. Peserta dari seluruh Maluku Utara bisa belajar bersama tutor Akademi ASN lewat Privat Home Visit atau kelas online.",
   // Papua
-  "91":
-    "Provinsi Papua beribu kota di Jayapura. Pada tahun 2022, sebagian wilayahnya dimekarkan menjadi Provinsi Papua Selatan, Papua Tengah, dan Papua Pegunungan. Peserta dari seluruh Papua bisa belajar bersama tutor Akademi ASN lewat Privat Home Visit atau kelas online.",
+  "91": "Provinsi Papua beribu kota di Jayapura. Pada tahun 2022, sebagian wilayahnya dimekarkan menjadi Provinsi Papua Selatan, Papua Tengah, dan Papua Pegunungan. Peserta dari seluruh Papua bisa belajar bersama tutor Akademi ASN lewat Privat Home Visit atau kelas online.",
   // Papua Barat
-  "92":
-    "Papua Barat beribu kota di Manokwari dan kini terdiri atas 7 kabupaten, termasuk Fakfak, Kaimana, dan Teluk Bintuni. Pada tahun 2022, sebagian wilayahnya dimekarkan menjadi Provinsi Papua Barat Daya. Peserta dari seluruh Papua Barat bisa belajar bersama tutor Akademi ASN lewat Privat Home Visit atau kelas online.",
+  "92": "Papua Barat beribu kota di Manokwari dan kini terdiri atas 7 kabupaten, termasuk Fakfak, Kaimana, dan Teluk Bintuni. Pada tahun 2022, sebagian wilayahnya dimekarkan menjadi Provinsi Papua Barat Daya. Peserta dari seluruh Papua Barat bisa belajar bersama tutor Akademi ASN lewat Privat Home Visit atau kelas online.",
   // Papua Selatan
-  "93":
-    "Provinsi Papua Selatan dibentuk pada tahun 2022 dengan ibu kota di Kabupaten Merauke. Provinsi ini terdiri atas empat kabupaten: Merauke, Boven Digoel, Mappi, dan Asmat. Peserta dari seluruh Papua Selatan bisa belajar bersama tutor Akademi ASN lewat Privat Home Visit atau kelas online.",
+  "93": "Provinsi Papua Selatan dibentuk pada tahun 2022 dengan ibu kota di Kabupaten Merauke. Provinsi ini terdiri atas empat kabupaten: Merauke, Boven Digoel, Mappi, dan Asmat. Peserta dari seluruh Papua Selatan bisa belajar bersama tutor Akademi ASN lewat Privat Home Visit atau kelas online.",
   // Papua Tengah
-  "94":
-    "Provinsi Papua Tengah dibentuk pada tahun 2022 dengan ibu kota di Kabupaten Nabire. Provinsi ini terdiri atas delapan kabupaten, di antaranya Nabire, Mimika, Paniai, dan Puncak Jaya. Peserta dari seluruh Papua Tengah bisa belajar bersama tutor Akademi ASN lewat Privat Home Visit atau kelas online.",
+  "94": "Provinsi Papua Tengah dibentuk pada tahun 2022 dengan ibu kota di Kabupaten Nabire. Provinsi ini terdiri atas delapan kabupaten, di antaranya Nabire, Mimika, Paniai, dan Puncak Jaya. Peserta dari seluruh Papua Tengah bisa belajar bersama tutor Akademi ASN lewat Privat Home Visit atau kelas online.",
   // Papua Pegunungan
-  "95":
-    "Provinsi Papua Pegunungan dibentuk pada tahun 2022 dengan ibu kota di Kabupaten Jayawijaya. Provinsi yang terdiri atas delapan kabupaten ini berbatasan dengan Papua Nugini di sebelah timur. Peserta dari seluruh Papua Pegunungan bisa belajar bersama tutor Akademi ASN lewat Privat Home Visit atau kelas online.",
+  "95": "Provinsi Papua Pegunungan dibentuk pada tahun 2022 dengan ibu kota di Kabupaten Jayawijaya. Provinsi yang terdiri atas delapan kabupaten ini berbatasan dengan Papua Nugini di sebelah timur. Peserta dari seluruh Papua Pegunungan bisa belajar bersama tutor Akademi ASN lewat Privat Home Visit atau kelas online.",
   // Papua Barat Daya
-  "96":
-    "Provinsi Papua Barat Daya dibentuk pada tahun 2022 sebagai pemekaran dari Papua Barat, dengan ibu kota di Kota Sorong. Provinsi ini terdiri atas lima kabupaten dan satu kota, termasuk Kabupaten Raja Ampat. Peserta dari seluruh Papua Barat Daya bisa belajar bersama tutor Akademi ASN lewat Privat Home Visit atau kelas online.",
+  "96": "Provinsi Papua Barat Daya dibentuk pada tahun 2022 sebagai pemekaran dari Papua Barat, dengan ibu kota di Kota Sorong. Provinsi ini terdiri atas lima kabupaten dan satu kota, termasuk Kabupaten Raja Ampat. Peserta dari seluruh Papua Barat Daya bisa belajar bersama tutor Akademi ASN lewat Privat Home Visit atau kelas online.",
 };
 
-const baseText = ({ region, ancestors }: ResolvedLocation, texts: Record<string, string>) =>
+const baseText = (
+  { region, ancestors }: ResolvedLocation,
+  texts: Record<string, string>,
+) =>
   texts[region.kode] ??
   `${region.nama} berada di ${ancestors.at(-1)?.nama ?? "Indonesia"}. Peserta dari ${region.nama} bisa belajar bersama Akademi ASN lewat kelas online atau les privat dengan tutor yang datang ke rumah.`;
 
@@ -241,7 +206,7 @@ const introLocation =
     }) satisfies IntroProps;
 
 export const introHomeLocation = introLocation(
-  "Bimbel CPNS, PPPK & BUMN",
+  "Bimbel CPNS PPPK BUMN",
   (nama) =>
     `Bagi peserta dari ${nama}, SKD CPNS terdiri atas TWK, TIU, dan TKP; seleksi PPPK menguji kompetensi teknis, manajerial, sosial kultural, dan wawancara; sedangkan Rekrutmen Bersama BUMN menguji kemampuan dasar dan nilai inti AKHLAK.`,
 );
