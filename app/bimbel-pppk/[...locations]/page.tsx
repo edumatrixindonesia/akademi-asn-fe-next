@@ -14,14 +14,18 @@ export async function generateMetadata({
   const url = `/bimbel-pppk${found.region.path}`;
 
   return {
-    title: { absolute: `Bimbel PPPK Online & Offline Terbaik di ${location} - Teknis Guru & Kesehatan | Akademi ASN` },
+    title: {
+      absolute: `Bimbel PPPK Online & Offline Terbaik di ${location} - Teknis Guru & Kesehatan | Akademi ASN`,
+    },
     description: `Bimbel PPPK online di ${location} untuk formasi teknis, guru, dan tenaga kesehatan. Belajar terarah dengan mentor, materi, latihan soal, dan tryout CAT.`,
     alternates: { canonical: url },
     openGraph: { ...openGraphBase, url },
   };
 }
 
-export default async function Page({ params }: PageProps<"/bimbel-pppk/[...locations]">) {
+export default async function Page({
+  params,
+}: PageProps<"/bimbel-pppk/[...locations]">) {
   const found = await getLocationOrNotFound((await params).locations);
   return <BimbelPppkLocationPage location={found} />;
 }

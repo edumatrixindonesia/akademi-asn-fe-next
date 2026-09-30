@@ -14,7 +14,9 @@ export async function generateMetadata({
   const url = `${found.region.path}`;
 
   return {
-    title: { absolute: `Bimbel CPNS PPPK BUMN Terbaik di ${location} | Akademi ASN` },
+    title: {
+      absolute: `Bimbel CPNS PPPK BUMN Terbaik di ${location} | Akademi ASN`,
+    },
     description: `Persiapkan seleksi CPNS, PPPK, dan Rekrutmen Bersama BUMN di ${location} bersama Akademi ASN. Tersedia kelas online & les privat, materi terarah, latihan soal, tryout CAT, dan pendampingan tutor.`,
     alternates: { canonical: url },
     openGraph: { ...openGraphBase, url },

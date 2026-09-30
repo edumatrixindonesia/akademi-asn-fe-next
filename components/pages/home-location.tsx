@@ -33,7 +33,11 @@ import { ctaFooterLocation } from "@/data/cta-footer";
 import { faqHome } from "@/data/faq";
 import { mediaMassa } from "@/data/media-massa";
 import { getKonsultasiUrl } from "@/data/contact";
-import { headlineLabel, locationLabel, type ResolvedLocation } from "@/lib/location-tree";
+import {
+  headlineLabel,
+  locationLabel,
+  type ResolvedLocation,
+} from "@/lib/location-tree";
 
 type HomeLocationProps = { location: ResolvedLocation };
 
@@ -44,7 +48,9 @@ const HomeLocation = ({ location }: HomeLocationProps) => {
   return (
     <main className="flex-1">
       <Breadcrumb {...breadcrumbHomeLocation(location)} />
-      <Jumbotron {...jumbotronHomeLocation(konsultasiUrl, headlineLabel(location))} />
+      <Jumbotron
+        {...jumbotronHomeLocation(konsultasiUrl, headlineLabel(location))}
+      />
       <Intro {...introHomeLocation(location)} />
       <Keunggulan {...keunggulanLocation(label)} />
       <Materi {...materiHome(konsultasiUrl)} />

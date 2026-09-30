@@ -33,7 +33,11 @@ import { ctaFooterLocation } from "@/data/cta-footer";
 import { faqPppk } from "@/data/faq";
 import { mediaMassa } from "@/data/media-massa";
 import { getKonsultasiUrl } from "@/data/contact";
-import { headlineLabel, locationLabel, type ResolvedLocation } from "@/lib/location-tree";
+import {
+  headlineLabel,
+  locationLabel,
+  type ResolvedLocation,
+} from "@/lib/location-tree";
 
 type BimbelPppkLocationProps = { location: ResolvedLocation };
 
@@ -44,7 +48,9 @@ const BimbelPppkLocation = ({ location }: BimbelPppkLocationProps) => {
   return (
     <main className="flex-1">
       <Breadcrumb {...breadcrumbPppkLocation(location)} />
-      <Jumbotron {...jumbotronPppkLocation(konsultasiUrl, headlineLabel(location))} />
+      <Jumbotron
+        {...jumbotronPppkLocation(konsultasiUrl, headlineLabel(location))}
+      />
       <Intro {...introPppkLocation(location)} />
       <Keunggulan {...keunggulanLocation(label)} />
       <Materi {...materiPppk(konsultasiUrl)} />
