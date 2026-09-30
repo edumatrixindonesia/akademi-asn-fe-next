@@ -1,3 +1,4 @@
+import Breadcrumb from "@/components/sections/breadcrumb";
 import Jumbotron from "@/components/sections/jumbotron";
 import Keunggulan from "@/components/sections/keunggulan";
 import Materi from "@/components/sections/materi";
@@ -11,6 +12,7 @@ import Jangkauan from "@/components/sections/jangkauan";
 import CtaFooter from "@/components/sections/cta-footer";
 import Faq from "@/components/sections/faq";
 import MediaMassa from "@/components/sections/media-massa";
+import { breadcrumbBumn } from "@/data/breadcrumb";
 import { jumbotronBumn } from "@/data/jumbotron";
 import { keunggulan } from "@/data/keunggulan";
 import { materiBumn } from "@/data/materi";
@@ -33,6 +35,7 @@ const BimbelBumn = ({ provinces }: BimbelBumnProps) => {
   const konsultasiUrl = getKonsultasiUrl();
   return (
     <main className="flex-1">
+      <Breadcrumb {...breadcrumbBumn} />
       <Jumbotron {...jumbotronBumn(konsultasiUrl)} />
       <Keunggulan {...keunggulan} />
       <Materi {...materiBumn(konsultasiUrl)} />

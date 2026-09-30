@@ -12,15 +12,25 @@ const breadcrumbLocation =
     }) satisfies BreadcrumbProps;
 
 export const breadcrumbHomeLocation = breadcrumbLocation([beranda], "");
+export const breadcrumbCpns = {
+  items: [beranda, { name: "Bimbel CPNS", href: "/bimbel-cpns" }],
+} satisfies BreadcrumbProps;
+export const breadcrumbPppk = {
+  items: [beranda, { name: "Bimbel PPPK", href: "/bimbel-pppk" }],
+} satisfies BreadcrumbProps;
+export const breadcrumbBumn = {
+  items: [beranda, { name: "Bimbel BUMN", href: "/bimbel-bumn" }],
+} satisfies BreadcrumbProps;
+
 export const breadcrumbCpnsLocation = breadcrumbLocation(
-  [beranda, { name: "Bimbel CPNS", href: "/bimbel-cpns" }],
+  breadcrumbCpns.items,
   "/bimbel-cpns",
 );
 export const breadcrumbPppkLocation = breadcrumbLocation(
-  [beranda, { name: "Bimbel PPPK", href: "/bimbel-pppk" }],
+  breadcrumbPppk.items,
   "/bimbel-pppk",
 );
 export const breadcrumbBumnLocation = breadcrumbLocation(
-  [beranda, { name: "Bimbel BUMN", href: "/bimbel-bumn" }],
+  breadcrumbBumn.items,
   "/bimbel-bumn",
 );
