@@ -15,7 +15,7 @@ type ArtikelProps = { entry: ArtikelEntry };
 const Artikel = async ({ entry }: ArtikelProps) => {
   const { default: Body } = await import(`@/data/artikel/${entry.slug}.mdx`);
   const kategori = getKategori(entry.kategori)!;
-  const konsultasiUrl = getKonsultasiUrl();
+  const konsultasiUrl = getKonsultasiUrl(`artikel "${entry.title}"`);
   const related = getRelatedArtikel(entry);
 
   return (
