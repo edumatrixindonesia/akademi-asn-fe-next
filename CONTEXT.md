@@ -114,3 +114,29 @@ _Avoid_: CS, call center (the UI label "Call Center" stays)
 
 **Nomor Call Center**:
 The one published Akademi ASN phone number, identical on every page and in structured data so local search sees a consistent NAP. It may differ from the Admin Konsultasi who receives that day's Konsultasi chats.
+
+**Blog**:
+The part of the site that publishes Artikel. It is not a landing page.
+
+**Artikel**:
+An informational page on the Blog that answers one search question (e.g. "passing grade SKD") and leads readers to Konsultasi and the exam-track landing pages. It is not a landing page, so it needs no Paket Program or Testimoni.
+_Avoid_: post, blog post, konten
+
+**Kategori**:
+The one group an Artikel belongs to: one Kategori per exam track (CPNS, PPPK, BUMN), plus Tips & Info for topics that span tracks (e.g. "Perbedaan CPNS dan PPPK").
+_Avoid_: tag (Artikel have no tags)
+
+**Tips & Info**:
+The cross-track Kategori, for Artikel that belong to no single exam track.
+_Avoid_: Umum
+
+**Penulis**:
+The person or team credited on an Artikel. It is "Tim Akademi ASN" unless a real, named person reviewed and edited the Artikel. Penulis are never fictional people.
+_Avoid_: author (in UI copy), kontributor
+
+**Artikel Terbaru**:
+The newest published Artikel, shown as a section before FAQ on every landing page (from the page's own Kategori; all Kategori on the home page) and in the Artikel sidebar. Hidden when there are none.
+
+**Artikel Terkait**:
+The three Artikel shown at the end of an Artikel: hand-picked if set, otherwise the newest from the same Kategori, then from other Kategori.
+_Avoid_: Artikel Lainnya
