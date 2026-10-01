@@ -1,7 +1,5 @@
 import type { Kategori } from "@/lib/artikel-schema";
 
-// Cover files are produced by the default-covers ticket; until they exist the
-// fallback paths 404, so every Artikel should set its own `cover` meanwhile.
 export const kategori = [
   {
     slug: "cpns",

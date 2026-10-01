@@ -6,9 +6,9 @@
 
 **Blocked by:** none
 
-**Status:** ready-for-human
+**Status:** done
 
-- [ ] An HTML template in `.scratch/blog/covers/` renders each cover: navy background, orange accent shape, Akademi ASN logo top left, large label ("Artikel CPNS", "Artikel PPPK", "Artikel BUMN", "Tips & Info"), the approved tagline, one simple icon; no photos of people
-- [ ] Rendered to JPEG with Playwright (no new dependency), each under 150 KB
-- [ ] Shown to the owner and approved before they are committed
-- [ ] `data/kategori.ts` `cover` entries point at the approved files with descriptive `alt`
+- [x] An HTML template in `.scratch/blog/covers/` renders each cover: navy background, orange accent shape, Akademi ASN logo top left, large label ("Artikel CPNS", "Artikel PPPK", "Artikel BUMN", "Tips & Info"), the approved tagline, one simple icon; no photos of people
+- [x] Rendered to JPEG with Playwright (no new dependency), each under 150 KB
+- [x] Shown to the owner and approved before they are committed
+- [x] `data/kategori.ts` `cover` entries point at the approved files with descriptive `alt`
