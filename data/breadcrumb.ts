@@ -48,3 +48,17 @@ export const breadcrumbBumnLocation = breadcrumbLocation(
   breadcrumbBumn.items,
   "/bimbel-bumn",
 );
+
+export const breadcrumbArtikel = (
+  kategori: { slug: string; name: string },
+  title: string,
+  slug: string,
+) =>
+  ({
+    items: [
+      beranda,
+      { name: "Blog", href: "/blog" },
+      { name: kategori.name, href: `/blog/kategori/${kategori.slug}` },
+      { name: title, href: `/blog/${slug}` },
+    ],
+  }) satisfies BreadcrumbProps;

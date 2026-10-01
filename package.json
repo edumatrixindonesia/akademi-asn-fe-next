@@ -11,6 +11,10 @@
     "typecheck": "next typegen && tsc --noEmit"
   },
   "dependencies": {
+    "@mdx-js/loader": "^3.1.1",
+    "@mdx-js/react": "^3.1.1",
+    "@next/mdx": "^16.3.8",
+    "@types/mdx": "^2.0.14",
     "class-variance-authority": "^0.7.1",
     "cn": "^0.3.2",
     "lucide-react": "^1.47.0",
