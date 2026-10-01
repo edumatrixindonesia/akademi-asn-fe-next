@@ -7,8 +7,7 @@ export type JumbotronProps = {
   backgroundImage: string;
   heroImage: string;
   heroImageAlt: string;
-  ctaLabel: string;
-  ctaHref: string;
+  ctas: { label: string; href: string }[];
 };
 
 const Jumbotron = ({
@@ -17,8 +16,7 @@ const Jumbotron = ({
   backgroundImage,
   heroImage,
   heroImageAlt,
-  ctaLabel,
-  ctaHref,
+  ctas,
 }: JumbotronProps) => (
   <section className="relative isolate overflow-hidden text-primary-foreground text-shadow-sm">
     <Image
@@ -40,15 +38,20 @@ const Jumbotron = ({
 
         <p className="text-md md:text-lg leading-relaxed">{description}</p>
 
-        <Button
-          asChild
-          size="lg"
-          className="bg-cta text-md md:text-lg text-shadow-none px-6 hover:bg-cta/90 text-white"
-        >
-          <a href={ctaHref} target="_blank" rel="noopener noreferrer">
-            {ctaLabel}
-          </a>
-        </Button>
+        <div className="flex flex-wrap gap-3">
+          {ctas.map((cta) => (
+            <Button
+              key={cta.label}
+              asChild
+              size="lg"
+              className="bg-cta text-md md:text-lg text-shadow-none px-6 hover:bg-cta/90 text-white"
+            >
+              <a href={cta.href} target="_blank" rel="noopener noreferrer">
+                {cta.label}
+              </a>
+            </Button>
+          ))}
+        </div>
       </div>
 
       <Image

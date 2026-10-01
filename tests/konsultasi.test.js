@@ -9,7 +9,7 @@ test("Konsultasi rotates through four admins by day", () => {
     const expectedNames = ["Asyah", "Nevita", "Putri", "Sari", "Asyah"];
 
     expectedNames.forEach((name, day) => {
-      const url = new URL(getKonsultasiUrl(day * 86_400_000));
+      const url = new URL(getKonsultasiUrl(undefined, day * 86_400_000));
       const admin = konsultasiAdmins[day % konsultasiAdmins.length];
 
       expect(admin.name).toBe(name);
@@ -19,6 +19,10 @@ test("Konsultasi rotates through four admins by day", () => {
         `Halo Kak ${name} https://akademi-asn.test, Saya ingin bertanya tentang Bimbel Akademi ASN. Mohon info selengkapnya...`,
       );
     });
+
+    expect(new URL(getKonsultasiUrl("Tryout CPNS", 0)).searchParams.get("text")).toBe(
+      "Halo Kak Asyah https://akademi-asn.test, Saya ingin bertanya tentang Tryout CPNS. Mohon info selengkapnya...",
+    );
   } finally {
     if (originalSiteUrl === undefined) {
       delete process.env.NEXT_PUBLIC_SITE_URL;

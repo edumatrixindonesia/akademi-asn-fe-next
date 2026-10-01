@@ -1,4 +1,5 @@
 import type { JumbotronProps } from "@/components/sections/jumbotron";
+import { tahunSeleksi } from "@/data/tahun-seleksi";
 
 export const jumbotronHome = (konsultasiUrl: string) =>
   ({
@@ -8,8 +9,7 @@ export const jumbotronHome = (konsultasiUrl: string) =>
     backgroundImage: "/img/section/bg-bimbel-cpns-pppk-bumn.webp",
     heroImage: "/img/section/bimbel-cpns-pppk-bumn-terbaik.webp",
     heroImageAlt: "Bimbel CPNS PPPK BUMN Terbaik",
-    ctaLabel: "Daftar Sekarang",
-    ctaHref: konsultasiUrl,
+    ctas: [{ label: "Daftar Sekarang", href: konsultasiUrl }],
   }) satisfies JumbotronProps;
 
 export const jumbotronCpns = (konsultasiUrl: string) =>
@@ -37,6 +37,20 @@ export const jumbotronBumn = (konsultasiUrl: string) =>
     description:
       "Persiapkan TKD, AKHLAK, Wawasan Kebangsaan, Bahasa Inggris, dan Learning Agility bersama tutor melalui kelas online maupun les privat yang disesuaikan dengan kebutuhan belajar Anda.",
     heroImageAlt: "Bimbel BUMN Terbaik",
+  }) satisfies JumbotronProps;
+
+// One button per exam track, each opening Konsultasi about that track's tryout.
+export const jumbotronTryout = (konsultasiUrl: (topic: string) => string) =>
+  ({
+    ...jumbotronHome(konsultasiUrl("Tryout CPNS, PPPK & BUMN")),
+    title: `Tryout CPNS, PPPK & BUMN ${tahunSeleksi} Simulasi CAT Online`,
+    description:
+      "Bergabung dengan 15.000+ alumni yang sudah lolos CPNS & PPPK. Latih kecepatan dan ketepatan menjawab dengan simulasi CAT, pembahasan lengkap, dan ranking nasional.",
+    heroImageAlt: "Tryout CPNS PPPK BUMN Akademi ASN",
+    ctas: ["Tryout CPNS", "Tryout PPPK", "Tryout BUMN"].map((topic) => ({
+      label: topic,
+      href: konsultasiUrl(topic),
+    })),
   }) satisfies JumbotronProps;
 
 // Location entries take the headline location (`headlineLabel`).

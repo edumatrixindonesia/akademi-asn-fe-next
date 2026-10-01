@@ -11,8 +11,11 @@ const families = ["", "/bimbel-cpns", "/bimbel-pppk", "/bimbel-bumn"];
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const locationPaths = [...buildLocationTree(await getRegionLists()).nodes.keys()];
 
-  return families.flatMap((family) => [
-    { url: `${siteUrl}${family}` },
-    ...locationPaths.map((path) => ({ url: `${siteUrl}${family}${path}` })),
-  ]);
+  return [
+    ...families.flatMap((family) => [
+      { url: `${siteUrl}${family}` },
+      ...locationPaths.map((path) => ({ url: `${siteUrl}${family}${path}` })),
+    ]),
+    { url: `${siteUrl}/tryout-bimbel-cpns-pppk-bumn-terbaik` },
+  ];
 }

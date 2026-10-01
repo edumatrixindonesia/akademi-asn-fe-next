@@ -72,6 +72,23 @@ Reviews from past students, shown as a section on every landing page.
 **Tryout**:
 Practice exams that simulate the real selection test. Has its own page, not a landing-page section.
 
+**Tryout page**:
+The page that sells Tryout and the Produk Unggulan, targeting "tryout CPNS PPPK BUMN" searches. It reuses some landing-page sections (e.g. Paket Program, Testimoni) but is not a landing page: it has no location pages and no Jangkauan.
+_Avoid_: tryout landing page
+
+**Produk Unggulan**:
+The low-priced, self-study products featured on the Tryout page (e.g. Tryout CPNS, E-Book Modul CPNS), as opposed to the tutoring in Paket Program. Only CPNS products are sold this way; Tryout PPPK and Tryout BUMN are offered through Konsultasi.
+
+**Tryout CPNS**:
+A Produk Unggulan: 30 days of self-study access to the CAT simulation platform.
+_Avoid_: Paket Tryout (that is the scheduled tryout in Paket Program)
+
+**Paket Tryout**:
+A Paket Program package of scheduled tryout sessions with a tutor (Paket Tryout 1, Paket Tryout 5). Not the same product as Tryout CPNS.
+
+**Paket Hemat Komplit**:
+A bundle of Tryout CPNS and E-Book Modul CPNS sold for less than the two bought separately.
+
 **Produk**:
 The catalog of all sellable products. Has its own page.
 

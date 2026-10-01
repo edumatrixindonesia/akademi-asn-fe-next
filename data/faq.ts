@@ -1,4 +1,8 @@
 import type { FaqProps } from "@/components/sections/faq";
+import { hargaPaketHematKomplit } from "@/data/paket-hemat-komplit";
+import { hargaEbookModulCpns, hargaTryoutCpns } from "@/data/produk-unggulan";
+import { tahunSeleksi } from "@/data/tahun-seleksi";
+import { formatRupiah } from "@/lib/utils";
 
 const hargaPaketPrivat =
   "Optima (8 sesi) Rp1.960.000, Maxima (12 sesi) Rp2.793.000, dan Ultima (24 sesi) Rp5.292.000";
@@ -177,6 +181,45 @@ export const faqBumn = {
       question: "Apakah materi bimbel disesuaikan dengan RBB terbaru?",
       answer:
         "Ya. Materi disusun mengikuti rangkaian tes RBB terbaru, yaitu TKD, AKHLAK, Wawasan Kebangsaan, Bahasa Inggris, dan Learning Agility. Bahan ajar Akademi ASN juga diperbarui mengikuti perubahan ketentuan seleksi.",
+    },
+  ],
+} satisfies FaqProps;
+
+export const faqTryout = {
+  ...faqHome,
+  title: "Pertanyaan Seputar Tryout",
+  items: [
+    {
+      question: "Apa itu Tryout CPNS Akademi ASN?",
+      answer: `Simulasi CAT CPNS ${tahunSeleksi} dengan 500+ soal terbaru, pembahasan lengkap, dan ranking nasional. Akses berlaku 30 hari dengan harga ${formatRupiah(hargaTryoutCpns)}.`,
+    },
+    {
+      question: "Berapa harga tryout CPNS di Akademi ASN?",
+      answer: `Tryout CPNS ${formatRupiah(hargaTryoutCpns)} dan E-Book Modul CPNS ${formatRupiah(hargaEbookModulCpns)}. Paket Hemat Komplit berisi keduanya seharga ${formatRupiah(hargaPaketHematKomplit)}, lebih hemat ${formatRupiah(hargaTryoutCpns + hargaEbookModulCpns - hargaPaketHematKomplit)} dibanding membeli terpisah.`,
+    },
+    {
+      question: "Apa isi E-Book Modul CPNS?",
+      answer: `Materi SKD lengkap dalam 300+ halaman PDF, ringkasan materi, tips & trik mengerjakan soal, dan materi terbaru ${tahunSeleksi}.`,
+    },
+    {
+      question: "Apa beda Tryout CPNS dengan Paket Tryout?",
+      answer:
+        "Tryout CPNS adalah akses mandiri ke platform simulasi CAT selama 30 hari. Paket Tryout 1 dan Paket Tryout 5 adalah sesi tryout terjadwal bersama tutor dan termasuk dalam Paket Program.",
+    },
+    {
+      question: "Apakah tersedia tryout PPPK dan BUMN?",
+      answer:
+        "Ya. Hubungi admin Akademi ASN lewat WhatsApp untuk info paket dan harga Tryout PPPK dan Tryout BUMN.",
+    },
+    {
+      question: "Bagaimana cara mendaftar tryout?",
+      answer:
+        "Klik tombol daftar pada produk pilihan. Kamu akan terhubung ke admin Akademi ASN di WhatsApp untuk menyelesaikan pendaftaran.",
+    },
+    {
+      question: "Apakah paket bimbel sudah termasuk tryout?",
+      answer:
+        "Ya. Optima termasuk tryout gratis 1x, Maxima 2x, dan Ultima 3x. Bootcamp Online dilengkapi tryout mingguan.",
     },
   ],
 } satisfies FaqProps;

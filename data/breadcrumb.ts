@@ -22,6 +22,13 @@ export const breadcrumbBumn = {
   items: [beranda, { name: "Bimbel BUMN", href: "/bimbel-bumn" }],
 } satisfies BreadcrumbProps;
 
+export const breadcrumbTryout = {
+  items: [
+    beranda,
+    { name: "Tryout", href: "/tryout-bimbel-cpns-pppk-bumn-terbaik" },
+  ],
+} satisfies BreadcrumbProps;
+
 export const breadcrumbCpnsLocation = breadcrumbLocation(
   breadcrumbCpns.items,
   "/bimbel-cpns",

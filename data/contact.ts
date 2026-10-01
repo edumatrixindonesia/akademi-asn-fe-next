@@ -17,14 +17,17 @@ export const callCenterPhone = {
 export const officeAddress =
   "Ruko Permai Monjali, Jalan Monjali No 3, Kutu Dukuh, Sinduadi, Mlati, Sleman, Yogyakarta 55241";
 
-export const getKonsultasiUrl = (now = Date.now()): string => {
+export const getKonsultasiUrl = (
+  topic = "Bimbel Akademi ASN",
+  now = Date.now(),
+): string => {
   const siteUrl = process.env.NEXT_PUBLIC_SITE_URL?.trim();
   if (!siteUrl) {
     throw new Error("NEXT_PUBLIC_SITE_URL must be set to the site's absolute URL.");
   }
 
   const admin = konsultasiAdmins[Math.floor(now / 86_400_000) % 4];
-  const message = `Halo Kak ${admin.name} ${siteUrl}, Saya ingin bertanya tentang Bimbel Akademi ASN. Mohon info selengkapnya...`;
+  const message = `Halo Kak ${admin.name} ${siteUrl}, Saya ingin bertanya tentang ${topic}. Mohon info selengkapnya...`;
 
   return `https://api.whatsapp.com/send?phone=${admin.phone}&text=${encodeURIComponent(message)}`;
 };
