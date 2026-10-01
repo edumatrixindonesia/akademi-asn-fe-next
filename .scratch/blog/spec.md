@@ -1,6 +1,6 @@
 # Blog
 
-Status: needs-triage
+Status: ready-for-agent
 
 ## Summary
 
