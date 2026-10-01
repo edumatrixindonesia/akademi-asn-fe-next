@@ -1,7 +1,8 @@
 import { siteUrl } from "@/app/shared-metadata";
 import type { ArtikelDetailProps } from "@/components/sections/artikel-detail";
 import type { Artikel } from "@/lib/artikel-schema";
-import { getKategori, getPenulis, getReadingMinutes } from "@/lib/artikel";
+import { konsultasiPertanyaan } from "@/data/artikel-konsultasi";
+import { getHeadings, getKategori, getPenulis, getReadingMinutes } from "@/lib/artikel";
 
 const dateLabel = new Intl.DateTimeFormat("id-ID", {
   dateStyle: "long",
@@ -10,21 +11,47 @@ const dateLabel = new Intl.DateTimeFormat("id-ID", {
 
 const dated = (iso?: string) => (iso ? { iso, label: dateLabel.format(new Date(iso)) } : undefined);
 
-export const artikelDetail = (entry: Artikel, wordCount: number) => {
+export const artikelDetail = (entry: Artikel, wordCount: number, konsultasiUrl: string) => {
   const kategori = getKategori(entry.kategori)!;
   const penulis = getPenulis(entry.penulis)!;
   const cover = entry.cover ?? kategori.cover;
   const url = `${siteUrl}/blog/${entry.slug}`;
+  const shareUrl = encodeURIComponent(url);
+  const shareText = encodeURIComponent(entry.title);
 
   return {
     kategori: { name: kategori.name, href: `/blog/kategori/${kategori.slug}` },
     title: entry.title,
-    penulis: { name: penulis.name, href: `/blog/penulis/${penulis.slug}` },
+    penulis: {
+      name: penulis.name,
+      href: `/blog/penulis/${penulis.slug}`,
+      jobTitle: penulis.jobTitle,
+      bio: penulis.bio,
+      avatar: penulis.avatar,
+      linkLabel: `Lihat semua artikel ${penulis.name}`,
+    },
     publishedAt: dated(entry.publishedAt),
     updatedAt: dated(entry.updatedAt),
     readingTime: `${getReadingMinutes(wordCount)} menit baca`,
     cover,
     excerpt: entry.excerpt,
+    tocTitle: "Daftar Isi",
+    toc: getHeadings(entry.slug),
+    referensiTitle: "Referensi",
+    references: entry.references.map(({ title, url, publisher, accessedAt }) => ({
+      title,
+      url,
+      publisher,
+      accessedLabel: `Diakses ${dated(accessedAt)!.label}.`,
+    })),
+    pertanyaan: konsultasiPertanyaan(konsultasiUrl),
+    shareTitle: "Bagikan artikel ini",
+    share: [
+      { name: "WhatsApp", href: `https://api.whatsapp.com/send?text=${shareText}%20${shareUrl}` },
+      { name: "Facebook", href: `https://www.facebook.com/sharer/sharer.php?u=${shareUrl}` },
+      { name: "X", href: `https://x.com/intent/post?url=${shareUrl}&text=${shareText}` },
+      { name: "LinkedIn", href: `https://www.linkedin.com/sharing/share-offsite/?url=${shareUrl}` },
+    ],
     jsonLd: {
       "@context": "https://schema.org",
       "@type": "BlogPosting",

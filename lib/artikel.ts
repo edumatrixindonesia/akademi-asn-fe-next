@@ -4,6 +4,7 @@ import { artikel } from "@/data/artikel";
 import { kategori } from "@/data/kategori";
 import { penulis } from "@/data/penulis";
 import { validateArtikel, type Artikel } from "@/lib/artikel-schema";
+import { headingId } from "@/lib/heading-id";
 
 // `satisfies` keeps literal types in data; widen so filters compare freely.
 const entries: Artikel[] = artikel;
@@ -32,10 +33,13 @@ export const getArtikel = (slug: string) =>
 export const getKategori = (slug: string) => kategori.find((entry) => entry.slug === slug);
 export const getPenulis = (slug: string) => penulis.find((entry) => entry.slug === slug);
 
+const readBody = (slug: string) =>
+  readFileSync(path.join(bodyDir, `${slug}.mdx`), "utf8");
+
 // ponytail: strips markup with regexes, so counts are approximate (about
 // 200 wpm); use an MDX AST walk if exact counts ever matter.
 export const getWordCount = (slug: string): number =>
-  readFileSync(path.join(bodyDir, `${slug}.mdx`), "utf8")
+  readBody(slug)
     .replace(/<[^>]*>/g, " ")
     .replace(/[#*_>`|[\]()-]/g, " ")
     .split(/\s+/)
@@ -43,3 +47,53 @@ export const getWordCount = (slug: string): number =>
 
 export const getReadingMinutes = (wordCount: number) =>
   Math.max(1, Math.ceil(wordCount / 200));
+
+// ponytail: finds `## ` lines with a regex (skipping code fences) and strips
+// inline Markdown the same way the rendered text does; an MDX AST walk if
+// headings ever hold JSX.
+export const getHeadings = (slug: string) => {
+  let inFence = false;
+  const headings: { id: string; title: string }[] = [];
+
+  for (const line of readBody(slug).split("\n")) {
+    if (line.startsWith("```")) inFence = !inFence;
+    const match = !inFence && /^##\s+(.+?)\s*$/.exec(line);
+    if (!match) continue;
+
+    const title = match[1].replace(/\[([^\]]+)\]\([^)]*\)/g, "$1").replace(/[*_`]/g, "");
+    const id = headingId(title);
+    if (!id) throw new Error(`"${slug}" has an h2 ("${title}") with no letters or digits for its id.`);
+    if (headings.some((heading) => heading.id === id)) {
+      throw new Error(`"${slug}" has two h2 headings with the id "${id}".`);
+    }
+    headings.push({ id, title });
+  }
+
+  return headings;
+};
+
+const newestFirst = (a: Artikel, b: Artikel) =>
+  (b.publishedAt ?? "").localeCompare(a.publishedAt ?? "");
+
+// Artikel Terbaru: newest first, optionally leaving one Artikel out.
+export const getLatestArtikel = (limit: number, excludeSlug?: string): Artikel[] =>
+  getVisibleArtikel()
+    .filter((entry) => entry.slug !== excludeSlug)
+    .sort(newestFirst)
+    .slice(0, limit);
+
+// Artikel Terkait: `related` first, then the newest of the same Kategori,
+// then the newest of other Kategori.
+export const getRelatedArtikel = (entry: Artikel, limit = 3): Artikel[] => {
+  const others = getLatestArtikel(Infinity, entry.slug);
+  const picked = (entry.related ?? [])
+    .map((slug) => others.find((other) => other.slug === slug))
+    .filter((other) => other !== undefined);
+  const rest = others.filter((other) => !picked.includes(other));
+
+  return [
+    ...picked,
+    ...rest.filter((other) => other.kategori === entry.kategori),
+    ...rest.filter((other) => other.kategori !== entry.kategori),
+  ].slice(0, limit);
+};

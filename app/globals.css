@@ -139,6 +139,11 @@
 .artikel-body > * + * {
   margin-top: 1.25rem;
 }
+.artikel-body h2,
+.artikel-body h3 {
+  /* Clear the sticky navbar when jumping from the Daftar isi. */
+  scroll-margin-top: 5rem;
+}
 .artikel-body h2 {
   margin-top: 2.5rem;
   font-size: 1.5rem;
@@ -152,7 +157,7 @@
   font-weight: 600;
   color: var(--primary-dark);
 }
-.artikel-body a {
+.artikel-body a:not([data-slot="button"]) {
   color: var(--primary);
   text-decoration: underline;
   text-underline-offset: 2px;

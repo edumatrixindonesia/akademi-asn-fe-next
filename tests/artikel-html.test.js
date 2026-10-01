@@ -1,4 +1,5 @@
 import { expect, test } from "bun:test";
+import { artikel } from "../data/artikel";
 
 const baseUrl = (process.env.TEST_BASE_URL ?? "http://localhost:3000/").replace(/\/+$/, "");
 
@@ -21,6 +22,31 @@ test("draft fixture Artikel renders one h1, canonical, BlogPosting and Breadcrum
     .flatMap((jsonLd) => jsonLd["@graph"]?.map((node) => node["@type"]) ?? [jsonLd["@type"]]);
   expect(types).toContain("BlogPosting");
   expect(types).toContain("BreadcrumbList");
+});
+
+test("draft fixture Artikel has Daftar isi anchors, Referensi, and every MDX component", async () => {
+  // React separates adjacent text nodes with comments.
+  const html = (await (await fetch(`${baseUrl}/blog/draft-artikel-contoh`)).text()).replaceAll("<!-- -->", "");
+
+  const anchors = [...html.matchAll(/<a href="#([^"]+)"/g)].map((match) => match[1]);
+  expect(anchors.length).toBeGreaterThanOrEqual(3);
+  for (const id of anchors) {
+    expect(html).toMatch(new RegExp(`<h2 id="${id}"`));
+  }
+
+  expect(html).toContain("Referensi");
+  expect(html).toContain("Baca Juga: ");
+  expect(html).toContain("Butuh bantuan menyiapkan seleksi?");
+  expect(html).toContain("Lihat jawaban");
+  expect(html).toContain("Contoh: Surat contoh");
+  expect(html).toContain("Masih ada pertanyaan?");
+  expect(html).toContain("Bagikan artikel ini");
+  expect(html).toMatch(/<form[^>]*action="\/blog\/cari"[^>]*method="get"/);
+});
+
+test("Artikel Terkait shows only when another Artikel exists", async () => {
+  const html = await (await fetch(`${baseUrl}/blog/draft-artikel-contoh`)).text();
+  expect(html.includes("Artikel Terkait")).toBe(artikel.length > 1);
 });
 
 test("unknown Artikel slug returns 404", async () => {
