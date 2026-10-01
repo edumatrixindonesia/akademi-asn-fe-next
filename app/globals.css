@@ -172,3 +172,18 @@
   padding-left: 1rem;
   font-style: italic;
 }
+.artikel-body table {
+  display: block;
+  overflow-x: auto;
+  border-collapse: collapse;
+}
+.artikel-body th,
+.artikel-body td {
+  border: 1px solid var(--border);
+  padding: 0.5rem 0.75rem;
+  text-align: left;
+}
+.artikel-body th {
+  background: var(--muted);
+  font-weight: 600;
+}

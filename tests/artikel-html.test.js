@@ -14,6 +14,7 @@ test("draft fixture Artikel renders one h1, canonical, BlogPosting and Breadcrum
   expect(html).toContain(`<title>Draft Artikel Contoh | Akademi ASN</title>`);
   expect(html).toContain(`property="og:type" content="article"`);
   expect(html).toMatch(/\d+ menit baca/);
+  expect(html).toContain("<table>");
 
   const types = [...html.matchAll(/<script type="application\/ld\+json">(.*?)<\/script>/g)]
     .map((match) => JSON.parse(match[1]))

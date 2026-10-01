@@ -5,6 +5,7 @@ const nextConfig: NextConfig = {
   /* config options here */
 };
 
-const withMDX = createMDX({});
+// Turbopack takes plugins by name, since functions can't cross into Rust.
+const withMDX = createMDX({ options: { remarkPlugins: ["remark-gfm"] } });
 
 export default withMDX(nextConfig);
