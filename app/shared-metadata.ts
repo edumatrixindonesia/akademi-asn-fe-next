@@ -27,6 +27,23 @@ export const openGraphBase = {
   ],
 } satisfies Metadata["openGraph"];
 
+// Listing pages: every page canonical to itself.
+export const listingMetadata = ({
+  title,
+  description,
+  path,
+}: {
+  title: string;
+  description: string;
+  path: string;
+}) =>
+  ({
+    title,
+    description,
+    alternates: { canonical: path },
+    openGraph: { ...openGraphBase, url: path, title, description },
+  }) satisfies Metadata;
+
 export const organizationJsonLd = {
   "@context": "https://schema.org",
   "@graph": [

@@ -1,6 +1,6 @@
 import type { ArtikelCardProps } from "@/components/shared/artikel-card";
 import type { Artikel } from "@/lib/artikel-schema";
-import { getKategori } from "@/lib/artikel";
+import { dated, getKategori, getReadingLabel, getWordCount } from "@/lib/artikel";
 
 export const artikelCard = (entry: Artikel) => {
   const kategori = getKategori(entry.kategori)!;
@@ -11,5 +11,7 @@ export const artikelCard = (entry: Artikel) => {
     excerpt: entry.excerpt,
     kategori: kategori.name,
     cover: entry.cover ?? kategori.cover,
+    publishedAt: dated(entry.publishedAt),
+    readingTime: getReadingLabel(getWordCount(entry.slug)),
   } satisfies ArtikelCardProps;
 };

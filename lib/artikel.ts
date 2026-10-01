@@ -5,6 +5,7 @@ import { kategori } from "@/data/kategori";
 import { penulis } from "@/data/penulis";
 import { validateArtikel, type Artikel } from "@/lib/artikel-schema";
 import { headingId } from "@/lib/heading-id";
+import { blogFirstPageSize, pageCount, pageSize, pageSlice } from "@/lib/pagination";
 
 // `satisfies` keeps literal types in data; widen so filters compare freely.
 const entries: Artikel[] = artikel;
@@ -47,6 +48,17 @@ export const getWordCount = (slug: string): number =>
 
 export const getReadingMinutes = (wordCount: number) =>
   Math.max(1, Math.ceil(wordCount / 200));
+
+export const getReadingLabel = (wordCount: number) =>
+  `${getReadingMinutes(wordCount)} menit baca`;
+
+const dateLabel = new Intl.DateTimeFormat("id-ID", {
+  dateStyle: "long",
+  timeZone: "UTC",
+});
+
+export const dated = (iso?: string) =>
+  iso ? { iso, label: dateLabel.format(new Date(iso)) } : undefined;
 
 // ponytail: finds `## ` lines with a regex (skipping code fences) and strips
 // inline Markdown the same way the rendered text does; an MDX AST walk if
@@ -96,4 +108,23 @@ export const getRelatedArtikel = (entry: Artikel, limit = 3): Artikel[] => {
     ...rest.filter((other) => other.kategori === entry.kategori),
     ...rest.filter((other) => other.kategori !== entry.kategori),
   ].slice(0, limit);
+};
+
+export const getArtikelByKategori = (slug: string): Artikel[] =>
+  getLatestArtikel(Infinity).filter((entry) => entry.kategori === slug);
+
+// `undefined` for a page past the last one: the route turns it into a 404.
+const listing = (all: Artikel[], page: number, firstPageSize: number) => {
+  const totalPages = pageCount(all.length, firstPageSize);
+  if (page > totalPages) return undefined;
+  return { entries: pageSlice(all, page, firstPageSize), totalPages };
+};
+
+export const getBlogListing = (page: number) =>
+  listing(getLatestArtikel(Infinity), page, blogFirstPageSize);
+
+export const getKategoriListing = (slug: string, page: number) => {
+  const kategori = getKategori(slug);
+  const result = kategori && listing(getArtikelByKategori(slug), page, pageSize);
+  return result && { kategori, ...result };
 };

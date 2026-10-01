@@ -2,7 +2,17 @@ import createMDX from "@next/mdx";
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
+  // Page 1 of a paginated listing lives at its base URL.
+  async redirects() {
+    return [
+      { source: "/blog/page/1", destination: "/blog", permanent: true },
+      {
+        source: "/blog/kategori/:slug/page/1",
+        destination: "/blog/kategori/:slug",
+        permanent: true,
+      },
+    ];
+  },
 };
 
 // Turbopack takes plugins by name, since functions can't cross into Rust.

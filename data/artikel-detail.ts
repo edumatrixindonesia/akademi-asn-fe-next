@@ -2,14 +2,7 @@ import { siteUrl } from "@/app/shared-metadata";
 import type { ArtikelDetailProps } from "@/components/sections/artikel-detail";
 import type { Artikel } from "@/lib/artikel-schema";
 import { konsultasiPertanyaan } from "@/data/artikel-konsultasi";
-import { getHeadings, getKategori, getPenulis, getReadingMinutes } from "@/lib/artikel";
-
-const dateLabel = new Intl.DateTimeFormat("id-ID", {
-  dateStyle: "long",
-  timeZone: "UTC",
-});
-
-const dated = (iso?: string) => (iso ? { iso, label: dateLabel.format(new Date(iso)) } : undefined);
+import { dated, getHeadings, getKategori, getPenulis, getReadingLabel } from "@/lib/artikel";
 
 export const artikelDetail = (entry: Artikel, wordCount: number, konsultasiUrl: string) => {
   const kategori = getKategori(entry.kategori)!;
@@ -32,7 +25,7 @@ export const artikelDetail = (entry: Artikel, wordCount: number, konsultasiUrl: 
     },
     publishedAt: dated(entry.publishedAt),
     updatedAt: dated(entry.updatedAt),
-    readingTime: `${getReadingMinutes(wordCount)} menit baca`,
+    readingTime: getReadingLabel(wordCount),
     cover,
     excerpt: entry.excerpt,
     tocTitle: "Daftar Isi",
