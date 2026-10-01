@@ -8,7 +8,7 @@ test("Tryout page renders one h1, product offers, and per-topic Konsultasi links
 
   const html = await response.text();
   expect([...html.matchAll(/<h1\b/g)]).toHaveLength(1);
-  expect(html).toMatch(/<h1\b[^>]*>Tryout CPNS, PPPK &amp; BUMN \d{4} Simulasi CAT Online<\/h1>/);
+  expect(html).toMatch(/<h1\b[^>]*>Tryout CPNS PPPK BUMN \d{4} Simulasi CAT Online<\/h1>/);
   expect(html).toMatch(/<link rel="canonical" href="[^"]+\/tryout-bimbel-cpns-pppk-bumn-terbaik"/);
   expect(html).not.toContain(`id="jangkauan"`);
 

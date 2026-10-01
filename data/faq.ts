@@ -1,5 +1,11 @@
 import type { FaqProps } from "@/components/sections/faq";
 import { hargaPaketHematKomplit } from "@/data/paket-hemat-komplit";
+import {
+  hargaBukuFisikBumn,
+  hargaEModulLolosCpnsPppk,
+  hargaModulLolosCpnsPppk,
+  hargaPaketTryoutSkd,
+} from "@/data/daftar-produk";
 import { hargaEbookModulCpns, hargaTryoutCpns } from "@/data/produk-unggulan";
 import { tahunSeleksi } from "@/data/tahun-seleksi";
 import { formatRupiah } from "@/lib/utils";
@@ -220,6 +226,27 @@ export const faqTryout = {
       question: "Apakah paket bimbel sudah termasuk tryout?",
       answer:
         "Ya. Optima termasuk tryout gratis 1x, Maxima 2x, dan Ultima 3x. Bootcamp Online dilengkapi tryout mingguan.",
+    },
+  ],
+} satisfies FaqProps;
+
+export const faqProduk = {
+  ...faqHome,
+  title: "Pertanyaan Seputar Produk",
+  items: [
+    {
+      question: "Bagaimana cara memesan produk Akademi ASN?",
+      answer:
+        "Klik tombol pada produk pilihan. Kamu akan terhubung ke admin Akademi ASN di WhatsApp untuk menyelesaikan pemesanan.",
+    },
+    {
+      question: "Berapa harga modul, buku, dan tryout di Akademi ASN?",
+      answer: `E-Modul Lolos CPNS & PPPK ${formatRupiah(hargaEModulLolosCpnsPppk)}, Modul Lolos CPNS & PPPK ${formatRupiah(hargaModulLolosCpnsPppk)}, Paket Tryout SKD ${tahunSeleksi} ${formatRupiah(hargaPaketTryoutSkd)}, dan Buku Fisik BUMN Lengkap ${formatRupiah(hargaBukuFisikBumn)}.`,
+    },
+    {
+      question: "Apa beda produk belajar mandiri dengan Paket Program?",
+      answer:
+        "Produk belajar mandiri (modul, buku fisik, dan paket tryout SKD) dipelajari sendiri tanpa tutor. Paket Program adalah bimbel bersama tutor, dari Bootcamp Online sampai les privat Optima, Maxima, dan Ultima.",
     },
   ],
 } satisfies FaqProps;

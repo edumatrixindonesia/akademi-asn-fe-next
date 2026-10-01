@@ -17,5 +17,6 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       ...locationPaths.map((path) => ({ url: `${siteUrl}${family}${path}` })),
     ]),
     { url: `${siteUrl}/tryout-bimbel-cpns-pppk-bumn-terbaik` },
+    { url: `${siteUrl}/produk-bimbel-cpns-pppk-bumn-terbaik` },
   ];
 }

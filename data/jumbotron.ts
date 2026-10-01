@@ -1,5 +1,7 @@
 import type { JumbotronProps } from "@/components/sections/jumbotron";
+import { hargaPaketTryoutSkd } from "@/data/daftar-produk";
 import { tahunSeleksi } from "@/data/tahun-seleksi";
+import { formatRupiah } from "@/lib/utils";
 
 export const jumbotronHome = (konsultasiUrl: string) =>
   ({
@@ -42,8 +44,8 @@ export const jumbotronBumn = (konsultasiUrl: string) =>
 // One button per exam track, each opening Konsultasi about that track's tryout.
 export const jumbotronTryout = (konsultasiUrl: (topic: string) => string) =>
   ({
-    ...jumbotronHome(konsultasiUrl("Tryout CPNS, PPPK & BUMN")),
-    title: `Tryout CPNS, PPPK & BUMN ${tahunSeleksi} Simulasi CAT Online`,
+    ...jumbotronHome(konsultasiUrl("Tryout CPNS PPPK BUMN")),
+    title: `Tryout CPNS PPPK BUMN ${tahunSeleksi} Simulasi CAT Online`,
     description:
       "Bergabung dengan 15.000+ alumni yang sudah lolos CPNS & PPPK. Latih kecepatan dan ketepatan menjawab dengan simulasi CAT, pembahasan lengkap, dan ranking nasional.",
     heroImageAlt: "Tryout CPNS PPPK BUMN Akademi ASN",
@@ -53,8 +55,23 @@ export const jumbotronTryout = (konsultasiUrl: (topic: string) => string) =>
     })),
   }) satisfies JumbotronProps;
 
+export const jumbotronProduk = (konsultasiUrl: string) =>
+  ({
+    ...jumbotronHome(konsultasiUrl),
+    title: `Modul Buku & Tryout CPNS PPPK BUMN ${tahunSeleksi}`,
+    description: `Belajar mandiri untuk seleksi CPNS, PPPK, dan BUMN dengan E-Modul, buku fisik, dan paket tryout SKD. Mulai ${formatRupiah(hargaPaketTryoutSkd)}.`,
+    heroImageAlt: "Modul, buku, dan tryout CPNS PPPK BUMN Akademi ASN",
+    ctas: [
+      { label: "Lihat Produk", href: "#daftar-produk" },
+      { label: "Konsultasi Gratis", href: konsultasiUrl },
+    ],
+  }) satisfies JumbotronProps;
+
 // Location entries take the headline location (`headlineLabel`).
-export const jumbotronHomeLocation = (konsultasiUrl: string, location: string) =>
+export const jumbotronHomeLocation = (
+  konsultasiUrl: string,
+  location: string,
+) =>
   ({
     ...jumbotronHome(konsultasiUrl),
     title: `Bimbel CPNS PPPK BUMN Terbaik di ${location} untuk Persiapan Seleksi`,
@@ -62,7 +79,10 @@ export const jumbotronHomeLocation = (konsultasiUrl: string, location: string) =
     heroImageAlt: `Bimbel CPNS PPPK BUMN Terbaik di ${location}`,
   }) satisfies JumbotronProps;
 
-export const jumbotronCpnsLocation = (konsultasiUrl: string, location: string) =>
+export const jumbotronCpnsLocation = (
+  konsultasiUrl: string,
+  location: string,
+) =>
   ({
     ...jumbotronCpns(konsultasiUrl),
     title: `Bimbel CPNS Online & Offline Terbaik di ${location} untuk Persiapan SKD & SKB`,
@@ -70,7 +90,10 @@ export const jumbotronCpnsLocation = (konsultasiUrl: string, location: string) =
     heroImageAlt: `Bimbel CPNS Online & Offline Terbaik di ${location}`,
   }) satisfies JumbotronProps;
 
-export const jumbotronPppkLocation = (konsultasiUrl: string, location: string) =>
+export const jumbotronPppkLocation = (
+  konsultasiUrl: string,
+  location: string,
+) =>
   ({
     ...jumbotronPppk(konsultasiUrl),
     title: `Bimbel PPPK di ${location} untuk Teknis Guru & Tenaga Kesehatan`,
@@ -78,7 +101,10 @@ export const jumbotronPppkLocation = (konsultasiUrl: string, location: string) =
     heroImageAlt: `Bimbel PPPK Online & Offline Terbaik di ${location}`,
   }) satisfies JumbotronProps;
 
-export const jumbotronBumnLocation = (konsultasiUrl: string, location: string) =>
+export const jumbotronBumnLocation = (
+  konsultasiUrl: string,
+  location: string,
+) =>
   ({
     ...jumbotronBumn(konsultasiUrl),
     title: `Bimbel BUMN di ${location} untuk Persiapan Tes Rekrutmen Bersama BUMN`,

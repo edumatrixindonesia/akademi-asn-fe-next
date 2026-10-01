@@ -77,7 +77,7 @@ The page that sells Tryout and the Produk Unggulan, targeting "tryout CPNS PPPK 
 _Avoid_: tryout landing page
 
 **Produk Unggulan**:
-The low-priced, self-study products featured on the Tryout page (e.g. Tryout CPNS, E-Book Modul CPNS), as opposed to the tutoring in Paket Program. Only CPNS products are sold this way; Tryout PPPK and Tryout BUMN are offered through Konsultasi.
+The low-priced, self-study products featured on the Tryout page (Tryout CPNS, E-Book Modul CPNS), as opposed to the tutoring in Paket Program. They are sold only on the Tryout page, never in the Daftar Produk. Tryout PPPK and Tryout BUMN are offered through Konsultasi.
 
 **Tryout CPNS**:
 A Produk Unggulan: 30 days of self-study access to the CAT simulation platform.
@@ -90,7 +90,20 @@ A Paket Program package of scheduled tryout sessions with a tutor (Paket Tryout 
 A bundle of Tryout CPNS and E-Book Modul CPNS sold for less than the two bought separately.
 
 **Produk**:
-The catalog of all sellable products. Has its own page.
+The page that sells the Daftar Produk and Paket Program. Like the Tryout page, it is not a landing page.
+
+**Daftar Produk**:
+The self-study products sold on the Produk page: E-Modul Lolos CPNS & PPPK, Modul Lolos CPNS & PPPK, Paket Tryout SKD, and Buku Fisik BUMN Lengkap. Separate from the Produk Unggulan, with their own prices.
+
+**Buku Fisik**:
+A printed item in the Daftar Produk: Modul Lolos CPNS & PPPK or Buku Fisik BUMN Lengkap.
+_Avoid_: modul (on its own, it may mean the E-Modul)
+
+**Paket Tryout SKD**:
+A Daftar Produk item, sold under that name. Not the same product as Tryout CPNS (a Produk Unggulan) or Paket Tryout (a Paket Program package).
+
+**Tips Lolos**:
+Practical advice for passing the selection exam (e.g. prepare documents, practise questions regularly), shown as a section on the Produk page. Unlike Tantangan Seleksi, it says what to do, not why candidates fail.
 
 **Konsultasi**:
 A free chat with an Admin Konsultasi over WhatsApp. It is the primary call to action across the site.

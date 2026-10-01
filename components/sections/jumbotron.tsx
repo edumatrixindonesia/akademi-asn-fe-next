@@ -46,9 +46,14 @@ const Jumbotron = ({
               size="lg"
               className="bg-cta text-md md:text-lg text-shadow-none px-6 hover:bg-cta/90 text-white"
             >
-              <a href={cta.href} target="_blank" rel="noopener noreferrer">
-                {cta.label}
-              </a>
+              {/* In-page anchors (e.g. "#daftar-produk") stay in this tab. */}
+              {cta.href.startsWith("#") ? (
+                <a href={cta.href}>{cta.label}</a>
+              ) : (
+                <a href={cta.href} target="_blank" rel="noopener noreferrer">
+                  {cta.label}
+                </a>
+              )}
             </Button>
           ))}
         </div>
