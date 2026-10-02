@@ -84,6 +84,17 @@ export const artikelListingKategori = (
   } satisfies ArtikelListingProps;
 };
 
+// An empty query shows the form only: no results and no empty message.
+export const artikelListingCari = (query: string, entries: Artikel[]) =>
+  ({
+    title: query ? `Hasil pencarian: ${query}` : "Cari artikel",
+    search: searchArtikel,
+    heading: "Hasil pencarian",
+    headingVisible: false,
+    items: entries.map(artikelCard),
+    emptyLabel: query ? "Tidak ada artikel yang cocok" : undefined,
+  }) satisfies ArtikelListingProps;
+
 export const artikelPerKategori = (kategori: Kategori, entries: Artikel[]) =>
   ({
     title: kategori.title,

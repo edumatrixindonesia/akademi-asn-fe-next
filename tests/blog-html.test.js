@@ -85,3 +85,27 @@ test("a Penulis with no Artikel shows Belum ada artikel; unknown or out-of-range
   const redirect = await fetch(`${baseUrl}/blog/penulis/dimas-maulana/page/1`, { redirect: "manual" });
   expect(redirect.status).toBe(308);
 });
+
+test("/blog/cari is noindex, escapes q, and shows empty states", async () => {
+  const get = async (query) =>
+    (await (await fetch(`${baseUrl}/blog/cari${query}`)).text()).replaceAll("<!-- -->", "");
+
+  const empty = await get("?q=zzzxqy");
+  expect(empty).toContain("Hasil pencarian: zzzxqy");
+  expect(empty).toContain("Tidak ada artikel yang cocok");
+  expect(empty).toMatch(/<meta name="robots" content="noindex, follow"/);
+  expect([...empty.matchAll(/<h1\b/g)]).toHaveLength(1);
+
+  const bare = await get("");
+  expect(bare).not.toContain("Tidak ada artikel yang cocok");
+  expect(bare).toMatch(/<form[^>]*action="\/blog\/cari"/);
+
+  const injected = await get("?q=%3Cscript%3Ealert(1)%3C%2Fscript%3E");
+  expect(injected).not.toContain("<script>alert(1)</script>");
+  expect(injected).toContain("&lt;script&gt;alert(1)&lt;/script&gt;");
+
+  if (total > 0) {
+    const hit = await get(`?q=${encodeURIComponent(artikel[0].title.slice(0, 8).toUpperCase())}`);
+    expect(hit).toContain(`href="/blog/${artikel[0].slug}"`);
+  }
+});

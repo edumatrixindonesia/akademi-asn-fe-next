@@ -18,7 +18,7 @@ export type ArtikelListingProps = {
   heading: string;
   headingVisible: boolean;
   items: ArtikelCardProps[];
-  emptyLabel: string;
+  emptyLabel?: string;
   pagination?: ArtikelPaginationProps;
 };
 
@@ -89,7 +89,7 @@ const ArtikelListing = ({
         ))}
       </div>
     ) : (
-      <p className="mt-6 text-muted-foreground">{emptyLabel}</p>
+      emptyLabel && <p className="mt-6 text-muted-foreground">{emptyLabel}</p>
     )}
     {pagination && <ArtikelPagination {...pagination} />}
   </section>

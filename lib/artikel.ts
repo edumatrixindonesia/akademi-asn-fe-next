@@ -3,6 +3,7 @@ import path from "node:path";
 import { artikel } from "@/data/artikel";
 import { kategori } from "@/data/kategori";
 import { penulis } from "@/data/penulis";
+import { artikelMatches } from "@/lib/artikel-search";
 import { validateArtikel, type Artikel } from "@/lib/artikel-schema";
 import { headingId } from "@/lib/heading-id";
 import { blogFirstPageSize, pageCount, pageSize, pageSlice } from "@/lib/pagination";
@@ -120,6 +121,9 @@ export const getRelatedArtikel = (entry: Artikel, limit = 3): Artikel[] => {
 
 export const getArtikelByKategori = (slug: string): Artikel[] =>
   getLatestArtikel(Infinity).filter((entry) => entry.kategori === slug);
+
+export const searchArtikel = (query: string): Artikel[] =>
+  getLatestArtikel(Infinity).filter((entry) => artikelMatches(entry, query));
 
 export const getArtikelByPenulis = (slug: string): Artikel[] =>
   getLatestArtikel(Infinity).filter((entry) => entry.penulis === slug);
