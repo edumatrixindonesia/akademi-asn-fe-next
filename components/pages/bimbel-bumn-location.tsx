@@ -13,6 +13,7 @@ import Testimoni from "@/components/sections/testimoni";
 import Jangkauan from "@/components/sections/jangkauan";
 import LokasiLain from "@/components/sections/lokasi-lain";
 import CtaFooter from "@/components/sections/cta-footer";
+import ArtikelTerbaru from "@/components/sections/artikel-terbaru";
 import Faq from "@/components/sections/faq";
 import MediaMassa from "@/components/sections/media-massa";
 import { breadcrumbBumnLocation } from "@/data/breadcrumb";
@@ -32,6 +33,7 @@ import { lokasiLainBumnLocation } from "@/data/lokasi-lain";
 import { ctaFooterLocation } from "@/data/cta-footer";
 import { faqBumn } from "@/data/faq";
 import { mediaMassa } from "@/data/media-massa";
+import { artikelTerbaru } from "@/data/artikel-terbaru";
 import { getKonsultasiUrl } from "@/data/contact";
 import {
   headlineLabel,
@@ -43,6 +45,7 @@ type BimbelBumnLocationProps = { location: ResolvedLocation };
 
 const BimbelBumnLocation = ({ location }: BimbelBumnLocationProps) => {
   const konsultasiUrl = getKonsultasiUrl();
+  const terbaru = artikelTerbaru("bumn");
   const label = locationLabel(location);
   const kelasOffline = kelasOfflineLocation(location);
   return (
@@ -65,6 +68,7 @@ const BimbelBumnLocation = ({ location }: BimbelBumnLocationProps) => {
       <LokasiLain {...lokasiLainBumnLocation(location)} />
       <CtaFooter {...ctaFooterLocation(konsultasiUrl, label)} />
       <MediaMassa {...mediaMassa} />
+      {terbaru && <ArtikelTerbaru {...terbaru} />}
       <Faq {...faqBumn} />
     </main>
   );

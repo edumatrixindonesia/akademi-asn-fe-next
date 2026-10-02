@@ -9,6 +9,7 @@ import Lembaga from "@/components/sections/lembaga";
 import Testimoni from "@/components/sections/testimoni";
 import Jangkauan from "@/components/sections/jangkauan";
 import CtaFooter from "@/components/sections/cta-footer";
+import ArtikelTerbaru from "@/components/sections/artikel-terbaru";
 import Faq from "@/components/sections/faq";
 import MediaMassa from "@/components/sections/media-massa";
 import { jumbotronHome } from "@/data/jumbotron";
@@ -24,6 +25,7 @@ import { jangkauanHome } from "@/data/jangkauan";
 import { ctaFooter } from "@/data/cta-footer";
 import { faqHome } from "@/data/faq";
 import { mediaMassa } from "@/data/media-massa";
+import { artikelTerbaru } from "@/data/artikel-terbaru";
 import { getKonsultasiUrl } from "@/data/contact";
 import type { Region } from "@/lib/location-tree";
 
@@ -31,6 +33,7 @@ type HomeProps = { provinces: Region[] };
 
 const Home = ({ provinces }: HomeProps) => {
   const konsultasiUrl = getKonsultasiUrl();
+  const terbaru = artikelTerbaru();
   return (
     <main className="flex-1">
       <Jumbotron {...jumbotronHome(konsultasiUrl)} />
@@ -45,6 +48,7 @@ const Home = ({ provinces }: HomeProps) => {
       <Jangkauan {...jangkauanHome(provinces)} />
       <CtaFooter {...ctaFooter(konsultasiUrl)} />
       <MediaMassa {...mediaMassa} />
+      {terbaru && <ArtikelTerbaru {...terbaru} />}
       <Faq {...faqHome} />
     </main>
   );

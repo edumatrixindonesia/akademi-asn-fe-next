@@ -10,6 +10,7 @@ import Lembaga from "@/components/sections/lembaga";
 import Testimoni from "@/components/sections/testimoni";
 import Jangkauan from "@/components/sections/jangkauan";
 import CtaFooter from "@/components/sections/cta-footer";
+import ArtikelTerbaru from "@/components/sections/artikel-terbaru";
 import Faq from "@/components/sections/faq";
 import MediaMassa from "@/components/sections/media-massa";
 import { breadcrumbBumn } from "@/data/breadcrumb";
@@ -26,6 +27,7 @@ import { jangkauanBumn } from "@/data/jangkauan";
 import { ctaFooter } from "@/data/cta-footer";
 import { faqBumn } from "@/data/faq";
 import { mediaMassa } from "@/data/media-massa";
+import { artikelTerbaru } from "@/data/artikel-terbaru";
 import { getKonsultasiUrl } from "@/data/contact";
 import type { Region } from "@/lib/location-tree";
 
@@ -33,6 +35,7 @@ type BimbelBumnProps = { provinces: Region[] };
 
 const BimbelBumn = ({ provinces }: BimbelBumnProps) => {
   const konsultasiUrl = getKonsultasiUrl();
+  const terbaru = artikelTerbaru("bumn");
   return (
     <main className="flex-1">
       <Breadcrumb {...breadcrumbBumn} />
@@ -48,6 +51,7 @@ const BimbelBumn = ({ provinces }: BimbelBumnProps) => {
       <Jangkauan {...jangkauanBumn(provinces)} />
       <CtaFooter {...ctaFooter(konsultasiUrl)} />
       <MediaMassa {...mediaMassa} />
+      {terbaru && <ArtikelTerbaru {...terbaru} />}
       <Faq {...faqBumn} />
     </main>
   );

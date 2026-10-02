@@ -10,6 +10,7 @@ import Lembaga from "@/components/sections/lembaga";
 import Testimoni from "@/components/sections/testimoni";
 import Jangkauan from "@/components/sections/jangkauan";
 import CtaFooter from "@/components/sections/cta-footer";
+import ArtikelTerbaru from "@/components/sections/artikel-terbaru";
 import Faq from "@/components/sections/faq";
 import MediaMassa from "@/components/sections/media-massa";
 import { breadcrumbCpns } from "@/data/breadcrumb";
@@ -26,6 +27,7 @@ import { jangkauanCpns } from "@/data/jangkauan";
 import { ctaFooter } from "@/data/cta-footer";
 import { faqCpns } from "@/data/faq";
 import { mediaMassa } from "@/data/media-massa";
+import { artikelTerbaru } from "@/data/artikel-terbaru";
 import { getKonsultasiUrl } from "@/data/contact";
 import type { Region } from "@/lib/location-tree";
 
@@ -33,6 +35,7 @@ type BimbelCpnsProps = { provinces: Region[] };
 
 const BimbelCpns = ({ provinces }: BimbelCpnsProps) => {
   const konsultasiUrl = getKonsultasiUrl();
+  const terbaru = artikelTerbaru("cpns");
   return (
     <main className="flex-1">
       <Breadcrumb {...breadcrumbCpns} />
@@ -48,6 +51,7 @@ const BimbelCpns = ({ provinces }: BimbelCpnsProps) => {
       <Jangkauan {...jangkauanCpns(provinces)} />
       <CtaFooter {...ctaFooter(konsultasiUrl)} />
       <MediaMassa {...mediaMassa} />
+      {terbaru && <ArtikelTerbaru {...terbaru} />}
       <Faq {...faqCpns} />
     </main>
   );

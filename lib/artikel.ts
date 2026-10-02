@@ -122,6 +122,10 @@ export const getRelatedArtikel = (entry: Artikel, limit = 3): Artikel[] => {
 export const getArtikelByKategori = (slug: string): Artikel[] =>
   getLatestArtikel(Infinity).filter((entry) => entry.kategori === slug);
 
+// Artikel Terbaru on landing pages: 3 newest of one Kategori, or of any.
+export const getLandingArtikel = (kategori?: string): Artikel[] =>
+  (kategori ? getArtikelByKategori(kategori) : getLatestArtikel(Infinity)).slice(0, 3);
+
 export const searchArtikel = (query: string): Artikel[] =>
   getLatestArtikel(Infinity).filter((entry) => artikelMatches(entry, query));
 
