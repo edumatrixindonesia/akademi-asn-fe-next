@@ -56,3 +56,32 @@ test("unknown Kategori and out-of-range Kategori pages return 404", async () => 
   expect((await fetch(`${baseUrl}/blog/kategori/cpns/page/99`)).status).toBe(404);
   expect((await fetch(`${baseUrl}/blog/page/99`)).status).toBe(404);
 });
+
+test("Penulis pages render one h1, the profile, and robots by published Artikel", async () => {
+  const published = (slug) =>
+    artikel.some((entry) => entry.penulis === slug && entry.status === "published");
+
+  for (const slug of ["tim-akademi-asn", "dimas-maulana"]) {
+    const response = await fetch(`${baseUrl}/blog/penulis/${slug}`);
+    expect(response.status).toBe(200);
+
+    const html = (await response.text()).replaceAll("&amp;", "&");
+    expect([...html.matchAll(/<h1\b/g)]).toHaveLength(1);
+    expect(html).toMatch(new RegExp(`<link rel="canonical" href="[^"]+/blog/penulis/${slug}"`));
+    expect(html).toContain('"@type":"ProfilePage"');
+    expect(html.includes('"@type":"Person"')).toBe(slug === "dimas-maulana");
+    expect(/<meta name="robots" content="noindex, follow"/.test(html)).toBe(!published(slug));
+  }
+});
+
+test("a Penulis with no Artikel shows Belum ada artikel; unknown or out-of-range pages 404", async () => {
+  const html = await (await fetch(`${baseUrl}/blog/penulis/dimas-maulana`)).text();
+  expect(html.includes("Belum ada artikel")).toBe(
+    !artikel.some((entry) => entry.penulis === "dimas-maulana"),
+  );
+  expect((await fetch(`${baseUrl}/blog/penulis/tidak-ada`)).status).toBe(404);
+  expect((await fetch(`${baseUrl}/blog/penulis/dimas-maulana/page/99`)).status).toBe(404);
+
+  const redirect = await fetch(`${baseUrl}/blog/penulis/dimas-maulana/page/1`, { redirect: "manual" });
+  expect(redirect.status).toBe(308);
+});

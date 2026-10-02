@@ -1,9 +1,10 @@
 import type { ArtikelListingProps } from "@/components/sections/artikel-listing";
 import type { ArtikelPaginationProps } from "@/components/shared/artikel-pagination";
 import type { ArtikelPerKategoriProps } from "@/components/sections/artikel-per-kategori";
-import type { Artikel, Kategori } from "@/lib/artikel-schema";
+import type { Artikel, Kategori, Penulis } from "@/lib/artikel-schema";
 import { artikelCard } from "@/data/artikel-card";
 import { searchArtikel } from "@/data/artikel-sidebar";
+import { edumatrix, siteUrl } from "@/app/shared-metadata";
 import { pagePath, pageSuffix, pageWindow } from "@/lib/pagination";
 
 export const blogIndex = {
@@ -90,3 +91,65 @@ export const artikelPerKategori = (kategori: Kategori, entries: Artikel[]) =>
     href: `/blog/kategori/${kategori.slug}`,
     items: entries.map(artikelCard),
   }) satisfies ArtikelPerKategoriProps;
+
+const sameAsLabels: Record<string, string> = {
+  instagram: "Instagram",
+  tiktok: "TikTok",
+  github: "GitHub",
+  linkedin: "LinkedIn",
+};
+
+const sameAsLabel = (url: string) => {
+  const host = new URL(url).hostname.replace(/^www\./, "").split(".")[0];
+  return sameAsLabels[host] ?? host;
+};
+
+export const penulisMeta = (penulis: Penulis, page: number) => ({
+  title: `Artikel oleh ${penulis.name}${pageSuffix(page)}`,
+  description: `Kumpulan artikel di blog Akademi ASN oleh ${penulis.name}${
+    penulis.jobTitle ? `, ${penulis.jobTitle}` : ""
+  }. Setiap data seleksi di artikel mencantumkan sumbernya.`,
+});
+
+// Bio and links appear on page 1 only, like the intro of the other listings.
+export const artikelListingPenulis = (
+  penulis: Penulis,
+  page: number,
+  entries: Artikel[],
+  totalPages: number,
+) =>
+  ({
+    title: `${penulis.name}${pageSuffix(page)}`,
+    profile:
+      page === 1
+        ? {
+            avatar: penulis.avatar,
+            jobTitle: penulis.jobTitle,
+            bio: penulis.bio,
+            sameAs: penulis.sameAs.map((href) => ({ label: sameAsLabel(href), href })),
+          }
+        : undefined,
+    search: page === 1 ? searchArtikel : undefined,
+    heading: `Artikel oleh ${penulis.name}`,
+    headingVisible: page === 1,
+    items: entries.map(artikelCard),
+    emptyLabel,
+    pagination: pagination(`/blog/penulis/${penulis.slug}`, page, totalPages),
+  }) satisfies ArtikelListingProps;
+
+// A person gets a Person entity; the organization reuses the site-wide one.
+export const penulisJsonLd = (penulis: Penulis) => ({
+  "@context": "https://schema.org",
+  "@type": "ProfilePage",
+  mainEntity:
+    penulis.type === "person"
+      ? {
+          "@type": "Person",
+          name: penulis.name,
+          jobTitle: penulis.jobTitle,
+          image: `${siteUrl}${penulis.avatar.src}`,
+          sameAs: penulis.sameAs,
+          worksFor: edumatrix,
+        }
+      : { "@id": `${siteUrl}/#organization` },
+});

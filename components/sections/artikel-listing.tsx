@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import ArtikelCard, { type ArtikelCardProps } from "@/components/shared/artikel-card";
 import ArtikelPagination, { type ArtikelPaginationProps } from "@/components/shared/artikel-pagination";
@@ -7,6 +8,12 @@ export type ArtikelListingProps = {
   title: string;
   description?: string;
   landing?: { label: string; href: string };
+  profile?: {
+    avatar: { src: string; alt: string };
+    jobTitle?: string;
+    bio: string;
+    sameAs: { label: string; href: string }[];
+  };
   search?: SearchArtikelFormProps;
   heading: string;
   headingVisible: boolean;
@@ -19,6 +26,7 @@ const ArtikelListing = ({
   title,
   description,
   landing,
+  profile,
   search,
   heading,
   headingVisible,
@@ -35,6 +43,35 @@ const ArtikelListing = ({
           {landing.label}
         </Link>
       </p>
+    )}
+    {profile && (
+      <div className="mt-6 flex flex-col gap-4 sm:flex-row">
+        <Image
+          src={profile.avatar.src}
+          alt={profile.avatar.alt}
+          width={96}
+          height={96}
+          className="size-24 shrink-0 rounded-full object-cover"
+        />
+        <div className="max-w-3xl">
+          {profile.jobTitle && <p className="font-medium text-primary-dark">{profile.jobTitle}</p>}
+          <p className="mt-2 leading-relaxed">{profile.bio}</p>
+          <ul className="mt-3 flex flex-wrap gap-x-4 gap-y-1">
+            {profile.sameAs.map(({ label, href }) => (
+              <li key={href}>
+                <a
+                  href={href}
+                  target="_blank"
+                  rel="me noopener noreferrer"
+                  className="font-medium text-primary hover:underline"
+                >
+                  {label}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
     )}
     {search && (
       <div className="mt-6 max-w-md">

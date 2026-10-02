@@ -121,6 +121,14 @@ export const getRelatedArtikel = (entry: Artikel, limit = 3): Artikel[] => {
 export const getArtikelByKategori = (slug: string): Artikel[] =>
   getLatestArtikel(Infinity).filter((entry) => entry.kategori === slug);
 
+export const getArtikelByPenulis = (slug: string): Artikel[] =>
+  getLatestArtikel(Infinity).filter((entry) => entry.penulis === slug);
+
+// A Penulis page is indexable only with a published Artikel; the draft
+// fixture under `next dev` does not count.
+export const isPenulisIndexable = (slug: string) =>
+  entries.some((entry) => entry.status === "published" && entry.penulis === slug);
+
 // `undefined` for a page past the last one: the route turns it into a 404.
 const listing = (all: Artikel[], page: number, firstPageSize: number) => {
   const totalPages = pageCount(all.length, firstPageSize);
@@ -141,4 +149,10 @@ export const getKategoriListing = (slug: string, page: number) => {
   const kategori = getKategori(slug);
   const result = kategori && listing(getArtikelByKategori(slug), page, pageSize);
   return result && { kategori, ...result };
+};
+
+export const getPenulisListing = (slug: string, page: number) => {
+  const penulis = getPenulis(slug);
+  const result = penulis && listing(getArtikelByPenulis(slug), page, pageSize);
+  return result && { penulis, ...result };
 };

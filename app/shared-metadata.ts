@@ -44,6 +44,12 @@ export const listingMetadata = ({
     openGraph: { ...openGraphBase, url: path, title, description },
   }) satisfies Metadata;
 
+export const edumatrix = {
+  "@type": "Organization",
+  name: "Edumatrix Indonesia",
+  url: "https://edumatrix-indonesia.com/",
+};
+
 export const organizationJsonLd = {
   "@context": "https://schema.org",
   "@graph": [
@@ -87,11 +93,7 @@ export const organizationJsonLd = {
         "https://www.instagram.com/akademiasnofficial",
         "https://www.tiktok.com/@akademi.asn",
       ],
-      parentOrganization: {
-        "@type": "Organization",
-        name: "Edumatrix Indonesia",
-        url: "https://edumatrix-indonesia.com/",
-      },
+      parentOrganization: edumatrix,
     },
     {
       "@type": "WebSite",

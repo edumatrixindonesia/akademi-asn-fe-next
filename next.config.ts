@@ -11,6 +11,11 @@ const nextConfig: NextConfig = {
         destination: "/blog/kategori/:slug",
         permanent: true,
       },
+      {
+        source: "/blog/penulis/:slug/page/1",
+        destination: "/blog/penulis/:slug",
+        permanent: true,
+      },
     ];
   },
 };

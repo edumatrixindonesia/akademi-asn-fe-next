@@ -74,3 +74,11 @@ export const breadcrumbKategori = (kategori: { slug: string; name: string }) =>
       { name: kategori.name, href: `/blog/kategori/${kategori.slug}` },
     ],
   }) satisfies BreadcrumbProps;
+
+export const breadcrumbPenulis = (penulis: { slug: string; name: string }) =>
+  ({
+    items: [
+      ...breadcrumbBlog.items,
+      { name: penulis.name, href: `/blog/penulis/${penulis.slug}` },
+    ],
+  }) satisfies BreadcrumbProps;
