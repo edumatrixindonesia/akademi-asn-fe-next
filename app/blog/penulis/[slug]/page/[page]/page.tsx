@@ -4,7 +4,8 @@ import BlogPenulisPage from "@/components/pages/blog-penulis";
 import { penulisMeta } from "@/data/artikel-listing";
 import { penulis } from "@/data/penulis";
 import { getArtikelByPenulis, getPenulis, isPenulisIndexable } from "@/lib/artikel";
-import { pageCount, pageSize, parsePage } from "@/lib/pagination";
+import { penulisPath } from "@/lib/blog-path";
+import { pageCount, pagePath, pageSize, parsePage } from "@/lib/pagination";
 import { listingMetadata } from "../../../../../shared-metadata";
 
 export const dynamicParams = false;
@@ -29,7 +30,7 @@ export async function generateMetadata({
   return {
     ...listingMetadata({
       ...penulisMeta(entry, page),
-      path: `/blog/penulis/${entry.slug}/page/${page}`,
+      path: pagePath(penulisPath(entry.slug), page),
     }),
     robots: { index: isPenulisIndexable(entry.slug), follow: true },
   };

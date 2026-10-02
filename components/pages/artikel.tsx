@@ -7,14 +7,14 @@ import { artikelSidebar } from "@/data/artikel-sidebar";
 import { artikelTerkait } from "@/data/artikel-terkait";
 import { breadcrumbArtikel } from "@/data/breadcrumb";
 import { getKonsultasiUrl } from "@/data/contact";
-import { getKategori, getLatestArtikel, getRelatedArtikel, getWordCount } from "@/lib/artikel";
+import { getLatestArtikel, getRelatedArtikel, getWordCount, resolveArtikel } from "@/lib/artikel";
 import type { Artikel as ArtikelEntry } from "@/lib/artikel-schema";
 
 type ArtikelProps = { entry: ArtikelEntry };
 
 const Artikel = async ({ entry }: ArtikelProps) => {
   const { default: Body } = await import(`@/data/artikel/${entry.slug}.mdx`);
-  const kategori = getKategori(entry.kategori)!;
+  const { kategori } = resolveArtikel(entry);
   const konsultasiUrl = getKonsultasiUrl(`artikel "${entry.title}"`);
   const related = getRelatedArtikel(entry);
 

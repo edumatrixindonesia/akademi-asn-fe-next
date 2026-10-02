@@ -6,6 +6,7 @@ import { artikelCard } from "@/data/artikel-card";
 import { searchArtikel } from "@/data/artikel-sidebar";
 import { edumatrix, siteUrl } from "@/app/shared-metadata";
 import { pagePath, pageSuffix, pageWindow } from "@/lib/pagination";
+import { kategoriPath, penulisPath } from "@/lib/blog-path";
 
 export const blogIndex = {
   metaTitle: "Blog Info & Tips Seleksi CPNS, PPPK, BUMN",
@@ -80,7 +81,7 @@ export const artikelListingKategori = (
     headingVisible: false,
     items: entries.map(artikelCard),
     emptyLabel,
-    pagination: pagination(`/blog/kategori/${kategori.slug}`, page, totalPages),
+    pagination: pagination(kategoriPath(kategori.slug), page, totalPages),
   } satisfies ArtikelListingProps;
 };
 
@@ -99,7 +100,7 @@ export const artikelPerKategori = (kategori: Kategori, entries: Artikel[]) =>
   ({
     title: kategori.title,
     linkLabel: "Lihat Semua",
-    href: `/blog/kategori/${kategori.slug}`,
+    href: kategoriPath(kategori.slug),
     items: entries.map(artikelCard),
   }) satisfies ArtikelPerKategoriProps;
 
@@ -133,7 +134,7 @@ export const artikelListingPenulis = (
     headingVisible: page === 1,
     items: entries.map(artikelCard),
     emptyLabel,
-    pagination: pagination(`/blog/penulis/${penulis.slug}`, page, totalPages),
+    pagination: pagination(penulisPath(penulis.slug), page, totalPages),
   }) satisfies ArtikelListingProps;
 
 // A person gets a Person entity; the organization reuses the site-wide one.

@@ -1,5 +1,6 @@
 import type { BreadcrumbProps } from "@/components/sections/breadcrumb";
 import { regionLink, type ResolvedLocation } from "@/lib/location-tree";
+import { kategoriPath, penulisPath } from "@/lib/blog-path";
 
 const beranda = { name: "Beranda", href: "/" };
 
@@ -58,7 +59,7 @@ export const breadcrumbArtikel = (
     items: [
       beranda,
       { name: "Blog", href: "/blog" },
-      { name: kategori.name, href: `/blog/kategori/${kategori.slug}` },
+      { name: kategori.name, href: kategoriPath(kategori.slug) },
       { name: title, href: `/blog/${slug}` },
     ],
   }) satisfies BreadcrumbProps;
@@ -75,7 +76,7 @@ export const breadcrumbKategori = (kategori: { slug: string; name: string }) =>
   ({
     items: [
       ...breadcrumbBlog.items,
-      { name: kategori.name, href: `/blog/kategori/${kategori.slug}` },
+      { name: kategori.name, href: kategoriPath(kategori.slug) },
     ],
   }) satisfies BreadcrumbProps;
 
@@ -83,6 +84,6 @@ export const breadcrumbPenulis = (penulis: { slug: string; name: string }) =>
   ({
     items: [
       ...breadcrumbBlog.items,
-      { name: penulis.name, href: `/blog/penulis/${penulis.slug}` },
+      { name: penulis.name, href: penulisPath(penulis.slug) },
     ],
   }) satisfies BreadcrumbProps;

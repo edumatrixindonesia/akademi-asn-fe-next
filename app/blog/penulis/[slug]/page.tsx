@@ -4,6 +4,7 @@ import BlogPenulisPage from "@/components/pages/blog-penulis";
 import { penulisMeta } from "@/data/artikel-listing";
 import { penulis } from "@/data/penulis";
 import { getPenulis, isPenulisIndexable } from "@/lib/artikel";
+import { penulisPath } from "@/lib/blog-path";
 import { listingMetadata } from "../../../shared-metadata";
 
 export const dynamicParams = false;
@@ -17,7 +18,7 @@ export async function generateMetadata({
   if (!entry) return {};
 
   return {
-    ...listingMetadata({ ...penulisMeta(entry, 1), path: `/blog/penulis/${entry.slug}` }),
+    ...listingMetadata({ ...penulisMeta(entry, 1), path: penulisPath(entry.slug) }),
     robots: { index: isPenulisIndexable(entry.slug), follow: true },
   };
 }

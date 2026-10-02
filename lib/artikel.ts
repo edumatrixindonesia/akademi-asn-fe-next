@@ -35,21 +35,37 @@ export const getArtikel = (slug: string) =>
 export const getKategori = (slug: string) => kategori.find((entry) => entry.slug === slug);
 export const getPenulis = (slug: string) => penulis.find((entry) => entry.slug === slug);
 
+// An Artikel's Kategori and the fields that fall back to it or to the title.
+// `KategoriSlug` types the slug, so the lookup always finds an entry.
+export const resolveArtikel = (entry: Artikel) => {
+  const kategori = getKategori(entry.kategori)!;
+  return {
+    kategori,
+    cover: entry.cover ?? kategori.cover,
+    seoTitle: entry.seoTitle ?? entry.title,
+  };
+};
+
 const readBody = (slug: string) =>
   readFileSync(path.join(bodyDir, `${slug}.mdx`), "utf8");
 
-// ponytail: strips markup with regexes, so counts are approximate (about
-// 200 wpm); use an MDX AST walk if exact counts ever matter.
+// ponytail: strips markup with regexes, so counts are approximate (link URLs
+// count as words); use an MDX AST walk if exact counts ever matter. A
+// hyphenated word (`anak-anak`) counts once: only tokens with a letter or
+// digit count, so list markers and table rules count zero.
+export const countWords = (body: string): number =>
+  body
+    .replace(/<[^>]*>/g, " ")
+    .replace(/[#*_>`|[\]()]/g, " ")
+    .split(/\s+/)
+    .filter((token) => /[\p{L}\p{N}]/u.test(token)).length;
+
 const wordCounts = new Map<string, number>();
 
 export const getWordCount = (slug: string): number => {
   let count = wordCounts.get(slug);
   if (count === undefined) {
-    count = readBody(slug)
-      .replace(/<[^>]*>/g, " ")
-      .replace(/[#*_>`|[\]()-]/g, " ")
-      .split(/\s+/)
-      .filter(Boolean).length;
+    count = countWords(readBody(slug));
     wordCounts.set(slug, count);
   }
   return count;

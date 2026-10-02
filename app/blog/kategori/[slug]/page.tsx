@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 import BlogKategoriPage from "@/components/pages/blog-kategori";
 import { kategori } from "@/data/kategori";
 import { getKategori } from "@/lib/artikel";
+import { kategoriPath } from "@/lib/blog-path";
 import { listingMetadata } from "../../../shared-metadata";
 
 export const dynamicParams = false;
@@ -18,7 +19,7 @@ export async function generateMetadata({
   return listingMetadata({
     title: entry.seoTitle,
     description: entry.metaDescription,
-    path: `/blog/kategori/${entry.slug}`,
+    path: kategoriPath(entry.slug),
   });
 }
 

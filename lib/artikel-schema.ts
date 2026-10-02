@@ -80,6 +80,15 @@ export const validateArtikel = (
     }
   }
 
+  for (const { slug, related = [] } of entries) {
+    if (related.length > 3) errors.push(`"${slug}" has more than 3 related slugs.`);
+    if (new Set(related).size < related.length) errors.push(`"${slug}" repeats a related slug.`);
+    for (const other of related) {
+      if (other === slug) errors.push(`"${slug}" lists itself as related.`);
+      else if (!slugs.has(other)) errors.push(`"${slug}" related "${other}" has no entry.`);
+    }
+  }
+
   for (const slug of bodySlugs) {
     if (!slugs.has(slug)) errors.push(`data/artikel/${slug}.mdx has no entry in data/artikel.ts.`);
   }

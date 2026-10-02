@@ -2,22 +2,22 @@ import { siteUrl } from "@/app/shared-metadata";
 import type { ArtikelDetailProps } from "@/components/sections/artikel-detail";
 import type { Artikel } from "@/lib/artikel-schema";
 import { konsultasiPertanyaan } from "@/data/artikel-konsultasi";
-import { dated, getHeadings, getKategori, getPenulis, getReadingLabel } from "@/lib/artikel";
+import { dated, getHeadings, getPenulis, getReadingLabel, resolveArtikel } from "@/lib/artikel";
+import { kategoriPath, penulisPath } from "@/lib/blog-path";
 
 export const artikelDetail = (entry: Artikel, wordCount: number, konsultasiUrl: string) => {
-  const kategori = getKategori(entry.kategori)!;
+  const { kategori, cover } = resolveArtikel(entry);
   const penulis = getPenulis(entry.penulis)!;
-  const cover = entry.cover ?? kategori.cover;
   const url = `${siteUrl}/blog/${entry.slug}`;
   const shareUrl = encodeURIComponent(url);
   const shareText = encodeURIComponent(entry.title);
 
   return {
-    kategori: { name: kategori.name, href: `/blog/kategori/${kategori.slug}` },
+    kategori: { name: kategori.name, href: kategoriPath(kategori.slug) },
     title: entry.title,
     penulis: {
       name: penulis.name,
-      href: `/blog/penulis/${penulis.slug}`,
+      href: penulisPath(penulis.slug),
       jobTitle: penulis.jobTitle,
       bio: penulis.bio,
       avatar: penulis.avatar,
@@ -59,7 +59,7 @@ export const artikelDetail = (entry: Artikel, wordCount: number, konsultasiUrl: 
               "@type": "Person",
               name: penulis.name,
               jobTitle: penulis.jobTitle,
-              url: `${siteUrl}/blog/penulis/${penulis.slug}`,
+              url: `${siteUrl}${penulisPath(penulis.slug)}`,
               sameAs: penulis.sameAs.map(({ href }) => href),
             }
           : { "@id": `${siteUrl}/#organization` },

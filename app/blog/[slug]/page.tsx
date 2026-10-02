@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import ArtikelPage from "@/components/pages/artikel";
-import { getArtikel, getKategori, getVisibleArtikel } from "@/lib/artikel";
+import { getArtikel, getVisibleArtikel, resolveArtikel } from "@/lib/artikel";
 import { openGraphBase, rssAlternate } from "../../shared-metadata";
 
 export const dynamicParams = false;
@@ -15,19 +15,18 @@ export async function generateMetadata({
   const entry = getArtikel((await params).slug);
   if (!entry) return {};
 
-  const kategori = getKategori(entry.kategori)!;
-  const cover = entry.cover ?? kategori.cover;
+  const { kategori, cover, seoTitle } = resolveArtikel(entry);
   const url = `/blog/${entry.slug}`;
 
   return {
-    title: entry.seoTitle ?? entry.title,
+    title: seoTitle,
     description: entry.description,
     alternates: { canonical: url, types: rssAlternate },
     openGraph: {
       ...openGraphBase,
       type: "article",
       url,
-      title: entry.seoTitle ?? entry.title,
+      title: seoTitle,
       description: entry.description,
       images: [{ url: cover.src, width: 1200, height: 630, alt: cover.alt }],
       publishedTime: entry.publishedAt,

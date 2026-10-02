@@ -8,6 +8,7 @@ import {
   getVisibleArtikel,
   isPenulisIndexable,
 } from "@/lib/artikel";
+import { kategoriPath, penulisPath } from "@/lib/blog-path";
 import { blogFirstPageSize, pageCount, pagePath, pageSize } from "@/lib/pagination";
 import { getRegionLists } from "@/lib/region-service";
 import { siteUrl } from "./shared-metadata";
@@ -30,11 +31,11 @@ const blogUrls = (): MetadataRoute.Sitemap => {
     ...kategori
       .map(({ slug }) => ({ slug, total: getArtikelByKategori(slug).length }))
       .filter(({ total }) => total > 0)
-      .flatMap(({ slug, total }) => listingUrls(`/blog/kategori/${slug}`, total, pageSize)),
+      .flatMap(({ slug, total }) => listingUrls(kategoriPath(slug), total, pageSize)),
     ...penulis
       .filter(({ slug }) => isPenulisIndexable(slug))
       .flatMap(({ slug }) =>
-        listingUrls(`/blog/penulis/${slug}`, getArtikelByPenulis(slug).length, pageSize),
+        listingUrls(penulisPath(slug), getArtikelByPenulis(slug).length, pageSize),
       ),
     ...entries.map((entry) => ({
       url: `${siteUrl}/blog/${entry.slug}`,

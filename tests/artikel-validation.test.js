@@ -37,3 +37,15 @@ test("published needs publishedAt and references; draft does not", () => {
   expect(validateArtikel([entry({ references: [] })], ["contoh"])).toHaveLength(1);
   expect(validateArtikel([entry({ status: "draft", publishedAt: undefined, references: [] })], ["contoh"])).toEqual([]);
 });
+
+test("related allows up to 3 distinct slugs of other entries (forward references too)", () => {
+  const later = entry({ slug: "nanti", focusKeyword: "nanti" });
+  expect(validateArtikel([entry({ related: ["nanti"] }), later], ["contoh", "nanti"])).toEqual([]);
+  expect(validateArtikel([entry({ related: ["a", "b", "c", "d"] })], ["contoh"]).join()).toContain("more than 3");
+  const errors = validateArtikel([entry({ related: ["hilang"] })], ["contoh"]);
+  expect(errors).toHaveLength(1);
+  expect(errors[0]).toContain("hilang");
+  expect(validateArtikel([entry({ related: ["contoh"] })], ["contoh"]).join()).toContain("itself");
+  const twice = validateArtikel([entry({ related: ["nanti", "nanti"] }), later], ["contoh", "nanti"]);
+  expect(twice.join()).toContain("repeats");
+});
