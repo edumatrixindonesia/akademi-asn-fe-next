@@ -46,7 +46,8 @@ test("each Kategori page renders one h1, a canonical, and the cards of its Kateg
     expect([...html.matchAll(/<h1\b/g)]).toHaveLength(1);
     expect(html).toContain(`>${title}</h1>`);
     expect(html).toMatch(new RegExp(`<link rel="canonical" href="[^"]+/blog/kategori/${slug}"`));
-    expect(html.includes(`href="/bimbel-${slug}"`)).toBe(slug !== "tips-info");
+    const main = html.slice(html.indexOf("<main"));
+    expect(main.includes(`href="/bimbel-${slug}"`)).toBe(slug !== "tips-info");
   }
 });
 

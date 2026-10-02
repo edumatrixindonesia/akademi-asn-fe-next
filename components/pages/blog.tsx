@@ -5,9 +5,8 @@ import KonsultasiCard from "@/components/shared/konsultasi-card";
 import { artikelListingBlog, artikelPerKategori } from "@/data/artikel-listing";
 import { konsultasiMdx } from "@/data/artikel-konsultasi";
 import { breadcrumbBlog } from "@/data/breadcrumb";
-import { kategori } from "@/data/kategori";
 import { getKonsultasiUrl } from "@/data/contact";
-import { getArtikelByKategori, getBlogListing } from "@/lib/artikel";
+import { getBlogListing, getKategoriSections } from "@/lib/artikel";
 import { notFound } from "next/navigation";
 
 type BlogProps = { page: number };
@@ -22,12 +21,9 @@ const Blog = ({ page }: BlogProps) => {
       <ArtikelListing {...artikelListingBlog(page, listing.entries, listing.totalPages)} />
       {page === 1 && (
         <>
-          {kategori.map((entry) => {
-            const entries = getArtikelByKategori(entry.slug).slice(0, 3);
-            return entries.length > 0 ? (
-              <ArtikelPerKategori key={entry.slug} {...artikelPerKategori(entry, entries)} />
-            ) : null;
-          })}
+          {getKategoriSections().map(({ kategori, entries }) => (
+            <ArtikelPerKategori key={kategori.slug} {...artikelPerKategori(kategori, entries)} />
+          ))}
           <div className="container-section pt-0! md:pt-0!">
             <KonsultasiCard {...konsultasiMdx(getKonsultasiUrl("Blog Akademi ASN"))} />
           </div>

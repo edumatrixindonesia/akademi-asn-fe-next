@@ -39,12 +39,20 @@ const readBody = (slug: string) =>
 
 // ponytail: strips markup with regexes, so counts are approximate (about
 // 200 wpm); use an MDX AST walk if exact counts ever matter.
-export const getWordCount = (slug: string): number =>
-  readBody(slug)
-    .replace(/<[^>]*>/g, " ")
-    .replace(/[#*_>`|[\]()-]/g, " ")
-    .split(/\s+/)
-    .filter(Boolean).length;
+const wordCounts = new Map<string, number>();
+
+export const getWordCount = (slug: string): number => {
+  let count = wordCounts.get(slug);
+  if (count === undefined) {
+    count = readBody(slug)
+      .replace(/<[^>]*>/g, " ")
+      .replace(/[#*_>`|[\]()-]/g, " ")
+      .split(/\s+/)
+      .filter(Boolean).length;
+    wordCounts.set(slug, count);
+  }
+  return count;
+};
 
 export const getReadingMinutes = (wordCount: number) =>
   Math.max(1, Math.ceil(wordCount / 200));
@@ -119,6 +127,12 @@ const listing = (all: Artikel[], page: number, firstPageSize: number) => {
   if (page > totalPages) return undefined;
   return { entries: pageSlice(all, page, firstPageSize), totalPages };
 };
+
+// Kategori sections on /blog: three newest each, empty Kategori left out.
+export const getKategoriSections = () =>
+  kategori
+    .map((entry) => ({ kategori: entry, entries: getArtikelByKategori(entry.slug).slice(0, 3) }))
+    .filter(({ entries }) => entries.length > 0);
 
 export const getBlogListing = (page: number) =>
   listing(getLatestArtikel(Infinity), page, blogFirstPageSize);
