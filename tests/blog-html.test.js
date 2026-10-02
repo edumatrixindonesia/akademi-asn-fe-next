@@ -109,3 +109,30 @@ test("/blog/cari is noindex, escapes q, and shows empty states", async () => {
     expect(hit).toContain(`href="/blog/${artikel[0].slug}"`);
   }
 });
+
+test("/blog/rss.xml serves RSS 2.0 and blog pages link to it", async () => {
+  const response = await fetch(`${baseUrl}/blog/rss.xml`);
+  expect(response.status).toBe(200);
+  expect(response.headers.get("content-type")).toContain("application/rss+xml");
+  expect(await response.text()).toContain('<rss version="2.0"');
+
+  const html = await (await fetch(`${baseUrl}/blog`)).text();
+  expect(html).toMatch(/<link rel="alternate" type="application\/rss\+xml" href="[^"]+\/blog\/rss\.xml"/);
+});
+
+test("sitemap lists blog pages, Kategori pages, and Artikel", async () => {
+  const xml = await (await fetch(`${baseUrl}/sitemap.xml`)).text();
+  expect(xml).toMatch(/<loc>[^<]+\/blog<\/loc>/);
+  for (const { slug } of kategori) {
+    expect(xml).toMatch(new RegExp(`<loc>[^<]+/blog/kategori/${slug}</loc>`));
+  }
+  for (const { slug } of artikel) {
+    expect(xml).toMatch(new RegExp(`<loc>[^<]+/blog/${slug}</loc>`));
+  }
+});
+
+test("navbar and footer link to /blog", async () => {
+  const html = await (await fetch(`${baseUrl}/`)).text();
+  expect(html).toMatch(/<a[^>]*href="\/blog"[^>]*>Blog<\/a>/);
+  expect(html).toMatch(/<a[^>]*href="\/blog"[^>]*>BLOG<\/a>/);
+});

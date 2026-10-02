@@ -27,6 +27,9 @@ export const openGraphBase = {
   ],
 } satisfies Metadata["openGraph"];
 
+// Blog pages advertise the feed to readers and crawlers.
+export const rssAlternate = { "application/rss+xml": "/blog/rss.xml" };
+
 // Listing pages: every page canonical to itself.
 export const listingMetadata = ({
   title,
@@ -40,7 +43,7 @@ export const listingMetadata = ({
   ({
     title,
     description,
-    alternates: { canonical: path },
+    alternates: { canonical: path, types: rssAlternate },
     openGraph: { ...openGraphBase, url: path, title, description },
   }) satisfies Metadata;
 

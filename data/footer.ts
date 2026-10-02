@@ -47,6 +47,7 @@ export const footerDefault = (konsultasiUrl: string) =>
         { label: "Bimbel BUMN 🔥", href: "/bimbel-bumn" },
       ],
     },
+    blog: { label: "BLOG", href: "/blog" },
     image: {
       src: "/img/section/bimbel-cpns-pppk-bumn-terbaik-akademi-asn.webp",
       alt: "Bimbel CPNS, PPPK, dan BUMN terbaik Akademi ASN",

@@ -20,6 +20,7 @@ export type FooterProps = {
   };
   otherWebsite: { title: string; link: FooterLink };
   examTracks: { title: string; links: FooterLink[] };
+  blog: FooterLink;
   image: { src: string; alt: string };
   copyright: string;
 };
@@ -34,6 +35,7 @@ const Footer = ({
   consultation,
   otherWebsite,
   examTracks,
+  blog,
   image,
   copyright,
 }: FooterProps) => (
@@ -104,6 +106,13 @@ const Footer = ({
         >
           {otherWebsite.link.label}
         </a>
+
+        <Link
+          href={blog.href}
+          className="w-fit text-sm font-bold transition-colors hover:text-white/80"
+        >
+          {blog.label}
+        </Link>
 
         <h2 className="text-md font-bold uppercase tracking-wide text-background mt-4">
           {examTracks.title}

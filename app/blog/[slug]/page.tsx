@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import ArtikelPage from "@/components/pages/artikel";
 import { getArtikel, getKategori, getVisibleArtikel } from "@/lib/artikel";
-import { openGraphBase } from "../../shared-metadata";
+import { openGraphBase, rssAlternate } from "../../shared-metadata";
 
 export const dynamicParams = false;
 
@@ -22,7 +22,7 @@ export async function generateMetadata({
   return {
     title: entry.seoTitle ?? entry.title,
     description: entry.description,
-    alternates: { canonical: url },
+    alternates: { canonical: url, types: rssAlternate },
     openGraph: {
       ...openGraphBase,
       type: "article",

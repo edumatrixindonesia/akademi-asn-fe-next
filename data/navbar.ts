@@ -8,6 +8,7 @@ export const navbarDefault = (konsultasiUrl: string) =>
       { label: "Testimoni", href: "#testimoni" },
       { label: "Tryout", href: "/tryout-bimbel-cpns-pppk-bumn-terbaik" },
       { label: "Produk", href: "/produk-bimbel-cpns-pppk-bumn-terbaik" },
+      { label: "Blog", href: "/blog" },
     ],
     cta: {
       label: "Konsultasi Gratis",

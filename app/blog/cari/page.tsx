@@ -1,11 +1,12 @@
 import type { Metadata } from "next";
 import BlogCariPage from "@/components/pages/blog-cari";
+import { rssAlternate } from "../../shared-metadata";
 
 // Results are never indexed and the canonical stays the bare search URL, so
 // no query URL competes with the listings.
 export const metadata: Metadata = {
   title: "Cari Artikel",
-  alternates: { canonical: "/blog/cari" },
+  alternates: { canonical: "/blog/cari", types: rssAlternate },
   robots: { index: false, follow: true },
 };
 
