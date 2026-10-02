@@ -1,6 +1,6 @@
 # Blog
 
-Status: ready-for-agent
+Status: ready-for-human (Rich Results Test blocked by a Google sign-in error; see issue 10)
 
 ## Summary
 
@@ -14,22 +14,22 @@ Akademi ASN gets a Blog of Artikel that answer informational searches about CPNS
 - New dependencies, approved by the owner: `@next/mdx`, `@mdx-js/loader`, `@mdx-js/react`, `@types/mdx`. No others.
 - Artikel fields:
 
-  | Field | Required | Notes |
-  | --- | --- | --- |
-  | `slug` | yes | Unique. URL `/blog/{slug}`. |
-  | `title` | yes | `h1` and card title. ≤ 50 characters so `"{title} \| Akademi ASN"` stays ≤ 65. |
-  | `seoTitle` | no | Overrides the `<title>` part when it must differ from `h1`. |
-  | `description` | yes | Meta description, 120–160 characters. |
-  | `excerpt` | yes | Lead at the top of the Artikel, card text, RSS description. |
-  | `kategori` | yes | One Kategori slug. |
-  | `penulis` | yes | One Penulis slug. Default `tim-akademi-asn`. |
-  | `status` | yes | `"draft"` or `"published"`. |
-  | `publishedAt` | when published | ISO date. Set once, never changed. |
-  | `updatedAt` | no | ISO date, shown as "Diperbarui {date}". |
-  | `focusKeyword` | yes | Unique across Artikel. Never rendered. |
-  | `cover` | no | `{ src, alt }`, 1200×630. Falls back to the Kategori default cover. |
-  | `references` | yes | `{ title, url, publisher, accessedAt }[]`, at least one official source. |
-  | `related` | no | Up to 3 slugs for Artikel Terkait. |
+  | Field          | Required       | Notes                                                                          |
+  | -------------- | -------------- | ------------------------------------------------------------------------------ |
+  | `slug`         | yes            | Unique. URL `/blog/{slug}`.                                                    |
+  | `title`        | yes            | `h1` and card title. ≤ 50 characters so `"{title} \| Akademi ASN"` stays ≤ 65. |
+  | `seoTitle`     | no             | Overrides the `<title>` part when it must differ from `h1`.                    |
+  | `description`  | yes            | Meta description, 120–160 characters.                                          |
+  | `excerpt`      | yes            | Lead at the top of the Artikel, card text, RSS description.                    |
+  | `kategori`     | yes            | One Kategori slug.                                                             |
+  | `penulis`      | yes            | One Penulis slug. Default `tim-akademi-asn`.                                   |
+  | `status`       | yes            | `"draft"` or `"published"`.                                                    |
+  | `publishedAt`  | when published | ISO date. Set once, never changed.                                             |
+  | `updatedAt`    | no             | ISO date, shown as "Diperbarui {date}".                                        |
+  | `focusKeyword` | yes            | Unique across Artikel. Never rendered.                                         |
+  | `cover`        | no             | `{ src, alt }`, 1200×630. Falls back to the Kategori default cover.            |
+  | `references`   | yes            | `{ title, url, publisher, accessedAt }[]`, at least one official source.       |
+  | `related`      | no             | Up to 3 slugs for Artikel Terkait.                                             |
 
 - Reading time is computed from the body's word count at about 200 words per minute, never stored.
 - Kategori (`data/kategori.ts`): `slug`, `name`, `title` (`h1`), `seoTitle`, `metaDescription`, `description`, `cover`. Exactly four: `cpns`, `pppk`, `bumn`, `tips-info`. Each exam-track Kategori links to its landing page (`/bimbel-cpns`, …).
@@ -44,14 +44,14 @@ Akademi ASN gets a Blog of Artikel that answer informational searches about CPNS
 
 All blog routes are statically generated with `generateStaticParams`, except search. The root `app/[...locations]` catch-all does not interfere, because `blog` is a static segment.
 
-| Route | Content | robots |
-| --- | --- | --- |
-| `/blog`, `/blog/page/{n}` | `h1` + intro, search form, Artikel Terbaru (6 newest), one section per Kategori (3 cards + "Lihat Semua"; hidden when empty), CTA Konsultasi, pagination to page 2. From page 2 on: only `h1` and a 12-card grid continuing the chronological list after the 6 on `/blog` (page *n* shows Artikel 6 + (n−2)×12 + 1 to 6 + (n−1)×12; there are 1 + ⌈(N−6)/12⌉ pages). | index |
-| `/blog/{slug}` | The Artikel page, below. | index |
-| `/blog/kategori/{slug}`, `…/page/{n}` | `h1`, unique description, 12-card grid, pagination. | index |
-| `/blog/penulis/{slug}`, `…/page/{n}` | Avatar, name, job title, bio, `sameAs` links, 12-card grid or "Belum ada artikel". | index when the Penulis has ≥ 1 published Artikel, otherwise `noindex, follow` and absent from the sitemap |
-| `/blog/cari?q=…` | Results grid. Matches `q` case-insensitively in title, excerpt, and focus keyword. | `noindex, follow` |
-| `/blog/rss.xml` | RSS 2.0, the 20 newest published Artikel. | – |
+| Route                                 | Content                                                                                                                                                                                                                                                                                                                                                              | robots                                                                                                    |
+| ------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- |
+| `/blog`, `/blog/page/{n}`             | `h1` + intro, search form, Artikel Terbaru (6 newest), one section per Kategori (3 cards + "Lihat Semua"; hidden when empty), CTA Konsultasi, pagination to page 2. From page 2 on: only `h1` and a 12-card grid continuing the chronological list after the 6 on `/blog` (page _n_ shows Artikel 6 + (n−2)×12 + 1 to 6 + (n−1)×12; there are 1 + ⌈(N−6)/12⌉ pages). | index                                                                                                     |
+| `/blog/{slug}`                        | The Artikel page, below.                                                                                                                                                                                                                                                                                                                                             | index                                                                                                     |
+| `/blog/kategori/{slug}`, `…/page/{n}` | `h1`, unique description, 12-card grid, pagination.                                                                                                                                                                                                                                                                                                                  | index                                                                                                     |
+| `/blog/penulis/{slug}`, `…/page/{n}`  | Avatar, name, job title, bio, `sameAs` links, 12-card grid or "Belum ada artikel".                                                                                                                                                                                                                                                                                   | index when the Penulis has ≥ 1 published Artikel, otherwise `noindex, follow` and absent from the sitemap |
+| `/blog/cari?q=…`                      | Results grid. Matches `q` case-insensitively in title, excerpt, and focus keyword.                                                                                                                                                                                                                                                                                   | `noindex, follow`                                                                                         |
+| `/blog/rss.xml`                       | RSS 2.0, the 20 newest published Artikel.                                                                                                                                                                                                                                                                                                                            | –                                                                                                         |
 
 - Pagination: path segments, 12 per page, the first page lives at the base URL and `…/page/1` permanently redirects there, every page canonical to itself, numbered links plus previous/next. A page number past the last page returns 404.
 - The `…/page/1` redirects are three `redirects()` rules in `next.config.ts` with `permanent: true` (308).
@@ -87,12 +87,12 @@ No pop-ups, floating banners, or comments. The page is a Server Component; it ne
 
 The writing guide may use only these, plus standard Markdown (headings `##`/`###`, lists, bold, italic, links, tables, blockquotes):
 
-| Component | Renders |
-| --- | --- |
-| `<BacaJuga slug="…" />` | "Baca Juga: {title}" link, title read from `data/artikel.ts`. Fails the build on an unknown or draft slug in production. |
-| `<CtaKonsultasi topic="…" />` | A Konsultasi CTA block linking to `getKonsultasiUrl(topic)`. |
-| `<LatihanSoal>` with `question`, `options`, `answer`, `explanation` | A question with options; the answer and explanation sit in a native `<details>` ("Lihat jawaban"). |
-| `<Contoh title="…">` | A labelled "Contoh" box that keeps line breaks and formatting, for example documents and answers ("contoh surat lamaran", "contoh jawaban wawancara"). |
+| Component                                                           | Renders                                                                                                                                                |
+| ------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `<BacaJuga slug="…" />`                                             | "Baca Juga: {title}" link, title read from `data/artikel.ts`. Fails the build on an unknown or draft slug in production.                               |
+| `<CtaKonsultasi topic="…" />`                                       | A Konsultasi CTA block linking to `getKonsultasiUrl(topic)`.                                                                                           |
+| `<LatihanSoal>` with `question`, `options`, `answer`, `explanation` | A question with options; the answer and explanation sit in a native `<details>` ("Lihat jawaban").                                                     |
+| `<Contoh title="…">`                                                | A labelled "Contoh" box that keeps line breaks and formatting, for example documents and answers ("contoh surat lamaran", "contoh jawaban wawancara"). |
 
 Dialogues (e.g. interview simulations) use plain Markdown, one bold speaker label per paragraph; no `<Dialog>` component until Markdown proves insufficient.
 
@@ -104,7 +104,7 @@ Headings get stable `id`s for the Daftar isi. Links to landing pages use `next/l
 - `alternates.canonical` on every blog page; `openGraph` spreads `openGraphBase`, with `type: "article"`, the cover as image, `publishedTime`, `modifiedTime`, and `section` on Artikel pages.
 - RSS is linked through `alternates.types` on blog pages.
 - JSON-LD on the Artikel page: `BlogPosting` with `headline`, `description`, `image`, `datePublished`, `dateModified`, `author` (`Person` or the existing `#organization`), `publisher` (`#organization`), `mainEntityOfPage`, `articleSection`, `wordCount`, `inLanguage: "id-ID"`. Penulis pages emit `ProfilePage` with `Person` (`name`, `jobTitle`, `image`, `sameAs`, `worksFor` → Edumatrix Indonesia) or reference the organization.
-- `app/sitemap.ts` adds `/blog`, its pages, the Kategori pages and their pages, indexable Penulis pages, and every published Artikel with `lastModified` (`updatedAt ?? publishedAt`).
+- `app/sitemap.ts` adds `/blog`, its pages, Kategori pages with published Artikel and their pages, indexable Penulis pages, and every published Artikel with `lastModified` (`updatedAt ?? publishedAt`). Empty Kategori pages stay reachable but are omitted from the sitemap to avoid promoting thin listings.
 
 ### Default covers
 
@@ -145,12 +145,12 @@ All copy below states only facts already in the repo. Approved by the owner on 2
 
 ### Kategori
 
-| Slug | Name | `h1` | `<title>` part | Meta description | Description (on the page) |
-| --- | --- | --- | --- | --- | --- |
-| `cpns` | CPNS | Artikel Seleksi CPNS | Artikel Seleksi CPNS: SKD, SKB, dan Tips | Artikel seputar seleksi CPNS: tahapan SKD dan SKB, materi TWK, TIU, dan TKP, serta tips persiapannya dari Akademi ASN. | Artikel tentang seleksi Calon Pegawai Negeri Sipil (CPNS), mulai dari tahapan Seleksi Kompetensi Dasar (SKD) dan Seleksi Kompetensi Bidang (SKB), materi TWK, TIU, dan TKP, hingga tips persiapannya. |
-| `pppk` | PPPK | Artikel Seleksi PPPK | Artikel Seleksi PPPK: Seleksi Kompetensi dan Tips | Artikel seputar seleksi PPPK: kompetensi teknis, manajerial, sosial kultural, dan wawancara, serta tips persiapannya dari Akademi ASN. | Artikel tentang seleksi Pegawai Pemerintah dengan Perjanjian Kerja (PPPK), mulai dari seleksi kompetensi teknis, manajerial, sosial kultural, dan wawancara, hingga tips persiapannya. |
-| `bumn` | BUMN | Artikel Rekrutmen Bersama BUMN | Artikel Rekrutmen Bersama BUMN: Tes dan Tips | Artikel seputar Rekrutmen Bersama BUMN: tes online tahap awal, tes lanjutan di tiap perusahaan, dan tips persiapannya dari Akademi ASN. | Artikel tentang Rekrutmen Bersama BUMN, mulai dari tes online tahap awal, tes lanjutan di masing-masing perusahaan, hingga tips persiapannya. |
-| `tips-info` | Tips & Info | Tips & Info Seleksi CPNS, PPPK, dan BUMN | Tips & Info Seleksi CPNS, PPPK, BUMN | Tips dan info lintas seleksi CPNS, PPPK, dan BUMN dari Akademi ASN: perbedaan jalur, persiapan dokumen, dan cara belajar. | Tips dan informasi yang berlaku lintas seleksi CPNS, PPPK, dan BUMN, seperti perbedaan jalur seleksi, persiapan dokumen, dan cara belajar. |
+| Slug        | Name        | `h1`                                     | `<title>` part                                    | Meta description                                                                                                                        | Description (on the page)                                                                                                                                                                             |
+| ----------- | ----------- | ---------------------------------------- | ------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `cpns`      | CPNS        | Artikel Seleksi CPNS                     | Artikel Seleksi CPNS: SKD, SKB, dan Tips          | Artikel seputar seleksi CPNS: tahapan SKD dan SKB, materi TWK, TIU, dan TKP, serta tips persiapannya dari Akademi ASN.                  | Artikel tentang seleksi Calon Pegawai Negeri Sipil (CPNS), mulai dari tahapan Seleksi Kompetensi Dasar (SKD) dan Seleksi Kompetensi Bidang (SKB), materi TWK, TIU, dan TKP, hingga tips persiapannya. |
+| `pppk`      | PPPK        | Artikel Seleksi PPPK                     | Artikel Seleksi PPPK: Seleksi Kompetensi dan Tips | Artikel seputar seleksi PPPK: kompetensi teknis, manajerial, sosial kultural, dan wawancara, serta tips persiapannya dari Akademi ASN.  | Artikel tentang seleksi Pegawai Pemerintah dengan Perjanjian Kerja (PPPK), mulai dari seleksi kompetensi teknis, manajerial, sosial kultural, dan wawancara, hingga tips persiapannya.                |
+| `bumn`      | BUMN        | Artikel Rekrutmen Bersama BUMN           | Artikel Rekrutmen Bersama BUMN: Tes dan Tips      | Artikel seputar Rekrutmen Bersama BUMN: tes online tahap awal, tes lanjutan di tiap perusahaan, dan tips persiapannya dari Akademi ASN. | Artikel tentang Rekrutmen Bersama BUMN, mulai dari tes online tahap awal, tes lanjutan di masing-masing perusahaan, hingga tips persiapannya.                                                         |
+| `tips-info` | Tips & Info | Tips & Info Seleksi CPNS, PPPK, dan BUMN | Tips & Info Seleksi CPNS, PPPK, BUMN              | Tips dan info lintas seleksi CPNS, PPPK, dan BUMN dari Akademi ASN: perbedaan jalur, persiapan dokumen, dan cara belajar.               | Tips dan informasi yang berlaku lintas seleksi CPNS, PPPK, dan BUMN, seperti perbedaan jalur seleksi, persiapan dokumen, dan cara belajar.                                                            |
 
 Cover taglines: CPNS "Info & tips seleksi CPNS", PPPK "Info & tips seleksi PPPK", BUMN "Info & tips Rekrutmen Bersama BUMN", Tips & Info "Seleksi CPNS, PPPK, dan BUMN".
 

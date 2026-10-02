@@ -9,6 +9,6 @@
 **Status:** done
 
 - [x] `/blog/rss.xml` route handler: valid RSS 2.0 with the 20 newest published Artikel (title, link, description from excerpt, `pubDate`, category); linked from blog pages via `alternates.types`
-- [x] `app/sitemap.ts` adds `/blog` and its pages, Kategori pages and their pages, indexable Penulis pages, and published Artikel with `lastModified`
+- [x] `app/sitemap.ts` adds `/blog` and its pages, non-empty Kategori pages and their pages, indexable Penulis pages, and published Artikel with `lastModified`
 - [x] "Blog" link in `data/navbar.ts` and the footer data
 - [x] `bun run lint`, `bun run typecheck`, and `bun test` pass
