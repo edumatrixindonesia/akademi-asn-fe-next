@@ -92,18 +92,6 @@ export const artikelPerKategori = (kategori: Kategori, entries: Artikel[]) =>
     items: entries.map(artikelCard),
   }) satisfies ArtikelPerKategoriProps;
 
-const sameAsLabels: Record<string, string> = {
-  instagram: "Instagram",
-  tiktok: "TikTok",
-  github: "GitHub",
-  linkedin: "LinkedIn",
-};
-
-const sameAsLabel = (url: string) => {
-  const host = new URL(url).hostname.replace(/^www\./, "").split(".")[0];
-  return sameAsLabels[host] ?? host;
-};
-
 export const penulisMeta = (penulis: Penulis, page: number) => ({
   title: `Artikel oleh ${penulis.name}${pageSuffix(page)}`,
   description: `Kumpulan artikel di blog Akademi ASN oleh ${penulis.name}${
@@ -126,7 +114,7 @@ export const artikelListingPenulis = (
             avatar: penulis.avatar,
             jobTitle: penulis.jobTitle,
             bio: penulis.bio,
-            sameAs: penulis.sameAs.map((href) => ({ label: sameAsLabel(href), href })),
+            sameAs: penulis.sameAs,
           }
         : undefined,
     search: page === 1 ? searchArtikel : undefined,
@@ -148,7 +136,7 @@ export const penulisJsonLd = (penulis: Penulis) => ({
           name: penulis.name,
           jobTitle: penulis.jobTitle,
           image: `${siteUrl}${penulis.avatar.src}`,
-          sameAs: penulis.sameAs,
+          sameAs: penulis.sameAs.map(({ href }) => href),
           worksFor: edumatrix,
         }
       : { "@id": `${siteUrl}/#organization` },

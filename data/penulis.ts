@@ -11,8 +11,8 @@ export const penulis = [
       alt: "Logo Akademi ASN",
     },
     sameAs: [
-      "https://www.instagram.com/akademiasnofficial",
-      "https://www.tiktok.com/@akademi.asn",
+      { label: "Instagram", href: "https://www.instagram.com/akademiasnofficial" },
+      { label: "TikTok", href: "https://www.tiktok.com/@akademi.asn" },
     ],
   },
   {
@@ -26,9 +26,9 @@ export const penulis = [
       alt: "Foto Dimas Maulana",
     },
     sameAs: [
-      "https://www.instagram.com/dimassmaulanaaa/",
-      "https://github.com/dimassmaulanaaa/",
-      "https://www.linkedin.com/in/dimas-maulana-idn/",
+      { label: "Instagram", href: "https://www.instagram.com/dimassmaulanaaa/" },
+      { label: "GitHub", href: "https://github.com/dimassmaulanaaa/" },
+      { label: "LinkedIn", href: "https://www.linkedin.com/in/dimas-maulana-idn/" },
     ],
   },
 ] satisfies Penulis[];

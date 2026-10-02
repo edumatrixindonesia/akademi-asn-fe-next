@@ -60,7 +60,7 @@ export const artikelDetail = (entry: Artikel, wordCount: number, konsultasiUrl: 
               name: penulis.name,
               jobTitle: penulis.jobTitle,
               url: `${siteUrl}/blog/penulis/${penulis.slug}`,
-              sameAs: penulis.sameAs,
+              sameAs: penulis.sameAs.map(({ href }) => href),
             }
           : { "@id": `${siteUrl}/#organization` },
       publisher: { "@id": `${siteUrl}/#organization` },

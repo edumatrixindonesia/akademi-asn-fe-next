@@ -44,7 +44,7 @@ export type Penulis = {
   jobTitle?: string;
   bio: string;
   avatar: Image;
-  sameAs: string[];
+  sameAs: { label: string; href: string }[];
 };
 
 // Returns one message per broken rule; the loader throws on any, so a bad
