@@ -7,6 +7,7 @@ const entry = {
   title: "CPNS & PPPK <beda>",
   excerpt: "Ringkasan.",
   kategori: "tips-info",
+  status: "published",
   publishedAt: "2026-10-01",
 };
 
@@ -19,7 +20,8 @@ test("builds an RSS 2.0 item with escaped text, link, date, and category", () =>
   expect(xml).toContain("<category>Tips &amp; Info</category>");
 });
 
-test("skips drafts without publishedAt", () => {
-  const xml = buildRss(channel, [{ ...entry, publishedAt: undefined }], () => "x");
-  expect(xml).not.toContain("<item>");
+test("keeps the 20 newest published Artikel, skipping drafts before the cut", () => {
+  const draft = { ...entry, status: "draft", publishedAt: undefined };
+  const xml = buildRss(channel, [draft, ...Array(25).fill(entry)], () => "x");
+  expect(xml.match(/<item>/g)).toHaveLength(20);
 });

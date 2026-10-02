@@ -20,21 +20,28 @@ const listingUrls = (basePath: string, total: number, firstPageSize: number) =>
     url: `${siteUrl}${pagePath(basePath, i + 1)}`,
   }));
 
-const blogUrls = (): MetadataRoute.Sitemap => [
-  ...listingUrls("/blog", getVisibleArtikel().length, blogFirstPageSize),
-  ...kategori.flatMap(({ slug }) =>
-    listingUrls(`/blog/kategori/${slug}`, getArtikelByKategori(slug).length, pageSize),
-  ),
-  ...penulis
-    .filter(({ slug }) => isPenulisIndexable(slug))
-    .flatMap(({ slug }) =>
-      listingUrls(`/blog/penulis/${slug}`, getArtikelByPenulis(slug).length, pageSize),
-    ),
-  ...getVisibleArtikel().map((entry) => ({
-    url: `${siteUrl}/blog/${entry.slug}`,
-    lastModified: entry.updatedAt ?? entry.publishedAt,
-  })),
-];
+// Empty Kategori pages stay reachable but out of the sitemap: a thin listing
+// is not worth a crawl.
+const blogUrls = (): MetadataRoute.Sitemap => {
+  const entries = getVisibleArtikel();
+
+  return [
+    ...listingUrls("/blog", entries.length, blogFirstPageSize),
+    ...kategori
+      .map(({ slug }) => ({ slug, total: getArtikelByKategori(slug).length }))
+      .filter(({ total }) => total > 0)
+      .flatMap(({ slug, total }) => listingUrls(`/blog/kategori/${slug}`, total, pageSize)),
+    ...penulis
+      .filter(({ slug }) => isPenulisIndexable(slug))
+      .flatMap(({ slug }) =>
+        listingUrls(`/blog/penulis/${slug}`, getArtikelByPenulis(slug).length, pageSize),
+      ),
+    ...entries.map((entry) => ({
+      url: `${siteUrl}/blog/${entry.slug}`,
+      lastModified: entry.updatedAt ?? entry.publishedAt,
+    })),
+  ];
+};
 
 // About 12,000 URLs (~1.5 MB), well under the 50,000-URL / 50 MB limit, so
 // one file. The location paths come from the same cached region lists and

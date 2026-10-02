@@ -10,15 +10,16 @@ const escapeXml = (text: string) =>
 
 type Channel = { title: string; description: string; siteUrl: string };
 
-// RSS 2.0 for already-ordered published Artikel; drafts have no `publishedAt`
-// and are skipped.
+// RSS 2.0 of the 20 newest published Artikel, from a newest-first list.
+// Drafts are dropped before the cut so they never take a slot under `next dev`.
 export const buildRss = (
   channel: Channel,
   entries: Artikel[],
   kategoriName: (slug: string) => string,
 ) => {
   const items = entries
-    .filter((entry) => entry.publishedAt)
+    .filter((entry) => entry.status === "published")
+    .slice(0, 20)
     .map((entry) => {
       const link = `${channel.siteUrl}/blog/${entry.slug}`;
       return `    <item>

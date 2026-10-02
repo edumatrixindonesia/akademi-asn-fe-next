@@ -123,8 +123,9 @@ test("/blog/rss.xml serves RSS 2.0 and blog pages link to it", async () => {
 test("sitemap lists blog pages, Kategori pages, and Artikel", async () => {
   const xml = await (await fetch(`${baseUrl}/sitemap.xml`)).text();
   expect(xml).toMatch(/<loc>[^<]+\/blog<\/loc>/);
+  const used = new Set(artikel.map((entry) => entry.kategori));
   for (const { slug } of kategori) {
-    expect(xml).toMatch(new RegExp(`<loc>[^<]+/blog/kategori/${slug}</loc>`));
+    expect(new RegExp(`<loc>[^<]+/blog/kategori/${slug}</loc>`).test(xml)).toBe(used.has(slug));
   }
   for (const { slug } of artikel) {
     expect(xml).toMatch(new RegExp(`<loc>[^<]+/blog/${slug}</loc>`));
@@ -134,5 +135,6 @@ test("sitemap lists blog pages, Kategori pages, and Artikel", async () => {
 test("navbar and footer link to /blog", async () => {
   const html = await (await fetch(`${baseUrl}/`)).text();
   expect(html).toMatch(/<a[^>]*href="\/blog"[^>]*>Blog<\/a>/);
-  expect(html).toMatch(/<a[^>]*href="\/blog"[^>]*>BLOG<\/a>/);
+  const footer = html.slice(html.indexOf("<footer"));
+  expect(footer).toMatch(/<h2[^>]*>BLOG<\/h2>\s*<a[^>]*href="\/blog"/);
 });

@@ -9,7 +9,7 @@ export const GET = () =>
   new Response(
     buildRss(
       { title: blogIndex.title, description: blogIndex.metaDescription, siteUrl },
-      getLatestArtikel(20),
+      getLatestArtikel(Infinity),
       (slug) => getKategori(slug)!.name,
     ),
     { headers: { "Content-Type": "application/rss+xml; charset=utf-8" } },
