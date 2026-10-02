@@ -142,6 +142,10 @@ Issues live as local markdown files under `.scratch/<feature>/`. See `docs/agent
 
 Default vocabulary: `needs-triage`, `needs-info`, `ready-for-agent`, `ready-for-human`, `wontfix`. See `docs/agents/triage-labels.md`.
 
+### Article writing
+
+Before drafting or editing an Artikel under `data/artikel/` or `data/artikel.ts`, read `docs/agents/article-writing.md`. New Artikel go through `/write-article <keyword>`.
+
 ### Domain docs
 
 Single-context: `CONTEXT.md` + `docs/adr/` at the repo root. See `docs/agents/domain.md`.
