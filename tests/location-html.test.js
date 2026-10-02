@@ -4,13 +4,29 @@ const baseUrl = process.env.TEST_BASE_URL ?? "http://localhost:3000/";
 const get = (path) => fetch(new URL(path, baseUrl));
 
 const pages = [
-  { path: "/di-yogyakarta", name: "DI Yogyakarta", keyword: "Bimbel CPNS, PPPK &amp; BUMN" },
-  { path: "/bimbel-cpns/jawa-barat/kota-bandung", name: "Kota Bandung, Jawa Barat", keyword: "Bimbel CPNS" },
-  { path: "/bimbel-pppk/jawa-barat/kota-bandung/coblong", name: "Coblong, Kota Bandung", keyword: "Bimbel PPPK" },
-  { path: "/bimbel-bumn/dki-jakarta/kota-jakarta-pusat/gambir/gambir", name: "Gambir, Gambir", keyword: "Bimbel BUMN" },
+  {
+    path: "/di-yogyakarta",
+    title: "Bimbel CPNS PPPK BUMN Terbaik di DI Yogyakarta | Akademi ASN",
+    h1: "Bimbel CPNS PPPK BUMN Terbaik di DI Yogyakarta untuk Persiapan Seleksi",
+  },
+  {
+    path: "/bimbel-cpns/jawa-barat/kota-bandung",
+    title: "Bimbel CPNS Online &amp; Offline Terbaik di Kota Bandung - Persiapan SKD &amp; SKB | Akademi ASN",
+    h1: "Bimbel CPNS Online &amp; Offline Terbaik di Kota Bandung untuk Persiapan SKD &amp; SKB",
+  },
+  {
+    path: "/bimbel-pppk/jawa-barat/kota-bandung/coblong",
+    title: "Bimbel PPPK Online &amp; Offline Terbaik di Coblong, Kota Bandung - Teknis Guru &amp; Kesehatan | Akademi ASN",
+    h1: "Bimbel PPPK di Coblong, Kota Bandung untuk Teknis Guru &amp; Tenaga Kesehatan",
+  },
+  {
+    path: "/bimbel-bumn/dki-jakarta/kota-jakarta-pusat/gambir/gambir",
+    title: "Bimbel BUMN Terbaik di Gambir, Gambir - Persiapan Tes RBB TKD &amp; AKHLAK | Akademi ASN",
+    h1: "Bimbel BUMN di Gambir, Gambir untuk Persiapan Tes Rekrutmen Bersama BUMN",
+  },
 ];
 
-for (const { path, name, keyword } of pages) {
+for (const { path, title, h1 } of pages) {
   test(`${path} renders a location page`, async () => {
     const response = await get(path);
     expect(response.status).toBe(200);
@@ -18,10 +34,10 @@ for (const { path, name, keyword } of pages) {
     const html = await response.text();
     const h1s = [...html.matchAll(/<h1\b[^>]*>(.*?)<\/h1>/gs)];
     expect(h1s).toHaveLength(1);
-    expect(h1s[0][1]).toContain(`${keyword} ${name}`);
+    expect(h1s[0][1]).toBe(h1);
 
-    const title = html.match(/<title>(.*?)<\/title>/)[1];
-    expect(title).toContain(`${keyword} ${name}`);
+    const pageTitle = html.match(/<title>(.*?)<\/title>/)[1];
+    expect(pageTitle).toBe(title);
 
     const canonical = html.match(/<link rel="canonical" href="([^"]+)"/)[1];
     expect(new URL(canonical).pathname).toBe(path);

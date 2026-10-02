@@ -31,6 +31,6 @@ test("a region without a hand-written text gets the template, followed by the tr
 test("the home intro names all three tracks", () => {
   const intro = introHomeLocation({ region: jawaBarat, ancestors: [], children: [], siblings: [] }, {});
 
-  expect(intro.title).toBe("Bimbel CPNS, PPPK & BUMN di Jawa Barat");
+  expect(intro.title).toBe("Bimbel CPNS PPPK BUMN di Jawa Barat");
   expect(intro.description).toContain("Jawa Barat berada di Indonesia.");
 });
