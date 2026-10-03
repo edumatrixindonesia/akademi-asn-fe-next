@@ -157,7 +157,7 @@ Cover taglines: CPNS "Info & tips seleksi CPNS", PPPK "Info & tips seleksi PPPK"
 ### Penulis
 
 - **Tim Akademi ASN** (`tim-akademi-asn`, organization, avatar: the Akademi ASN logo): Tim Akademi ASN menyusun artikel di blog ini. Akademi ASN adalah bimbel persiapan seleksi CPNS, PPPK, dan BUMN dari Edumatrix Indonesia yang berkantor di Sleman, DI Yogyakarta. Setiap data seleksi di artikel diperiksa terhadap sumber resminya sebelum terbit.
-- **Dimas Maulana** (`dimas-maulana`, person, approved): job title "Fullstack Web Developer & IT Support Specialist"; photo `public/img/writer/dimas-maulana.webp`; `sameAs` `https://www.instagram.com/dimassmaulanaaa/`, `https://github.com/dimassmaulanaaa/`, `https://www.linkedin.com/in/dimas-maulana-idn/`. Bio: Dimas Maulana adalah Fullstack Web Developer dan IT Support Specialist di Edumatrix Indonesia, induk perusahaan Akademi ASN. Ia membangun dan mengelola situs Akademi ASN, serta menyunting Artikel di blog ini dengan memeriksa setiap data seleksi terhadap sumber resmi seperti BKN dan KemenPANRB sebelum terbit.
+- **Dimas Maulana** (`dimas-maulana`, person, approved): job title "Fullstack Developer & IT Support Specialist"; photo `public/img/writer/dimas-maulana.webp`; `sameAs` `https://www.instagram.com/dimassmaulanaaa/`, `https://github.com/dimassmaulanaaa/`, `https://www.linkedin.com/in/dimas-maulana-idn/`. Bio: Dimas Maulana adalah Fullstack Developer dan IT Support Specialist di Edumatrix Indonesia, induk perusahaan Akademi ASN. Ia membangun dan mengelola situs Akademi ASN, serta menyunting Artikel di blog ini dengan memeriksa setiap data seleksi terhadap sumber resmi seperti BKN dan KemenPANRB sebelum terbit.
 
 ### UI labels
 

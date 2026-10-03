@@ -49,7 +49,7 @@ export const footerDefault = (konsultasiUrl: string) =>
     },
     blog: {
       title: "BLOG",
-      link: { label: "Info & Tips Seleksi CPNS, PPPK, dan BUMN", href: "/blog" },
+      link: { label: "Info & Tips", href: "/blog" },
     },
     image: {
       src: "/img/section/bimbel-cpns-pppk-bumn-terbaik-akademi-asn.webp",
