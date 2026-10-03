@@ -51,8 +51,8 @@ const BimbelCpns = ({ provinces }: BimbelCpnsProps) => {
       <Jangkauan {...jangkauanCpns(provinces)} />
       <CtaFooter {...ctaFooter(konsultasiUrl)} />
       <MediaMassa {...mediaMassa} />
-      {terbaru && <ArtikelTerbaru {...terbaru} />}
       <Faq {...faqCpns} />
+      {terbaru && <ArtikelTerbaru {...terbaru} />}
     </main>
   );
 };

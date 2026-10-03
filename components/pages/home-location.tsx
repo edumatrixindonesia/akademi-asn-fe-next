@@ -68,8 +68,8 @@ const HomeLocation = ({ location }: HomeLocationProps) => {
       <LokasiLain {...lokasiLainHomeLocation(location)} />
       <CtaFooter {...ctaFooterLocation(konsultasiUrl, label)} />
       <MediaMassa {...mediaMassa} />
-      {terbaru && <ArtikelTerbaru {...terbaru} />}
       <Faq {...faqHome} />
+      {terbaru && <ArtikelTerbaru {...terbaru} />}
     </main>
   );
 };

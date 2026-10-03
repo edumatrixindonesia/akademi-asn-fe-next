@@ -48,8 +48,8 @@ const Home = ({ provinces }: HomeProps) => {
       <Jangkauan {...jangkauanHome(provinces)} />
       <CtaFooter {...ctaFooter(konsultasiUrl)} />
       <MediaMassa {...mediaMassa} />
-      {terbaru && <ArtikelTerbaru {...terbaru} />}
       <Faq {...faqHome} />
+      {terbaru && <ArtikelTerbaru {...terbaru} />}
     </main>
   );
 };

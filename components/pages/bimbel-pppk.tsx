@@ -51,8 +51,8 @@ const BimbelPppk = ({ provinces }: BimbelPppkProps) => {
       <Jangkauan {...jangkauanPppk(provinces)} />
       <CtaFooter {...ctaFooter(konsultasiUrl)} />
       <MediaMassa {...mediaMassa} />
-      {terbaru && <ArtikelTerbaru {...terbaru} />}
       <Faq {...faqPppk} />
+      {terbaru && <ArtikelTerbaru {...terbaru} />}
     </main>
   );
 };

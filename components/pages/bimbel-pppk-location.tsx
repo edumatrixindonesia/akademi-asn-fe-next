@@ -68,8 +68,8 @@ const BimbelPppkLocation = ({ location }: BimbelPppkLocationProps) => {
       <LokasiLain {...lokasiLainPppkLocation(location)} />
       <CtaFooter {...ctaFooterLocation(konsultasiUrl, label)} />
       <MediaMassa {...mediaMassa} />
-      {terbaru && <ArtikelTerbaru {...terbaru} />}
       <Faq {...faqPppk} />
+      {terbaru && <ArtikelTerbaru {...terbaru} />}
     </main>
   );
 };
