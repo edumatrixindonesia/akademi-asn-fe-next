@@ -35,10 +35,10 @@ export const artikel = [
         accessedAt: "2026-10-02",
       },
       {
-        title: "Gaji, Tunjangan, dan Fasilitas PNS",
-        url: "https://apps-denpasar.bkn.go.id/kms/ensiklopedia:penggajian_tunjangan_dan_fasilitas_pns",
-        publisher: "BKN",
-        accessedAt: "2026-10-02",
+        title: "Peraturan Pemerintah Nomor 7 Tahun 1977 tentang Peraturan Gaji Pegawai Negeri Sipil",
+        url: "https://jdih.kemenkeu.go.id/dok/pp-7-tahun-1977",
+        publisher: "JDIH Kemenkeu",
+        accessedAt: "2026-10-03",
       },
       {
         title: "3 Juta Pelamar CPNS 2024 Berkompetisi di Tahap SKD",
@@ -50,12 +50,6 @@ export const artikel = [
         title: "Hasil Akhir Seleksi PPPK Tahap II, Pelamar Dapat Cek Pengumuman Instansi Secara Berkala",
         url: "https://www.bkn.go.id/storage/2025/06/SIARAN-PERS-022_RILIS_BKN_VI_2025-17-Juni-2025.pdf",
         publisher: "BKN",
-        accessedAt: "2026-10-02",
-      },
-      {
-        title: "Menyoal Berakhirnya Masa Perjanjian Kerja PPPK di UU ASN",
-        url: "https://www.mkri.id/berita/menyoal-berakhirnya-masa-perjanjian-kerja-pppk-di-uu-asn-24790",
-        publisher: "Mahkamah Konstitusi",
         accessedAt: "2026-10-02",
       },
       {
