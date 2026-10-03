@@ -8,7 +8,11 @@ export const dynamic = "force-static";
 export const GET = () =>
   new Response(
     buildRss(
-      { title: blogIndex.title, description: blogIndex.metaDescription, siteUrl },
+      {
+        title: blogIndex.title,
+        description: blogIndex.metaDescription,
+        siteUrl,
+      },
       getLatestArtikel(Infinity),
       (slug) => getKategori(slug)!.name,
     ),

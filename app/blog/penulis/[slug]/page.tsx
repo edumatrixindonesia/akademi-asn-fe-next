@@ -18,12 +18,17 @@ export async function generateMetadata({
   if (!entry) return {};
 
   return {
-    ...listingMetadata({ ...penulisMeta(entry, 1), path: penulisPath(entry.slug) }),
+    ...listingMetadata({
+      ...penulisMeta(entry, 1),
+      path: penulisPath(entry.slug),
+    }),
     robots: { index: isPenulisIndexable(entry.slug), follow: true },
   };
 }
 
-export default async function Page({ params }: PageProps<"/blog/penulis/[slug]">) {
+export default async function Page({
+  params,
+}: PageProps<"/blog/penulis/[slug]">) {
   const { slug } = await params;
   if (!getPenulis(slug)) notFound();
 

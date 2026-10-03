@@ -9,7 +9,9 @@ type BlogCariProps = { query: string };
 const BlogCari = ({ query }: BlogCariProps) => (
   <main className="flex-1">
     <Breadcrumb {...breadcrumbCari} />
-    <ArtikelListing {...artikelListingCari(query, query ? searchArtikel(query) : [])} />
+    <ArtikelListing
+      {...artikelListingCari(query, query ? searchArtikel(query) : [])}
+    />
   </main>
 );
 

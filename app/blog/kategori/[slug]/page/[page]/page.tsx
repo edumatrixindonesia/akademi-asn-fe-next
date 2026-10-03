@@ -4,7 +4,13 @@ import BlogKategoriPage from "@/components/pages/blog-kategori";
 import { kategori } from "@/data/kategori";
 import { getArtikelByKategori, getKategori } from "@/lib/artikel";
 import { kategoriPath } from "@/lib/blog-path";
-import { pageCount, pagePath, pageSize, pageSuffix, parsePage } from "@/lib/pagination";
+import {
+  pageCount,
+  pagePath,
+  pageSize,
+  pageSuffix,
+  parsePage,
+} from "@/lib/pagination";
 import { listingMetadata } from "../../../../../shared-metadata";
 
 export const dynamicParams = false;

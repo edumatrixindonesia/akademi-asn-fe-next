@@ -16,7 +16,9 @@ const BlogKategori = ({ slug, page }: BlogKategoriProps) => {
   return (
     <main className="flex-1">
       <Breadcrumb {...breadcrumbKategori(kategori)} />
-      <ArtikelListing {...artikelListingKategori(kategori, page, entries, totalPages)} />
+      <ArtikelListing
+        {...artikelListingKategori(kategori, page, entries, totalPages)}
+      />
     </main>
   );
 };

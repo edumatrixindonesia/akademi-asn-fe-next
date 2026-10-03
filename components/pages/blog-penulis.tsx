@@ -16,12 +16,17 @@ const BlogPenulis = ({ slug, page }: BlogPenulisProps) => {
   return (
     <main className="flex-1">
       <Breadcrumb {...breadcrumbPenulis(penulis)} />
-      <ArtikelListing {...artikelListingPenulis(penulis, page, entries, totalPages)} />
+      <ArtikelListing
+        {...artikelListingPenulis(penulis, page, entries, totalPages)}
+      />
       {page === 1 && (
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
-            __html: JSON.stringify(penulisJsonLd(penulis)).replace(/</g, "\\u003c"),
+            __html: JSON.stringify(penulisJsonLd(penulis)).replace(
+              /</g,
+              "\\u003c",
+            ),
           }}
         />
       )}

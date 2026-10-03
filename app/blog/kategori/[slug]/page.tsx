@@ -8,7 +8,8 @@ import { listingMetadata } from "../../../shared-metadata";
 
 export const dynamicParams = false;
 
-export const generateStaticParams = () => kategori.map(({ slug }) => ({ slug }));
+export const generateStaticParams = () =>
+  kategori.map(({ slug }) => ({ slug }));
 
 export async function generateMetadata({
   params,
@@ -23,7 +24,9 @@ export async function generateMetadata({
   });
 }
 
-export default async function Page({ params }: PageProps<"/blog/kategori/[slug]">) {
+export default async function Page({
+  params,
+}: PageProps<"/blog/kategori/[slug]">) {
   const { slug } = await params;
   if (!getKategori(slug)) notFound();
 

@@ -2,7 +2,12 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import BlogPage from "@/components/pages/blog";
 import { blogIndex } from "@/data/artikel-listing";
-import { blogFirstPageSize, pageCount, pageSuffix, parsePage } from "@/lib/pagination";
+import {
+  blogFirstPageSize,
+  pageCount,
+  pageSuffix,
+  parsePage,
+} from "@/lib/pagination";
 import { getVisibleArtikel } from "@/lib/artikel";
 import { listingMetadata } from "../../../shared-metadata";
 

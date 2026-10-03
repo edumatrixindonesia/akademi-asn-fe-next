@@ -3,7 +3,11 @@ import { notFound } from "next/navigation";
 import BlogPenulisPage from "@/components/pages/blog-penulis";
 import { penulisMeta } from "@/data/artikel-listing";
 import { penulis } from "@/data/penulis";
-import { getArtikelByPenulis, getPenulis, isPenulisIndexable } from "@/lib/artikel";
+import {
+  getArtikelByPenulis,
+  getPenulis,
+  isPenulisIndexable,
+} from "@/lib/artikel";
 import { penulisPath } from "@/lib/blog-path";
 import { pageCount, pagePath, pageSize, parsePage } from "@/lib/pagination";
 import { listingMetadata } from "../../../../../shared-metadata";
