@@ -6,7 +6,12 @@ import { penulis } from "@/data/penulis";
 import { artikelMatches } from "@/lib/artikel-search";
 import { validateArtikel, type Artikel } from "@/lib/artikel-schema";
 import { headingId } from "@/lib/heading-id";
-import { blogFirstPageSize, pageCount, pageSize, pageSlice } from "@/lib/pagination";
+import {
+  blogFirstPageSize,
+  pageCount,
+  pageSize,
+  pageSlice,
+} from "@/lib/pagination";
 
 // `satisfies` keeps literal types in data; widen so filters compare freely.
 const entries: Artikel[] = artikel;
@@ -26,14 +31,17 @@ if (errors.length > 0) {
 // listed, or served.
 export const getVisibleArtikel = (): Artikel[] =>
   entries.filter(
-    (entry) => entry.status === "published" || process.env.NODE_ENV !== "production",
+    (entry) =>
+      entry.status === "published" || process.env.NODE_ENV !== "production",
   );
 
 export const getArtikel = (slug: string) =>
   getVisibleArtikel().find((entry) => entry.slug === slug);
 
-export const getKategori = (slug: string) => kategori.find((entry) => entry.slug === slug);
-export const getPenulis = (slug: string) => penulis.find((entry) => entry.slug === slug);
+export const getKategori = (slug: string) =>
+  kategori.find((entry) => entry.slug === slug);
+export const getPenulis = (slug: string) =>
+  penulis.find((entry) => entry.slug === slug);
 
 // An Artikel's Kategori and the fields that fall back to it or to the title.
 // `KategoriSlug` types the slug, so the lookup always finds an entry.
@@ -97,9 +105,14 @@ export const getHeadings = (slug: string) => {
     const match = !inFence && /^##\s+(.+?)\s*$/.exec(line);
     if (!match) continue;
 
-    const title = match[1].replace(/\[([^\]]+)\]\([^)]*\)/g, "$1").replace(/[*_`]/g, "");
+    const title = match[1]
+      .replace(/\[([^\]]+)\]\([^)]*\)/g, "$1")
+      .replace(/[*_`]/g, "");
     const id = headingId(title);
-    if (!id) throw new Error(`"${slug}" has an h2 ("${title}") with no letters or digits for its id.`);
+    if (!id)
+      throw new Error(
+        `"${slug}" has an h2 ("${title}") with no letters or digits for its id.`,
+      );
     if (headings.some((heading) => heading.id === id)) {
       throw new Error(`"${slug}" has two h2 headings with the id "${id}".`);
     }
@@ -113,7 +126,10 @@ const newestFirst = (a: Artikel, b: Artikel) =>
   (b.publishedAt ?? "").localeCompare(a.publishedAt ?? "");
 
 // Artikel Terbaru: newest first, optionally leaving one Artikel out.
-export const getLatestArtikel = (limit: number, excludeSlug?: string): Artikel[] =>
+export const getLatestArtikel = (
+  limit: number,
+  excludeSlug?: string,
+): Artikel[] =>
   getVisibleArtikel()
     .filter((entry) => entry.slug !== excludeSlug)
     .sort(newestFirst)
@@ -140,7 +156,10 @@ export const getArtikelByKategori = (slug: string): Artikel[] =>
 
 // Artikel Terbaru on landing pages: 3 newest of one Kategori, or of any.
 export const getLandingArtikel = (kategori?: string): Artikel[] =>
-  (kategori ? getArtikelByKategori(kategori) : getLatestArtikel(Infinity)).slice(0, 3);
+  (kategori
+    ? getArtikelByKategori(kategori)
+    : getLatestArtikel(Infinity)
+  ).slice(0, 3);
 
 export const searchArtikel = (query: string): Artikel[] =>
   getLatestArtikel(Infinity).filter((entry) => artikelMatches(entry, query));
@@ -151,7 +170,9 @@ export const getArtikelByPenulis = (slug: string): Artikel[] =>
 // A Penulis page is indexable only with a published Artikel; the draft
 // fixture under `next dev` does not count.
 export const isPenulisIndexable = (slug: string) =>
-  entries.some((entry) => entry.status === "published" && entry.penulis === slug);
+  entries.some(
+    (entry) => entry.status === "published" && entry.penulis === slug,
+  );
 
 // `undefined` for a page past the last one: the route turns it into a 404.
 const listing = (all: Artikel[], page: number, firstPageSize: number) => {
@@ -163,7 +184,10 @@ const listing = (all: Artikel[], page: number, firstPageSize: number) => {
 // Kategori sections on /blog: three newest each, empty Kategori left out.
 export const getKategoriSections = () =>
   kategori
-    .map((entry) => ({ kategori: entry, entries: getArtikelByKategori(entry.slug).slice(0, 3) }))
+    .map((entry) => ({
+      kategori: entry,
+      entries: getArtikelByKategori(entry.slug).slice(0, 3),
+    }))
     .filter(({ entries }) => entries.length > 0);
 
 export const getBlogListing = (page: number) =>
@@ -171,7 +195,8 @@ export const getBlogListing = (page: number) =>
 
 export const getKategoriListing = (slug: string, page: number) => {
   const kategori = getKategori(slug);
-  const result = kategori && listing(getArtikelByKategori(slug), page, pageSize);
+  const result =
+    kategori && listing(getArtikelByKategori(slug), page, pageSize);
   return result && { kategori, ...result };
 };
 

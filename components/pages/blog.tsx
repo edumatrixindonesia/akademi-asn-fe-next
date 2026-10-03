@@ -18,14 +18,21 @@ const Blog = ({ page }: BlogProps) => {
   return (
     <main className="flex-1">
       <Breadcrumb {...breadcrumbBlog} />
-      <ArtikelListing {...artikelListingBlog(page, listing.entries, listing.totalPages)} />
+      <ArtikelListing
+        {...artikelListingBlog(page, listing.entries, listing.totalPages)}
+      />
       {page === 1 && (
         <>
           {getKategoriSections().map(({ kategori, entries }) => (
-            <ArtikelPerKategori key={kategori.slug} {...artikelPerKategori(kategori, entries)} />
+            <ArtikelPerKategori
+              key={kategori.slug}
+              {...artikelPerKategori(kategori, entries)}
+            />
           ))}
           <div className="container-section pt-0! md:pt-0!">
-            <KonsultasiCard {...konsultasiMdx(getKonsultasiUrl("Blog Akademi ASN"))} />
+            <KonsultasiCard
+              {...konsultasiMdx(getKonsultasiUrl("Blog Akademi ASN"))}
+            />
           </div>
         </>
       )}

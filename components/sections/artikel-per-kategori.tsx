@@ -1,5 +1,7 @@
 import Link from "next/link";
-import ArtikelCard, { type ArtikelCardProps } from "@/components/shared/artikel-card";
+import ArtikelCard, {
+  type ArtikelCardProps,
+} from "@/components/shared/artikel-card";
 
 export type ArtikelPerKategoriProps = {
   title: string;
@@ -8,7 +10,12 @@ export type ArtikelPerKategoriProps = {
   items: ArtikelCardProps[];
 };
 
-const ArtikelPerKategori = ({ title, linkLabel, href, items }: ArtikelPerKategoriProps) => (
+const ArtikelPerKategori = ({
+  title,
+  linkLabel,
+  href,
+  items,
+}: ArtikelPerKategoriProps) => (
   <section aria-label={title} className="container-section pt-0! md:pt-0!">
     <div className="flex flex-wrap items-baseline justify-between gap-2">
       <h2 className="text-2xl font-bold text-primary-dark">{title}</h2>

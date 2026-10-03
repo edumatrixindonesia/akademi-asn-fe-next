@@ -9,10 +9,10 @@ import { pagePath, pageSuffix, pageWindow } from "@/lib/pagination";
 import { kategoriPath, penulisPath } from "@/lib/blog-path";
 
 export const blogIndex = {
-  metaTitle: "Blog Info & Tips Seleksi CPNS, PPPK, BUMN",
+  metaTitle: "Blog Akademi ASN",
   metaDescription:
     "Artikel seputar seleksi CPNS, PPPK, dan Rekrutmen Bersama BUMN dari Akademi ASN: tahapan seleksi, materi tes, dan tips persiapan, lengkap dengan sumbernya.",
-  title: "Info & Tips Seleksi CPNS, PPPK, dan BUMN",
+  title: "Blog Akademi ASN",
   description:
     "Kumpulan artikel tentang seleksi CPNS, PPPK, dan Rekrutmen Bersama BUMN, mulai dari tahapan seleksi, materi tes, hingga tips persiapannya. Setiap data seleksi di artikel ini mencantumkan sumbernya.",
 };
@@ -31,23 +31,26 @@ const pagination = (basePath: string, current: number, total: number) =>
           current < total
             ? { label: "Berikutnya", href: pagePath(basePath, current + 1) }
             : undefined,
-        pages: pageWindow(current, total).map(
-          (page) =>
-            page === null
-              ? null
-              : {
-                  page,
-                  href: pagePath(basePath, page),
-                  current: page === current,
-                  ariaLabel: `Halaman ${page}`,
-                },
+        pages: pageWindow(current, total).map((page) =>
+          page === null
+            ? null
+            : {
+                page,
+                href: pagePath(basePath, page),
+                current: page === current,
+                ariaLabel: `Halaman ${page}`,
+              },
         ),
       } satisfies ArtikelPaginationProps)
     : undefined;
 
 // The intro, search form, and headings appear on page 1 only, so no two
 // pages of a listing share a title or intro.
-export const artikelListingBlog = (page: number, entries: Artikel[], totalPages: number) =>
+export const artikelListingBlog = (
+  page: number,
+  entries: Artikel[],
+  totalPages: number,
+) =>
   ({
     title: `${blogIndex.title}${pageSuffix(page)}`,
     description: page === 1 ? blogIndex.description : undefined,
@@ -75,7 +78,9 @@ export const artikelListingKategori = (
     title: `${kategori.title}${pageSuffix(page)}`,
     description: page === 1 ? kategori.description : undefined,
     landing:
-      page === 1 && href ? { label: `Lihat Bimbel ${kategori.name}`, href } : undefined,
+      page === 1 && href
+        ? { label: `Lihat Bimbel ${kategori.name}`, href }
+        : undefined,
     search: page === 1 ? searchArtikel : undefined,
     heading: "Daftar artikel",
     headingVisible: false,
