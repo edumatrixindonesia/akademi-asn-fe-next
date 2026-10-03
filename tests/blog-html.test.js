@@ -13,8 +13,8 @@ test("/blog has one h1, canonical, search form, and Artikel Terbaru", async () =
 
   const html = (await response.text()).replaceAll("<!-- -->", "");
   expect([...html.matchAll(/<h1\b/g)]).toHaveLength(1);
-  expect(html).toMatch(/<h1\b[^>]*>Info &amp; Tips Seleksi CPNS, PPPK, dan BUMN<\/h1>/);
-  expect(html).toContain("<title>Blog Info &amp; Tips Seleksi CPNS, PPPK, BUMN | Akademi ASN</title>");
+  expect(html).toMatch(/<h1\b[^>]*>Blog Akademi ASN<\/h1>/);
+  expect(html).toContain("<title>Blog CPNS PPPK BUMN | Akademi ASN</title>");
   expect(html).toMatch(/<link rel="canonical" href="[^"]+\/blog"/);
   expect(html).toMatch(/<form[^>]*action="\/blog\/cari"/);
   expect(html).toContain("Artikel Terbaru");

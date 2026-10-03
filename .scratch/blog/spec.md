@@ -114,7 +114,7 @@ Headings get stable `id`s for the Daftar isi. Links to landing pages use `next/l
 ### Site-wide links
 
 - "Blog" link in `data/navbar.ts` and in the footer.
-- Artikel Terbaru section, placed directly before FAQ: on the home page (3 newest of any Kategori), on each exam-track page and all of its location pages (3 newest of that Kategori). Hidden when there are none. It links to the Kategori page ("Lihat Semua").
+- Artikel Terbaru section, placed directly after FAQ: on the home page (3 newest of any Kategori), on each exam-track page and all of its location pages (3 newest of that Kategori). Hidden when there are none. It links to the Kategori page ("Lihat Semua").
 
 ### Writing skill
 
@@ -134,23 +134,23 @@ Headings get stable `id`s for the Daftar isi. Links to landing pages use `next/l
 
 ## Copy for approval
 
-All copy below states only facts already in the repo. Approved by the owner on 2026-10-01.
+All copy below states only facts already in the repo. Approved by the owner on 2026-10-01; `/blog` and Kategori titles shortened by the owner on 2026-10-03.
 
 ### `/blog`
 
-- `<title>`: Blog Info & Tips Seleksi CPNS, PPPK, BUMN | Akademi ASN
+- `<title>`: Blog CPNS PPPK BUMN | Akademi ASN
 - Meta description: Artikel seputar seleksi CPNS, PPPK, dan Rekrutmen Bersama BUMN dari Akademi ASN: tahapan seleksi, materi tes, dan tips persiapan, lengkap dengan sumbernya.
-- `h1`: Info & Tips Seleksi CPNS, PPPK, dan BUMN
+- `h1`: Blog Akademi ASN
 - Intro: Kumpulan artikel tentang seleksi CPNS, PPPK, dan Rekrutmen Bersama BUMN, mulai dari tahapan seleksi, materi tes, hingga tips persiapannya. Setiap data seleksi di artikel ini mencantumkan sumbernya.
 
 ### Kategori
 
-| Slug        | Name        | `h1`                                     | `<title>` part                                    | Meta description                                                                                                                        | Description (on the page)                                                                                                                                                                             |
-| ----------- | ----------- | ---------------------------------------- | ------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `cpns`      | CPNS        | Artikel Seleksi CPNS                     | Artikel Seleksi CPNS: SKD, SKB, dan Tips          | Artikel seputar seleksi CPNS: tahapan SKD dan SKB, materi TWK, TIU, dan TKP, serta tips persiapannya dari Akademi ASN.                  | Artikel tentang seleksi Calon Pegawai Negeri Sipil (CPNS), mulai dari tahapan Seleksi Kompetensi Dasar (SKD) dan Seleksi Kompetensi Bidang (SKB), materi TWK, TIU, dan TKP, hingga tips persiapannya. |
-| `pppk`      | PPPK        | Artikel Seleksi PPPK                     | Artikel Seleksi PPPK: Seleksi Kompetensi dan Tips | Artikel seputar seleksi PPPK: kompetensi teknis, manajerial, sosial kultural, dan wawancara, serta tips persiapannya dari Akademi ASN.  | Artikel tentang seleksi Pegawai Pemerintah dengan Perjanjian Kerja (PPPK), mulai dari seleksi kompetensi teknis, manajerial, sosial kultural, dan wawancara, hingga tips persiapannya.                |
-| `bumn`      | BUMN        | Artikel Rekrutmen Bersama BUMN           | Artikel Rekrutmen Bersama BUMN: Tes dan Tips      | Artikel seputar Rekrutmen Bersama BUMN: tes online tahap awal, tes lanjutan di tiap perusahaan, dan tips persiapannya dari Akademi ASN. | Artikel tentang Rekrutmen Bersama BUMN, mulai dari tes online tahap awal, tes lanjutan di masing-masing perusahaan, hingga tips persiapannya.                                                         |
-| `tips-info` | Tips & Info | Tips & Info Seleksi CPNS, PPPK, dan BUMN | Tips & Info Seleksi CPNS, PPPK, BUMN              | Tips dan info lintas seleksi CPNS, PPPK, dan BUMN dari Akademi ASN: perbedaan jalur, persiapan dokumen, dan cara belajar.               | Tips dan informasi yang berlaku lintas seleksi CPNS, PPPK, dan BUMN, seperti perbedaan jalur seleksi, persiapan dokumen, dan cara belajar.                                                            |
+| Slug        | Name        | `h1`        | `<title>` part                                  | Meta description                                                                                                                        | Description (on the page)                                                                                                                                                                             |
+| ----------- | ----------- | ----------- | ----------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `cpns`      | CPNS        | CPNS        | Artikel Seleksi CPNS: SKD SKB & Tips            | Artikel seputar seleksi CPNS: tahapan SKD dan SKB, materi TWK, TIU, dan TKP, serta tips persiapannya dari Akademi ASN.                  | Artikel tentang seleksi Calon Pegawai Negeri Sipil (CPNS), mulai dari tahapan Seleksi Kompetensi Dasar (SKD) dan Seleksi Kompetensi Bidang (SKB), materi TWK, TIU, dan TKP, hingga tips persiapannya. |
+| `pppk`      | PPPK        | PPPK        | Artikel Seleksi PPPK: Seleksi Kompetensi & Tips | Artikel seputar seleksi PPPK: kompetensi teknis, manajerial, sosial kultural, dan wawancara, serta tips persiapannya dari Akademi ASN.  | Artikel tentang seleksi Pegawai Pemerintah dengan Perjanjian Kerja (PPPK), mulai dari seleksi kompetensi teknis, manajerial, sosial kultural, dan wawancara, hingga tips persiapannya.                |
+| `bumn`      | BUMN        | BUMN        | Artikel Rekrutmen Bersama BUMN: Tes & Tips      | Artikel seputar Rekrutmen Bersama BUMN: tes online tahap awal, tes lanjutan di tiap perusahaan, dan tips persiapannya dari Akademi ASN. | Artikel tentang Rekrutmen Bersama BUMN, mulai dari tes online tahap awal, tes lanjutan di masing-masing perusahaan, hingga tips persiapannya.                                                         |
+| `tips-info` | Tips & Info | Tips & Info | Tips & Info Seleksi CPNS PPPK BUMN              | Tips dan info lintas seleksi CPNS, PPPK, dan BUMN dari Akademi ASN: perbedaan jalur, persiapan dokumen, dan cara belajar.               | Tips dan informasi yang berlaku lintas seleksi CPNS, PPPK, dan BUMN, seperti perbedaan jalur seleksi, persiapan dokumen, dan cara belajar.                                                            |
 
 Cover taglines: CPNS "Info & tips seleksi CPNS", PPPK "Info & tips seleksi PPPK", BUMN "Info & tips Rekrutmen Bersama BUMN", Tips & Info "Seleksi CPNS, PPPK, dan BUMN".
 

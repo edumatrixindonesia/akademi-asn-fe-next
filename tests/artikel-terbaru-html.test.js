@@ -16,7 +16,7 @@ const pages = [
 ];
 
 for (const { path, kategori } of pages) {
-  test(`${path} shows Artikel Terbaru before FAQ only when a matching Artikel exists`, async () => {
+  test(`${path} shows Artikel Terbaru after FAQ only when a matching Artikel exists`, async () => {
     const response = await fetch(new URL(path, baseUrl));
     expect(response.status).toBe(200);
 
@@ -32,7 +32,7 @@ for (const { path, kategori } of pages) {
     }
 
     expect(html).toMatch(/<h2\b[^>]*>Artikel Terbaru<\/h2>/);
-    expect(html.indexOf("Artikel Terbaru")).toBeLessThan(html.indexOf('id="faq-title"'));
+    expect(html.indexOf("Artikel Terbaru")).toBeGreaterThan(html.indexOf('id="faq-title"'));
     expect(html).toContain(`href="${kategori ? `/blog/kategori/${kategori}` : "/blog"}"`);
     for (const { slug } of matching) expect(html).toContain(`href="/blog/${slug}"`);
   });
