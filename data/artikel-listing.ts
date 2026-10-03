@@ -9,7 +9,7 @@ import { pagePath, pageSuffix, pageWindow } from "@/lib/pagination";
 import { kategoriPath, penulisPath } from "@/lib/blog-path";
 
 export const blogIndex = {
-  metaTitle: "Blog Akademi ASN",
+  metaTitle: "Blog CPNS PPPK BUMN",
   metaDescription:
     "Artikel seputar seleksi CPNS, PPPK, dan Rekrutmen Bersama BUMN dari Akademi ASN: tahapan seleksi, materi tes, dan tips persiapan, lengkap dengan sumbernya.",
   title: "Blog Akademi ASN",
