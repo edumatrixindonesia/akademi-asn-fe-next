@@ -64,7 +64,7 @@ A visitor who opens `/` sees, in order: Jumbotron, Keunggulan, Materi, Paket Pro
 ### Design tokens
 
 - The brand overrides the shadcn semantic tokens rather than adding a parallel brand palette. `primary` is `#237DC1`. `muted` is `#F6F7FC`, used for alternating section backgrounds. `secondary` keeps its neutral meaning.
-- New tokens: `primary-dark` (`#00559F`, used for hover states and as the end of the blue gradients) and `cta` / `cta-foreground` (`#FFB04F`, used for Konsultasi buttons). All tokens are exposed to Tailwind through the existing `@theme inline` block, so utilities such as `bg-cta` and `from-primary-dark` work.
+- New tokens: `primary-dark` (`#00559F`, used for hover states and as the end of the blue gradients) and `cta` / `cta-foreground` (`#ffb050`; corrected 2026-10-05 from `#FFB04F` to match `app/globals.css:66`, used for Konsultasi buttons). All tokens are exposed to Tailwind through the existing `@theme inline` block, so utilities such as `bg-cta` and `from-primary-dark` work.
 - Spacing uses the default Tailwind scale. One custom utility, `container-section`, is the section wrapper: centered, `max-w-7xl`, horizontal padding 4 / 8 (mobile / md), and vertical padding 12 / 16. The Navbar and Footer inner wrappers adopt it where it fits.
 - Font: Poppins, weights 400, 500, 600, and 700, loaded through `next/font/google`, so it is self-hosted and does not cause layout shift. Geist and Geist Mono are removed. No weight above 700 is used.
 - The site stays light-only, as today.

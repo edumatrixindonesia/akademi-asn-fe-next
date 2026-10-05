@@ -1,5 +1,7 @@
 # Blog research: english-academy.id/blog as reference
 
+> **Pre-spec snapshot.** Superseded by [`spec.md`](spec.md); where the two differ, `spec.md` wins.
+
 Status: research (no spec yet)
 
 Collected 2026-10-01. Goal: gather what we need to build a blog for Akademi ASN with articles stored statically under `data/`, using the English Academy blog as the structure and look reference. This file holds facts and a draft data model only; route, format and pagination decisions belong in a later `spec.md`.

@@ -15,7 +15,7 @@ This is a landing-page site for Akademi ASN. It targets people who search Google
 - Treat SEO as part of every change, not a later pass. Check `metadata`, the heading hierarchy (one `h1` per page), semantic HTML, and image `alt` text.
 - Keep page content in Server Components so it appears in the initial HTML that crawlers read.
 - Protect Core Web Vitals (LCP, CLS, INP). Avoid client JS on landing pages unless it is needed.
-- Location pages exist to capture local searches such as "bimbel cpns <city>". Each one needs unique, location-specific content, not only a swapped name.
+- Location pages exist to capture local searches such as "bimbel cpns <city>". Hand-written unique copy is required for the 72 intro regions only. Template pages need a unique location name, hierarchy links, and Lokasi Lain (`docs/adr/0001-location-page-depth.md`).
 
 ## Environment
 
@@ -58,7 +58,7 @@ public/                   # Static assets (e.g. logo-akademi-asn.webp)
 ```
 
 - **Use shadcn first.** If shadcn has the component, add it with `bunx shadcn add <name>`. Otherwise build it in `components/shared/` on top of `radix-ui` primitives. Never modify files in `components/ui/`; customize via `className` or a wrapper in `shared/`.
-- **`app/**/page.tsx`stays thin:** export`metadata`(SEO lives here, not in`data/`) and render one component from `components/pages/`.
+- **`app/**/page.tsx` stays thin:** routes own the Next `metadata` export; content fields such as `seoTitle` and `description` may live in `data/` (`docs/adr/0002-artikel-body-in-mdx.md`). Render one component from `components/pages/`.
 - **Sections are Server Components.** Move interactive parts (carousel, tabs, …) into a separate `"use client"` file in `components/shared/`.
 - **Naming:** every file under `components/` is kebab-case (`program-bimbel-online.tsx`). The component inside is a PascalCase arrow function with a default export:
   ```tsx
@@ -84,7 +84,7 @@ public/                   # Static assets (e.g. logo-akademi-asn.webp)
 
 Pages never pass literal values to sections. All section content lives in `data/`.
 
-- `data/<section-file-name>.ts` mirrors `components/sections/<section-file-name>.tsx`.
+- `data/<section-file-name>.ts` mirrors `components/sections/<section-file-name>.tsx`. One exception: `components/sections/artikel-per-kategori.tsx` takes its data from `data/artikel-listing.ts`.
 - The section exports its props type; each data entry is named `<section><Page>` and checked with `satisfies`:
 
   ```tsx
