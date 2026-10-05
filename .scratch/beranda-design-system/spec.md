@@ -1,5 +1,7 @@
 # Spec: Design system and home landing page
 
+> **Superseded for Konsultasi rotation:** See [daily rotation decision](../jangkauan-lokasi/issues/05-daily-konsultasi-rotation.md). Rotation is daily; `revalidate = 86400`; `getKonsultasiUrl(topic?, now?)` changes day at 00:00 UTC (07:00 WIB). Daily ISR means pages may switch admins at different times; issue 05 accepted this.
+
 Status: done
 
 ## Problem Statement

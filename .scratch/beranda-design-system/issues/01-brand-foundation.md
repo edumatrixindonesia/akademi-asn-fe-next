@@ -1,5 +1,7 @@
 # 01: Brand foundation and live home route
 
+> **Superseded for Konsultasi rotation:** See [daily rotation decision](../../jangkauan-lokasi/issues/05-daily-konsultasi-rotation.md). Rotation is daily; `revalidate = 86400`; `getKonsultasiUrl(topic?, now?)` changes day at 00:00 UTC (07:00 WIB). Daily ISR means pages may switch admins at different times; issue 05 accepted this.
+
 **Parent:** `.scratch/beranda-design-system/spec.md`
 
 **What to build:** A visitor who opens `/` sees the Akademi ASN home page (an empty Home shell for now) in brand colors and Poppins, instead of the create-next-app template. The Navbar CTA is yellow and the Footer uses the blue gradient. The root layout sets the correct SEO basics. This ticket also sets up the HTML test harness (spec seam 1) that later tickets extend.

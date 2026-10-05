@@ -1,5 +1,7 @@
 # 02: Konsultasi rotation across four CS admins
 
+> **Superseded for Konsultasi rotation:** See [daily rotation decision](../../jangkauan-lokasi/issues/05-daily-konsultasi-rotation.md). Rotation is daily; `revalidate = 86400`; `getKonsultasiUrl(topic?, now?)` changes day at 00:00 UTC (07:00 WIB). Daily ISR means pages may switch admins at different times; issue 05 accepted this.
+
 **Parent:** `.scratch/beranda-design-system/spec.md`
 
 **What to build:** Every Konsultasi link opens WhatsApp with one of four admins (Asyah, Nevita, Putri, Sari). The admin rotates in turn every hour, and all links on a page point to the same admin. The Navbar and Footer already use it.

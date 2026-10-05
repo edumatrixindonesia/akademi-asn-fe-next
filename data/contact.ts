@@ -26,6 +26,7 @@ export const getKonsultasiUrl = (
     throw new Error("NEXT_PUBLIC_SITE_URL must be set to the site's absolute URL.");
   }
 
+  // Day boundary: 00:00 UTC (07:00 WIB).
   const admin = konsultasiAdmins[Math.floor(now / 86_400_000) % 4];
   const message = `Halo Kak ${admin.name} ${siteUrl}, Saya ingin bertanya tentang ${topic}. Mohon info selengkapnya...`;
 

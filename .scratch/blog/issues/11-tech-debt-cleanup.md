@@ -26,6 +26,7 @@
 
 - 2026-10-02: Triaged. Ticket 01 is done. Items 2-5 are confirmed against the current code; items 2 and 3 have grown since the ticket was written (see the lists above). `validateArtikel` has no `related` check, and `getRelatedArtikel` silently drops unknown slugs. `getWordCount` strips `-` in its markup regex, so `anak-anak` counts as 2. Test baseline: 56 pass, 5 fail (4 in `tests/location-html.test.js`, 1 in `tests/intro.test.js`).
 - 2026-10-02: Implemented. `resolveArtikel(entry)` in `lib/artikel.ts` returns `{ kategori, cover, seoTitle }`; `kategoriPath`/`penulisPath` live in `lib/blog-path.ts`. `validateArtikel` also rejects a repeated related slug and an entry listing itself (found in code review: either would show a duplicate or wasted Artikel Terkait card). `countWords` is exported for the test. Production build HTML for `/`, `/bimbel-cpns`, `/blog`, all Kategori and Penulis pages, the sitemap, and the RSS feed matched the pre-change build except the build ID; `/blog/perbedaan-cpns-dan-pppk` `wordCount` went from 767 to 741 and its reading time stayed 4 minutes. `bun test`: 58 pass, 5 known failures.
+- 2026-10-05: Resolution. The five failures in the 2026-10-02 baseline are resolved. `bun test` against `bun dev` reported 63 pass, 0 fail. Fixing commits: `dfe312c`, `e36b9e4`, `b22553c`, `7228f69` (from `git log -- tests/`).
 
 ## Agent Brief
 

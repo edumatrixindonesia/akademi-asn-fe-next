@@ -16,3 +16,7 @@
 - [x] All pages statically generated via `generateStaticParams`; drafts never appear in production
 - [x] HTML test: `/blog` has one `h1`; with 6 or fewer published Artikel `/blog/page/2` returns 404; `/blog/page/1` responds 308 to `/blog`
 - [x] `bun run lint`, `bun run typecheck`, and `bun test` pass (the same 5 unrelated location and home-intro tests still fail)
+
+## Comments
+
+- 2026-10-05: Resolution. The five failures in the 2026-10-02 baseline are resolved. `bun test` against `bun dev` reported 63 pass, 0 fail. Fixing commits: `dfe312c`, `e36b9e4`, `b22553c`, `7228f69` (from `git log -- tests/`).

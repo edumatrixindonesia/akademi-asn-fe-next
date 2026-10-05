@@ -45,9 +45,11 @@ git config core.hooksPath   # .githooks
 
 ## 3. region-service
 
-Location pages, `generateStaticParams`, and `sitemap.xml` all read region data from
-the internal region-service API. Without it, `bun run build` fails and location
-pages return errors. Non-location pages still work in `bun dev`.
+`app/page.tsx`, `/bimbel-cpns`, `/bimbel-pppk`, `/bimbel-bumn`, every location
+page, and `sitemap.xml` all read region data from the internal region-service API.
+Tryout, Produk, and Blog pages do not call it. Without it, `bun run build` fails
+and dependent pages return errors. A warm cache can hide an outage, so a page that
+loads is not proof that it does not depend on the service.
 
 ### Main path: run it locally
 
@@ -72,10 +74,10 @@ REGION_SERVICE_URL="https://region-service.bimbeledumatrix.com/api/v1"
 ```
 
 The same token works for local and production. region-service is rate-limited
-(the `rate_limit` field in each response shows the current limit; 40 requests per
-60 seconds at the time of writing). A cold `bun run build` fetches the region lists
-once per build worker, so repeated builds can hit it. Prefer the local service for
-regular work.
+(the `rate_limit` field in each response shows the current limit; 32 requests per
+60 seconds locally and in production as of 2026-10-05). A cold `bun run build`
+fetches the region lists once per build worker, so repeated builds can hit it.
+Prefer the local service for regular work.
 
 ## 4. Environment variables
 
