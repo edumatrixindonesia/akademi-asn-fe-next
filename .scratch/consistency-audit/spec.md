@@ -1,6 +1,6 @@
 # Consistency audit fixes
 
-Status: ready-for-agent
+Status: done
 
 ## Summary
 
@@ -13,7 +13,7 @@ Act on `docs/audits/2026-10-05-project-consistency.md` (baseline `e36b9e4`). The
 | 1. Call Center link rotates | Link the displayed number to `wa.me/6281215523902` on every page. The Konsultasi CTA keeps rotating. | 01 |
 | 2. Seleksi heading names PPPK | Home, home-location, and Tryout show three stacked Seleksi sections: CPNS, PPPK, BUMN. `seleksiHome` becomes `seleksiCpns` with a CPNS-only title. | 02 |
 | 3. Navbar Paket/Testimoni links on Blog | **wontfix.** The owner chose to keep `#paket-program` and `#testimoni` as they are. Known consequence: on Blog, Kategori, Penulis, Artikel, and search pages the two links have no target. | none |
-| 4. Stale Artikel modification date | `updatedAt: "2026-10-03"` for the PP 7/1977 correction. `publishedAt` stays. | 03 |
+| 4. Stale Artikel modification date | `updatedAt: "2026-10-03"` for the PP 7/1977 correction. `publishedAt` stays. Amended 2026-10-05: now `2026-10-05` after the PP 17/2020 Referensi was added (issue 03 comment). | 03 |
 | 5. Artikel Terbaru order | "After FAQ" is current. Glossary already fixed on 2026-10-05; issue 08 gets a dated amendment. | 04 |
 | 6. Old failing tests still read as open | Append a dated resolution; keep the 2026-10-02 baseline as history. | 04 |
 | 7. README understates region-service | Document that the four root landing pages, location pages, and the sitemap need region-service. | 04 |

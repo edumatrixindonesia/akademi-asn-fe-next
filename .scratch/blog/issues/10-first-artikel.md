@@ -25,3 +25,7 @@ Non-critical (optional) warnings, not blocking:
 
 - Articles: `datePublished` and `dateModified` flagged as invalid datetime and missing a timezone. The values are date-only (`2026-10-02`, `2026-10-03`). Fix by emitting ISO 8601 with offset (for example `2026-10-03T00:00:00+07:00`).
 - Local businesses: `priceRange` missing.
+
+## Comments
+
+- 2026-10-05: Amendment. `d7f8df9` moved `updatedAt` to `2026-10-05` because it added the PP 17/2020 Referensi entry, which changed the Artikel. The owner approved keeping `2026-10-05` on 2026-10-05. The 2026-10-03 date in the acceptance wording is historical. The Rich Results Test above ran against the deployed `2026-10-03` value; the next deploy emits `2026-10-05`.

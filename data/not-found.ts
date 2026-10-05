@@ -11,7 +11,7 @@ export const notFound = (konsultasiUrl: string) =>
     konsultasiLabel: "Konsultasi Gratis",
     konsultasiHref: konsultasiUrl,
     examTracks: {
-      title: "Pilih Bimbel Sesuai Seleksimu",
+      title: "Pilih Bimbel Sesuai Seleksi Anda",
       description:
         "Persiapan terarah untuk seleksi CPNS, PPPK, dan Rekrutmen Bersama BUMN.",
       linkLabel: "Lihat bimbel",

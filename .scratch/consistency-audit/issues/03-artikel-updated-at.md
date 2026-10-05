@@ -15,3 +15,5 @@
 - [x] `bun run lint`, `bun run typecheck`, and `bun test` pass.
 
 ## Comments
+
+- 2026-10-05: Amendment. `d7f8df9` moved `updatedAt` to `2026-10-05` because it added the PP 17/2020 Referensi entry, which changed the Artikel. The owner approved keeping `2026-10-05` on 2026-10-05. The 2026-10-03 date in the acceptance wording is historical.
