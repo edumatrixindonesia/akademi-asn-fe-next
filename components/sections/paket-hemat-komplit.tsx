@@ -1,6 +1,9 @@
 import Image from "next/image";
+import { siteUrl } from "@/app/shared-metadata";
 import { Button } from "@/components/ui/button";
 import { formatRupiah } from "@/lib/utils";
+import ProductDemo from "@/components/shared/product-demo";
+import type { ProductDemoData } from "@/data/product-demo";
 
 export type PaketHematKomplitProps = {
   title: string;
@@ -11,6 +14,7 @@ export type PaketHematKomplitProps = {
   imageAlt: string;
   ctaLabel: string;
   ctaHref: string;
+  demoDetails?: ProductDemoData;
 };
 
 const PaketHematKomplit = ({
@@ -22,18 +26,28 @@ const PaketHematKomplit = ({
   imageAlt,
   ctaLabel,
   ctaHref,
+  demoDetails,
 }: PaketHematKomplitProps) => {
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "Product",
     name: title,
-    description,
+    image: new URL(image, siteUrl).href,
+    description: [demoDetails?.notice, description].filter(Boolean).join(" "),
+    ...(demoDetails && {
+      aggregateRating: demoDetails.aggregateRating,
+      review: demoDetails.review,
+    }),
     brand: { "@type": "Brand", name: "Akademi ASN" },
     offers: {
       "@type": "Offer",
       price,
       priceCurrency: "IDR",
       availability: "https://schema.org/InStock",
+      ...(demoDetails && {
+        shippingDetails: demoDetails.shippingDetails,
+        hasMerchantReturnPolicy: demoDetails.hasMerchantReturnPolicy,
+      }),
     },
   };
 
@@ -77,6 +91,7 @@ const PaketHematKomplit = ({
               {ctaLabel}
             </a>
           </Button>
+          <ProductDemo details={demoDetails} />
         </div>
       </div>
 

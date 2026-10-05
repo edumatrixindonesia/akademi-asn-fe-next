@@ -1,0 +1,275 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Product",
+      "@id": "https://example.test/sample-product-1",
+      "name": "Tryout CPNS (SIMULASI)",
+      "description": "DATA SIMULASI UNTUK PENGUJIAN. Simulasi CAT CPNS 2026, 500+ Soal Terbaru, Pembahasan Lengkap, Ranking Nasional, Akses 30 Hari",
+      "image": "https://example.test/img/section/Paket%20Tryout%20Bimbel%20Les%20Privat%20CPNS%20&%20PPPK%20BUMN%20Terbaik%20di%20Indonesia.webp",
+      "brand": {
+        "@type": "Brand",
+        "name": "Akademi ASN"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": 4.5,
+        "reviewCount": 2,
+        "ratingCount": 2,
+        "bestRating": 5,
+        "worstRating": 1
+      },
+      "review": [
+        {
+          "@type": "Review",
+          "author": {
+            "@type": "Person",
+            "name": "Pengguna Simulasi 1-1"
+          },
+          "reviewBody": "Contoh ulasan 1 untuk Tryout CPNS. Data simulasi, bukan ulasan pelanggan.",
+          "datePublished": "2026-10-05",
+          "reviewRating": {
+            "@type": "Rating",
+            "ratingValue": 4,
+            "bestRating": 5,
+            "worstRating": 1
+          }
+        },
+        {
+          "@type": "Review",
+          "author": {
+            "@type": "Person",
+            "name": "Pengguna Simulasi 1-2"
+          },
+          "reviewBody": "Contoh ulasan 2 untuk Tryout CPNS. Data simulasi, bukan ulasan pelanggan.",
+          "datePublished": "2026-10-05",
+          "reviewRating": {
+            "@type": "Rating",
+            "ratingValue": 5,
+            "bestRating": 5,
+            "worstRating": 1
+          }
+        }
+      ],
+      "offers": {
+        "@type": "Offer",
+        "url": "https://example.test/sample-product-1",
+        "price": 30000,
+        "priceCurrency": "IDR",
+        "availability": "https://schema.org/InStock",
+        "shippingDetails": {
+          "@type": "OfferShippingDetails",
+          "shippingDestination": {
+            "@type": "DefinedRegion",
+            "addressCountry": "ID"
+          },
+          "shippingRate": {
+            "@type": "MonetaryAmount",
+            "value": 0,
+            "currency": "IDR"
+          },
+          "deliveryTime": {
+            "@type": "ShippingDeliveryTime",
+            "handlingTime": {
+              "@type": "QuantitativeValue",
+              "minValue": 0,
+              "maxValue": 1,
+              "unitCode": "DAY"
+            },
+            "transitTime": {
+              "@type": "QuantitativeValue",
+              "minValue": 0,
+              "maxValue": 0,
+              "unitCode": "DAY"
+            }
+          }
+        },
+        "hasMerchantReturnPolicy": {
+          "@type": "MerchantReturnPolicy",
+          "applicableCountry": "ID",
+          "returnPolicyCategory": "https://schema.org/MerchantReturnNotPermitted"
+        }
+      }
+    },
+    {
+      "@type": "Product",
+      "@id": "https://example.test/sample-product-2",
+      "name": "E-Book Modul CPNS (SIMULASI)",
+      "description": "DATA SIMULASI UNTUK PENGUJIAN. Materi SKD Lengkap, 300+ Halaman PDF, Ringkasan Materi, Tips & Trik Jitu, Update Terbaru 2026",
+      "image": "https://example.test/img/section/produk-modul-lolos-cpns-pppk-bumn.webp",
+      "brand": {
+        "@type": "Brand",
+        "name": "Akademi ASN"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": 4.5,
+        "reviewCount": 2,
+        "ratingCount": 2,
+        "bestRating": 5,
+        "worstRating": 1
+      },
+      "review": [
+        {
+          "@type": "Review",
+          "author": {
+            "@type": "Person",
+            "name": "Pengguna Simulasi 2-1"
+          },
+          "reviewBody": "Contoh ulasan 1 untuk E-Book Modul CPNS. Data simulasi, bukan ulasan pelanggan.",
+          "datePublished": "2026-10-05",
+          "reviewRating": {
+            "@type": "Rating",
+            "ratingValue": 4,
+            "bestRating": 5,
+            "worstRating": 1
+          }
+        },
+        {
+          "@type": "Review",
+          "author": {
+            "@type": "Person",
+            "name": "Pengguna Simulasi 2-2"
+          },
+          "reviewBody": "Contoh ulasan 2 untuk E-Book Modul CPNS. Data simulasi, bukan ulasan pelanggan.",
+          "datePublished": "2026-10-05",
+          "reviewRating": {
+            "@type": "Rating",
+            "ratingValue": 5,
+            "bestRating": 5,
+            "worstRating": 1
+          }
+        }
+      ],
+      "offers": {
+        "@type": "Offer",
+        "url": "https://example.test/sample-product-2",
+        "price": 50000,
+        "priceCurrency": "IDR",
+        "availability": "https://schema.org/InStock",
+        "shippingDetails": {
+          "@type": "OfferShippingDetails",
+          "shippingDestination": {
+            "@type": "DefinedRegion",
+            "addressCountry": "ID"
+          },
+          "shippingRate": {
+            "@type": "MonetaryAmount",
+            "value": 0,
+            "currency": "IDR"
+          },
+          "deliveryTime": {
+            "@type": "ShippingDeliveryTime",
+            "handlingTime": {
+              "@type": "QuantitativeValue",
+              "minValue": 0,
+              "maxValue": 1,
+              "unitCode": "DAY"
+            },
+            "transitTime": {
+              "@type": "QuantitativeValue",
+              "minValue": 0,
+              "maxValue": 0,
+              "unitCode": "DAY"
+            }
+          }
+        },
+        "hasMerchantReturnPolicy": {
+          "@type": "MerchantReturnPolicy",
+          "applicableCountry": "ID",
+          "returnPolicyCategory": "https://schema.org/MerchantReturnNotPermitted"
+        }
+      }
+    },
+    {
+      "@type": "Product",
+      "@id": "https://example.test/sample-product-3",
+      "name": "Paket Hemat Komplit (SIMULASI)",
+      "description": "DATA SIMULASI UNTUK PENGUJIAN. Beli Tryout CPNS + E-Book Modul CPNS sekaligus dan hemat lebih banyak",
+      "image": "https://example.test/img/section/paket-hemat-komplit-tryout-cpns.webp",
+      "brand": {
+        "@type": "Brand",
+        "name": "Akademi ASN"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": 4.5,
+        "reviewCount": 2,
+        "ratingCount": 2,
+        "bestRating": 5,
+        "worstRating": 1
+      },
+      "review": [
+        {
+          "@type": "Review",
+          "author": {
+            "@type": "Person",
+            "name": "Pengguna Simulasi 3-1"
+          },
+          "reviewBody": "Contoh ulasan 1 untuk Paket Hemat Komplit. Data simulasi, bukan ulasan pelanggan.",
+          "datePublished": "2026-10-05",
+          "reviewRating": {
+            "@type": "Rating",
+            "ratingValue": 4,
+            "bestRating": 5,
+            "worstRating": 1
+          }
+        },
+        {
+          "@type": "Review",
+          "author": {
+            "@type": "Person",
+            "name": "Pengguna Simulasi 3-2"
+          },
+          "reviewBody": "Contoh ulasan 2 untuk Paket Hemat Komplit. Data simulasi, bukan ulasan pelanggan.",
+          "datePublished": "2026-10-05",
+          "reviewRating": {
+            "@type": "Rating",
+            "ratingValue": 5,
+            "bestRating": 5,
+            "worstRating": 1
+          }
+        }
+      ],
+      "offers": {
+        "@type": "Offer",
+        "url": "https://example.test/sample-product-3",
+        "price": 70000,
+        "priceCurrency": "IDR",
+        "availability": "https://schema.org/InStock",
+        "shippingDetails": {
+          "@type": "OfferShippingDetails",
+          "shippingDestination": {
+            "@type": "DefinedRegion",
+            "addressCountry": "ID"
+          },
+          "shippingRate": {
+            "@type": "MonetaryAmount",
+            "value": 0,
+            "currency": "IDR"
+          },
+          "deliveryTime": {
+            "@type": "ShippingDeliveryTime",
+            "handlingTime": {
+              "@type": "QuantitativeValue",
+              "minValue": 0,
+              "maxValue": 1,
+              "unitCode": "DAY"
+            },
+            "transitTime": {
+              "@type": "QuantitativeValue",
+              "minValue": 0,
+              "maxValue": 0,
+              "unitCode": "DAY"
+            }
+          }
+        },
+        "hasMerchantReturnPolicy": {
+          "@type": "MerchantReturnPolicy",
+          "applicableCountry": "ID",
+          "returnPolicyCategory": "https://schema.org/MerchantReturnNotPermitted"
+        }
+      }
+    }
+  ]
+}

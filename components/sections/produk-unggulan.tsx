@@ -1,17 +1,23 @@
-import { Check, type LucideIcon } from "lucide-react";
+import Image from "next/image";
+import { Check } from "lucide-react";
+import { siteUrl } from "@/app/shared-metadata";
 import { Button } from "@/components/ui/button";
 import { formatRupiah } from "@/lib/utils";
+import ProductDemo from "@/components/shared/product-demo";
+import type { ProductDemoData } from "@/data/product-demo";
 
 export type ProdukUnggulanProps = {
   title: string;
   description: string;
   products: {
     name: string;
-    icon: LucideIcon;
+    image: string;
+    imageAlt: string;
     features: string[];
     price: number;
     ctaLabel: string;
     ctaHref: string;
+    demoDetails?: ProductDemoData;
   }[];
 };
 
@@ -21,13 +27,22 @@ const ProdukUnggulan = ({ title, description, products }: ProdukUnggulanProps) =
     "@graph": products.map((product) => ({
       "@type": "Product",
       name: product.name,
-      description: product.features.join(", "),
+      image: new URL(product.image, siteUrl).href,
+      description: [product.demoDetails?.notice, ...product.features].filter(Boolean).join(", "),
+      ...(product.demoDetails && {
+        aggregateRating: product.demoDetails.aggregateRating,
+        review: product.demoDetails.review,
+      }),
       brand: { "@type": "Brand", name: "Akademi ASN" },
       offers: {
         "@type": "Offer",
         price: product.price,
         priceCurrency: "IDR",
         availability: "https://schema.org/InStock",
+        ...(product.demoDetails && {
+          shippingDetails: product.demoDetails.shippingDetails,
+          hasMerchantReturnPolicy: product.demoDetails.hasMerchantReturnPolicy,
+        }),
       },
     })),
   };
@@ -47,12 +62,19 @@ const ProdukUnggulan = ({ title, description, products }: ProdukUnggulanProps) =
         </div>
 
         <div className="mx-auto grid max-w-4xl gap-6 md:grid-cols-2">
-          {products.map(({ name, icon: Icon, features, price, ctaLabel, ctaHref }) => (
+          {products.map(({ name, image, imageAlt, features, price, ctaLabel, ctaHref, demoDetails }) => (
             <article
               key={name}
               className="flex flex-col rounded-xl bg-linear-to-b from-primary to-primary-dark p-6 text-primary-foreground shadow-sm md:p-8"
             >
-              <Icon aria-hidden className="mx-auto size-14 rounded-xl bg-background p-3 text-primary" />
+              <Image
+                src={image}
+                alt={imageAlt}
+                width={160}
+                height={160}
+                sizes="112px"
+                className="mx-auto size-28 rounded-xl object-contain"
+              />
 
               <h3 className="mt-4 text-center text-xl font-bold">{name}</h3>
 
@@ -83,6 +105,7 @@ const ProdukUnggulan = ({ title, description, products }: ProdukUnggulanProps) =
                   {ctaLabel}
                 </a>
               </Button>
+              <ProductDemo details={demoDetails} />
             </article>
           ))}
         </div>

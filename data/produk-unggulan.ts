@@ -1,6 +1,6 @@
-import { BookOpen, MonitorCheck } from "lucide-react";
 import type { ProdukUnggulanProps } from "@/components/sections/produk-unggulan";
 import { tahunSeleksi } from "@/data/tahun-seleksi";
+import { productDemo } from "@/data/product-demo";
 
 export const hargaTryoutCpns = 30_000;
 export const hargaEbookModulCpns = 50_000;
@@ -12,7 +12,9 @@ export const produkUnggulan = (konsultasiUrl: (topic: string) => string) =>
     products: [
       {
         name: "Tryout CPNS",
-        icon: MonitorCheck,
+        demoDetails: productDemo("Tryout CPNS", 1),
+        image: "/img/section/Paket Tryout Bimbel Les Privat CPNS & PPPK BUMN Terbaik di Indonesia.webp",
+        imageAlt: "Ilustrasi peserta Akademi ASN berlatih tryout CPNS melalui laptop",
         features: [
           `Simulasi CAT CPNS ${tahunSeleksi}`,
           "500+ Soal Terbaru",
@@ -26,7 +28,9 @@ export const produkUnggulan = (konsultasiUrl: (topic: string) => string) =>
       },
       {
         name: "E-Book Modul CPNS",
-        icon: BookOpen,
+        demoDetails: productDemo("E-Book Modul CPNS", 2),
+        image: "/img/section/produk-modul-lolos-cpns-pppk-bumn.webp",
+        imageAlt: "Sampul modul panduan SKD CPNS dan PPPK Akademi ASN",
         features: [
           "Materi SKD Lengkap",
           "300+ Halaman PDF",
