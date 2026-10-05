@@ -4,6 +4,8 @@
 
 **Status:** approved (facts validated)
 
+**Register note (2026-10-05):** The register changed from "kamu" to "Anda" on owner approval. The texts below are edited to match `data/intro.ts`.
+
 Drafts for `introTexts` in `data/intro.ts`, keyed by region `kode`. Same rules as batches 01–05: every factual claim has a source listed under it, superlatives need two independent sources, wording follows the cited law where one exists, and anything with only one weak source or conflicting sources is left out. Kelas Offline is not offered here. Privat Home Visit is offered everywhere (`CONTEXT.md`).
 
 This batch uses no superlatives. Most facts come from the law that forms or governs each province.

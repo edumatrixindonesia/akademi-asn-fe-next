@@ -117,7 +117,7 @@ Every claim is checked before it enters Gate 1.
 
 ## Indonesian style
 
-- Formal but friendly. Address the reader as "kamu", as the rest of the site does.
+- Formal but friendly. Address the reader as "kamu" or "Anda": the Blog uses "kamu"; other pages use "Anda".
 - Follow PUEBI spelling and KBBI forms.
 - Short sentences, one idea each. Short paragraphs of two to four sentences.
 - Write foreign terms in *italic* on every use (*tryout*, *passing grade*, *e-learning*). Terms that KBBI lists, and official names (SKD, SSCASN), stay upright.

@@ -4,6 +4,8 @@
 
 **Status:** approved (facts validated)
 
+**Register note (2026-10-05):** The register changed from "kamu" to "Anda" on owner approval. The texts below are edited to match `data/intro.ts`.
+
 Drafts for `introTexts` in `data/intro.ts`, keyed by region `kode`. Same rules as batches 01–04: every factual claim has a source listed under it, no opinions or assumptions about local job markets, no figures that go stale, 2–3 sentences in the site's register. Kelas Offline is not offered here. Privat Home Visit is offered everywhere (`CONTEXT.md`).
 
 Superlatives in this batch ("terluas", "terpanjang", "tertua") each have two independent sources that agree.

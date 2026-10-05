@@ -4,6 +4,8 @@
 
 **Status:** approved (facts validated)
 
+**Register note (2026-10-05):** The register changed from "kamu" to "Anda" on owner approval. The texts below are edited to match `data/intro.ts`.
+
 Drafts for `introTexts` in `data/intro.ts`, keyed by region `kode`. Same rules as batches 01–02: every factual claim about a region has a source listed under it, no opinions or assumptions about local job markets, no figures that go stale, 2–3 sentences in the site's register. Kelas Offline is not offered in this batch's regions.
 
 ## Validation notes
@@ -59,7 +61,7 @@ Sources: [malangkota.go.id: Sejarah Malang (Kota Pendidikan)](https://malangkota
 
 ### 35.07 · Kabupaten Malang
 
-Kabupaten Malang, dengan ibu kota Kepanjen, adalah kabupaten terluas kedua di Jawa Timur setelah Banyuwangi. Wilayahnya membentang hingga pesisir Samudra Hindia dengan pantai seperti Balekambang, dan sebagian wilayahnya masuk Taman Nasional Bromo Tengger Semeru. Privat Home Visit Akademi ASN mendatangkan tutor ke rumahmu, dan kelas online bisa diikuti dari mana saja.
+Kabupaten Malang, dengan ibu kota Kepanjen, adalah kabupaten terluas kedua di Jawa Timur setelah Banyuwangi. Wilayahnya membentang hingga pesisir Samudra Hindia dengan pantai seperti Balekambang, dan sebagian wilayahnya masuk Taman Nasional Bromo Tengger Semeru. Privat Home Visit Akademi ASN mendatangkan tutor ke rumah Anda, dan kelas online bisa diikuti dari mana saja.
 
 Sources: [malangkab.go.id: Selayang Pandang (terluas kedua, batas selatan Samudra Indonesia)](https://malangkab.go.id/index.php/content/selayang-pandang-mlg), [Wikipedia: Kabupaten Malang (ibu kota Kepanjen)](https://id.wikipedia.org/wiki/Kabupaten_Malang), [malangkab.go.id: Pantai Balekambang](https://malangkab.go.id/potensi/detail/13), [Wikipedia: TN Bromo Tengger Semeru (letak di Kabupaten Malang)](https://id.wikipedia.org/wiki/Taman_Nasional_Bromo_Tengger_Semeru)
 

@@ -43,7 +43,7 @@ export const materiPppk = (konsultasiUrl: string) =>
     ...materiHome(konsultasiUrl),
     title: "Program Bimbel PPPK Guru, Tenaga Kesehatan, dan Teknis",
     description:
-      "Akademi ASN mendampingi persiapan seleksi kompetensi PPPK dengan materi kompetensi teknis sesuai formasi yang kamu lamar, latihan soal, dan simulasi CAT bersama tutor berpengalaman.",
+      "Akademi ASN mendampingi persiapan seleksi kompetensi PPPK dengan materi kompetensi teknis sesuai formasi yang Anda lamar, latihan soal, dan simulasi CAT bersama tutor berpengalaman.",
     items: [
       "Kompetensi Teknis PPPK Guru",
       "Kompetensi Teknis PPPK Tenaga Kesehatan",

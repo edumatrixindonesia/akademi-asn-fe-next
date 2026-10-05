@@ -4,6 +4,8 @@
 
 **Status:** approved (facts validated)
 
+**Register note (2026-10-05):** The register changed from "kamu" to "Anda" on owner approval. The texts below are edited to match `data/intro.ts`.
+
 Drafts for `introTexts` in `data/intro.ts`, keyed by region `kode`. Same rules as batches 01–03: every factual claim about a region has a source listed under it, no opinions or assumptions about local job markets, no figures that go stale, 2–3 sentences in the site's register. Kelas Offline is not offered in this batch's regions. Privat Home Visit is offered everywhere (`CONTEXT.md`).
 
 ## Validation notes
@@ -48,7 +50,7 @@ Sources: [Kompas: kota tertua di Indonesia (Prasasti Kedukan Bukit, 682 M)](http
 
 ### 21 · Kepulauan Riau
 
-Provinsi Kepulauan Riau dibentuk pada tahun 2002 sebagai pemekaran dari Provinsi Riau, dengan ibu kota di Tanjungpinang. Sekitar 96% wilayahnya berupa lautan dengan ribuan pulau, dan provinsi ini berbatasan dengan Singapura, Malaysia, Vietnam, dan Kamboja. Kelas online Akademi ASN bisa diikuti dari pulau mana pun, dan Privat Home Visit mendatangkan tutor ke rumahmu.
+Provinsi Kepulauan Riau dibentuk pada tahun 2002 sebagai pemekaran dari Provinsi Riau, dengan ibu kota di Tanjungpinang. Sekitar 96% wilayahnya berupa lautan dengan ribuan pulau, dan provinsi ini berbatasan dengan Singapura, Malaysia, Vietnam, dan Kamboja. Kelas online Akademi ASN bisa diikuti dari pulau mana pun, dan Privat Home Visit mendatangkan tutor ke rumah Anda.
 
 Sources: [UU 25/2002 (pemekaran dari Riau, ibu kota Tanjungpinang)](https://carapedia.com/undang-undang/2002/pembentukan_provinsi_kepulauan_riau_(uu_25_thn_20_25.pdf), [kepriprov.go.id: Tentang Kepri (96% lautan, 2.408 pulau, berbatasan dengan Singapura, Malaysia, Vietnam)](https://kepriprov.go.id/laman/tentang-kami), [kepriprov.go.id: berbatasan dengan Singapura, Vietnam, Malaysia, dan Kamboja](https://kepriprov.go.id/laman/tentang-kepri), [Dinkes Kepri: batas wilayah (Vietnam dan Kamboja di utara)](https://www.dinkesprovkepri.org/laman/sejarah-provinsi-kepulauan-riau)
 

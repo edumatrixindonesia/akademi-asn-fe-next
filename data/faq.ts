@@ -55,12 +55,12 @@ export const faqCpns = {
     {
       question: "Apakah tersedia bimbel SKB CPNS?",
       answer:
-        "Ya. Selain SKD, Akademi ASN juga mendampingi persiapan SKB. SKB menguji kompetensi bidang sesuai jabatan yang dilamar, sehingga materinya berbeda di setiap formasi. Materi SKB tersedia untuk semua formasi dan disesuaikan dengan formasi yang kamu lamar, jadi sampaikan formasimu saat konsultasi.",
+        "Ya. Selain SKD, Akademi ASN juga mendampingi persiapan SKB. SKB menguji kompetensi bidang sesuai jabatan yang dilamar, sehingga materinya berbeda di setiap formasi. Materi SKB tersedia untuk semua formasi dan disesuaikan dengan formasi yang Anda lamar, jadi sampaikan formasi Anda saat konsultasi.",
     },
     {
       question: "Apakah tersedia tryout CAT CPNS?",
       answer:
-        "Ya. Tryout Akademi ASN berbasis CAT, sehingga kamu terbiasa dengan format dan batas waktu tes yang sebenarnya. Tersedia Paket Tryout 1 dan Paket Tryout 5. Paket Optima, Maxima, dan Ultima juga sudah termasuk tryout gratis 1x, 2x, dan 3x, sedangkan Bootcamp Online dilengkapi tryout setiap minggu.",
+        "Ya. Tryout Akademi ASN berbasis CAT, sehingga Anda terbiasa dengan format dan batas waktu tes yang sebenarnya. Tersedia Paket Tryout 1 dan Paket Tryout 5. Paket Optima, Maxima, dan Ultima juga sudah termasuk tryout gratis 1x, 2x, dan 3x, sedangkan Bootcamp Online dilengkapi tryout setiap minggu.",
     },
     {
       question: "Berapa biaya bimbel CPNS?",
@@ -69,17 +69,17 @@ export const faqCpns = {
     {
       question: "Apakah kelas bisa diikuti sambil bekerja?",
       answer:
-        "Bisa. Jadwal belajar di Akademi ASN fleksibel, jadi persiapan seleksi bisa berjalan tanpa mengganggu pekerjaanmu. Pada les privat, tutor datang ke rumah atau kantormu. Pada kelas online, rekaman pembelajaran bisa diputar ulang kapan saja.",
+        "Bisa. Jadwal belajar di Akademi ASN fleksibel, jadi persiapan seleksi bisa berjalan tanpa mengganggu pekerjaan Anda. Pada les privat, tutor datang ke rumah atau kantor Anda. Pada kelas online, rekaman pembelajaran bisa diputar ulang kapan saja.",
     },
     {
       question: "Berapa lama program bimbel CPNS?",
       answer:
-        `Lama program bergantung pada paket yang dipilih: ${lamaPaketPrivat}, dan Bootcamp Online 24 sesi intensif. Pada les privat, jadwal setiap sesi bisa diatur sesuai waktu luangmu.`,
+        `Lama program bergantung pada paket yang dipilih: ${lamaPaketPrivat}, dan Bootcamp Online 24 sesi intensif. Pada les privat, jadwal setiap sesi bisa diatur sesuai waktu luang Anda.`,
     },
     {
       question: "Apa perbedaan kelas SKD dan SKB?",
       answer:
-        "SKD menguji kemampuan dasar yang sama untuk semua pelamar, yaitu TWK, TIU, dan TKP, dengan nilai ambang batas 65, 80, dan 166. SKB diikuti peserta yang lolos SKD dan menguji kompetensi sesuai jabatan yang dilamar, menggunakan CAT BKN dan dapat ditambah tes lain dari instansi, misalnya psikotes, tes praktik kerja, atau wawancara. Nilai akhir CPNS menggabungkan SKD (40%) dan SKB (60%). Karena itu, kelas SKD berfokus pada TWK, TIU, dan TKP, sedangkan kelas SKB berfokus pada materi bidang sesuai formasimu.",
+        "SKD menguji kemampuan dasar yang sama untuk semua pelamar, yaitu TWK, TIU, dan TKP, dengan nilai ambang batas 65, 80, dan 166. SKB diikuti peserta yang lolos SKD dan menguji kompetensi sesuai jabatan yang dilamar, menggunakan CAT BKN dan dapat ditambah tes lain dari instansi, misalnya psikotes, tes praktik kerja, atau wawancara. Nilai akhir CPNS menggabungkan SKD (40%) dan SKB (60%). Karena itu, kelas SKD berfokus pada TWK, TIU, dan TKP, sedangkan kelas SKB berfokus pada materi bidang sesuai formasi Anda.",
     },
   ],
 } satisfies FaqProps;
@@ -91,18 +91,18 @@ export const faqPppk = {
     {
       question: "Apa itu bimbel PPPK dan siapa yang cocok mengikutinya?",
       answer:
-        "PPPK (Pegawai Pemerintah dengan Perjanjian Kerja) adalah ASN yang diangkat berdasarkan perjanjian kerja. Seleksinya tidak memakai SKD dan SKB seperti CPNS, melainkan seleksi kompetensi teknis, manajerial, sosial kultural, dan wawancara berbasis komputer. Bimbel PPPK menyiapkan kamu untuk seleksi tersebut, dan cocok bagi pelamar formasi guru, tenaga kesehatan, maupun tenaga teknis. Syarat pelamar ditetapkan setiap periode seleksi; pada PPPK 2024, misalnya, seleksi ditujukan bagi eks tenaga honorer kategori II dan tenaga non-ASN.",
+        "PPPK (Pegawai Pemerintah dengan Perjanjian Kerja) adalah ASN yang diangkat berdasarkan perjanjian kerja. Seleksinya tidak memakai SKD dan SKB seperti CPNS, melainkan seleksi kompetensi teknis, manajerial, sosial kultural, dan wawancara berbasis komputer. Bimbel PPPK menyiapkan Anda untuk seleksi tersebut, dan cocok bagi pelamar formasi guru, tenaga kesehatan, maupun tenaga teknis. Syarat pelamar ditetapkan setiap periode seleksi; pada PPPK 2024, misalnya, seleksi ditujukan bagi eks tenaga honorer kategori II dan tenaga non-ASN.",
     },
     {
       question:
         "Apa perbedaan bimbel PPPK Teknis, PPPK Guru, dan PPPK Tenaga Kesehatan?",
       answer:
-        "Komponen seleksinya sama, yaitu kompetensi teknis, manajerial, sosial kultural, dan wawancara, tetapi materi kompetensi teknis mengikuti jabatan yang dilamar. Pada 2024, aturannya dipisah dalam Keputusan Menteri PANRB Nomor 347 (PPPK secara umum, termasuk tenaga teknis), Nomor 348 (guru), dan Nomor 349 (tenaga kesehatan). PPPK Teknis menguji pengetahuan bidang jabatan fungsional atau pelaksana yang dilamar. PPPK Guru mensyaratkan kualifikasi akademik paling rendah S-1 atau D-IV dan/atau sertifikat pendidik. PPPK Tenaga Kesehatan mensyaratkan Surat Tanda Registrasi (STR) yang masih berlaku untuk jabatan yang memerlukannya. Karena itu, materi kompetensi teknis di bimbel disiapkan sesuai formasimu.",
+        "Komponen seleksinya sama, yaitu kompetensi teknis, manajerial, sosial kultural, dan wawancara, tetapi materi kompetensi teknis mengikuti jabatan yang dilamar. Pada 2024, aturannya dipisah dalam Keputusan Menteri PANRB Nomor 347 (PPPK secara umum, termasuk tenaga teknis), Nomor 348 (guru), dan Nomor 349 (tenaga kesehatan). PPPK Teknis menguji pengetahuan bidang jabatan fungsional atau pelaksana yang dilamar. PPPK Guru mensyaratkan kualifikasi akademik paling rendah S-1 atau D-IV dan/atau sertifikat pendidik. PPPK Tenaga Kesehatan mensyaratkan Surat Tanda Registrasi (STR) yang masih berlaku untuk jabatan yang memerlukannya. Karena itu, materi kompetensi teknis di bimbel disiapkan sesuai formasi Anda.",
     },
     {
       question: `Apakah tersedia bimbel PPPK Teknis ${tahunSeleksi} secara online?`,
       answer:
-        "Ya. Bimbel PPPK Teknis bisa diikuti secara online, baik lewat Bootcamp Online berisi 24 sesi intensif via Zoom maupun les privat online bersama tutor. Materi kompetensi teknis disesuaikan dengan jabatan yang kamu lamar, dan kurikulumnya mengacu pada kisi-kisi resmi terbaru dari KemenPANRB dan BKN. Jadwal resmi seleksi PPPK diumumkan melalui portal sscasn.bkn.go.id.",
+        "Ya. Bimbel PPPK Teknis bisa diikuti secara online, baik lewat Bootcamp Online berisi 24 sesi intensif via Zoom maupun les privat online bersama tutor. Materi kompetensi teknis disesuaikan dengan jabatan yang Anda lamar, dan kurikulumnya mengacu pada kisi-kisi resmi terbaru dari KemenPANRB dan BKN. Jadwal resmi seleksi PPPK diumumkan melalui portal sscasn.bkn.go.id.",
     },
     {
       question: "Apa saja materi yang dipelajari dalam bimbel PPPK?",
@@ -112,28 +112,28 @@ export const faqPppk = {
     {
       question: "Apakah tersedia bimbel PPPK Guru secara online?",
       answer:
-        "Ya. Bimbel PPPK Guru bisa diikuti secara online, baik lewat Bootcamp Online berisi 24 sesi intensif via Zoom maupun les privat online bersama tutor. Materi kompetensi teknis disesuaikan dengan jabatan guru yang kamu lamar, ditambah persiapan kompetensi manajerial, sosial kultural, dan wawancara.",
+        "Ya. Bimbel PPPK Guru bisa diikuti secara online, baik lewat Bootcamp Online berisi 24 sesi intensif via Zoom maupun les privat online bersama tutor. Materi kompetensi teknis disesuaikan dengan jabatan guru yang Anda lamar, ditambah persiapan kompetensi manajerial, sosial kultural, dan wawancara.",
     },
     {
       question: "Apakah tersedia bimbel PPPK Kesehatan untuk perawat dan bidan?",
       answer:
-        "Ya. Akademi ASN menyediakan bimbel PPPK Tenaga Kesehatan dengan modul dan latihan soal kompetensi teknis sesuai jabatan yang dilamar, termasuk perawat dan bidan. Pastikan juga STR kamu masih berlaku saat mendaftar, karena STR menjadi syarat untuk jabatan kesehatan yang memerlukannya.",
+        "Ya. Akademi ASN menyediakan bimbel PPPK Tenaga Kesehatan dengan modul dan latihan soal kompetensi teknis sesuai jabatan yang dilamar, termasuk perawat dan bidan. Pastikan juga STR Anda masih berlaku saat mendaftar, karena STR menjadi syarat untuk jabatan kesehatan yang memerlukannya.",
     },
     {
       question:
         "Apakah ada kelas atau tryout PPPK gratis sebelum mengikuti bimbel?",
       answer:
-        "Ada. Kamu bisa mengikuti kelas trial gratis untuk merasakan langsung metode belajar privat 1-on-1 bersama master teacher Akademi ASN sebelum memutuskan bergabung. Setelah bergabung, paket Optima, Maxima, dan Ultima sudah termasuk tryout gratis 1x, 2x, atau 3x.",
+        "Ada. Anda bisa mengikuti kelas trial gratis untuk merasakan langsung metode belajar privat 1-on-1 bersama master teacher Akademi ASN sebelum memutuskan bergabung. Setelah bergabung, paket Optima, Maxima, dan Ultima sudah termasuk tryout gratis 1x, 2x, atau 3x.",
     },
     {
       question: "Apa itu try out PPPK dan bagaimana simulasi CAT-nya?",
       answer:
-        "Try out PPPK adalah simulasi seleksi kompetensi PPPK dengan sistem CAT (Computer Assisted Test), seperti tes resmi BKN. Kamu mengerjakan soal kompetensi teknis, manajerial, sosial kultural, dan wawancara di komputer dengan batas waktu, lalu melihat analisis nilaimu. Pada tes resmi, jawaban benar soal teknis bernilai 5, sedangkan soal manajerial, sosial kultural, dan wawancara bernilai 1 sampai 4. Latihan ini membantumu mengatur waktu dan mengenali pola soal.",
+        "Try out PPPK adalah simulasi seleksi kompetensi PPPK dengan sistem CAT (Computer Assisted Test), seperti tes resmi BKN. Anda mengerjakan soal kompetensi teknis, manajerial, sosial kultural, dan wawancara di komputer dengan batas waktu, lalu melihat analisis nilai Anda. Pada tes resmi, jawaban benar soal teknis bernilai 5, sedangkan soal manajerial, sosial kultural, dan wawancara bernilai 1 sampai 4. Latihan ini membantu Anda mengatur waktu dan mengenali pola soal.",
     },
     {
       question: "Apakah materi bimbel PPPK disesuaikan dengan formasi yang dilamar?",
       answer:
-        "Ya. Modul dan latihan soal kompetensi teknis disesuaikan dengan formasi yang kamu lamar, baik guru, tenaga kesehatan, maupun tenaga teknis. Sampaikan formasimu saat konsultasi. Sebagai acuan, Panselnas menerbitkan materi pokok soal kompetensi teknis untuk setiap jabatan.",
+        "Ya. Modul dan latihan soal kompetensi teknis disesuaikan dengan formasi yang Anda lamar, baik guru, tenaga kesehatan, maupun tenaga teknis. Sampaikan formasi Anda saat konsultasi. Sebagai acuan, Panselnas menerbitkan materi pokok soal kompetensi teknis untuk setiap jabatan.",
     },
     {
       question: "Berapa biaya bimbel PPPK dan bagaimana cara mendaftarnya?",
@@ -154,7 +154,7 @@ export const faqBumn = {
     {
       question: "Apa saja materi TKD BUMN?",
       answer:
-        "Tes Kemampuan Dasar (TKD) mengukur kemampuan verbal, numerik, dan logika. Soalnya menilai pengetahuan, cara berpikir kritis dan analitis, serta kemampuan memecahkan masalah. Di Akademi ASN, kamu berlatih soal TKD beserta pembahasan dan tips mengatur waktu.",
+        "Tes Kemampuan Dasar (TKD) mengukur kemampuan verbal, numerik, dan logika. Soalnya menilai pengetahuan, cara berpikir kritis dan analitis, serta kemampuan memecahkan masalah. Di Akademi ASN, Anda berlatih soal TKD beserta pembahasan dan tips mengatur waktu.",
     },
     {
       question: "Apa itu tes AKHLAK BUMN?",
@@ -169,7 +169,7 @@ export const faqBumn = {
     {
       question: "Bagaimana cara mempersiapkan tes BUMN?",
       answer:
-        "Latih setiap materi tes RBB: soal verbal, numerik, dan logika untuk TKD; nilai AKHLAK dan penerapannya di situasi kerja; Pancasila, UUD 1945, sejarah bangsa, dan Bhinneka Tunggal Ika untuk Wawasan Kebangsaan; serta bahasa Inggris, kecuali kamu melamar dengan ijazah SMA/sederajat. Kerjakan tryout dengan batas waktu untuk melatih kecepatan. Siapkan dokumen pendaftaran lebih awal, dan pantau pengumuman hanya dari kanal resmi FHCI BUMN.",
+        "Latih setiap materi tes RBB: soal verbal, numerik, dan logika untuk TKD; nilai AKHLAK dan penerapannya di situasi kerja; Pancasila, UUD 1945, sejarah bangsa, dan Bhinneka Tunggal Ika untuk Wawasan Kebangsaan; serta bahasa Inggris, kecuali Anda melamar dengan ijazah SMA/sederajat. Kerjakan tryout dengan batas waktu untuk melatih kecepatan. Siapkan dokumen pendaftaran lebih awal, dan pantau pengumuman hanya dari kanal resmi FHCI BUMN.",
     },
     {
       question: "Apakah tersedia bimbel BUMN online?",
@@ -179,12 +179,12 @@ export const faqBumn = {
     {
       question: "Apakah tersedia les privat persiapan BUMN?",
       answer:
-        "Ya. Kamu bisa mengikuti les privat BUMN 1-on-1, baik secara online maupun dengan tutor yang datang ke rumah atau kantormu. Materi dan jadwalnya disesuaikan dengan kebutuhan belajarmu.",
+        "Ya. Anda bisa mengikuti les privat BUMN 1-on-1, baik secara online maupun dengan tutor yang datang ke rumah atau kantor Anda. Materi dan jadwalnya disesuaikan dengan kebutuhan belajar Anda.",
     },
     {
       question: "Apakah tersedia tryout dan latihan soal BUMN?",
       answer:
-        "Ya. Akademi ASN menyediakan tryout BUMN untuk mengukur kesiapanmu, serta latihan soal lewat e-book soal dan pembahasan. Paket Optima, Maxima, dan Ultima juga sudah termasuk tryout gratis 1x, 2x, dan 3x.",
+        "Ya. Akademi ASN menyediakan tryout BUMN untuk mengukur kesiapan Anda, serta latihan soal lewat e-book soal dan pembahasan. Paket Optima, Maxima, dan Ultima juga sudah termasuk tryout gratis 1x, 2x, dan 3x.",
     },
     {
       question: "Apakah materi bimbel disesuaikan dengan RBB terbaru?",
@@ -223,7 +223,7 @@ export const faqTryout = {
     {
       question: "Bagaimana cara mendaftar tryout?",
       answer:
-        "Klik tombol daftar pada produk pilihan. Kamu akan terhubung ke admin Akademi ASN di WhatsApp untuk menyelesaikan pendaftaran.",
+        "Klik tombol daftar pada produk pilihan. Anda akan terhubung ke admin Akademi ASN di WhatsApp untuk menyelesaikan pendaftaran.",
     },
     {
       question: "Apakah paket bimbel sudah termasuk tryout?",
@@ -240,7 +240,7 @@ export const faqProduk = {
     {
       question: "Bagaimana cara memesan produk Akademi ASN?",
       answer:
-        "Klik tombol pada produk pilihan. Kamu akan terhubung ke admin Akademi ASN di WhatsApp untuk menyelesaikan pemesanan.",
+        "Klik tombol pada produk pilihan. Anda akan terhubung ke admin Akademi ASN di WhatsApp untuk menyelesaikan pemesanan.",
     },
     {
       question: "Berapa harga modul, buku, dan tryout di Akademi ASN?",

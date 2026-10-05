@@ -4,6 +4,8 @@
 
 **Status:** approved (facts validated)
 
+**Register note (2026-10-05):** The register changed from "kamu" to "Anda" on owner approval. The texts below are edited to match `data/intro.ts`.
+
 Drafts for `introTexts` in `data/intro.ts`, keyed by region `kode`. Each text is the region's base text, shared by all four page families. The page adds one track-specific sentence after it, so these texts do not name a single exam track.
 
 Rules used for this batch:
@@ -11,7 +13,7 @@ Rules used for this batch:
 - Every factual claim about a region is backed by a source listed under it. Opinions and assumptions about local job markets or applicant numbers are left out.
 - No figures that go stale (population, formasi counts). Fixed distances from official sources are allowed.
 - Statements about Akademi ASN (Kelas Offline only in DI Yogyakarta, Privat Home Visit and kelas online everywhere, office address) come from `CONTEXT.md` and `data/contact.ts`.
-- 2–3 sentences, about 45–70 words, in the site's register ("kamu").
+- 2–3 sentences, about 45–70 words, in the site's register ("Anda").
 
 Approved entries land in `data/intro.ts` one region at a time.
 
@@ -51,7 +53,7 @@ Sources: [slemankab.go.id: letak dan luas wilayah](https://slemankab.go.id/profi
 
 ### 34.02 · Kabupaten Bantul
 
-Kabupaten Bantul di selatan Yogyakarta dikenal dengan Pantai Parangtritis, sentra gerabah Kasongan, serta kampus ISI Yogyakarta dan UMY. Peserta dari Bantul bisa belajar di kantor Akademi ASN di Sleman lewat Kelas Offline. Jika ingin belajar dari rumah, tutor Privat Home Visit bisa datang ke tempatmu.
+Kabupaten Bantul di selatan Yogyakarta dikenal dengan Pantai Parangtritis, sentra gerabah Kasongan, serta kampus ISI Yogyakarta dan UMY. Peserta dari Bantul bisa belajar di kantor Akademi ASN di Sleman lewat Kelas Offline. Jika ingin belajar dari rumah, tutor Privat Home Visit bisa datang ke tempat Anda.
 
 Sources: [Wikipedia: Kabupaten Bantul (Parangtritis, Kasongan, ISI, UMY)](https://id.wikipedia.org/wiki/Bantul), [isi.ac.id: Sewon, Bantul](https://www.isi.ac.id/), [LLDIKTI V: UMY di Kabupaten Bantul](https://pandawa-lldikti5.kemdiktisaintek.go.id/evira/)
 
@@ -77,7 +79,7 @@ Sources: [Katadata: BPS 2024](https://katadata.co.id/lifestyle/varia/684f9c13f04
 
 ### 32.73 · Kota Bandung
 
-Kota Bandung adalah ibu kota Jawa Barat, dengan Gedung Sate sebagai kantor Gubernur. Kota ini juga menjadi lokasi kampus Ganesha Institut Teknologi Bandung (ITB). Tutor Privat Home Visit Akademi ASN bisa datang ke rumah atau kantormu di Bandung, atau kamu bisa ikut kelas online.
+Kota Bandung adalah ibu kota Jawa Barat, dengan Gedung Sate sebagai kantor Gubernur. Kota ini juga menjadi lokasi kampus Ganesha Institut Teknologi Bandung (ITB). Tutor Privat Home Visit Akademi ASN bisa datang ke rumah atau kantor Anda di Bandung, atau Anda bisa ikut kelas online.
 
 Sources: [Wikipedia: Gedung Sate](https://id.wikipedia.org/wiki/Gedung_Sate), [itb.ac.id: Kampus Ganesha, Coblong, Kota Bandung](https://itb.ac.id/kampus-ganesha)
 
@@ -101,7 +103,7 @@ Sources: [unpad.ac.id: Kampus Jatinangor](https://www.unpad.ac.id/kampus-jatinan
 
 ### 32.01 · Kabupaten Bogor
 
-Kabupaten Bogor, dengan ibu kota Cibinong, mengelilingi Kota Bogor dan menjadi wilayah penyangga Jakarta. Wilayahnya mencakup sebagian kawasan Puncak, seperti Cisarua dan Megamendung. Privat Home Visit dan kelas online Akademi ASN membantu kamu belajar sesuai jadwal tanpa perlu menempuh perjalanan jauh.
+Kabupaten Bogor, dengan ibu kota Cibinong, mengelilingi Kota Bogor dan menjadi wilayah penyangga Jakarta. Wilayahnya mencakup sebagian kawasan Puncak, seperti Cisarua dan Megamendung. Privat Home Visit dan kelas online Akademi ASN membantu Anda belajar sesuai jadwal tanpa perlu menempuh perjalanan jauh.
 
 Sources: [UU 102/2024 tentang Kabupaten Bogor (ibu kota Cibinong, batas daerah)](https://www.klaussa.com/peraturan/uu-no-102-tahun-2024-kabupaten-bogor-di-provinsi-jawa-barat), [Wikipedia: Kabupaten Bogor (Kota Bogor enklave, penyangga Jakarta)](https://id.wikipedia.org/wiki/Kabupaten_Bogor), [Wikipedia: Kawasan Puncak](https://id.wikipedia.org/wiki/Kawasan_Puncak_Bogor)
 
@@ -113,19 +115,19 @@ Sources: [Setneg: Istana Bogor, julukan kota hujan](https://setneg.go.id/baca/in
 
 ### 32.03 · Kabupaten Cianjur
 
-Kabupaten Cianjur dikenal dengan beras Pandan Wangi, dan wilayahnya membentang dari kawasan Puncak di Cipanas hingga pesisir Samudra Hindia di selatan. Wilayah yang luas membuat jarak ke pusat kota tidak selalu dekat. Privat Home Visit Akademi ASN mendatangkan tutor ke rumahmu, dan kelas online bisa diikuti dari mana saja di Cianjur.
+Kabupaten Cianjur dikenal dengan beras Pandan Wangi, dan wilayahnya membentang dari kawasan Puncak di Cipanas hingga pesisir Samudra Hindia di selatan. Wilayah yang luas membuat jarak ke pusat kota tidak selalu dekat. Privat Home Visit Akademi ASN mendatangkan tutor ke rumah Anda, dan kelas online bisa diikuti dari mana saja di Cianjur.
 
 Sources: [DPMPTSP Cianjur: beras Pandan Wangi](https://dpmptsp.cianjurkab.go.id/post/read/194/potensi-sektor-pertanian.html), [DPMPTSP Cianjur: batas Samudra Hindia](https://dpmptsp.cianjurkab.go.id/post/read/193/gambaran-umum-daerah.html), [Wikipedia: Kawasan Puncak (Cipanas, Cianjur)](https://id.wikipedia.org/wiki/Kawasan_Puncak_Bogor), [Wikipedia: kabupaten terluas kedua di Pulau Jawa](https://id.wikipedia.org/wiki/Kabupaten_Cianjur)
 
 ### 32.16 · Kabupaten Bekasi
 
-Kabupaten Bekasi, dengan pusat pemerintahan di Cikarang Pusat, dikenal sebagai salah satu kawasan industri terbesar di Indonesia, dengan kawasan seperti Jababeka dan MM2100. Bagi kamu yang bekerja dengan jadwal padat, Privat Home Visit dan kelas online Akademi ASN memungkinkan persiapan seleksi di luar jam kerja.
+Kabupaten Bekasi, dengan pusat pemerintahan di Cikarang Pusat, dikenal sebagai salah satu kawasan industri terbesar di Indonesia, dengan kawasan seperti Jababeka dan MM2100. Bagi Anda yang bekerja dengan jadwal padat, Privat Home Visit dan kelas online Akademi ASN memungkinkan persiapan seleksi di luar jam kerja.
 
 Sources: [Wikipedia: Kabupaten Bekasi (ibu kota Cikarang Pusat)](https://id.wikipedia.org/wiki/Kabupaten_Bekasi), [bekasikab.go.id: kompleks perkantoran di Cikarang Pusat](https://www.bekasikab.go.id/), [Dispar Kabupaten Bekasi: Jababeka](https://wisataindustri.bekasikab.go.id/wisata-industri/kawasan-jababeka/), [Pantau: kawasan industri terbesar di Asia Tenggara](https://www.pantau.com/ekonomi/277162/kabupaten-bekasi-jadi-kawasan-industri-terbesar-di-asia-tenggara-pemerintah-fokus-jaga-iklim-investasi)
 
 ### 32.75 · Kota Bekasi
 
-Kota Bekasi berbatasan langsung dengan Jakarta Timur di sebelah barat dan menjadi bagian dari kawasan metropolitan Jabodetabek. Tutor Privat Home Visit Akademi ASN bisa datang ke rumahmu di Bekasi, atau kamu bisa ikut kelas online sesuai jadwalmu.
+Kota Bekasi berbatasan langsung dengan Jakarta Timur di sebelah barat dan menjadi bagian dari kawasan metropolitan Jabodetabek. Tutor Privat Home Visit Akademi ASN bisa datang ke rumah Anda di Bekasi, atau Anda bisa ikut kelas online sesuai jadwal Anda.
 
 Sources: [bekasikota.go.id: kondisi geografis](https://www.bekasikota.go.id/pages/kondisi-geografis-wilayah-kota-bekasi), [Wikipedia: Kota Bekasi](https://id.wikipedia.org/wiki/Kota_Bekasi)
 

@@ -5,15 +5,15 @@ export const lembaga = {
   logos: [
     {
       src: "/img/section/logo-kementrian-pendidikan-bimbel-les-privat-cpns-pppk-bumn-terbaik-di-indonesia.webp",
-      alt: "Logo Kementrian Pendidikan",
+      alt: "Logo Kementerian Pendidikan",
     },
     {
       src: "/img/section/logo-kementrian-perdagangan-bimbel-les-privat-cpns-pppk-bumn-terbaik-di-indonesia.webp",
-      alt: "Logo Kementrian Perdagangan",
+      alt: "Logo Kementerian Perdagangan",
     },
     {
       src: "/img/section/logo-kementrian-pupr-bimbel-les-privat-cpns-pppk-bumn-terbaik-di-indonesia.webp",
-      alt: "Logo Kementrian PUPR",
+      alt: "Logo Kementerian PUPR",
     },
     {
       src: "/img/section/logo-kejaksaan-agung-ri-bimbel-les-privat-cpns-pppk-bumn-terbaik-di-indonesia.webp",
@@ -21,35 +21,35 @@ export const lembaga = {
     },
     {
       src: "/img/section/logo-kementrian-agama-bimbel-les-privat-cpns-pppk-bumn-terbaik-di-indonesia.webp",
-      alt: "Logo Kementrian Agama",
+      alt: "Logo Kementerian Agama",
     },
     {
       src: "/img/section/logo-kementrian-bumn-bimbel-les-privat-cpns-pppk-bumn-terbaik-di-indonesia.webp",
-      alt: "Logo Kementrian BUMN",
+      alt: "Logo Kementerian BUMN",
     },
     {
       src: "/img/section/logo-kementrian-dalam-negeri-bimbel-les-privat-cpns-pppk-bumn-terbaik-di-indonesia.webp",
-      alt: "Logo Kementrian Dalam Negeri",
+      alt: "Logo Kementerian Dalam Negeri",
     },
     {
       src: "/img/section/logo-kementrian-kebudayaan-indonesia-bimbel-les-privat-cpns-pppk-bumn-terbaik-di-indonesia.webp",
-      alt: "Logo Kementrian Kebudayaan Indonesia",
+      alt: "Logo Kementerian Kebudayaan Indonesia",
     },
     {
       src: "/img/section/logo-kementrian-kemnaker-bimbel-les-privat-cpns-pppk-bumn-terbaik-di-indonesia.webp",
-      alt: "Logo Kementrian Kemnaker",
+      alt: "Logo Kementerian Kemnaker",
     },
     {
       src: "/img/section/logo-kementrian-kemenkes-bimbel-les-privat-cpns-pppk-bumn-terbaik-di-indonesia.webp",
-      alt: "Logo Kementrian Kemenkes",
+      alt: "Logo Kementerian Kemenkes",
     },
     {
       src: "/img/section/logo-kementrian-keuangan-bimbel-les-privat-cpns-pppk-bumn-terbaik-di-indonesiaeu.webp",
-      alt: "Logo Kementrian Keuangan",
+      alt: "Logo Kementerian Keuangan",
     },
     {
       src: "/img/section/logo-kementrian-pariwisata-bimbel-les-privat-cpns-pppk-bumn-terbaik-di-indonesia.webp",
-      alt: "Logo Kementrian Pariwisata",
+      alt: "Logo Kementerian Pariwisata",
     },
   ],
 } satisfies LembagaProps;

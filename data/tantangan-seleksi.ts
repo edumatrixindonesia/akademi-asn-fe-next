@@ -24,7 +24,7 @@ export const tantanganSeleksiHome = (konsultasiUrl: string) =>
     ctaHref: konsultasiUrl,
     closingTitle: "Bersiap untuk Berhasil atau Diam untuk Kegagalan",
     closingDescription:
-      "Persaingan seleksi ASN ketat setiap tahun. Persiapan yang terarah membantu kamu menghadapi tahap awal dengan lebih siap.",
+      "Persaingan seleksi ASN ketat setiap tahun. Persiapan yang terarah membantu Anda menghadapi tahap awal dengan lebih siap.",
     closingPoints: [
       "Lowongan terbatas dibanding jumlah pelamar.",
       "Jenjang karier panjang menjadi daya tarik.",
@@ -61,7 +61,7 @@ export const tantanganSeleksiCpns = (konsultasiUrl: string) =>
       },
     ],
     closingDescription:
-      "Pada CPNS 2024, 3.963.832 orang mendaftar untuk memperebutkan 250.407 formasi. Persiapan yang terarah membantu kamu bersaing sejak tahap awal.",
+      "Pada CPNS 2024, 3.963.832 orang mendaftar untuk memperebutkan 250.407 formasi. Persiapan yang terarah membantu Anda bersaing sejak tahap awal.",
   }) satisfies TantanganSeleksiProps;
 
 export const tantanganSeleksiPppk = (konsultasiUrl: string) =>
@@ -72,12 +72,12 @@ export const tantanganSeleksiPppk = (konsultasiUrl: string) =>
       {
         title: "Mengira Tanpa Passing Grade Berarti Mudah",
         description:
-          "Seleksi PPPK 2024 tidak memakai nilai ambang batas. Kelulusan ditentukan oleh peringkat terbaik di formasi yang dilamar, jadi kamu harus mengungguli pelamar lain, bukan sekadar mencapai nilai minimal.",
+          "Seleksi PPPK 2024 tidak memakai nilai ambang batas. Kelulusan ditentukan oleh peringkat terbaik di formasi yang dilamar, jadi Anda harus mengungguli pelamar lain, bukan sekadar mencapai nilai minimal.",
       },
       {
         title: "Meremehkan Kompetensi Teknis",
         description:
-          "Kompetensi teknis berisi 90 dari 145 soal dan menyumbang nilai maksimal 450 dari 670. Materi teknis yang tidak sesuai formasi membuat nilaimu sulit bersaing.",
+          "Kompetensi teknis berisi 90 dari 145 soal dan menyumbang nilai maksimal 450 dari 670. Materi teknis yang tidak sesuai formasi membuat nilai Anda sulit bersaing.",
       },
       {
         title: "Asal Memilih Jawaban Manajerial dan Sosial Kultural",
@@ -91,7 +91,7 @@ export const tantanganSeleksiPppk = (konsultasiUrl: string) =>
       },
     ],
     closingDescription:
-      "Pada seleksi PPPK 2024 tahap I, 1.357.205 pelamar memenuhi syarat, tetapi hanya 676.482 yang dinyatakan lulus. Persiapan yang terarah membantu kamu bersaing di peringkat formasi.",
+      "Pada seleksi PPPK 2024 tahap I, 1.357.205 pelamar memenuhi syarat, tetapi hanya 676.482 yang dinyatakan lulus. Persiapan yang terarah membantu Anda bersaing di peringkat formasi.",
   }) satisfies TantanganSeleksiProps;
 
 export const tantanganSeleksiBumn = (konsultasiUrl: string) =>
@@ -102,7 +102,7 @@ export const tantanganSeleksiBumn = (konsultasiUrl: string) =>
       {
         title: "Gugur di Tes Online Tahap 1",
         description:
-          "Hanya peserta yang lulus Tes Online Tahap 1, yaitu TKD, AKHLAK, dan Wawasan Kebangsaan, yang berhak mengikuti Tes Online Tahap 2. Gagal di satu tahap berarti langkahmu berhenti di sana.",
+          "Hanya peserta yang lulus Tes Online Tahap 1, yaitu TKD, AKHLAK, dan Wawasan Kebangsaan, yang berhak mengikuti Tes Online Tahap 2. Gagal di satu tahap berarti langkah Anda berhenti di sana.",
       },
       {
         title: "Meremehkan Tes AKHLAK",
@@ -117,11 +117,11 @@ export const tantanganSeleksiBumn = (konsultasiUrl: string) =>
       {
         title: "Mengabaikan Cek Perangkat",
         description:
-          "Tes online RBB didahului pengecekan perangkat. Pastikan perangkat dan koneksimu siap sebelum hari tes.",
+          "Tes online RBB didahului pengecekan perangkat. Pastikan perangkat dan koneksi Anda siap sebelum hari tes.",
       },
     ],
     closingDescription:
-      "Rekrutmen Bersama BUMN 2025 diikuti lebih dari 1,4 juta pendaftar untuk lebih dari 2.000 lowongan di 107 BUMN dan anak perusahaannya. Persiapan yang terarah membantu kamu lolos di setiap tahap.",
+      "Rekrutmen Bersama BUMN 2025 diikuti lebih dari 1,4 juta pendaftar untuk lebih dari 2.000 lowongan di 107 BUMN dan anak perusahaannya. Persiapan yang terarah membantu Anda lolos di setiap tahap.",
     closingPoints: [
       "Lowongan terbatas dibanding jumlah pelamar.",
       "Posisi tersedia di berbagai bidang, dari operasi hingga IT.",

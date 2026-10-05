@@ -5,7 +5,7 @@ export const notFound = (konsultasiUrl: string) =>
     code: "404",
     title: "Halaman Tidak Ditemukan",
     description:
-      "Maaf, halaman yang kamu cari tidak ada atau sudah dipindahkan. Kembali ke beranda atau pilih bimbel sesuai seleksi yang kamu ikuti di bawah ini.",
+      "Maaf, halaman yang Anda cari tidak ada atau sudah dipindahkan. Kembali ke beranda atau pilih bimbel sesuai seleksi yang Anda ikuti di bawah ini.",
     homeLabel: "Kembali ke Beranda",
     homeHref: "/",
     konsultasiLabel: "Konsultasi Gratis",

@@ -4,6 +4,8 @@
 
 **Status:** approved (facts validated)
 
+**Register note (2026-10-05):** The register changed from "kamu" to "Anda" on owner approval. The texts below are edited to match `data/intro.ts`.
+
 Drafts for `introTexts` in `data/intro.ts`, keyed by region `kode`. Same rules as batch 01: every factual claim about a region has a source listed under it, no opinions or assumptions about local job markets, no figures that go stale, 2–3 sentences in the site's register. Kelas Offline is not offered in this batch's regions.
 
 ## Validation notes
@@ -23,7 +25,7 @@ Sources: [jakarta.go.id: Tentang Jakarta (5 kota administrasi + Kepulauan Seribu
 
 ### 31.71 · Kota Jakarta Pusat
 
-Jakarta Pusat adalah lokasi Monumen Nasional di Kecamatan Gambir, Istana Merdeka, dan Balai Kota Jakarta di Jalan Medan Merdeka Selatan. Kawasan Gambir juga dikelilingi berbagai kantor kementerian dan lembaga nasional. Tutor Privat Home Visit Akademi ASN bisa datang ke rumah atau kantormu di Jakarta Pusat, atau kamu bisa ikut kelas online.
+Jakarta Pusat adalah lokasi Monumen Nasional di Kecamatan Gambir, Istana Merdeka, dan Balai Kota Jakarta di Jalan Medan Merdeka Selatan. Kawasan Gambir juga dikelilingi berbagai kantor kementerian dan lembaga nasional. Tutor Privat Home Visit Akademi ASN bisa datang ke rumah atau kantor Anda di Jakarta Pusat, atau Anda bisa ikut kelas online.
 
 Sources: [jakarta.go.id: Landmark Jakarta (Monas di Gambir, Istana Merdeka, Balai Kota)](https://www.jakarta.go.id/landmark-jakarta), [pusat.jakarta.go.id: Kelurahan Gambir (kantor kementerian dan lembaga nasional)](https://pusat.jakarta.go.id/kelurahan/kelurahan-gambir)
 
@@ -41,7 +43,7 @@ Sources: [Mitra Museum Jakarta: Museum Sejarah Jakarta, Taman Fatahillah No. 1, 
 
 ### 31.74 · Kota Jakarta Selatan
 
-Jakarta Selatan adalah lokasi kawasan bisnis Sudirman Central Business District (SCBD) di Kebayoran Baru dan Taman Margasatwa Ragunan di Pasar Minggu. Tutor Privat Home Visit Akademi ASN bisa datang ke rumah atau kantormu di Jakarta Selatan, sehingga persiapan seleksi bisa berjalan di sela jam kerja. Kelas online juga tersedia.
+Jakarta Selatan adalah lokasi kawasan bisnis Sudirman Central Business District (SCBD) di Kebayoran Baru dan Taman Margasatwa Ragunan di Pasar Minggu. Tutor Privat Home Visit Akademi ASN bisa datang ke rumah atau kantor Anda di Jakarta Selatan, sehingga persiapan seleksi bisa berjalan di sela jam kerja. Kelas online juga tersedia.
 
 Sources: [Wikipedia: SCBD (Senayan, Kebayoran Baru, Jakarta Selatan)](https://id.wikipedia.org/wiki/Sudirman_Central_Business_District), [ragunanzoo.jakarta.go.id (Pasar Minggu, Jakarta Selatan)](https://ragunanzoo.jakarta.go.id/)
 
@@ -53,7 +55,7 @@ Sources: [jakarta.go.id: Kota Administrasi Jakarta Timur (terluas, Halim, TMII)]
 
 ### 31.01 · Kabupaten Kepulauan Seribu
 
-Kepulauan Seribu adalah satu-satunya kabupaten administrasi di Jakarta, berupa gugusan pulau di Teluk Jakarta dengan pusat pemerintahan di Pulau Pramuka. Kelas online Akademi ASN bisa diikuti dari pulau mana pun di Kepulauan Seribu, dan Privat Home Visit mendatangkan tutor ke rumahmu.
+Kepulauan Seribu adalah satu-satunya kabupaten administrasi di Jakarta, berupa gugusan pulau di Teluk Jakarta dengan pusat pemerintahan di Pulau Pramuka. Kelas online Akademi ASN bisa diikuti dari pulau mana pun di Kepulauan Seribu, dan Privat Home Visit mendatangkan tutor ke rumah Anda.
 
 Sources: [jakarta.go.id: Kepulauan Seribu (satu-satunya gugusan pulau milik Jakarta)](https://www.jakarta.go.id/kabupaten-administrasi-kepulauan-seribu), [Wikipedia: Kabupaten Administrasi Kepulauan Seribu (Teluk Jakarta, Pulau Pramuka)](https://id.wikipedia.org/wiki/Kabupaten_Administrasi_Kepulauan_Seribu), [PP 55/2001: ibu kota di Pulau Pramuka](https://www.flevin.com/id/lgso/legislation/Mirror/czoyNDoiZD0yMDAwKzEmZj1wcDU1LTIwMDEucGRmIjs=.pdf), [Kemenko Marves: Kepulauan Seribu, gugusan kepulauan di Teluk Jakarta, pusat pemerintahan di Pulau Pramuka](https://www.maritim.go.id/detail/pulau-seribu-penuh-pesona)
 
@@ -69,7 +71,7 @@ Sources: [bantenprov.go.id: Sejarah Banten (UU 23/2000, 4 kota 4 kabupaten)](htt
 
 ### 36.03 · Kabupaten Tangerang
 
-Kabupaten Tangerang, dengan pusat pemerintahan di Tigaraksa, membentang dari pesisir Laut Jawa di utara hingga berbatasan dengan Kabupaten Bogor di selatan. Kabupaten ini menjadi bagian dari wilayah metropolitan Jabodetabek. Privat Home Visit dan kelas online Akademi ASN membantu kamu belajar sesuai jadwal tanpa perlu menempuh perjalanan jauh.
+Kabupaten Tangerang, dengan pusat pemerintahan di Tigaraksa, membentang dari pesisir Laut Jawa di utara hingga berbatasan dengan Kabupaten Bogor di selatan. Kabupaten ini menjadi bagian dari wilayah metropolitan Jabodetabek. Privat Home Visit dan kelas online Akademi ASN membantu Anda belajar sesuai jadwal tanpa perlu menempuh perjalanan jauh.
 
 Sources: [BPK Perwakilan Banten: Kabupaten Tangerang (ibu kota Tigaraksa, batas wilayah)](https://banten.bpk.go.id/pemerintah-daerah/kabupaten-tangerang-2/), [Wikipedia: Kabupaten Tangerang (Jabodetabek)](https://id.wikipedia.org/wiki/Kabupaten_Tangerang)
 
