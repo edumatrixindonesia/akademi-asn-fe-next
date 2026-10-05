@@ -14,6 +14,7 @@ export const artikel = [
     penulis: "dimas-maulana",
     status: "published",
     publishedAt: "2026-10-02",
+    updatedAt: "2026-10-03",
     focusKeyword: "perbedaan cpns dan pppk",
     references: [
       {

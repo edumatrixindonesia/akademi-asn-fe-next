@@ -6,12 +6,12 @@
 
 **Blocked by:** none
 
-**Status:** ready-for-agent
+**Status:** done
 
 **Category:** bug
 
-- [ ] `data/artikel.ts`: add `updatedAt: "2026-10-03"` to the entry. Keep `publishedAt: "2026-10-02"`.
-- [ ] The rendered page shows the update date. `BlogPosting.dateModified`, Open Graph `modified_time`, and the sitemap `lastModified` are all 2026-10-03.
-- [ ] `bun run lint`, `bun run typecheck`, and `bun test` pass.
+- [x] `data/artikel.ts`: add `updatedAt: "2026-10-03"` to the entry. Keep `publishedAt: "2026-10-02"`.
+- [x] The rendered page shows the update date. `BlogPosting.dateModified`, Open Graph `modified_time`, and the sitemap `lastModified` are all 2026-10-03.
+- [x] `bun run lint`, `bun run typecheck`, and `bun test` pass.
 
 ## Comments
