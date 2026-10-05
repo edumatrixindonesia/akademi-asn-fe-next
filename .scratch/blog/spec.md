@@ -1,6 +1,6 @@
 # Blog
 
-Status: ready-for-human (Rich Results Test blocked by a Google sign-in error; see issue 10)
+Status: done
 
 ## Summary
 
