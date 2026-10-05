@@ -17,6 +17,17 @@ export const callCenterPhone = {
 export const officeAddress =
   "Ruko Permai Monjali, Jalan Monjali No 3, Kutu Dukuh, Sinduadi, Mlati, Sleman, Yogyakarta 55241";
 
+// Office opening hours. The FAQ text and the JSON-LD both derive
+// from this list.
+export const officeHours = [
+  { days: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"], label: "Senin–Jumat", opens: "08:00", closes: "17:00" },
+  { days: ["Saturday"], label: "Sabtu", opens: "08:00", closes: "14:00" },
+] as const;
+
+export const officeHoursText = officeHours
+  .map(({ label, opens, closes }) => `${label} ${opens.replace(":", ".")}–${closes.replace(":", ".")} WIB`)
+  .join(", ");
+
 export const getKonsultasiUrl = (
   topic = "Bimbel Akademi ASN",
   now = Date.now(),

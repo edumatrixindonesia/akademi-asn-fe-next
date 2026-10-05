@@ -24,7 +24,7 @@ const product = (
   ctaHref: konsultasiUrl(name),
 });
 
-// `sold` is real sales, copied from the legacy site. Update it by hand.
+// `sold` is real sales. Update it by hand; see docs/business-facts.md.
 export const daftarProdukProduk = (konsultasiUrl: (topic: string) => string) =>
   ({
     title: "Modul Lolos CPNS & PPPK",

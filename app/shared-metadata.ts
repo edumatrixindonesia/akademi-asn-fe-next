@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 
-import { callCenterPhone } from "@/data/contact";
+import { callCenterPhone, officeHours } from "@/data/contact";
 
 const envSiteUrl = process.env.NEXT_PUBLIC_SITE_URL?.trim();
 if (!envSiteUrl) {
@@ -64,20 +64,12 @@ export const organizationJsonLd = {
       logo: `${siteUrl}/img/logo/logo-utama-akademi-asn.webp`,
       image: `${siteUrl}/img/section/og-bimbel-cpns-pppk-bumn-terbaik-akademi-asn.jpeg`,
       telephone: callCenterPhone.e164,
-      openingHoursSpecification: [
-        {
-          "@type": "OpeningHoursSpecification",
-          dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-          opens: "08:00:00",
-          closes: "17:00:00",
-        },
-        {
-          "@type": "OpeningHoursSpecification",
-          dayOfWeek: "Saturday",
-          opens: "08:00:00",
-          closes: "14:00:00",
-        },
-      ],
+      openingHoursSpecification: officeHours.map(({ days, opens, closes }) => ({
+        "@type": "OpeningHoursSpecification",
+        dayOfWeek: days.length === 1 ? days[0] : days,
+        opens: `${opens}:00`,
+        closes: `${closes}:00`,
+      })),
       address: {
         "@type": "PostalAddress",
         streetAddress:

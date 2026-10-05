@@ -8,59 +8,36 @@ const offlineIncluded = [
   "E-Book soal & Pembahasan",
 ];
 
+// The Paket Program privat prices and session counts. FAQ copy derives from
+// these; see docs/business-facts.md.
+export const paketPrivat = [
+  { name: "Optima", sessions: 8, price: "Rp1.960.000", originalPrice: "Rp2.000.000", tryouts: 1 },
+  { name: "Maxima", sessions: 12, price: "Rp2.793.000", originalPrice: "Rp2.800.000", tryouts: 2 },
+  { name: "Ultima", sessions: 24, price: "Rp5.292.000", originalPrice: "Rp5.300.000", tryouts: 3 },
+] as const;
+
 export const paketProgram = (konsultasiUrl: string) =>
   ({
     title: "Paket Program Akademi ASN",
     offlineTitle: "Program Bimbel Offline",
     onlineTitle: "Program Bimbel Online & Tryout",
     backgroundImage: "/img/section/bg-bimbel-cpns-pppk-bumn.webp",
-    offlinePackages: [
-      {
-        name: "Optima",
-        sessions: "8 Sesi Pembelajaran",
-        price: "Rp1.960.000",
-        originalPrice: "Rp2.000.000",
-        headerImage:
-          "/img/section/paket-optima-bimbel-cpns-pppk-bumn-terbaik.webp",
+    offlinePackages: paketPrivat.map(
+      ({ name, sessions, price, originalPrice, tryouts }) => ({
+        name,
+        sessions: `${sessions} Sesi Pembelajaran`,
+        price,
+        originalPrice,
+        headerImage: `/img/section/paket-${name.toLowerCase()}-bimbel-cpns-pppk-bumn-terbaik.webp`,
         included: [
-          "8 Sesi Pembelajaran",
-          "Gratis Tryout 1x",
+          `${sessions} Sesi Pembelajaran`,
+          `Gratis Tryout ${tryouts}x`,
           ...offlineIncluded,
         ],
         ctaLabel: "Tanyakan Kelas",
         ctaHref: konsultasiUrl,
-      },
-      {
-        name: "Maxima",
-        sessions: "12 Sesi Pembelajaran",
-        price: "Rp2.793.000",
-        originalPrice: "Rp2.800.000",
-        headerImage:
-          "/img/section/paket-maxima-bimbel-cpns-pppk-bumn-terbaik.webp",
-        included: [
-          "12 Sesi Pembelajaran",
-          "Gratis Tryout 2x",
-          ...offlineIncluded,
-        ],
-        ctaLabel: "Tanyakan Kelas",
-        ctaHref: konsultasiUrl,
-      },
-      {
-        name: "Ultima",
-        sessions: "24 Sesi Pembelajaran",
-        price: "Rp5.292.000",
-        originalPrice: "Rp5.300.000",
-        headerImage:
-          "/img/section/paket-ultima-bimbel-cpns-pppk-bumn-terbaik.webp",
-        included: [
-          "24 Sesi Pembelajaran",
-          "Gratis Tryout 3x",
-          ...offlineIncluded,
-        ],
-        ctaLabel: "Tanyakan Kelas",
-        ctaHref: konsultasiUrl,
-      },
-    ],
+      }),
+    ),
     onlinePackages: [
       {
         name: "Bootcamp Online",

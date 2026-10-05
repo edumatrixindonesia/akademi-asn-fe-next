@@ -7,11 +7,14 @@ import {
   hargaPaketTryoutSkd,
 } from "@/data/daftar-produk";
 import { hargaEbookModulCpns, hargaTryoutCpns } from "@/data/produk-unggulan";
+import { officeAddress, officeHoursText } from "@/data/contact";
+import { paketPrivat } from "@/data/paket-program";
 import { tahunSeleksi } from "@/data/tahun-seleksi";
 import { formatRupiah } from "@/lib/utils";
 
-const hargaPaketPrivat =
-  "Optima (8 sesi) Rp1.960.000, Maxima (12 sesi) Rp2.793.000, dan Ultima (24 sesi) Rp5.292.000";
+const [optima, maxima, ultima] = paketPrivat;
+const hargaPaketPrivat = `${optima.name} (${optima.sessions} sesi) ${optima.price}, ${maxima.name} (${maxima.sessions} sesi) ${maxima.price}, dan ${ultima.name} (${ultima.sessions} sesi) ${ultima.price}`;
+const lamaPaketPrivat = `${optima.name} ${optima.sessions} sesi, ${maxima.name} ${maxima.sessions} sesi, ${ultima.name} ${ultima.sessions} sesi`;
 
 export const faqHome = {
   title: "Pertanyaan yang Sering Diajukan",
@@ -71,7 +74,7 @@ export const faqCpns = {
     {
       question: "Berapa lama program bimbel CPNS?",
       answer:
-        "Lama program bergantung pada paket yang dipilih: Optima 8 sesi, Maxima 12 sesi, Ultima 24 sesi, dan Bootcamp Online 24 sesi intensif. Pada les privat, jadwal setiap sesi bisa diatur sesuai waktu luangmu.",
+        `Lama program bergantung pada paket yang dipilih: ${lamaPaketPrivat}, dan Bootcamp Online 24 sesi intensif. Pada les privat, jadwal setiap sesi bisa diatur sesuai waktu luangmu.`,
     },
     {
       question: "Apa perbedaan kelas SKD dan SKB?",
@@ -97,7 +100,7 @@ export const faqPppk = {
         "Komponen seleksinya sama, yaitu kompetensi teknis, manajerial, sosial kultural, dan wawancara, tetapi materi kompetensi teknis mengikuti jabatan yang dilamar. Pada 2024, aturannya dipisah dalam Keputusan Menteri PANRB Nomor 347 (PPPK secara umum, termasuk tenaga teknis), Nomor 348 (guru), dan Nomor 349 (tenaga kesehatan). PPPK Teknis menguji pengetahuan bidang jabatan fungsional atau pelaksana yang dilamar. PPPK Guru mensyaratkan kualifikasi akademik paling rendah S-1 atau D-IV dan/atau sertifikat pendidik. PPPK Tenaga Kesehatan mensyaratkan Surat Tanda Registrasi (STR) yang masih berlaku untuk jabatan yang memerlukannya. Karena itu, materi kompetensi teknis di bimbel disiapkan sesuai formasimu.",
     },
     {
-      question: "Apakah tersedia bimbel PPPK Teknis 2026 secara online?",
+      question: `Apakah tersedia bimbel PPPK Teknis ${tahunSeleksi} secara online?`,
       answer:
         "Ya. Bimbel PPPK Teknis bisa diikuti secara online, baik lewat Bootcamp Online berisi 24 sesi intensif via Zoom maupun les privat online bersama tutor. Materi kompetensi teknis disesuaikan dengan jabatan yang kamu lamar, dan kurikulumnya mengacu pada kisi-kisi resmi terbaru dari KemenPANRB dan BKN. Jadwal resmi seleksi PPPK diumumkan melalui portal sscasn.bkn.go.id.",
     },
@@ -134,7 +137,7 @@ export const faqPppk = {
     },
     {
       question: "Berapa biaya bimbel PPPK dan bagaimana cara mendaftarnya?",
-      answer: `Biaya les privat di Akademi ASN adalah ${hargaPaketPrivat}. Untuk mendaftar, hubungi admin Akademi ASN lewat tombol WhatsApp di halaman ini, atau datang langsung ke kantor kami di Ruko Permai Monjali, Jalan Monjali No. 3, Sinduadi, Mlati, Sleman, Yogyakarta (Senin–Jumat 08.00–17.00 WIB, Sabtu 08.00–14.00 WIB).`,
+      answer: `Biaya les privat di Akademi ASN adalah ${hargaPaketPrivat}. Untuk mendaftar, hubungi admin Akademi ASN lewat tombol WhatsApp di halaman ini, atau datang langsung ke kantor kami di ${officeAddress} (${officeHoursText}).`,
     },
   ],
 } satisfies FaqProps;
