@@ -136,13 +136,13 @@ test("Artikel update date reaches page metadata, JSON-LD, and sitemap", async ()
   const slug = "perbedaan-cpns-dan-pppk";
   const html = await (await fetch(`${baseUrl}/blog/${slug}`)).text();
   expect(html).toContain("Diperbarui");
-  expect(html).toMatch(/<time dateTime="2026-10-03">3 Oktober 2026<\/time>/);
-  expect(html).toContain('article:modified_time" content="2026-10-03"');
-  expect(html).toContain('"dateModified":"2026-10-03"');
+  expect(html).toMatch(/<time dateTime="2026-10-05">5 Oktober 2026<\/time>/);
+  expect(html).toContain('article:modified_time" content="2026-10-05"');
+  expect(html).toContain('"dateModified":"2026-10-05"');
 
   const sitemap = await (await fetch(`${baseUrl}/sitemap.xml`)).text();
   expect(sitemap).toMatch(
-    new RegExp(`<loc>[^<]+/blog/${slug}</loc>\\s*<lastmod>2026-10-03</lastmod>`),
+    new RegExp(`<loc>[^<]+/blog/${slug}</loc>\\s*<lastmod>2026-10-05</lastmod>`),
   );
 });
 

@@ -14,7 +14,7 @@ export const artikel = [
     penulis: "dimas-maulana",
     status: "published",
     publishedAt: "2026-10-02",
-    updatedAt: "2026-10-03",
+    updatedAt: "2026-10-05",
     focusKeyword: "perbedaan cpns dan pppk",
     references: [
       {
@@ -28,6 +28,13 @@ export const artikel = [
         url: "https://peraturan.go.id/id/pp-no-11-tahun-2017",
         publisher: "Peraturan.go.id",
         accessedAt: "2026-10-02",
+      },
+      {
+        title:
+          "Peraturan Pemerintah Nomor 17 Tahun 2020 tentang Perubahan atas Peraturan Pemerintah Nomor 11 Tahun 2017 tentang Manajemen Pegawai Negeri Sipil",
+        url: "https://peraturan.go.id/id/pp-no-17-tahun-2020",
+        publisher: "Peraturan.go.id",
+        accessedAt: "2026-10-05",
       },
       {
         title: "Peraturan Pemerintah Nomor 49 Tahun 2018 tentang Manajemen PPPK",

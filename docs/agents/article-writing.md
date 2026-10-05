@@ -21,7 +21,7 @@ Body, in order:
 
 1. **Hook**: one short paragraph that opens on the reader's problem. It continues the lead and never repeats it.
 2. **Question `h2`s**: each `h2` is phrased as the question people search ("Apa perbedaan CPNS dan PPPK?"), answered in the first sentence beneath it. Use `h3` for sub-points inside an `h2`. Never write `#` (the page owns the `h1`).
-3. **`<BacaJuga>`**: 2–5 per Artikel, placed between sections where the reader would want the next step.
+3. **`<BacaJuga>`**: Link 2–5 other published Artikel with `<BacaJuga>`, placed between sections where the reader would want the next step. When fewer than 2 exist, link all of them (0 is allowed).
 4. **`<CtaKonsultasi>`**: exactly once, mid-Artikel.
 5. **Latihan Soal**: for material topics (TWK, TIU, TKP, kompetensi PPPK, tes BUMN) only; one to three `<LatihanSoal>`.
 6. **Recap**: the last `h2`, titled "Kesimpulan", in a few sentences or a short list.
@@ -60,7 +60,7 @@ Every `h2` holds plain text with letters or digits (its anchor `id` is built fro
 
 Use only these, plus standard Markdown: `##` and `###` headings, lists, bold, italic, links, tables, blockquotes. Never write `import`, `export`, raw HTML tags, or any other component.
 
-**`<BacaJuga slug="…" />`** links to another Artikel; the title comes from `data/artikel.ts`. The slug must name a published Artikel (the build fails on an unknown slug, and on a draft in production). Link a landing page with a Markdown link in a sentence: `[Bimbel CPNS](/bimbel-cpns)`.
+**`<BacaJuga slug="…" />`** links to another published Artikel; the title comes from `data/artikel.ts`. The component accepts only an Artikel slug (the build fails on an unknown slug, and on a draft in production). Link a landing page with a Markdown link in a sentence: `[Bimbel CPNS](/bimbel-cpns)`.
 
 ```mdx
 <BacaJuga slug="perbedaan-cpns-dan-pppk" />

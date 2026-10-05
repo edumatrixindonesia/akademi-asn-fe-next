@@ -118,7 +118,7 @@ Headings get stable `id`s for the Daftar isi. Links to landing pages use `next/l
 
 ### Writing skill
 
-- `docs/agents/article-writing.md`: the editorial contract. Template from the research: lead (excerpt), short hook, `h2`s phrased as the questions people search, `h3` sub-points, 2–5 `<BacaJuga>` (other Artikel or landing pages), `<CtaKonsultasi>` once mid-Artikel, Latihan Soal for material topics, closing recap, references. Also: the field rules above, the allowed components, the keyword rules, the validation rules, the Penulis rule.
+- `docs/agents/article-writing.md`: the editorial contract. Template from the research: lead (excerpt), short hook, `h2`s phrased as the questions people search, `h3` sub-points, 2–5 `<BacaJuga>` links to other published Artikel (when fewer than 2 exist, link all of them; 0 is allowed), `<CtaKonsultasi>` once mid-Artikel, Latihan Soal for material topics, closing recap, references. Landing pages use ordinary Markdown links. Also: the field rules above, the allowed components, the keyword rules, the validation rules, the Penulis rule.
 - `.claude/skills/write-article/SKILL.md`: the workflow for `/write-article <keyword>`:
   1. Reject the keyword if another Artikel already uses it or if it is a landing-page keyword ("bimbel …", "les …", "tryout …", any keyword with a city or region name that a location page targets).
   2. Research with Exa. Prefer official sources (BKN, KemenPANRB, SSCASN, `.go.id`, laws and regulations).
