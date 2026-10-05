@@ -38,6 +38,26 @@ test("published needs publishedAt and references; draft does not", () => {
   expect(validateArtikel([entry({ status: "draft", publishedAt: undefined, references: [] })], ["contoh"])).toEqual([]);
 });
 
+test("title and seoTitle each allow at most 50 characters", () => {
+  expect(validateArtikel([entry({ title: "t".repeat(51), seoTitle: "SEO" })], ["contoh"]).join()).toContain("title");
+  expect(validateArtikel([entry({ seoTitle: "s".repeat(51) })], ["contoh"]).join()).toContain("seoTitle");
+});
+
+test("related entries must be published", () => {
+  const draft = entry({ slug: "draf", focusKeyword: "draf", status: "draft", publishedAt: undefined, references: [] });
+  expect(validateArtikel([entry({ related: ["draf"] }), draft], ["contoh", "draf"]).join()).toContain("draft");
+  expect(validateArtikel([entry({ status: "draft", publishedAt: undefined, references: [], related: ["draf"] }), draft], ["contoh", "draf"]).join()).toContain("draft");
+});
+
+test("dates must be valid ISO calendar dates", () => {
+  expect(validateArtikel([entry({ publishedAt: "2026-02-30" })], ["contoh"]).join()).toContain("publishedAt");
+  expect(validateArtikel([entry({ updatedAt: "02-10-2026" })], ["contoh"]).join()).toContain("updatedAt");
+});
+
+test("updatedAt cannot precede publishedAt", () => {
+  expect(validateArtikel([entry({ updatedAt: "2026-09-30" })], ["contoh"]).join()).toContain("earlier");
+});
+
 test("related allows up to 3 distinct slugs of other entries (forward references too)", () => {
   const later = entry({ slug: "nanti", focusKeyword: "nanti" });
   expect(validateArtikel([entry({ related: ["nanti"] }), later], ["contoh", "nanti"])).toEqual([]);
