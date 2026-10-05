@@ -8,7 +8,7 @@ Marketing site for Akademi ASN, a tutoring service (bimbel) that prepares candid
 The parent company. Akademi ASN is an Edumatrix brand, so copy may say "Akademi ASN by Edumatrix".
 
 **Exam track**:
-One of the three selection exams the tutoring covers: CPNS, PPPK, or BUMN. Always written `pppk` (never `ppk`) in URLs and identifiers.
+One of the three selection exams the tutoring covers: CPNS, PPPK, or BUMN. Always written `pppk` (never `ppk`) in URLs and identifiers. Legacy asset filenames that contain `ppk` are the only exception.
 _Avoid_: program (reserved for Paket Program)
 
 **Landing page**:
@@ -39,7 +39,7 @@ The common reasons candidates fail the selection exam (e.g. poor time management
 _Avoid_: failure
 
 **Paket Program**:
-The tutoring packages offered for sale, shown as a section on every landing page. Offline packages (Optima, Maxima, Ultima) can each be taken as Kelas Offline or Privat Home Visit. Online and tryout packages are available everywhere.
+The tutoring packages offered for sale, shown as a section on every landing page. The private packages (Optima, Maxima, Ultima) can each be taken as Kelas Offline, Privat Home Visit, or Privat Online, at the same price. Bootcamp Online and tryout packages are available everywhere.
 _Avoid_: pricing, plans
 
 **Kelas Offline**:
@@ -49,6 +49,9 @@ _Avoid_: offline (on its own, "offline" covers both Kelas Offline and Privat Hom
 **Privat Home Visit**:
 An offline package where the tutor travels to the student's home or office. Available anywhere.
 _Avoid_: offline (on its own)
+
+**Privat Online**:
+A private package taken 1-on-1 with a tutor over video call (e.g. Zoom). Available anywhere. Not the same as Bootcamp Online, which is a group class.
 
 **Seleksi**:
 The selection stages of an exam track, shown on every landing page: SKD (TWK, TIU, TKP) and SKB for CPNS; the competency test (technical, managerial, socio-cultural, and interview) for PPPK; and the Rekrutmen Bersama BUMN online tests and each company's follow-up tests for BUMN.
@@ -113,7 +116,7 @@ One of the Akademi ASN admins who answer Konsultasi chats. Konsultasi links rota
 _Avoid_: CS, call center (the UI label "Call Center" stays)
 
 **Nomor Call Center**:
-The one published Akademi ASN phone number, identical on every page and in structured data so local search sees a consistent NAP. It may differ from the Admin Konsultasi who receives that day's Konsultasi chats.
+The one published Akademi ASN phone number, identical on every page and in structured data so local search sees a consistent NAP. Wherever it is shown, it links to that number on WhatsApp, never to the rotating Admin Konsultasi.
 
 **Blog**:
 The part of the site that publishes Artikel. It is not a landing page.
@@ -135,7 +138,7 @@ The person or team credited on an Artikel. It is "Tim Akademi ASN" unless a real
 _Avoid_: author (in UI copy), kontributor
 
 **Artikel Terbaru**:
-The newest published Artikel, shown as a section before FAQ on every landing page (from the page's own Kategori; all Kategori on the home page) and in the Artikel sidebar. Hidden when there are none.
+The newest published Artikel, shown as a section after FAQ on every landing page (from the page's own Kategori; all Kategori on the home page) and in the Artikel sidebar. Hidden when there are none.
 
 **Artikel Terkait**:
 The three Artikel shown at the end of an Artikel: hand-picked if set, otherwise the newest from the same Kategori, then from other Kategori.
