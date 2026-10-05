@@ -137,8 +137,11 @@ test("Artikel update date reaches page metadata, JSON-LD, and sitemap", async ()
   const html = await (await fetch(`${baseUrl}/blog/${slug}`)).text();
   expect(html).toContain("Diperbarui");
   expect(html).toMatch(/<time dateTime="2026-10-05">5 Oktober 2026<\/time>/);
-  expect(html).toContain('article:modified_time" content="2026-10-05"');
-  expect(html).toContain('"dateModified":"2026-10-05"');
+  expect(html).toContain('article:published_time" content="2026-10-02T00:00:00+07:00"');
+  expect(html).toContain('article:modified_time" content="2026-10-05T00:00:00+07:00"');
+  expect(html).toContain('"datePublished":"2026-10-02T00:00:00+07:00"');
+  expect(html).toContain('"dateModified":"2026-10-05T00:00:00+07:00"');
+  expect(html).toContain('"priceRange":"Rp1.960.000–Rp5.292.000 (bimbel privat)"');
 
   const sitemap = await (await fetch(`${baseUrl}/sitemap.xml`)).text();
   expect(sitemap).toMatch(

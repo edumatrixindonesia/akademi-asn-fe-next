@@ -1,4 +1,5 @@
 import type { PaketProgramProps } from "@/components/sections/paket-program";
+import { formatRupiah } from "@/lib/utils";
 
 const offlineIncluded = [
   "Sistem Belajar Kelas",
@@ -15,6 +16,10 @@ export const paketPrivat = [
   { name: "Maxima", sessions: 12, price: "Rp2.793.000", originalPrice: "Rp2.800.000", tryouts: 2 },
   { name: "Ultima", sessions: 24, price: "Rp5.292.000", originalPrice: "Rp5.300.000", tryouts: 3 },
 ] as const;
+
+const privatePrices = paketPrivat.map(({ price }) => Number(price.replace(/\D/g, "")));
+export const bimbelPrivatPriceRange =
+  `${formatRupiah(Math.min(...privatePrices))}–${formatRupiah(Math.max(...privatePrices))} (bimbel privat)`;
 
 export const paketProgram = (konsultasiUrl: string) =>
   ({

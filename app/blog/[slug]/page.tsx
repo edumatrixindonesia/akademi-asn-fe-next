@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import ArtikelPage from "@/components/pages/artikel";
-import { getArtikel, getVisibleArtikel, resolveArtikel } from "@/lib/artikel";
+import { artikelDateTime, getArtikel, getVisibleArtikel, resolveArtikel } from "@/lib/artikel";
 import { openGraphBase, rssAlternate } from "../../shared-metadata";
 
 export const dynamicParams = false;
@@ -29,8 +29,8 @@ export async function generateMetadata({
       title: seoTitle,
       description: entry.description,
       images: [{ url: cover.src, width: 1200, height: 630, alt: cover.alt }],
-      publishedTime: entry.publishedAt,
-      modifiedTime: entry.updatedAt ?? entry.publishedAt,
+      publishedTime: artikelDateTime(entry.publishedAt),
+      modifiedTime: artikelDateTime(entry.updatedAt ?? entry.publishedAt),
       section: kategori.name,
     },
   };

@@ -2,7 +2,7 @@ import { siteUrl } from "@/app/shared-metadata";
 import type { ArtikelDetailProps } from "@/components/sections/artikel-detail";
 import type { Artikel } from "@/lib/artikel-schema";
 import { konsultasiPertanyaan } from "@/data/artikel-konsultasi";
-import { dated, getHeadings, getPenulis, getReadingLabel, resolveArtikel } from "@/lib/artikel";
+import { artikelDateTime, dated, getHeadings, getPenulis, getReadingLabel, resolveArtikel } from "@/lib/artikel";
 import { kategoriPath, penulisPath } from "@/lib/blog-path";
 
 export const artikelDetail = (entry: Artikel, wordCount: number, konsultasiUrl: string) => {
@@ -51,8 +51,8 @@ export const artikelDetail = (entry: Artikel, wordCount: number, konsultasiUrl: 
       headline: entry.title,
       description: entry.description,
       image: `${siteUrl}${cover.src}`,
-      datePublished: entry.publishedAt,
-      dateModified: entry.updatedAt ?? entry.publishedAt,
+      datePublished: artikelDateTime(entry.publishedAt),
+      dateModified: artikelDateTime(entry.updatedAt ?? entry.publishedAt),
       author:
         penulis.type === "person"
           ? {

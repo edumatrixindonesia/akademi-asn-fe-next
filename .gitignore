@@ -40,6 +40,9 @@ yarn-error.log*
 # graphify
 graphify-out
 
+# local SEO analysis cache
+.seo-cache/
+
 # typescript
 *.tsbuildinfo
 next-env.d.ts

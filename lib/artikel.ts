@@ -93,6 +93,10 @@ const dateLabel = new Intl.DateTimeFormat("id-ID", {
 export const dated = (iso?: string) =>
   iso ? { iso, label: dateLabel.format(new Date(iso)) } : undefined;
 
+// Date-only editorial values use the start of that calendar day in WIB.
+export const artikelDateTime = (iso?: string) =>
+  iso ? `${iso}T00:00:00+07:00` : undefined;
+
 // ponytail: finds `## ` lines with a regex (skipping code fences) and strips
 // inline Markdown the same way the rendered text does; an MDX AST walk if
 // headings ever hold JSX.
