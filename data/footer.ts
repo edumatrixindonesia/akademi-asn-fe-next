@@ -1,7 +1,7 @@
 import type { FooterProps } from "@/components/layouts/footer";
 import { callCenterPhone, officeAddress } from "@/data/contact";
 
-export const footerDefault = (konsultasiUrl: string) =>
+export const footerDefault = () =>
   ({
     logo: { src: "/img/logo/logo-akademi-asn.webp", alt: "Akademi ASN" },
     name: "AKADEMI ASN",
@@ -29,7 +29,7 @@ export const footerDefault = (konsultasiUrl: string) =>
       phone: {
         label: callCenterPhone.display,
         ariaLabel: `Chat via WhatsApp ${callCenterPhone.display}`,
-        href: konsultasiUrl,
+        href: `https://wa.me/${callCenterPhone.e164.slice(1)}`,
       },
     },
     otherWebsite: {

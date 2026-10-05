@@ -63,7 +63,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
 
         {children}
 
-        <Footer {...footerDefault(konsultasiUrl)} />
+        <Footer {...footerDefault()} />
       </body>
     </html>
   );

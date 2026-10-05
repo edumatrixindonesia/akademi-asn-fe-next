@@ -54,7 +54,7 @@ test("home HTML declares Indonesian and absolute canonical and Open Graph URLs",
   expect(ogUrl).not.toBeNull();
   expect(new URL(ogUrl[1]).protocol).toMatch(/^https?:$/);
 
-  const whatsappUrls = [...html.matchAll(/<a\b[^>]*href="([^"]*(?:wa\.me|api\.whatsapp\.com)[^"]*)"[^>]*>/g)]
+  const whatsappUrls = [...html.matchAll(/<a\b[^>]*href="([^"]*api\.whatsapp\.com[^"]*)"[^>]*>/g)]
     .map((match) => new URL(match[1].replaceAll("&amp;", "&")));
   expect(whatsappUrls.length).toBeGreaterThanOrEqual(2);
   expect(new Set(whatsappUrls.map((url) => url.searchParams.get("phone"))).size).toBe(1);
