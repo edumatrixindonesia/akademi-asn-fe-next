@@ -137,6 +137,22 @@ test("a location page names the location in the intro and section variants", asy
   expect(block(html, 'id="cta-footer-title"')).toContain(label);
 });
 
+test("Seleksi sections match the page exam tracks", async () => {
+  const homeHtml = await (await get("/di-yogyakarta")).text();
+  expect([...homeHtml.matchAll(/<section aria-labelledby="(pahami-tahapan-seleksi[^"]+)"/g)].map((match) => match[1]))
+    .toEqual([
+      "pahami-tahapan-seleksi-sistem-penilaian-resmi-cpns",
+      "pahami-tahapan-seleksi-sistem-penilaian-resmi-pppk",
+      "pahami-tahapan-seleksi-sistem-penilaian-rekrutmen-bersama-bumn",
+    ]);
+
+  const cpnsHtml = await (await get("/bimbel-cpns/jawa-barat/kota-bandung")).text();
+  expect([...cpnsHtml.matchAll(/<section aria-labelledby="(pahami-tahapan-seleksi[^"]+)"/g)].map((match) => match[1]))
+    .toEqual(["pahami-tahapan-seleksi-sistem-penilaian-resmi-cpns"]);
+  expect(cpnsHtml).toContain("Pahami Tahapan Seleksi &amp; Sistem Penilaian Resmi CPNS");
+  expect(cpnsHtml).not.toContain("Pahami Tahapan Seleksi &amp; Sistem Penilaian Resmi PPPK");
+});
+
 test("only DI Yogyakarta location pages show the Kelas Offline office content", async () => {
   const sleman = await (await get("/di-yogyakarta/kabupaten-sleman")).text();
   const kelasOffline = block(sleman, 'id="kelas-offline"');

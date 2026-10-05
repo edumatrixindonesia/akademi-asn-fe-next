@@ -23,7 +23,7 @@ import { keunggulanLocation } from "@/data/keunggulan";
 import { materiCpns } from "@/data/materi";
 import { paketProgramLocation } from "@/data/paket-program";
 import { kelasOfflineLocation } from "@/data/kelas-offline";
-import { seleksiHome } from "@/data/seleksi";
+import { seleksiCpns } from "@/data/seleksi";
 import { passingGradeHome } from "@/data/passing-grade";
 import { tantanganSeleksiCpns } from "@/data/tantangan-seleksi";
 import { lembaga } from "@/data/lembaga";
@@ -59,7 +59,7 @@ const BimbelCpnsLocation = ({ location }: BimbelCpnsLocationProps) => {
       <Materi {...materiCpns(konsultasiUrl)} />
       <PaketProgram {...paketProgramLocation(konsultasiUrl, label)} />
       {kelasOffline && <KelasOffline {...kelasOffline} />}
-      <Seleksi {...seleksiHome} />
+      <Seleksi {...seleksiCpns} />
       <PassingGrade {...passingGradeHome} />
       <TantanganSeleksi {...tantanganSeleksiCpns(konsultasiUrl)} />
       <Lembaga {...lembaga} />

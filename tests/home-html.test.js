@@ -12,6 +12,15 @@ test("home HTML declares Indonesian and absolute canonical and Open Graph URLs",
   expect(html).toContain('id="paket-program"');
   expect(html).toContain('id="testimoni"');
   expect(html).toContain("SKD (Seleksi Kompetensi Dasar)");
+  for (const [id, title] of [
+    ["pahami-tahapan-seleksi-sistem-penilaian-resmi-cpns", "Pahami Tahapan Seleksi &amp; Sistem Penilaian Resmi CPNS"],
+    ["pahami-tahapan-seleksi-sistem-penilaian-resmi-pppk", "Pahami Tahapan Seleksi &amp; Sistem Penilaian Resmi PPPK"],
+    ["pahami-tahapan-seleksi-sistem-penilaian-rekrutmen-bersama-bumn", "Pahami Tahapan Seleksi &amp; Sistem Penilaian Rekrutmen Bersama BUMN"],
+  ]) {
+    expect(html).toContain(`<h2 id="${id}"`);
+    expect(html).toContain(title);
+  }
+  expect([...html.matchAll(/aria-labelledby="pahami-tahapan-seleksi/g)]).toHaveLength(3);
   for (const score of ["65", "80", "166"]) {
     expect(html).toMatch(new RegExp(`<strong[^>]*>${score}</strong>`));
   }

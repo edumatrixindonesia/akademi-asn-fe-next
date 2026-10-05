@@ -23,7 +23,7 @@ import { keunggulanLocation } from "@/data/keunggulan";
 import { materiHome } from "@/data/materi";
 import { paketProgramLocation } from "@/data/paket-program";
 import { kelasOfflineLocation } from "@/data/kelas-offline";
-import { seleksiHome } from "@/data/seleksi";
+import { seleksiBumn, seleksiCpns, seleksiPppk } from "@/data/seleksi";
 import { passingGradeHome } from "@/data/passing-grade";
 import { tantanganSeleksiHome } from "@/data/tantangan-seleksi";
 import { lembaga } from "@/data/lembaga";
@@ -59,7 +59,9 @@ const HomeLocation = ({ location }: HomeLocationProps) => {
       <Materi {...materiHome(konsultasiUrl)} />
       <PaketProgram {...paketProgramLocation(konsultasiUrl, label)} />
       {kelasOffline && <KelasOffline {...kelasOffline} />}
-      <Seleksi {...seleksiHome} />
+      <Seleksi {...seleksiCpns} />
+      <Seleksi {...seleksiPppk} />
+      <Seleksi {...seleksiBumn} />
       <PassingGrade {...passingGradeHome} />
       <TantanganSeleksi {...tantanganSeleksiHome(konsultasiUrl)} />
       <Lembaga {...lembaga} />

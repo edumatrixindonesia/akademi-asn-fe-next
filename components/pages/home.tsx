@@ -16,7 +16,7 @@ import { jumbotronHome } from "@/data/jumbotron";
 import { keunggulan } from "@/data/keunggulan";
 import { materiHome } from "@/data/materi";
 import { paketProgram } from "@/data/paket-program";
-import { seleksiHome } from "@/data/seleksi";
+import { seleksiBumn, seleksiCpns, seleksiPppk } from "@/data/seleksi";
 import { passingGradeHome } from "@/data/passing-grade";
 import { tantanganSeleksiHome } from "@/data/tantangan-seleksi";
 import { lembaga } from "@/data/lembaga";
@@ -40,7 +40,9 @@ const Home = ({ provinces }: HomeProps) => {
       <Keunggulan {...keunggulan} />
       <Materi {...materiHome(konsultasiUrl)} />
       <PaketProgram {...paketProgram(konsultasiUrl)} />
-      <Seleksi {...seleksiHome} />
+      <Seleksi {...seleksiCpns} />
+      <Seleksi {...seleksiPppk} />
+      <Seleksi {...seleksiBumn} />
       <PassingGrade {...passingGradeHome} />
       <TantanganSeleksi {...tantanganSeleksiHome(konsultasiUrl)} />
       <Lembaga {...lembaga} />

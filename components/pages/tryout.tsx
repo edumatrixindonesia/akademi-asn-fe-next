@@ -18,7 +18,7 @@ import { produkUnggulan } from "@/data/produk-unggulan";
 import { paketHematKomplit } from "@/data/paket-hemat-komplit";
 import { keunggulan } from "@/data/keunggulan";
 import { paketProgram } from "@/data/paket-program";
-import { seleksiHome } from "@/data/seleksi";
+import { seleksiBumn, seleksiCpns, seleksiPppk } from "@/data/seleksi";
 import { passingGradeHome } from "@/data/passing-grade";
 import { tantanganSeleksiHome } from "@/data/tantangan-seleksi";
 import { lembaga } from "@/data/lembaga";
@@ -39,7 +39,9 @@ const Tryout = () => {
       <PaketHematKomplit {...paketHematKomplit(getKonsultasiUrl)} />
       <Keunggulan {...keunggulan} />
       <PaketProgram {...paketProgram(konsultasiUrl)} />
-      <Seleksi {...seleksiHome} />
+      <Seleksi {...seleksiCpns} />
+      <Seleksi {...seleksiPppk} />
+      <Seleksi {...seleksiBumn} />
       <PassingGrade {...passingGradeHome} />
       <TantanganSeleksi {...tantanganSeleksiHome(konsultasiUrl)} />
       <Lembaga {...lembaga} />

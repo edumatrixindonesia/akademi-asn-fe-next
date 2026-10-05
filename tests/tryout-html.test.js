@@ -11,6 +11,12 @@ test("Tryout page renders one h1, product offers, and per-topic Konsultasi links
   expect(html).toMatch(/<h1\b[^>]*>Tryout CPNS PPPK BUMN \d{4} Simulasi CAT Online<\/h1>/);
   expect(html).toMatch(/<link rel="canonical" href="[^"]+\/tryout-bimbel-cpns-pppk-bumn-terbaik"/);
   expect(html).not.toContain(`id="jangkauan"`);
+  expect([...html.matchAll(/<section aria-labelledby="(pahami-tahapan-seleksi[^"]+)"/g)].map((match) => match[1]))
+    .toEqual([
+      "pahami-tahapan-seleksi-sistem-penilaian-resmi-cpns",
+      "pahami-tahapan-seleksi-sistem-penilaian-resmi-pppk",
+      "pahami-tahapan-seleksi-sistem-penilaian-rekrutmen-bersama-bumn",
+    ]);
 
   const offers = [...html.matchAll(/<script type="application\/ld\+json">(.*?)<\/script>/g)]
     .map((match) => JSON.parse(match[1]))

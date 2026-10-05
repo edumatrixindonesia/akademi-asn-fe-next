@@ -18,7 +18,7 @@ import { jumbotronCpns } from "@/data/jumbotron";
 import { keunggulan } from "@/data/keunggulan";
 import { materiCpns } from "@/data/materi";
 import { paketProgram } from "@/data/paket-program";
-import { seleksiHome } from "@/data/seleksi";
+import { seleksiCpns } from "@/data/seleksi";
 import { passingGradeHome } from "@/data/passing-grade";
 import { tantanganSeleksiCpns } from "@/data/tantangan-seleksi";
 import { lembaga } from "@/data/lembaga";
@@ -43,7 +43,7 @@ const BimbelCpns = ({ provinces }: BimbelCpnsProps) => {
       <Keunggulan {...keunggulan} />
       <Materi {...materiCpns(konsultasiUrl)} />
       <PaketProgram {...paketProgram(konsultasiUrl)} />
-      <Seleksi {...seleksiHome} />
+      <Seleksi {...seleksiCpns} />
       <PassingGrade {...passingGradeHome} />
       <TantanganSeleksi {...tantanganSeleksiCpns(konsultasiUrl)} />
       <Lembaga {...lembaga} />

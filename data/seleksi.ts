@@ -4,8 +4,8 @@ const imageBase = "/img/section/seleksi-tes-";
 const imageSuffix =
   "-bimbel-les-privat-cpns-pppk-bumn-terbaik-di-indonesia.webp";
 
-export const seleksiHome = {
-  title: "Pahami Tahapan Seleksi & Sistem Penilaian Resmi CPNS & PPPK",
+export const seleksiCpns = {
+  title: "Pahami Tahapan Seleksi & Sistem Penilaian Resmi CPNS",
   description:
     "Menghadapi seleksi ASN bukan hanya soal menguasai materi, tapi memahami peta persaingan. Strategi belajar yang tepat dimulai dari pemahaman alur tes dan ambang batas nilai (Passing Grade).",
   stages: [
