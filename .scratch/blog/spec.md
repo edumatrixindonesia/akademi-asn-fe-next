@@ -113,7 +113,7 @@ Headings get stable `id`s for the Daftar isi. Links to landing pages use `next/l
 
 ### Site-wide links
 
-- "Blog" link in `data/navbar.ts` and in the footer.
+- "Blog" link in `data/navbar.ts` (removed from the footer on 2026-10-06).
 - Artikel Terbaru section, placed directly after FAQ: on the home page (3 newest of any Kategori), on each exam-track page and all of its location pages (3 newest of that Kategori). Hidden when there are none. It links to the Kategori page ("Lihat Semua").
 
 ### Writing skill
