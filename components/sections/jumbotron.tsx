@@ -62,9 +62,10 @@ const Jumbotron = ({
       <Image
         src={heroImage}
         alt={heroImageAlt}
-        width={692}
-        height={609}
-        sizes="(max-width: 768px) 100vw, 50vw"
+        width={477}
+        height={594}
+        // Capped by max-w-md (448px), so wide viewports never need more.
+        sizes="(max-width: 480px) 100vw, 448px"
         preload
         className="order-2 md:order-1 h-auto w-full max-w-md mx-auto"
       />

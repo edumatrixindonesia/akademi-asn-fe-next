@@ -2,6 +2,8 @@ import createMDX from "@next/mdx";
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
+  // AVIF is ~20% smaller than WebP; browsers without AVIF still get WebP.
+  images: { formats: ["image/avif", "image/webp"] },
   // Page 1 of a paginated listing lives at its base URL.
   async redirects() {
     return [
