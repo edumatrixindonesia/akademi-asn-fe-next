@@ -14,13 +14,15 @@ Aggregate figures and matching policy descriptions appear in the initial HTML. N
 
 The supplied individual reviews have no publishable author names. Their text and dates are not converted into anonymous or invented authors in Review markup. Once names are supplied, publish matching visible reviews and schema. The management-approved aggregates can be published independently.
 
-Shipping terms are visible, but physical shipping rates are dynamic with no numeric rate or maximum supplied. Google requires a numeric shippingRate value or maximum for its shipping enhancement. No zero-cost rate is invented and no incomplete OfferShippingDetails node is emitted. Digital activation is displayed as access delivery rather than represented as physical shipping. The conditional free-shipping voucher is not treated as an active unconditional offer. `data/product-demo.ts` is not used.
+The owner confirmed worldwide digital delivery is free without a minimum purchase. The two digital products now include OfferShippingDetails for Indonesia: IDR 0, handling 0–1 day (allowing manual transfer activation), and zero transit days. The visible terms also explain worldwide access without a courier. No successful Google eligibility validation is claimed.
+
+Physical shipping rates are calculated dynamically by the courier API with no guaranteed maximum. Google requires a numeric shippingRate value or maximum for its shipping enhancement. Physical products therefore omit OfferShippingDetails rather than advertise an invented rate. Visible terms include JNE REG, J&T Reguler, and SiCepat REG, kilogram rounding, 1–2 working days of handling, and 2–7 working days of transit. The approved active subsidy of up to Rp20,000 for purchases of at least Rp200,000 is shown as a subsidy; the buyer pays the excess. It is not a maximum shipping rate or unconditional free shipping. `data/product-demo.ts` is not used.
 
 Google supports product rich results on pages focused on one product or variants of that product. This URL lists four distinct products. Completing optional fields alone does not establish eligibility. Dedicated product pages require a separate content and routing decision.
 
 ## Validation
 
-`bun test tests/produk-html.test.js` passes with 70 assertions, checking four distinct Product nodes, visible descriptions and aggregate figures, absolute image URLs, preserved prices and sales counts, one h1, physical and digital return policy distinctions, conditional shipping text, and absence of reviews without authors or shipping rates without evidence. `bun run lint` and `bun run typecheck` pass. BrowserAct confirms four matching rating summaries and policy descriptions, one h1, and no Next.js error overlay. No deployment or successful Google Rich Results Test is claimed.
+The focused regression check is `bun test tests/produk-html.test.js`. It checks four distinct Product nodes, visible descriptions and aggregate figures, absolute image URLs, preserved prices and sales counts, one h1, physical and digital return policy distinctions, approved free digital delivery fields, dynamic physical shipping and subsidy text, and absence of reviews without authors or physical rates without evidence. No deployment or successful Google Rich Results Test is claimed.
 
 ## Sources
 

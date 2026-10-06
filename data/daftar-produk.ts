@@ -10,8 +10,19 @@ export const hargaBukuFisikBumn = 150_000;
 const cover = "/img/section/produk-modul-lolos-cpns-pppk-bumn.webp";
 
 // Approved by Akademi ASN management on 2026-10-06.
-const digitalDelivery = "Akses melalui dashboard/member area Akademi ASN, dengan konfirmasi melalui WhatsApp dan email. Aktivasi otomatis setelah pembayaran terverifikasi; transfer manual maksimal 1×24 jam. Tanpa biaya aktivasi. Jika akses atau file bermasalah, hubungi admin melalui tombol pemesanan dengan ID Pesanan. Perbaikan akses maksimal 1×24 jam.";
-const physicalDelivery = "Pengiriman ke seluruh Indonesia selama alamat terjangkau ekspedisi. Ongkos kirim mengikuti alamat, berat, dan layanan kurir. Pesanan diproses 1–2 hari kerja setelah konfirmasi pembayaran; perjalanan kurir 2–7 hari kerja (Jawa biasanya 2–3 hari, luar Jawa 3–7 hari). Hari kerja Senin–Jumat, tidak termasuk libur nasional. Gratis ongkir untuk pembelian minimal Rp200.000 hanya jika voucher toko diaktifkan.";
+const digitalDelivery = "Akses digital tersedia di seluruh Indonesia dan dunia melalui email dan member area/dashboard website Akademi ASN, dengan konfirmasi melalui WhatsApp dan email. Biaya pengiriman Rp0 tanpa minimum pembelian dan tanpa kurir atau waktu transit. Aktivasi otomatis setelah pembayaran terverifikasi; transfer manual maksimal 1×24 jam. Tanpa biaya aktivasi. Jika akses atau file bermasalah, hubungi admin melalui tombol pemesanan dengan ID Pesanan. Perbaikan akses maksimal 1×24 jam.";
+const physicalDelivery = "Pengiriman ke seluruh Indonesia selama alamat terjangkau JNE REG, J&T Reguler, atau SiCepat REG, dengan resi otomatis. Ongkos kirim dihitung otomatis oleh sistem kurir saat checkout sesuai alamat, berat, dan layanan; tidak ada batas maksimum ongkir yang dijamin. Tarif dihitung per kilogram (perkiraan 1–2 buku), dengan pembulatan ke atas: berat 1,3 kg dikenakan tarif 2 kg. Pesanan diproses 1–2 hari kerja setelah konfirmasi pembayaran; perjalanan kurir 2–7 hari kerja. Hari kerja Senin–Jumat, tidak termasuk libur nasional. Subsidi ongkir aktif hingga Rp20.000 untuk pembelian minimal Rp200.000 di seluruh Indonesia. Jika ongkir melebihi Rp20.000, selisihnya ditanggung pembeli.";
+
+// Mark up the Indonesian destination; worldwide digital access is also described above.
+const digitalShippingDetails = {
+  shippingDestination: { "@type": "DefinedRegion", addressCountry: "ID" },
+  shippingRate: { "@type": "MonetaryAmount", value: 0, currency: "IDR" },
+  deliveryTime: {
+    "@type": "ShippingDeliveryTime",
+    handlingTime: { "@type": "QuantitativeValue", minValue: 0, maxValue: 1, unitCode: "DAY" },
+    transitTime: { "@type": "QuantitativeValue", minValue: 0, maxValue: 0, unitCode: "DAY" },
+  },
+} satisfies NonNullable<DaftarProdukProps["products"][number]["shippingDetails"]>;
 
 const digitalReturns = {
   applicableCountry: "ID",
@@ -32,7 +43,7 @@ const product = (
   name: string,
   price: number,
   sold: number,
-  details: Pick<DaftarProdukProps["products"][number], "description" | "aggregateRating" | "deliveryDescription" | "returnPolicy">,
+  details: Pick<DaftarProdukProps["products"][number], "description" | "aggregateRating" | "deliveryDescription" | "shippingDetails" | "returnPolicy">,
 ) => ({
   name,
   ...details,
@@ -54,6 +65,7 @@ export const daftarProdukProduk = (konsultasiUrl: (topic: string) => string) =>
         description: "E-book/PDF sekitar 250 halaman berisi ringkasan TWK, TIU, TKP, strategi mencapai ambang batas, dan bank soal untuk persiapan CPNS dan PPPK. Akses berlaku selamanya.",
         aggregateRating: { ratingValue: 4.8, ratingCount: 120, reviewCount: 45 },
         deliveryDescription: digitalDelivery,
+        shippingDetails: digitalShippingDetails,
         returnPolicy: digitalReturns,
       }),
       product(konsultasiUrl, "Modul Lolos CPNS & PPPK", hargaModulLolosCpnsPppk, 50, {
@@ -66,6 +78,7 @@ export const daftarProdukProduk = (konsultasiUrl: (topic: string) => string) =>
         description: `Lima paket tryout SKD ${tahunSeleksi} berbasis web dengan simulasi CAT, timer, skor langsung, grafik progres nilai, dan e-book pembahasan untuk evaluasi. Akses berlaku 1 tahun sejak aktivasi.`,
         aggregateRating: { ratingValue: 4.8, ratingCount: 250, reviewCount: 110 },
         deliveryDescription: digitalDelivery,
+        shippingDetails: digitalShippingDetails,
         returnPolicy: digitalReturns,
       }),
       product(konsultasiUrl, "Buku Fisik BUMN Lengkap", hargaBukuFisikBumn, 10, {

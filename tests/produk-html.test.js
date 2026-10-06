@@ -38,17 +38,27 @@ test("Produk page renders one h1, every product offer, sales counts, and Tips Lo
     expect(product.aggregateRating.bestRating).toBe(5);
     expect(html).toContain(`${product.aggregateRating.ratingValue.toLocaleString("id-ID")} / 5 (${product.aggregateRating.ratingCount} rating, ${product.aggregateRating.reviewCount} ulasan tertulis)`);
     expect(product).not.toHaveProperty("review");
-    expect(product.offers).not.toHaveProperty("shippingDetails");
     const policy = product.offers.hasMerchantReturnPolicy;
     expect(policy["@type"]).toBe("MerchantReturnPolicy");
     expect(policy.applicableCountry).toBe("ID");
     expect(html).toContain(policy.description);
   }
   for (const index of [0, 2]) {
+    expect(products[index].offers.shippingDetails).toEqual({
+      "@type": "OfferShippingDetails",
+      shippingDestination: { "@type": "DefinedRegion", addressCountry: "ID" },
+      shippingRate: { "@type": "MonetaryAmount", value: 0, currency: "IDR" },
+      deliveryTime: {
+        "@type": "ShippingDeliveryTime",
+        handlingTime: { "@type": "QuantitativeValue", minValue: 0, maxValue: 1, unitCode: "DAY" },
+        transitTime: { "@type": "QuantitativeValue", minValue: 0, maxValue: 0, unitCode: "DAY" },
+      },
+    });
     expect(products[index].offers.hasMerchantReturnPolicy.returnPolicyCategory).toBe("https://schema.org/MerchantReturnNotPermitted");
     expect(products[index].offers.hasMerchantReturnPolicy).not.toHaveProperty("merchantReturnDays");
   }
   for (const index of [1, 3]) {
+    expect(products[index].offers).not.toHaveProperty("shippingDetails");
     expect(products[index].offers.hasMerchantReturnPolicy).toMatchObject({
       returnPolicyCategory: "https://schema.org/MerchantReturnFiniteReturnWindow",
       merchantReturnDays: 3,
@@ -56,8 +66,12 @@ test("Produk page renders one h1, every product offer, sales counts, and Tips Lo
       returnFees: "https://schema.org/FreeReturn",
     });
   }
-  expect(html).toContain("Ongkos kirim mengikuti alamat, berat, dan layanan kurir.");
-  expect(html).toContain("Gratis ongkir untuk pembelian minimal Rp200.000 hanya jika voucher toko diaktifkan.");
+  expect(html).toContain("Biaya pengiriman Rp0 tanpa minimum pembelian dan tanpa kurir atau waktu transit.");
+  expect(html).toContain("tidak ada batas maksimum ongkir yang dijamin.");
+  expect(html).toContain("berat 1,3 kg dikenakan tarif 2 kg.");
+  expect(html).toContain("Subsidi ongkir aktif hingga Rp20.000 untuk pembelian minimal Rp200.000 di seluruh Indonesia.");
+  expect(html).toContain("Jika ongkir melebihi Rp20.000, selisihnya ditanggung pembeli.");
+  expect(html).not.toContain("Gratis ongkir untuk pembelian minimal Rp200.000 hanya jika voucher toko diaktifkan.");
   for (const sold of ["167 Terjual", "50 Terjual", "250 Terjual", "10 Terjual"]) {
     expect(html).toContain(sold);
   }
