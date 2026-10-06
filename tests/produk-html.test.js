@@ -14,17 +14,50 @@ test("Produk page renders one h1, every product offer, sales counts, and Tips Lo
   expect(html).toContain(`href="#daftar-produk"`);
   expect(html).toContain("Ikuti Bimbingan Belajar di Akademi ASN");
 
-  const offers = [...html.matchAll(/<script type="application\/ld\+json">(.*?)<\/script>/g)]
+  const products = [...html.matchAll(/<script type="application\/ld\+json">(.*?)<\/script>/g)]
     .map((match) => JSON.parse(match[1]))
     .flatMap((jsonLd) => jsonLd["@graph"] ?? [jsonLd])
-    .filter((node) => node["@type"] === "Product")
-    .map((product) => [product.name, product.offers.price]);
+    .filter((node) => node["@type"] === "Product");
+  const offers = products.map((product) => [product.name, product.offers.price]);
   expect(offers).toEqual([
     ["E-Modul Lolos CPNS & PPPK", 75000],
     ["Modul Lolos CPNS & PPPK", 120000],
     ["Paket Tryout SKD 2026", 50000],
     ["Buku Fisik BUMN Lengkap", 150000],
   ]);
+  expect(new Set(products.map((product) => product.description)).size).toBe(4);
+  expect(products.map((product) => [product.aggregateRating.ratingValue, product.aggregateRating.ratingCount, product.aggregateRating.reviewCount])).toEqual([
+    [4.8, 120, 45], [4.9, 85, 30], [4.8, 250, 110], [4.9, 60, 25],
+  ]);
+  for (const product of products) {
+    expect(typeof product.description).toBe("string");
+    expect(product.description.length).toBeGreaterThan(20);
+    expect(html).toContain(`<p class="mt-2 text-sm text-muted-foreground">${product.description}</p>`);
+    expect(new URL(product.image).protocol).toMatch(/^https?:$/);
+    expect(product.aggregateRating["@type"]).toBe("AggregateRating");
+    expect(product.aggregateRating.bestRating).toBe(5);
+    expect(html).toContain(`${product.aggregateRating.ratingValue.toLocaleString("id-ID")} / 5 (${product.aggregateRating.ratingCount} rating, ${product.aggregateRating.reviewCount} ulasan tertulis)`);
+    expect(product).not.toHaveProperty("review");
+    expect(product.offers).not.toHaveProperty("shippingDetails");
+    const policy = product.offers.hasMerchantReturnPolicy;
+    expect(policy["@type"]).toBe("MerchantReturnPolicy");
+    expect(policy.applicableCountry).toBe("ID");
+    expect(html).toContain(policy.description);
+  }
+  for (const index of [0, 2]) {
+    expect(products[index].offers.hasMerchantReturnPolicy.returnPolicyCategory).toBe("https://schema.org/MerchantReturnNotPermitted");
+    expect(products[index].offers.hasMerchantReturnPolicy).not.toHaveProperty("merchantReturnDays");
+  }
+  for (const index of [1, 3]) {
+    expect(products[index].offers.hasMerchantReturnPolicy).toMatchObject({
+      returnPolicyCategory: "https://schema.org/MerchantReturnFiniteReturnWindow",
+      merchantReturnDays: 3,
+      returnMethod: "https://schema.org/ReturnByMail",
+      returnFees: "https://schema.org/FreeReturn",
+    });
+  }
+  expect(html).toContain("Ongkos kirim mengikuti alamat, berat, dan layanan kurir.");
+  expect(html).toContain("Gratis ongkir untuk pembelian minimal Rp200.000 hanya jika voucher toko diaktifkan.");
   for (const sold of ["167 Terjual", "50 Terjual", "250 Terjual", "10 Terjual"]) {
     expect(html).toContain(sold);
   }

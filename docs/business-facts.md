@@ -16,3 +16,20 @@ Business numbers shown on the site. Code cannot verify that they stay true, so e
 | Paket Ultima | Rp5.292.000, 24 sesi | `paketPrivat` in `data/paket-program.ts`; FAQ derives from it | Akademi ASN | 2026-10-05 | Dimas Maulana |
 
 Other single sources: office address and opening hours in `data/contact.ts` (`officeAddress`, `officeHours`), selection year in `data/tahun-seleksi.ts`.
+
+## Product catalog approval: 2026-10-06
+
+Akademi ASN management supplied and approved the following figures for publication through the site owner. The internal review database was not accessed by the agent. These aggregates are independent of the sales counts above; do not derive one from the other. Source: `data/daftar-produk.ts`.
+
+| Product | Average rating (1–5) | Rating count | Written review count | Format and access |
+| --- | --- | --- | --- | --- |
+| E-Modul Lolos CPNS & PPPK | 4.8 | 120 | 45 | PDF, approximately 250 pages, lifetime access |
+| Modul Lolos CPNS & PPPK | 4.9 | 85 | 30 | Printed book, approximately 400 pages |
+| Paket Tryout SKD | 4.8 | 250 | 110 | Five CAT practice packages, one year from activation |
+| Buku Fisik BUMN Lengkap | 4.9 | 60 | 25 | Printed book, approximately 350 pages |
+
+Delivery and return terms approved by management are stored alongside the catalog data and rendered in the server HTML. Digital activation is automatic after payment verification, or within 24 hours for manual transfers, with no activation fee. Physical shipping costs depend on destination, weight, and courier; handling takes 1–2 working days and transit 2–7 working days, excluding weekends and national holidays. The free-shipping voucher is conditional on activation and purchases of at least Rp200,000.
+
+Digital products cannot be returned or refunded after access. Physical returns are limited to wrong items, missing pages, or printing defects reported within three days of courier-confirmed receipt, with an uninterrupted unboxing video. Akademi ASN covers confirmed defect or wrong-item return and replacement shipping, with no administration fee. Whether physical returns allow cash refunds or only replacement remains to be clarified.
+
+Individual review author names are not yet available, so no individual Review schema is published. No numeric physical shipping rate or maximum was supplied, so no OfferShippingDetails is published. The example support phone number in the supplied text is not added as an official support number; existing consultation links remain the contact route.

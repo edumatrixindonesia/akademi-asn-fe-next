@@ -1,33 +1,61 @@
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { formatRupiah } from "@/lib/utils";
+import { siteUrl } from "@/app/shared-metadata";
 
 export type DaftarProdukProps = {
   title: string;
+  detailsLabel: string;
   products: {
     name: string;
+    description: string;
     image: string;
     imageAlt: string;
     price: number;
     sold: number;
+    aggregateRating: {
+      ratingValue: number;
+      ratingCount: number;
+      reviewCount: number;
+    };
+    deliveryDescription: string;
+    returnPolicy: {
+      applicableCountry: string;
+      returnPolicyCategory: string;
+      description: string;
+      merchantReturnDays?: number;
+      returnMethod?: string;
+      returnFees?: string;
+    };
     ctaLabel: string;
     ctaHref: string;
   }[];
 };
 
-const DaftarProduk = ({ title, products }: DaftarProdukProps) => {
+const DaftarProduk = ({ title, detailsLabel, products }: DaftarProdukProps) => {
   const jsonLd = {
     "@context": "https://schema.org",
     "@graph": products.map((product) => ({
       "@type": "Product",
       name: product.name,
-      image: product.image,
+      description: product.description,
+      image: new URL(product.image, siteUrl).href,
       brand: { "@type": "Brand", name: "Akademi ASN" },
+      aggregateRating: {
+        "@type": "AggregateRating",
+        ...product.aggregateRating,
+        bestRating: 5,
+        worstRating: 1,
+      },
       offers: {
         "@type": "Offer",
         price: product.price,
         priceCurrency: "IDR",
         availability: "https://schema.org/InStock",
+        hasMerchantReturnPolicy: {
+          "@type": "MerchantReturnPolicy",
+          ...product.returnPolicy,
+        },
       },
     })),
   };
@@ -44,7 +72,7 @@ const DaftarProduk = ({ title, products }: DaftarProdukProps) => {
           </h2>
 
           <div className="grid gap-4 sm:grid-cols-2 md:gap-6 lg:grid-cols-4">
-            {products.map(({ name, image, imageAlt, price, sold, ctaLabel, ctaHref }) => (
+            {products.map(({ name, description, image, imageAlt, price, sold, aggregateRating, deliveryDescription, returnPolicy, ctaLabel, ctaHref }) => (
               <article
                 key={name}
                 className="flex flex-col overflow-hidden rounded-xl bg-background shadow-sm"
@@ -60,6 +88,15 @@ const DaftarProduk = ({ title, products }: DaftarProdukProps) => {
 
                 <div className="flex flex-1 flex-col p-4">
                   <h3 className="font-semibold text-foreground">{name}</h3>
+                  <p className="mt-2 text-sm text-muted-foreground">{description}</p>
+                  <p className="mt-2 text-sm text-muted-foreground">
+                    {`${aggregateRating.ratingValue.toLocaleString("id-ID")} / 5 (${aggregateRating.ratingCount.toLocaleString("id-ID")} rating, ${aggregateRating.reviewCount.toLocaleString("id-ID")} ulasan tertulis)`}
+                  </p>
+                  <details className="mt-3 text-sm text-muted-foreground">
+                    <summary className="cursor-pointer font-medium text-foreground">{detailsLabel}</summary>
+                    <p className="mt-2">{deliveryDescription}</p>
+                    <p className="mt-2">{returnPolicy.description}</p>
+                  </details>
 
                   <p className="mt-auto pt-4 text-lg font-bold text-cta">
                     {formatRupiah(price)}
