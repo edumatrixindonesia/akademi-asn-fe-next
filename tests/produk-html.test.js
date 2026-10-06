@@ -58,7 +58,24 @@ test("Produk page renders one h1, every product offer, sales counts, and Tips Lo
     expect(products[index].offers.hasMerchantReturnPolicy).not.toHaveProperty("merchantReturnDays");
   }
   for (const index of [1, 3]) {
-    expect(products[index].offers).not.toHaveProperty("shippingDetails");
+    const shipping = products[index].offers.shippingDetails;
+    expect(shipping).toMatchObject({
+      "@type": "OfferShippingDetails",
+      shippingDestination: { "@type": "DefinedRegion", addressCountry: "ID" },
+      shippingRate: { "@type": "MonetaryAmount", maxValue: 40000, currency: "IDR" },
+      deliveryTime: {
+        "@type": "ShippingDeliveryTime",
+        handlingTime: { "@type": "QuantitativeValue", minValue: 1, maxValue: 2, unitCode: "DAY" },
+        transitTime: { "@type": "QuantitativeValue", minValue: 2, maxValue: 7, unitCode: "DAY" },
+        businessDays: {
+          "@type": "OpeningHoursSpecification",
+          dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+        },
+      },
+    });
+    expect(shipping.shippingRate).not.toHaveProperty("value");
+    expect(shipping.description).toContain("Untuk pesanan hingga 1 kg");
+    expect(html).toContain(shipping.description);
     expect(products[index].offers.hasMerchantReturnPolicy).toMatchObject({
       returnPolicyCategory: "https://schema.org/MerchantReturnFiniteReturnWindow",
       merchantReturnDays: 3,
@@ -67,10 +84,11 @@ test("Produk page renders one h1, every product offer, sales counts, and Tips Lo
     });
   }
   expect(html).toContain("Biaya pengiriman Rp0 tanpa minimum pembelian dan tanpa kurir atau waktu transit.");
-  expect(html).toContain("tidak ada batas maksimum ongkir yang dijamin.");
-  expect(html).toContain("berat 1,3 kg dikenakan tarif 2 kg.");
-  expect(html).toContain("Subsidi ongkir aktif hingga Rp20.000 untuk pembelian minimal Rp200.000 di seluruh Indonesia.");
-  expect(html).toContain("Jika ongkir melebihi Rp20.000, selisihnya ditanggung pembeli.");
+  expect(html).toContain("ongkir yang dibayar pelanggan maksimal Rp40.000 tanpa pengecualian wilayah");
+  expect(html).toContain("Akademi ASN menanggung biaya di atas batas tersebut.");
+  expect(html).toContain("Batas Rp40.000 tidak berlaku untuk pesanan di atas 1 kg");
+  expect(html).toContain("Subsidi ongkir hingga Rp20.000 untuk pembelian minimal Rp200.000 tetap berlaku");
+  expect(html).not.toContain("saat checkout");
   expect(html).not.toContain("Gratis ongkir untuk pembelian minimal Rp200.000 hanya jika voucher toko diaktifkan.");
   for (const sold of ["167 Terjual", "50 Terjual", "250 Terjual", "10 Terjual"]) {
     expect(html).toContain(sold);

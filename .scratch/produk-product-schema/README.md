@@ -16,13 +16,15 @@ The supplied individual reviews have no publishable author names. Their text and
 
 The owner confirmed worldwide digital delivery is free without a minimum purchase. The two digital products now include OfferShippingDetails for Indonesia: IDR 0, handling 0–1 day (allowing manual transfer activation), and zero transit days. The visible terms also explain worldwide access without a courier. No successful Google eligibility validation is claimed.
 
-Physical shipping rates are calculated dynamically by the courier API with no guaranteed maximum. Google requires a numeric shippingRate value or maximum for its shipping enhancement. Physical products therefore omit OfferShippingDetails rather than advertise an invented rate. Visible terms include JNE REG, J&T Reguler, and SiCepat REG, kilogram rounding, 1–2 working days of handling, and 2–7 working days of transit. The approved active subsidy of up to Rp20,000 for purchases of at least Rp200,000 is shown as a subsidy; the buyer pays the excess. It is not a maximum shipping rate or unconditional free shipping. `data/product-demo.ts` is not used.
+The owner subsequently approved a Rp40,000 maximum customer-paid charge throughout Indonesia for physical orders up to 1 kg, with Akademi ASN covering costs above that ceiling. Both physical offers now include OfferShippingDetails with shippingRate.maxValue 40000 IDR, handling 1–2 working days, and transit 2–7 working days, Monday–Friday. The 1 kg condition is preserved in both the schema description and visible terms; no exact book weight is invented. Google's documented shipping enhancement fields do not encode this weight condition directly, and Google may ignore the description. No Google validation or shipping enhancement eligibility is claimed.
+
+The owner clarified that there is no checkout application. Visible ordering instructions therefore use the existing admin consultation links and do not claim an implemented checkout calculation. The approved subsidy of up to Rp20,000 for purchases of at least Rp200,000 remains separate from the new Rp40,000 ceiling. Orders above 1 kg require confirmation from the admin. `data/product-demo.ts` is not used.
 
 Google supports product rich results on pages focused on one product or variants of that product. This URL lists four distinct products. Completing optional fields alone does not establish eligibility. Dedicated product pages require a separate content and routing decision.
 
 ## Validation
 
-The focused regression check is `bun test tests/produk-html.test.js`. It checks four distinct Product nodes, visible descriptions and aggregate figures, absolute image URLs, preserved prices and sales counts, one h1, physical and digital return policy distinctions, approved free digital delivery fields, dynamic physical shipping and subsidy text, and absence of reviews without authors or physical rates without evidence. No deployment or successful Google Rich Results Test is claimed.
+The focused regression check is `bun test tests/produk-html.test.js`. It passes with 81 assertions, including the two physical shipping maxValue fields and absence of a fabricated fixed value, handling and transit ranges, working days, the matching visible 1 kg condition, separate subsidy text, and absence of checkout claims. Digital shipping fields, prices, ratings, and return policies remain covered. Lint and typecheck pass. No deployment or successful Google Rich Results Test is claimed.
 
 ## Sources
 

@@ -11,7 +11,7 @@ const cover = "/img/section/produk-modul-lolos-cpns-pppk-bumn.webp";
 
 // Approved by Akademi ASN management on 2026-10-06.
 const digitalDelivery = "Akses digital tersedia di seluruh Indonesia dan dunia melalui email dan member area/dashboard website Akademi ASN, dengan konfirmasi melalui WhatsApp dan email. Biaya pengiriman Rp0 tanpa minimum pembelian dan tanpa kurir atau waktu transit. Aktivasi otomatis setelah pembayaran terverifikasi; transfer manual maksimal 1×24 jam. Tanpa biaya aktivasi. Jika akses atau file bermasalah, hubungi admin melalui tombol pemesanan dengan ID Pesanan. Perbaikan akses maksimal 1×24 jam.";
-const physicalDelivery = "Pengiriman ke seluruh Indonesia selama alamat terjangkau JNE REG, J&T Reguler, atau SiCepat REG, dengan resi otomatis. Ongkos kirim dihitung otomatis oleh sistem kurir saat checkout sesuai alamat, berat, dan layanan; tidak ada batas maksimum ongkir yang dijamin. Tarif dihitung per kilogram (perkiraan 1–2 buku), dengan pembulatan ke atas: berat 1,3 kg dikenakan tarif 2 kg. Pesanan diproses 1–2 hari kerja setelah konfirmasi pembayaran; perjalanan kurir 2–7 hari kerja. Hari kerja Senin–Jumat, tidak termasuk libur nasional. Subsidi ongkir aktif hingga Rp20.000 untuk pembelian minimal Rp200.000 di seluruh Indonesia. Jika ongkir melebihi Rp20.000, selisihnya ditanggung pembeli.";
+const physicalDelivery = "Pengiriman ke seluruh Indonesia melalui JNE REG, J&T Reguler, atau SiCepat REG. Untuk pesanan hingga 1 kg (perkiraan 1–2 buku), ongkir yang dibayar pelanggan maksimal Rp40.000 tanpa pengecualian wilayah; Akademi ASN menanggung biaya di atas batas tersebut. Pemesanan dan konfirmasi ongkir dilakukan melalui admin pada tombol Pesan Sekarang. Batas Rp40.000 tidak berlaku untuk pesanan di atas 1 kg; konfirmasikan ongkir kepada admin sebelum pembayaran. Pesanan diproses 1–2 hari kerja setelah konfirmasi pembayaran; perjalanan kurir 2–7 hari kerja. Hari kerja Senin–Jumat, tidak termasuk libur nasional. Subsidi ongkir hingga Rp20.000 untuk pembelian minimal Rp200.000 tetap berlaku; biaya pelanggan untuk pesanan hingga 1 kg tidak melebihi Rp40.000.";
 
 // Mark up the Indonesian destination; worldwide digital access is also described above.
 const digitalShippingDetails = {
@@ -21,6 +21,21 @@ const digitalShippingDetails = {
     "@type": "ShippingDeliveryTime",
     handlingTime: { "@type": "QuantitativeValue", minValue: 0, maxValue: 1, unitCode: "DAY" },
     transitTime: { "@type": "QuantitativeValue", minValue: 0, maxValue: 0, unitCode: "DAY" },
+  },
+} satisfies NonNullable<DaftarProdukProps["products"][number]["shippingDetails"]>;
+
+const physicalShippingDetails = {
+  description: physicalDelivery,
+  shippingDestination: { "@type": "DefinedRegion", addressCountry: "ID" },
+  shippingRate: { "@type": "MonetaryAmount", maxValue: 40_000, currency: "IDR" },
+  deliveryTime: {
+    "@type": "ShippingDeliveryTime",
+    handlingTime: { "@type": "QuantitativeValue", minValue: 1, maxValue: 2, unitCode: "DAY" },
+    transitTime: { "@type": "QuantitativeValue", minValue: 2, maxValue: 7, unitCode: "DAY" },
+    businessDays: {
+      "@type": "OpeningHoursSpecification",
+      dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+    },
   },
 } satisfies NonNullable<DaftarProdukProps["products"][number]["shippingDetails"]>;
 
@@ -72,6 +87,7 @@ export const daftarProdukProduk = (konsultasiUrl: (topic: string) => string) =>
         description: "Buku cetak sekitar 400 halaman untuk persiapan CPNS dan PPPK, membahas TWK, TIU, TKP, SKB dasar, serta tips dan trik menjawab soal psikotes.",
         aggregateRating: { ratingValue: 4.9, ratingCount: 85, reviewCount: 30 },
         deliveryDescription: physicalDelivery,
+        shippingDetails: physicalShippingDetails,
         returnPolicy: physicalReturns,
       }),
       product(konsultasiUrl, `Paket Tryout SKD ${tahunSeleksi}`, hargaPaketTryoutSkd, 250, {
@@ -85,6 +101,7 @@ export const daftarProdukProduk = (konsultasiUrl: (topic: string) => string) =>
         description: "Buku cetak sekitar 350 halaman untuk persiapan Rekrutmen Bersama BUMN, berisi Tes Kemampuan Dasar (TKD), Core Values AKHLAK, dan Bahasa Inggris BUMN.",
         aggregateRating: { ratingValue: 4.9, ratingCount: 60, reviewCount: 25 },
         deliveryDescription: physicalDelivery,
+        shippingDetails: physicalShippingDetails,
         returnPolicy: physicalReturns,
       }),
     ],

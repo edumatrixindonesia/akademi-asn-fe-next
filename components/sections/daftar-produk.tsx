@@ -20,12 +20,16 @@ export type DaftarProdukProps = {
     };
     deliveryDescription: string;
     shippingDetails?: {
+      description?: string;
       shippingDestination: { "@type": "DefinedRegion"; addressCountry: string };
-      shippingRate: { "@type": "MonetaryAmount"; value: number; currency: string };
+      shippingRate: { "@type": "MonetaryAmount"; currency: string } & (
+        { value: number; maxValue?: never } | { maxValue: number; value?: never }
+      );
       deliveryTime: {
         "@type": "ShippingDeliveryTime";
         handlingTime: { "@type": "QuantitativeValue"; minValue: number; maxValue: number; unitCode: "DAY" };
         transitTime: { "@type": "QuantitativeValue"; minValue: number; maxValue: number; unitCode: "DAY" };
+        businessDays?: { "@type": "OpeningHoursSpecification"; dayOfWeek: string[] };
       };
     };
     returnPolicy: {
