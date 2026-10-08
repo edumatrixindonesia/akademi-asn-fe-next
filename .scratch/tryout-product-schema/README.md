@@ -8,7 +8,7 @@ Until 2026-10-08 these products carried synthetic "Pengguna Simulasi" reviews wi
 
 `aggregateRating` is computed from the reviews shown on the page, so `ratingCount` and `reviewCount` equal the number of visible reviews. It is not a full rating total.
 
-Delivery and return summaries come from `policySummary` in `data/kebijakan-pengembalian.ts`, and `merchantReturnLink` points to `/kebijakan-pengembalian`.
+Delivery and return summaries come from `digitalDelivery` and `digitalReturnPolicy` in `data/kebijakan-pengembalian.ts`. `merchantReturnLink` and the visible policy link both point to `/kebijakan-pengembalian`.
 
 ## Verification
 
