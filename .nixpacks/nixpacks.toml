@@ -1,2 +1,5 @@
 [build]
 node = "24.15.0"
+
+[phases.build]
+cmds = ["rm -rf .next", "npm run build"]
