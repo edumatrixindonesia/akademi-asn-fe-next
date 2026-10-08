@@ -1,10 +1,6 @@
 import type { BreadcrumbProps } from "@/components/sections/breadcrumb";
 import { regionLink, type ResolvedLocation } from "@/lib/location-tree";
 import { kategoriPath, penulisPath } from "@/lib/blog-path";
-import {
-  kebijakanPengirimanDanPengembalianPath,
-  kebijakanPengirimanDanPengembalianTitle,
-} from "@/data/kebijakan-pengiriman-dan-pengembalian";
 
 const beranda = { name: "Beranda", href: "/" };
 
@@ -38,13 +34,6 @@ export const breadcrumbProduk = {
   items: [
     beranda,
     { name: "Produk", href: "/produk" },
-  ],
-} satisfies BreadcrumbProps;
-
-export const breadcrumbKebijakanPengirimanDanPengembalian = {
-  items: [
-    beranda,
-    { name: kebijakanPengirimanDanPengembalianTitle, href: kebijakanPengirimanDanPengembalianPath },
   ],
 } satisfies BreadcrumbProps;
 

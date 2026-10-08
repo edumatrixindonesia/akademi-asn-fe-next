@@ -17,28 +17,6 @@ export type DaftarProdukProps = {
       ratingCount: number;
       reviewCount: number;
     };
-    shippingDetails?: {
-      description?: string;
-      shippingDestination: { "@type": "DefinedRegion"; addressCountry: string };
-      shippingRate: { "@type": "MonetaryAmount"; currency: string } & (
-        { value: number; maxValue?: never } | { maxValue: number; value?: never }
-      );
-      deliveryTime: {
-        "@type": "ShippingDeliveryTime";
-        handlingTime: { "@type": "QuantitativeValue"; minValue: number; maxValue: number; unitCode: "DAY" };
-        transitTime: { "@type": "QuantitativeValue"; minValue: number; maxValue: number; unitCode: "DAY" };
-        businessDays?: { "@type": "OpeningHoursSpecification"; dayOfWeek: string[] };
-      };
-    };
-    returnPolicy: {
-      applicableCountry: string;
-      returnPolicyCategory: string;
-      description: string;
-      merchantReturnDays?: number;
-      returnMethod?: string;
-      returnFees?: string;
-      merchantReturnLink?: string;
-    };
     ctaLabel: string;
     ctaHref: string;
   }[];
@@ -64,13 +42,6 @@ const DaftarProduk = ({ title, products }: DaftarProdukProps) => {
         price: product.price,
         priceCurrency: "IDR",
         availability: "https://schema.org/InStock",
-        ...(product.shippingDetails && {
-          shippingDetails: { "@type": "OfferShippingDetails", ...product.shippingDetails },
-        }),
-        hasMerchantReturnPolicy: {
-          "@type": "MerchantReturnPolicy",
-          ...product.returnPolicy,
-        },
       },
     })),
   };

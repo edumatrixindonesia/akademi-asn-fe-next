@@ -8,7 +8,7 @@ Until 2026-10-08 these products carried synthetic "Pengguna Simulasi" reviews wi
 
 `aggregateRating` is computed from the reviews shown on the page, so `ratingCount` and `reviewCount` equal the number of visible reviews. It is not a full rating total.
 
-Delivery and return summaries come from `digitalDelivery` and `digitalReturnPolicy` in `data/kebijakan-pengiriman-dan-pengembalian.ts`. They feed the JSON-LD only; the cards do not show them. `merchantReturnLink` points to `/kebijakan-pengiriman-dan-pengembalian`. On each card the reviews sit in a native details element, closed by default, so the card stays short while the review text stays in the initial HTML.
+Shipping and return markup was removed on 2026-10-08: Akademi ASN has no shipping policy and accepts no returns (see `docs/business-facts.md`). On each card the reviews sit in a native details element, closed by default, so the card stays short while the review text stays in the initial HTML.
 
 ## Verification
 

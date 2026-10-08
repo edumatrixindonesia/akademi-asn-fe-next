@@ -51,8 +51,8 @@ test("Tryout page renders one h1, product offers, and per-topic Konsultasi links
     const details = expectedDetails[index];
     expect(product.aggregateRating).toEqual(details.aggregateRating);
     expect(product.review).toEqual(details.review);
-    expect(product.offers.shippingDetails).toEqual(details.shippingDetails);
-    expect(product.offers.hasMerchantReturnPolicy).toEqual(details.hasMerchantReturnPolicy);
+    expect(product.offers).not.toHaveProperty("shippingDetails");
+    expect(product.offers).not.toHaveProperty("hasMerchantReturnPolicy");
     for (const review of product.review) {
       expect(html).toContain(review.author.name);
       expect(html).toContain(review.reviewBody);

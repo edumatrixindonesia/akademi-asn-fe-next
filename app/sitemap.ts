@@ -57,7 +57,6 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     ]),
     { url: `${siteUrl}/tryout` },
     { url: `${siteUrl}/produk` },
-    { url: `${siteUrl}/kebijakan-pengiriman-dan-pengembalian` },
     ...blogUrls(),
   ];
 }

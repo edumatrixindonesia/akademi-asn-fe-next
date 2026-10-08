@@ -91,6 +91,12 @@ export const organizationJsonLd = {
         "https://www.tiktok.com/@akademi.asn",
       ],
       parentOrganization: edumatrix,
+      // Akademi ASN accepts no returns (management, 2026-10-08). Applies to every product.
+      hasMerchantReturnPolicy: {
+        "@type": "MerchantReturnPolicy",
+        applicableCountry: "ID",
+        returnPolicyCategory: "https://schema.org/MerchantReturnNotPermitted",
+      },
     },
     {
       "@type": "WebSite",

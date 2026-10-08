@@ -1,14 +1,13 @@
 import { expect, test } from "bun:test";
 import { produkUnggulan } from "../data/produk-unggulan";
 import { paketHematKomplit } from "../data/paket-hemat-komplit";
-import { kebijakanPengirimanDanPengembalianPath } from "../data/kebijakan-pengiriman-dan-pengembalian";
 
 const products = [
   ...produkUnggulan(() => "").products,
   { ...paketHematKomplit(() => ""), name: "Paket Hemat Komplit" },
 ];
 
-test("Product details have coherent ratings, reviews, shipping, and return policy", () => {
+test("Product details have coherent ratings and reviews", () => {
   expect(products).toHaveLength(3);
 
   for (const { details } of products) {
@@ -27,17 +26,8 @@ test("Product details have coherent ratings, reviews, shipping, and return polic
       expect(review.reviewRating.ratingValue).toBeLessThanOrEqual(review.reviewRating.bestRating);
     }
 
-    const shipping = details.shippingDetails;
-    expect(shipping.shippingDestination.addressCountry).toBe("ID");
-    expect(shipping.shippingRate).toEqual({ "@type": "MonetaryAmount", value: 0, currency: "IDR" });
-    for (const interval of [shipping.deliveryTime.handlingTime, shipping.deliveryTime.transitTime]) {
-      expect(interval.maxValue).toBeGreaterThanOrEqual(interval.minValue);
-      expect(interval.unitCode).toBe("DAY");
-    }
-
-    const returns = details.hasMerchantReturnPolicy;
-    expect(returns.applicableCountry).toBe("ID");
-    expect(returns.returnPolicyCategory).toBe("https://schema.org/MerchantReturnNotPermitted");
-    expect(new URL(returns.merchantReturnLink).pathname).toBe(kebijakanPengirimanDanPengembalianPath);
+    // The company has no shipping policy and accepts no returns (2026-10-08).
+    expect(details).not.toHaveProperty("shippingDetails");
+    expect(details).not.toHaveProperty("hasMerchantReturnPolicy");
   }
 });

@@ -39,10 +39,6 @@ const ProdukUnggulan = ({ title, description, products }: ProdukUnggulanProps) =
         price: product.price,
         priceCurrency: "IDR",
         availability: "https://schema.org/InStock",
-        ...(product.details && {
-          shippingDetails: product.details.shippingDetails,
-          hasMerchantReturnPolicy: product.details.hasMerchantReturnPolicy,
-        }),
       },
     })),
   };

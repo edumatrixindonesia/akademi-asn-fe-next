@@ -4,6 +4,8 @@ The reported optional warnings concern the four products on `/produk`.
 
 ## Implemented
 
+**2026-10-08 update:** management withdrew all shipping and return terms. Akademi ASN has no shipping policy and accepts no returns. The policy page, `OfferShippingDetails`, and `MerchantReturnPolicy` were removed; the shipping and return notes below are historical. See `docs/business-facts.md`.
+
 Each product has a unique description, sourced from `data/daftar-produk.ts` and rendered both in visible server HTML and Product JSON-LD. Schema image URLs are absolute and derive from `NEXT_PUBLIC_SITE_URL`. Existing names, prices, sales counts, and consultation links are preserved.
 
 On 2026-10-06, the owner supplied management-approved product details, aggregate ratings, and delivery and return terms. All four Product nodes now include AggregateRating with separate rating and written-review counts. All four offers include MerchantReturnPolicy: digital returns are not permitted after access; physical returns have a three-day window for confirmed defects or wrong items, by mail, without return shipping fees. Policy descriptions preserve these conditions. No cash refund or exchange type is inferred for physical products because the supplied wording is ambiguous.

@@ -26,3 +26,12 @@ test("LocalBusiness priceRange uses the published private tutoring prices", () =
   expect(business.priceRange).toBe("Rp1.960.000–Rp5.292.000 (bimbel privat)");
   expect(business.priceRange.length).toBeLessThan(100);
 });
+
+test("Organization declares that no returns are accepted", () => {
+  const business = organizationJsonLd["@graph"].find((node) => node["@type"].includes("LocalBusiness"));
+  expect(business.hasMerchantReturnPolicy).toEqual({
+    "@type": "MerchantReturnPolicy",
+    applicableCountry: "ID",
+    returnPolicyCategory: "https://schema.org/MerchantReturnNotPermitted",
+  });
+});

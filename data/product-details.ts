@@ -1,5 +1,3 @@
-import { digitalReturnPolicy } from "@/data/kebijakan-pengiriman-dan-pengembalian";
-
 // Real customer reviews. Consent is on file; the source of each review is kept
 // in docs/private/ulasan-sumber.md (gitignored, not published).
 type ProductReviewInput = {
@@ -128,20 +126,6 @@ export const productDetails = (reviews: ProductReviewInput[]) => {
       worstRating,
     },
     review,
-    shippingDetails: {
-      "@type": "OfferShippingDetails",
-      shippingDestination: { "@type": "DefinedRegion", addressCountry: "ID" },
-      shippingRate: { "@type": "MonetaryAmount", value: 0, currency: "IDR" },
-      deliveryTime: {
-        "@type": "ShippingDeliveryTime",
-        handlingTime: { "@type": "QuantitativeValue", minValue: 0, maxValue: 1, unitCode: "DAY" },
-        transitTime: { "@type": "QuantitativeValue", minValue: 0, maxValue: 0, unitCode: "DAY" },
-      },
-    },
-    hasMerchantReturnPolicy: {
-      "@type": "MerchantReturnPolicy",
-      ...digitalReturnPolicy,
-    },
   };
 };
 

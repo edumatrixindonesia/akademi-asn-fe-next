@@ -38,60 +38,12 @@ test("Produk page renders one h1, every product offer, sales counts, and Tips Lo
     expect(product.aggregateRating.bestRating).toBe(5);
     expect(html).toContain(`${product.aggregateRating.ratingValue.toLocaleString("id-ID")} / 5 (${product.aggregateRating.ratingCount} rating, ${product.aggregateRating.reviewCount} ulasan tertulis)`);
     expect(product).not.toHaveProperty("review");
-    const policy = product.offers.hasMerchantReturnPolicy;
-    expect(policy["@type"]).toBe("MerchantReturnPolicy");
-    expect(policy.applicableCountry).toBe("ID");
-    expect(html).toContain(policy.description);
-    expect(new URL(policy.merchantReturnLink).pathname).toBe("/kebijakan-pengiriman-dan-pengembalian");
+    expect(product.offers).not.toHaveProperty("shippingDetails");
+    expect(product.offers).not.toHaveProperty("hasMerchantReturnPolicy");
   }
-  // Cards no longer link to the policy page; only the footer does.
-  expect(html.match(/<a[^>]*href="\/kebijakan-pengiriman-dan-pengembalian"/g)).toHaveLength(1);
-  for (const index of [0, 2]) {
-    expect(products[index].offers.shippingDetails).toEqual({
-      "@type": "OfferShippingDetails",
-      shippingDestination: { "@type": "DefinedRegion", addressCountry: "ID" },
-      shippingRate: { "@type": "MonetaryAmount", value: 0, currency: "IDR" },
-      deliveryTime: {
-        "@type": "ShippingDeliveryTime",
-        handlingTime: { "@type": "QuantitativeValue", minValue: 0, maxValue: 1, unitCode: "DAY" },
-        transitTime: { "@type": "QuantitativeValue", minValue: 0, maxValue: 0, unitCode: "DAY" },
-      },
-    });
-    expect(products[index].offers.hasMerchantReturnPolicy.returnPolicyCategory).toBe("https://schema.org/MerchantReturnNotPermitted");
-    expect(products[index].offers.hasMerchantReturnPolicy).not.toHaveProperty("merchantReturnDays");
-  }
-  for (const index of [1, 3]) {
-    const shipping = products[index].offers.shippingDetails;
-    expect(shipping).toMatchObject({
-      "@type": "OfferShippingDetails",
-      shippingDestination: { "@type": "DefinedRegion", addressCountry: "ID" },
-      shippingRate: { "@type": "MonetaryAmount", maxValue: 40000, currency: "IDR" },
-      deliveryTime: {
-        "@type": "ShippingDeliveryTime",
-        handlingTime: { "@type": "QuantitativeValue", minValue: 1, maxValue: 2, unitCode: "DAY" },
-        transitTime: { "@type": "QuantitativeValue", minValue: 2, maxValue: 7, unitCode: "DAY" },
-        businessDays: {
-          "@type": "OpeningHoursSpecification",
-          dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-        },
-      },
-    });
-    expect(shipping.shippingRate).not.toHaveProperty("value");
-    expect(shipping.description).toContain("Untuk pesanan hingga 1 kg");
-    expect(html).toContain(shipping.description);
-    expect(products[index].offers.hasMerchantReturnPolicy).toMatchObject({
-      returnPolicyCategory: "https://schema.org/MerchantReturnFiniteReturnWindow",
-      merchantReturnDays: 3,
-      returnMethod: "https://schema.org/ReturnByMail",
-      returnFees: "https://schema.org/FreeReturn",
-    });
-  }
-  expect(html).toContain("ongkir yang dibayar pelanggan maksimal Rp40.000 tanpa pengecualian wilayah");
-  expect(html).toContain("Akademi ASN menanggung biaya di atas batas tersebut.");
-  expect(html).toContain("Batas Rp40.000 tidak berlaku untuk pesanan di atas 1 kg");
-  expect(html).toContain("Subsidi ongkir hingga Rp20.000 untuk pembelian minimal Rp200.000 tetap berlaku");
+  expect(html).not.toContain("kebijakan-pengiriman-dan-pengembalian");
+  expect(html).not.toContain("ongkir");
   expect(html).not.toContain("saat checkout");
-  expect(html).not.toContain("Gratis ongkir untuk pembelian minimal Rp200.000 hanya jika voucher toko diaktifkan.");
   for (const sold of ["167 Terjual", "50 Terjual", "250 Terjual", "10 Terjual"]) {
     expect(html).toContain(sold);
   }

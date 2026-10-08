@@ -28,28 +28,14 @@ Akademi ASN management supplied and approved the following figures for publicati
 | Paket Tryout SKD | 4.8 | 250 | 110 | Five CAT practice packages, one year from activation |
 | Buku Fisik BUMN Lengkap | 4.9 | 60 | 25 | Printed book, approximately 350 pages |
 
-Delivery and return terms approved by management are stored alongside the catalog data and rendered in the server HTML. Digital access is worldwide, with zero delivery and activation fees and no minimum purchase. Activation is automatic after payment verification, or within 24 hours for manual transfers, with no courier transit time. OfferShippingDetails represents these digital delivery terms for the Indonesian destination; worldwide access remains visible in the delivery description.
-
-The owner subsequently approved a maximum customer-paid shipping charge of Rp40,000 throughout Indonesia for physical orders up to 1 kg (approximately 1–2 books), with no regional exceptions. Akademi ASN covers courier costs above that ceiling. The owner clarified that there is no checkout application; orders and shipping confirmation use the existing admin consultation links. The ceiling is a business policy, not a checkout calculation implemented in this repository. Orders above 1 kg need a separate shipping quote from the admin.
-
-Physical shipping uses JNE REG, J&T Reguler, or SiCepat REG. Handling takes 1–2 working days and transit 2–7 working days, excluding weekends and national holidays. The existing subsidy of up to Rp20,000 on purchases of at least Rp200,000 remains applicable; the maximum charge for eligible orders is Rp40,000. Physical OfferShippingDetails uses shippingRate.maxValue, not a fixed rate. Its description and the visible terms preserve the 1 kg ceiling condition.
-
-Digital products cannot be returned or refunded after access. Physical returns are limited to wrong items, missing pages, or printing defects reported within three days of courier-confirmed receipt, with an uninterrupted unboxing video. Akademi ASN covers confirmed defect or wrong-item return and replacement shipping, with no administration fee. Whether physical returns allow cash refunds or only replacement remains to be clarified.
-
 Individual review author names for these four catalog products are not yet available, so no individual Review schema is published for them. The example support phone number in the supplied text is not added as an official support number; existing consultation links remain the contact route.
 
 ## Tryout page reviews: 2026-10-08
 
-The three products on the Tryout page (Tryout CPNS, E-Book Modul CPNS, Paket Hemat Komplit) publish real customer reviews with initials as author names. Consent is on file; sources are kept in `docs/private/ulasan-sumber.md` (gitignored). Source: `data/product-details.ts`. These products are separate from the four catalog products above, whose individual reviews remain unpublished.
+The three products on the Tryout page (Tryout CPNS, E-Book Modul CPNS, Paket Hemat Komplit) publish real customer reviews with initials as author names. Consent is on file; sources are kept in `docs/private/ulasan-sumber.md` (gitignored). Source: `data/product-details.ts`. These products are separate from the four catalog products above, whose individual reviews remain unpublished. The Tryout page `aggregateRating` is computed from the visible reviews, because no full rating totals exist for those three products.
 
-## Shipping and refund policy approval: 2026-10-08
+## Shipping and returns withdrawn: 2026-10-08
 
-The owner approved one site-wide policy page at `/kebijakan-pengiriman-dan-pengembalian`, covering all digital products and printed books. Source: `data/kebijakan-pengiriman-dan-pengembalian.ts`; Product JSON-LD (`merchantReturnLink`) and the policy page read from it. Product cards do not show these terms; the footer links to the policy page.
+After discussion with management, the owner withdrew the shipping and return terms approved earlier (2026-10-06 and 2026-10-08). Akademi ASN currently has no shipping policy and does not accept returns. The `/kebijakan-pengiriman-dan-pengembalian` page, its footer link and sitemap entry, and every delivery and return term were removed. Product JSON-LD publishes no `shippingDetails` or offer-level `hasMerchantReturnPolicy`; tests assert their absence. The no-returns fact is published once, as an organization-level `MerchantReturnNotPermitted` policy in `organizationJsonLd` (`app/shared-metadata.ts`). Do not add shipping terms until management approves a shipping policy.
 
-- Digital products are not returned or refunded after access. Access problems are fixed within 1×24 jam, not refunded.
-- A double payment for the same order is refunded after admin verification. This is not a product return, so digital offers keep `MerchantReturnNotPermitted`.
-- Printed-book returns and shipping keep the 2026-10-06 terms above.
-- Complaints go through the admin WhatsApp consultation link, the Nomor Call Center, and the official support email `edumatrix.id@gmail.com` (`supportEmail` in `data/contact.ts`).
-- Complaint window for digital products: 2×24 jam after access is sent. Printed books keep the 3-day window from courier-confirmed receipt.
-- Refund and return claims are reviewed within 2 working days. An approved double-payment refund is paid within 3–7 working days.
-- The Tryout page `aggregateRating` is computed from the visible reviews, because no full rating totals exist for those three products.
+The support email `edumatrix.id@gmail.com` (`supportEmail` in `data/contact.ts`) stays approved but is not shown on any page.

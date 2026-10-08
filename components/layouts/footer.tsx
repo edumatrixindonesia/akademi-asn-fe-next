@@ -21,7 +21,6 @@ export type FooterProps = {
   otherWebsite: { title: string; link: FooterLink };
   examTracks: { title: string; links: FooterLink[] };
   image: { src: string; alt: string };
-  policies: FooterLink[];
   copyright: string;
 };
 
@@ -36,7 +35,6 @@ const Footer = ({
   otherWebsite,
   examTracks,
   image,
-  policies,
   copyright,
 }: FooterProps) => (
   <footer className="mt-auto bg-linear-to-r from-primary to-primary-dark text-background">
@@ -138,16 +136,6 @@ const Footer = ({
 
     <div className="border-t border-background/10">
       <div className="mx-auto flex w-full max-w-7xl flex-col items-center gap-2 px-4 py-4 text-center text-xs md:px-8 lg:px-12">
-        <ul className="flex flex-wrap justify-center gap-4">
-          {policies.map((policy) => (
-            <li key={policy.href}>
-              <Link href={policy.href} className="hover:text-white/80">
-                {policy.label}
-              </Link>
-            </li>
-          ))}
-        </ul>
-
         <p>{copyright}</p>
       </div>
     </div>

@@ -44,10 +44,6 @@ const PaketHematKomplit = ({
       price,
       priceCurrency: "IDR",
       availability: "https://schema.org/InStock",
-      ...(details && {
-        shippingDetails: details.shippingDetails,
-        hasMerchantReturnPolicy: details.hasMerchantReturnPolicy,
-      }),
     },
   };
 
