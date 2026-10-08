@@ -2,6 +2,7 @@ import type { DaftarProdukProps } from "@/components/sections/daftar-produk";
 import {
   digitalDelivery,
   digitalReturnPolicy,
+  kebijakanPengembalianLink,
   physicalDelivery,
   physicalReturnPolicy,
 } from "@/data/kebijakan-pengembalian";
@@ -63,6 +64,7 @@ export const daftarProdukProduk = (konsultasiUrl: (topic: string) => string) =>
   ({
     title: "Modul Lolos CPNS & PPPK",
     detailsLabel: "Pengiriman, akses & retur",
+    policyLink: kebijakanPengembalianLink,
     products: [
       product(konsultasiUrl, "E-Modul Lolos CPNS & PPPK", hargaEModulLolosCpnsPppk, 167, {
         description: "E-book/PDF sekitar 250 halaman berisi ringkasan TWK, TIU, TKP, strategi mencapai ambang batas, dan bank soal untuk persiapan CPNS dan PPPK. Akses berlaku selamanya.",

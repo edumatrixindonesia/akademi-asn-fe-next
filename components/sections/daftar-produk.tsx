@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { formatRupiah } from "@/lib/utils";
 import { siteUrl } from "@/app/shared-metadata";
@@ -6,6 +7,7 @@ import { siteUrl } from "@/app/shared-metadata";
 export type DaftarProdukProps = {
   title: string;
   detailsLabel: string;
+  policyLink: { label: string; href: string };
   products: {
     name: string;
     description: string;
@@ -46,7 +48,7 @@ export type DaftarProdukProps = {
   }[];
 };
 
-const DaftarProduk = ({ title, detailsLabel, products }: DaftarProdukProps) => {
+const DaftarProduk = ({ title, detailsLabel, policyLink, products }: DaftarProdukProps) => {
   const jsonLd = {
     "@context": "https://schema.org",
     "@graph": products.map((product) => ({
@@ -113,6 +115,11 @@ const DaftarProduk = ({ title, detailsLabel, products }: DaftarProdukProps) => {
                     <summary className="cursor-pointer font-medium text-foreground">{detailsLabel}</summary>
                     <p className="mt-2">{deliveryDescription}</p>
                     <p className="mt-2">{returnPolicy.description}</p>
+                    <p className="mt-2">
+                      <Link href={policyLink.href} className="underline">
+                        {policyLink.label}
+                      </Link>
+                    </p>
                   </details>
 
                   <p className="mt-auto pt-4 text-lg font-bold text-cta">

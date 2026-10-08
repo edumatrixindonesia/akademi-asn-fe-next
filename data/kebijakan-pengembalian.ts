@@ -5,6 +5,7 @@ import { tahunSeleksi } from "@/data/tahun-seleksi";
 
 export const kebijakanPengembalianPath = "/kebijakan-pengembalian";
 export const kebijakanPengembalianTitle = "Kebijakan Pengiriman dan Pengembalian";
+export const kebijakanPengembalianLink = { label: kebijakanPengembalianTitle, href: kebijakanPengembalianPath };
 
 const merchantReturnLink = `${siteUrl}${kebijakanPengembalianPath}`;
 
@@ -70,7 +71,7 @@ export const kebijakanPengembalian = (konsultasiUrl: (topic: string) => string) 
         ],
         link: {
           label: "Hubungi Admin via WhatsApp",
-          href: konsultasiUrl("Kebijakan Pengiriman dan Pengembalian"),
+          href: konsultasiUrl(kebijakanPengembalianTitle),
         },
       },
     ],

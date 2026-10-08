@@ -44,6 +44,8 @@ test("Produk page renders one h1, every product offer, sales counts, and Tips Lo
     expect(html).toContain(policy.description);
     expect(new URL(policy.merchantReturnLink).pathname).toBe("/kebijakan-pengembalian");
   }
+  // One visible policy link per catalog card, plus the footer link.
+  expect(html.match(/<a[^>]*href="\/kebijakan-pengembalian"/g)).toHaveLength(products.length + 1);
   for (const index of [0, 2]) {
     expect(products[index].offers.shippingDetails).toEqual({
       "@type": "OfferShippingDetails",
