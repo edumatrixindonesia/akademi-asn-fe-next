@@ -71,6 +71,11 @@ _Avoid_: features, benefits
 
 **Testimoni**:
 Reviews from past students, shown as a section on every landing page.
+_Avoid_: ulasan (reserved for a buyer's review of one product)
+
+**Ulasan**:
+A buyer's rating and written review of one product (e.g. Tryout CPNS, Paket Hemat Komplit), shown on that product's card and in its Product structured data.
+_Avoid_: testimoni
 
 **Tryout**:
 Practice exams that simulate the real selection test. Has its own page, not a landing-page section.

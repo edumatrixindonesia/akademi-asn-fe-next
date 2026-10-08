@@ -36,7 +36,7 @@ test("Tryout page renders one h1, product offers, and per-topic Konsultasi links
     ["Paket Hemat Komplit", 70000],
   ]);
   const siteUrl = new URL(html.match(/<link rel="canonical" href="([^"]+)"/)[1]);
-  expect([...html.matchAll(/data-product-details="true"/g)]).toHaveLength(3);
+  expect([...html.matchAll(/<details[^>]*data-product-details="true"/g)]).toHaveLength(3);
   for (const [index, product] of products.entries()) {
     const imageUrl = new URL(product.image);
     expect(imageUrl.origin).toBe(siteUrl.origin);
@@ -53,7 +53,6 @@ test("Tryout page renders one h1, product offers, and per-topic Konsultasi links
     expect(product.review).toEqual(details.review);
     expect(product.offers.shippingDetails).toEqual(details.shippingDetails);
     expect(product.offers.hasMerchantReturnPolicy).toEqual(details.hasMerchantReturnPolicy);
-    expect(html).toContain(`href="${details.policyLink.href}"`);
     for (const review of product.review) {
       expect(html).toContain(review.author.name);
       expect(html).toContain(review.reviewBody);

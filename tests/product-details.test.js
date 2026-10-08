@@ -39,6 +39,5 @@ test("Product details have coherent ratings, reviews, shipping, and return polic
     expect(returns.applicableCountry).toBe("ID");
     expect(returns.returnPolicyCategory).toBe("https://schema.org/MerchantReturnNotPermitted");
     expect(new URL(returns.merchantReturnLink).pathname).toBe(kebijakanPengirimanDanPengembalianPath);
-    expect(details.policyLink.href).toBe(kebijakanPengirimanDanPengembalianPath);
   }
 });

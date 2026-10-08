@@ -44,7 +44,7 @@ The three products on the Tryout page (Tryout CPNS, E-Book Modul CPNS, Paket Hem
 
 ## Shipping and refund policy approval: 2026-10-08
 
-The owner approved one site-wide policy page at `/kebijakan-pengiriman-dan-pengembalian`, covering all digital products and printed books. Source: `data/kebijakan-pengiriman-dan-pengembalian.ts`; product cards, Product JSON-LD (`merchantReturnLink`), and the policy page all read from it.
+The owner approved one site-wide policy page at `/kebijakan-pengiriman-dan-pengembalian`, covering all digital products and printed books. Source: `data/kebijakan-pengiriman-dan-pengembalian.ts`; Product JSON-LD (`merchantReturnLink`) and the policy page read from it. Product cards do not show these terms; the footer links to the policy page.
 
 - Digital products are not returned or refunded after access. Access problems are fixed within 1×24 jam, not refunded.
 - A double payment for the same order is refunded after admin verification. This is not a product return, so digital offers keep `MerchantReturnNotPermitted`.

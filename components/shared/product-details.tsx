@@ -1,4 +1,3 @@
-import Link from "next/link";
 import type { ProductDetailsData } from "@/data/product-details";
 
 const reviewDate = new Intl.DateTimeFormat("id-ID", {
@@ -8,16 +7,15 @@ const reviewDate = new Intl.DateTimeFormat("id-ID", {
 
 const ProductDetails = ({ details }: { details?: ProductDetailsData }) =>
   details ? (
-    <aside
-      className="mt-6 space-y-3 rounded-lg border border-current/30 p-4 text-left text-sm"
+    <details
+      className="mt-6 rounded-lg border border-current/30 p-4 text-left text-sm"
       data-product-details
     >
-      <p>
-        {details.aggregateRating.ratingValue.toLocaleString("id-ID")} /{" "}
-        {details.aggregateRating.bestRating}
-        {` (${details.aggregateRating.reviewCount} ulasan)`}
-      </p>
-      <ul className="space-y-3">
+      <summary className="cursor-pointer font-semibold">
+        <span aria-hidden className="text-yellow-400">★</span>
+        {` ${details.aggregateRating.ratingValue.toLocaleString("id-ID")} / ${details.aggregateRating.bestRating} · Lihat ${details.aggregateRating.reviewCount} ulasan`}
+      </summary>
+      <ul className="mt-3 space-y-3">
         {details.review.map((review) => (
           <li key={review.author.name}>
             <p className="font-semibold">
@@ -31,14 +29,7 @@ const ProductDetails = ({ details }: { details?: ProductDetailsData }) =>
           </li>
         ))}
       </ul>
-      <p>{details.deliveryDescription}</p>
-      <p>{details.returnDescription}</p>
-      <p>
-        <Link href={details.policyLink.href} className="underline">
-          {details.policyLink.label}
-        </Link>
-      </p>
-    </aside>
+    </details>
   ) : null;
 
 export default ProductDetails;

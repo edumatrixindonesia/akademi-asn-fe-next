@@ -44,8 +44,8 @@ test("Produk page renders one h1, every product offer, sales counts, and Tips Lo
     expect(html).toContain(policy.description);
     expect(new URL(policy.merchantReturnLink).pathname).toBe("/kebijakan-pengiriman-dan-pengembalian");
   }
-  // One visible policy link per catalog card, plus the footer link.
-  expect(html.match(/<a[^>]*href="\/kebijakan-pengiriman-dan-pengembalian"/g)).toHaveLength(products.length + 1);
+  // Cards no longer link to the policy page; only the footer does.
+  expect(html.match(/<a[^>]*href="\/kebijakan-pengiriman-dan-pengembalian"/g)).toHaveLength(1);
   for (const index of [0, 2]) {
     expect(products[index].offers.shippingDetails).toEqual({
       "@type": "OfferShippingDetails",
@@ -86,7 +86,6 @@ test("Produk page renders one h1, every product offer, sales counts, and Tips Lo
       returnFees: "https://schema.org/FreeReturn",
     });
   }
-  expect(html).toContain("Biaya pengiriman Rp0 tanpa minimum pembelian dan tanpa kurir atau waktu transit.");
   expect(html).toContain("ongkir yang dibayar pelanggan maksimal Rp40.000 tanpa pengecualian wilayah");
   expect(html).toContain("Akademi ASN menanggung biaya di atas batas tersebut.");
   expect(html).toContain("Batas Rp40.000 tidak berlaku untuk pesanan di atas 1 kg");

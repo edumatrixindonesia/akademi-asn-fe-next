@@ -1,13 +1,10 @@
 import Image from "next/image";
-import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { formatRupiah } from "@/lib/utils";
 import { siteUrl } from "@/app/shared-metadata";
 
 export type DaftarProdukProps = {
   title: string;
-  detailsLabel: string;
-  policyLink: { label: string; href: string };
   products: {
     name: string;
     description: string;
@@ -20,7 +17,6 @@ export type DaftarProdukProps = {
       ratingCount: number;
       reviewCount: number;
     };
-    deliveryDescription: string;
     shippingDetails?: {
       description?: string;
       shippingDestination: { "@type": "DefinedRegion"; addressCountry: string };
@@ -48,7 +44,7 @@ export type DaftarProdukProps = {
   }[];
 };
 
-const DaftarProduk = ({ title, detailsLabel, policyLink, products }: DaftarProdukProps) => {
+const DaftarProduk = ({ title, products }: DaftarProdukProps) => {
   const jsonLd = {
     "@context": "https://schema.org",
     "@graph": products.map((product) => ({
@@ -91,7 +87,7 @@ const DaftarProduk = ({ title, detailsLabel, policyLink, products }: DaftarProdu
           </h2>
 
           <div className="grid gap-4 sm:grid-cols-2 md:gap-6 lg:grid-cols-4">
-            {products.map(({ name, description, image, imageAlt, price, sold, aggregateRating, deliveryDescription, returnPolicy, ctaLabel, ctaHref }) => (
+            {products.map(({ name, description, image, imageAlt, price, sold, aggregateRating, ctaLabel, ctaHref }) => (
               <article
                 key={name}
                 className="flex flex-col overflow-hidden rounded-xl bg-background shadow-sm"
@@ -111,16 +107,6 @@ const DaftarProduk = ({ title, detailsLabel, policyLink, products }: DaftarProdu
                   <p className="mt-2 text-sm text-muted-foreground">
                     {`${aggregateRating.ratingValue.toLocaleString("id-ID")} / 5 (${aggregateRating.ratingCount.toLocaleString("id-ID")} rating, ${aggregateRating.reviewCount.toLocaleString("id-ID")} ulasan tertulis)`}
                   </p>
-                  <details className="mt-3 text-sm text-muted-foreground">
-                    <summary className="cursor-pointer font-medium text-foreground">{detailsLabel}</summary>
-                    <p className="mt-2">{deliveryDescription}</p>
-                    <p className="mt-2">{returnPolicy.description}</p>
-                    <p className="mt-2">
-                      <Link href={policyLink.href} className="underline">
-                        {policyLink.label}
-                      </Link>
-                    </p>
-                  </details>
 
                   <p className="mt-auto pt-4 text-lg font-bold text-cta">
                     {formatRupiah(price)}

@@ -1,8 +1,6 @@
 import type { DaftarProdukProps } from "@/components/sections/daftar-produk";
 import {
-  digitalDelivery,
   digitalReturnPolicy,
-  kebijakanPengirimanDanPengembalianLink,
   physicalDelivery,
   physicalReturnPolicy,
 } from "@/data/kebijakan-pengiriman-dan-pengembalian";
@@ -47,7 +45,7 @@ const product = (
   name: string,
   price: number,
   sold: number,
-  details: Pick<DaftarProdukProps["products"][number], "description" | "aggregateRating" | "deliveryDescription" | "shippingDetails" | "returnPolicy">,
+  details: Pick<DaftarProdukProps["products"][number], "description" | "aggregateRating" | "shippingDetails" | "returnPolicy">,
 ) => ({
   name,
   ...details,
@@ -63,34 +61,28 @@ const product = (
 export const daftarProdukProduk = (konsultasiUrl: (topic: string) => string) =>
   ({
     title: "Modul Lolos CPNS & PPPK",
-    detailsLabel: "Pengiriman, akses & retur",
-    policyLink: kebijakanPengirimanDanPengembalianLink,
     products: [
       product(konsultasiUrl, "E-Modul Lolos CPNS & PPPK", hargaEModulLolosCpnsPppk, 167, {
         description: "E-book/PDF sekitar 250 halaman berisi ringkasan TWK, TIU, TKP, strategi mencapai ambang batas, dan bank soal untuk persiapan CPNS dan PPPK. Akses berlaku selamanya.",
         aggregateRating: { ratingValue: 4.8, ratingCount: 120, reviewCount: 45 },
-        deliveryDescription: digitalDelivery,
         shippingDetails: digitalShippingDetails,
         returnPolicy: digitalReturnPolicy,
       }),
       product(konsultasiUrl, "Modul Lolos CPNS & PPPK", hargaModulLolosCpnsPppk, 50, {
         description: "Buku cetak sekitar 400 halaman untuk persiapan CPNS dan PPPK, membahas TWK, TIU, TKP, SKB dasar, serta tips dan trik menjawab soal psikotes.",
         aggregateRating: { ratingValue: 4.9, ratingCount: 85, reviewCount: 30 },
-        deliveryDescription: physicalDelivery,
         shippingDetails: physicalShippingDetails,
         returnPolicy: physicalReturnPolicy,
       }),
       product(konsultasiUrl, `Paket Tryout SKD ${tahunSeleksi}`, hargaPaketTryoutSkd, 250, {
         description: `Lima paket tryout SKD ${tahunSeleksi} berbasis web dengan simulasi CAT, timer, skor langsung, grafik progres nilai, dan e-book pembahasan untuk evaluasi. Akses berlaku 1 tahun sejak aktivasi.`,
         aggregateRating: { ratingValue: 4.8, ratingCount: 250, reviewCount: 110 },
-        deliveryDescription: digitalDelivery,
         shippingDetails: digitalShippingDetails,
         returnPolicy: digitalReturnPolicy,
       }),
       product(konsultasiUrl, "Buku Fisik BUMN Lengkap", hargaBukuFisikBumn, 10, {
         description: "Buku cetak sekitar 350 halaman untuk persiapan Rekrutmen Bersama BUMN, berisi Tes Kemampuan Dasar (TKD), Core Values AKHLAK, dan Bahasa Inggris BUMN.",
         aggregateRating: { ratingValue: 4.9, ratingCount: 60, reviewCount: 25 },
-        deliveryDescription: physicalDelivery,
         shippingDetails: physicalShippingDetails,
         returnPolicy: physicalReturnPolicy,
       }),

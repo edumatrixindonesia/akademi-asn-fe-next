@@ -5,12 +5,11 @@ import { tahunSeleksi } from "@/data/tahun-seleksi";
 
 export const kebijakanPengirimanDanPengembalianPath = "/kebijakan-pengiriman-dan-pengembalian";
 export const kebijakanPengirimanDanPengembalianTitle = "Kebijakan Pengiriman dan Pengembalian";
-export const kebijakanPengirimanDanPengembalianLink = { label: kebijakanPengirimanDanPengembalianTitle, href: kebijakanPengirimanDanPengembalianPath };
 
 const merchantReturnLink = `${siteUrl}${kebijakanPengirimanDanPengembalianPath}`;
 
-// Single source for delivery and return terms. Product cards, Product JSON-LD,
-// and the policy page all use these. Approved by Akademi ASN management on
+// Single source for delivery and return terms. Product JSON-LD and the policy
+// page use these. Approved by Akademi ASN management on
 // 2026-10-06; the double-payment refund, complaint timelines, and support
 // email were approved on 2026-10-08.
 // See docs/business-facts.md.
