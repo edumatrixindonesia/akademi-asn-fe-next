@@ -1,33 +1,23 @@
-# Synthetic product schema examples
+# Tryout page product structured data
 
-`sample.jsonld` is a standalone JSON-LD example for the three products on the Tryout page. It is synthetic test data, not customer evidence or an approved business policy. Product names, descriptions, and fictional authors explicitly identify the exported sample; all product and image URLs in this file use the reserved `example.test` domain.
+The three products on the Tryout page (Tryout CPNS, E-Book Modul CPNS, Paket Hemat Komplit) render ratings, reviews, delivery terms, and return terms from `data/product-details.ts` through `components/shared/product-details.tsx`. The same values feed the Product JSON-LD, so visible content and schema stay identical.
 
-The fixture generator is `tests/fixtures/tryout-product-schema.js`. Existing product data supplies product names, prices, descriptions, and image paths. Neither the fixture nor this exported file is imported by the application. The shared synthetic details now live in `data/product-demo.ts`; the Tryout page uses them at the owner's explicit request, with a visible simulation notice for every product. Actual page images keep their real site URLs.
+## History
 
-The page's three Product nodes include the sample aggregateRating and review fields. Their Offer nodes include sample shippingDetails and hasMerchantReturnPolicy. `components/shared/product-demo.tsx` renders the matching simulation notice, ratings, reviews, delivery terms, and return terms in the initial HTML. Removing the three `demoDetails` assignments from the product data removes this temporary markup and visible content together.
+Until 2026-10-08 these products carried synthetic "Pengguna Simulasi" reviews with a visible simulation notice, requested by the owner as a temporary placeholder. On 2026-10-08 they were replaced with real customer reviews. Consent is on file; the source of each review is kept in `docs/private/ulasan-sumber.md` (gitignored). The synthetic fixture (`tests/fixtures/tryout-product-schema.js`) and its exported `sample.jsonld` were removed with it.
 
-Passing structural validation does not establish compliance with Google's quality guidelines. Synthetic reviews remain synthetic even with a simulation notice. Google explicitly prohibits fake reviews in structured data; this temporary implementation should be replaced with authentic data before production SEO use. The local implementation has not been deployed.
+`aggregateRating` is computed from the reviews shown on the page, so `ratingCount` and `reviewCount` equal the number of visible reviews. It is not a full rating total.
 
-## Sample assumptions
+Delivery and return summaries come from `policySummary` in `data/kebijakan-pengembalian.ts`, and `merchantReturnLink` points to `/kebijakan-pengembalian`.
 
-- Two fictional reviews per product, with ratings 4 and 5 on a 1–5 scale. The aggregate is computed as 4.5; reviewCount and ratingCount are both 2.
-- Delivery destination: Indonesia (`ID`). Currency: Indonesian rupiah (`IDR`). Delivery fee: 0.
-- Sample digital activation delay: 0–1 day. Sample transit delay: 0 days. These fields demonstrate the OfferShippingDetails structure; they do not establish that Google supports shipping enhancements for these digital products.
-- Sample return policy: returns not permitted (`MerchantReturnNotPermitted`). This is not the actual Akademi ASN refund policy. No return window, return method, or fee is invented for a policy that prohibits returns.
-- Review publication date: 2026-10-05. These reviews have never been published as real customer reviews.
-
-## Verification and export
+## Verification
 
 ```bash
-bun test tests/tryout-product-schema-fixture.test.js
-bun -e 'import { sampleProductJsonLd } from "./tests/fixtures/tryout-product-schema"; await Bun.write(".scratch/tryout-product-schema/sample.jsonld", JSON.stringify(sampleProductJsonLd, null, 2) + "\n");'
+bun test tests/product-details.test.js
+bun test tests/tryout-html.test.js   # needs a running server
 ```
 
-The regression check verifies JSON serialization, all three product records, rating/count consistency, author and date fields, absolute reserved-domain URLs, shipping currency/destination/time fields, and return policy fields. It checks selected structural requirements; it is not Google's Rich Results Test. Reserved example URLs cannot serve actual crawlable product images.
-
-After installation, seven focused tests, lint, typecheck, and desktop/mobile browser checks pass. The updated full page HTML was submitted to Google Rich Results Test in code mode. Google remained on "Testing code" across repeated checks and did not return a result. No successful Google validation is claimed. The local implementation has not been deployed.
-
-When real data is available, provide product-specific review authors, review text, ratings, dates, full rating totals, digital delivery terms, and an approved refund policy. Publish matching visible content alongside its structured data. Search Console results remain unchanged until the implementation is deployed and Google recrawls it.
+No successful Google Rich Results Test is claimed.
 
 Sources:
 

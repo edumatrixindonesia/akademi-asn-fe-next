@@ -3,8 +3,8 @@ import { Check } from "lucide-react";
 import { siteUrl } from "@/app/shared-metadata";
 import { Button } from "@/components/ui/button";
 import { formatRupiah } from "@/lib/utils";
-import ProductDemo from "@/components/shared/product-demo";
-import type { ProductDemoData } from "@/data/product-demo";
+import ProductDetails from "@/components/shared/product-details";
+import type { ProductDetailsData } from "@/data/product-details";
 
 export type ProdukUnggulanProps = {
   title: string;
@@ -17,7 +17,7 @@ export type ProdukUnggulanProps = {
     price: number;
     ctaLabel: string;
     ctaHref: string;
-    demoDetails?: ProductDemoData;
+    details?: ProductDetailsData;
   }[];
 };
 
@@ -28,10 +28,10 @@ const ProdukUnggulan = ({ title, description, products }: ProdukUnggulanProps) =
       "@type": "Product",
       name: product.name,
       image: new URL(product.image, siteUrl).href,
-      description: [product.demoDetails?.notice, ...product.features].filter(Boolean).join(", "),
-      ...(product.demoDetails && {
-        aggregateRating: product.demoDetails.aggregateRating,
-        review: product.demoDetails.review,
+      description: product.features.join(", "),
+      ...(product.details && {
+        aggregateRating: product.details.aggregateRating,
+        review: product.details.review,
       }),
       brand: { "@type": "Brand", name: "Akademi ASN" },
       offers: {
@@ -39,9 +39,9 @@ const ProdukUnggulan = ({ title, description, products }: ProdukUnggulanProps) =
         price: product.price,
         priceCurrency: "IDR",
         availability: "https://schema.org/InStock",
-        ...(product.demoDetails && {
-          shippingDetails: product.demoDetails.shippingDetails,
-          hasMerchantReturnPolicy: product.demoDetails.hasMerchantReturnPolicy,
+        ...(product.details && {
+          shippingDetails: product.details.shippingDetails,
+          hasMerchantReturnPolicy: product.details.hasMerchantReturnPolicy,
         }),
       },
     })),
@@ -62,7 +62,7 @@ const ProdukUnggulan = ({ title, description, products }: ProdukUnggulanProps) =
         </div>
 
         <div className="mx-auto grid max-w-4xl gap-6 md:grid-cols-2">
-          {products.map(({ name, image, imageAlt, features, price, ctaLabel, ctaHref, demoDetails }) => (
+          {products.map(({ name, image, imageAlt, features, price, ctaLabel, ctaHref, details }) => (
             <article
               key={name}
               className="flex flex-col rounded-xl bg-linear-to-b from-primary to-primary-dark p-6 text-primary-foreground shadow-sm md:p-8"
@@ -105,7 +105,7 @@ const ProdukUnggulan = ({ title, description, products }: ProdukUnggulanProps) =
                   {ctaLabel}
                 </a>
               </Button>
-              <ProductDemo details={demoDetails} />
+              <ProductDetails details={details} />
             </article>
           ))}
         </div>

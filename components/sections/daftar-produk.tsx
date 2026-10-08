@@ -39,6 +39,7 @@ export type DaftarProdukProps = {
       merchantReturnDays?: number;
       returnMethod?: string;
       returnFees?: string;
+      merchantReturnLink?: string;
     };
     ctaLabel: string;
     ctaHref: string;

@@ -42,6 +42,7 @@ test("Produk page renders one h1, every product offer, sales counts, and Tips Lo
     expect(policy["@type"]).toBe("MerchantReturnPolicy");
     expect(policy.applicableCountry).toBe("ID");
     expect(html).toContain(policy.description);
+    expect(new URL(policy.merchantReturnLink).pathname).toBe("/kebijakan-pengembalian");
   }
   for (const index of [0, 2]) {
     expect(products[index].offers.shippingDetails).toEqual({

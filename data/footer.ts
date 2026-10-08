@@ -1,5 +1,9 @@
 import type { FooterProps } from "@/components/layouts/footer";
 import { callCenterPhone, officeAddress } from "@/data/contact";
+import {
+  kebijakanPengembalianPath,
+  kebijakanPengembalianTitle,
+} from "@/data/kebijakan-pengembalian";
 
 export const footerDefault = () =>
   ({
@@ -51,5 +55,8 @@ export const footerDefault = () =>
       src: "/img/section/bimbel-cpns-pppk-bumn-terbaik-akademi-asn.webp",
       alt: "Bimbel CPNS, PPPK, dan BUMN terbaik Akademi ASN",
     },
+    policies: [
+      { label: kebijakanPengembalianTitle, href: kebijakanPengembalianPath },
+    ],
     copyright: "© 2026 Akademi ASN",
   }) satisfies FooterProps;

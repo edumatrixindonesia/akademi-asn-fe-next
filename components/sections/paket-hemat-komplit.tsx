@@ -2,8 +2,8 @@ import Image from "next/image";
 import { siteUrl } from "@/app/shared-metadata";
 import { Button } from "@/components/ui/button";
 import { formatRupiah } from "@/lib/utils";
-import ProductDemo from "@/components/shared/product-demo";
-import type { ProductDemoData } from "@/data/product-demo";
+import ProductDetails from "@/components/shared/product-details";
+import type { ProductDetailsData } from "@/data/product-details";
 
 export type PaketHematKomplitProps = {
   title: string;
@@ -14,7 +14,7 @@ export type PaketHematKomplitProps = {
   imageAlt: string;
   ctaLabel: string;
   ctaHref: string;
-  demoDetails?: ProductDemoData;
+  details?: ProductDetailsData;
 };
 
 const PaketHematKomplit = ({
@@ -26,17 +26,17 @@ const PaketHematKomplit = ({
   imageAlt,
   ctaLabel,
   ctaHref,
-  demoDetails,
+  details,
 }: PaketHematKomplitProps) => {
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "Product",
     name: title,
     image: new URL(image, siteUrl).href,
-    description: [demoDetails?.notice, description].filter(Boolean).join(" "),
-    ...(demoDetails && {
-      aggregateRating: demoDetails.aggregateRating,
-      review: demoDetails.review,
+    description,
+    ...(details && {
+      aggregateRating: details.aggregateRating,
+      review: details.review,
     }),
     brand: { "@type": "Brand", name: "Akademi ASN" },
     offers: {
@@ -44,9 +44,9 @@ const PaketHematKomplit = ({
       price,
       priceCurrency: "IDR",
       availability: "https://schema.org/InStock",
-      ...(demoDetails && {
-        shippingDetails: demoDetails.shippingDetails,
-        hasMerchantReturnPolicy: demoDetails.hasMerchantReturnPolicy,
+      ...(details && {
+        shippingDetails: details.shippingDetails,
+        hasMerchantReturnPolicy: details.hasMerchantReturnPolicy,
       }),
     },
   };
@@ -91,7 +91,7 @@ const PaketHematKomplit = ({
               {ctaLabel}
             </a>
           </Button>
-          <ProductDemo details={demoDetails} />
+          <ProductDetails details={details} />
         </div>
       </div>
 

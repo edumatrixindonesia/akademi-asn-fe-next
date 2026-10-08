@@ -57,6 +57,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     ]),
     { url: `${siteUrl}/tryout-bimbel-cpns-pppk-bumn-terbaik` },
     { url: `${siteUrl}/produk-bimbel-cpns-pppk-bumn-terbaik` },
+    { url: `${siteUrl}/kebijakan-pengembalian` },
     ...blogUrls(),
   ];
 }

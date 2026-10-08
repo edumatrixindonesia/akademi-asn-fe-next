@@ -46,3 +46,6 @@ graphify-out
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# private review sources (contact data, never published)
+/docs/private/

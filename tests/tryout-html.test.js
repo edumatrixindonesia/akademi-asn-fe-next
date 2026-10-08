@@ -1,5 +1,11 @@
 import { expect, test } from "bun:test";
-import { productDemo } from "../data/product-demo";
+import { produkUnggulan } from "../data/produk-unggulan";
+import { paketHematKomplit } from "../data/paket-hemat-komplit";
+
+const expectedDetails = [
+  ...produkUnggulan(() => "").products.map((product) => product.details),
+  paketHematKomplit(() => "").details,
+];
 
 const baseUrl = (process.env.TEST_BASE_URL ?? "http://localhost:3000/").replace(/\/+$/, "");
 
@@ -30,7 +36,7 @@ test("Tryout page renders one h1, product offers, and per-topic Konsultasi links
     ["Paket Hemat Komplit", 70000],
   ]);
   const siteUrl = new URL(html.match(/<link rel="canonical" href="([^"]+)"/)[1]);
-  expect([...html.matchAll(/data-product-demo="true"/g)]).toHaveLength(3);
+  expect([...html.matchAll(/data-product-details="true"/g)]).toHaveLength(3);
   for (const [index, product] of products.entries()) {
     const imageUrl = new URL(product.image);
     expect(imageUrl.origin).toBe(siteUrl.origin);
@@ -42,13 +48,12 @@ test("Tryout page renders one h1, product offers, and per-topic Konsultasi links
     expect(product.offers["@type"]).toBe("Offer");
     expect(product.offers.priceCurrency).toBe("IDR");
     expect(product.offers.availability).toBe("https://schema.org/InStock");
-    const details = productDemo(product.name, index + 1);
+    const details = expectedDetails[index];
     expect(product.aggregateRating).toEqual(details.aggregateRating);
     expect(product.review).toEqual(details.review);
     expect(product.offers.shippingDetails).toEqual(details.shippingDetails);
     expect(product.offers.hasMerchantReturnPolicy).toEqual(details.hasMerchantReturnPolicy);
-    expect(product.description).toContain(details.notice);
-    expect(html).toContain(details.notice);
+    expect(html).toContain(`href="${details.policyLink.href}"`);
     for (const review of product.review) {
       expect(html).toContain(review.author.name);
       expect(html).toContain(review.reviewBody);

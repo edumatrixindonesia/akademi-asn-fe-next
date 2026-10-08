@@ -1,6 +1,10 @@
 import type { ProdukUnggulanProps } from "@/components/sections/produk-unggulan";
 import { tahunSeleksi } from "@/data/tahun-seleksi";
-import { productDemo } from "@/data/product-demo";
+import {
+  productDetails,
+  reviewsEbookModulCpns,
+  reviewsTryoutCpns,
+} from "@/data/product-details";
 
 export const hargaTryoutCpns = 30_000;
 export const hargaEbookModulCpns = 50_000;
@@ -12,7 +16,7 @@ export const produkUnggulan = (konsultasiUrl: (topic: string) => string) =>
     products: [
       {
         name: "Tryout CPNS",
-        demoDetails: productDemo("Tryout CPNS", 1),
+        details: productDetails(reviewsTryoutCpns),
         image: "/img/section/Paket Tryout Bimbel Les Privat CPNS & PPPK BUMN Terbaik di Indonesia.webp",
         imageAlt: "Ilustrasi peserta Akademi ASN berlatih tryout CPNS melalui laptop",
         features: [
@@ -28,7 +32,7 @@ export const produkUnggulan = (konsultasiUrl: (topic: string) => string) =>
       },
       {
         name: "E-Book Modul CPNS",
-        demoDetails: productDemo("E-Book Modul CPNS", 2),
+        details: productDetails(reviewsEbookModulCpns),
         image: "/img/section/produk-modul-lolos-cpns-pppk-bumn.webp",
         imageAlt: "Sampul modul panduan SKD CPNS dan PPPK Akademi ASN",
         features: [

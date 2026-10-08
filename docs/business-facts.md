@@ -36,4 +36,19 @@ Physical shipping uses JNE REG, J&T Reguler, or SiCepat REG. Handling takes 1–
 
 Digital products cannot be returned or refunded after access. Physical returns are limited to wrong items, missing pages, or printing defects reported within three days of courier-confirmed receipt, with an uninterrupted unboxing video. Akademi ASN covers confirmed defect or wrong-item return and replacement shipping, with no administration fee. Whether physical returns allow cash refunds or only replacement remains to be clarified.
 
-Individual review author names are not yet available, so no individual Review schema is published. The example support phone number in the supplied text is not added as an official support number; existing consultation links remain the contact route.
+Individual review author names for these four catalog products are not yet available, so no individual Review schema is published for them. The example support phone number in the supplied text is not added as an official support number; existing consultation links remain the contact route.
+
+## Tryout page reviews: 2026-10-08
+
+The three products on the Tryout page (Tryout CPNS, E-Book Modul CPNS, Paket Hemat Komplit) publish real customer reviews with initials as author names. Consent is on file; sources are kept in `docs/private/ulasan-sumber.md` (gitignored). Source: `data/product-details.ts`. These products are separate from the four catalog products above, whose individual reviews remain unpublished.
+
+## Shipping and refund policy approval: 2026-10-08
+
+The owner approved one site-wide policy page at `/kebijakan-pengembalian`, covering all digital products and printed books. Source: `data/kebijakan-pengembalian.ts`; product cards, Product JSON-LD (`merchantReturnLink`), and the policy page all read from it.
+
+- Digital products are not returned or refunded after access. Access problems are fixed within 1×24 jam, not refunded.
+- A double payment for the same order is refunded after admin verification. This is not a product return, so digital offers keep `MerchantReturnNotPermitted`.
+- Printed-book returns and shipping keep the 2026-10-06 terms above.
+- Complaints go through the admin WhatsApp consultation link and the Nomor Call Center. No support email is published until an official inbox is confirmed.
+- No complaint window, review time, or refund processing time is published until management approves specific figures.
+- The Tryout page `aggregateRating` is computed from the visible reviews, because no full rating totals exist for those three products.
