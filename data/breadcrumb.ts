@@ -2,9 +2,9 @@ import type { BreadcrumbProps } from "@/components/sections/breadcrumb";
 import { regionLink, type ResolvedLocation } from "@/lib/location-tree";
 import { kategoriPath, penulisPath } from "@/lib/blog-path";
 import {
-  kebijakanPengembalianPath,
-  kebijakanPengembalianTitle,
-} from "@/data/kebijakan-pengembalian";
+  kebijakanPengirimanDanPengembalianPath,
+  kebijakanPengirimanDanPengembalianTitle,
+} from "@/data/kebijakan-pengiriman-dan-pengembalian";
 
 const beranda = { name: "Beranda", href: "/" };
 
@@ -30,21 +30,21 @@ export const breadcrumbBumn = {
 export const breadcrumbTryout = {
   items: [
     beranda,
-    { name: "Tryout", href: "/tryout-bimbel-cpns-pppk-bumn-terbaik" },
+    { name: "Tryout", href: "/tryout" },
   ],
 } satisfies BreadcrumbProps;
 
 export const breadcrumbProduk = {
   items: [
     beranda,
-    { name: "Produk", href: "/produk-bimbel-cpns-pppk-bumn-terbaik" },
+    { name: "Produk", href: "/produk" },
   ],
 } satisfies BreadcrumbProps;
 
-export const breadcrumbKebijakanPengembalian = {
+export const breadcrumbKebijakanPengirimanDanPengembalian = {
   items: [
     beranda,
-    { name: kebijakanPengembalianTitle, href: kebijakanPengembalianPath },
+    { name: kebijakanPengirimanDanPengembalianTitle, href: kebijakanPengirimanDanPengembalianPath },
   ],
 } satisfies BreadcrumbProps;
 

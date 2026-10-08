@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 
-export type KebijakanPengembalianProps = {
+export type KebijakanPengirimanDanPengembalianProps = {
   title: string;
   description: string;
   sections: {
@@ -11,17 +11,17 @@ export type KebijakanPengembalianProps = {
   }[];
 };
 
-const KebijakanPengembalian = ({
+const KebijakanPengirimanDanPengembalian = ({
   title,
   description,
   sections,
-}: KebijakanPengembalianProps) => (
+}: KebijakanPengirimanDanPengembalianProps) => (
   <section
-    aria-labelledby="kebijakan-pengembalian-title"
+    aria-labelledby="kebijakan-pengiriman-dan-pengembalian-title"
     className="container-section max-w-3xl pb-16"
   >
     <h1
-      id="kebijakan-pengembalian-title"
+      id="kebijakan-pengiriman-dan-pengembalian-title"
       className="text-3xl font-bold text-primary-dark md:text-4xl"
     >
       {title}
@@ -61,4 +61,4 @@ const KebijakanPengembalian = ({
   </section>
 );
 
-export default KebijakanPengembalian;
+export default KebijakanPengirimanDanPengembalian;

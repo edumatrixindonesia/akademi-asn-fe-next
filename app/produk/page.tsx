@@ -5,7 +5,7 @@ import { tahunSeleksi } from "@/data/tahun-seleksi";
 import { formatRupiah } from "@/lib/utils";
 import { openGraphBase } from "../shared-metadata";
 
-const path = "/produk-bimbel-cpns-pppk-bumn-terbaik";
+const path = "/produk";
 
 export const metadata: Metadata = {
   title: {

@@ -1,8 +1,8 @@
 import {
   digitalDelivery,
   digitalReturnPolicy,
-  kebijakanPengembalianLink,
-} from "@/data/kebijakan-pengembalian";
+  kebijakanPengirimanDanPengembalianLink,
+} from "@/data/kebijakan-pengiriman-dan-pengembalian";
 
 // Real customer reviews. Consent is on file; the source of each review is kept
 // in docs/private/ulasan-sumber.md (gitignored, not published).
@@ -125,7 +125,7 @@ export const productDetails = (reviews: ProductReviewInput[]) => {
   return {
     deliveryDescription: digitalDelivery,
     returnDescription: digitalReturnPolicy.description,
-    policyLink: kebijakanPengembalianLink,
+    policyLink: kebijakanPengirimanDanPengembalianLink,
     aggregateRating: {
       "@type": "AggregateRating",
       ratingValue: Math.round(average * 10) / 10,

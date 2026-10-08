@@ -55,9 +55,9 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       { url: `${siteUrl}${family}` },
       ...locationPaths.map((path) => ({ url: `${siteUrl}${family}${path}` })),
     ]),
-    { url: `${siteUrl}/tryout-bimbel-cpns-pppk-bumn-terbaik` },
-    { url: `${siteUrl}/produk-bimbel-cpns-pppk-bumn-terbaik` },
-    { url: `${siteUrl}/kebijakan-pengembalian` },
+    { url: `${siteUrl}/tryout` },
+    { url: `${siteUrl}/produk` },
+    { url: `${siteUrl}/kebijakan-pengiriman-dan-pengembalian` },
     ...blogUrls(),
   ];
 }

@@ -3,13 +3,13 @@ import { expect, test } from "bun:test";
 const baseUrl = (process.env.TEST_BASE_URL ?? "http://localhost:3000/").replace(/\/+$/, "");
 
 test("Produk page renders one h1, every product offer, sales counts, and Tips Lolos", async () => {
-  const response = await fetch(`${baseUrl}/produk-bimbel-cpns-pppk-bumn-terbaik`);
+  const response = await fetch(`${baseUrl}/produk`);
   expect(response.ok).toBe(true);
 
   const html = await response.text();
   expect([...html.matchAll(/<h1\b/g)]).toHaveLength(1);
   expect(html).toMatch(/<h1\b[^>]*>Modul Buku &amp; Tryout CPNS PPPK BUMN \d{4}<\/h1>/);
-  expect(html).toMatch(/<link rel="canonical" href="[^"]+\/produk-bimbel-cpns-pppk-bumn-terbaik"/);
+  expect(html).toMatch(/<link rel="canonical" href="[^"]+\/produk"/);
   expect(html).not.toContain(`id="jangkauan"`);
   expect(html).toContain(`href="#daftar-produk"`);
   expect(html).toContain("Ikuti Bimbingan Belajar di Akademi ASN");
@@ -42,10 +42,10 @@ test("Produk page renders one h1, every product offer, sales counts, and Tips Lo
     expect(policy["@type"]).toBe("MerchantReturnPolicy");
     expect(policy.applicableCountry).toBe("ID");
     expect(html).toContain(policy.description);
-    expect(new URL(policy.merchantReturnLink).pathname).toBe("/kebijakan-pengembalian");
+    expect(new URL(policy.merchantReturnLink).pathname).toBe("/kebijakan-pengiriman-dan-pengembalian");
   }
   // One visible policy link per catalog card, plus the footer link.
-  expect(html.match(/<a[^>]*href="\/kebijakan-pengembalian"/g)).toHaveLength(products.length + 1);
+  expect(html.match(/<a[^>]*href="\/kebijakan-pengiriman-dan-pengembalian"/g)).toHaveLength(products.length + 1);
   for (const index of [0, 2]) {
     expect(products[index].offers.shippingDetails).toEqual({
       "@type": "OfferShippingDetails",

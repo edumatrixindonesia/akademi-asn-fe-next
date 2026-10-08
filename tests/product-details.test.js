@@ -1,7 +1,7 @@
 import { expect, test } from "bun:test";
 import { produkUnggulan } from "../data/produk-unggulan";
 import { paketHematKomplit } from "../data/paket-hemat-komplit";
-import { kebijakanPengembalianPath } from "../data/kebijakan-pengembalian";
+import { kebijakanPengirimanDanPengembalianPath } from "../data/kebijakan-pengiriman-dan-pengembalian";
 
 const products = [
   ...produkUnggulan(() => "").products,
@@ -38,7 +38,7 @@ test("Product details have coherent ratings, reviews, shipping, and return polic
     const returns = details.hasMerchantReturnPolicy;
     expect(returns.applicableCountry).toBe("ID");
     expect(returns.returnPolicyCategory).toBe("https://schema.org/MerchantReturnNotPermitted");
-    expect(new URL(returns.merchantReturnLink).pathname).toBe(kebijakanPengembalianPath);
-    expect(details.policyLink.href).toBe(kebijakanPengembalianPath);
+    expect(new URL(returns.merchantReturnLink).pathname).toBe(kebijakanPengirimanDanPengembalianPath);
+    expect(details.policyLink.href).toBe(kebijakanPengirimanDanPengembalianPath);
   }
 });

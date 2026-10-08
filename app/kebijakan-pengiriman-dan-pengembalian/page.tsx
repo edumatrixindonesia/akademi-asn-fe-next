@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
-import KebijakanPengembalianPage from "@/components/pages/kebijakan-pengembalian";
-import { kebijakanPengembalianPath as path, kebijakanPengembalianTitle } from "@/data/kebijakan-pengembalian";
+import KebijakanPengirimanDanPengembalianPage from "@/components/pages/kebijakan-pengiriman-dan-pengembalian";
+import { kebijakanPengirimanDanPengembalianPath as path, kebijakanPengirimanDanPengembalianTitle } from "@/data/kebijakan-pengiriman-dan-pengembalian";
 import { openGraphBase } from "../shared-metadata";
 
 export const metadata: Metadata = {
   title: {
-    absolute: `${kebijakanPengembalianTitle} | Akademi ASN`,
+    absolute: `${kebijakanPengirimanDanPengembalianTitle} | Akademi ASN`,
   },
   description:
     "Kebijakan pengiriman dan pengembalian Akademi ASN untuk produk digital dan buku cetak: waktu akses, ongkir, syarat retur dan pengembalian dana, serta prosedur komplain.",
@@ -14,5 +14,5 @@ export const metadata: Metadata = {
 };
 
 export default function Page() {
-  return <KebijakanPengembalianPage />;
+  return <KebijakanPengirimanDanPengembalianPage />;
 }

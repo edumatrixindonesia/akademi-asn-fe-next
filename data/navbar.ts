@@ -6,8 +6,8 @@ export const navbarDefault = (konsultasiUrl: string) =>
     links: [
       { label: "Paket", href: "#paket-program" },
       { label: "Testimoni", href: "#testimoni" },
-      { label: "Tryout", href: "/tryout-bimbel-cpns-pppk-bumn-terbaik" },
-      { label: "Produk", href: "/produk-bimbel-cpns-pppk-bumn-terbaik" },
+      { label: "Tryout", href: "/tryout" },
+      { label: "Produk", href: "/produk" },
       { label: "Blog", href: "/blog" },
     ],
     cta: {

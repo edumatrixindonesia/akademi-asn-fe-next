@@ -1,13 +1,13 @@
-import type { KebijakanPengembalianProps } from "@/components/sections/kebijakan-pengembalian";
+import type { KebijakanPengirimanDanPengembalianProps } from "@/components/sections/kebijakan-pengiriman-dan-pengembalian";
 import { siteUrl } from "@/app/shared-metadata";
 import { callCenterPhone, officeHoursText, supportEmail } from "@/data/contact";
 import { tahunSeleksi } from "@/data/tahun-seleksi";
 
-export const kebijakanPengembalianPath = "/kebijakan-pengembalian";
-export const kebijakanPengembalianTitle = "Kebijakan Pengiriman dan Pengembalian";
-export const kebijakanPengembalianLink = { label: kebijakanPengembalianTitle, href: kebijakanPengembalianPath };
+export const kebijakanPengirimanDanPengembalianPath = "/kebijakan-pengiriman-dan-pengembalian";
+export const kebijakanPengirimanDanPengembalianTitle = "Kebijakan Pengiriman dan Pengembalian";
+export const kebijakanPengirimanDanPengembalianLink = { label: kebijakanPengirimanDanPengembalianTitle, href: kebijakanPengirimanDanPengembalianPath };
 
-const merchantReturnLink = `${siteUrl}${kebijakanPengembalianPath}`;
+const merchantReturnLink = `${siteUrl}${kebijakanPengirimanDanPengembalianPath}`;
 
 // Single source for delivery and return terms. Product cards, Product JSON-LD,
 // and the policy page all use these. Approved by Akademi ASN management on
@@ -33,9 +33,9 @@ export const physicalReturnPolicy = {
   description: "Berlaku di Indonesia. Retur hanya untuk salah kirim, halaman hilang, atau cacat cetak. Ajukan maksimal 3 hari sejak status resi diterima, dengan video unboxing tanpa putus dari paket tersegel hingga cacat terlihat. Hubungi admin melalui WhatsApp dengan nama, nomor invoice, keluhan, dan video. Ongkos retur dan kirim ulang ditanggung Akademi ASN jika cacat atau salah kirim terbukti, tanpa biaya administrasi atau potongan.",
 };
 
-export const kebijakanPengembalian = (konsultasiUrl: (topic: string) => string) =>
+export const kebijakanPengirimanDanPengembalian = (konsultasiUrl: (topic: string) => string) =>
   ({
-    title: kebijakanPengembalianTitle,
+    title: kebijakanPengirimanDanPengembalianTitle,
     description:
       "Kebijakan ini berlaku untuk seluruh produk Akademi ASN, baik produk digital maupun buku cetak.",
     sections: [
@@ -71,8 +71,8 @@ export const kebijakanPengembalian = (konsultasiUrl: (topic: string) => string) 
         ],
         link: {
           label: "Hubungi Admin via WhatsApp",
-          href: konsultasiUrl(kebijakanPengembalianTitle),
+          href: konsultasiUrl(kebijakanPengirimanDanPengembalianTitle),
         },
       },
     ],
-  }) satisfies KebijakanPengembalianProps;
+  }) satisfies KebijakanPengirimanDanPengembalianProps;

@@ -10,13 +10,13 @@ const expectedDetails = [
 const baseUrl = (process.env.TEST_BASE_URL ?? "http://localhost:3000/").replace(/\/+$/, "");
 
 test("Tryout page renders one h1, product offers, and per-topic Konsultasi links", async () => {
-  const response = await fetch(`${baseUrl}/tryout-bimbel-cpns-pppk-bumn-terbaik`);
+  const response = await fetch(`${baseUrl}/tryout`);
   expect(response.ok).toBe(true);
 
   const html = await response.text();
   expect([...html.matchAll(/<h1\b/g)]).toHaveLength(1);
   expect(html).toMatch(/<h1\b[^>]*>Tryout CPNS PPPK BUMN \d{4} Simulasi CAT Online<\/h1>/);
-  expect(html).toMatch(/<link rel="canonical" href="[^"]+\/tryout-bimbel-cpns-pppk-bumn-terbaik"/);
+  expect(html).toMatch(/<link rel="canonical" href="[^"]+\/tryout"/);
   expect(html).not.toContain(`id="jangkauan"`);
   expect([...html.matchAll(/<section aria-labelledby="(pahami-tahapan-seleksi[^"]+)"/g)].map((match) => match[1]))
     .toEqual([

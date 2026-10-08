@@ -5,7 +5,7 @@ Business numbers shown on the site. Code cannot verify that they stay true, so e
 | Fact | Value | Appears in | Source | Approved | Owner |
 | --- | --- | --- | --- | --- | --- |
 | Alumni count | 15.000+ alumni | `data/jumbotron.ts` | Akademi ASN | 2026-10-05 | Dimas Maulana |
-| Tryout questions | 500+ soal | `data/produk-unggulan.ts`, `data/faq.ts`, `app/tryout-bimbel-cpns-pppk-bumn-terbaik/page.tsx` | Akademi ASN | 2026-10-05 | Dimas Maulana |
+| Tryout questions | 500+ soal | `data/produk-unggulan.ts`, `data/faq.ts`, `app/tryout/page.tsx` | Akademi ASN | 2026-10-05 | Dimas Maulana |
 | E-Book pages | 300+ halaman | `data/produk-unggulan.ts`, `data/faq.ts` | Akademi ASN | 2026-10-05 | Dimas Maulana |
 | Sold: E-Modul Lolos CPNS & PPPK | 167 | `data/daftar-produk.ts` | Akademi ASN | 2026-10-05 | Dimas Maulana |
 | Sold: Modul Lolos CPNS & PPPK | 50 | `data/daftar-produk.ts` | Akademi ASN | 2026-10-05 | Dimas Maulana |
@@ -44,7 +44,7 @@ The three products on the Tryout page (Tryout CPNS, E-Book Modul CPNS, Paket Hem
 
 ## Shipping and refund policy approval: 2026-10-08
 
-The owner approved one site-wide policy page at `/kebijakan-pengembalian`, covering all digital products and printed books. Source: `data/kebijakan-pengembalian.ts`; product cards, Product JSON-LD (`merchantReturnLink`), and the policy page all read from it.
+The owner approved one site-wide policy page at `/kebijakan-pengiriman-dan-pengembalian`, covering all digital products and printed books. Source: `data/kebijakan-pengiriman-dan-pengembalian.ts`; product cards, Product JSON-LD (`merchantReturnLink`), and the policy page all read from it.
 
 - Digital products are not returned or refunded after access. Access problems are fixed within 1×24 jam, not refunded.
 - A double payment for the same order is refunded after admin verification. This is not a product return, so digital offers keep `MerchantReturnNotPermitted`.

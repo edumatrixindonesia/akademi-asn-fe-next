@@ -1,6 +1,6 @@
 # Product catalog structured data
 
-The reported optional warnings concern the four products on `/produk-bimbel-cpns-pppk-bumn-terbaik`.
+The reported optional warnings concern the four products on `/produk`.
 
 ## Implemented
 
@@ -8,7 +8,7 @@ Each product has a unique description, sourced from `data/daftar-produk.ts` and 
 
 On 2026-10-06, the owner supplied management-approved product details, aggregate ratings, and delivery and return terms. All four Product nodes now include AggregateRating with separate rating and written-review counts. All four offers include MerchantReturnPolicy: digital returns are not permitted after access; physical returns have a three-day window for confirmed defects or wrong items, by mail, without return shipping fees. Policy descriptions preserve these conditions. No cash refund or exchange type is inferred for physical products because the supplied wording is ambiguous.
 
-On 2026-10-08 the delivery and return terms moved to `data/kebijakan-pengembalian.ts`, shared with the site-wide `/kebijakan-pengembalian` page. Every offer's `merchantReturnLink` points to that page, and each card links to it inside its details element.
+On 2026-10-08 the delivery and return terms moved to `data/kebijakan-pengiriman-dan-pengembalian.ts`, shared with the site-wide `/kebijakan-pengiriman-dan-pengembalian` page. Every offer's `merchantReturnLink` points to that page, and each card links to it inside its details element.
 
 Aggregate figures and matching policy descriptions appear in the initial HTML. Native details elements keep delivery and return terms accessible without client JavaScript.
 
