@@ -49,6 +49,7 @@ The owner approved one site-wide policy page at `/kebijakan-pengembalian`, cover
 - Digital products are not returned or refunded after access. Access problems are fixed within 1×24 jam, not refunded.
 - A double payment for the same order is refunded after admin verification. This is not a product return, so digital offers keep `MerchantReturnNotPermitted`.
 - Printed-book returns and shipping keep the 2026-10-06 terms above.
-- Complaints go through the admin WhatsApp consultation link and the Nomor Call Center. No support email is published until an official inbox is confirmed.
-- No complaint window, review time, or refund processing time is published until management approves specific figures.
+- Complaints go through the admin WhatsApp consultation link, the Nomor Call Center, and the official support email `edumatrix.id@gmail.com` (`supportEmail` in `data/contact.ts`).
+- Complaint window for digital products: 2×24 jam after access is sent. Printed books keep the 3-day window from courier-confirmed receipt.
+- Refund and return claims are reviewed within 2 working days. An approved double-payment refund is paid within 3–7 working days.
 - The Tryout page `aggregateRating` is computed from the visible reviews, because no full rating totals exist for those three products.

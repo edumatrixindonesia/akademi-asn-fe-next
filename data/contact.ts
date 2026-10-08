@@ -12,6 +12,9 @@ export const callCenterPhone = {
   display: "0812-1552-3902",
 };
 
+// Official support inbox, approved by management on 2026-10-08.
+export const supportEmail = "edumatrix.id@gmail.com";
+
 // The Akademi ASN office, where Kelas Offline is held. Keep it identical
 // everywhere it appears (NAP consistency for local search).
 export const officeAddress =

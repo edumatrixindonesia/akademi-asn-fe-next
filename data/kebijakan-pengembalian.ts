@@ -1,6 +1,6 @@
 import type { KebijakanPengembalianProps } from "@/components/sections/kebijakan-pengembalian";
 import { siteUrl } from "@/app/shared-metadata";
-import { callCenterPhone, officeHoursText } from "@/data/contact";
+import { callCenterPhone, officeHoursText, supportEmail } from "@/data/contact";
 import { tahunSeleksi } from "@/data/tahun-seleksi";
 
 export const kebijakanPengembalianPath = "/kebijakan-pengembalian";
@@ -10,7 +10,8 @@ const merchantReturnLink = `${siteUrl}${kebijakanPengembalianPath}`;
 
 // Single source for delivery and return terms. Product cards, Product JSON-LD,
 // and the policy page all use these. Approved by Akademi ASN management on
-// 2026-10-06; the double-payment refund was approved on 2026-10-08.
+// 2026-10-06; the double-payment refund, complaint timelines, and support
+// email were approved on 2026-10-08.
 // See docs/business-facts.md.
 export const digitalDelivery = "Akses digital tersedia di seluruh Indonesia dan dunia melalui email dan member area/dashboard website Akademi ASN, dengan konfirmasi melalui WhatsApp dan email. Biaya pengiriman Rp0 tanpa minimum pembelian dan tanpa kurir atau waktu transit. Aktivasi otomatis setelah pembayaran terverifikasi; transfer manual maksimal 1×24 jam. Tanpa biaya aktivasi. Jika akses atau file bermasalah, hubungi admin melalui WhatsApp dengan ID Pesanan. Perbaikan akses maksimal 1×24 jam.";
 export const physicalDelivery = "Pengiriman ke seluruh Indonesia melalui JNE REG, J&T Reguler, atau SiCepat REG. Untuk pesanan hingga 1 kg (perkiraan 1–2 buku), ongkir yang dibayar pelanggan maksimal Rp40.000 tanpa pengecualian wilayah; Akademi ASN menanggung biaya di atas batas tersebut. Pemesanan dan konfirmasi ongkir dilakukan melalui WhatsApp admin. Batas Rp40.000 tidak berlaku untuk pesanan di atas 1 kg; konfirmasikan ongkir kepada admin sebelum pembayaran. Pesanan diproses 1–2 hari kerja setelah konfirmasi pembayaran; perjalanan kurir 2–7 hari kerja. Hari kerja Senin–Jumat, tidak termasuk libur nasional. Subsidi ongkir hingga Rp20.000 untuk pembelian minimal Rp200.000 tetap berlaku; biaya pelanggan untuk pesanan hingga 1 kg tidak melebihi Rp40.000.";
@@ -19,7 +20,7 @@ export const digitalReturnPolicy = {
   applicableCountry: "ID",
   returnPolicyCategory: "https://schema.org/MerchantReturnNotPermitted",
   merchantReturnLink,
-  description: "Berlaku di Indonesia. Produk digital tidak dapat diretur atau diuangkan kembali setelah diakses. Kendala akses ditangani melalui perbaikan atau pemulihan akses maksimal 1×24 jam, bukan pengembalian uang tunai. Pembayaran ganda untuk pesanan yang sama dikembalikan setelah diverifikasi admin.",
+  description: "Berlaku di Indonesia. Produk digital tidak dapat diretur atau diuangkan kembali setelah diakses. Kendala akses ditangani melalui perbaikan atau pemulihan akses maksimal 1×24 jam, bukan pengembalian uang tunai. Pembayaran ganda untuk pesanan yang sama dikembalikan dalam 3–7 hari kerja setelah klaim disetujui.",
 };
 export const physicalReturnPolicy = {
   applicableCountry: "ID",
@@ -53,15 +54,17 @@ export const kebijakanPengembalian = (konsultasiUrl: (topic: string) => string) 
         heading: "Prosedur Komplain",
         paragraphs: ["Ikuti langkah berikut jika Anda mengalami kendala:"],
         items: [
-          "Hubungi admin melalui WhatsApp.",
+          "Hubungi admin melalui WhatsApp atau email. Untuk produk digital, ajukan paling lambat 2×24 jam setelah akses dikirim. Untuk buku cetak, ajukan maksimal 3 hari sejak status resi diterima.",
           "Sertakan ID Pesanan atau nomor invoice, bukti pembayaran, dan keterangan kendala. Untuk buku cetak, sertakan juga video unboxing.",
           "Kendala akses produk digital diperbaiki maksimal 1×24 jam.",
-          "Pembayaran ganda dikembalikan setelah diverifikasi admin.",
+          "Tim kami meninjau klaim pengembalian dana atau retur dalam 2 hari kerja.",
+          "Jika klaim pembayaran ganda disetujui, dana dikembalikan dalam 3–7 hari kerja.",
         ],
       },
       {
         heading: "Hubungi Kami",
         paragraphs: [
+          `Email: ${supportEmail}`,
           `Nomor Call Center: ${callCenterPhone.display}`,
           `Jam operasional: ${officeHoursText}`,
         ],
