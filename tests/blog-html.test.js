@@ -149,9 +149,9 @@ test("Artikel update date reaches page metadata, JSON-LD, and sitemap", async ()
   );
 });
 
-test("navbar and footer link to /blog", async () => {
+test("navbar links to /blog; the footer has no Blog section", async () => {
   const html = await (await fetch(`${baseUrl}/`)).text();
   expect(html).toMatch(/<a[^>]*href="\/blog"[^>]*>Blog<\/a>/);
   const footer = html.slice(html.indexOf("<footer"));
-  expect(footer).toMatch(/<h2[^>]*>BLOG<\/h2>\s*<a[^>]*href="\/blog"/);
+  expect(footer).not.toMatch(/<h2[^>]*>BLOG<\/h2>/);
 });
