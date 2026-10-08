@@ -49,7 +49,7 @@ const PaketHematKomplit = ({
 
   return (
     <section aria-labelledby="paket-hemat-komplit-title" className="px-4 pb-12 md:px-8 lg:px-12">
-      <div className="mx-auto grid max-w-5xl items-center overflow-hidden rounded-2xl bg-primary-dark text-primary-foreground md:grid-cols-[2fr_3fr]">
+      <div className="mx-auto grid max-w-5xl items-center overflow-hidden rounded-2xl bg-linear-to-r from-primary to-primary-dark text-primary-foreground md:grid-cols-[2fr_3fr]">
         <Image
           src={image}
           alt={imageAlt}
