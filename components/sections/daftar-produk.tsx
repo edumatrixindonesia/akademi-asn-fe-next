@@ -58,7 +58,7 @@ const DaftarProduk = ({ title, products }: DaftarProdukProps) => {
           </h2>
 
           <div className="grid gap-4 sm:grid-cols-2 md:gap-6 lg:grid-cols-4">
-            {products.map(({ name, description, image, imageAlt, price, sold, aggregateRating, ctaLabel, ctaHref }) => (
+            {products.map(({ name, image, imageAlt, price, sold, aggregateRating, ctaLabel, ctaHref }) => (
               <article
                 key={name}
                 className="flex flex-col overflow-hidden rounded-xl bg-background shadow-sm"
@@ -74,9 +74,9 @@ const DaftarProduk = ({ title, products }: DaftarProdukProps) => {
 
                 <div className="flex flex-1 flex-col p-4">
                   <h3 className="font-semibold text-foreground">{name}</h3>
-                  <p className="mt-2 text-sm text-muted-foreground">{description}</p>
-                  <p className="mt-2 text-sm text-muted-foreground">
-                    {`${aggregateRating.ratingValue.toLocaleString("id-ID")} / 5 (${aggregateRating.ratingCount.toLocaleString("id-ID")} rating, ${aggregateRating.reviewCount.toLocaleString("id-ID")} ulasan tertulis)`}
+                  <p className="mt-2 text-sm font-semibold text-foreground">
+                    <span aria-hidden className="text-yellow-400">★</span>
+                    {` ${aggregateRating.ratingValue.toLocaleString("id-ID")} / 5 · ${aggregateRating.ratingCount.toLocaleString("id-ID")} rating`}
                   </p>
 
                   <p className="mt-auto pt-4 text-lg font-bold text-cta">

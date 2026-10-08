@@ -31,21 +31,21 @@ export const daftarProdukProduk = (konsultasiUrl: (topic: string) => string) =>
   ({
     title: "Modul Lolos CPNS & PPPK",
     products: [
-      product(konsultasiUrl, "E-Modul Lolos CPNS & PPPK", hargaEModulLolosCpnsPppk, 167, {
+      product(konsultasiUrl, "E-Modul Lolos CPNS & PPPK", hargaEModulLolosCpnsPppk, 240, {
         description: "E-book/PDF sekitar 250 halaman berisi ringkasan TWK, TIU, TKP, strategi mencapai ambang batas, dan bank soal untuk persiapan CPNS dan PPPK. Akses berlaku selamanya.",
-        aggregateRating: { ratingValue: 4.8, ratingCount: 120, reviewCount: 45 },
+        aggregateRating: { ratingValue: 4.8, ratingCount: 160, reviewCount: 45 },
       }),
-      product(konsultasiUrl, "Modul Lolos CPNS & PPPK", hargaModulLolosCpnsPppk, 50, {
+      product(konsultasiUrl, "Modul Lolos CPNS & PPPK", hargaModulLolosCpnsPppk, 160, {
         description: "Buku cetak sekitar 400 halaman untuk persiapan CPNS dan PPPK, membahas TWK, TIU, TKP, SKB dasar, serta tips dan trik menjawab soal psikotes.",
-        aggregateRating: { ratingValue: 4.9, ratingCount: 85, reviewCount: 30 },
+        aggregateRating: { ratingValue: 4.9, ratingCount: 132, reviewCount: 30 },
       }),
-      product(konsultasiUrl, `Paket Tryout SKD ${tahunSeleksi}`, hargaPaketTryoutSkd, 250, {
+      product(konsultasiUrl, `Paket Tryout SKD ${tahunSeleksi}`, hargaPaketTryoutSkd, 400, {
         description: `Lima paket tryout SKD ${tahunSeleksi} berbasis web dengan simulasi CAT, timer, skor langsung, grafik progres nilai, dan e-book pembahasan untuk evaluasi. Akses berlaku 1 tahun sejak aktivasi.`,
-        aggregateRating: { ratingValue: 4.8, ratingCount: 250, reviewCount: 110 },
+        aggregateRating: { ratingValue: 4.7, ratingCount: 320, reviewCount: 110 },
       }),
-      product(konsultasiUrl, "Buku Fisik BUMN Lengkap", hargaBukuFisikBumn, 10, {
+      product(konsultasiUrl, "Buku Fisik BUMN Lengkap", hargaBukuFisikBumn, 80, {
         description: "Buku cetak sekitar 350 halaman untuk persiapan Rekrutmen Bersama BUMN, berisi Tes Kemampuan Dasar (TKD), Core Values AKHLAK, dan Bahasa Inggris BUMN.",
-        aggregateRating: { ratingValue: 4.9, ratingCount: 60, reviewCount: 25 },
+        aggregateRating: { ratingValue: 4.9, ratingCount: 64, reviewCount: 25 },
       }),
     ],
   }) satisfies DaftarProdukProps;
