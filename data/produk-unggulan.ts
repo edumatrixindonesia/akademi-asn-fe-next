@@ -17,8 +17,10 @@ export const produkUnggulan = (konsultasiUrl: (topic: string) => string) =>
       {
         name: "Tryout CPNS",
         details: productDetails(reviewsTryoutCpns),
-        image: "/img/section/Paket Tryout Bimbel Les Privat CPNS & PPPK BUMN Terbaik di Indonesia.webp",
-        imageAlt: "Ilustrasi peserta Akademi ASN berlatih tryout CPNS melalui laptop",
+        image:
+          "/img/section/paket-tryout-bimbel-cpns-pppk-bumn-terbaik-di-indonesia.webp",
+        imageAlt:
+          "Ilustrasi peserta Akademi ASN berlatih tryout CPNS melalui laptop",
         features: [
           `Simulasi CAT CPNS ${tahunSeleksi}`,
           "500+ Soal Terbaru",

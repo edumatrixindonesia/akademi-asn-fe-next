@@ -128,8 +128,8 @@ Semua gambar berformat **WebP**, kecuali ikon benefit (**GIF** animasi) dan satu
 ### Gambar section (`/img/section/`)
 
 - `program-materi-bimbel-cpns-pppk-bumn.png`
-- `Paket Online Bimbel Les Privat CPNS & PPPK BUMN Terbaik di Indonesia.webp`
-- `Paket Tryout Bimbel Les Privat CPNS & PPPK BUMN Terbaik di Indonesia.webp`
+- `paket-online-bimbel-les-privat-cpns-pppk-bumn-terbaik-di-indonesia.webp`
+- `paket-tryout-bimbel-cpns-pppk-bumn-terbaik-di-indonesia.webp`
 - `berhasil-lolos-bimbel-cpns-pppk-bumn.webp`
 - `testimoni-1-bimbel-cpns-ppk-bumn.webp`, `testimoni-2-bimbel-cpns-ppk-bumn.webp`
 - `cta-footer-bimbel-cpns-pppk-bumn.webp`
