@@ -113,6 +113,14 @@ Utama `768px` (17x) dan `991px`/`992px` (10x). Lainnya: 1024, 900, 640, 576px.
 
 ## Asset Gambar & Ikon
 
+This section preserves the reference site's asset inventory from 2026-09-23.
+On 2026-10-09, unused copies of `logo-akademi-asn-footer.webp`, `whatsapp.webp`,
+`program-materi-bimbel-cpns-pppk-bumn.png`, and
+`paket-online-bimbel-les-privat-cpns-pppk-bumn-terbaik-di-indonesia.webp` were
+removed from this project's `public/`. The original lists below remain as
+historical design references. The cover template keeps its own logo at
+`.scratch/blog/covers/logo-akademi-asn-footer.webp`.
+
 Semua gambar berformat **WebP**, kecuali ikon benefit (**GIF** animasi) dan satu PNG. Tidak ada icon font atau library ikon. Hanya ada satu inline `<svg>` (stroke 24×24, gaya Lucide/Feather).
 
 ### Logo & ikon (`/img/logo/`)
