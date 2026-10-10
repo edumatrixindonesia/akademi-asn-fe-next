@@ -34,17 +34,18 @@ export const seleksiCpns = {
     {
       title: "SKB (Seleksi Kompetensi Bidang)",
       description:
-        "Menguji kemampuan spesifik sesuai dengan jabatan atau formasi yang dilamar.",
+        "Menilai kesesuaian kompetensi bidang pelamar dengan kebutuhan jabatan. Pelamar yang lulus SKD mengikuti SKB.",
       tests: [
         {
-          title: "Tes Teknis",
-          description: "Materi substansi jabatan menggunakan sistem CAT.",
+          title: "SKB dengan CAT BKN",
+          description:
+            "Wajib di instansi pusat dan daerah. Materi untuk jabatan fungsional disusun instansi pembina jabatan dan masuk ke bank soal CAT BKN.",
           image: `${imageBase}teknis${imageSuffix}`,
         },
         {
-          title: "Wawancara",
+          title: "SKB Tambahan",
           description:
-            "Menguji kompetensi teknis, mental, integritas, dan motivasi peserta.",
+            "Dapat berupa antara lain psikotes, tes bahasa asing, tes kesamaptaan, tes praktik kerja, wawancara, atau tes lain sesuai persyaratan jabatan. Instansi pusat dapat menambah paling banyak 3 jenis tes dengan persetujuan Menteri PANRB. Instansi daerah paling banyak 1 jenis tes untuk jabatan yang sangat teknis, dan tes itu bukan wawancara.",
           image: `${imageBase}wawancara${imageSuffix}`,
         },
       ],
