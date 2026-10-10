@@ -4,6 +4,7 @@ import Materi from "@/components/sections/materi";
 import PaketProgram from "@/components/sections/paket-program";
 import Seleksi from "@/components/sections/seleksi";
 import PassingGrade from "@/components/sections/passing-grade";
+import UpdateSeleksi from "@/components/sections/update-seleksi";
 import TantanganSeleksi from "@/components/sections/tantangan-seleksi";
 import Lembaga from "@/components/sections/lembaga";
 import Testimoni from "@/components/sections/testimoni";
@@ -18,6 +19,7 @@ import { materiHome } from "@/data/materi";
 import { paketProgram } from "@/data/paket-program";
 import { seleksiBumn, seleksiCpns, seleksiPppk } from "@/data/seleksi";
 import { passingGradeHome } from "@/data/passing-grade";
+import { updateSeleksiCpns } from "@/data/update-seleksi";
 import { tantanganSeleksiHome } from "@/data/tantangan-seleksi";
 import { lembaga } from "@/data/lembaga";
 import { testimoni } from "@/data/testimoni";
@@ -43,6 +45,7 @@ const Home = ({ provinces }: HomeProps) => {
       <Seleksi {...seleksiCpns} />
       <Seleksi {...seleksiPppk} />
       <Seleksi {...seleksiBumn} />
+      <UpdateSeleksi {...updateSeleksiCpns} />
       <PassingGrade {...passingGradeHome} />
       <TantanganSeleksi {...tantanganSeleksiHome(konsultasiUrl)} />
       <Lembaga {...lembaga} />
