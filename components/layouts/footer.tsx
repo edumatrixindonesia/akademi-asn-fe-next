@@ -105,33 +105,39 @@ const Footer = ({
           {otherWebsite.link.label}
         </a>
 
-        <h2 className="text-md font-bold uppercase tracking-wide text-background mt-4">
-          {examTracks.title}
-        </h2>
+        <nav
+          aria-labelledby="footer-exam-tracks"
+          className="mt-4 flex flex-col gap-3"
+        >
+          <h2
+            id="footer-exam-tracks"
+            className="text-md font-bold uppercase tracking-wide text-background"
+          >
+            {examTracks.title}
+          </h2>
 
-        <ul className="flex flex-col gap-5 text-sm">
-          {examTracks.links.map((link) => (
-            <li key={link.href}>
-              <Link
-                href={link.href}
-                className={`bg-white py-1.5 pe-1.5 ps-3 rounded-full text-primary-dark hover:text-primary text-md font-bold text-center transition-colors`}
-              >
-                {link.label}
-              </Link>
-            </li>
-          ))}
-        </ul>
+          <ul className="flex flex-col gap-5 text-sm">
+            {examTracks.links.map((link) => (
+              <li key={link.href}>
+                <Link
+                  href={link.href}
+                  className={`bg-white py-1.5 pe-1.5 ps-3 rounded-full text-primary-dark hover:text-primary text-md font-bold text-center transition-colors`}
+                >
+                  {link.label} <span aria-hidden="true">🔥</span>
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </nav>
       </div>
 
-      <Link href="/">
-        <Image
-          src={image.src}
-          alt={image.alt}
-          width={691}
-          height={608}
-          className="h-auto w-full"
-        />
-      </Link>
+      <Image
+        src={image.src}
+        alt={image.alt}
+        width={691}
+        height={608}
+        className="h-auto w-full"
+      />
     </div>
 
     <div className="border-t border-background/10">

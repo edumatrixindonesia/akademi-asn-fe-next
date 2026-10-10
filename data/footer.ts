@@ -42,9 +42,9 @@ export const footerDefault = () =>
     examTracks: {
       title: "HOT PROGRAM",
       links: [
-        { label: "Bimbel CPNS 🔥", href: "/bimbel-cpns" },
-        { label: "Bimbel PPPK 🔥", href: "/bimbel-pppk" },
-        { label: "Bimbel BUMN 🔥", href: "/bimbel-bumn" },
+        { label: "Bimbel CPNS", href: "/bimbel-cpns" },
+        { label: "Bimbel PPPK", href: "/bimbel-pppk" },
+        { label: "Bimbel BUMN", href: "/bimbel-bumn" },
       ],
     },
     image: {
