@@ -16,7 +16,7 @@ export const seleksiCpns = {
       tests: [
         {
           title: "TWK",
-          description: "Nasionalisme, Integritas, Bela Negara, Pilar Negara.",
+          description: "Nasionalisme, Integritas, Bela Negara, Pilar Negara, dan Bahasa Negara.",
           image: `${imageBase}twk${imageSuffix}`,
         },
         {
@@ -26,7 +26,7 @@ export const seleksiCpns = {
         },
         {
           title: "TKP",
-          description: "Pelayanan Publik, Jejaring Kerja, Sosial Budaya, TIK.",
+          description: "Pelayanan Publik, Jejaring Kerja, Sosial Budaya, TIK, Profesionalisme, dan Anti Radikalisme.",
           image: `${imageBase}tkp${imageSuffix}`,
         },
       ],
@@ -60,12 +60,12 @@ export const seleksiPppk = {
     {
       title: "Seleksi Kompetensi (CAT BKN)",
       description:
-        "Pada seleksi 2024, berisi 145 soal (100 soal untuk jabatan Pengelola Umum Operasional). Kompetensi teknis, manajerial, dan sosial kultural dikerjakan dalam 120 menit, lalu wawancara berbasis komputer dalam 10 menit.",
+        "Pada seleksi 2024, berisi 145 soal termasuk 10 soal wawancara (100 soal untuk jabatan Pengelola Umum Operasional). Kompetensi teknis, manajerial, dan sosial kultural dikerjakan dalam 120 menit, lalu wawancara berbasis komputer dalam 10 menit.",
       tests: [
         {
           title: "Kompetensi Teknis",
           description:
-            "90 soal tentang pengetahuan, keterampilan, dan sikap yang spesifik sesuai bidang jabatan yang dilamar. Pelamar guru dengan sertifikat pendidik yang linear mendapat nilai teknis maksimal.",
+            "90 soal (45 soal untuk jabatan Pengelola Umum Operasional) tentang pengetahuan, keterampilan, dan sikap yang spesifik sesuai bidang jabatan yang dilamar. Pelamar guru dengan sertifikat pendidik yang linear dan terdaftar di pangkalan data kementerian mendapat nilai teknis maksimal.",
           image: `${imageBase}teknis${imageSuffix}`,
         },
         {

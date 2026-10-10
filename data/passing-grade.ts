@@ -4,9 +4,9 @@ export const passingGradeHome = {
   title: "Mengenal Konsep Passing Grade",
   description: "Nilai ambang batas SKD CPNS 2024 untuk pelamar kebutuhan umum:",
   note: "Memenuhi passing grade tidak menjamin lanjut ke tahap berikutnya. Peserta juga harus masuk peringkat tertinggi dalam kuota 3 kali jumlah formasi.",
-  sourceLabel: "Sumber: Kementerian PANRB, SKD CPNS 2024",
+  sourceLabel: "Sumber: KepmenPANRB No. 321 Tahun 2024",
   sourceHref:
-    "https://www.menpan.go.id/site/berita-terkini/134-peserta-cpns-kementerian-panrb-ikuti-skd-menteri-anas-kompetisi-transparan-ciptakan-asn-kompeten-2",
+    "https://www.bkn.go.id/storage/2024/08/2024kepmenpanrb321-Nilai-Ambang-Batas.pdf",
   scores: [
     {
       title: "Tes Wawasan Kebangsaan (TWK)",
@@ -29,16 +29,15 @@ export const passingGradeHome = {
 export const passingGradePppk = {
   title: "Sistem Penilaian Seleksi PPPK",
   description:
-    "Nilai maksimal seleksi kompetensi PPPK 2024 adalah 670 (445 untuk jabatan Pengelola Umum Operasional). Jawaban benar soal teknis bernilai 5, sedangkan setiap pilihan jawaban soal manajerial, sosial kultural, dan wawancara bernilai 1 sampai 4.",
-  note: "Seleksi PPPK 2024 tidak memakai nilai ambang batas (passing grade). Pelamar dinyatakan lulus jika berperingkat terbaik pada formasi yang dilamar.",
-  sourceLabel: "Sumber: Kementerian PANRB, Seleksi PPPK 2024",
-  sourceHref:
-    "https://menpan.go.id/site/berita-terkini/pendaftaran-seleksi-pppk-2024-dibuka-2-periode-menteri-panrb-komitmen-pemerintah-tuntaskan-penataan-non-asn",
+    "Nilai maksimal seleksi kompetensi PPPK 2024 adalah 670 (445 untuk jabatan Pengelola Umum Operasional). Jawaban benar soal teknis bernilai 5, kecuali untuk guru di instansi daerah yang bernilai 1 sampai 5. Setiap pilihan jawaban soal manajerial, sosial kultural, dan wawancara bernilai 1 sampai 4.",
+  note: "Seleksi PPPK 2024 tidak memakai nilai ambang batas (passing grade). Pelamar dinyatakan lulus jika berperingkat terbaik.",
+  sourceLabel: "Sumber: KepmenPANRB No. 347 dan 348 Tahun 2024",
+  sourceHref: "https://data-jdih.menpan.go.id/dokumen/2024kepmenpanrb347.pdf",
   scores: [
     {
       title: "Kompetensi Teknis",
       score: "450",
-      description: "Nilai maksimal dari 90 soal, masing-masing bernilai 5.",
+      description: "Nilai maksimal dari 90 soal, paling tinggi 5 per soal.",
     },
     {
       title: "Manajerial & Sosial Kultural",
