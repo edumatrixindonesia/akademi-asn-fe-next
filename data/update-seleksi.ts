@@ -1,7 +1,8 @@
 import type { UpdateSeleksiProps } from "@/components/sections/update-seleksi";
 
-// Every claim is checked against BKN, SSCASN, or KemenPANRB primary sources.
-// Sources and quotes: .scratch/update-seleksi-<cpns|pppk>/research.md. Re-check
+// Every claim is checked against primary sources: BKN, SSCASN, KemenPANRB,
+// FHCI, Kementerian BUMN, or regulation text.
+// Sources and quotes: .scratch/update-seleksi-<cpns|pppk|bumn>/research.md. Re-check
 // them and move `updatedAt` whenever an entry changes.
 export const updateSeleksiCpns = {
   title: "Update Informasi Seleksi CPNS 2026",
@@ -111,6 +112,60 @@ export const updateSeleksiPppk = {
       sourceLabel: "BKN, 22 Januari 2026",
       sourceHref:
         "https://www.bkn.go.id/beredar-informasi-seleksi-kemenkes-2026-prof-zudan-itu-hoaks-rekrutmen-asn-terintegrasi-dan-diawasi-bkn/",
+    },
+  ],
+} satisfies UpdateSeleksiProps;
+
+export const updateSeleksiBumn = {
+  title: "Update Informasi Rekrutmen Bersama BUMN 2026",
+  description:
+    "Ringkasan informasi Rekrutmen Bersama BUMN (RBB) dari kanal resmi FHCI, Kementerian BUMN, dan regulasi BUMN.",
+  updatedAt: "2026-10-10",
+  updates: [
+    {
+      title: "Status RBB 2026",
+      description:
+        "Sampai 10 Oktober 2026, FHCI belum mengumumkan Rekrutmen Bersama BUMN 2026. Pengumuman RBB terakhir dari FHCI adalah penutupan seluruh proses seleksi RBB 2025 pada 9 September 2025.",
+      sourceLabel: "FHCI (@fhci.bumn), 9 September 2025",
+      sourceHref: "https://www.instagram.com/fhci.bumn/p/DOaJszXkdC6/",
+    },
+    {
+      title: "Rekap RBB 2025",
+      description:
+        "RBB 2025 dimulai 7 Maret 2025 dengan lebih dari 2.000 lowongan di 107 perusahaan BUMN dan anak usahanya. Rekrutmen ini terbuka bagi lulusan SMA/SMK, D3, D4, S1, dan S2.",
+      sourceLabel: "Kementerian BUMN, 5 Maret 2025",
+      sourceHref:
+        "https://bumn.go.id/publikasi/berita/rilis/detail/67f5f71ed5c0d",
+    },
+    {
+      title: "Jalur Pendaftaran RBB 2025",
+      description:
+        "RBB 2025 membuka tiga jalur: Reguler, Disabilitas, serta Putra dan Putri Papua. Setiap pelamar hanya boleh memilih satu posisi.",
+      sourceLabel: "FHCI (@fhcibumn), 6–7 Maret 2025",
+      sourceHref: "https://x.com/fhcibumn/status/1897522359122452860",
+    },
+    {
+      title: "Tes Online Tahap 2 RBB 2025",
+      description:
+        "Pada jalur reguler, Tes Bahasa Inggris berisi 85 soal dalam 80 menit dengan ambang batas 450. Learning Agility berisi 100 soal dalam 35 menit dengan ambang batas 16.",
+      sourceLabel: "FHCI (@fhcibumn), 19 Mei 2025",
+      sourceHref: "https://x.com/fhcibumn/status/1924399209673073056",
+    },
+    {
+      title: "Perubahan Tata Kelola BUMN",
+      description:
+        "UU Nomor 16 Tahun 2025 menjadi dasar pembentukan Badan Pengaturan BUMN (BP BUMN). Perpres Nomor 105 Tahun 2025, yang berlaku 7 Oktober 2025, mengatur pembentukan BP BUMN dan mencabut Perpres tentang Kementerian BUMN.",
+      sourceLabel: "Perpres No. 105 Tahun 2025, JDIH BPK",
+      sourceHref:
+        "https://peraturan.bpk.go.id/Details/334645/perpres-no-105-tahun-2025",
+    },
+    {
+      title: "Waspada Penipuan",
+      description:
+        "Kementerian BUMN dan FHCI mengingatkan pelamar agar waspada penipuan. Untuk RBB 2025, informasi resmi hanya dari situs FHCI (fhcibumn.com) serta Instagram @kementerianbumn dan @fhci.bumn.",
+      sourceLabel: "Kementerian BUMN, 5 Maret 2025",
+      sourceHref:
+        "https://bumn.go.id/publikasi/berita/rilis/detail/67f5f71ed5c0d",
     },
   ],
 } satisfies UpdateSeleksiProps;

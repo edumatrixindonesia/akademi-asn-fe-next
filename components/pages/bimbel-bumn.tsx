@@ -5,6 +5,7 @@ import Materi from "@/components/sections/materi";
 import PaketProgram from "@/components/sections/paket-program";
 import Seleksi from "@/components/sections/seleksi";
 import PassingGrade from "@/components/sections/passing-grade";
+import UpdateSeleksi from "@/components/sections/update-seleksi";
 import TantanganSeleksi from "@/components/sections/tantangan-seleksi";
 import Lembaga from "@/components/sections/lembaga";
 import Testimoni from "@/components/sections/testimoni";
@@ -20,6 +21,7 @@ import { materiBumn } from "@/data/materi";
 import { paketProgram } from "@/data/paket-program";
 import { seleksiBumn } from "@/data/seleksi";
 import { passingGradeBumn } from "@/data/passing-grade";
+import { updateSeleksiBumn } from "@/data/update-seleksi";
 import { tantanganSeleksiBumn } from "@/data/tantangan-seleksi";
 import { lembaga } from "@/data/lembaga";
 import { testimoni } from "@/data/testimoni";
@@ -44,6 +46,7 @@ const BimbelBumn = ({ provinces }: BimbelBumnProps) => {
       <Materi {...materiBumn(konsultasiUrl)} />
       <PaketProgram {...paketProgram(konsultasiUrl)} />
       <Seleksi {...seleksiBumn} />
+      <UpdateSeleksi {...updateSeleksiBumn} />
       <PassingGrade {...passingGradeBumn} />
       <TantanganSeleksi {...tantanganSeleksiBumn(konsultasiUrl)} />
       <Lembaga {...lembaga} />
