@@ -107,21 +107,21 @@ export const tantanganSeleksiBumn = (konsultasiUrl: string) =>
       {
         title: "Meremehkan Tes AKHLAK",
         description:
-          "Tes AKHLAK mengukur penerapan nilai Amanah, Kompeten, Harmonis, Loyal, Adaptif, dan Kolaboratif dalam situasi kerja. Tes ini menilai sikap, bukan hafalan, jadi pahami cara menerapkan keenam nilai tersebut.",
+          "Pada RBB 2025, Tes AKHLAK berisi 90 soal dalam 30 menit dengan nilai ambang batas 65. Kuasai keenam nilai AKHLAK: Amanah, Kompeten, Harmonis, Loyal, Adaptif, dan Kolaboratif.",
       },
       {
         title: "Menunda Persiapan Tahap 2",
         description:
-          "Tes Bahasa Inggris (kecuali pelamar lulusan SMA/sederajat) dan Learning Agility diujikan di tahap 2. Pada RBB 2025, hasil tahap 1 diumumkan 17 Mei dan tes tahap 2 digelar 20–22 Mei, jadi waktu persiapannya hanya beberapa hari.",
+          "Tes Bahasa Inggris dan Learning Agility diujikan di tahap 2. Pada RBB 2025, hasil tahap 1 diumumkan 17 Mei dan tes tahap 2 digelar 20–22 Mei, jadi waktu persiapannya hanya beberapa hari.",
       },
       {
         title: "Mengabaikan Cek Perangkat",
         description:
-          "Tes online RBB didahului pengecekan perangkat. Pastikan perangkat dan koneksi Anda siap sebelum hari tes.",
+          "FHCI meminta peserta tes online RBB memastikan koneksi internet dan perangkat dalam keadaan baik. Sistem tes juga dapat menggugurkan peserta jika mendeteksi orang lain di ruangan.",
       },
     ],
     closingDescription:
-      "Rekrutmen Bersama BUMN 2025 diikuti lebih dari 1,4 juta pendaftar untuk lebih dari 2.000 lowongan di 107 BUMN dan anak perusahaannya. Persiapan yang terarah membantu Anda lolos di setiap tahap.",
+      "Rekrutmen Bersama BUMN 2025 membuka lebih dari 2.000 lowongan di 107 BUMN dan anak usahanya, dengan nilai ambang batas di setiap tes online. Persiapan yang terarah membantu Anda lolos di setiap tahap.",
     closingPoints: [
       "Lowongan terbatas dibanding jumlah pelamar.",
       "Posisi tersedia di berbagai bidang, dari operasi hingga IT.",

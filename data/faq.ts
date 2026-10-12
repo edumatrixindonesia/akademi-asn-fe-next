@@ -149,22 +149,22 @@ export const faqBumn = {
     {
       question: "Apa saja tes BUMN?",
       answer:
-        "Pada Rekrutmen Bersama BUMN (RBB) 2025, tesnya terdiri dari Tes Online Tahap 1 (Tes Kemampuan Dasar, tes core values AKHLAK, dan Wawasan Kebangsaan), Tes Online Tahap 2 (Bahasa Inggris dan Learning Agility), lalu Tes Kemampuan Bidang oleh masing-masing BUMN, seperti psikotes, wawancara, dan tes kesehatan. Pelamar lulusan SMA/sederajat tidak mengikuti Tes Bahasa Inggris.",
+        "Pada Rekrutmen Bersama BUMN (RBB) 2025, tesnya terdiri dari Tes Online Tahap 1 (Tes Kemampuan Dasar, Tes AKHLAK, dan Wawasan Kebangsaan), Tes Online Tahap 2 (Bahasa Inggris dan Learning Agility), lalu Tes Kemampuan Bidang di masing-masing BUMN yang mencakup wawancara dan tes kesehatan.",
     },
     {
       question: "Apa saja materi TKD BUMN?",
       answer:
-        "Tes Kemampuan Dasar (TKD) mengukur kemampuan verbal, numerik, dan logika. Soalnya menilai pengetahuan, cara berpikir kritis dan analitis, serta kemampuan memecahkan masalah. Di Akademi ASN, Anda berlatih soal TKD beserta pembahasan dan tips mengatur waktu.",
+        "Pada Rekrutmen Bersama BUMN 2025, Tes Kemampuan Dasar (TKD) berisi 100 soal yang dikerjakan dalam 73 menit, dengan nilai ambang batas 58. Di Akademi ASN, Anda berlatih soal TKD beserta pembahasan dan tips mengatur waktu.",
     },
     {
       question: "Apa itu tes AKHLAK BUMN?",
       answer:
-        "AKHLAK adalah nilai-nilai utama (core values) BUMN: Amanah, Kompeten, Harmonis, Loyal, Adaptif, dan Kolaboratif. Tes AKHLAK mengukur pemahaman dan penerapan nilai-nilai tersebut dalam situasi kerja di lingkungan BUMN.",
+        "AKHLAK adalah Nilai-Nilai Utama (Core Values) SDM BUMN yang ditetapkan lewat Surat Edaran Menteri BUMN Nomor SE-7/MBU/07/2020: Amanah, Kompeten, Harmonis, Loyal, Adaptif, dan Kolaboratif. Pada Rekrutmen Bersama BUMN 2025, Tes AKHLAK berisi 90 soal yang dikerjakan dalam 30 menit, dengan nilai ambang batas 65.",
     },
     {
       question: "Apa saja tahapan Rekrutmen Bersama BUMN?",
       answer:
-        "Tahapan RBB 2025 adalah registrasi dan pengajuan lamaran, seleksi administrasi, Tes Online Tahap 1 (TKD, AKHLAK, Wawasan Kebangsaan), Tes Online Tahap 2 (Bahasa Inggris dan Learning Agility), Tes Kemampuan Bidang oleh masing-masing BUMN, lalu pengumuman akhir. Informasi resmi hanya diumumkan lewat portal FHCI BUMN serta akun Instagram @fhci.bumn dan @kementerianbumn.",
+        "Tahapan RBB 2025 adalah registrasi dan pengajuan lamaran, seleksi administrasi, Tes Online Tahap 1 (TKD, AKHLAK, Wawasan Kebangsaan), Tes Online Tahap 2 (Bahasa Inggris dan Learning Agility), Tes Kemampuan Bidang oleh masing-masing BUMN, lalu pengumuman akhir. Pada RBB 2025, informasi resmi hanya diumumkan lewat situs FHCI (fhcibumn.com) serta akun Instagram @kementerianbumn dan @fhci.bumn.",
     },
     {
       question: "Bagaimana cara mempersiapkan tes BUMN?",

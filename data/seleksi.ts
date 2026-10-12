@@ -95,7 +95,7 @@ export const seleksiPppk = {
 export const seleksiBumn = {
   title: "Pahami Tahapan Seleksi & Sistem Penilaian Rekrutmen Bersama BUMN",
   description:
-    "Rekrutmen Bersama BUMN (RBB) diselenggarakan Kementerian BUMN bersama Forum Human Capital Indonesia (FHCI). Pada RBB 2025, peserta yang lolos seleksi administrasi mengikuti dua tahap tes online, lalu tes lanjutan di BUMN yang dilamar.",
+    "Rekrutmen Bersama BUMN (RBB) 2025 diselenggarakan Kementerian BUMN (kini Badan Pengaturan BUMN) bersama Forum Human Capital Indonesia (FHCI). Peserta yang lolos seleksi administrasi mengikuti dua tahap tes online, lalu tes kemampuan bidang di BUMN yang dilamar.",
   stages: [
     {
       title: "Tes Online Tahap 1",
@@ -104,19 +104,17 @@ export const seleksiBumn = {
       tests: [
         {
           title: "Tes Kemampuan Dasar (TKD)",
-          description: "100 soal logika dasar, verbal, dan numerik dalam 73 menit.",
+          description: "100 soal dalam 73 menit.",
           image: `${imageBase}tiu${imageSuffix}`,
         },
         {
           title: "Tes AKHLAK",
-          description:
-            "90 soal tentang perilaku dan pemahaman nilai Amanah, Kompeten, Harmonis, Loyal, Adaptif, dan Kolaboratif dalam 30 menit.",
+          description: "90 soal dalam 30 menit.",
           image: `${imageBase}tkp${imageSuffix}`,
         },
         {
           title: "Tes Wawasan Kebangsaan",
-          description:
-            "10 soal tentang nilai kebangsaan, Pancasila, konstitusi, sejarah perjuangan bangsa, dan Bhinneka Tunggal Ika dalam 10 menit.",
+          description: "10 soal dalam 10 menit.",
           image: `${imageBase}twk${imageSuffix}`,
         },
       ],
@@ -127,14 +125,12 @@ export const seleksiBumn = {
       tests: [
         {
           title: "Tes Bahasa Inggris",
-          description:
-            "Mengukur kemampuan berbahasa Inggris. Pelamar lulusan SMA/sederajat tidak mengikuti tes ini.",
+          description: "85 soal dalam 80 menit (jalur reguler).",
           image: `${imageBase}teknis${imageSuffix}`,
         },
         {
           title: "Learning Agility",
-          description:
-            "Mengukur kemampuan belajar, beradaptasi, dan berkembang dalam situasi kerja yang baru dan kompleks.",
+          description: "100 soal dalam 35 menit (jalur reguler).",
           image: `${imageBase}tiu${imageSuffix}`,
         },
       ],
@@ -144,9 +140,9 @@ export const seleksiBumn = {
       description: "Diselenggarakan oleh masing-masing BUMN yang dilamar.",
       tests: [
         {
-          title: "Psikotes, Wawancara & Tes Kesehatan",
+          title: "Wawancara & Tes Kesehatan",
           description:
-            "Jenis tes lanjutan ditentukan oleh BUMN yang dilamar sesuai kebutuhan posisinya.",
+            "Wawancara dan tes kesehatan dilakukan dalam tes kemampuan bidang di masing-masing BUMN.",
           image: `${imageBase}wawancara${imageSuffix}`,
         },
       ],
