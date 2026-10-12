@@ -7,6 +7,7 @@ import PaketProgram from "@/components/sections/paket-program";
 import KelasOffline from "@/components/sections/kelas-offline";
 import Seleksi from "@/components/sections/seleksi";
 import PassingGrade from "@/components/sections/passing-grade";
+import UpdateSeleksi from "@/components/sections/update-seleksi";
 import TantanganSeleksi from "@/components/sections/tantangan-seleksi";
 import Lembaga from "@/components/sections/lembaga";
 import Testimoni from "@/components/sections/testimoni";
@@ -25,6 +26,7 @@ import { paketProgramLocation } from "@/data/paket-program";
 import { kelasOfflineLocation } from "@/data/kelas-offline";
 import { seleksiCpns } from "@/data/seleksi";
 import { passingGradeHome } from "@/data/passing-grade";
+import { updateSeleksiCpns } from "@/data/update-seleksi";
 import { tantanganSeleksiCpns } from "@/data/tantangan-seleksi";
 import { lembaga } from "@/data/lembaga";
 import { testimoni } from "@/data/testimoni";
@@ -60,6 +62,7 @@ const BimbelCpnsLocation = ({ location }: BimbelCpnsLocationProps) => {
       <PaketProgram {...paketProgramLocation(konsultasiUrl, label)} />
       {kelasOffline && <KelasOffline {...kelasOffline} />}
       <Seleksi {...seleksiCpns} />
+      <UpdateSeleksi {...updateSeleksiCpns} />
       <PassingGrade {...passingGradeHome} />
       <TantanganSeleksi {...tantanganSeleksiCpns(konsultasiUrl)} />
       <Lembaga {...lembaga} />

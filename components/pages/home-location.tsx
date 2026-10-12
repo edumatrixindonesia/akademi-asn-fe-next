@@ -7,6 +7,7 @@ import PaketProgram from "@/components/sections/paket-program";
 import KelasOffline from "@/components/sections/kelas-offline";
 import Seleksi from "@/components/sections/seleksi";
 import PassingGrade from "@/components/sections/passing-grade";
+import UpdateSeleksi from "@/components/sections/update-seleksi";
 import TantanganSeleksi from "@/components/sections/tantangan-seleksi";
 import Lembaga from "@/components/sections/lembaga";
 import Testimoni from "@/components/sections/testimoni";
@@ -25,6 +26,11 @@ import { paketProgramLocation } from "@/data/paket-program";
 import { kelasOfflineLocation } from "@/data/kelas-offline";
 import { seleksiBumn, seleksiCpns, seleksiPppk } from "@/data/seleksi";
 import { passingGradeHome } from "@/data/passing-grade";
+import {
+  updateSeleksiBumn,
+  updateSeleksiCpns,
+  updateSeleksiPppk,
+} from "@/data/update-seleksi";
 import { tantanganSeleksiHome } from "@/data/tantangan-seleksi";
 import { lembaga } from "@/data/lembaga";
 import { testimoni } from "@/data/testimoni";
@@ -60,8 +66,11 @@ const HomeLocation = ({ location }: HomeLocationProps) => {
       <PaketProgram {...paketProgramLocation(konsultasiUrl, label)} />
       {kelasOffline && <KelasOffline {...kelasOffline} />}
       <Seleksi {...seleksiCpns} />
+      <UpdateSeleksi {...updateSeleksiCpns} />
       <Seleksi {...seleksiPppk} />
+      <UpdateSeleksi {...updateSeleksiPppk} />
       <Seleksi {...seleksiBumn} />
+      <UpdateSeleksi {...updateSeleksiBumn} />
       <PassingGrade {...passingGradeHome} />
       <TantanganSeleksi {...tantanganSeleksiHome(konsultasiUrl)} />
       <Lembaga {...lembaga} />
