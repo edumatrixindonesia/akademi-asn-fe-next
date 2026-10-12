@@ -1,5 +1,6 @@
 import createMDX from "@next/mdx";
 import type { NextConfig } from "next";
+import { legacyRedirects } from "./lib/legacy-redirects";
 
 const nextConfig: NextConfig = {
   // AVIF is ~20% smaller than WebP; browsers without AVIF still get WebP.
@@ -18,6 +19,7 @@ const nextConfig: NextConfig = {
         destination: "/blog/penulis/:slug",
         permanent: true,
       },
+      ...legacyRedirects,
     ];
   },
 };
