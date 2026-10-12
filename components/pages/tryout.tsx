@@ -19,7 +19,7 @@ import { paketHematKomplit } from "@/data/paket-hemat-komplit";
 import { keunggulan } from "@/data/keunggulan";
 import { paketProgram } from "@/data/paket-program";
 import { seleksiBumn, seleksiCpns, seleksiPppk } from "@/data/seleksi";
-import { passingGradeHome } from "@/data/passing-grade";
+import { passingGradeCpns } from "@/data/passing-grade";
 import { tantanganSeleksiHome } from "@/data/tantangan-seleksi";
 import { lembaga } from "@/data/lembaga";
 import { testimoni } from "@/data/testimoni";
@@ -42,7 +42,7 @@ const Tryout = () => {
       <Seleksi {...seleksiCpns} />
       <Seleksi {...seleksiPppk} />
       <Seleksi {...seleksiBumn} />
-      <PassingGrade {...passingGradeHome} />
+      <PassingGrade {...passingGradeCpns} />
       <TantanganSeleksi {...tantanganSeleksiHome(konsultasiUrl)} />
       <Lembaga {...lembaga} />
       <Testimoni {...testimoni} />

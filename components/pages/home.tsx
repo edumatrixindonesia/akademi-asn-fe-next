@@ -18,7 +18,11 @@ import { keunggulan } from "@/data/keunggulan";
 import { materiHome } from "@/data/materi";
 import { paketProgram } from "@/data/paket-program";
 import { seleksiBumn, seleksiCpns, seleksiPppk } from "@/data/seleksi";
-import { passingGradeHome } from "@/data/passing-grade";
+import {
+  passingGradeBumn,
+  passingGradeCpns,
+  passingGradePppk,
+} from "@/data/passing-grade";
 import {
   updateSeleksiBumn,
   updateSeleksiCpns,
@@ -48,11 +52,13 @@ const Home = ({ provinces }: HomeProps) => {
       <PaketProgram {...paketProgram(konsultasiUrl)} />
       <Seleksi {...seleksiCpns} />
       <UpdateSeleksi {...updateSeleksiCpns} />
+      <PassingGrade {...passingGradeCpns} />
       <Seleksi {...seleksiPppk} />
       <UpdateSeleksi {...updateSeleksiPppk} />
+      <PassingGrade {...passingGradePppk} />
       <Seleksi {...seleksiBumn} />
       <UpdateSeleksi {...updateSeleksiBumn} />
-      <PassingGrade {...passingGradeHome} />
+      <PassingGrade {...passingGradeBumn} />
       <TantanganSeleksi {...tantanganSeleksiHome(konsultasiUrl)} />
       <Lembaga {...lembaga} />
       <Testimoni {...testimoni} />

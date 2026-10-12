@@ -25,7 +25,7 @@ import { materiCpns } from "@/data/materi";
 import { paketProgramLocation } from "@/data/paket-program";
 import { kelasOfflineLocation } from "@/data/kelas-offline";
 import { seleksiCpns } from "@/data/seleksi";
-import { passingGradeHome } from "@/data/passing-grade";
+import { passingGradeCpns } from "@/data/passing-grade";
 import { updateSeleksiCpns } from "@/data/update-seleksi";
 import { tantanganSeleksiCpns } from "@/data/tantangan-seleksi";
 import { lembaga } from "@/data/lembaga";
@@ -63,7 +63,7 @@ const BimbelCpnsLocation = ({ location }: BimbelCpnsLocationProps) => {
       {kelasOffline && <KelasOffline {...kelasOffline} />}
       <Seleksi {...seleksiCpns} />
       <UpdateSeleksi {...updateSeleksiCpns} />
-      <PassingGrade {...passingGradeHome} />
+      <PassingGrade {...passingGradeCpns} />
       <TantanganSeleksi {...tantanganSeleksiCpns(konsultasiUrl)} />
       <Lembaga {...lembaga} />
       <Testimoni {...testimoni} />

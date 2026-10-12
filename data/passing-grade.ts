@@ -1,7 +1,7 @@
 import type { PassingGradeProps } from "@/components/sections/passing-grade";
 
-export const passingGradeHome = {
-  title: "Mengenal Konsep Passing Grade",
+export const passingGradeCpns = {
+  title: "Passing Grade SKD CPNS",
   description: "Nilai ambang batas SKD CPNS 2024 untuk pelamar kebutuhan umum:",
   note: "Memenuhi passing grade tidak menjamin lanjut ke tahap berikutnya. Peserta juga harus masuk peringkat tertinggi dalam kuota 3 kali jumlah formasi.",
   sourceLabel: "Sumber: KepmenPANRB No. 321 Tahun 2024",

@@ -20,7 +20,7 @@ import { keunggulan } from "@/data/keunggulan";
 import { materiCpns } from "@/data/materi";
 import { paketProgram } from "@/data/paket-program";
 import { seleksiCpns } from "@/data/seleksi";
-import { passingGradeHome } from "@/data/passing-grade";
+import { passingGradeCpns } from "@/data/passing-grade";
 import { updateSeleksiCpns } from "@/data/update-seleksi";
 import { tantanganSeleksiCpns } from "@/data/tantangan-seleksi";
 import { lembaga } from "@/data/lembaga";
@@ -47,7 +47,7 @@ const BimbelCpns = ({ provinces }: BimbelCpnsProps) => {
       <PaketProgram {...paketProgram(konsultasiUrl)} />
       <Seleksi {...seleksiCpns} />
       <UpdateSeleksi {...updateSeleksiCpns} />
-      <PassingGrade {...passingGradeHome} />
+      <PassingGrade {...passingGradeCpns} />
       <TantanganSeleksi {...tantanganSeleksiCpns(konsultasiUrl)} />
       <Lembaga {...lembaga} />
       <Testimoni {...testimoni} />

@@ -1,3 +1,5 @@
+import { headingId } from "@/lib/heading-id";
+
 export type PassingGradeProps = {
   title: string;
   description: string;
@@ -15,11 +17,11 @@ const PassingGrade = ({
   sourceHref,
   scores,
 }: PassingGradeProps) => (
-  <section aria-labelledby="passing-grade-title" className="bg-muted">
+  <section aria-labelledby={headingId(title)} className="bg-muted">
     <div className="container-section">
       <div className="mx-auto max-w-3xl text-center">
         <h2
-          id="passing-grade-title"
+          id={headingId(title)}
           className="text-2xl font-bold text-primary-dark md:text-3xl"
         >
           {title}

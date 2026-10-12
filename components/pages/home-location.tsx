@@ -25,7 +25,11 @@ import { materiHome } from "@/data/materi";
 import { paketProgramLocation } from "@/data/paket-program";
 import { kelasOfflineLocation } from "@/data/kelas-offline";
 import { seleksiBumn, seleksiCpns, seleksiPppk } from "@/data/seleksi";
-import { passingGradeHome } from "@/data/passing-grade";
+import {
+  passingGradeBumn,
+  passingGradeCpns,
+  passingGradePppk,
+} from "@/data/passing-grade";
 import {
   updateSeleksiBumn,
   updateSeleksiCpns,
@@ -67,11 +71,13 @@ const HomeLocation = ({ location }: HomeLocationProps) => {
       {kelasOffline && <KelasOffline {...kelasOffline} />}
       <Seleksi {...seleksiCpns} />
       <UpdateSeleksi {...updateSeleksiCpns} />
+      <PassingGrade {...passingGradeCpns} />
       <Seleksi {...seleksiPppk} />
       <UpdateSeleksi {...updateSeleksiPppk} />
+      <PassingGrade {...passingGradePppk} />
       <Seleksi {...seleksiBumn} />
       <UpdateSeleksi {...updateSeleksiBumn} />
-      <PassingGrade {...passingGradeHome} />
+      <PassingGrade {...passingGradeBumn} />
       <TantanganSeleksi {...tantanganSeleksiHome(konsultasiUrl)} />
       <Lembaga {...lembaga} />
       <Testimoni {...testimoni} />
