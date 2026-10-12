@@ -59,9 +59,20 @@ export const resolveLocation = (
   return { region: node.region, ancestors, children: node.children, siblings };
 };
 
+// Kemendagri village codes start with 1 for a kelurahan and 2 for a desa.
+const villageType = (region: Region) =>
+  region.kode.split(".")[3]?.startsWith("2") ? "Desa" : "Kelurahan";
+
 // District and village names repeat across regencies, so below the province
-// level the parent's name is added ("Coblong, Kota Bandung").
+// level the parent's name is added ("Coblong, Kota Bandung"). A village named
+// after its district takes its type and the regency instead ("Kelurahan Gambir,
+// Kota Jakarta Pusat"): "Gambir, Gambir" reads machine-made, and namesakes in
+// other regencies (Cipayung) would share a title.
 export const locationLabel = ({ region, ancestors }: ResolvedLocation) => {
+  const [, regency, district] = ancestors;
+  if (district?.nama === region.nama) {
+    return `${villageType(region)} ${region.nama}, ${regency.nama}`;
+  }
   const parent = ancestors.at(-1);
   return parent ? `${region.nama}, ${parent.nama}` : region.nama;
 };

@@ -26,6 +26,7 @@ const lists = {
   kelurahan: [
     region("31.72.03.1001", "Tugu Utara", "/dki-jakarta/kota-jakarta-utara/koja/tugu-utara"),
     region("31.72.03.1002", "Lagoa", "/dki-jakarta/kota-jakarta-utara/koja/lagoa"),
+    region("31.72.03.1003", "Koja", "/dki-jakarta/kota-jakarta-utara/koja/koja"),
   ],
 };
 
@@ -56,7 +57,26 @@ test("a village resolves under Jabodetabekjur and is a leaf", () => {
 
   expect(names(found.ancestors)).toEqual(["DKI Jakarta", "Kota Jakarta Utara", "Koja"]);
   expect(found.children).toEqual([]);
-  expect(names(found.siblings)).toEqual(["Tugu Utara"]);
+  expect(names(found.siblings)).toEqual(["Tugu Utara", "Koja"]);
+  expect(locationLabel(found)).toBe("Lagoa, Koja");
+});
+
+test("a village named after its district is labelled with its type and the regency", () => {
+  const district = resolveLocation(tree, ["dki-jakarta", "kota-jakarta-utara", "koja"]);
+  const village = resolveLocation(tree, ["dki-jakarta", "kota-jakarta-utara", "koja", "koja"]);
+
+  expect(locationLabel(district)).toBe("Koja, Kota Jakarta Utara");
+  expect(locationLabel(village)).toBe("Kelurahan Koja, Kota Jakarta Utara");
+
+  const desa = {
+    region: region("32.01.01.2001", "Cibinong", "/jawa-barat/kabupaten-bogor/cibinong/cibinong"),
+    ancestors: [
+      region("32", "Jawa Barat", "/jawa-barat"),
+      region("32.01", "Kabupaten Bogor", "/jawa-barat/kabupaten-bogor"),
+      region("32.01.01", "Cibinong", "/jawa-barat/kabupaten-bogor/cibinong"),
+    ],
+  };
+  expect(locationLabel(desa)).toBe("Desa Cibinong, Kabupaten Bogor");
 });
 
 test("a regency outside Kabupaten Besar is a leaf", () => {

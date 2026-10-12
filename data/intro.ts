@@ -186,12 +186,14 @@ export const introTexts: Record<string, string> = {
   "96": "Provinsi Papua Barat Daya dibentuk pada tahun 2022 sebagai pemekaran dari Papua Barat, dengan ibu kota di Kota Sorong. Provinsi ini terdiri atas lima kabupaten dan satu kota, termasuk Kabupaten Raja Ampat. Peserta dari seluruh Papua Barat Daya bisa belajar bersama tutor Akademi ASN lewat Privat Home Visit atau kelas online.",
 };
 
-const baseText = (
-  { region, ancestors }: ResolvedLocation,
-  texts: Record<string, string>,
-) =>
+// A village named after its district names the district's level, so the
+// template never reads "Gambir berada di Gambir."
+const parentName = (region: ResolvedLocation["region"], parent?: ResolvedLocation["region"]) =>
+  !parent ? "Indonesia" : parent.nama === region.nama ? `Kecamatan ${parent.nama}` : parent.nama;
+
+const baseText = ({ region, ancestors }: ResolvedLocation, texts: Record<string, string>) =>
   texts[region.kode] ??
-  `${region.nama} berada di ${ancestors.at(-1)?.nama ?? "Indonesia"}. Peserta dari ${region.nama} bisa belajar bersama Akademi ASN lewat kelas online atau les privat dengan tutor yang datang ke rumah.`;
+  `${region.nama} berada di ${parentName(region, ancestors.at(-1))}. Peserta dari ${region.nama} bisa belajar bersama Akademi ASN lewat kelas online atau les privat dengan tutor yang datang ke rumah.`;
 
 // Track sentences follow each page's base text on every location, down to
 // villages, so they only state what is true everywhere: the test content.

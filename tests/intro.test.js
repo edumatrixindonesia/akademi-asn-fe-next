@@ -34,3 +34,18 @@ test("the home intro names all three tracks", () => {
   expect(intro.title).toBe("Bimbel CPNS PPPK BUMN di Jawa Barat");
   expect(intro.description).toContain("Jawa Barat berada di Indonesia.");
 });
+
+test("the template skips a parent that shares the region's name", () => {
+  const koja = region("31.72.03", "Koja", "/dki-jakarta/kota-jakarta-utara/koja");
+  const intro = introCpnsLocation(
+    {
+      region: region("31.72.03.1003", "Koja", "/dki-jakarta/kota-jakarta-utara/koja/koja"),
+      ancestors: [region("31", "DKI Jakarta", "/dki-jakarta"), region("31.72", "Kota Jakarta Utara", "/dki-jakarta/kota-jakarta-utara"), koja],
+      children: [],
+      siblings: [],
+    },
+    {},
+  );
+
+  expect(intro.description).toContain("Koja berada di Kecamatan Koja.");
+});

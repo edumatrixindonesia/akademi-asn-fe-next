@@ -21,8 +21,8 @@ const pages = [
   },
   {
     path: "/bimbel-bumn/dki-jakarta/kota-jakarta-pusat/gambir/gambir",
-    title: "Bimbel BUMN Terbaik di Gambir, Gambir - Persiapan Tes RBB TKD &amp; AKHLAK | Akademi ASN",
-    h1: "Bimbel BUMN di Gambir, Gambir untuk Persiapan Tes Rekrutmen Bersama BUMN",
+    title: "Bimbel BUMN Terbaik di Kelurahan Gambir, Kota Jakarta Pusat - Persiapan Tes RBB TKD &amp; AKHLAK | Akademi ASN",
+    h1: "Bimbel BUMN di Kelurahan Gambir, Kota Jakarta Pusat untuk Persiapan Tes Rekrutmen Bersama BUMN",
   },
 ];
 
