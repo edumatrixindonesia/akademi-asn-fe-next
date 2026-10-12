@@ -516,6 +516,5 @@ export const legacyRedirects = Object.entries(legacyFamilies).flatMap(([oldFamil
   Object.entries(legacyLocationSlugs).map(([slug, path]) => ({
     source: `/bimbel-les-privat-${oldFamily}-di-${slug}`,
     destination: `${family}${path}`,
-    permanent: true,
   })),
 );
