@@ -47,10 +47,10 @@ const Home = ({ provinces }: HomeProps) => {
       <Materi {...materiHome(konsultasiUrl)} />
       <PaketProgram {...paketProgram(konsultasiUrl)} />
       <Seleksi {...seleksiCpns} />
-      <Seleksi {...seleksiPppk} />
-      <Seleksi {...seleksiBumn} />
       <UpdateSeleksi {...updateSeleksiCpns} />
+      <Seleksi {...seleksiPppk} />
       <UpdateSeleksi {...updateSeleksiPppk} />
+      <Seleksi {...seleksiBumn} />
       <UpdateSeleksi {...updateSeleksiBumn} />
       <PassingGrade {...passingGradeHome} />
       <TantanganSeleksi {...tantanganSeleksiHome(konsultasiUrl)} />
