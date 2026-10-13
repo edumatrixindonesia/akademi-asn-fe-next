@@ -35,14 +35,6 @@ REGION_SERVICE_TOKEN="<jwt>"
 
 Package manager is bun (not npm).
 
-```bash
-bun install
-bun dev        # http://localhost:3000
-bun run build
-bun run lint
-bun run typecheck
-```
-
 ## Architecture
 
 ```
@@ -70,13 +62,6 @@ public/                   # Static assets (e.g. logo-akademi-asn.webp)
 - **Images:** reference by string path from `public/` and always render with `next/image`.
 
 ### Routes
-
-| Page component                   | Route                                     |
-| -------------------------------- | ----------------------------------------- |
-| `pages/home.tsx`                 | `app/page.tsx`                            |
-| `pages/home-location.tsx`        | `app/[...locations]/page.tsx`             |
-| `pages/bimbel-cpns.tsx`          | `app/bimbel-cpns/page.tsx`                |
-| `pages/bimbel-cpns-location.tsx` | `app/bimbel-cpns/[...locations]/page.tsx` |
 
 `bimbel-pppk` and `bimbel-bumn` follow the same pattern as `bimbel-cpns`. `[...locations]` segments are province / regency / district / village. Only paths in the location page set (`docs/adr/0001-location-page-depth.md`) render; any other path 404s.
 
@@ -114,11 +99,9 @@ Pages never pass literal values to sections. All section content lives in `data/
 
 ## Stack gotchas
 
-- Next.js 16.3 App Router (`app/`), React 19.2, TypeScript.
 - Tailwind v4 has no `tailwind.config`. Theme tokens and CSS variables live in `app/globals.css`.
 - shadcn/ui uses style `radix-vega` and imports primitives from the `radix-ui` package, not `@radix-ui/*`. Add components with `bunx shadcn add <name>`; they land in `components/ui/`.
 - `cn` (`lib/utils.ts`) re-exports the `cn` npm package, which replaces clsx and tailwind-merge. Do not add clsx or tailwind-merge.
-- Icons: `lucide-react`.
 
 ## Working rules
 
