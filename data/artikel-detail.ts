@@ -42,7 +42,6 @@ export const artikelDetail = (entry: Artikel, wordCount: number, konsultasiUrl: 
     share: [
       { name: "WhatsApp", href: `https://api.whatsapp.com/send?text=${shareText}%20${shareUrl}` },
       { name: "Facebook", href: `https://www.facebook.com/sharer/sharer.php?u=${shareUrl}` },
-      { name: "X", href: `https://x.com/intent/post?url=${shareUrl}&text=${shareText}` },
       { name: "LinkedIn", href: `https://www.linkedin.com/sharing/share-offsite/?url=${shareUrl}` },
     ],
     jsonLd: {
