@@ -1,7 +1,6 @@
 ---
 name: write-article
 description: Draft one Blog Artikel for a keyword, with two owner approval gates.
-disable-model-invocation: true
 argument-hint: <keyword>
 ---
 
