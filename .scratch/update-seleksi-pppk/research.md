@@ -23,6 +23,7 @@ Every quote below was read on the fetched page or PDF itself. Scanned PDFs were 
   - Originally governed by KepmenPANRB 16/2025 (13 Jan 2025).
   - Now also governed by **PermenPANRB 9/2026** (enacted 19 Jun 2026, promulgated 26 Jun 2026). It lets the PPK propose conversion to PPPK "berdasarkan pertimbangan ketersediaan anggaran dan hasil penilaian/evaluasi kinerja".
   - For **teachers**, Kemendikdasmen (Tier C) states that guru PPPK paruh waktu become PPPK penuh waktu **from 1 Jan 2027, automatically, without selection**. No KemenPANRB or BKN primary page confirming that date was found.
+  - Follow-up 2026-10-13 (§3): still no new regulation. BKN, as quoted in news only, frames the 2027 conversion as the existing Pasal 24–25 mechanism: no test, but it still needs formasi, a PPK proposal, and BKN review.
 - **Most recent national PPPK test format: KepmenPANRB 347/2024** (with 348/2024 for guru and 349/2024 for nakes). BKN still cited 347/2024 as the basis for the Sekolah Rakyat CAT on 30 Jun 2026.
   - All of the site's PPPK 2024 numbers match the decree text, with the caveats listed in §5.
 
@@ -142,6 +143,20 @@ Every quote below was read on the fetched page or PDF itself. Scanned PDFs were 
   - Teacher counts differ: 231.246 (19 Aug) vs 242.482 (6 Oct).
   - Use the latest wording and attribute it to Mendikdasmen.
 - **Non-teacher PPPK paruh waktu:** no official 2026 timing for conversion was found. Only the PermenPANRB 9/2026 mechanism applies (PPK proposal, budget, performance).
+- **Follow-up 2026-10-13: is there a newer regulation for the teacher conversion?**
+  - **No new KemenPANRB regulation was found.**
+    - PermenPANRB 2026 No. 10–16 and No. 19 on data-jdih.menpan.go.id cover other subjects: jabatan fungsional, tunjangan kinerja, and sekolah kedinasan (No. 13). None of them covers PPPK paruh waktu.
+    - No. 17, 18, and 20 return 404, so their subjects are unknown.
+    - menpan.go.id still fails on TLS, so KemenPANRB news after 3 Sep 2026 remains unchecked.
+  - **"Tanpa seleksi" means the Pasal 24–25 mechanism, not a new automatic rule.** Kepala Biro Humas BKN Wisudo Putro Nugroho, 21 Sep 2026, quoted by [JPNN](https://www.jpnn.com/news/pembahasan-rapbn-2027-alokasi-gaji-tunjangan-pppk-sudah-disetujui-dpr): "Dalam PermenPANRB 9 Tahun 2026, apabila anggarannya tersedia dan formasinya sudah ditetapkan, pejabat pembina kepegawaian (PPK) bisa langsung mengusulkan perubahan status kepada kepala BKN untuk ditetapkan."
+    - This is news only. No matching bkn.go.id page was found, so it stays discovery-only.
+    - Read this way, the Kemendikdasmen claim and the regulation do not contradict each other. "Otomatis tanpa seleksi" means no test. The status change still needs the Menteri's formasi, a PPK proposal, and BKN's pertimbangan teknis.
+  - **Budget condition.** DPR approved Rp23,0 triliun in RAPBN 2027 for the teacher conversion on 24 Sep 2026. This was reported in news and by Kemendikdasmen (Tier C), not by Kemenkeu.
+  - **Transfer to pegawai pemerintah pusat has no legal basis yet.**
+    - Komisi II DPR is studying whether it needs the UU ASN revision or can go through the UU Sisdiknas ([Klik Pendidikan, 26 Aug 2026](https://www.klikpendidikan.id/cpns-pppk/35817565873/kabar-terbaru-ruu-asn-dpr-kaji-pengalihan-status-pppk-guru-jadi-pegawai-pusat-demi-pemerataan)).
+    - Kemendagri says it will act once the regulation and mechanism are set ([Liputan6, 16 Sep 2026](https://berita.liputan6.com/peristiwa/read/8293101/kemendagri-siap-kawal-pengalihan-tata-kelola-pppk-guru)).
+  - **DPR record of the 18 Aug 2026 agreement.** [dpr.go.id](https://www.dpr.go.id/kegiatan-dpr/berita/DPR-Pemerintah-Sepakati-Status-PPPK-Guru-Buka-Peluang-Jadi-PNS-68138) reports the agreement, but it gives no date and no regulation. [emedia.dpr.go.id, 18 Sep 2026](https://emedia.dpr.go.id/news/2026/09/18/fikri-faqih-230-ribu-guru-pppk-paruh-waktu-akan-diangkat-jadi-penuh-waktu-tanpa-tes-pada-2027) quotes a Komisi X member saying "tanpa tes", funded by APBN 2027. DPR is not a Tier A source for ASN procurement.
+  - **Site impact.** The "PPPK Paruh Waktu" entry in `data/update-seleksi.ts` states only the PermenPANRB 9/2026 mechanism, and that is still correct. The 1 Jan 2027 date and the pusat transfer still lack a Tier A source.
 
 ## 4. PermenPANRB 6/2024: PPPK eligibility and stages
 
@@ -246,6 +261,7 @@ Do not present any of these as fact.
   - No KemenPANRB primary page was found.
 - **PermenPANRB 9/2026 dates in news.** [Indopolitika](https://indopolitika.com/tanpa-tes-lagi-begini-aturan-alih-status-pppk-paruh-waktu-jadi-asn-penuh-menurut-permenpanrb-9-2026/) says it was signed 9 June. The regulation text says 19 Jun 2026, so use 19 Jun.
 - **Teacher conversion from 1 Jan 2027, "otomatis tanpa seleksi".** Only Kemendikdasmen (Tier C) states this. No KemenPANRB or BKN text was found, and PermenPANRB 9/2026 itself describes a PPK-proposal mechanism.
+  - BKN, as quoted in news only (21 Sep 2026), says the conversion runs through PermenPANRB 9/2026 Pasal 24–25. See the §3 follow-up of 2026-10-13.
 - **Surat MenPANRB B/1553/M.SM.01.00/2026 (kebutuhan ASN TA 2026).** News and blogs only; see the CPNS file.
 - **Sekolah Unggul Garuda formasi.** [detik](https://www.detik.com/edu/sekolah/d-8337305/link-dan-jadwal-resmi-rekrutmen-guru-pppk-sekolah-garuda-jangan-lewatkan) says 98. The Kemdiktisaintek PDF says 96, so use 96.
 - **Kepmensos 94/HUK/2026 (Pedoman Seleksi PPPK Guru Sekolah Rakyat).** The JDIH Kemensos download URL appeared in search, but its content was seen only via the search highlight and a blog copy. It was not fetched.
@@ -290,6 +306,11 @@ Do not present any of these as fact.
 - https://www.kemendikdasmen.go.id/siaran-pers/16055-mulai-2027-pemerintah-buka-jalan-lebih-jelas-bagi-karier-guru-pppk (Tier C)
 - https://puslapdik.kemendikdasmen.go.id/guru-pppk-paruh-waktu-akan-dialihkan-menjadi-pppk-penuh-dan-menjadi-pegawai-pemerintah-pusat/ (Tier C)
 - https://bpmpbanten.kemendikdasmen.go.id/penataan-guru-2027/ (Tier C)
+- https://puslapdik.kemendikdasmen.go.id/kabar-baik-di-tahun-2027-untuk-guru-non-asn-dan-guru-pppk-paruh-waktu/ (Tier C, 2026-10-13)
+- https://paudpedia.kemendikdasmen.go.id/berita/penataan-tata-kelola-guru-nasional-936316-guru-pppk-disiapkan-jadi-pns-pemerintah-buka-rekrutmen-464856-guru-baru (Tier C, search highlight, 2026-10-13)
+- data-jdih.menpan.go.id/dokumen/2026permenpanrb010.pdf through 016.pdf, and 019.pdf (titles read, 2026-10-13; none on PPPK paruh waktu)
+- https://www.dpr.go.id/kegiatan-dpr/berita/DPR-Pemerintah-Sepakati-Status-PPPK-Guru-Buka-Peluang-Jadi-PNS-68138 (DPR, not Tier A, 2026-10-13)
+- https://emedia.dpr.go.id/news/2026/09/18/fikri-faqih-230-ribu-guru-pppk-paruh-waktu-akan-diangkat-jadi-penuh-waktu-tanpa-tes-pada-2027 (DPR, not Tier A, 2026-10-13)
 
 **Attempted, not usable:**
 
@@ -299,12 +320,15 @@ Do not present any of these as fact.
 - https://jdih.menpan.go.id/dokumen-hukum/KEPMEN/jenis/1869 (not found)
 - data-jdih.menpan.go.id/dokumen/2026kepmenpanrb215.pdf and 2026kepmenpanrb043.pdf (404)
 - https://jdih.kemensos.go.id/ (Kepmensos 94/HUK/2026 download link seen in search only)
+- data-jdih.menpan.go.id/dokumen/2026permenpanrb017.pdf, 018.pdf, and 020.pdf (404, 2026-10-13)
+- https://menpan.go.id/site/ (TLS failure, 2026-10-13)
 
 **News, blogs, and competitors (discovery only):**
 
 - Kompas: money.kompas.com 2026/08/07 and 2026/06/25; kompas.com/edu 2026/06/04, 2026/08/07 and 2026/10/09; kompas.tv 684343 and 678917; kompas.com/tren 2026/01/07
 - Tribun: sumsel 1020776; tribunnews 7848460 and 7870445; pontianak 1175444; aceh 1028649; jatim 556605; lombok 99304
 - detik: d-8336603, d-8337305 and d-8624951
+- 2026-10-13 follow-up: jpnn (RAPBN 2027 alokasi PPPK, quoting BKN), satelitnews 165507, kontakbanten, sinardunia 116458, peradaban.id, klikpendidikan 35817565873, liputan6 8293101, rm.id 322306 and 321388, kupang.antaranews 198499, kompas.tv 686872, money.kompas.com 2026/08/19 and 2026/08/20, kompas.com/tren 2026/08/20, pantau 360930, eksam.id, jadipppk.id, keboncinta, idpberita, tentangguru, komunitasbelajar
 - tirto: hxjQ, hxC4 and hCg8
 - Others:
   - kumparan
