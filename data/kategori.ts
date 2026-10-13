@@ -2,59 +2,43 @@ import type { Kategori } from "@/lib/artikel-schema";
 
 export const kategori = [
   {
-    slug: "cpns",
-    name: "CPNS",
-    title: "CPNS",
-    seoTitle: "Artikel Seleksi CPNS: SKD SKB & Tips",
+    slug: "informasi",
+    name: "Informasi",
+    title: "Informasi",
+    seoTitle: "Informasi Seleksi CPNS, PPPK, dan BUMN Terbaru",
     metaDescription:
-      "Artikel seputar seleksi CPNS: tahapan SKD dan SKB, materi TWK, TIU, dan TKP, serta tips persiapannya dari Akademi ASN.",
+      "Informasi terbaru seputar seleksi CPNS, PPPK, dan Rekrutmen Bersama BUMN dari Akademi ASN: jadwal, pengumuman, syarat, dan aturan seleksi beserta sumbernya.",
     description:
-      "Artikel tentang seleksi Calon Pegawai Negeri Sipil (CPNS), mulai dari tahapan Seleksi Kompetensi Dasar (SKD) dan Seleksi Kompetensi Bidang (SKB), materi TWK, TIU, dan TKP, hingga tips persiapannya.",
-    cover: {
-      src: "/img/blog/cover-cpns.jpg",
-      alt: "Artikel seleksi CPNS dari Akademi ASN",
-    },
+      "Informasi seputar seleksi CPNS, PPPK, dan Rekrutmen Bersama BUMN, mulai dari jadwal, pengumuman, dan syarat pendaftaran hingga aturan seleksinya. Setiap data seleksi mencantumkan sumber resminya.",
   },
   {
-    slug: "pppk",
-    name: "PPPK",
-    title: "PPPK",
-    seoTitle: "Artikel Seleksi PPPK: Seleksi Kompetensi & Tips",
+    slug: "tips",
+    name: "Tips",
+    title: "Tips",
+    seoTitle: "Tips Lolos Seleksi CPNS, PPPK, dan BUMN",
     metaDescription:
-      "Artikel seputar seleksi PPPK: kompetensi teknis, manajerial, sosial kultural, dan wawancara, serta tips persiapannya dari Akademi ASN.",
+      "Tips lolos seleksi CPNS, PPPK, dan Rekrutmen Bersama BUMN dari Akademi ASN: strategi belajar, persiapan dokumen, dan cara menghadapi setiap tahap tes.",
     description:
-      "Artikel tentang seleksi Pegawai Pemerintah dengan Perjanjian Kerja (PPPK), mulai dari seleksi kompetensi teknis, manajerial, sosial kultural, dan wawancara, hingga tips persiapannya.",
-    cover: {
-      src: "/img/blog/cover-pppk.jpg",
-      alt: "Artikel seleksi PPPK dari Akademi ASN",
-    },
+      "Tips persiapan seleksi CPNS, PPPK, dan Rekrutmen Bersama BUMN, mulai dari strategi belajar dan persiapan dokumen hingga cara menghadapi setiap tahap tes.",
   },
   {
-    slug: "bumn",
-    name: "BUMN",
-    title: "BUMN",
-    seoTitle: "Artikel Rekrutmen Bersama BUMN: Tes & Tips",
+    slug: "latihan-soal",
+    name: "Latihan Soal",
+    title: "Latihan Soal",
+    seoTitle: "Latihan Soal CPNS, PPPK, dan BUMN + Pembahasan",
     metaDescription:
-      "Artikel seputar Rekrutmen Bersama BUMN: tes online tahap awal, tes lanjutan di tiap perusahaan, dan tips persiapannya dari Akademi ASN.",
+      "Latihan soal CPNS, PPPK, dan Rekrutmen Bersama BUMN dari Akademi ASN, lengkap dengan kunci jawaban dan pembahasan untuk setiap tahap tes seleksi.",
     description:
-      "Artikel tentang Rekrutmen Bersama BUMN, mulai dari tes online tahap awal, tes lanjutan di masing-masing perusahaan, hingga tips persiapannya.",
-    cover: {
-      src: "/img/blog/cover-bumn.jpg",
-      alt: "Artikel Rekrutmen Bersama BUMN dari Akademi ASN",
-    },
+      "Kumpulan latihan soal seleksi CPNS, PPPK, dan Rekrutmen Bersama BUMN, lengkap dengan kunci jawaban dan pembahasannya.",
   },
   {
-    slug: "tips-info",
-    name: "Tips & Info",
-    title: "Tips & Info",
-    seoTitle: "Tips & Info Seleksi CPNS PPPK BUMN",
+    slug: "materi",
+    name: "Materi",
+    title: "Materi",
+    seoTitle: "Materi Tes CPNS, PPPK, dan BUMN",
     metaDescription:
-      "Tips dan info lintas seleksi CPNS, PPPK, dan BUMN dari Akademi ASN: perbedaan jalur, persiapan dokumen, dan cara belajar.",
+      "Materi tes seleksi CPNS, PPPK, dan Rekrutmen Bersama BUMN dari Akademi ASN: TWK, TIU, TKP, serta kompetensi teknis, manajerial, dan sosial kultural.",
     description:
-      "Tips dan informasi yang berlaku lintas seleksi CPNS, PPPK, dan BUMN, seperti perbedaan jalur seleksi, persiapan dokumen, dan cara belajar.",
-    cover: {
-      src: "/img/blog/cover-tips-info.jpg",
-      alt: "Tips dan info seleksi CPNS, PPPK, dan BUMN dari Akademi ASN",
-    },
+      "Penjelasan materi tes seleksi CPNS, PPPK, dan Rekrutmen Bersama BUMN, mulai dari TWK, TIU, dan TKP hingga kompetensi teknis, manajerial, dan sosial kultural.",
   },
 ] satisfies Kategori[];

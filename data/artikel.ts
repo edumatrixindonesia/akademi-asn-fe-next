@@ -10,7 +10,8 @@ export const artikel = [
       "Rekrutmen Bersama BUMN 2026 belum diumumkan per Oktober 2026. Cek kanal resmi, alur dan passing grade RBB 2025, serta cara mengenali link pendaftaran palsu.",
     excerpt:
       "Rekrutmen Bersama BUMN 2026 belum diumumkan FHCI maupun BP BUMN per 13 Oktober 2026. Pelajari alur RBB 2025 sebagai acuan dan kenali tautan pendaftaran palsu.",
-    kategori: "bumn",
+    kategori: ["informasi", "tips"],
+    examTrack: ["bumn"],
     penulis: "dimas-maulana",
     status: "published",
     publishedAt: "2026-10-13",
@@ -133,7 +134,12 @@ export const artikel = [
       "Apa perbedaan CPNS dan PPPK? Bandingkan status, masa kerja, batas usia melamar, jaminan pensiun, dan jenis seleksinya menurut UU ASN 2023.",
     excerpt:
       "Perbedaan CPNS dan PPPK ada pada status, masa kerja, syarat usia, dan jaminan pensiun. Pahami keduanya sebelum memilih jalur seleksi.",
-    kategori: "tips-info",
+    kategori: ["informasi"],
+    examTrack: ["cpns", "pppk"],
+    cover: {
+      src: "/img/blog/cover-perbedaan-cpns-dan-pppk.jpg",
+      alt: "Perbedaan CPNS dan PPPK: informasi seleksi dari Akademi ASN",
+    },
     penulis: "dimas-maulana",
     status: "published",
     publishedAt: "2026-10-02",
@@ -206,7 +212,8 @@ export const artikel = [
       "Artikel contoh berstatus draft untuk menguji tampilan halaman Artikel Akademi ASN. Isinya tidak memuat data seleksi dan tidak pernah terbit di situs.",
     excerpt:
       "Artikel contoh untuk menguji halaman Artikel; isinya bukan informasi seleksi.",
-    kategori: "tips-info",
+    kategori: ["tips"],
+    examTrack: ["cpns"],
     penulis: "tim-akademi-asn",
     status: "draft",
     focusKeyword: "draft artikel contoh",

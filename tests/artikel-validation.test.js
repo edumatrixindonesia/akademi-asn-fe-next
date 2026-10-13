@@ -6,7 +6,8 @@ const entry = (overrides = {}) => ({
   title: "Contoh",
   description: "d".repeat(130),
   excerpt: "Ringkasan.",
-  kategori: "tips-info",
+  kategori: ["informasi"],
+  examTrack: ["cpns"],
   penulis: "tim-akademi-asn",
   status: "published",
   publishedAt: "2026-10-01",
@@ -68,4 +69,9 @@ test("related allows up to 3 distinct slugs of other entries (forward references
   expect(validateArtikel([entry({ related: ["contoh"] })], ["contoh"]).join()).toContain("itself");
   const twice = validateArtikel([entry({ related: ["nanti", "nanti"] }), later], ["contoh", "nanti"]);
   expect(twice.join()).toContain("repeats");
+});
+
+test("a repeated Kategori or exam track fails", () => {
+  const errors = validateArtikel([entry({ kategori: ["informasi", "informasi"], examTrack: ["cpns", "cpns"] })], ["contoh"]);
+  expect(errors).toHaveLength(2);
 });

@@ -37,17 +37,18 @@ Every `h2` holds plain text with letters or digits (its anchor `id` is built fro
 | `seoTitle` | Only when the `<title>` must differ from the `h1`. Also at most 50 characters. |
 | `description` | Meta description, 120–160 characters. Holds the focus keyword and a reason to click. |
 | `excerpt` | One or two sentences. It is the lead, the card text, and the RSS description. Holds the focus keyword. |
-| `kategori` | One of `cpns`, `pppk`, `bumn`, `tips-info`. Pick the track the Artikel is about; `tips-info` for cross-track topics. |
+| `kategori` | One or more of `informasi`, `tips`, `latihan-soal`, `materi`: the content type, never the exam track. List the best fit first; it is the primary Kategori in the breadcrumb. |
+| `examTrack` | One or more of `cpns`, `pppk`, `bumn`: the tracks the Artikel is about. It picks the landing pages that show it in Artikel Terbaru. List all three for a topic that applies to every track. |
 | `penulis` | `tim-akademi-asn` or `dimas-maulana`. See Penulis. |
 | `status` | `"draft"` while writing; `"published"` after owner approval. |
 | `publishedAt` | ISO date (`2026-10-02`). Set once at publish, never changed. |
 | `updatedAt` | ISO date. Set only after a substantive change to published content. |
 | `focusKeyword` | The keyword the owner gave, lowercase. Unique across Artikel. Never rendered. |
-| `cover` | Omit. The Kategori default cover applies. When the owner supplies one: `{ src, alt }`, 1200×630. |
+| `cover` | Omit. The default cover of the first `examTrack` applies. When the owner supplies one: `{ src, alt }`, 1200×630. |
 | `references` | `{ title, url, publisher, accessedAt }[]`. At least one official source. `accessedAt` is the day the source was read. |
 | `related` | Up to 3 slugs of published Artikel for Artikel Terkait. |
 
-`validateArtikel` fails the build on: duplicate `slug` or `focusKeyword`, a missing body, a title over 50 characters, a `description` outside 120–160, and a published entry without `publishedAt` or `references`.
+`validateArtikel` fails the build on: duplicate `slug` or `focusKeyword`, a missing body, a repeated Kategori or exam track, a title over 50 characters, a `description` outside 120–160, and a published entry without `publishedAt` or `references`.
 
 ## Keyword rules
 

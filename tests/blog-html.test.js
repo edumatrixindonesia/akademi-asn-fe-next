@@ -29,7 +29,7 @@ test("/blog/page/2 returns 404 with 6 or fewer Artikel", async () => {
 test("page 1 redirects permanently to the base URL", async () => {
   for (const [from, to] of [
     ["/blog/page/1", "/blog"],
-    ["/blog/kategori/cpns/page/1", "/blog/kategori/cpns"],
+    ["/blog/kategori/informasi/page/1", "/blog/kategori/informasi"],
   ]) {
     const response = await fetch(`${baseUrl}${from}`, { redirect: "manual" });
     expect(response.status).toBe(308);
@@ -46,14 +46,25 @@ test("each Kategori page renders one h1, a canonical, and the cards of its Kateg
     expect([...html.matchAll(/<h1\b/g)]).toHaveLength(1);
     expect(html).toContain(`>${title}</h1>`);
     expect(html).toMatch(new RegExp(`<link rel="canonical" href="[^"]+/blog/kategori/${slug}"`));
-    const main = html.slice(html.indexOf("<main"));
-    expect(main.includes(`href="/bimbel-${slug}"`)).toBe(slug !== "tips-info");
+  }
+});
+
+test("retired exam-track Kategori redirect permanently", async () => {
+  for (const [from, to] of [
+    ["/blog/kategori/cpns", "/blog"],
+    ["/blog/kategori/pppk/page/2", "/blog"],
+    ["/blog/kategori/bumn", "/blog"],
+    ["/blog/kategori/tips-info", "/blog/kategori/informasi"],
+  ]) {
+    const response = await fetch(`${baseUrl}${from}`, { redirect: "manual" });
+    expect(response.status).toBe(308);
+    expect(new URL(response.headers.get("location"), baseUrl).pathname).toBe(to);
   }
 });
 
 test("unknown Kategori and out-of-range Kategori pages return 404", async () => {
   expect((await fetch(`${baseUrl}/blog/kategori/tidak-ada`)).status).toBe(404);
-  expect((await fetch(`${baseUrl}/blog/kategori/cpns/page/99`)).status).toBe(404);
+  expect((await fetch(`${baseUrl}/blog/kategori/informasi/page/99`)).status).toBe(404);
   expect((await fetch(`${baseUrl}/blog/page/99`)).status).toBe(404);
 });
 
@@ -123,7 +134,7 @@ test("/blog/rss.xml serves RSS 2.0 and blog pages link to it", async () => {
 test("sitemap lists blog pages, Kategori pages, and Artikel", async () => {
   const xml = await (await fetch(`${baseUrl}/sitemap.xml`)).text();
   expect(xml).toMatch(/<loc>[^<]+\/blog<\/loc>/);
-  const used = new Set(artikel.map((entry) => entry.kategori));
+  const used = new Set(artikel.flatMap((entry) => entry.kategori));
   for (const { slug } of kategori) {
     expect(new RegExp(`<loc>[^<]+/blog/kategori/${slug}</loc>`).test(xml)).toBe(used.has(slug));
   }

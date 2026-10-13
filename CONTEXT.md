@@ -131,20 +131,33 @@ An informational page on the Blog that answers one search question (e.g. "passin
 _Avoid_: post, blog post, konten
 
 **Kategori**:
-The one group an Artikel belongs to: one Kategori per exam track (CPNS, PPPK, BUMN), plus Tips & Info for topics that span tracks (e.g. "Perbedaan CPNS dan PPPK").
+A content-type group of Artikel on the Blog: Informasi, Tips, Latihan Soal, or Materi. An Artikel belongs to one or more Kategori; the first one listed is its primary Kategori, shown in its breadcrumb. Kategori never name an exam track.
 _Avoid_: tag (Artikel have no tags)
 
-**Tips & Info**:
-The cross-track Kategori, for Artikel that belong to no single exam track.
-_Avoid_: Umum
+**Informasi**:
+The Kategori for news, schedules, announcements, and rules of a selection (e.g. "Rekrutmen Bersama BUMN 2026", "Perbedaan CPNS dan PPPK").
+_Avoid_: Info (colloquial)
+
+**Tips**:
+The Kategori for preparation strategy and advice on passing a selection. Not the same as Tips Lolos, which is a Produk page section.
+
+**Latihan Soal**:
+The Kategori for example questions with worked answers.
+
+**Materi** (Kategori):
+The Kategori for Artikel that explain a Materi topic (e.g. TWK, TIU, TKP, the PPPK competency tests).
+
+**Artikel exam track**:
+The exam tracks an Artikel is about, one or more. Every Artikel has at least one. It has no public page; it decides which landing pages show the Artikel in Artikel Terbaru. An Artikel that applies to every track lists all three.
+_Avoid_: Kategori CPNS/PPPK/BUMN (retired)
 
 **Penulis**:
 The person or team credited on an Artikel. It is "Tim Akademi ASN" unless a real, named person reviewed and edited the Artikel. Penulis are never fictional people.
 _Avoid_: author (in UI copy), kontributor
 
 **Artikel Terbaru**:
-The newest published Artikel, shown as a section after FAQ on every landing page (from the page's own Kategori; all Kategori on the home page) and in the Artikel sidebar. Hidden when there are none.
+The newest published Artikel, shown as a section after FAQ on every landing page (Artikel of the page's exam track; any Artikel on the home page) and in the Artikel sidebar. Hidden when there are none.
 
 **Artikel Terkait**:
-The three Artikel shown at the end of an Artikel: hand-picked if set, otherwise the newest from the same Kategori, then from other Kategori.
+The three Artikel shown at the end of an Artikel: hand-picked if set, then Artikel sharing an exam track, then Artikel sharing a Kategori, then the newest.
 _Avoid_: Artikel Lainnya

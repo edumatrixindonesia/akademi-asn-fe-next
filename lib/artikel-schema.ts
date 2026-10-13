@@ -1,4 +1,5 @@
-export type KategoriSlug = "cpns" | "pppk" | "bumn" | "tips-info";
+export type KategoriSlug = "informasi" | "tips" | "latihan-soal" | "materi";
+export type ExamTrack = "cpns" | "pppk" | "bumn";
 export type PenulisSlug = "tim-akademi-asn" | "dimas-maulana";
 
 export type Image = { src: string; alt: string };
@@ -16,7 +17,10 @@ export type Artikel = {
   seoTitle?: string;
   description: string;
   excerpt: string;
-  kategori: KategoriSlug;
+  // The first Kategori is the primary one, shown in the breadcrumb.
+  kategori: [KategoriSlug, ...KategoriSlug[]];
+  // The first exam track picks the default cover.
+  examTrack: [ExamTrack, ...ExamTrack[]];
   penulis: PenulisSlug;
   status: "draft" | "published";
   publishedAt?: string;
@@ -34,7 +38,6 @@ export type Kategori = {
   seoTitle: string;
   metaDescription: string;
   description: string;
-  cover: Image;
 };
 
 export type Penulis = {
@@ -74,6 +77,8 @@ export const validateArtikel = (
     if (keywords.has(keyword)) errors.push(`Duplicate focusKeyword "${keyword}" ("${slug}").`);
     keywords.add(keyword);
 
+    if (new Set(entry.kategori).size < entry.kategori.length) errors.push(`"${slug}" repeats a Kategori.`);
+    if (new Set(entry.examTrack).size < entry.examTrack.length) errors.push(`"${slug}" repeats an exam track.`);
     if (!bodies.has(slug)) errors.push(`"${slug}" has no data/artikel/${slug}.mdx.`);
     if (entry.title.length > 50) errors.push(`"${slug}" title is over 50 characters.`);
     if (entry.seoTitle && entry.seoTitle.length > 50) errors.push(`"${slug}" seoTitle is over 50 characters.`);

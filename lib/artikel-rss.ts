@@ -28,7 +28,9 @@ export const buildRss = (
       <guid isPermaLink="true">${link}</guid>
       <description>${escapeXml(entry.excerpt)}</description>
       <pubDate>${new Date(entry.publishedAt!).toUTCString()}</pubDate>
-      <category>${escapeXml(kategoriName(entry.kategori))}</category>
+${entry.kategori
+        .map((slug) => `      <category>${escapeXml(kategoriName(slug))}</category>`)
+        .join("\n")}
     </item>`;
     })
     .join("\n");

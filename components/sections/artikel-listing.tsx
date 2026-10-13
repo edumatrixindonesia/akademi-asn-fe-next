@@ -1,5 +1,4 @@
 import Image from "next/image";
-import Link from "next/link";
 import ArtikelCard, { type ArtikelCardProps } from "@/components/shared/artikel-card";
 import ArtikelPagination, { type ArtikelPaginationProps } from "@/components/shared/artikel-pagination";
 import SearchArtikelForm, { type SearchArtikelFormProps } from "@/components/shared/search-artikel-form";
@@ -7,7 +6,6 @@ import SearchArtikelForm, { type SearchArtikelFormProps } from "@/components/sha
 export type ArtikelListingProps = {
   title: string;
   description?: string;
-  landing?: { label: string; href: string };
   profile?: {
     avatar: { src: string; alt: string };
     jobTitle?: string;
@@ -25,7 +23,6 @@ export type ArtikelListingProps = {
 const ArtikelListing = ({
   title,
   description,
-  landing,
   profile,
   search,
   heading,
@@ -37,13 +34,6 @@ const ArtikelListing = ({
   <section className="container-section pt-4! md:pt-6!">
     <h1 className="text-3xl font-bold leading-tight text-primary-dark md:text-4xl">{title}</h1>
     {description && <p className="mt-4 max-w-3xl text-lg leading-relaxed">{description}</p>}
-    {landing && (
-      <p className="mt-3">
-        <Link href={landing.href} className="font-medium text-primary hover:underline">
-          {landing.label}
-        </Link>
-      </p>
-    )}
     {profile && (
       <div className="mt-6 flex flex-col gap-4 sm:flex-row">
         <Image

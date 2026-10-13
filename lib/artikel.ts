@@ -1,10 +1,11 @@
 import { readdirSync, readFileSync } from "node:fs";
 import path from "node:path";
 import { artikel } from "@/data/artikel";
+import { artikelCover } from "@/data/artikel-cover";
 import { kategori } from "@/data/kategori";
 import { penulis } from "@/data/penulis";
 import { artikelMatches } from "@/lib/artikel-search";
-import { validateArtikel, type Artikel } from "@/lib/artikel-schema";
+import { validateArtikel, type Artikel, type ExamTrack } from "@/lib/artikel-schema";
 import { headingId } from "@/lib/heading-id";
 import {
   blogFirstPageSize,
@@ -43,13 +44,14 @@ export const getKategori = (slug: string) =>
 export const getPenulis = (slug: string) =>
   penulis.find((entry) => entry.slug === slug);
 
-// An Artikel's Kategori and the fields that fall back to it or to the title.
-// `KategoriSlug` types the slug, so the lookup always finds an entry.
+// An Artikel's primary Kategori and the fields that fall back to its first
+// exam track or to the title. `KategoriSlug` types the slug, so the lookup
+// always finds an entry.
 export const resolveArtikel = (entry: Artikel) => {
-  const kategori = getKategori(entry.kategori)!;
+  const kategori = getKategori(entry.kategori[0])!;
   return {
     kategori,
-    cover: entry.cover ?? kategori.cover,
+    cover: entry.cover ?? artikelCover[entry.examTrack[0]],
     seoTitle: entry.seoTitle ?? entry.title,
   };
 };
@@ -139,31 +141,36 @@ export const getLatestArtikel = (
     .sort(newestFirst)
     .slice(0, limit);
 
-// Artikel Terkait: `related` first, then the newest of the same Kategori,
-// then the newest of other Kategori.
+const shares = <T>(a: T[], b: T[]) => a.some((item) => b.includes(item));
+
+// Artikel Terkait: `related` first, then Artikel sharing an exam track, then
+// Artikel sharing a Kategori, newest first within each group.
 export const getRelatedArtikel = (entry: Artikel, limit = 3): Artikel[] => {
   const others = getLatestArtikel(Infinity, entry.slug);
   const picked = (entry.related ?? [])
     .map((slug) => others.find((other) => other.slug === slug))
     .filter((other) => other !== undefined);
-  const rest = others.filter((other) => !picked.includes(other));
+  const score = (other: Artikel) =>
+    (shares(other.examTrack, entry.examTrack) ? 2 : 0) +
+    (shares(other.kategori, entry.kategori) ? 1 : 0);
+  // `sort` is stable, so each score group stays newest first.
+  const rest = others
+    .filter((other) => !picked.includes(other))
+    .sort((a, b) => score(b) - score(a));
 
-  return [
-    ...picked,
-    ...rest.filter((other) => other.kategori === entry.kategori),
-    ...rest.filter((other) => other.kategori !== entry.kategori),
-  ].slice(0, limit);
+  return [...picked, ...rest].slice(0, limit);
 };
 
 export const getArtikelByKategori = (slug: string): Artikel[] =>
-  getLatestArtikel(Infinity).filter((entry) => entry.kategori === slug);
+  getLatestArtikel(Infinity).filter((entry) =>
+    entry.kategori.some((other) => other === slug),
+  );
 
-// Artikel Terbaru on landing pages: 3 newest of one Kategori, or of any.
-export const getLandingArtikel = (kategori?: string): Artikel[] =>
-  (kategori
-    ? getArtikelByKategori(kategori)
-    : getLatestArtikel(Infinity)
-  ).slice(0, 3);
+// Artikel Terbaru on landing pages: 3 newest of one exam track, or of any.
+export const getLandingArtikel = (examTrack?: ExamTrack): Artikel[] =>
+  getLatestArtikel(Infinity)
+    .filter((entry) => !examTrack || entry.examTrack.includes(examTrack))
+    .slice(0, 3);
 
 export const searchArtikel = (query: string): Artikel[] =>
   getLatestArtikel(Infinity).filter((entry) => artikelMatches(entry, query));

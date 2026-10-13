@@ -62,33 +62,22 @@ export const artikelListingBlog = (
     pagination: pagination("/blog", page, totalPages),
   }) satisfies ArtikelListingProps;
 
-// Every Kategori but Tips & Info is an exam track with its own landing page.
-const landingHref = (kategori: Kategori) =>
-  kategori.slug === "tips-info" ? undefined : `/bimbel-${kategori.slug}`;
-
 export const artikelListingKategori = (
   kategori: Kategori,
   page: number,
   entries: Artikel[],
   totalPages: number,
-) => {
-  const href = landingHref(kategori);
-
-  return {
+) =>
+  ({
     title: `${kategori.title}${pageSuffix(page)}`,
     description: page === 1 ? kategori.description : undefined,
-    landing:
-      page === 1 && href
-        ? { label: `Lihat Bimbel ${kategori.name}`, href }
-        : undefined,
     search: page === 1 ? searchArtikel : undefined,
     heading: "Daftar artikel",
     headingVisible: false,
     items: entries.map(artikelCard),
     emptyLabel,
     pagination: pagination(kategoriPath(kategori.slug), page, totalPages),
-  } satisfies ArtikelListingProps;
-};
+  }) satisfies ArtikelListingProps;
 
 // An empty query shows the form only: no results and no empty message.
 export const artikelListingCari = (query: string, entries: Artikel[]) =>
