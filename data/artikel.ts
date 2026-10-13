@@ -4,6 +4,129 @@ import type { Artikel } from "@/lib/artikel-schema";
 // data/artikel/{slug}.mdx (lib/artikel.ts fails the build otherwise).
 export const artikel = [
   {
+    slug: "rekrutmen-bersama-bumn-2026",
+    title: "Rekrutmen Bersama BUMN 2026: Status dan Persiapan",
+    description:
+      "Rekrutmen Bersama BUMN 2026 belum diumumkan per Oktober 2026. Cek kanal resmi, alur dan passing grade RBB 2025, serta cara mengenali link pendaftaran palsu.",
+    excerpt:
+      "Rekrutmen Bersama BUMN 2026 belum diumumkan FHCI maupun BP BUMN per 13 Oktober 2026. Pelajari alur RBB 2025 sebagai acuan dan kenali tautan pendaftaran palsu.",
+    kategori: "bumn",
+    penulis: "tim-akademi-asn",
+    status: "published",
+    publishedAt: "2026-10-13",
+    focusKeyword: "rekrutmen bersama bumn 2026",
+    references: [
+      {
+        title: "Berita FHCI",
+        url: "https://fhcibumn.com/gallery/news",
+        publisher: "Forum Human Capital Indonesia",
+        accessedAt: "2026-10-13",
+      },
+      {
+        title: "Karir dan Magang BUMN",
+        url: "https://bumn.go.id/peluang/karir/karir-bumn",
+        publisher: "Badan Pengaturan BUMN",
+        accessedAt: "2026-10-13",
+      },
+      {
+        title: "Pengumuman penutupan seluruh proses seleksi Rekrutmen Bersama BUMN 2025",
+        url: "https://www.instagram.com/fhci.bumn/p/DOaJszXkdC6/",
+        publisher: "Forum Human Capital Indonesia (Instagram @fhci.bumn)",
+        accessedAt: "2026-10-13",
+      },
+      {
+        title: "Rekrutmen Bersama BUMN 2025 Resmi Dibuka, Lebih Inklusif Merangkul Disabilitas Hingga Semua Suku di Nusantara",
+        url: "https://bumn.go.id/publikasi/berita/rilis/detail/67f5f71ed5c0d",
+        publisher: "Badan Pengaturan BUMN",
+        accessedAt: "2026-10-13",
+      },
+      {
+        title: "Kabar Gembira, Rekrutmen Bersama BUMN (RBB) Tahun 2024, akan Segera Dibuka",
+        url: "https://bumn.go.id/index.php/publikasi/berita/rilis/detail/65cd8686b397c",
+        publisher: "Badan Pengaturan BUMN",
+        accessedAt: "2026-10-13",
+      },
+      {
+        title: "Undang-Undang Nomor 16 Tahun 2025 tentang Perubahan Keempat atas Undang-Undang Nomor 19 Tahun 2003 tentang BUMN",
+        url: "https://peraturan.bpk.go.id/Details/330668/uu-no-16-tahun-2025",
+        publisher: "JDIH BPK",
+        accessedAt: "2026-10-13",
+      },
+      {
+        title: "Peraturan Presiden Nomor 105 Tahun 2025 tentang Badan Pengaturan Badan Usaha Milik Negara",
+        url: "https://peraturan.bpk.go.id/Details/334645/perpres-no-105-tahun-2025",
+        publisher: "JDIH BPK",
+        accessedAt: "2026-10-13",
+      },
+      {
+        title: "Danantara Indonesia in Numbers: State-Owned Enterprises Transformation",
+        url: "https://www.danantaraindonesia.co.id/",
+        publisher: "Danantara Indonesia",
+        accessedAt: "2026-10-13",
+      },
+      {
+        title: "Jenjang pendidikan, jalur, dan dokumen Rekrutmen Bersama BUMN 2025",
+        url: "https://x.com/fhcibumn/status/1897522359122452860",
+        publisher: "Forum Human Capital Indonesia (X @fhcibumn)",
+        accessedAt: "2026-10-13",
+      },
+      {
+        title: "2000+ lowongan dari 100+ BUMN dibuka: pelamar memilih satu posisi",
+        url: "https://x.com/fhcibumn/status/1897937989466308796",
+        publisher: "Forum Human Capital Indonesia (X @fhcibumn)",
+        accessedAt: "2026-10-13",
+      },
+      {
+        title: "Pendaftaran dan Job Apply Rekrutmen Bersama BUMN (RBB) 2025 resmi ditutup",
+        url: "https://www.instagram.com/fhci.bumn/p/DHZLQL6TGyL/",
+        publisher: "Forum Human Capital Indonesia (Instagram @fhci.bumn)",
+        accessedAt: "2026-10-13",
+      },
+      {
+        title: "Nilai ambang batas Tes Online Tahap 1 Rekrutmen Bersama BUMN 2025",
+        url: "https://x.com/fhcibumn/status/1913070090242953322",
+        publisher: "Forum Human Capital Indonesia (X @fhcibumn)",
+        accessedAt: "2026-10-13",
+      },
+      {
+        title: "Ketentuan kelulusan Tes Online Tahap 1 ke Tahap 2 Rekrutmen Bersama BUMN 2025",
+        url: "https://www.instagram.com/fhci.bumn/p/DJQuLGtSMoH/",
+        publisher: "Forum Human Capital Indonesia (Instagram @fhci.bumn)",
+        accessedAt: "2026-10-13",
+      },
+      {
+        title: "Jadwal dan nilai ambang batas Tes Online Tahap 2 Rekrutmen Bersama BUMN 2025",
+        url: "https://x.com/fhcibumn/status/1924399209673073056",
+        publisher: "Forum Human Capital Indonesia (X @fhcibumn)",
+        accessedAt: "2026-10-13",
+      },
+      {
+        title: "[HOAKS] Tautan Rekrutmen Bersama BUMN 2026",
+        url: "https://diskominfo.lamongankab.go.id/posting/50183",
+        publisher: "Diskominfo Kabupaten Lamongan",
+        accessedAt: "2026-10-13",
+      },
+      {
+        title: "[HOAKS] Lowongan Pekerjaan BUMN 2026",
+        url: "https://jalahoaks.jakarta.go.id/detail/Hoaks-Lowongan-Pekerjaan-BUMN-2026",
+        publisher: "Jala Hoaks Jakarta",
+        accessedAt: "2026-10-13",
+      },
+      {
+        title: "RDAP domain fhcibumn.id",
+        url: "https://rdap.pandi.id/rdap/domain/fhcibumn.id",
+        publisher: "PANDI",
+        accessedAt: "2026-10-13",
+      },
+      {
+        title: "ParkingCrew: domain monetization platform",
+        url: "https://www.parkingcrew.com/",
+        publisher: "ParkingCrew",
+        accessedAt: "2026-10-13",
+      },
+    ],
+  },
+  {
     slug: "perbedaan-cpns-dan-pppk",
     title: "Perbedaan CPNS dan PPPK: Status, Hak, dan Syarat",
     description:
