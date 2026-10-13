@@ -11,7 +11,7 @@ export const artikel = [
     excerpt:
       "Rekrutmen Bersama BUMN 2026 belum diumumkan FHCI maupun BP BUMN per 13 Oktober 2026. Pelajari alur RBB 2025 sebagai acuan dan kenali tautan pendaftaran palsu.",
     kategori: "bumn",
-    penulis: "tim-akademi-asn",
+    penulis: "dimas-maulana",
     status: "published",
     publishedAt: "2026-10-13",
     focusKeyword: "rekrutmen bersama bumn 2026",
