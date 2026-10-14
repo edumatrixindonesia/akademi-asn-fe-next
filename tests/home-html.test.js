@@ -26,8 +26,8 @@ test("home HTML declares Indonesian and absolute canonical and Open Graph URLs",
   }
   expect(html).toContain("3 kali jumlah formasi");
   expect(html.indexOf("Paket Program Akademi ASN")).toBeLessThan(html.indexOf("SKD (Seleksi Kompetensi Dasar)"));
-  expect(html.indexOf("SKD (Seleksi Kompetensi Dasar)")).toBeLessThan(html.indexOf("Mengenal Konsep Passing Grade"));
-  expect(html.indexOf("Mengenal Konsep Passing Grade")).toBeLessThan(html.indexOf("Kenapa Banyak Peserta Gagal?"));
+  expect(html.indexOf("SKD (Seleksi Kompetensi Dasar)")).toBeLessThan(html.indexOf("Passing Grade SKD CPNS"));
+  expect(html.indexOf("Passing Grade SKD CPNS")).toBeLessThan(html.indexOf("Kenapa Banyak Peserta Gagal?"));
   expect(html).toContain("Terlalu Fokus pada Satu Sub-Tes");
   expect(html).toContain("Gagal Manajemen Waktu");
   expect(html).toContain('alt="Pria berseragam cokelat menulis pada papan catatan"');

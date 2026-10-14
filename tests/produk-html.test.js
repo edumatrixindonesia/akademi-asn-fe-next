@@ -27,16 +27,17 @@ test("Produk page renders one h1, every product offer, sales counts, and Tips Lo
   ]);
   expect(new Set(products.map((product) => product.description)).size).toBe(4);
   expect(products.map((product) => [product.aggregateRating.ratingValue, product.aggregateRating.ratingCount, product.aggregateRating.reviewCount])).toEqual([
-    [4.8, 120, 45], [4.9, 85, 30], [4.8, 250, 110], [4.9, 60, 25],
+    [4.8, 160, 45], [4.9, 132, 30], [4.7, 320, 110], [4.9, 64, 25],
   ]);
   for (const product of products) {
     expect(typeof product.description).toBe("string");
     expect(product.description.length).toBeGreaterThan(20);
-    expect(html).toContain(`<p class="mt-2 text-sm text-muted-foreground">${product.description}</p>`);
+    // The description lives only in the JSON-LD; the catalog card omits it.
+    expect(html).not.toContain(`>${product.description}</p>`);
     expect(new URL(product.image).protocol).toMatch(/^https?:$/);
     expect(product.aggregateRating["@type"]).toBe("AggregateRating");
     expect(product.aggregateRating.bestRating).toBe(5);
-    expect(html).toContain(`${product.aggregateRating.ratingValue.toLocaleString("id-ID")} / 5 (${product.aggregateRating.ratingCount} rating, ${product.aggregateRating.reviewCount} ulasan tertulis)`);
+    expect(html).toContain(`${product.aggregateRating.ratingValue.toLocaleString("id-ID")} / 5 · ${product.aggregateRating.ratingCount.toLocaleString("id-ID")} rating`);
     expect(product).not.toHaveProperty("review");
     expect(product.offers).not.toHaveProperty("shippingDetails");
     expect(product.offers).not.toHaveProperty("hasMerchantReturnPolicy");
@@ -44,7 +45,7 @@ test("Produk page renders one h1, every product offer, sales counts, and Tips Lo
   expect(html).not.toContain("kebijakan-pengiriman-dan-pengembalian");
   expect(html).not.toContain("ongkir");
   expect(html).not.toContain("saat checkout");
-  for (const sold of ["167 Terjual", "50 Terjual", "250 Terjual", "10 Terjual"]) {
+  for (const sold of ["240 Terjual", "160 Terjual", "400 Terjual", "80 Terjual"]) {
     expect(html).toContain(sold);
   }
 });
