@@ -1,6 +1,7 @@
 import type { CtaFooterProps } from "@/components/sections/cta-footer";
+import type { KonsultasiUrl } from "@/data/contact";
 
-export const ctaFooter = (konsultasiUrl: string) =>
+export const ctaFooter = (konsultasiUrl: KonsultasiUrl) =>
   ({
     title: "Jangan Tunda Persiapan Anda",
     description:
@@ -10,10 +11,10 @@ export const ctaFooter = (konsultasiUrl: string) =>
     ctaImageAlt:
       "Ilustrasi ajakan untuk segera mendaftar bimbel CPNS, PPPK, dan BUMN di Akademi ASN",
     ctaLabel: "Daftar Sekarang",
-    ctaHref: konsultasiUrl,
+    ctaHref: konsultasiUrl("kelas trial gratis"),
   }) satisfies CtaFooterProps;
 
-export const ctaFooterLocation = (konsultasiUrl: string, location: string) =>
+export const ctaFooterLocation = (konsultasiUrl: KonsultasiUrl, location: string) =>
   ({
     ...ctaFooter(konsultasiUrl),
     description: `Dapatkan kelas trial gratis dan rasakan langsung metode belajar privat 1-on-1 bersama master teacher Akademi ASN di ${location} sebelum Anda memutuskan untuk bergabung.`,

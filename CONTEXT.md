@@ -116,6 +116,10 @@ Practical advice for passing the selection exam (e.g. prepare documents, practis
 **Konsultasi**:
 A free chat with an Admin Konsultasi over WhatsApp. It is the primary call to action across the site.
 
+**Topik Konsultasi**:
+What the prefilled Konsultasi chat says the visitor wants to ask about, so the Admin Konsultasi knows where the click came from. It names the page ("Bimbel CPNS Akademi ASN", plus "wilayah <location>" on a location page) and, where the call to action is about one offer, that offer first ("Program Optima Bimbel CPNS Akademi ASN wilayah Coblong, Kota Bandung"). A call to action on a single product card (Daftar Produk, Produk Unggulan, Paket Hemat Komplit, the Tryout page buttons) names only the product ("Tryout CPNS"). On the Produk page, the general call to action names "Produk Akademi ASN". Tutoring calls to action on the Tryout and Produk pages name "Bimbel Akademi ASN". The navbar call to action always names "Bimbel Akademi ASN".
+_Avoid_: pesan, template
+
 **Admin Konsultasi**:
 One of the Akademi ASN admins who answer Konsultasi chats. Konsultasi links rotate between them in a fixed order (Asyah, Nevita, Putri, Ista), one admin per Giliran Konsultasi.
 _Avoid_: CS, call center (the UI label "Call Center" stays)

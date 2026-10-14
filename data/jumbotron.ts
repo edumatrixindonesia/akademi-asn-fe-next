@@ -1,9 +1,10 @@
 import type { JumbotronProps } from "@/components/sections/jumbotron";
+import type { KonsultasiUrl } from "@/data/contact";
 import { hargaPaketTryoutSkd } from "@/data/daftar-produk";
 import { tahunSeleksi } from "@/data/tahun-seleksi";
 import { formatRupiah } from "@/lib/utils";
 
-export const jumbotronHome = (konsultasiUrl: string) =>
+export const jumbotronHome = (konsultasiUrl: KonsultasiUrl) =>
   ({
     title: "Bimbel CPNS PPPK BUMN Terbaik untuk Persiapan Seleksi",
     description:
@@ -11,10 +12,10 @@ export const jumbotronHome = (konsultasiUrl: string) =>
     backgroundImage: "/img/section/bg-bimbel-cpns-pppk-bumn.webp",
     heroImage: "/img/section/bimbel-cpns-pppk-bumn-terbaik.webp",
     heroImageAlt: "Bimbel CPNS PPPK BUMN Terbaik",
-    ctas: [{ label: "Daftar Sekarang", href: konsultasiUrl }],
+    ctas: [{ label: "Daftar Sekarang", href: konsultasiUrl() }],
   }) satisfies JumbotronProps;
 
-export const jumbotronCpns = (konsultasiUrl: string) =>
+export const jumbotronCpns = (konsultasiUrl: KonsultasiUrl) =>
   ({
     ...jumbotronHome(konsultasiUrl),
     title: "Bimbel CPNS Online & Offline Terbaik untuk Persiapan SKD & SKB",
@@ -23,7 +24,7 @@ export const jumbotronCpns = (konsultasiUrl: string) =>
     heroImageAlt: "Bimbel CPNS Online & Offline Terbaik",
   }) satisfies JumbotronProps;
 
-export const jumbotronPppk = (konsultasiUrl: string) =>
+export const jumbotronPppk = (konsultasiUrl: KonsultasiUrl) =>
   ({
     ...jumbotronHome(konsultasiUrl),
     title: "Bimbel PPPK untuk Teknis Guru & Tenaga Kesehatan",
@@ -32,7 +33,7 @@ export const jumbotronPppk = (konsultasiUrl: string) =>
     heroImageAlt: "Bimbel PPPK Online & Offline Terbaik",
   }) satisfies JumbotronProps;
 
-export const jumbotronBumn = (konsultasiUrl: string) =>
+export const jumbotronBumn = (konsultasiUrl: KonsultasiUrl) =>
   ({
     ...jumbotronHome(konsultasiUrl),
     title: "Bimbel BUMN untuk Persiapan Tes Rekrutmen Bersama BUMN",
@@ -42,9 +43,9 @@ export const jumbotronBumn = (konsultasiUrl: string) =>
   }) satisfies JumbotronProps;
 
 // One button per exam track, each opening Konsultasi about that track's tryout.
-export const jumbotronTryout = (konsultasiUrl: (topic: string) => string) =>
+export const jumbotronTryout = (konsultasiUrl: KonsultasiUrl) =>
   ({
-    ...jumbotronHome(konsultasiUrl("Tryout CPNS PPPK BUMN")),
+    ...jumbotronHome(konsultasiUrl),
     title: `Tryout CPNS PPPK BUMN ${tahunSeleksi} Simulasi CAT Online`,
     description:
       "Bergabung dengan 15.000+ alumni yang sudah lolos CPNS & PPPK. Latih kecepatan dan ketepatan menjawab dengan simulasi CAT, pembahasan lengkap, dan ranking nasional.",
@@ -55,7 +56,7 @@ export const jumbotronTryout = (konsultasiUrl: (topic: string) => string) =>
     })),
   }) satisfies JumbotronProps;
 
-export const jumbotronProduk = (konsultasiUrl: string) =>
+export const jumbotronProduk = (konsultasiUrl: KonsultasiUrl) =>
   ({
     ...jumbotronHome(konsultasiUrl),
     title: `Modul Buku & Tryout CPNS PPPK BUMN ${tahunSeleksi}`,
@@ -63,13 +64,13 @@ export const jumbotronProduk = (konsultasiUrl: string) =>
     heroImageAlt: "Modul, buku, dan tryout CPNS PPPK BUMN Akademi ASN",
     ctas: [
       { label: "Lihat Produk", href: "#daftar-produk" },
-      { label: "Konsultasi Gratis", href: konsultasiUrl },
+      { label: "Konsultasi Gratis", href: konsultasiUrl() },
     ],
   }) satisfies JumbotronProps;
 
 // Location entries take the headline location (`headlineLabel`).
 export const jumbotronHomeLocation = (
-  konsultasiUrl: string,
+  konsultasiUrl: KonsultasiUrl,
   location: string,
 ) =>
   ({
@@ -80,7 +81,7 @@ export const jumbotronHomeLocation = (
   }) satisfies JumbotronProps;
 
 export const jumbotronCpnsLocation = (
-  konsultasiUrl: string,
+  konsultasiUrl: KonsultasiUrl,
   location: string,
 ) =>
   ({
@@ -91,7 +92,7 @@ export const jumbotronCpnsLocation = (
   }) satisfies JumbotronProps;
 
 export const jumbotronPppkLocation = (
-  konsultasiUrl: string,
+  konsultasiUrl: KonsultasiUrl,
   location: string,
 ) =>
   ({
@@ -102,7 +103,7 @@ export const jumbotronPppkLocation = (
   }) satisfies JumbotronProps;
 
 export const jumbotronBumnLocation = (
-  konsultasiUrl: string,
+  konsultasiUrl: KonsultasiUrl,
   location: string,
 ) =>
   ({

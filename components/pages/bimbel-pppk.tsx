@@ -30,13 +30,13 @@ import { ctaFooter } from "@/data/cta-footer";
 import { faqPppk } from "@/data/faq";
 import { mediaMassa } from "@/data/media-massa";
 import { artikelTerbaru } from "@/data/artikel-terbaru";
-import { getKonsultasiUrl } from "@/data/contact";
+import { konsultasiPage, pageKonsultasiUrl } from "@/data/contact";
 import type { Region } from "@/lib/location-tree";
 
 type BimbelPppkProps = { provinces: Region[] };
 
 const BimbelPppk = ({ provinces }: BimbelPppkProps) => {
-  const konsultasiUrl = getKonsultasiUrl();
+  const konsultasiUrl = pageKonsultasiUrl(konsultasiPage.pppk);
   const terbaru = artikelTerbaru("pppk");
   return (
     <main className="flex-1">

@@ -41,7 +41,16 @@ export const officeHoursText = officeHours
   )
   .join(", ");
 
-const defaultKonsultasiTopic = "Bimbel Akademi ASN";
+// The page part of each Topik Konsultasi (CONTEXT.md).
+export const konsultasiPage = {
+  home: "Bimbel Akademi ASN",
+  cpns: "Bimbel CPNS Akademi ASN",
+  pppk: "Bimbel PPPK Akademi ASN",
+  bumn: "Bimbel BUMN Akademi ASN",
+  produk: "Produk Akademi ASN",
+} as const;
+
+const defaultKonsultasiTopic = konsultasiPage.home;
 
 // Giliran Konsultasi start at 08.00, 13.00, and 17.00 WIB (01:00, 06:00,
 // 10:00 UTC). The order carries over across days; the 08.00 WIB Giliran on
@@ -62,11 +71,22 @@ export const getKonsultasiAdmin = (now = Date.now()) => {
 
 // Konsultasi links point to the /konsultasi route, which picks the admin at
 // click time, so pages can stay statically rendered.
-export const getKonsultasiUrl = (topic = defaultKonsultasiTopic): string =>
+export const getKonsultasiUrl = (topic: string = defaultKonsultasiTopic): string =>
   `/konsultasi?${new URLSearchParams({ topik: topic })}`;
 
+export type KonsultasiUrl = (offer?: string) => string;
+
+// Konsultasi links for one page: the offer a call to action is about comes
+// first ("Program Optima Bimbel CPNS Akademi ASN wilayah Coblong, Kota Bandung").
+export const pageKonsultasiUrl =
+  (page: string, location?: string): KonsultasiUrl =>
+  (offer) =>
+    getKonsultasiUrl(
+      [offer, page, location && `wilayah ${location}`].filter(Boolean).join(" "),
+    );
+
 export const getKonsultasiWhatsappUrl = (
-  topic = defaultKonsultasiTopic,
+  topic: string = defaultKonsultasiTopic,
   now = Date.now(),
 ): string => {
   const admin = getKonsultasiAdmin(now);

@@ -26,11 +26,11 @@ import { testimoni } from "@/data/testimoni";
 import { ctaFooter } from "@/data/cta-footer";
 import { faqTryout } from "@/data/faq";
 import { mediaMassa } from "@/data/media-massa";
-import { getKonsultasiUrl } from "@/data/contact";
+import { getKonsultasiUrl, konsultasiPage, pageKonsultasiUrl } from "@/data/contact";
 
 // Not a landing page (see CONTEXT.md): no location pages, no Jangkauan.
 const Tryout = () => {
-  const konsultasiUrl = getKonsultasiUrl();
+  const konsultasiUrl = pageKonsultasiUrl(konsultasiPage.home);
   return (
     <main className="flex-1">
       <Breadcrumb {...breadcrumbTryout} />

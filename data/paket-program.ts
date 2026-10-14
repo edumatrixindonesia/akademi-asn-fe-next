@@ -1,4 +1,5 @@
 import type { PaketProgramProps } from "@/components/sections/paket-program";
+import type { KonsultasiUrl } from "@/data/contact";
 import { formatRupiah } from "@/lib/utils";
 
 const offlineIncluded = [
@@ -21,7 +22,7 @@ const privatePrices = paketPrivat.map(({ price }) => Number(price.replace(/\D/g,
 export const bimbelPrivatPriceRange =
   `${formatRupiah(Math.min(...privatePrices))}–${formatRupiah(Math.max(...privatePrices))} (bimbel privat)`;
 
-export const paketProgram = (konsultasiUrl: string) =>
+export const paketProgram = (konsultasiUrl: KonsultasiUrl) =>
   ({
     title: "Paket Program Akademi ASN",
     offlineTitle: "Program Bimbel Offline",
@@ -40,7 +41,7 @@ export const paketProgram = (konsultasiUrl: string) =>
           ...offlineIncluded,
         ],
         ctaLabel: "Tanyakan Kelas",
-        ctaHref: konsultasiUrl,
+        ctaHref: konsultasiUrl(`Program ${name}`),
       }),
     ),
     onlinePackages: [
@@ -55,28 +56,28 @@ export const paketProgram = (konsultasiUrl: string) =>
           "E-Book Soal & Pembahasan",
         ],
         ctaLabel: "Tanyakan Kelas",
-        ctaHref: konsultasiUrl,
+        ctaHref: konsultasiUrl("Program Bootcamp Online"),
       },
       {
         name: "Paket Tryout 1",
         sessions: "1 Paket Tryout",
         included: ["1 Paket Tryout"],
         ctaLabel: "Tanyakan Kelas",
-        ctaHref: konsultasiUrl,
+        ctaHref: konsultasiUrl("Paket Tryout 1"),
       },
       {
         name: "Paket Tryout 5",
         sessions: "5 Paket Tryout",
         included: ["5 Paket Tryout"],
         ctaLabel: "Tanyakan Kelas",
-        ctaHref: konsultasiUrl,
+        ctaHref: konsultasiUrl("Paket Tryout 5"),
       },
     ],
   }) satisfies PaketProgramProps;
 
 // Privat Home Visit is available anywhere, so the offline heading can name
 // any location.
-export const paketProgramLocation = (konsultasiUrl: string, location: string) =>
+export const paketProgramLocation = (konsultasiUrl: KonsultasiUrl, location: string) =>
   ({
     ...paketProgram(konsultasiUrl),
     offlineTitle: `Program Bimbel Privat di ${location}`,

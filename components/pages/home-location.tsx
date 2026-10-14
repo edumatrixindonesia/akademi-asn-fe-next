@@ -44,7 +44,7 @@ import { ctaFooterLocation } from "@/data/cta-footer";
 import { faqHome } from "@/data/faq";
 import { mediaMassa } from "@/data/media-massa";
 import { artikelTerbaru } from "@/data/artikel-terbaru";
-import { getKonsultasiUrl } from "@/data/contact";
+import { konsultasiPage, pageKonsultasiUrl } from "@/data/contact";
 import {
   headlineLabel,
   locationLabel,
@@ -54,9 +54,9 @@ import {
 type HomeLocationProps = { location: ResolvedLocation };
 
 const HomeLocation = ({ location }: HomeLocationProps) => {
-  const konsultasiUrl = getKonsultasiUrl();
-  const terbaru = artikelTerbaru();
   const label = locationLabel(location);
+  const konsultasiUrl = pageKonsultasiUrl(konsultasiPage.home, label);
+  const terbaru = artikelTerbaru();
   const kelasOffline = kelasOfflineLocation(location);
   return (
     <main className="flex-1">

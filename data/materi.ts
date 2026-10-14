@@ -1,6 +1,7 @@
 import type { MateriProps } from "@/components/sections/materi";
+import type { KonsultasiUrl } from "@/data/contact";
 
-export const materiHome = (konsultasiUrl: string) =>
+export const materiHome = (konsultasiUrl: KonsultasiUrl) =>
   ({
     title: "Program Persiapan Siap Lulus CPNS, PPPK, dan BUMN",
     description:
@@ -17,10 +18,10 @@ export const materiHome = (konsultasiUrl: string) =>
       "Bimbingan & Konsultasi",
     ],
     ctaLabel: "Daftarkan Sekarang",
-    ctaHref: konsultasiUrl,
+    ctaHref: konsultasiUrl(),
   }) satisfies MateriProps;
 
-export const materiCpns = (konsultasiUrl: string) =>
+export const materiCpns = (konsultasiUrl: KonsultasiUrl) =>
   ({
     ...materiHome(konsultasiUrl),
     title: "Program Bimbel CPNS untuk Persiapan SKD dan SKB",
@@ -38,7 +39,7 @@ export const materiCpns = (konsultasiUrl: string) =>
     ],
   }) satisfies MateriProps;
 
-export const materiPppk = (konsultasiUrl: string) =>
+export const materiPppk = (konsultasiUrl: KonsultasiUrl) =>
   ({
     ...materiHome(konsultasiUrl),
     title: "Program Bimbel PPPK Guru, Tenaga Kesehatan, dan Teknis",
@@ -56,7 +57,7 @@ export const materiPppk = (konsultasiUrl: string) =>
     ],
   }) satisfies MateriProps;
 
-export const materiBumn = (konsultasiUrl: string) =>
+export const materiBumn = (konsultasiUrl: KonsultasiUrl) =>
   ({
     ...materiHome(konsultasiUrl),
     title: "Program Bimbel BUMN untuk Rekrutmen Bersama BUMN",

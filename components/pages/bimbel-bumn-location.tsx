@@ -36,7 +36,7 @@ import { ctaFooterLocation } from "@/data/cta-footer";
 import { faqBumn } from "@/data/faq";
 import { mediaMassa } from "@/data/media-massa";
 import { artikelTerbaru } from "@/data/artikel-terbaru";
-import { getKonsultasiUrl } from "@/data/contact";
+import { konsultasiPage, pageKonsultasiUrl } from "@/data/contact";
 import {
   headlineLabel,
   locationLabel,
@@ -46,9 +46,9 @@ import {
 type BimbelBumnLocationProps = { location: ResolvedLocation };
 
 const BimbelBumnLocation = ({ location }: BimbelBumnLocationProps) => {
-  const konsultasiUrl = getKonsultasiUrl();
-  const terbaru = artikelTerbaru("bumn");
   const label = locationLabel(location);
+  const konsultasiUrl = pageKonsultasiUrl(konsultasiPage.bumn, label);
+  const terbaru = artikelTerbaru("bumn");
   const kelasOffline = kelasOfflineLocation(location);
   return (
     <main className="flex-1">

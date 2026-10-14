@@ -36,7 +36,7 @@ import { ctaFooterLocation } from "@/data/cta-footer";
 import { faqCpns } from "@/data/faq";
 import { mediaMassa } from "@/data/media-massa";
 import { artikelTerbaru } from "@/data/artikel-terbaru";
-import { getKonsultasiUrl } from "@/data/contact";
+import { konsultasiPage, pageKonsultasiUrl } from "@/data/contact";
 import {
   headlineLabel,
   locationLabel,
@@ -46,9 +46,9 @@ import {
 type BimbelCpnsLocationProps = { location: ResolvedLocation };
 
 const BimbelCpnsLocation = ({ location }: BimbelCpnsLocationProps) => {
-  const konsultasiUrl = getKonsultasiUrl();
-  const terbaru = artikelTerbaru("cpns");
   const label = locationLabel(location);
+  const konsultasiUrl = pageKonsultasiUrl(konsultasiPage.cpns, label);
+  const terbaru = artikelTerbaru("cpns");
   const kelasOffline = kelasOfflineLocation(location);
   return (
     <main className="flex-1">

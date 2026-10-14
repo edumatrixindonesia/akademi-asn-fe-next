@@ -18,15 +18,15 @@ import { testimoni } from "@/data/testimoni";
 import { ctaFooter } from "@/data/cta-footer";
 import { mediaMassa } from "@/data/media-massa";
 import { faqProduk } from "@/data/faq";
-import { getKonsultasiUrl } from "@/data/contact";
+import { getKonsultasiUrl, konsultasiPage, pageKonsultasiUrl } from "@/data/contact";
 
 // Not a landing page (see CONTEXT.md): no location pages, no Jangkauan.
 const Produk = () => {
-  const konsultasiUrl = getKonsultasiUrl();
+  const konsultasiUrl = pageKonsultasiUrl(konsultasiPage.home);
   return (
     <main className="flex-1">
       <Breadcrumb {...breadcrumbProduk} />
-      <Jumbotron {...jumbotronProduk(konsultasiUrl)} />
+      <Jumbotron {...jumbotronProduk(pageKonsultasiUrl(konsultasiPage.produk))} />
       <DaftarProduk {...daftarProdukProduk(getKonsultasiUrl)} />
       <TipsLolos {...tipsLolosProduk} />
       <PaketProgram {...paketProgram(konsultasiUrl)} />

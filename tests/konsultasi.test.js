@@ -4,6 +4,8 @@ import {
   getKonsultasiAdmin,
   getKonsultasiUrl,
   getKonsultasiWhatsappUrl,
+  konsultasiPage,
+  pageKonsultasiUrl,
 } from "../data/contact";
 import { siteUrl } from "../lib/site-url";
 
@@ -44,6 +46,21 @@ test("Konsultasi links point to the internal redirect route", () => {
   expect(getKonsultasiUrl('artikel "Passing Grade SKD"')).toBe(
     "/konsultasi?topik=artikel+%22Passing+Grade+SKD%22",
   );
+});
+
+test("Topik Konsultasi puts the offer before the page and the location last", () => {
+  const topik = (url) => new URLSearchParams(url.split("?")[1]).get("topik");
+
+  expect(topik(pageKonsultasiUrl(konsultasiPage.cpns)())).toBe(
+    "Bimbel CPNS Akademi ASN",
+  );
+  expect(
+    topik(
+      pageKonsultasiUrl(konsultasiPage.cpns, "Coblong, Kota Bandung")(
+        "Program Optima",
+      ),
+    ),
+  ).toBe("Program Optima Bimbel CPNS Akademi ASN wilayah Coblong, Kota Bandung");
 });
 
 test(

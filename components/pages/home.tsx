@@ -36,13 +36,13 @@ import { ctaFooter } from "@/data/cta-footer";
 import { faqHome } from "@/data/faq";
 import { mediaMassa } from "@/data/media-massa";
 import { artikelTerbaru } from "@/data/artikel-terbaru";
-import { getKonsultasiUrl } from "@/data/contact";
+import { konsultasiPage, pageKonsultasiUrl } from "@/data/contact";
 import type { Region } from "@/lib/location-tree";
 
 type HomeProps = { provinces: Region[] };
 
 const Home = ({ provinces }: HomeProps) => {
-  const konsultasiUrl = getKonsultasiUrl();
+  const konsultasiUrl = pageKonsultasiUrl(konsultasiPage.home);
   const terbaru = artikelTerbaru();
   return (
     <main className="flex-1">

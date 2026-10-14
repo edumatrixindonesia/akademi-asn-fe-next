@@ -30,13 +30,13 @@ import { ctaFooter } from "@/data/cta-footer";
 import { faqCpns } from "@/data/faq";
 import { mediaMassa } from "@/data/media-massa";
 import { artikelTerbaru } from "@/data/artikel-terbaru";
-import { getKonsultasiUrl } from "@/data/contact";
+import { konsultasiPage, pageKonsultasiUrl } from "@/data/contact";
 import type { Region } from "@/lib/location-tree";
 
 type BimbelCpnsProps = { provinces: Region[] };
 
 const BimbelCpns = ({ provinces }: BimbelCpnsProps) => {
-  const konsultasiUrl = getKonsultasiUrl();
+  const konsultasiUrl = pageKonsultasiUrl(konsultasiPage.cpns);
   const terbaru = artikelTerbaru("cpns");
   return (
     <main className="flex-1">

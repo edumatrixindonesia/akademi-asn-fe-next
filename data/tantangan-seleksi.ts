@@ -1,6 +1,7 @@
 import type { TantanganSeleksiProps } from "@/components/sections/tantangan-seleksi";
+import type { KonsultasiUrl } from "@/data/contact";
 
-export const tantanganSeleksiHome = (konsultasiUrl: string) =>
+export const tantanganSeleksiHome = (konsultasiUrl: KonsultasiUrl) =>
   ({
     title: "Kenapa Banyak Peserta Gagal?",
     illustration: "/img/section/berhasil-lolos-bimbel-cpns-pppk-bumn.webp",
@@ -21,7 +22,7 @@ export const tantanganSeleksiHome = (konsultasiUrl: string) =>
       },
     ],
     ctaLabel: "Konsultasi Pola Soal",
-    ctaHref: konsultasiUrl,
+    ctaHref: konsultasiUrl("pola soal"),
     closingTitle: "Bersiap untuk Berhasil atau Diam untuk Kegagalan",
     closingDescription:
       "Persaingan seleksi ASN ketat setiap tahun. Persiapan yang terarah membantu Anda menghadapi tahap awal dengan lebih siap.",
@@ -34,7 +35,7 @@ export const tantanganSeleksiHome = (konsultasiUrl: string) =>
     ],
   }) satisfies TantanganSeleksiProps;
 
-export const tantanganSeleksiCpns = (konsultasiUrl: string) =>
+export const tantanganSeleksiCpns = (konsultasiUrl: KonsultasiUrl) =>
   ({
     ...tantanganSeleksiHome(konsultasiUrl),
     title: "Kenapa Banyak Peserta CPNS Gagal?",
@@ -64,7 +65,7 @@ export const tantanganSeleksiCpns = (konsultasiUrl: string) =>
       "Pada CPNS 2024, 3.963.832 orang mendaftar untuk memperebutkan 250.407 formasi. Persiapan yang terarah membantu Anda bersaing sejak tahap awal.",
   }) satisfies TantanganSeleksiProps;
 
-export const tantanganSeleksiPppk = (konsultasiUrl: string) =>
+export const tantanganSeleksiPppk = (konsultasiUrl: KonsultasiUrl) =>
   ({
     ...tantanganSeleksiHome(konsultasiUrl),
     title: "Kenapa Banyak Peserta PPPK Gagal?",
@@ -94,7 +95,7 @@ export const tantanganSeleksiPppk = (konsultasiUrl: string) =>
       "Pada seleksi PPPK 2024 tahap I, 1.357.205 pelamar memenuhi syarat, tetapi hanya 676.482 yang dinyatakan lulus. Persiapan yang terarah membantu Anda bersaing di peringkat formasi.",
   }) satisfies TantanganSeleksiProps;
 
-export const tantanganSeleksiBumn = (konsultasiUrl: string) =>
+export const tantanganSeleksiBumn = (konsultasiUrl: KonsultasiUrl) =>
   ({
     ...tantanganSeleksiHome(konsultasiUrl),
     title: "Kenapa Banyak Peserta BUMN Gagal?",

@@ -66,7 +66,11 @@ test("Tryout page renders one h1, product offers, and per-topic Konsultasi links
       new URL(match[1].replaceAll("&amp;", "&"), "http://localhost").searchParams.get("topik"),
     ),
   );
-  for (const topic of ["Tryout CPNS", "Tryout PPPK", "Tryout BUMN", "E-Book Modul CPNS", "Paket Hemat Komplit"]) {
+  // Product CTAs name only the product; tutoring CTAs name the home page.
+  for (const topic of [
+    "Tryout CPNS", "Tryout PPPK", "Tryout BUMN", "E-Book Modul CPNS", "Paket Hemat Komplit",
+    "Program Optima Bimbel Akademi ASN", "pola soal Bimbel Akademi ASN", "kelas trial gratis Bimbel Akademi ASN",
+  ]) {
     expect(topics).toContain(topic);
   }
 });

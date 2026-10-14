@@ -180,3 +180,20 @@ test("the sitemap lists every location page with absolute URLs", async () => {
   expect(locs).not.toContain(`${origin}/aceh/kabupaten-aceh-selatan/bakongan`);
   expect(locs.size).toBeGreaterThan(10_000);
 });
+
+test("location page Konsultasi links name the offer, page, and location", async () => {
+  const html = await (await get("/bimbel-pppk/jawa-barat/kota-bandung/coblong")).text();
+  const topics = new Set(
+    [...html.matchAll(/href="(\/konsultasi\?[^"]+)"/g)].map((match) =>
+      new URL(match[1].replaceAll("&amp;", "&"), "http://localhost").searchParams.get("topik"),
+    ),
+  );
+  for (const topic of [
+    "Bimbel Akademi ASN",
+    "Bimbel PPPK Akademi ASN wilayah Coblong, Kota Bandung",
+    "Program Optima Bimbel PPPK Akademi ASN wilayah Coblong, Kota Bandung",
+    "kelas trial gratis Bimbel PPPK Akademi ASN wilayah Coblong, Kota Bandung",
+  ]) {
+    expect(topics).toContain(topic);
+  }
+});
