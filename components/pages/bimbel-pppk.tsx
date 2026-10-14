@@ -37,7 +37,7 @@ type BimbelPppkProps = { provinces: Region[] };
 
 const BimbelPppk = ({ provinces }: BimbelPppkProps) => {
   const konsultasiUrl = pageKonsultasiUrl(konsultasiPage.pppk);
-  const terbaru = artikelTerbaru("pppk");
+  const terbaru = artikelTerbaru();
   return (
     <main className="flex-1">
       <Breadcrumb {...breadcrumbPppk} />

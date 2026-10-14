@@ -37,7 +37,7 @@ type BimbelBumnProps = { provinces: Region[] };
 
 const BimbelBumn = ({ provinces }: BimbelBumnProps) => {
   const konsultasiUrl = pageKonsultasiUrl(konsultasiPage.bumn);
-  const terbaru = artikelTerbaru("bumn");
+  const terbaru = artikelTerbaru();
   return (
     <main className="flex-1">
       <Breadcrumb {...breadcrumbBumn} />

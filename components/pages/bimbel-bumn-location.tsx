@@ -48,7 +48,7 @@ type BimbelBumnLocationProps = { location: ResolvedLocation };
 const BimbelBumnLocation = ({ location }: BimbelBumnLocationProps) => {
   const label = locationLabel(location);
   const konsultasiUrl = pageKonsultasiUrl(konsultasiPage.bumn, label);
-  const terbaru = artikelTerbaru("bumn");
+  const terbaru = artikelTerbaru();
   const kelasOffline = kelasOfflineLocation(location);
   return (
     <main className="flex-1">

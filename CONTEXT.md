@@ -156,7 +156,7 @@ The Kategori for example questions with worked answers.
 The Kategori for Artikel that explain a Materi topic (e.g. TWK, TIU, TKP, the PPPK competency tests).
 
 **Artikel exam track**:
-The exam tracks an Artikel is about, one or more. Every Artikel has at least one. It has no public page; it decides which landing pages show the Artikel in Artikel Terbaru. An Artikel that applies to every track lists all three.
+The exam tracks an Artikel is about, one or more. Every Artikel has at least one. It has no public page; it ranks Artikel Terkait and picks the default cover. It does not pick Artikel Terbaru. An Artikel that applies to every track lists all three.
 _Avoid_: Kategori CPNS/PPPK/BUMN (retired)
 
 **Penulis**:
@@ -164,7 +164,7 @@ The person or team credited on an Artikel. It is "Tim Akademi ASN" unless a real
 _Avoid_: author (in UI copy), kontributor
 
 **Artikel Terbaru**:
-The newest published Artikel, shown as a section after FAQ on every landing page (Artikel of the page's exam track; any Artikel on the home page) and in the Artikel sidebar. Hidden when there are none.
+The newest published Artikel, shown as a section after FAQ on every landing page (the same Artikel on every page, whatever their exam track) and in the Artikel sidebar. Hidden when there are none.
 
 **Artikel Terkait**:
 The three Artikel shown at the end of an Artikel: hand-picked if set, then Artikel sharing an exam track, then Artikel sharing a Kategori, then the newest.

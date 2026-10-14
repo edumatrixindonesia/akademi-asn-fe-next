@@ -5,7 +5,7 @@ import { artikelCover } from "@/data/artikel-cover";
 import { kategori } from "@/data/kategori";
 import { penulis } from "@/data/penulis";
 import { artikelMatches } from "@/lib/artikel-search";
-import { validateArtikel, type Artikel, type ExamTrack } from "@/lib/artikel-schema";
+import { validateArtikel, type Artikel } from "@/lib/artikel-schema";
 import { headingId } from "@/lib/heading-id";
 import {
   blogFirstPageSize,
@@ -165,12 +165,6 @@ export const getArtikelByKategori = (slug: string): Artikel[] =>
   getLatestArtikel(Infinity).filter((entry) =>
     entry.kategori.some((other) => other === slug),
   );
-
-// Artikel Terbaru on landing pages: 3 newest of one exam track, or of any.
-export const getLandingArtikel = (examTrack?: ExamTrack): Artikel[] =>
-  getLatestArtikel(Infinity)
-    .filter((entry) => !examTrack || entry.examTrack.includes(examTrack))
-    .slice(0, 3);
 
 export const searchArtikel = (query: string): Artikel[] =>
   getLatestArtikel(Infinity).filter((entry) => artikelMatches(entry, query));

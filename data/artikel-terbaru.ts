@@ -1,12 +1,12 @@
 import type { ArtikelTerbaruProps } from "@/components/sections/artikel-terbaru";
 import { artikelCard } from "@/data/artikel-card";
-import { getLandingArtikel } from "@/lib/artikel";
-import type { ExamTrack } from "@/lib/artikel-schema";
+import { getLatestArtikel } from "@/lib/artikel";
 
-// The newest Artikel of one exam track, or of any on the home page.
+// The three newest Artikel of any exam track, the same on every landing page
+// (`docs/adr/0005-artikel-terbaru-ignores-exam-track.md`).
 // `undefined` hides the section when nothing is published.
-export const artikelTerbaru = (examTrack?: ExamTrack) => {
-  const entries = getLandingArtikel(examTrack);
+export const artikelTerbaru = () => {
+  const entries = getLatestArtikel(3);
   if (entries.length === 0) return undefined;
 
   return {

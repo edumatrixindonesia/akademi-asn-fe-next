@@ -37,7 +37,7 @@ type BimbelCpnsProps = { provinces: Region[] };
 
 const BimbelCpns = ({ provinces }: BimbelCpnsProps) => {
   const konsultasiUrl = pageKonsultasiUrl(konsultasiPage.cpns);
-  const terbaru = artikelTerbaru("cpns");
+  const terbaru = artikelTerbaru();
   return (
     <main className="flex-1">
       <Breadcrumb {...breadcrumbCpns} />

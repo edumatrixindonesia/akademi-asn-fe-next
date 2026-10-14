@@ -4,7 +4,7 @@ Date: 2026-10-13
 
 ## Status
 
-Accepted
+Accepted; the Artikel Terbaru part is superseded by [0005](0005-artikel-terbaru-ignores-exam-track.md).
 
 ## Context
 

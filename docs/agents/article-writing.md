@@ -38,7 +38,7 @@ Every `h2` holds plain text with letters or digits (its anchor `id` is built fro
 | `description` | Meta description, 120–160 characters. Holds the focus keyword and a reason to click. |
 | `excerpt` | One or two sentences. It is the lead, the card text, and the RSS description. Holds the focus keyword. |
 | `kategori` | One or more of `informasi`, `tips`, `latihan-soal`, `materi`: the content type, never the exam track. List the best fit first; it is the primary Kategori in the breadcrumb. |
-| `examTrack` | One or more of `cpns`, `pppk`, `bumn`: the tracks the Artikel is about. It picks the landing pages that show it in Artikel Terbaru. List all three for a topic that applies to every track. |
+| `examTrack` | One or more of `cpns`, `pppk`, `bumn`: the tracks the Artikel is about. It ranks Artikel Terkait and picks the default cover; Artikel Terbaru ignores it. List all three for a topic that applies to every track. |
 | `penulis` | `tim-akademi-asn` or `dimas-maulana`. See Penulis. |
 | `status` | `"draft"` while writing; `"published"` after owner approval. |
 | `publishedAt` | ISO date (`2026-10-02`). Set once at publish, never changed. |

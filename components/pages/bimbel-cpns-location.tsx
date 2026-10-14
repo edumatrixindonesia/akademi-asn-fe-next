@@ -48,7 +48,7 @@ type BimbelCpnsLocationProps = { location: ResolvedLocation };
 const BimbelCpnsLocation = ({ location }: BimbelCpnsLocationProps) => {
   const label = locationLabel(location);
   const konsultasiUrl = pageKonsultasiUrl(konsultasiPage.cpns, label);
-  const terbaru = artikelTerbaru("cpns");
+  const terbaru = artikelTerbaru();
   const kelasOffline = kelasOfflineLocation(location);
   return (
     <main className="flex-1">

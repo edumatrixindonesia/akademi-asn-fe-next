@@ -48,7 +48,7 @@ type BimbelPppkLocationProps = { location: ResolvedLocation };
 const BimbelPppkLocation = ({ location }: BimbelPppkLocationProps) => {
   const label = locationLabel(location);
   const konsultasiUrl = pageKonsultasiUrl(konsultasiPage.pppk, label);
-  const terbaru = artikelTerbaru("pppk");
+  const terbaru = artikelTerbaru();
   const kelasOffline = kelasOfflineLocation(location);
   return (
     <main className="flex-1">
