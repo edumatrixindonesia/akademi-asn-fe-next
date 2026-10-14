@@ -13,7 +13,7 @@ The Admin Konsultasi now rotates per Giliran Konsultasi (08.00, 13.00, 17.00 WIB
 ## Decision
 
 - Every Konsultasi link points to the internal route `/konsultasi?topik=<topic>`. The route picks the Admin Konsultasi at click time and redirects to WhatsApp.
-- Pages keep `revalidate = 86400` and render no client JS for Konsultasi.
+- Pages render no client JS for Konsultasi. Since the rotation no longer depends on regeneration, `revalidate` goes from 86400 to 604800, matching the region-service cache.
 - `robots.txt` disallows `/konsultasi`.
 - The rotation is anchored to a fixed point: the 08.00 WIB Giliran on 2026-10-15 belongs to Asyah. From there, the order continues across days (Asyah, Nevita, Putri, Ista, ...).
 
@@ -26,4 +26,5 @@ The Admin Konsultasi now rotates per Giliran Konsultasi (08.00, 13.00, 17.00 WIB
 
 - SEO is neutral: the old links pointed to `api.whatsapp.com` and passed no ranking value either. The `Disallow` keeps Googlebot from spending crawl budget on `/konsultasi` variants. Search Console will list them as "Blocked by robots.txt", which is expected.
 - Do not lower `revalidate` to make the rotation faster. The redirect route already makes it exact.
+- An edit to a location page's region data can take up to 7 days to show.
 - The Nomor Call Center is unchanged and still links straight to its own WhatsApp number.

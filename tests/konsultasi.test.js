@@ -5,24 +5,11 @@ import {
   getKonsultasiUrl,
   getKonsultasiWhatsappUrl,
 } from "../data/contact";
+import { siteUrl } from "../lib/site-url";
 
 // WIB is UTC+7.
 const wib = (day, hour, minute = 0) =>
   Date.UTC(2026, 9, day, hour - 7, minute);
-
-const withSiteUrl = (fn) => async () => {
-  const originalSiteUrl = process.env.NEXT_PUBLIC_SITE_URL;
-  process.env.NEXT_PUBLIC_SITE_URL = "https://akademi-asn.test";
-  try {
-    await fn();
-  } finally {
-    if (originalSiteUrl === undefined) {
-      delete process.env.NEXT_PUBLIC_SITE_URL;
-    } else {
-      process.env.NEXT_PUBLIC_SITE_URL = originalSiteUrl;
-    }
-  }
-};
 
 test("Giliran Konsultasi start at 08.00, 13.00, and 17.00 WIB and carry over across days", () => {
   const cases = [
@@ -61,20 +48,20 @@ test("Konsultasi links point to the internal redirect route", () => {
 
 test(
   "WhatsApp URL greets the admin on duty and names the topic",
-  withSiteUrl(() => {
+  () => {
     const url = new URL(getKonsultasiWhatsappUrl("Tryout CPNS", wib(15, 13)));
 
     expect(url.origin + url.pathname).toBe("https://api.whatsapp.com/send");
     expect(url.searchParams.get("phone")).toBe("6285815095359");
     expect(url.searchParams.get("text")).toBe(
-      "Halo Kak Nevita https://akademi-asn.test, Saya ingin bertanya tentang Tryout CPNS. Mohon info selengkapnya...",
+      `Halo Kak Nevita ${siteUrl}, Saya ingin bertanya tentang Tryout CPNS. Mohon info selengkapnya...`,
     );
-  }),
+  },
 );
 
 test(
   "/konsultasi redirects to WhatsApp without caching",
-  withSiteUrl(() => {
+  () => {
     setSystemTime(new Date(wib(16, 17)));
     try {
       const response = GET(
@@ -114,5 +101,5 @@ test(
     expect(fallback.searchParams.get("text")).toContain(
       "tentang Bimbel Akademi ASN.",
     );
-  }),
+  },
 );

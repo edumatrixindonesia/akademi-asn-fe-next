@@ -15,7 +15,9 @@ const poppins = Poppins({
   display: "swap",
 });
 
-export const revalidate = 86400;
+// Konsultasi rotation no longer depends on regeneration (docs/adr/0004-konsultasi-redirect-route.md),
+// so this only bounds how stale a page can get; it matches the region-service cache.
+export const revalidate = 604800;
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),

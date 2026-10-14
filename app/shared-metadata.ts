@@ -2,15 +2,9 @@ import type { Metadata } from "next";
 
 import { callCenterPhone, officeHours } from "@/data/contact";
 import { bimbelPrivatPriceRange } from "@/data/paket-program";
+import { siteUrl } from "@/lib/site-url";
 
-const envSiteUrl = process.env.NEXT_PUBLIC_SITE_URL?.trim();
-if (!envSiteUrl) {
-  throw new Error(
-    "NEXT_PUBLIC_SITE_URL must be set to the site's absolute URL.",
-  );
-}
-
-export const siteUrl = envSiteUrl.replace(/\/+$/, "");
+export { siteUrl };
 
 // Metadata merges shallowly: a page that sets `openGraph` drops the layout's
 // copy, so pages spread this base and add their own `url`.

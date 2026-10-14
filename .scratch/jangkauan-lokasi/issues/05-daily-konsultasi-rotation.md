@@ -1,6 +1,6 @@
 # 05: Rotate Konsultasi contacts daily
 
-> **Superseded:** See `docs/adr/0004-konsultasi-redirect-route.md`. The admin now rotates per Giliran Konsultasi (08.00, 13.00, 17.00 WIB), picked at click time by the `/konsultasi` redirect route. Pages keep `revalidate = 86400`.
+> **Superseded:** See `docs/adr/0004-konsultasi-redirect-route.md`. The admin now rotates per Giliran Konsultasi (08.00, 13.00, 17.00 WIB), picked at click time by the `/konsultasi` redirect route. `revalidate` is now 604800.
 
 **Parent:** `.scratch/jangkauan-lokasi/spec.md`
 

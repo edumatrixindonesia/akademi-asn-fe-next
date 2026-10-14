@@ -1,3 +1,5 @@
+import { siteUrl } from "@/lib/site-url";
+
 export const konsultasiAdmins = [
   { name: "Asyah", phone: "6281215523902" },
   { name: "Nevita", phone: "6285815095359" },
@@ -67,13 +69,6 @@ export const getKonsultasiWhatsappUrl = (
   topic = defaultKonsultasiTopic,
   now = Date.now(),
 ): string => {
-  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL?.trim();
-  if (!siteUrl) {
-    throw new Error(
-      "NEXT_PUBLIC_SITE_URL must be set to the site's absolute URL.",
-    );
-  }
-
   const admin = getKonsultasiAdmin(now);
   const message = `Halo Kak ${admin.name} ${siteUrl}, Saya ingin bertanya tentang ${topic}. Mohon info selengkapnya...`;
 
