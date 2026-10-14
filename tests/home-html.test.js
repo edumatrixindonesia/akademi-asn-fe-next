@@ -63,14 +63,10 @@ test("home HTML declares Indonesian and absolute canonical and Open Graph URLs",
   expect(ogUrl).not.toBeNull();
   expect(new URL(ogUrl[1]).protocol).toMatch(/^https?:$/);
 
-  const whatsappUrls = [...html.matchAll(/<a\b[^>]*href="([^"]*api\.whatsapp\.com[^"]*)"[^>]*>/g)]
-    .map((match) => new URL(match[1].replaceAll("&amp;", "&")));
-  expect(whatsappUrls.length).toBeGreaterThanOrEqual(2);
-  expect(new Set(whatsappUrls.map((url) => url.searchParams.get("phone"))).size).toBe(1);
-  for (const url of whatsappUrls) {
-    expect(url.searchParams.get("phone")).toMatch(/^628\d+$/);
-    expect(url.searchParams.get("text")).toContain(process.env.NEXT_PUBLIC_SITE_URL);
-  }
+  // Konsultasi links go through /konsultasi; no admin number is baked into the page.
+  const konsultasiLinks = [...html.matchAll(/<a\b[^>]*href="(\/konsultasi\?[^"]*)"[^>]*>/g)];
+  expect(konsultasiLinks.length).toBeGreaterThanOrEqual(2);
+  expect(html).not.toContain("api.whatsapp.com/send?phone=");
 
   const jsonLdMatch = html.match(
     /<script type="application\/ld\+json">(\{"@context":"https:\/\/schema\.org","@type":"FAQPage".*?\})<\/script>/,

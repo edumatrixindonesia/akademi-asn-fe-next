@@ -117,8 +117,12 @@ Practical advice for passing the selection exam (e.g. prepare documents, practis
 A free chat with an Admin Konsultasi over WhatsApp. It is the primary call to action across the site.
 
 **Admin Konsultasi**:
-One of the Akademi ASN admins who answer Konsultasi chats. Konsultasi links rotate between them, one admin per day.
+One of the Akademi ASN admins who answer Konsultasi chats. Konsultasi links rotate between them in a fixed order (Asyah, Nevita, Putri, Ista), one admin per Giliran Konsultasi.
 _Avoid_: CS, call center (the UI label "Call Center" stays)
+
+**Giliran Konsultasi**:
+One of the three daily periods during which a single Admin Konsultasi receives every Konsultasi chat. They start at 08.00, 13.00, and 17.00 WIB, every day including Sunday. The order carries over from one day to the next instead of restarting each morning, so every Admin Konsultasi gets a turn.
+_Avoid_: shift, sesi
 
 **Nomor Call Center**:
 The one published Akademi ASN phone number, identical on every page and in structured data so local search sees a consistent NAP. Wherever it is shown, it links to that number on WhatsApp, never to the rotating Admin Konsultasi.

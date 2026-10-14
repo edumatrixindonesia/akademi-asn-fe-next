@@ -62,8 +62,8 @@ test("Tryout page renders one h1, product offers, and per-topic Konsultasi links
   expect(html).toContain("Rp80.000");
 
   const topics = new Set(
-    [...html.matchAll(/href="(https:\/\/api\.whatsapp\.com[^"]+)"/g)].map((match) =>
-      new URL(match[1].replaceAll("&amp;", "&")).searchParams.get("text").match(/tentang (.+)\. Mohon/)[1],
+    [...html.matchAll(/href="(\/konsultasi\?[^"]+)"/g)].map((match) =>
+      new URL(match[1].replaceAll("&amp;", "&"), "http://localhost").searchParams.get("topik"),
     ),
   );
   for (const topic of ["Tryout CPNS", "Tryout PPPK", "Tryout BUMN", "E-Book Modul CPNS", "Paket Hemat Komplit"]) {

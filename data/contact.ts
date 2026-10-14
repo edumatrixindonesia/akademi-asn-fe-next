@@ -6,7 +6,7 @@ export const konsultasiAdmins = [
 ] as const;
 
 // The Nomor Call Center: the one published phone number, identical in the
-// footer and JSON-LD (NAP consistency). Konsultasi links still rotate daily.
+// footer and JSON-LD (NAP consistency). Konsultasi links still rotate.
 export const callCenterPhone = {
   e164: "+6281215523902",
   display: "0812-1552-3902",
@@ -39,8 +39,32 @@ export const officeHoursText = officeHours
   )
   .join(", ");
 
-export const getKonsultasiUrl = (
-  topic = "Bimbel Akademi ASN",
+const defaultKonsultasiTopic = "Bimbel Akademi ASN";
+
+// Giliran Konsultasi start at 08.00, 13.00, and 17.00 WIB (01:00, 06:00,
+// 10:00 UTC). The order carries over across days; the 08.00 WIB Giliran on
+// 2026-10-15 belongs to the first admin (docs/adr/0004-konsultasi-redirect-route.md).
+const anchorDay = Date.UTC(2026, 9, 15) / 86_400_000;
+
+export const getKonsultasiAdmin = (now = Date.now()) => {
+  // Shift the clock so a rotation day starts at 08.00 WIB (01:00 UTC); the
+  // Giliran then start 0, 5, and 9 hours into it.
+  const shifted = now - 3_600_000;
+  const day = Math.floor(shifted / 86_400_000) - anchorDay;
+  const hour = new Date(shifted).getUTCHours();
+  const giliran = day * 3 + (hour < 5 ? 0 : hour < 9 ? 1 : 2);
+  const count = konsultasiAdmins.length;
+
+  return konsultasiAdmins[((giliran % count) + count) % count];
+};
+
+// Konsultasi links point to the /konsultasi route, which picks the admin at
+// click time, so pages can stay statically rendered.
+export const getKonsultasiUrl = (topic = defaultKonsultasiTopic): string =>
+  `/konsultasi?${new URLSearchParams({ topik: topic })}`;
+
+export const getKonsultasiWhatsappUrl = (
+  topic = defaultKonsultasiTopic,
   now = Date.now(),
 ): string => {
   const siteUrl = process.env.NEXT_PUBLIC_SITE_URL?.trim();
@@ -50,8 +74,7 @@ export const getKonsultasiUrl = (
     );
   }
 
-  // Day boundary: 00:00 UTC (07:00 WIB).
-  const admin = konsultasiAdmins[Math.floor(now / 86_400_000) % 4];
+  const admin = getKonsultasiAdmin(now);
   const message = `Halo Kak ${admin.name} ${siteUrl}, Saya ingin bertanya tentang ${topic}. Mohon info selengkapnya...`;
 
   return `https://api.whatsapp.com/send?phone=${admin.phone}&text=${encodeURIComponent(message)}`;
