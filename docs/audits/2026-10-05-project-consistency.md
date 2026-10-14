@@ -30,7 +30,7 @@ These results establish local consistency for the checked data and pages. They d
 
 Evidence: [data/footer.ts](../../data/footer.ts), lines 29–32, uses `callCenterPhone.display` and its matching `ariaLabel`, but sets the link to the rotating `konsultasiUrl`. [data/contact.ts](../../data/contact.ts), lines 9–12, defines one fixed published number. `CONTEXT.md` explicitly distinguishes that number from Admin Konsultasi.
 
-A direct four-day probe showed the same displayed number, `0812-1552-3902`, linking to Asyah, Nevita, Putri, and Sari respectively. Three days out of four, the label and destination differ. Existing tests check that all Konsultasi links rotate together; they do not check that the displayed phone number matches the destination.
+A direct four-day probe showed the same displayed number, `0812-1552-3902`, linking to Asyah, Nevita, Putri, and Ista respectively. Three days out of four, the label and destination differ. Existing tests check that all Konsultasi links rotate together; they do not check that the displayed phone number matches the destination.
 
 **Action:** Make the published phone link reach that published number. Keep a separately labelled Konsultasi action for the rotating admin. Align the accessible label with the actual destination.
 

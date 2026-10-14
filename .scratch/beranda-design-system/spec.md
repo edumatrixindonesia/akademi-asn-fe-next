@@ -43,7 +43,7 @@ A visitor who opens `/` sees, in order: Jumbotron, Keunggulan, Materi, Paket Pro
 23. As a visitor, I want the footer to use the brand blue gradient, so that the site looks consistent from top to bottom.
 24. As a visitor using a screen reader, I want every meaningful image to have descriptive alt text and decorative images to be ignored, so that I get the same information as sighted visitors.
 25. As a visitor using a keyboard, I want to reach and open every FAQ item and every button, so that I can use the whole page without a mouse.
-26. As a customer-service admin, I want Konsultasi chats spread across the four admins (Asyah, Nevita, Putri, Sari) in turn, so that no admin gets all the leads.
+26. As a customer-service admin, I want Konsultasi chats spread across the four admins (Asyah, Nevita, Putri, Ista) in turn, so that no admin gets all the leads.
 27. As the owner, I want the admin rotation to keep the page static, so that speed and search ranking do not suffer.
 28. As the owner, I want the admin phone numbers and message text in one place, so that I can change a number with one edit.
 29. As the owner, I want the site URL in the WhatsApp message and in the page metadata to come from an environment variable, so that each environment uses its own domain.
@@ -78,7 +78,7 @@ A visitor who opens `/` sees, in order: Jumbotron, Keunggulan, Materi, Paket Pro
 
 ### Konsultasi contact module
 
-- A contact data module holds the four admins as static data (name and phone number): Asyah 6281215523902, Nevita 6285815095359, Putri 6285724543040, Sari 6285712217876. The phone numbers are public, so they do not go in environment variables.
+- A contact data module holds the four admins as static data (name and phone number): Asyah 6281215523902, Nevita 6285815095359, Putri 6285724543040, Ista 6285712217876. The phone numbers are public, so they do not go in environment variables.
 - The module exports `getKonsultasiUrl(now?: number): string`. It picks the admin with an hour-based round robin, `Math.floor(now / 3_600_000) % 4`, and `now` defaults to `Date.now()`. It returns an `https://api.whatsapp.com/send` URL with that admin's phone number and the message `Halo Kak <name> <SITE_URL>, Saya ingin bertanya tentang Bimbel Akademi ASN. Mohon info selengkapnya...`, URL-encoded.
 - Because the choice depends only on the hour, the layout (Navbar, Footer) and the page (sections) pick the same admin without shared memoization. ISR changes the admin at most once per hour, when the first request arrives after the page expires.
 

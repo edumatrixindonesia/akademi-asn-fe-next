@@ -4,7 +4,7 @@
 
 **Parent:** `.scratch/beranda-design-system/spec.md`
 
-**What to build:** Every Konsultasi link opens WhatsApp with one of four admins (Asyah, Nevita, Putri, Sari). The admin rotates in turn every hour, and all links on a page point to the same admin. The Navbar and Footer already use it.
+**What to build:** Every Konsultasi link opens WhatsApp with one of four admins (Asyah, Nevita, Putri, Ista). The admin rotates in turn every hour, and all links on a page point to the same admin. The Navbar and Footer already use it.
 
 **Blocked by:** 01 (Brand foundation and live home route)
 

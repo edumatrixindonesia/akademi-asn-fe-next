@@ -6,7 +6,7 @@ test("Konsultasi rotates through four admins by day", () => {
   process.env.NEXT_PUBLIC_SITE_URL = "https://akademi-asn.test";
 
   try {
-    const expectedNames = ["Asyah", "Nevita", "Putri", "Sari", "Asyah"];
+    const expectedNames = ["Asyah", "Nevita", "Putri", "Ista", "Asyah"];
 
     expectedNames.forEach((name, day) => {
       const url = new URL(getKonsultasiUrl(undefined, day * 86_400_000));
@@ -20,7 +20,9 @@ test("Konsultasi rotates through four admins by day", () => {
       );
     });
 
-    expect(new URL(getKonsultasiUrl("Tryout CPNS", 0)).searchParams.get("text")).toBe(
+    expect(
+      new URL(getKonsultasiUrl("Tryout CPNS", 0)).searchParams.get("text"),
+    ).toBe(
       "Halo Kak Asyah https://akademi-asn.test, Saya ingin bertanya tentang Tryout CPNS. Mohon info selengkapnya...",
     );
   } finally {

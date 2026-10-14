@@ -2,7 +2,7 @@ export const konsultasiAdmins = [
   { name: "Asyah", phone: "6281215523902" },
   { name: "Nevita", phone: "6285815095359" },
   { name: "Putri", phone: "6285724543040" },
-  { name: "Sari", phone: "6285712217876" },
+  { name: "Ista", phone: "6285712217876" },
 ] as const;
 
 // The Nomor Call Center: the one published phone number, identical in the
@@ -23,12 +23,20 @@ export const officeAddress =
 // Office opening hours. The FAQ text and the JSON-LD both derive
 // from this list.
 export const officeHours = [
-  { days: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"], label: "Senin–Jumat", opens: "08:00", closes: "17:00" },
+  {
+    days: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+    label: "Senin–Jumat",
+    opens: "08:00",
+    closes: "17:00",
+  },
   { days: ["Saturday"], label: "Sabtu", opens: "08:00", closes: "14:00" },
 ] as const;
 
 export const officeHoursText = officeHours
-  .map(({ label, opens, closes }) => `${label} ${opens.replace(":", ".")}–${closes.replace(":", ".")} WIB`)
+  .map(
+    ({ label, opens, closes }) =>
+      `${label} ${opens.replace(":", ".")}–${closes.replace(":", ".")} WIB`,
+  )
   .join(", ");
 
 export const getKonsultasiUrl = (
@@ -37,7 +45,9 @@ export const getKonsultasiUrl = (
 ): string => {
   const siteUrl = process.env.NEXT_PUBLIC_SITE_URL?.trim();
   if (!siteUrl) {
-    throw new Error("NEXT_PUBLIC_SITE_URL must be set to the site's absolute URL.");
+    throw new Error(
+      "NEXT_PUBLIC_SITE_URL must be set to the site's absolute URL.",
+    );
   }
 
   // Day boundary: 00:00 UTC (07:00 WIB).
