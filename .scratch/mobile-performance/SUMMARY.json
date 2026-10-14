@@ -75,6 +75,73 @@
     {
       "file": "public/img/section/bahan-ajar-ter-update-bimbel-les-privat-cpns-pppk-bumn-terbaik-di-indonesia.webp",
       "beforeBytes": 60856,
+      "afterBytes": 45572,
+      "beforeFrames": 33,
+      "afterFrames": 33,
+      "width": 196,
+      "durationMs": 2680
+    },
+    {
+      "file": "public/img/section/jadwal-belajar-fleksibel-bimbel-les-privat-cpns-pppk-bumn-terbaik-di-indonesia.webp",
+      "beforeBytes": 199740,
+      "afterBytes": 148868,
+      "beforeFrames": 61,
+      "afterFrames": 61,
+      "width": 196,
+      "durationMs": 2420
+    },
+    {
+      "file": "public/img/section/master-teacher-berkompetensi-tinggi-bimbel-les-privat-cpns-pppk-bumn-terbaik-di-indonesia.webp",
+      "beforeBytes": 60448,
+      "afterBytes": 45990,
+      "beforeFrames": 24,
+      "afterFrames": 24,
+      "width": 196,
+      "durationMs": 2000
+    },
+    {
+      "file": "public/img/section/metode-belajar-privat-1-on-1-bimbel-les-privat-cpns-pppk-bumn-terbaik-di-indonesia.webp",
+      "beforeBytes": 81950,
+      "afterBytes": 61154,
+      "beforeFrames": 25,
+      "afterFrames": 25,
+      "width": 196,
+      "durationMs": 3440
+    },
+    {
+      "file": "public/img/section/tips-trick-mengerjakan-soal-dan-lolos-tes-bimbel-les-privat-cpns-pppk-bumn-terbaik-di-indonesia.webp",
+      "beforeBytes": 121406,
+      "afterBytes": 87602,
+      "beforeFrames": 53,
+      "afterFrames": 53,
+      "width": 196,
+      "durationMs": 2400
+    }
+  ],
+  "before_animation_bytes": 524400,
+  "after_animation_bytes": 389186,
+  "animation_reduction_percent": 25.78,
+  "validation": [
+    "Exact original frame counts, frame delays, loop counts, and loop durations asserted for all five animations",
+    "196x196 dimensions and animated WebP encoding asserted for all five animations",
+    "bun run lint",
+    "bun run typecheck",
+    "graphify update .",
+    "git diff --check"
+  ],
+  "limitations": [
+    "Recorded Lighthouse runs validate 7a11690 with reduced animation frames, not the current restored-FPS assets.",
+    "Google PageSpeed score 100 on the deployed revision is not yet verified.",
+    "No CrUX/INP field data was available in the supplied report.",
+    "Optional fonts can retain Arial/sans-serif on a cold visit when Poppins arrives late.",
+    "The original Google report and local measurements use different machines and CPU calibration."
+  ],
+  "measurements_revision": "7a11690",
+  "current_revision_performance_status": "Not remeasured after restoring original animation frames and frame delays",
+  "previous_assets": [
+    {
+      "file": "public/img/section/bahan-ajar-ter-update-bimbel-les-privat-cpns-pppk-bumn-terbaik-di-indonesia.webp",
+      "beforeBytes": 60856,
       "afterBytes": 14872,
       "beforeFrames": 33,
       "afterFrames": 9,
@@ -118,10 +185,7 @@
       "durationMs": 2400
     }
   ],
-  "before_animation_bytes": 524400,
-  "after_animation_bytes": 107956,
-  "animation_reduction_percent": 79.41,
-  "validation": [
+  "previous_revision_validation": [
     "bun run lint",
     "bun run typecheck",
     "bun run build",
@@ -131,11 +195,5 @@
     "animation dimensions, frame counts, loop counts, and duration assertions",
     "graphify update .",
     "git diff --check"
-  ],
-  "limitations": [
-    "Google PageSpeed score 100 on the deployed revision is not yet verified.",
-    "No CrUX/INP field data was available in the supplied report.",
-    "Optional fonts can retain Arial/sans-serif on a cold visit when Poppins arrives late.",
-    "The original Google report and local measurements use different machines and CPU calibration."
   ]
 }
