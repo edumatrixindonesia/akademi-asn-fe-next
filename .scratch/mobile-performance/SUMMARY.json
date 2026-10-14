@@ -1,0 +1,141 @@
+{
+  "target_url": "https://www.akademi-asn.com/",
+  "original_report_url": "https://pagespeed.web.dev/analysis/https-www-akademi-asn-com/pmlc78yoov?form_factor=mobile",
+  "original_report": {
+    "performance": 86,
+    "fcp_ms": 1710,
+    "lcp_ms": 3752,
+    "tbt_ms": 61,
+    "cls": 0,
+    "speed_index_ms": 3997
+  },
+  "deployment_status": "Pending owner push and Dokploy deployment",
+  "data_source": "Real Lighthouse CLI laboratory measurements; not PageSpeed production verification",
+  "measured_url": "https://localhost:3443/",
+  "lighthouse_version": "13.5.0",
+  "throttling": {
+    "rttMs": 150,
+    "throughputKbps": 1638.4,
+    "requestLatencyMs": 562.5,
+    "downloadThroughputKbps": 1474.5600000000002,
+    "uploadThroughputKbps": 675,
+    "cpuSlowdownMultiplier": 4
+  },
+  "screen_emulation": {
+    "mobile": true,
+    "width": 412,
+    "height": 823,
+    "deviceScaleFactor": 1.75,
+    "disabled": false
+  },
+  "runs": [
+    {
+      "run": 1,
+      "performance": 100,
+      "metrics": {
+        "first-contentful-paint": 1080,
+        "largest-contentful-paint": 1755,
+        "total-blocking-time": 23.5,
+        "cumulative-layout-shift": 0,
+        "speed-index": 1080
+      }
+    },
+    {
+      "run": 2,
+      "performance": 99,
+      "metrics": {
+        "first-contentful-paint": 1107.462,
+        "largest-contentful-paint": 1969.462,
+        "total-blocking-time": 83,
+        "cumulative-layout-shift": 0,
+        "speed-index": 1107.462
+      }
+    },
+    {
+      "run": 3,
+      "performance": 99,
+      "metrics": {
+        "first-contentful-paint": 1059.5355,
+        "largest-contentful-paint": 2259.5355,
+        "total-blocking-time": 25.5,
+        "cumulative-layout-shift": 0,
+        "speed-index": 1059.5355
+      }
+    }
+  ],
+  "median_performance": 99,
+  "median_metrics": {
+    "first-contentful-paint": 1080,
+    "largest-contentful-paint": 1969.462,
+    "total-blocking-time": 25.5,
+    "cumulative-layout-shift": 0,
+    "speed-index": 1080
+  },
+  "assets": [
+    {
+      "file": "public/img/section/bahan-ajar-ter-update-bimbel-les-privat-cpns-pppk-bumn-terbaik-di-indonesia.webp",
+      "beforeBytes": 60856,
+      "afterBytes": 14872,
+      "beforeFrames": 33,
+      "afterFrames": 9,
+      "width": 196,
+      "durationMs": 2680
+    },
+    {
+      "file": "public/img/section/jadwal-belajar-fleksibel-bimbel-les-privat-cpns-pppk-bumn-terbaik-di-indonesia.webp",
+      "beforeBytes": 199740,
+      "afterBytes": 40132,
+      "beforeFrames": 61,
+      "afterFrames": 16,
+      "width": 196,
+      "durationMs": 2420
+    },
+    {
+      "file": "public/img/section/master-teacher-berkompetensi-tinggi-bimbel-les-privat-cpns-pppk-bumn-terbaik-di-indonesia.webp",
+      "beforeBytes": 60448,
+      "afterBytes": 11448,
+      "beforeFrames": 24,
+      "afterFrames": 6,
+      "width": 196,
+      "durationMs": 2000
+    },
+    {
+      "file": "public/img/section/metode-belajar-privat-1-on-1-bimbel-les-privat-cpns-pppk-bumn-terbaik-di-indonesia.webp",
+      "beforeBytes": 81950,
+      "afterBytes": 17540,
+      "beforeFrames": 25,
+      "afterFrames": 7,
+      "width": 196,
+      "durationMs": 3440
+    },
+    {
+      "file": "public/img/section/tips-trick-mengerjakan-soal-dan-lolos-tes-bimbel-les-privat-cpns-pppk-bumn-terbaik-di-indonesia.webp",
+      "beforeBytes": 121406,
+      "afterBytes": 23964,
+      "beforeFrames": 53,
+      "afterFrames": 14,
+      "width": 196,
+      "durationMs": 2400
+    }
+  ],
+  "before_animation_bytes": 524400,
+  "after_animation_bytes": 107956,
+  "animation_reduction_percent": 79.41,
+  "validation": [
+    "bun run lint",
+    "bun run typecheck",
+    "bun run build",
+    "25 related development HTML tests",
+    "production homepage HTML test",
+    "mobile and desktop browser checks",
+    "animation dimensions, frame counts, loop counts, and duration assertions",
+    "graphify update .",
+    "git diff --check"
+  ],
+  "limitations": [
+    "Google PageSpeed score 100 on the deployed revision is not yet verified.",
+    "No CrUX/INP field data was available in the supplied report.",
+    "Optional fonts can retain Arial/sans-serif on a cold visit when Poppins arrives late.",
+    "The original Google report and local measurements use different machines and CPU calibration."
+  ]
+}

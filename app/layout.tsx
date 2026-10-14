@@ -12,7 +12,11 @@ const poppins = Poppins({
   variable: "--font-poppins",
   subsets: ["latin"],
   weight: ["400", "500", "600", "700"],
-  display: "swap",
+  fallback: ["Arial", "sans-serif"],
+  // Keep the first-paint font when Poppins arrives late on a slow connection.
+  display: "optional",
+  // Let CSS request fonts so preload bandwidth goes to the LCP image.
+  preload: false,
 });
 
 // Konsultasi rotation no longer depends on regeneration (docs/adr/0004-konsultasi-redirect-route.md),

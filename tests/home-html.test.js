@@ -5,6 +5,9 @@ test("home HTML declares Indonesian and absolute canonical and Open Graph URLs",
   expect(response.ok).toBe(true);
 
   const html = await response.text();
+  if (process.env.NODE_ENV === "production") {
+    expect(html).not.toMatch(/<link\b[^>]*rel="preload"[^>]*as="font"/i);
+  }
   expect(html).toMatch(/<html\b[^>]*\blang="id"/);
   expect([...html.matchAll(/<h1\b/g)]).toHaveLength(1);
   expect(html).toContain("Keunggulan Bimbel Akademi ASN");

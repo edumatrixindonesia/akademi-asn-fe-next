@@ -11,8 +11,8 @@ const FeatureCard = ({ illustration, title, description }: FeatureCardProps) => 
     <Image
       src={illustration}
       alt=""
-      width={224}
-      height={224}
+      width={196}
+      height={196}
       loading="lazy"
       // Illustrations are animated WebP, which the optimizer passes through as-is.
       unoptimized
