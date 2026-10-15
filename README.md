@@ -7,34 +7,81 @@ This README covers setup and recovery: how to go from a fresh machine to a runni
 project. For architecture, conventions, and commit rules, read [AGENTS.md](AGENTS.md).
 For domain terms, read [CONTEXT.md](CONTEXT.md).
 
-## 1. Prerequisites
+## 0. Before wiping the old machine
 
-| Tool | Version                      | Notes                                                    |
-| ---- | ---------------------------- | -------------------------------------------------------- |
-| git  | any recent                   | Access to the `edumatrixindonesia` GitHub organization.  |
-| Node | 24 (see `.nvmrc`)            | Next.js runs on Node even when started through bun.      |
-| bun  | 1.4.2 (see `packageManager`) | Package manager and test runner. Do not use npm or yarn. |
+A clone restores only what is in git. The files below are gitignored or live
+outside the repo, so they exist only on the old machine. Copy each one to private
+storage (a password manager or a private cloud drive) before you wipe the OS.
+
+| Back up                                                                                   | Why                                                       | Restore after                       |
+| ----------------------------------------------------------------------------------------- | --------------------------------------------------------- | ----------------------------------- |
+| `.env`                                                                                    | Holds `REGION_SERVICE_TOKEN`. See step 4.                 | Step 2, into the repo root.         |
+| `docs/private/`                                                                           | Real review sources with contact data. Never commit it.   | Step 2, into `docs/private/`.       |
+| `region-service/.env` (if you have a local clone)                                         | Source of the token and the region-service config.        | Step 3, into the region-service clone. |
+| `~/.claude/projects/-home-edumatrix-dimas-webdev-repo-cpns-akademi-asn-fe-next/memory/`   | Claude Code memory: SEO and content decisions for this project. | Step 2, to the same path.     |
+| `~/.claude/` (`CLAUDE.md`, `RTK.md`, `settings.json`)                                     | Personal Claude Code setup.                               | After installing Claude Code.       |
+
+Then confirm that nothing is left unpushed:
 
 ```bash
-# Node via nvm
-nvm install        # reads .nvmrc
-nvm use
+git status                  # working tree clean
+git log origin/main..HEAD   # no output: every commit is pushed
+git stash list              # no output: no stashed work
+```
 
-# bun
+## 1. Prerequisites
+
+Written for Ubuntu 26.04 LTS and newer.
+
+| Tool    | Version                      | Notes                                                       |
+| ------- | ---------------------------- | ----------------------------------------------------------- |
+| git     | any recent                   | Access to the `edumatrixindonesia` GitHub organization.     |
+| gh      | any recent                   | GitHub CLI. Stores the credentials for the private repo.    |
+| Node    | 24 (see `.nvmrc`)            | Next.js runs on Node even when started through bun.         |
+| bun     | 1.4.2 (see `packageManager`) | Package manager and test runner. Do not use npm or yarn.    |
+| python3 | any (Ubuntu default)         | Used by the Claude Code hooks in `.claude/settings.json`.   |
+
+```bash
+# System packages (unzip is required by the bun installer)
+sudo apt update
+sudo apt install -y git gh curl unzip build-essential python3
+
+# GitHub login and commit identity
+gh auth login      # GitHub.com > HTTPS > authenticate Git with your credentials: Yes
+git config --global user.name "Your Name"
+git config --global user.email "you@example.com"
+
+# nvm, then open a new terminal so nvm is on PATH
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.3/install.sh | bash
+
+# bun, then open a new terminal so bun is on PATH
 curl -fsSL https://bun.sh/install | bash -s "bun-v1.4.2"
 bun --version      # 1.4.2
 ```
+
+Node itself is installed in step 2, from inside the repo, so `nvm install` can
+read `.nvmrc`.
 
 You also need the **region-service** API (location data). See step 3.
 
 ## 2. Clone and install
 
+Use the same username (`edumatrix`) and path as before. `.codex/hooks.json`
+hardcodes `/home/edumatrix/.local/bin/graphify`, and Claude Code names its memory
+folder after the project path, so the restored memory only loads at this path.
+
 ```bash
+mkdir -p ~/dimas-webdev/repo/cpns
+cd ~/dimas-webdev/repo/cpns
 git clone https://github.com/edumatrixindonesia/akademi-asn-fe-next.git
 cd akademi-asn-fe-next
+nvm install        # reads .nvmrc
 nvm use
+node --version     # v24.x
 bun install
 ```
+
+Now restore `.env`, `docs/private/`, and the Claude Code memory from step 0.
 
 `bun install` also runs the `prepare` script, which sets `core.hooksPath` to
 `.githooks` so commitlint checks every commit message. Verify it:
@@ -80,6 +127,9 @@ fetches the region lists once per build worker, so repeated builds can hit it.
 Prefer the local service for regular work.
 
 ## 4. Environment variables
+
+If you restored `.env` from step 0, check it against the table below and move on.
+Otherwise start from the example:
 
 ```bash
 cp .env.example .env
@@ -139,6 +189,9 @@ and one location page such as `http://localhost:3000/bimbel-cpns/jawa-barat`.
 
 | Symptom                                                        | Fix                                                                                                    |
 | -------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------ |
+| `error: unzip is required to install bun`                      | `sudo apt install -y unzip`, then rerun the bun installer.                                             |
+| `nvm: command not found` / `bun: command not found`            | Open a new terminal (or `source ~/.bashrc`) after the installer.                                       |
+| Clone fails with `Repository not found` or `403`               | Run `gh auth login`, and check that your account is in the `edumatrixindonesia` organization.          |
 | `NEXT_PUBLIC_SITE_URL must be set to the site's absolute URL.` | `.env` is missing or the value is empty. Redo step 4.                                                  |
 | `REGION_SERVICE_URL and REGION_SERVICE_TOKEN must be set.`     | Same as above, for the region-service variables.                                                       |
 | `region-service type=provinsi responded 401.`                  | Wrong or expired token. Copy it again from `region-service/.env`.                                      |
@@ -151,5 +204,12 @@ and one location page such as `http://localhost:3000/bimbel-cpns/jawa-barat`.
 
 ## 8. Optional
 
-- **graphify** (AI-agent knowledge graph): `graphify-out/` is gitignored. Rebuild it
-  with `graphify update .` so agent hooks stop warning about it.
+- **graphify** (AI-agent knowledge graph): the agent hooks in `.claude/` and
+  `.codex/` call it, and `graphify-out/` is gitignored. Install it with uv, then
+  rebuild the graph:
+
+  ```bash
+  curl -LsSf https://astral.sh/uv/install.sh | sh   # then open a new terminal
+  uv tool install graphifyy
+  graphify update .
+  ```
