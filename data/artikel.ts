@@ -4,6 +4,67 @@ import type { Artikel } from "@/lib/artikel-schema";
 // data/artikel/{slug}.mdx (lib/artikel.ts fails the build otherwise).
 export const artikel = [
   {
+    slug: "materi-tkp-cpns",
+    title: "Materi TKP CPNS: 6 Aspek dan Sistem Penilaiannya",
+    description:
+      "Materi TKP CPNS mencakup enam aspek, dari pelayanan publik hingga antiradikalisme. Pahami sistem nilai 1–5 dan ambang batas TKP CPNS 2024.",
+    excerpt:
+      "Materi TKP CPNS menguji enam aspek, dari pelayanan publik hingga antiradikalisme. Pelajari isi tiap aspek, cara penilaian, dan ambang batasnya.",
+    kategori: ["materi", "latihan-soal"],
+    examTrack: ["cpns"],
+    cover: {
+      src: "/img/blog/cover-materi-tkp-cpns.jpg",
+      alt: "Materi TKP CPNS: 6 aspek dan sistem penilaian dari Akademi ASN",
+    },
+    penulis: "dimas-maulana",
+    status: "published",
+    publishedAt: "2026-10-15",
+    focusKeyword: "materi tkp cpns",
+    related: ["perbedaan-cpns-dan-pppk"],
+    references: [
+      {
+        title:
+          "Keputusan Menteri PANRB Nomor 321 Tahun 2024 tentang Nilai Ambang Batas Seleksi Kompetensi Dasar Pengadaan Pegawai Negeri Sipil Tahun Anggaran 2024",
+        url: "https://www.bkn.go.id/wp-content/uploads/2024/08/2024kepmenpanrb321-Nilai-Ambang-Batas.pdf",
+        publisher: "BKN",
+        accessedAt: "2026-10-15",
+      },
+      {
+        title:
+          "Keputusan Menteri PANRB Nomor 406 Tahun 2026 tentang Nilai Ambang Batas Seleksi Kompetensi Dasar Seleksi Penerimaan Peserta Didik Sekolah Kedinasan Tahun 2026",
+        url: "https://jdih.menpan.go.id/dokumen-hukum/keputusan-menteri-pendayagunaan-aparatur-negara-dan-reformasi-birokrasi-nomor-406-tahun-2026-tentang-2121",
+        publisher: "JDIH Kementerian PANRB",
+        accessedAt: "2026-10-15",
+      },
+      {
+        title: "Pemerintah Tetapkan Nilai Ambang Batas SKD Sekolah Kedinasan 2026",
+        url: "https://www.menpan.go.id/posts/pemerintah-tetapkan-nilai-ambang-batas-skd-sekolah-kedinasan-2026",
+        publisher: "Kementerian PANRB",
+        accessedAt: "2026-10-15",
+      },
+      {
+        title:
+          "Karo Komlik BKN: Wisudo Putro Nugroho: Poster Pembukaan CPNS 2026 yang Beredar Dipastikan HOAKS",
+        url: "https://www.bkn.go.id/karo-komlik-bkn-wisudo-putro-nugroho-poster-pembukaan-cpns-2026-yang-beredar-dipastikan-hoaks/",
+        publisher: "BKN",
+        accessedAt: "2026-10-15",
+      },
+      {
+        title:
+          "Kemenag Tegaskan Belum Buka Pengadaan CPNS 2026, Publik Diimbau Waspada Informasi Palsu",
+        url: "https://kemenag.go.id/nasional/kemenag-tegaskan-belum-buka-pengadaan-cpns-2026-publik-diimbau-waspada-informasi-palsu-6I5hY",
+        publisher: "Kementerian Agama",
+        accessedAt: "2026-10-15",
+      },
+      {
+        title: "Resmi, Ini Nilai Ambang Batas dan Kisi-kisi SKD CPNS 2024",
+        url: "https://www.kompas.com/tren/read/2024/07/31/153000465/resmi-ini-nilai-ambang-batas-dan-kisi-kisi-skd-cpns-2024",
+        publisher: "Kompas.com",
+        accessedAt: "2026-10-15",
+      },
+    ],
+  },
+  {
     slug: "rekrutmen-bersama-bumn-2026",
     title: "Rekrutmen Bersama BUMN 2026: Status dan Persiapan",
     description:
