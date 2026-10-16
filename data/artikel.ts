@@ -4,6 +4,48 @@ import type { Artikel } from "@/lib/artikel-schema";
 // data/artikel/{slug}.mdx (lib/artikel.ts fails the build otherwise).
 export const artikel = [
   {
+    slug: "pppk-paruh-waktu-jadi-penuh-waktu",
+    title: "PPPK Paruh Waktu Jadi Penuh Waktu: Cara dan Jadwal",
+    description:
+      "PPPK paruh waktu jadi penuh waktu diatur Permen PANRB 9/2026. Guru direncanakan diangkat otomatis mulai 1 Januari 2027. Cek tahapan dan jalur non-guru.",
+    excerpt:
+      "PPPK paruh waktu jadi penuh waktu bisa lewat usulan instansi atau seleksi. Khusus guru, pemerintah menyiapkan pengangkatan otomatis mulai 1 Januari 2027.",
+    kategori: ["karier"],
+    examTrack: ["pppk"],
+    cover: {
+      src: "/img/blog/cover-pppk-paruh-waktu-jadi-penuh-waktu.jpg",
+      alt: "PPPK paruh waktu: jalur jadi PPPK penuh waktu dari Akademi ASN",
+    },
+    penulis: "dimas-maulana",
+    status: "published",
+    publishedAt: "2026-10-16",
+    focusKeyword: "pppk paruh waktu jadi penuh waktu",
+    related: ["perbedaan-cpns-dan-pppk"],
+    references: [
+      {
+        title:
+          "Peraturan Menteri PANRB Nomor 9 Tahun 2026 tentang Pegawai Pemerintah dengan Perjanjian Kerja Paruh Waktu",
+        url: "https://peraturan.bpk.go.id/Details/351339/permen-panrb-no-9-tahun-2026",
+        publisher: "JDIH BPK",
+        accessedAt: "2026-10-16",
+      },
+      {
+        title:
+          "Penataan Guru Jadi Fokus Pemerintah, Kepastian Status Disiapkan Mulai 2027",
+        url: "https://bbgtkjabar.kemendikdasmen.go.id/Publikasi/baca/penataan-guru-jadi-fokus-pemerintah-kepastian-status-disiapkan-mulai-2027",
+        publisher: "BBGTK Jawa Barat, Kemendikdasmen",
+        accessedAt: "2026-10-16",
+      },
+      {
+        title:
+          "Kepala BKN: Dari 2.722, hanya 384 yang Keluar Dari ASN, Mayoritas Beralih Status dari PPPK Paruh Waktu menjadi PPPK",
+        url: "https://www.bkn.go.id/kepala-bkn-dari-2-722-hanya-384-yang-keluar-dari-asn-mayoritas-beralih-status-dari-pppk-paruh-waktu-menjadi-pppk/",
+        publisher: "BKN",
+        accessedAt: "2026-10-16",
+      },
+    ],
+  },
+  {
     slug: "materi-tkp-cpns",
     title: "Materi TKP CPNS: 6 Aspek dan Sistem Penilaiannya",
     description:
