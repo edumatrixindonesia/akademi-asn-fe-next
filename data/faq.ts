@@ -50,7 +50,7 @@ export const faqCpns = {
     {
       question: "Apa saja materi SKD CPNS yang dipelajari?",
       answer:
-        "SKD CPNS terdiri dari 110 soal berbasis CAT yang dikerjakan dalam 100 menit. Tes Wawasan Kebangsaan (TWK, 30 soal) menguji nasionalisme, integritas, bela negara, pilar negara, dan bahasa negara. Tes Intelegensia Umum (TIU, 35 soal) menguji kemampuan verbal, numerik, dan figural. Tes Karakteristik Pribadi (TKP, 45 soal) menguji pelayanan publik, jejaring kerja, sosial budaya, teknologi informasi dan komunikasi, profesionalisme, dan antiradikalisme. Ketentuan ini mengacu pada Keputusan Menteri PANRB Nomor 321 Tahun 2024, dan semua materinya dipelajari di Akademi ASN lengkap dengan latihan soal dan pembahasan.",
+        "SKD CPNS terdiri dari 110 soal berbasis CAT yang dikerjakan dalam 100 menit. Tes Wawasan Kebangsaan (TWK, 30 soal) menguji nasionalisme, integritas, bela negara, pilar negara, dan bahasa negara. Tes Intelegensia Umum (TIU, 35 soal) menguji kemampuan verbal, numerik, dan figural. Tes Karakteristik Pribadi (TKP, 45 soal) menguji pelayanan publik, jejaring kerja, sosial budaya, teknologi informasi dan komunikasi, profesionalisme, dan anti-radikalisme. Ketentuan ini mengacu pada Keputusan Menteri PANRB Nomor 321 Tahun 2024, dan semua materinya dipelajari di Akademi ASN lengkap dengan latihan soal dan pembahasan.",
     },
     {
       question: "Apakah tersedia bimbel SKB CPNS?",
@@ -73,8 +73,7 @@ export const faqCpns = {
     },
     {
       question: "Berapa lama program bimbel CPNS?",
-      answer:
-        `Lama program bergantung pada paket yang dipilih: ${lamaPaketPrivat}, dan Bootcamp Online 24 sesi intensif. Pada les privat, jadwal setiap sesi bisa diatur sesuai waktu luang Anda.`,
+      answer: `Lama program bergantung pada paket yang dipilih: ${lamaPaketPrivat}, dan Bootcamp Online 24 sesi intensif. Pada les privat, jadwal setiap sesi bisa diatur sesuai waktu luang Anda.`,
     },
     {
       question: "Apa perbedaan kelas SKD dan SKB?",
@@ -115,7 +114,8 @@ export const faqPppk = {
         "Ya. Bimbel PPPK Guru bisa diikuti secara online, baik lewat Bootcamp Online berisi 24 sesi intensif via Zoom maupun les privat online bersama tutor. Materi kompetensi teknis disesuaikan dengan jabatan guru yang Anda lamar, ditambah persiapan kompetensi manajerial, sosial kultural, dan wawancara.",
     },
     {
-      question: "Apakah tersedia bimbel PPPK Kesehatan untuk perawat dan bidan?",
+      question:
+        "Apakah tersedia bimbel PPPK Kesehatan untuk perawat dan bidan?",
       answer:
         "Ya. Akademi ASN menyediakan bimbel PPPK Tenaga Kesehatan dengan modul dan latihan soal kompetensi teknis sesuai jabatan yang dilamar, termasuk perawat dan bidan. Pastikan juga STR Anda masih berlaku saat mendaftar, karena STR menjadi syarat untuk jabatan kesehatan yang memerlukannya.",
     },
@@ -131,7 +131,8 @@ export const faqPppk = {
         "Try out PPPK adalah simulasi seleksi kompetensi PPPK dengan sistem CAT (Computer Assisted Test), seperti tes resmi BKN. Anda mengerjakan soal kompetensi teknis, manajerial, sosial kultural, dan wawancara di komputer dengan batas waktu, lalu melihat analisis nilai Anda. Pada tes resmi, jawaban benar soal teknis bernilai 5, sedangkan soal manajerial, sosial kultural, dan wawancara bernilai 1 sampai 4. Latihan ini membantu Anda mengatur waktu dan mengenali pola soal.",
     },
     {
-      question: "Apakah materi bimbel PPPK disesuaikan dengan formasi yang dilamar?",
+      question:
+        "Apakah materi bimbel PPPK disesuaikan dengan formasi yang dilamar?",
       answer:
         "Ya. Modul dan latihan soal kompetensi teknis disesuaikan dengan formasi yang Anda lamar, baik guru, tenaga kesehatan, maupun tenaga teknis. Sampaikan formasi Anda saat konsultasi. Sebagai acuan, Panselnas menerbitkan materi pokok soal kompetensi teknis untuk setiap jabatan.",
     },
