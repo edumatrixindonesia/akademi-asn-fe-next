@@ -139,7 +139,7 @@ An informational page on the Blog that answers one search question (e.g. "passin
 _Avoid_: post, blog post, konten
 
 **Kategori**:
-A content-type group of Artikel on the Blog: Informasi, Tips, Latihan Soal, or Materi. An Artikel belongs to one or more Kategori; the first one listed is its primary Kategori, shown in its breadcrumb. Kategori never name an exam track.
+A content-type group of Artikel on the Blog: Informasi, Tips, Latihan Soal, Materi, or Karier. An Artikel belongs to one or more Kategori; the first one listed is its primary Kategori, shown in its breadcrumb. Kategori never name an exam track.
 _Avoid_: tag (Artikel have no tags)
 
 **Informasi**:
@@ -154,6 +154,10 @@ The Kategori for example questions with worked answers.
 
 **Materi** (Kategori):
 The Kategori for Artikel that explain a Materi topic (e.g. TWK, TIU, TKP, the PPPK competency tests).
+
+**Karier** (Kategori):
+The Kategori for what happens after a candidate passes a selection: employment status, contracts, status changes (e.g. PPPK Paruh Waktu to full-time PPPK, PPPK to PNS), rights, and career growth. Unlike Informasi, it is not about a selection itself.
+_Avoid_: Karier ASN (BUMN employees are not ASN), Kepegawaian
 
 **Artikel exam track**:
 The exam tracks an Artikel is about, one or more. Every Artikel has at least one. It has no public page; it ranks Artikel Terkait and picks the default cover. It does not pick Artikel Terbaru. An Artikel that applies to every track lists all three.

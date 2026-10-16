@@ -41,4 +41,14 @@ export const kategori = [
     description:
       "Penjelasan materi tes seleksi CPNS, PPPK, dan Rekrutmen Bersama BUMN, mulai dari TWK, TIU, dan TKP hingga kompetensi teknis, manajerial, dan sosial kultural.",
   },
+  {
+    slug: "karier",
+    name: "Karier",
+    title: "Karier",
+    seoTitle: "Karier PNS, PPPK, dan Pegawai BUMN",
+    metaDescription:
+      "Info karier PNS, PPPK, dan pegawai BUMN dari Akademi ASN: status kepegawaian, kontrak, alih status, hak pegawai, dan jenjang karier setelah lolos seleksi.",
+    description:
+      "Seputar karier setelah lolos seleksi CPNS, PPPK, dan Rekrutmen Bersama BUMN, mulai dari status kepegawaian dan perjanjian kerja hingga alih status, hak pegawai, dan jenjang karier. Setiap data mencantumkan sumber resminya.",
+  },
 ] satisfies Kategori[];

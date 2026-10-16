@@ -1,4 +1,4 @@
-export type KategoriSlug = "informasi" | "tips" | "latihan-soal" | "materi";
+export type KategoriSlug = "informasi" | "tips" | "latihan-soal" | "materi" | "karier";
 export type ExamTrack = "cpns" | "pppk" | "bumn";
 export type PenulisSlug = "tim-akademi-asn" | "dimas-maulana";
 

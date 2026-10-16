@@ -4,7 +4,7 @@ Date: 2026-10-13
 
 ## Status
 
-Accepted; the Artikel Terbaru part is superseded by [0005](0005-artikel-terbaru-ignores-exam-track.md).
+Accepted; the Artikel Terbaru part is superseded by [0005](0005-artikel-terbaru-ignores-exam-track.md). Amended 2026-10-16: a fifth Kategori, Karier.
 
 ## Context
 
@@ -27,3 +27,7 @@ The Ruangguru group's blogs (Ruangguru, Brain Academy) group posts by content ty
 
 - Reintroducing exam-track Kategori would need new redirects from the retired URLs, so treat this as settled.
 - The same Artikel can appear in several Kategori sections on `/blog`; that is a listing, not duplicate content.
+
+## Amendment 2026-10-16: Karier
+
+The owner added a fifth content type, Karier (`/blog/kategori/karier`), for topics after a candidate passes a selection: employment status, contracts, status changes, rights, and career growth. Informasi covers the selection itself, so post-appointment topics such as PPPK Paruh Waktu becoming full-time PPPK had no fitting Kategori. The name stays track-neutral ("Karier", not "Karier ASN") so BUMN topics fit too. The page is indexed from its first Artikel, like the other Kategori. Removing it later would need a redirect from its URL.
