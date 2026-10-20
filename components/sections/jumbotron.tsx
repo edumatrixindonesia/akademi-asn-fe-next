@@ -25,6 +25,7 @@ const Jumbotron = ({
       fill
       sizes="100vw"
       // The background is the LCP element on mobile, so skip lazy loading.
+      // Its dev LCP warning is a known false positive (docs/adr/0006-accept-dev-lcp-warning.md).
       loading="eager"
       fetchPriority="high"
       className="pointer-events-none -z-10 object-cover object-bottom bg-linear-to-r from-primary-dark to-primary"
