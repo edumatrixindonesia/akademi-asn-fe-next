@@ -17,10 +17,7 @@ export const updateSeleksiCpns = {
       sourceLabel: "BKN, 4 Juni 2026",
       sourceHref:
         "https://www.bkn.go.id/karo-komlik-bkn-wisudo-putro-nugroho-poster-pembukaan-cpns-2026-yang-beredar-dipastikan-hoaks/",
-      artikel: {
-        title: "CPNS 2027 Kapan Dibuka? Cek Status CPNS 2026",
-        slug: "cpns-2027",
-      },
+      artikel: "cpns-2027",
     },
     {
       title: "Rencana CPNS 2027",
@@ -99,7 +96,8 @@ export const updateSeleksiPppk = {
       description:
         "PermenPANRB Nomor 9 Tahun 2026 mengatur PPPK paruh waktu, yang berasal dari hasil seleksi ASN tahun anggaran 2024. Pejabat Pembina Kepegawaian dapat mengusulkan pengangkatannya menjadi PPPK berdasarkan ketersediaan anggaran dan hasil evaluasi kinerja.",
       sourceLabel: "PermenPANRB No. 9 Tahun 2026, JDIH Kementerian PANRB",
-      sourceHref: "https://data-jdih.menpan.go.id/dokumen/2026permenpanrb009.pdf",
+      sourceHref:
+        "https://data-jdih.menpan.go.id/dokumen/2026permenpanrb009.pdf",
     },
     {
       title: "Syarat Usia dan Tahapan Seleksi",
