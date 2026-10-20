@@ -237,3 +237,15 @@ None of the items below may be presented as fact. Each one has no BKN or KemenPA
 - https://jadiasn.id/link-pendaftaran-cpns-2026-resmi-cek-sscasn-bkn-akun-login-dan-status-pembukaan-terbaru/
 - https://jadiasn.id/cpns-diundur-2027-cek-fakta-terbaru/
 - https://targetlulus.com/artikel/cpns-2026-kapan-dibuka
+
+## Re-check 2026-10-20
+
+- SSCASN homepage, fetched 2026-10-20, still lists only "Seleksi Sekolah Kedinasan 2026" ("Data tahapan belum tersedia.").
+- BKN news index (latest item 19/10/2026) has no CPNS 2026 or CPNS 2027 announcement.
+- PermenPANRB 6/2024 is still "Berlaku" on JDIH KemenPANRB, with "Peraturan Terkait -" listed, and on JDIH BPK. KepmenPANRB 321/2024 is still "Berlaku" on JDIH KemenPANRB.
+- The "Status CPNS 2026 Jalur Umum" entry was moved to "Sampai 20 Oktober 2026". It now links to `/blog/cpns-2027`.
+- CPNS 2027 now has official `.go.id` sources, both from Kemendikdasmen:
+  - Siaran Pers 735/sipers/A6/VIII/2026, 19 Aug 2026: guru PPPK penuh waktu "mengikuti seleksi CPNS yang pendaftarannya mulai dibuka pada awal 2027".
+  - Siaran Pers 858/sipers/A6/IX/2026, 8 Oct 2026: rekrutmen guru CPNS bertahap for kebutuhan 464.856 guru, rekrutmen pertama 2027.
+  - Both back the Blog Artikel `/blog/cpns-2027`.
+  - The owner accepted Kemendikdasmen as a source for this block on 2026-10-20. Siaran Pers 735 backs the new "Rencana CPNS 2027" entry.

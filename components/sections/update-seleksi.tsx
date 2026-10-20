@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { headingId } from "@/lib/heading-id";
 import { dated } from "@/lib/artikel";
 
@@ -10,6 +11,7 @@ export type UpdateSeleksiProps = {
     description: string;
     sourceLabel: string;
     sourceHref: string;
+    artikel?: { title: string; slug: string };
   }[];
 };
 
@@ -60,6 +62,16 @@ const UpdateSeleksi = ({
                   Sumber: {update.sourceLabel}
                 </a>
               </p>
+              {update.artikel && (
+                <p className="mt-2 text-sm text-foreground/70">
+                  <Link
+                    href={`/blog/${update.artikel.slug}`}
+                    className="underline underline-offset-4 hover:text-primary-dark"
+                  >
+                    Baca: {update.artikel.title}
+                  </Link>
+                </p>
+              )}
             </article>
           ))}
         </div>

@@ -1,22 +1,34 @@
 import type { UpdateSeleksiProps } from "@/components/sections/update-seleksi";
 
 // Every claim is checked against primary sources: BKN, SSCASN, KemenPANRB,
-// FHCI, Kementerian BUMN, or regulation text.
+// Kemendikdasmen, FHCI, Kementerian BUMN, or regulation text.
 // Sources and quotes: .scratch/update-seleksi-<cpns|pppk|bumn>/research.md. Re-check
 // them and move `updatedAt` whenever an entry changes.
 export const updateSeleksiCpns = {
   title: "Update Informasi Seleksi CPNS 2026",
   description:
-    "Ringkasan informasi administratif seleksi CPNS dari kanal resmi BKN, SSCASN, dan Kementerian PANRB.",
-  updatedAt: "2026-10-10",
+    "Ringkasan informasi administratif seleksi CPNS dari kanal resmi BKN, SSCASN, Kementerian PANRB, dan Kemendikdasmen.",
+  updatedAt: "2026-10-20",
   updates: [
     {
       title: "Status CPNS 2026 Jalur Umum",
       description:
-        "Sampai 10 Oktober 2026, belum ada pengumuman resmi pembukaan seleksi CPNS 2026 jalur umum, termasuk jadwal pendaftaran dan jumlah formasinya. BKN memastikan poster pembukaan CPNS 2026 yang beredar pada Juni 2026 adalah hoaks.",
+        "Sampai 20 Oktober 2026, belum ada pengumuman resmi pembukaan seleksi CPNS 2026 jalur umum, termasuk jadwal pendaftaran dan jumlah formasinya. BKN memastikan poster pembukaan CPNS 2026 yang beredar pada Juni 2026 adalah hoaks.",
       sourceLabel: "BKN, 4 Juni 2026",
       sourceHref:
         "https://www.bkn.go.id/karo-komlik-bkn-wisudo-putro-nugroho-poster-pembukaan-cpns-2026-yang-beredar-dipastikan-hoaks/",
+      artikel: {
+        title: "CPNS 2027 Kapan Dibuka? Cek Status CPNS 2026",
+        slug: "cpns-2027",
+      },
+    },
+    {
+      title: "Rencana CPNS 2027",
+      description:
+        "Kemendikdasmen menyebut guru PPPK penuh waktu diberi kesempatan mengikuti seleksi CPNS yang pendaftarannya mulai dibuka pada awal 2027. Kemendikdasmen meminta masyarakat memantau jadwal, formasi, dan tahapan seleksi CPNS 2027 lewat kanal resmi Kementerian PANRB.",
+      sourceLabel: "Kemendikdasmen, 19 Agustus 2026",
+      sourceHref:
+        "https://www.kemendikdasmen.go.id/siaran-pers/16055-mulai-2027-pemerintah-buka-jalan-lebih-jelas-bagi-karier-guru-pppk",
     },
     {
       title: "CPNS Jalur Sekolah Kedinasan 2026",
