@@ -19,14 +19,13 @@ export type Artikel = {
   excerpt: string;
   // The first Kategori is the primary one, shown in the breadcrumb.
   kategori: [KategoriSlug, ...KategoriSlug[]];
-  // The first exam track picks the default cover.
   examTrack: [ExamTrack, ...ExamTrack[]];
   penulis: PenulisSlug;
   status: "draft" | "published";
   publishedAt?: string;
   updatedAt?: string;
   focusKeyword: string;
-  cover?: Image;
+  cover: Image;
   references: Reference[];
   related?: string[];
 };

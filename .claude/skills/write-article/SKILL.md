@@ -33,6 +33,7 @@ Show the owner:
 
 - the outline (`h2`s as questions, `h3`s, where `<BacaJuga>`, `<CtaKonsultasi>`, and `<LatihanSoal>` go),
 - every factual claim with its sources, grouped by `h2`,
+- the cover label, tagline, and icon, following Cover in the guide,
 - the full metadata entry, with a `title` that passes every Title rule in the guide and the first words of the three newest published Artikel beside it, so the owner can check the opening differs.
 
 Stop. Wait for the owner's approval. Apply requested changes and show Gate 1 again until approved. Write no file before approval.
@@ -41,7 +42,7 @@ Stop. Wait for the owner's approval. Apply requested changes and show Gate 1 aga
 
 Done when `bun run lint` and `bun run typecheck` pass and the preview URL is given.
 
-Write `data/artikel/{slug}.mdx` and add the entry to `data/artikel.ts` with `status: "draft"`, no `publishedAt`, and `penulis: "tim-akademi-asn"`. Run `bun run lint`, then `bun run typecheck`. Give the preview URL: `http://localhost:3000/blog/{slug}` under `bun dev`.
+Render the cover to `public/img/blog/cover-{slug}.jpg` (Cover in the guide). Write `data/artikel/{slug}.mdx` and add the entry to `data/artikel.ts` with `status: "draft"`, no `publishedAt`, and `penulis: "tim-akademi-asn"`. Run `bun run lint`, then `bun run typecheck`. Give the preview URL: `http://localhost:3000/blog/{slug}` under `bun dev`.
 
 ## 5. Gate 2
 

@@ -4,7 +4,7 @@ Date: 2026-10-13
 
 ## Status
 
-Accepted; the Artikel Terbaru part is superseded by [0005](0005-artikel-terbaru-ignores-exam-track.md). Amended 2026-10-16: a fifth Kategori, Karier.
+Accepted; the Artikel Terbaru part is superseded by [0005](0005-artikel-terbaru-ignores-exam-track.md). Amended 2026-10-16: a fifth Kategori, Karier. The default-cover part is superseded 2026-10-20: every Artikel has its own cover and there is no default (`docs/agents/article-writing.md`, Cover).
 
 ## Context
 

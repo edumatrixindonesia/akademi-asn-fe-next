@@ -160,7 +160,7 @@ The Kategori for what happens after a candidate passes a selection: employment s
 _Avoid_: Karier ASN (BUMN employees are not ASN), Kepegawaian
 
 **Artikel exam track**:
-The exam tracks an Artikel is about, one or more. Every Artikel has at least one. It has no public page; it ranks Artikel Terkait and picks the default cover. It does not pick Artikel Terbaru. An Artikel that applies to every track lists all three.
+The exam tracks an Artikel is about, one or more. Every Artikel has at least one. It has no public page; it ranks Artikel Terkait. It does not pick Artikel Terbaru. An Artikel that applies to every track lists all three.
 _Avoid_: Kategori CPNS/PPPK/BUMN (retired)
 
 **Penulis**:

@@ -38,13 +38,13 @@ Every `h2` holds plain text with letters or digits (its anchor `id` is built fro
 | `description` | Meta description, 120–160 characters. Holds the focus keyword and a reason to click. |
 | `excerpt` | One or two sentences. It is the lead, the card text, and the RSS description. Holds the focus keyword. |
 | `kategori` | One or more of `informasi`, `tips`, `latihan-soal`, `materi`, `karier`: the content type, never the exam track. List the best fit first; it is the primary Kategori in the breadcrumb. |
-| `examTrack` | One or more of `cpns`, `pppk`, `bumn`: the tracks the Artikel is about. It ranks Artikel Terkait and picks the default cover; Artikel Terbaru ignores it. List all three for a topic that applies to every track. |
+| `examTrack` | One or more of `cpns`, `pppk`, `bumn`: the tracks the Artikel is about. It ranks Artikel Terkait; Artikel Terbaru ignores it. List all three for a topic that applies to every track. |
 | `penulis` | `tim-akademi-asn` or `dimas-maulana`. See Penulis. |
 | `status` | `"draft"` while writing; `"published"` after owner approval. |
 | `publishedAt` | ISO date (`2026-10-02`). Set once at publish, never changed. |
 | `updatedAt` | ISO date. Set only after a substantive change to published content. |
 | `focusKeyword` | The keyword the owner gave, lowercase. Unique across Artikel. Never rendered. |
-| `cover` | Omit. The default cover of the first `examTrack` applies. When the owner supplies one: `{ src, alt }`, 1200×630. |
+| `cover` | Required: `{ src, alt }`, 1200×630 JPEG at `public/img/blog/cover-{slug}.jpg`, unless the owner supplies one. See Cover. |
 | `references` | `{ title, url, publisher, accessedAt }[]`. At least one official source. `accessedAt` is the day the source was read. |
 | `related` | Up to 3 slugs of published Artikel for Artikel Terkait. |
 
@@ -88,6 +88,18 @@ Vary the opening. The first word of a new title differs from the first word of e
 | 8 Perbedaan PNS dan PPPK, dari Hak, Gaji, dan Masa Kerja | 8 Perbedaan PNS dan PPPK dari Hak hingga Masa Kerja |
 
 Why these rules: in 17 CPNS and PPPK headlines from Kompas, detik, Tempo, and BKN (sampled October 2026), 8 used a comma, 6 of them as a "Topik, Penjelasan" separator, and colon and question titles were common too. The headlines without them ("Mengenal Lebih Dekat Perbedaan antara PNS dan PPPK", "Ini Perbedaan Gaji PNS dan PPPK") show the voice the Blog wants. Journalism style guides agree: short, active, understood in one read, never ending in `?` (RRI news style guide; Politeknik Negeri Jakarta).
+
+## Cover
+
+Every Artikel has its own cover; there is no default. `cover` is required in `lib/artikel-schema.ts`, so typecheck fails without it. The cover is the card thumbnail and the social preview, so it names this Artikel, not its exam track.
+
+- Add an entry `slug: [label, tagline, icon]` to `.scratch/blog/covers/cover.html`, open `cover.html#{slug}` at 1200×630, and save the screenshot as `public/img/blog/cover-{slug}.jpg`.
+- Label: the core topic, usually the focus keyword in title case (`CPNS 2027`, `Materi TKP CPNS`). At most two lines.
+- Tagline: what the Artikel covers, summarised from its `title` and `h2`s (`Jadwal pendaftaran dan syarat pelamar`). No date: it would date the cover.
+- Icon: one simple line icon that fits the topic (calendar for a schedule, rising line for a career move).
+- `alt`: `{label}: {tagline in lowercase} dari Akademi ASN`.
+- Never generic text that fits any Artikel of a track, such as "Artikel CPNS" or "Info & tips seleksi CPNS".
+- Show the cover at Gate 1 with the metadata entry.
 
 ## Keyword rules
 

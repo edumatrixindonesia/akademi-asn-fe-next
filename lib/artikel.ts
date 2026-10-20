@@ -1,7 +1,6 @@
 import { readdirSync, readFileSync } from "node:fs";
 import path from "node:path";
 import { artikel } from "@/data/artikel";
-import { artikelCover } from "@/data/artikel-cover";
 import { kategori } from "@/data/kategori";
 import { penulis } from "@/data/penulis";
 import { artikelMatches } from "@/lib/artikel-search";
@@ -44,14 +43,14 @@ export const getKategori = (slug: string) =>
 export const getPenulis = (slug: string) =>
   penulis.find((entry) => entry.slug === slug);
 
-// An Artikel's primary Kategori and the fields that fall back to its first
-// exam track or to the title. `KategoriSlug` types the slug, so the lookup
+// An Artikel's primary Kategori, cover, and the seoTitle that falls back to
+// the title. `KategoriSlug` types the slug, so the lookup
 // always finds an entry.
 export const resolveArtikel = (entry: Artikel) => {
   const kategori = getKategori(entry.kategori[0])!;
   return {
     kategori,
-    cover: entry.cover ?? artikelCover[entry.examTrack[0]],
+    cover: entry.cover,
     seoTitle: entry.seoTitle ?? entry.title,
   };
 };

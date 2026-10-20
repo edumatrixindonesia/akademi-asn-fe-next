@@ -12,6 +12,10 @@ export const artikel = [
       "Pendaftaran CPNS 2027 diperkirakan dibuka awal 2027, tetapi jadwal, formasi, dan syaratnya belum ditetapkan. Ini yang sudah resmi per 20 Oktober 2026.",
     kategori: ["informasi"],
     examTrack: ["cpns"],
+    cover: {
+      src: "/img/blog/cover-cpns-2027.jpg",
+      alt: "CPNS 2027: jadwal pendaftaran dan syarat pelamar dari Akademi ASN",
+    },
     penulis: "dimas-maulana",
     status: "published",
     publishedAt: "2026-10-20",
@@ -236,6 +240,10 @@ export const artikel = [
       "Rekrutmen Bersama BUMN 2026 belum diumumkan FHCI maupun BP BUMN per 13 Oktober 2026. Pelajari alur RBB 2025 sebagai acuan dan kenali tautan pendaftaran palsu.",
     kategori: ["informasi", "tips"],
     examTrack: ["bumn"],
+    cover: {
+      src: "/img/blog/cover-rekrutmen-bersama-bumn-2026.jpg",
+      alt: "Rekrutmen Bersama BUMN 2026: status pendaftaran dan cara bersiap dari Akademi ASN",
+    },
     penulis: "dimas-maulana",
     status: "published",
     publishedAt: "2026-10-13",
@@ -374,7 +382,7 @@ export const artikel = [
     examTrack: ["cpns", "pppk"],
     cover: {
       src: "/img/blog/cover-perbedaan-cpns-dan-pppk.jpg",
-      alt: "Perbedaan CPNS dan PPPK: informasi seleksi dari Akademi ASN",
+      alt: "Perbedaan CPNS dan PPPK: status, masa kerja, syarat, dan pensiun dari Akademi ASN",
     },
     penulis: "dimas-maulana",
     status: "published",

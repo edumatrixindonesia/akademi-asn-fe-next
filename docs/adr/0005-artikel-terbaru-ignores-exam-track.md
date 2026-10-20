@@ -4,7 +4,7 @@ Date: 2026-10-14
 
 ## Status
 
-Accepted. Supersedes the Artikel Terbaru part of [0003](0003-kategori-by-content-type.md).
+Accepted. Supersedes the Artikel Terbaru part of [0003](0003-kategori-by-content-type.md). The default-cover part is superseded 2026-10-20: every Artikel has its own cover and there is no default (`docs/agents/article-writing.md`, Cover).
 
 ## Context
 
