@@ -39,9 +39,10 @@ test("published needs publishedAt and references; draft does not", () => {
   expect(validateArtikel([entry({ status: "draft", publishedAt: undefined, references: [] })], ["contoh"])).toEqual([]);
 });
 
-test("title and seoTitle each allow at most 50 characters", () => {
-  expect(validateArtikel([entry({ title: "t".repeat(51), seoTitle: "SEO" })], ["contoh"]).join()).toContain("title");
-  expect(validateArtikel([entry({ seoTitle: "s".repeat(51) })], ["contoh"]).join()).toContain("seoTitle");
+test("title and seoTitle each allow at most 64 characters", () => {
+  expect(validateArtikel([entry({ title: "t".repeat(65), seoTitle: "SEO" })], ["contoh"]).join()).toContain("title");
+  expect(validateArtikel([entry({ seoTitle: "s".repeat(65) })], ["contoh"]).join()).toContain("seoTitle");
+  expect(validateArtikel([entry({ title: "t".repeat(64), seoTitle: "s".repeat(64) })], ["contoh"])).toEqual([]);
 });
 
 test("related entries must be published", () => {

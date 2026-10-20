@@ -19,7 +19,8 @@ export async function generateMetadata({
   const url = `/blog/${entry.slug}`;
 
   return {
-    title: seoTitle,
+    // No " | Akademi ASN" suffix: the whole 64-character title fits (docs/adr/0007-artikel-title-without-brand-suffix.md).
+    title: { absolute: seoTitle },
     description: entry.description,
     alternates: { canonical: url, types: rssAlternate },
     openGraph: {

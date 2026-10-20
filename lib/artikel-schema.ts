@@ -80,8 +80,8 @@ export const validateArtikel = (
     if (new Set(entry.kategori).size < entry.kategori.length) errors.push(`"${slug}" repeats a Kategori.`);
     if (new Set(entry.examTrack).size < entry.examTrack.length) errors.push(`"${slug}" repeats an exam track.`);
     if (!bodies.has(slug)) errors.push(`"${slug}" has no data/artikel/${slug}.mdx.`);
-    if (entry.title.length > 50) errors.push(`"${slug}" title is over 50 characters.`);
-    if (entry.seoTitle && entry.seoTitle.length > 50) errors.push(`"${slug}" seoTitle is over 50 characters.`);
+    if (entry.title.length > 64) errors.push(`"${slug}" title is over 64 characters.`);
+    if (entry.seoTitle && entry.seoTitle.length > 64) errors.push(`"${slug}" seoTitle is over 64 characters.`);
     if (entry.description.length < 120 || entry.description.length > 160) {
       errors.push(`"${slug}" description must be 120-160 characters.`);
     }

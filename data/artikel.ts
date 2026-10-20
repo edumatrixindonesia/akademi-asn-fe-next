@@ -5,7 +5,7 @@ import type { Artikel } from "@/lib/artikel-schema";
 export const artikel = [
   {
     slug: "cpns-2027",
-    title: "CPNS 2027 Kapan Dibuka? Cek Status CPNS 2026",
+    title: "Seputar CPNS 2027 dari Jadwal Pendaftaran hingga Syarat Pelamar",
     description:
       "CPNS 2027 kapan dibuka? Menteri PANRB memperkirakan pendaftaran awal 2027. Cek status CPNS 2026, kebutuhan guru, syarat, dan cara menghindari hoaks.",
     excerpt:
@@ -125,7 +125,7 @@ export const artikel = [
   },
   {
     slug: "pppk-paruh-waktu-jadi-penuh-waktu",
-    title: "PPPK Paruh Waktu Jadi Penuh Waktu: Cara dan Jadwal",
+    title: "Begini Cara PPPK Paruh Waktu Jadi Penuh Waktu dan Jadwalnya",
     description:
       "PPPK paruh waktu jadi penuh waktu diatur Permen PANRB 9/2026. Guru direncanakan diangkat otomatis mulai 1 Januari 2027. Cek tahapan dan jalur non-guru.",
     excerpt:
@@ -167,7 +167,7 @@ export const artikel = [
   },
   {
     slug: "materi-tkp-cpns",
-    title: "Materi TKP CPNS: 6 Aspek dan Sistem Penilaiannya",
+    title: "Memahami 6 Aspek Materi TKP CPNS dan Cara Penilaiannya",
     description:
       "Materi TKP CPNS mencakup enam aspek, dari pelayanan publik hingga anti-radikalisme. Pahami sistem nilai 1–5 dan ambang batas TKP CPNS 2024.",
     excerpt:
@@ -229,7 +229,7 @@ export const artikel = [
   },
   {
     slug: "rekrutmen-bersama-bumn-2026",
-    title: "Rekrutmen Bersama BUMN 2026: Status dan Persiapan",
+    title: "Menanti Rekrutmen Bersama BUMN 2026 dan Cara Mempersiapkannya",
     description:
       "Rekrutmen Bersama BUMN 2026 belum diumumkan per Oktober 2026. Cek kanal resmi, alur dan passing grade RBB 2025, serta cara mengenali link pendaftaran palsu.",
     excerpt:
@@ -365,7 +365,7 @@ export const artikel = [
   },
   {
     slug: "perbedaan-cpns-dan-pppk",
-    title: "Perbedaan CPNS dan PPPK: Status, Hak, dan Syarat",
+    title: "Mengenal Perbedaan CPNS dan PPPK dari Status hingga Hak Kerja",
     description:
       "Apa perbedaan CPNS dan PPPK? Bandingkan status, masa kerja, batas usia melamar, jaminan pensiun, dan jenis seleksinya menurut UU ASN 2023.",
     excerpt:

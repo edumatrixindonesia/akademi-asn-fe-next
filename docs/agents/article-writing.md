@@ -33,8 +33,8 @@ Every `h2` holds plain text with letters or digits (its anchor `id` is built fro
 | Field | Rule |
 | --- | --- |
 | `slug` | Kebab-case from the keyword, unique. Becomes `/blog/{slug}`. |
-| `title` | The `h1` and card title. At most 50 characters, so `"{title} \| Akademi ASN"` stays within 65. Holds the focus keyword. |
-| `seoTitle` | Only when the `<title>` must differ from the `h1`. Also at most 50 characters. |
+| `title` | The `h1`, the `<title>` (without the " \| Akademi ASN" suffix, `docs/adr/0007-artikel-title-without-brand-suffix.md`), and the card title. At most 64 characters. Holds the focus keyword. Follows Title. |
+| `seoTitle` | Omit: one title serves the `h1` and the `<title>`. Only for an exception the owner approves; same 64-character limit and Title rules. |
 | `description` | Meta description, 120–160 characters. Holds the focus keyword and a reason to click. |
 | `excerpt` | One or two sentences. It is the lead, the card text, and the RSS description. Holds the focus keyword. |
 | `kategori` | One or more of `informasi`, `tips`, `latihan-soal`, `materi`, `karier`: the content type, never the exam track. List the best fit first; it is the primary Kategori in the breadcrumb. |
@@ -48,7 +48,46 @@ Every `h2` holds plain text with letters or digits (its anchor `id` is built fro
 | `references` | `{ title, url, publisher, accessedAt }[]`. At least one official source. `accessedAt` is the day the source was read. |
 | `related` | Up to 3 slugs of published Artikel for Artikel Terkait. |
 
-`validateArtikel` fails the build on: duplicate `slug` or `focusKeyword`, a missing body, a repeated Kategori or exam track, a title over 50 characters, a `description` outside 120–160, and a published entry without `publishedAt` or `references`.
+`validateArtikel` fails the build on: duplicate `slug` or `focusKeyword`, a missing body, a repeated Kategori or exam track, a `title` or `seoTitle` over 64 characters, a `description` outside 120–160, and a published entry without `publishedAt` or `references`.
+
+## Title
+
+The `title` reads like a headline a person wrote for a news portal: one flowing phrase that varies from Artikel to Artikel, never the rigid "Topik: Penjelasan". The owner checks every title by hand at Gate 1; no validator enforces these rules.
+
+Never:
+
+- Separator punctuation: `:`, `?`, `!`, `;`, `,`, `|`, `(`, `)`, quotation marks, `–`, `—`, or a spaced hyphen ` - `. A hyphen inside a word (`Kisi-kisi`) and the dot in a number (`4.770`) are fine.
+- A question. No question word (Apa, Bagaimana, Kapan, Berapa, Siapa, Mengapa, Di mana) opens the title, even without `?`. State the answer instead; questions belong in the `h2`s.
+- A list joined by commas. Join items with "dan", "serta", "beserta", or "dari … hingga …".
+
+Always:
+
+- At most 64 characters.
+- The focus keyword, whole and in its usual word order.
+- PUEBI capitalization: every word capitalized except function words (di, ke, dari, dan, yang, untuk, hingga, dengan, atau, serta, pada), which stay lowercase unless they open the title.
+- Facts in the title come from the Artikel's sources, like any other claim.
+- No timing that a later announcement can prove wrong ("Awal Tahun", "Segera", "Bulan Depan"). A year that is part of the keyword is fine.
+
+Vary the opening. The first word of a new title differs from the first word of each of the three newest published Artikel. Openings that read naturally:
+
+| Opening | Example |
+| --- | --- |
+| Verb | Memahami 6 Aspek Materi TKP CPNS dan Cara Penilaiannya |
+| Verb | Mengenal Perbedaan CPNS dan PPPK dari Status hingga Hak Kerja |
+| "Begini" or "Ini" | Begini Cara PPPK Paruh Waktu Jadi Penuh Waktu dan Jadwalnya |
+| News sentence (subject, predicate, object) | Pemerintah Siapkan 4.770 Kebutuhan CPNS Sekolah Kedinasan 2026 |
+| "Seputar" | Seputar CPNS 2027 dari Jadwal Pendaftaran hingga Syarat Pelamar |
+| Number | 20 Contoh Soal TKP SKD CPNS 2024 Lengkap dengan Kunci Jawaban |
+| Noun phrase | Kisi-kisi Materi TKP SKD CPNS 2024 |
+
+| Forbidden | Better |
+| --- | --- |
+| Materi TKP CPNS: 6 Aspek dan Sistem Penilaiannya | Memahami 6 Aspek Materi TKP CPNS dan Cara Penilaiannya |
+| Perbedaan CPNS dan PPPK: Status, Hak, dan Syarat | Mengenal Perbedaan CPNS dan PPPK dari Status hingga Hak Kerja |
+| CPNS 2027 Kapan Dibuka? Cek Status CPNS 2026 | Seputar CPNS 2027 dari Jadwal Pendaftaran hingga Syarat Pelamar |
+| 8 Perbedaan PNS dan PPPK, dari Hak, Gaji, dan Masa Kerja | 8 Perbedaan PNS dan PPPK dari Hak hingga Masa Kerja |
+
+Why these rules: in 17 CPNS and PPPK headlines from Kompas, detik, Tempo, and BKN (sampled October 2026), 8 used a comma, 6 of them as a "Topik, Penjelasan" separator, and colon and question titles were common too. The headlines without them ("Mengenal Lebih Dekat Perbedaan antara PNS dan PPPK", "Ini Perbedaan Gaji PNS dan PPPK") show the voice the Blog wants. Journalism style guides agree: short, active, understood in one read, never ending in `?` (RRI news style guide; Politeknik Negeri Jakarta).
 
 ## Keyword rules
 

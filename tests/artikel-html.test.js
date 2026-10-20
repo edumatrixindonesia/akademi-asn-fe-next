@@ -12,7 +12,7 @@ test("draft fixture Artikel renders one h1, canonical, BlogPosting and Breadcrum
   expect([...html.matchAll(/<h1\b/g)]).toHaveLength(1);
   expect(html).toMatch(/<h1\b[^>]*>Draft Artikel Contoh<\/h1>/);
   expect(html).toMatch(/<link rel="canonical" href="[^"]+\/blog\/draft-artikel-contoh"/);
-  expect(html).toContain(`<title>Draft Artikel Contoh | Akademi ASN</title>`);
+  expect(html).toContain(`<title>Draft Artikel Contoh</title>`);
   expect(html).toContain(`property="og:type" content="article"`);
   expect(html).toMatch(/\d+ menit baca/);
   expect(html).toContain("<table>");
