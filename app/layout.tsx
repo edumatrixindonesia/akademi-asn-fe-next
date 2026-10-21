@@ -1,4 +1,5 @@
 import type { Metadata, Viewport } from "next";
+import { GoogleAnalytics } from "@next/third-parties/google";
 import { Poppins } from "next/font/google";
 import Footer from "@/components/layouts/footer";
 import Navbar from "@/components/layouts/navbar";
@@ -54,6 +55,7 @@ export const viewport: Viewport = {
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   const konsultasiUrl = getKonsultasiUrl();
+  const gaId = process.env.NEXT_PUBLIC_GA_ID;
 
   return (
     <html lang="id" className={`${poppins.variable} h-full antialiased`}>
@@ -71,6 +73,8 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
 
         <Footer {...footerDefault()} />
       </body>
+      {/* Unset in dev so local visits are not tracked. */}
+      {gaId && <GoogleAnalytics gaId={gaId} />}
     </html>
   );
 }
