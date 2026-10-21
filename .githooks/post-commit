@@ -1,0 +1,5 @@
+#!/bin/sh
+# Keep the local graphify knowledge graph in sync; skip when graphify is not installed.
+command -v graphify >/dev/null 2>&1 || exit 0
+graphify update . >/dev/null 2>&1 || echo "[graphify] update failed; run 'graphify update .' to see why" >&2
+exit 0
