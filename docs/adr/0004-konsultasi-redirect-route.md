@@ -4,7 +4,7 @@ Date: 2026-10-14
 
 ## Status
 
-Accepted
+Accepted. Amended 2026-10-21: see "Amendment" below.
 
 ## Context
 
@@ -28,3 +28,11 @@ The Admin Konsultasi now rotates per Giliran Konsultasi (08.00, 13.00, 17.00 WIB
 - Do not lower `revalidate` to make the rotation faster. The redirect route already makes it exact.
 - An edit to a location page's region data can take up to 7 days to show.
 - The Nomor Call Center is unchanged and still links straight to its own WhatsApp number.
+
+## Amendment (2026-10-21)
+
+The Giliran Konsultasi changed from three a day (08.00, 13.00, 17.00 WIB) to two 12-hour Giliran starting at 00.00 and 12.00 WIB. The redirect route itself is unchanged.
+
+- New anchor: the 00.00 WIB Giliran on 2026-10-22 belongs to Nevita. Nevita follows Asyah, who held the last 17.00 WIB Giliran of the old schedule (2026-10-21), so the order continues.
+- Each day skips one admin: the order advances by 3 per day, not 2. With 4 admins and 2 Giliran a day, a plain cycle would pin Asyah and Putri to 00.00 and Nevita and Ista to 12.00 forever. A step of 1 per day was rejected because the same admin would hold two Giliran in a row (24 hours). With the skip, every admin holds one 00.00 and one 12.00 Giliran every 4 days.
+- Between deploy and 2026-10-22 00.00 WIB, the admin may jump by one compared with the old schedule. This was accepted.

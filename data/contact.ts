@@ -52,21 +52,23 @@ export const konsultasiPage = {
 
 const defaultKonsultasiTopic = konsultasiPage.home;
 
-// Giliran Konsultasi start at 08.00, 13.00, and 17.00 WIB (01:00, 06:00,
-// 10:00 UTC). The order carries over across days; the 08.00 WIB Giliran on
-// 2026-10-15 belongs to the first admin (docs/adr/0004-konsultasi-redirect-route.md).
-const anchorDay = Date.UTC(2026, 9, 15) / 86_400_000;
+// Giliran Konsultasi start at 00.00 and 12.00 WIB (17:00 and 05:00 UTC). The
+// 00.00 WIB Giliran on 2026-10-22 belongs to Nevita
+// (docs/adr/0004-konsultasi-redirect-route.md).
+const anchorDay = Date.UTC(2026, 9, 22) / 86_400_000;
+const anchorAdmin = 1;
 
 export const getKonsultasiAdmin = (now = Date.now()) => {
-  // Shift the clock so a rotation day starts at 08.00 WIB (01:00 UTC); the
-  // Giliran then start 0, 5, and 9 hours into it.
-  const shifted = now - 3_600_000;
+  // Shift the clock to WIB (UTC+7) so a rotation day starts at 00.00 WIB.
+  const shifted = now + 7 * 3_600_000;
   const day = Math.floor(shifted / 86_400_000) - anchorDay;
-  const hour = new Date(shifted).getUTCHours();
-  const giliran = day * 3 + (hour < 5 ? 0 : hour < 9 ? 1 : 2);
+  const giliran = new Date(shifted).getUTCHours() < 12 ? 0 : 1;
+  // Each day advances the order by 3 (2 Giliran plus 1 skipped admin): with
+  // 4 admins and 2 Giliran, a step of 2 would pin each admin to one Giliran.
+  const index = anchorAdmin + day * 3 + giliran;
   const count = konsultasiAdmins.length;
 
-  return konsultasiAdmins[((giliran % count) + count) % count];
+  return konsultasiAdmins[((index % count) + count) % count];
 };
 
 // Konsultasi links point to the /konsultasi route, which picks the admin at

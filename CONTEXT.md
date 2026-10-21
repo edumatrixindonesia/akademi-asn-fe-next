@@ -121,11 +121,11 @@ What the prefilled Konsultasi chat says the visitor wants to ask about, so the A
 _Avoid_: pesan, template
 
 **Admin Konsultasi**:
-One of the Akademi ASN admins who answer Konsultasi chats. Konsultasi links rotate between them in a fixed order (Asyah, Nevita, Putri, Ista), one admin per Giliran Konsultasi.
+One of the Akademi ASN admins who answer Konsultasi chats. Konsultasi links rotate between them in a fixed order (Asyah, Nevita, Putri, Ista), one admin per Giliran Konsultasi, skipping one admin each day.
 _Avoid_: CS, call center (the UI label "Call Center" stays)
 
 **Giliran Konsultasi**:
-One of the three daily periods during which a single Admin Konsultasi receives every Konsultasi chat. They start at 08.00, 13.00, and 17.00 WIB, every day including Sunday. The order carries over from one day to the next instead of restarting each morning, so every Admin Konsultasi gets a turn.
+One of the two daily 12-hour periods during which a single Admin Konsultasi receives every Konsultasi chat. They start at 00.00 and 12.00 WIB, every day including Sunday. The order carries over from one day to the next instead of restarting each day, and each day skips one admin, so every Admin Konsultasi takes both Giliran in turn and never two in a row.
 _Avoid_: shift, sesi
 
 **Nomor Call Center**:
