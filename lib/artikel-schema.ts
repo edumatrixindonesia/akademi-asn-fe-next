@@ -130,8 +130,8 @@ export const validateArtikel = (
     }
     if (entry.publishedAt && !isIsoDate(entry.publishedAt)) errors.push(`"${slug}" publishedAt must be a valid YYYY-MM-DD date.`);
     if (entry.updatedAt && !isIsoDate(entry.updatedAt)) errors.push(`"${slug}" updatedAt must be a valid YYYY-MM-DD date.`);
-    if (entry.publishedAt && entry.updatedAt && isIsoDate(entry.publishedAt) && isIsoDate(entry.updatedAt) && entry.updatedAt < entry.publishedAt) {
-      errors.push(`"${slug}" updatedAt cannot be earlier than publishedAt.`);
+    if (entry.publishedAt && entry.updatedAt && isIsoDate(entry.publishedAt) && isIsoDate(entry.updatedAt) && entry.updatedAt <= entry.publishedAt) {
+      errors.push(`"${slug}" updatedAt must be later than publishedAt; leave it out on the publish day.`);
     }
   }
 

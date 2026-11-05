@@ -19,7 +19,6 @@ export const artikel = [
     penulis: "dimas-maulana",
     status: "published",
     publishedAt: "2026-11-05",
-    updatedAt: "2026-11-05",
     focusKeyword: "gaji pppk",
     related: ["pppk-paruh-waktu-jadi-penuh-waktu", "perbedaan-cpns-dan-pppk"],
     references: [

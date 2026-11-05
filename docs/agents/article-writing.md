@@ -43,13 +43,13 @@ Every `h2` holds plain text with letters or digits (its anchor `id` is built fro
 | `penulis` | `tim-akademi-asn` or `dimas-maulana`. See Penulis. |
 | `status` | `"draft"` while writing; `"published"` after owner approval. |
 | `publishedAt` | ISO date (`2026-10-02`). Set once at publish, never changed. |
-| `updatedAt` | ISO date. Set only after a substantive change to published content. |
+| `updatedAt` | ISO date. Set only after a substantive change to published content, and only on a later day than `publishedAt`. |
 | `focusKeyword` | The keyword the owner gave, lowercase. Unique across Artikel. Never rendered. |
 | `cover` | Required: `{ src, alt }`, 1200×630 JPEG at `public/img/blog/cover-{slug}.jpg`, unless the owner supplies one. See Cover. |
 | `references` | `{ title, url, publisher, accessedAt }[]`. At least one official source. `accessedAt` is the day the source was read. |
 | `related` | Up to 3 slugs of published Artikel for Artikel Terkait. |
 
-`validateArtikel` fails the build on: duplicate `slug` or `focusKeyword`, a missing body, a repeated Kategori or exam track, a `title` or `seoTitle` over 64 characters, a `description` outside 120–160, and a published entry without `publishedAt` or `references`.
+`validateArtikel` fails the build on: duplicate `slug` or `focusKeyword`, a missing body, a repeated Kategori or exam track, a `title` or `seoTitle` over 64 characters, a `description` outside 120–160, a published entry without `publishedAt` or `references`, and an `updatedAt` that is not later than `publishedAt`.
 
 ## Title
 
@@ -189,7 +189,7 @@ An edit with a Klaim change goes through this flow:
 2. Show the owner a delta table: only the added, changed, and removed Klaim, with the same columns as Gate 1 (sentence, source URL, exact location, verbatim quote). Mark a removed Klaim "dihapus".
 3. Stop. Wait for the owner's approval. Write no file before it.
 4. Edit the body and `references`, update `docs/klaim/{slug}.md`, and set its `Disetujui owner` date to today.
-5. Set `updatedAt` to today's date.
+5. Set `updatedAt` to today's date. If today is the `publishedAt` date, leave `updatedAt` out.
 6. Run `bun run lint` and `bun run typecheck`.
 
 An edit that changes no Klaim (typos, wording, internal links, `<BacaJuga>`, non-factual metadata) skips this flow, and leaves the Tabel Klaim and `updatedAt` as they are.

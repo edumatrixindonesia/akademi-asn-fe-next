@@ -56,8 +56,10 @@ test("dates must be valid ISO calendar dates", () => {
   expect(validateArtikel([entry({ updatedAt: "02-10-2026" })], ["contoh"], {}).join()).toContain("updatedAt");
 });
 
-test("updatedAt cannot precede publishedAt", () => {
-  expect(validateArtikel([entry({ updatedAt: "2026-09-30" })], ["contoh"], {}).join()).toContain("earlier");
+test("updatedAt must be later than publishedAt", () => {
+  expect(validateArtikel([entry({ updatedAt: "2026-09-30" })], ["contoh"], {}).join()).toContain("later than publishedAt");
+  expect(validateArtikel([entry({ updatedAt: "2026-10-01" })], ["contoh"], {}).join()).toContain("later than publishedAt");
+  expect(validateArtikel([entry({ updatedAt: "2026-10-02" })], ["contoh"], {})).toEqual([]);
 });
 
 test("related allows up to 3 distinct slugs of other entries (forward references too)", () => {
