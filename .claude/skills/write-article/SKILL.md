@@ -40,12 +40,14 @@ Stop. Wait for the owner's approval. Apply requested changes and show Gate 1 aga
 
 ## 4. Draft
 
-Done when `bun run lint` and `bun run typecheck` pass and the preview URL is given.
+Done when the Tabel Klaim is written, `bun run lint` and `bun run typecheck` pass, and the preview URL is given.
 
-Render the cover to `public/img/blog/cover-{slug}.jpg` (Cover in the guide). Write `data/artikel/{slug}.mdx` and add the entry to `data/artikel.ts` with `status: "draft"`, no `publishedAt`, and `penulis: "tim-akademi-asn"`. Run `bun run lint`, then `bun run typecheck`. Give the preview URL: `http://localhost:3000/blog/{slug}` under `bun dev`.
+Render the cover to `public/img/blog/cover-{slug}.jpg` (Cover in the guide). Write `data/artikel/{slug}.mdx` and add the entry to `data/artikel.ts` with `status: "draft"`, no `publishedAt`, and `penulis: "tim-akademi-asn"`. Write `docs/klaim/{slug}.md` from the approved Gate 1 table, in the format of Tabel Klaim in the guide, with `Disetujui owner:` set to today's date. Run `bun run lint`, then `bun run typecheck`. Give the preview URL: `http://localhost:3000/blog/{slug}` under `bun dev`.
 
 ## 5. Gate 2
 
 Stop. Wait for the owner's approval of the preview. Ask whether the owner edited the Artikel. If yes, set `penulis: "dimas-maulana"`; if no, keep `tim-akademi-asn`.
+
+If the owner's changes at Gate 2 add, change, or remove a Klaim, show the delta table first, wait for approval, then update `docs/klaim/{slug}.md` and its `Disetujui owner` date.
 
 On approval, set `status: "published"` and `publishedAt` to today's date, then run `bun run lint` and `bun run typecheck` again. Report the final URL `/blog/{slug}`.

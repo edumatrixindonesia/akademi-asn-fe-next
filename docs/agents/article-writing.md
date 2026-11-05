@@ -1,15 +1,16 @@
 # Article writing
 
-The editorial contract for every Artikel on the Blog. `/write-article` follows it; the owner reviews against it. Terms (Artikel, Kategori, Penulis, Konsultasi) are defined in `CONTEXT.md`.
+The editorial contract for every Artikel on the Blog. `/write-article` follows it; the owner reviews against it. Terms (Artikel, Kategori, Penulis, Konsultasi, Klaim, Tabel Klaim, Sumber Resmi) are defined in `CONTEXT.md`.
 
 An Artikel answers one informational search. It earns trust with sources and leads the reader to Konsultasi and the exam-track landing pages.
 
 ## Files
 
-Each Artikel is two files that share a slug:
+Each Artikel is two files that share a slug, plus a Tabel Klaim once it is approved:
 
 - `data/artikel.ts`: one entry in the typed list, checked with `satisfies Artikel[]`. Newest first.
 - `data/artikel/{slug}.mdx`: the body.
+- `docs/klaim/{slug}.md`: the Tabel Klaim. See Tabel Klaim.
 
 `lib/artikel.ts` throws at build when one exists without the other, and `lib/artikel-schema.ts` (`validateArtikel`) holds the enforced limits.
 
@@ -154,9 +155,10 @@ Write `<`, `>`, `{`, and `}` in prose as `\<`, `\>`, `\{`, `\}`: MDX reads them 
 Every claim is checked before it enters Gate 1.
 
 - Every factual claim has a source. The owner accepts no word or sentence that cannot be accounted for.
-- At least one source per Artikel is official: BKN, KemenPANRB, SSCASN, other `.go.id` sites, or a law or regulation (UU, PP, Perpres, Permen).
-- Figures, requirements, and rules come only from official documents: the regulation text (JDIH, peraturan.go.id), BKN, KemenPANRB, SSCASN, or other `.go.id` sites.
-- News media only back an official's statement, written as a dated statement ("Menteri PANRB menyatakan … pada 3 Oktober 2026"), never as a rule.
+- At least one source per Artikel is a Sumber Resmi. The build fails a published Artikel without one.
+- A Sumber Resmi is a source published by a government body or the official organizer of a selection: any `.go.id` site (BKN, KemenPANRB, SSCASN, JDIH, peraturan.bpk.go.id), a law or regulation (UU, PP, Perpres, Permen) hosted on one, `fhcibumn.com` (FHCI, Rekrutmen Bersama BUMN) and `danantaraindonesia.co.id` (Danantara), each with its subdomains. `lib/artikel-schema.ts` holds the same list.
+- Figures, requirements, and rules come only from a Sumber Resmi: the regulation text, BKN, KemenPANRB, SSCASN, other `.go.id` sites, FHCI, or Danantara.
+- News media and official social media accounts (`x.com`, `instagram.com`) are not Sumber Resmi. They only back a dated statement ("Menteri PANRB menyatakan … pada 3 Oktober 2026"), never a rule or a figure.
 - When news media and a regulation disagree, the regulation wins and the media claim is dropped.
 - A plan or proposal not yet in a published official document (regulation, circular, or official ministry press release) is dropped. A circular or press release is written as a dated announcement, not as a rule in force.
 - A figure that changes by year (formasi, passing grade, usia, kuota) names its year in the text.
@@ -166,6 +168,30 @@ Every claim is checked before it enters Gate 1.
 - A source's date decides what it proves: a regulation that a newer one replaced proves history, not the current rule.
 
 `references` lists every source behind a claim, and only those.
+
+## Tabel Klaim
+
+The Tabel Klaim is the record of every Klaim in one Artikel. It is the table the owner approves at Gate 1, kept so that any sentence can be traced to its evidence later.
+
+- **Location:** `docs/klaim/{slug}.md`, one file per Artikel, named by slug. It is never rendered or routed.
+- **Header line:** `Disetujui owner: 5 November 2026`, the date of the owner's last approval. Git holds the history; the file keeps no log.
+- **Body:** one table per `h2` of the Artikel, in order. Columns: the sentence as published, the source URL, the exact location (pasal, ayat, lampiran page, or section), and the verbatim quote. A sentence that states no fact (hook, transitions, calls to action) gets the row "non-klaim". A factual title is a Klaim and gets a row.
+- **Cross-check:** the build compares every `http(s)` URL in the file with `references` by exact string match. Both sets must be the same; a mismatch fails the build and names the slug and the URL. A Tabel Klaim with no matching Artikel fails too. A draft may omit the file; a published Artikel needs it once the backfill of the existing Artikel is done.
+
+## Editing a published Artikel
+
+A **Klaim change** is any of these: adding, changing, or removing a sentence that states a fact (a factual title included), or changing `references`.
+
+An edit with a Klaim change goes through this flow:
+
+1. Research the new or changed Klaim, applying the Validation rules.
+2. Show the owner a delta table: only the added, changed, and removed Klaim, with the same columns as Gate 1 (sentence, source URL, exact location, verbatim quote). Mark a removed Klaim "dihapus".
+3. Stop. Wait for the owner's approval. Write no file before it.
+4. Edit the body and `references`, update `docs/klaim/{slug}.md`, and set its `Disetujui owner` date to today.
+5. Set `updatedAt` to today's date.
+6. Run `bun run lint` and `bun run typecheck`.
+
+An edit that changes no Klaim (typos, wording, internal links, `<BacaJuga>`, non-factual metadata) skips this flow, and leaves the Tabel Klaim and `updatedAt` as they are.
 
 ## Penulis
 

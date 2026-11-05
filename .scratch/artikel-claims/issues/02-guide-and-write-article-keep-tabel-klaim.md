@@ -4,11 +4,11 @@
 
 **Blocked by:** None (can start immediately)
 
-**Status:** ready-for-agent
+**Status:** done
 
-- [ ] The guide's Validation rules use the term Sumber Resmi, and list the same domains as the build check.
-- [ ] The guide has a Tabel Klaim section with location, format, and approval line, and says the build cross-checks its URLs against `references`.
-- [ ] The guide has an "Editing a published Artikel" section with the Klaim-change definition and the delta-table flow.
-- [ ] `/write-article` Draft step writes the Tabel Klaim. Gate 2 updates it when a Klaim changed.
-- [ ] Wording uses the terms Klaim, Tabel Klaim, and Sumber Resmi as defined in `CONTEXT.md`.
+- [x] The guide's Validation rules use the term Sumber Resmi, and list the same domains as the build check.
+- [x] The guide has a Tabel Klaim section with location, format, and approval line, and says the build cross-checks its URLs against `references`.
+- [x] The guide has an "Editing a published Artikel" section with the Klaim-change definition and the delta-table flow.
+- [x] `/write-article` Draft step writes the Tabel Klaim. Gate 2 updates it when a Klaim changed.
+- [x] Wording uses the terms Klaim, Tabel Klaim, and Sumber Resmi as defined in `CONTEXT.md`.
 - [ ] Owner reviews and approves the wording.
