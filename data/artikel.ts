@@ -286,7 +286,7 @@ export const artikel = [
     description:
       "Rekrutmen Bersama BUMN 2026 belum diumumkan BP BUMN per November 2026. Cek alur seleksi RBB 2025 dan cara mengenali link pendaftaran palsu.",
     excerpt:
-      "Rekrutmen Bersama BUMN 2026 belum diumumkan BP BUMN per 5 November 2026. Pelajari alur RBB 2025 sebagai acuan dan kenali tautan pendaftaran palsu.",
+      "Rekrutmen Bersama BUMN 2026 belum diumumkan Badan Pengaturan BUMN (BP BUMN) per 5 November 2026. Pelajari alur Rekrutmen Bersama BUMN 2025 sebagai acuan dan kenali tautan pendaftaran palsu.",
     kategori: ["informasi", "tips"],
     examTrack: ["bumn"],
     cover: {
