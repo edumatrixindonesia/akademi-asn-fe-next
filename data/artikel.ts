@@ -4,6 +4,83 @@ import type { Artikel } from "@/lib/artikel-schema";
 // data/artikel/{slug}.mdx (lib/artikel.ts fails the build otherwise).
 export const artikel = [
   {
+    slug: "gaji-pppk",
+    title: "Rincian Gaji PPPK Golongan I hingga XVII beserta Tunjangannya",
+    description:
+      "Gaji PPPK menurut Perpres 11/2024 berkisar Rp1.938.500 hingga Rp7.329.000 sebelum tunjangan. Cek tabel golongan, tunjangan, THR, dan gaji ke-13.",
+    excerpt:
+      "Gaji PPPK ditentukan oleh golongan dan masa kerja golongan. Besarannya mulai Rp1.938.500 di golongan I hingga Rp7.329.000 di golongan XVII, belum termasuk tunjangan.",
+    kategori: ["karier"],
+    examTrack: ["pppk"],
+    cover: {
+      src: "/img/blog/cover-gaji-pppk.jpg",
+      alt: "Gaji PPPK: gaji per golongan dan tunjangan dari Akademi ASN",
+    },
+    penulis: "dimas-maulana",
+    status: "published",
+    publishedAt: "2026-11-05",
+    focusKeyword: "gaji pppk",
+    related: ["pppk-paruh-waktu-jadi-penuh-waktu", "perbedaan-cpns-dan-pppk"],
+    references: [
+      {
+        title:
+          "Peraturan Presiden Nomor 98 Tahun 2020 tentang Gaji dan Tunjangan Pegawai Pemerintah dengan Perjanjian Kerja",
+        url: "https://jdih.setkab.go.id/PUUdoc/176234/Perpres_Nomor_98_Tahun_2020.pdf",
+        publisher: "JDIH Sekretariat Kabinet",
+        accessedAt: "2026-11-05",
+      },
+      {
+        title:
+          "Peraturan Presiden Nomor 11 Tahun 2024 tentang Perubahan atas Peraturan Presiden Nomor 98 Tahun 2020 tentang Gaji dan Tunjangan Pegawai Pemerintah dengan Perjanjian Kerja",
+        url: "https://peraturan.bpk.go.id/Details/276756/perpres-no-11-tahun-2024",
+        publisher: "JDIH BPK",
+        accessedAt: "2026-11-05",
+      },
+      {
+        title:
+          "PERPRES No. 98 Tahun 2020 tentang Gaji dan Tunjangan Pegawai Pemerintah dengan Perjanjian Kerja (status peraturan)",
+        url: "https://peraturan.bpk.go.id/Details/147306/perpres-no-98-tahun-2020",
+        publisher: "JDIH BPK",
+        accessedAt: "2026-11-05",
+      },
+      {
+        title:
+          "Golongan Gaji Pegawai Pemerintah dengan Perjanjian Kerja (PPPK) Berdasarkan Kep Menpan RB Nomor 94 Tahun 2025",
+        url: "https://bkpsdm.madiunkota.go.id/list/45",
+        publisher: "BKPSDM Kota Madiun",
+        accessedAt: "2026-11-05",
+      },
+      {
+        title:
+          "Peraturan Pemerintah Nomor 9 Tahun 2026 tentang Pemberian Tunjangan Hari Raya dan Gaji Ketiga Belas kepada Aparatur Negara, Pensiunan, Penerima Pensiun, dan Penerima Tunjangan Tahun 2026",
+        url: "https://peraturan.bpk.go.id/Details/345732/pp-no-9-tahun-2026",
+        publisher: "JDIH BPK",
+        accessedAt: "2026-11-05",
+      },
+      {
+        title:
+          "Undang-Undang Nomor 20 Tahun 2023 tentang Aparatur Sipil Negara",
+        url: "https://peraturan.bpk.go.id/Details/269470/uu-no-20-tahun-2023",
+        publisher: "JDIH BPK",
+        accessedAt: "2026-11-05",
+      },
+      {
+        title:
+          "Peraturan Menteri PANRB Nomor 9 Tahun 2026 tentang Pegawai Pemerintah dengan Perjanjian Kerja Paruh Waktu",
+        url: "https://peraturan.bpk.go.id/Details/351339/permen-panrb-no-9-tahun-2026",
+        publisher: "JDIH BPK",
+        accessedAt: "2026-11-05",
+      },
+      {
+        title:
+          "Penggajian dan Tunjangan Pegawai Pemerintah dengan Perjanjian Kerja (PPPK)",
+        url: "https://apps-denpasar.bkn.go.id/kms/ensiklopedia:penggajian_dan_tunjangan_pppk",
+        publisher: "BKN",
+        accessedAt: "2026-11-05",
+      },
+    ],
+  },
+  {
     slug: "cpns-2027",
     title: "Seputar CPNS 2027 dari Jadwal Pendaftaran hingga Syarat Pelamar",
     description:
