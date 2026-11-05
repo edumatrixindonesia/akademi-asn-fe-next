@@ -175,7 +175,8 @@ The Tabel Klaim is the record of every Klaim in one Artikel. It is the table the
 
 - **Location:** `docs/klaim/{slug}.md`, one file per Artikel, named by slug. It is never rendered or routed.
 - **Header line:** `Disetujui owner: 5 November 2026`, the date of the owner's last approval. Git holds the history; the file keeps no log.
-- **Body:** one table per `h2` of the Artikel, in order. Columns: the sentence as published, the source URL, the exact location (pasal, ayat, lampiran page, or section), and the verbatim quote. A sentence that states no fact (hook, transitions, calls to action) gets the row "non-klaim". A factual title is a Klaim and gets a row.
+- **Body:** one table for the `title`, `excerpt`, and `description`, one for the hook, then one table per `h2` of the Artikel, in order. An `h3` may get its own table under its `h2`. Columns: the sentence as published, the source URL, the exact location (pasal, ayat, lampiran page, or section), and the verbatim quote. A sentence that states no fact (hook, transitions, calls to action) gets the row "non-klaim". A factual title is a Klaim and gets a row.
+- **Special rows:** a Markdown table in the body gets one row that quotes every value it states. A Klaim that a source lacks something has no quote to give: its location names the part searched, and its quote cell says what was not found.
 - **Cross-check:** the build compares every `http(s)` URL in the file with `references` by exact string match. Both sets must be the same; a mismatch fails the build and names the slug and the URL. A Tabel Klaim with no matching Artikel fails too. A draft may omit the file; a published Artikel needs it once the backfill of the existing Artikel is done.
 
 ## Editing a published Artikel
