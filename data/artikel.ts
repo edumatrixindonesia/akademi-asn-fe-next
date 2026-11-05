@@ -383,9 +383,9 @@ export const artikel = [
     slug: "perbedaan-cpns-dan-pppk",
     title: "Mengenal Perbedaan CPNS dan PPPK dari Status hingga Hak Kerja",
     description:
-      "Apa perbedaan CPNS dan PPPK? Bandingkan status, masa kerja, batas usia melamar, jaminan pensiun, dan jenis seleksinya menurut UU ASN 2023.",
+      "Apa perbedaan CPNS dan PPPK? Bandingkan status, masa kerja, batas usia melamar, jaminan pensiun, dan jenis seleksinya menurut sumber resmi.",
     excerpt:
-      "Perbedaan CPNS dan PPPK ada pada status, masa kerja, syarat usia, dan jaminan pensiun. Pahami keduanya sebelum memilih jalur seleksi.",
+      "Perbedaan CPNS dan PPPK ada pada status, masa kerja, dan syarat usia melamar. Pahami juga aturan jaminan pensiun PPPK sebelum memilih jalur seleksi.",
     kategori: ["informasi"],
     examTrack: ["cpns", "pppk"],
     cover: {
@@ -395,7 +395,7 @@ export const artikel = [
     penulis: "dimas-maulana",
     status: "published",
     publishedAt: "2026-10-02",
-    updatedAt: "2026-10-05",
+    updatedAt: "2026-11-05",
     focusKeyword: "perbedaan cpns dan pppk",
     references: [
       {
@@ -403,61 +403,61 @@ export const artikel = [
           "Undang-Undang Nomor 20 Tahun 2023 tentang Aparatur Sipil Negara",
         url: "https://peraturan.bpk.go.id/Details/269470/uu-no-20-tahun-2023",
         publisher: "JDIH BPK",
-        accessedAt: "2026-10-02",
+        accessedAt: "2026-11-05",
       },
       {
         title:
           "Peraturan Pemerintah Nomor 11 Tahun 2017 tentang Manajemen Pegawai Negeri Sipil",
         url: "https://peraturan.go.id/id/pp-no-11-tahun-2017",
         publisher: "Peraturan.go.id",
-        accessedAt: "2026-10-02",
+        accessedAt: "2026-11-05",
       },
       {
         title:
           "Peraturan Pemerintah Nomor 17 Tahun 2020 tentang Perubahan atas Peraturan Pemerintah Nomor 11 Tahun 2017 tentang Manajemen Pegawai Negeri Sipil",
         url: "https://peraturan.go.id/id/pp-no-17-tahun-2020",
         publisher: "Peraturan.go.id",
-        accessedAt: "2026-10-05",
+        accessedAt: "2026-11-05",
       },
       {
         title:
           "Peraturan Pemerintah Nomor 49 Tahun 2018 tentang Manajemen PPPK",
         url: "https://peraturan.bpk.go.id/Details/99181/pp-no-49-tahun-2018",
         publisher: "JDIH BPK",
-        accessedAt: "2026-10-02",
+        accessedAt: "2026-11-05",
       },
       {
         title:
           "Peraturan Pemerintah Nomor 7 Tahun 1977 tentang Peraturan Gaji Pegawai Negeri Sipil",
         url: "https://jdih.kemenkeu.go.id/dok/pp-7-tahun-1977",
         publisher: "JDIH Kemenkeu",
-        accessedAt: "2026-10-03",
+        accessedAt: "2026-11-05",
       },
       {
         title: "3 Juta Pelamar CPNS 2024 Berkompetisi di Tahap SKD",
         url: "https://www.bkn.go.id/3-juta-pelamar-cpns-2024-berkompetisi-di-tahap-skd/",
         publisher: "BKN",
-        accessedAt: "2026-10-02",
+        accessedAt: "2026-11-05",
       },
       {
         title:
           "Hasil Akhir Seleksi PPPK Tahap II, Pelamar Dapat Cek Pengumuman Instansi Secara Berkala",
         url: "https://www.bkn.go.id/storage/2025/06/SIARAN-PERS-022_RILIS_BKN_VI_2025-17-Juni-2025.pdf",
         publisher: "BKN",
-        accessedAt: "2026-10-02",
+        accessedAt: "2026-11-05",
       },
       {
         title:
           "TASPEN Desak Regulasi Jaminan Pensiun bagi PPPK Segera Diterbitkan",
         url: "https://rri.co.id/info-parlemen/2553397/taspen-desak-regulasi-jaminan-pensiun-bagi-pppk-segera-diterbitkan",
         publisher: "RRI",
-        accessedAt: "2026-10-02",
+        accessedAt: "2026-11-05",
       },
       {
         title: "DPR Dorong Regulasi Jaminan Pensiun untuk PPPK",
         url: "https://www.pantau.com/nasional/352358/dpr-dorong-regulasi-jaminan-pensiun-untuk-pppk",
         publisher: "Pantau",
-        accessedAt: "2026-10-02",
+        accessedAt: "2026-11-05",
       },
     ],
   },

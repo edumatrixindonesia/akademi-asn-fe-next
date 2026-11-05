@@ -9,7 +9,7 @@ test("Artikel JSON-LD dates include time and WIB, with update fallback and no dr
   const detail = (entry) => artikelDetail(entry, 100, "https://example.test").jsonLd;
   const schema = detail(entry);
   expect(schema.datePublished).toBe("2026-10-02T00:00:00+07:00");
-  expect(schema.dateModified).toBe("2026-10-05T00:00:00+07:00");
+  expect(schema.dateModified).toBe("2026-11-05T00:00:00+07:00");
   expect(Number.isNaN(Date.parse(schema.datePublished))).toBe(false);
   expect(Number.isNaN(Date.parse(schema.dateModified))).toBe(false);
   expect(detail({ ...entry, updatedAt: undefined }).dateModified).toBe(schema.datePublished);
