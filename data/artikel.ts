@@ -196,6 +196,7 @@ export const artikel = [
         accessedAt: "2026-10-20",
       },
     ],
+    updatedAt: "2026-11-05",
   },
   {
     slug: "pppk-paruh-waktu-jadi-penuh-waktu",
@@ -221,21 +222,21 @@ export const artikel = [
           "Peraturan Menteri PANRB Nomor 9 Tahun 2026 tentang Pegawai Pemerintah dengan Perjanjian Kerja Paruh Waktu",
         url: "https://peraturan.bpk.go.id/Details/351339/permen-panrb-no-9-tahun-2026",
         publisher: "JDIH BPK",
-        accessedAt: "2026-10-16",
+        accessedAt: "2026-11-05",
       },
       {
         title:
           "Penataan Guru Jadi Fokus Pemerintah, Kepastian Status Disiapkan Mulai 2027",
-        url: "https://bbgtkjabar.kemendikdasmen.go.id/Publikasi/baca/penataan-guru-jadi-fokus-pemerintah-kepastian-status-disiapkan-mulai-2027",
-        publisher: "BBGTK Jawa Barat, Kemendikdasmen",
-        accessedAt: "2026-10-16",
+        url: "https://www.kemendikdasmen.go.id/siaran-pers/16271-penataan-guru-jadi-fokus-pemerintah-kepastian-status-disiapkan-mulai-2027",
+        publisher: "Kemendikdasmen",
+        accessedAt: "2026-11-05",
       },
       {
         title:
           "Kepala BKN: Dari 2.722, hanya 384 yang Keluar Dari ASN, Mayoritas Beralih Status dari PPPK Paruh Waktu menjadi PPPK",
         url: "https://www.bkn.go.id/kepala-bkn-dari-2-722-hanya-384-yang-keluar-dari-asn-mayoritas-beralih-status-dari-pppk-paruh-waktu-menjadi-pppk/",
         publisher: "BKN",
-        accessedAt: "2026-10-16",
+        accessedAt: "2026-11-05",
       },
     ],
   },
