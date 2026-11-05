@@ -246,8 +246,8 @@ export const artikel = [
       {
         title:
           "Keputusan Menteri PANRB Nomor 321 Tahun 2024 tentang Nilai Ambang Batas Seleksi Kompetensi Dasar Pengadaan Pegawai Negeri Sipil Tahun Anggaran 2024",
-        url: "https://www.bkn.go.id/wp-content/uploads/2024/08/2024kepmenpanrb321-Nilai-Ambang-Batas.pdf",
-        publisher: "BKN",
+        url: "https://jdih.menpan.go.id/dokumen-hukum/keputusan-menteri-pendayagunaan-aparatur-negara-dan-reformasi-birokrasi-nomor-321-tahun-2024-tentang-1851",
+        publisher: "JDIH Kementerian PANRB",
         accessedAt: "2026-11-05",
       },
       {
