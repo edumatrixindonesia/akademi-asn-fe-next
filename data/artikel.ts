@@ -19,27 +19,21 @@ export const artikel = [
     penulis: "dimas-maulana",
     status: "published",
     publishedAt: "2026-11-05",
+    updatedAt: "2026-11-05",
     focusKeyword: "gaji pppk",
     related: ["pppk-paruh-waktu-jadi-penuh-waktu", "perbedaan-cpns-dan-pppk"],
     references: [
       {
         title:
           "Peraturan Presiden Nomor 98 Tahun 2020 tentang Gaji dan Tunjangan Pegawai Pemerintah dengan Perjanjian Kerja",
-        url: "https://jdih.setkab.go.id/PUUdoc/176234/Perpres_Nomor_98_Tahun_2020.pdf",
-        publisher: "JDIH Sekretariat Kabinet",
+        url: "https://peraturan.bpk.go.id/Details/147306/perpres-no-98-tahun-2020",
+        publisher: "JDIH BPK",
         accessedAt: "2026-11-05",
       },
       {
         title:
           "Peraturan Presiden Nomor 11 Tahun 2024 tentang Perubahan atas Peraturan Presiden Nomor 98 Tahun 2020 tentang Gaji dan Tunjangan Pegawai Pemerintah dengan Perjanjian Kerja",
         url: "https://peraturan.bpk.go.id/Details/276756/perpres-no-11-tahun-2024",
-        publisher: "JDIH BPK",
-        accessedAt: "2026-11-05",
-      },
-      {
-        title:
-          "PERPRES No. 98 Tahun 2020 tentang Gaji dan Tunjangan Pegawai Pemerintah dengan Perjanjian Kerja (status peraturan)",
-        url: "https://peraturan.bpk.go.id/Details/147306/perpres-no-98-tahun-2020",
         publisher: "JDIH BPK",
         accessedAt: "2026-11-05",
       },
@@ -76,13 +70,6 @@ export const artikel = [
           "Keputusan Menteri PANRB Nomor 16 Tahun 2025 tentang Pegawai Pemerintah dengan Perjanjian Kerja Paruh Waktu",
         url: "https://jdih.menpan.go.id/dokumen-hukum/keputusan-menteri-pendayagunaan-aparatur-negara-dan-reformasi-birokrasi-nomor-16-tahun-2025-tentang-1990",
         publisher: "JDIH Kementerian PANRB",
-        accessedAt: "2026-11-05",
-      },
-      {
-        title:
-          "Penggajian dan Tunjangan Pegawai Pemerintah dengan Perjanjian Kerja (PPPK)",
-        url: "https://apps-denpasar.bkn.go.id/kms/ensiklopedia:penggajian_dan_tunjangan_pppk",
-        publisher: "BKN",
         accessedAt: "2026-11-05",
       },
     ],
