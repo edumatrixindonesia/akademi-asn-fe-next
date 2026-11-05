@@ -32,7 +32,7 @@ Use Exa. Prefer BKN, KemenPANRB, SSCASN, `.go.id` sites, and laws and regulation
 Show the owner:
 
 - the outline (`h2`s as questions, `h3`s, where `<BacaJuga>`, `<CtaKonsultasi>`, and `<LatihanSoal>` go),
-- every factual claim with its sources, grouped by `h2`,
+- every factual claim as a table row, grouped by `h2`: the sentence as it will appear, the source URL, the exact location (pasal, ayat, or lampiran page), and the verbatim quote from the source; mark sentences that state no fact (hook, transitions, calls to action) "non-klaim",
 - the cover label, tagline, and icon, following Cover in the guide,
 - the full metadata entry, with a `title` that passes every Title rule in the guide and the first words of the three newest published Artikel beside it, so the owner can check the opening differs.
 

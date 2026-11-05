@@ -153,8 +153,12 @@ Write `<`, `>`, `{`, and `}` in prose as `\<`, `\>`, `\{`, `\}`: MDX reads them 
 
 Every claim is checked before it enters Gate 1.
 
-- Every factual claim has a source.
+- Every factual claim has a source. The owner accepts no word or sentence that cannot be accounted for.
 - At least one source per Artikel is official: BKN, KemenPANRB, SSCASN, other `.go.id` sites, or a law or regulation (UU, PP, Perpres, Permen).
+- Figures, requirements, and rules come only from official documents: the regulation text (JDIH, peraturan.go.id), BKN, KemenPANRB, SSCASN, or other `.go.id` sites.
+- News media only back an official's statement, written as a dated statement ("Menteri PANRB menyatakan … pada 3 Oktober 2026"), never as a rule.
+- When news media and a regulation disagree, the regulation wins and the media claim is dropped.
+- A plan or proposal not yet in a published official document (regulation, circular, or official ministry press release) is dropped. A circular or press release is written as a dated announcement, not as a rule in force.
 - A figure that changes by year (formasi, passing grade, usia, kuota) names its year in the text.
 - A superlative ("terbesar", "pertama", "satu-satunya", "paling") needs two independent sources that agree. Wikipedia counts as at most one. Check the competing candidate too.
 - Anything unverifiable is dropped. Never soften it into "biasanya" or "umumnya".
