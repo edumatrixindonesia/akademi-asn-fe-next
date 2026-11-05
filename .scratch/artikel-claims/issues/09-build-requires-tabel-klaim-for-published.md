@@ -4,9 +4,9 @@
 
 **Blocked by:** 03, 04, 05, 06, 07, 08
 
-**Status:** ready-for-agent
+**Status:** done
 
-- [ ] A published Artikel without a Tabel Klaim fails, and a draft without one passes.
-- [ ] Tests cover both cases in the existing `validateArtikel` test style.
-- [ ] The build passes with all six published Artikel.
-- [ ] `bun run lint`, `bun run typecheck`, and `bun test` pass.
+- [x] A published Artikel without a Tabel Klaim fails, and a draft without one passes.
+- [x] Tests cover both cases in the existing `validateArtikel` test style.
+- [x] The build passes with all six published Artikel.
+- [x] `bun run lint`, `bun run typecheck`, and `bun test` pass.

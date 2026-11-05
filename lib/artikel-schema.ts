@@ -116,6 +116,7 @@ export const validateArtikel = (
       else if (!entry.references.some((reference) => isSumberResmi(reference.url))) {
         errors.push(`Published "${slug}" cites no Sumber Resmi.`);
       }
+      if (tabelKlaim[slug] === undefined) errors.push(`Published "${slug}" has no docs/klaim/${slug}.md.`);
     }
     const klaimText = tabelKlaim[slug];
     if (klaimText !== undefined) {
