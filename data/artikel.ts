@@ -266,6 +266,13 @@ export const artikel = [
       },
       {
         title:
+          "Kemenag Tegaskan Belum Buka Pengadaan CPNS 2026, Publik Diimbau Waspada Informasi Palsu",
+        url: "https://kemenag.go.id/nasional/kemenag-tegaskan-belum-buka-pengadaan-cpns-2026-publik-diimbau-waspada-informasi-palsu-6I5hY",
+        publisher: "Kementerian Agama",
+        accessedAt: "2026-11-05",
+      },
+      {
+        title:
           "Lowongan CPNS Kemenag 2026 Belum Dibuka, Masyarakat Diminta Waspadai Info dan Link Rekrutmen Palsu",
         url: "https://cahaya.kompas.com/aktual/26J10221814590/kemenag-belum-buka-lowongan-cpns-2026-masyarakat-diminta-waspadai-info-dan-link",
         publisher: "Kompas.com",
