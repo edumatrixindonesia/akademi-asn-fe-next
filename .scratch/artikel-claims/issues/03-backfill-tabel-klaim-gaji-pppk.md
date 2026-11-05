@@ -12,4 +12,4 @@
 - [x] Failing or stale Klaim are fixed or removed in the Artikel, and `updatedAt` is set if the text changed.
 - [x] The owner approved the table, and its `Disetujui owner:` line carries that date.
 - [x] The build passes with the cross-check from 01, so the Tabel Klaim URLs and `references` match.
-- [ ] `bun run lint`, `bun run typecheck`, and `bun test` pass.
+- [x] `bun run lint`, `bun run typecheck`, and `bun test` pass.
