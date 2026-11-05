@@ -1,7 +1,6 @@
 import { expect, setSystemTime, test } from "bun:test";
 import { GET } from "../app/konsultasi/route";
 import {
-  getKonsultasiAdmin,
   getKonsultasiUrl,
   getKonsultasiWhatsappUrl,
   konsultasiPage,
@@ -9,37 +8,11 @@ import {
 } from "../data/contact";
 import { siteUrl } from "../lib/site-url";
 
-// WIB is UTC+7.
+// WIB is UTC+7. Nevita holds the 00.00 WIB Giliran on 2026-10-22.
 const wib = (day, hour, minute = 0) =>
   Date.UTC(2026, 9, day, hour - 7, minute);
 
-test("Giliran Konsultasi start at 08.00, 13.00, and 17.00 WIB and carry over across days", () => {
-  const cases = [
-    [wib(15, 8), "Asyah"],
-    [wib(15, 12, 59), "Asyah"],
-    [wib(15, 13), "Nevita"],
-    [wib(15, 16, 59), "Nevita"],
-    [wib(15, 17), "Putri"],
-    [wib(15, 23, 59), "Putri"],
-    [wib(16, 0), "Putri"],
-    [wib(16, 7, 59), "Putri"],
-    [wib(16, 8), "Ista"],
-    [wib(16, 13), "Asyah"],
-    [wib(16, 17), "Nevita"],
-    [wib(17, 8), "Putri"],
-    [wib(17, 13), "Ista"],
-    [wib(17, 17), "Asyah"],
-    // Before the anchor, the order runs backwards from Asyah.
-    [wib(15, 7, 59), "Ista"],
-    [wib(14, 13), "Putri"],
-  ];
-
-  for (const [now, name] of cases) {
-    expect([new Date(now).toISOString(), getKonsultasiAdmin(now).name]).toEqual(
-      [new Date(now).toISOString(), name],
-    );
-  }
-});
+// The Giliran schedule itself is tested in data/contact.test.ts.
 
 test("Konsultasi links point to the internal redirect route", () => {
   expect(getKonsultasiUrl()).toBe("/konsultasi?topik=Bimbel+Akademi+ASN");
@@ -66,7 +39,7 @@ test("Topik Konsultasi puts the offer before the page and the location last", ()
 test(
   "WhatsApp URL greets the admin on duty and names the topic",
   () => {
-    const url = new URL(getKonsultasiWhatsappUrl("Tryout CPNS", wib(15, 13)));
+    const url = new URL(getKonsultasiWhatsappUrl("Tryout CPNS", wib(22, 0)));
 
     expect(url.origin + url.pathname).toBe("https://api.whatsapp.com/send");
     expect(url.searchParams.get("phone")).toBe("6285815095359");
@@ -79,7 +52,7 @@ test(
 test(
   "/konsultasi redirects to WhatsApp without caching",
   () => {
-    setSystemTime(new Date(wib(16, 17)));
+    setSystemTime(new Date(wib(22, 0)));
     try {
       const response = GET(
         new Request("https://akademi-asn.test/konsultasi?topik=Tryout+PPPK"),
