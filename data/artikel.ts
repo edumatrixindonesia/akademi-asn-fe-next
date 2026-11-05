@@ -77,9 +77,9 @@ export const artikel = [
     slug: "cpns-2027",
     title: "Seputar CPNS 2027 dari Jadwal Pendaftaran hingga Syarat Pelamar",
     description:
-      "CPNS 2027 kapan dibuka? Menteri PANRB memperkirakan pendaftaran awal 2027. Cek status CPNS 2026, kebutuhan guru, syarat, dan cara menghindari hoaks.",
+      "CPNS 2027 kapan dibuka? Menteri PANRB pada 18 Agustus 2026 memperkirakan pendaftaran awal 2027. Cek status CPNS 2026, syarat, dan cara menghindari hoaks.",
     excerpt:
-      "Pendaftaran CPNS 2027 diperkirakan dibuka awal 2027, tetapi jadwal, formasi, dan syaratnya belum ditetapkan. Ini yang sudah resmi per 20 Oktober 2026.",
+      "Pada 18 Agustus 2026, Menteri PANRB memperkirakan pendaftaran CPNS 2027 dibuka awal 2027. Per 5 November 2026, jadwal, formasi, dan syaratnya belum ada di SSCASN.",
     kategori: ["informasi"],
     examTrack: ["cpns"],
     cover: {
@@ -89,6 +89,7 @@ export const artikel = [
     penulis: "dimas-maulana",
     status: "published",
     publishedAt: "2026-10-20",
+    updatedAt: "2026-11-05",
     focusKeyword: "cpns 2027",
     related: [
       "pppk-paruh-waktu-jadi-penuh-waktu",
@@ -101,99 +102,81 @@ export const artikel = [
           "Press Release: Mulai 2027, Pemerintah Buka Jalan Lebih Jelas bagi Karier Guru PPPK",
         url: "https://www.kemendikdasmen.go.id/siaran-pers/16055-mulai-2027-pemerintah-buka-jalan-lebih-jelas-bagi-karier-guru-pppk",
         publisher: "Kemendikdasmen",
-        accessedAt: "2026-10-20",
+        accessedAt: "2026-11-05",
       },
       {
         title: "Siap-siap Rekrutmen PNS! Menteri PANRB: Pendaftaran Awal 2027",
         url: "https://www.cnbcindonesia.com/news/20260818201826-4-760436/siap-siap-rekrutmen-pns-menteri-panrb-pendaftaran-awal-2027",
         publisher: "CNBC Indonesia",
-        accessedAt: "2026-10-20",
-      },
-      {
-        title: "Kapan Rekrutmen CPNS 2027 Dibuka? Ini Informasi Terbarunya",
-        url: "https://www.metrotvnews.com/read/k8oCOZ21-kapan-rekrutmen-cpns-2027-dibuka-ini-informasi-terbarunya",
-        publisher: "Metrotvnews.com",
-        accessedAt: "2026-10-20",
-      },
-      {
-        title: "CPNS 2027 kapan dibuka? Ini penjelasan terbaru pemerintah",
-        url: "https://www.antaranews.com/berita/5704565/cpns-2027-kapan-dibuka-ini-penjelasan-terbaru-pemerintah",
-        publisher: "ANTARA",
-        accessedAt: "2026-10-20",
+        accessedAt: "2026-11-05",
       },
       {
         title: "SSCASN - Sistem Seleksi Calon Aparatur Sipil Negara",
         url: "https://sscasn.bkn.go.id/",
         publisher: "BKN",
-        accessedAt: "2026-10-20",
+        accessedAt: "2026-11-05",
       },
       {
         title:
           "Penataan Guru Jadi Fokus Pemerintah, Kepastian Status Disiapkan Mulai 2027",
-        url: "https://kgtk-kepri.kemendikdasmen.go.id/penataan-guru-jadi-fokus-pemerintah-kepastian-status-disiapkan-mulai-2027/",
-        publisher: "Kantor GTK Kepri, Kemendikdasmen",
-        accessedAt: "2026-10-20",
+        url: "https://www.kemendikdasmen.go.id/siaran-pers/16271-penataan-guru-jadi-fokus-pemerintah-kepastian-status-disiapkan-mulai-2027",
+        publisher: "Kemendikdasmen",
+        accessedAt: "2026-11-05",
       },
       {
         title:
           "Pemerintah Siapkan Aturan PPPK Paruh Waktu Jadi PPPK, Tak Bisa Langsung Jadi PNS",
         url: "https://surabaya.kompas.com/read/2026/10/19/071219578/pemerintah-siapkan-aturan-pppk-paruh-waktu-jadi-pppk-tak-bisa-langsung-jadi",
         publisher: "Kompas.com",
-        accessedAt: "2026-10-20",
+        accessedAt: "2026-11-05",
       },
       {
         title:
           "Peraturan Menteri PANRB Nomor 6 Tahun 2024 tentang Pengadaan Pegawai Aparatur Sipil Negara",
-        url: "https://www.bkn.go.id/wp-content/uploads/2024/08/2024permenpanrb-Pengadaan-CASN-.pdf",
-        publisher: "BKN",
-        accessedAt: "2026-10-20",
+        url: "https://jdih.menpan.go.id/dokumen-hukum/peraturan-menteri-pendayagunaan-aparatur-negara-dan-reformasi-birokrasi-nomor-6-tahun-2024-tentang-p-1849",
+        publisher: "JDIH Kementerian PANRB",
+        accessedAt: "2026-11-05",
       },
       {
         title:
           "Karo Komlik BKN: Wisudo Putro Nugroho: Poster Pembukaan CPNS 2026 yang Beredar Dipastikan HOAKS",
         url: "https://www.bkn.go.id/karo-komlik-bkn-wisudo-putro-nugroho-poster-pembukaan-cpns-2026-yang-beredar-dipastikan-hoaks/",
         publisher: "BKN",
-        accessedAt: "2026-10-20",
+        accessedAt: "2026-11-05",
       },
       {
         title:
           "Lowongan CPNS Kemenag 2026 Belum Dibuka, Masyarakat Diminta Waspadai Info dan Link Rekrutmen Palsu",
         url: "https://cahaya.kompas.com/aktual/26J10221814590/kemenag-belum-buka-lowongan-cpns-2026-masyarakat-diminta-waspadai-info-dan-link",
         publisher: "Kompas.com",
-        accessedAt: "2026-10-20",
+        accessedAt: "2026-11-05",
       },
       {
         title: "Pemerintah Siapkan 4.770 Kebutuhan CPNS Sekolah Kedinasan 2026",
         url: "https://www.menpan.go.id/site/berita-terkini/pemerintah-siapkan-4-770-kebutuhan-cpns-sekolah-kedinasan-2026",
         publisher: "Kementerian PANRB",
-        accessedAt: "2026-10-20",
+        accessedAt: "2026-11-05",
       },
       {
         title:
           "Kepala BKN: Pantau Jadwalnya, Pendaftaran Seleksi Sekolah Kedinasan Tahun 2026 Dimulai 18 Agustus",
         url: "https://www.bkn.go.id/kepala-bkn-pantau-jadwalnya-pendaftaran-seleksi-sekolah-kedinasan-tahun-2026-dimulai-18-agustus/",
         publisher: "BKN",
-        accessedAt: "2026-10-20",
+        accessedAt: "2026-11-05",
       },
       {
         title:
           "Keputusan Menteri PANRB Nomor 321 Tahun 2024 tentang Nilai Ambang Batas SKD Pengadaan PNS Tahun Anggaran 2024",
         url: "https://jdih.menpan.go.id/dokumen-hukum/keputusan-menteri-pendayagunaan-aparatur-negara-dan-reformasi-birokrasi-nomor-321-tahun-2024-tentang-1851",
         publisher: "JDIH Kementerian PANRB",
-        accessedAt: "2026-10-20",
-      },
-      {
-        title: "Materi, Jumlah Soal, dan Passing Grade SKD CPNS 2024",
-        url: "https://www.kompas.com/tren/read/2024/09/23/134500965/materi-jumlah-soal-dan-passing-grade-skd-cpns-2024",
-        publisher: "Kompas.com",
-        accessedAt: "2026-10-20",
+        accessedAt: "2026-11-05",
       },
       {
         title:
           "Beredar Informasi Seleksi Kemenkes 2026, Prof. Zudan: Itu Hoaks, Rekrutmen ASN Terintegrasi dan Diawasi BKN",
         url: "https://www.bkn.go.id/beredar-informasi-seleksi-kemenkes-2026-prof-zudan-itu-hoaks-rekrutmen-asn-terintegrasi-dan-diawasi-bkn/",
         publisher: "BKN",
-        accessedAt: "2026-10-20",
+        accessedAt: "2026-11-05",
       },
     ],
   },

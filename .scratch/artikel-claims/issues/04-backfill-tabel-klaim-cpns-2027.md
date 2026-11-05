@@ -4,12 +4,12 @@
 
 **Blocked by:** 01, 02
 
-**Status:** ready-for-agent
+**Status:** done
 
-- [ ] Every sentence of the Artikel that states a fact, including the title if it states one, has a row with source URL, exact location, and verbatim quote. Every other sentence is marked non-klaim.
-- [ ] Every Klaim was checked against its source during this ticket, not copied from the existing `references`.
-- [ ] Figures, requirements, and rules rest on a Sumber Resmi. News media and social media back only dated statements.
-- [ ] Failing or stale Klaim are fixed or removed in the Artikel, and `updatedAt` is set if the text changed.
-- [ ] The owner approved the table, and its `Disetujui owner:` line carries that date.
-- [ ] The build passes with the cross-check from 01, so the Tabel Klaim URLs and `references` match.
-- [ ] `bun run lint`, `bun run typecheck`, and `bun test` pass.
+- [x] Every sentence of the Artikel that states a fact, including the title if it states one, has a row with source URL, exact location, and verbatim quote. Every other sentence is marked non-klaim.
+- [x] Every Klaim was checked against its source during this ticket, not copied from the existing `references`.
+- [x] Figures, requirements, and rules rest on a Sumber Resmi. News media and social media back only dated statements.
+- [x] Failing or stale Klaim are fixed or removed in the Artikel, and `updatedAt` is set if the text changed.
+- [x] The owner approved the table, and its `Disetujui owner:` line carries that date.
+- [x] The build passes with the cross-check from 01, so the Tabel Klaim URLs and `references` match.
+- [x] `bun run lint`, `bun run typecheck`, and `bun test` pass.
