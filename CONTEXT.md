@@ -173,3 +173,14 @@ The newest published Artikel, shown as a section after FAQ on every landing page
 **Artikel Terkait**:
 The three Artikel shown at the end of an Artikel: hand-picked if set, then Artikel sharing an exam track, then Artikel sharing a Kategori, then the newest.
 _Avoid_: Artikel Lainnya
+
+**Klaim**:
+A sentence in an Artikel that states a fact: a figure, a date, a requirement, a rule, an official's statement, or a superlative. Sentences that state no fact (the hook, transitions, calls to action) are non-klaim. Every Klaim has a source.
+_Avoid_: fakta (a Klaim is the sentence, not the fact it states)
+
+**Tabel Klaim**:
+The record of every Klaim in one Artikel, grouped by section, each with its source, the exact location in that source, and a verbatim quote. The owner approves it before the Artikel is drafted and again whenever an edit changes a Klaim. It is kept for as long as the Artikel is published, so any sentence can be traced back to its evidence.
+
+**Sumber Resmi**:
+A source published by a government body, a law or regulation, or the official organizer of a selection (FHCI for Rekrutmen Bersama BUMN, and Danantara). News media and official social media accounts are not Sumber Resmi: they back only a dated statement, never a rule or a figure.
+_Avoid_: sumber terpercaya (too vague)
