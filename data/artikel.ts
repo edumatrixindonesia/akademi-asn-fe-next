@@ -397,7 +397,7 @@ export const artikel = [
     examTrack: ["cpns", "pppk"],
     cover: {
       src: "/img/blog/cover-perbedaan-cpns-dan-pppk.jpg",
-      alt: "Perbedaan CPNS dan PPPK: status, masa kerja, syarat, dan pensiun dari Akademi ASN",
+      alt: "Perbedaan CPNS dan PPPK: status, masa kerja, dan syarat usia melamar dari Akademi ASN",
     },
     penulis: "dimas-maulana",
     status: "published",
