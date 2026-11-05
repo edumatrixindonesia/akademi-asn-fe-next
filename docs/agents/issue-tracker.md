@@ -9,7 +9,7 @@ Issues and specs for this repo live as markdown files in `.scratch/`.
 - Implementation issues are one file per ticket at `.scratch/<feature-slug>/issues/<NN>-<slug>.md`, numbered from `01`, never a single combined tickets file
 - A `Status:` line near the top of each issue file records its state. `Status:` and `**Status:**` are both valid.
 - Triage roles (`needs-triage`, `needs-info`, `wontfix`, and the `ready-for-*` handoffs) are defined in `triage-labels.md`.
-- Implementation lifecycle: `ready-for-agent` / `ready-for-human` → `done`. Set `done` when the work is committed. Lifecycle states are separate from triage roles.
+- Implementation lifecycle: `ready-for-agent` / `ready-for-human` → `done`. Set `done` when the work is committed, and in the same commit tick (`- [x]`) every acceptance checkbox that is fully met. Leave a checkbox empty if its criterion is not met, and say why in the reply. Lifecycle states are separate from triage roles.
 - Comments and conversation history append to the bottom of the file under a `## Comments` heading
 
 ## When a skill says "publish to the issue tracker"
