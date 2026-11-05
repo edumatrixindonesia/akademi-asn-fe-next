@@ -73,6 +73,13 @@ export const artikel = [
       },
       {
         title:
+          "Keputusan Menteri PANRB Nomor 16 Tahun 2025 tentang Pegawai Pemerintah dengan Perjanjian Kerja Paruh Waktu",
+        url: "https://jdih.menpan.go.id/dokumen-hukum/keputusan-menteri-pendayagunaan-aparatur-negara-dan-reformasi-birokrasi-nomor-16-tahun-2025-tentang-1990",
+        publisher: "JDIH Kementerian PANRB",
+        accessedAt: "2026-11-05",
+      },
+      {
+        title:
           "Penggajian dan Tunjangan Pegawai Pemerintah dengan Perjanjian Kerja (PPPK)",
         url: "https://apps-denpasar.bkn.go.id/kms/ensiklopedia:penggajian_dan_tunjangan_pppk",
         publisher: "BKN",
