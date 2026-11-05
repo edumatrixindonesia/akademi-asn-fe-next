@@ -11,4 +11,4 @@
 - [x] The guide has an "Editing a published Artikel" section with the Klaim-change definition and the delta-table flow.
 - [x] `/write-article` Draft step writes the Tabel Klaim. Gate 2 updates it when a Klaim changed.
 - [x] Wording uses the terms Klaim, Tabel Klaim, and Sumber Resmi as defined in `CONTEXT.md`.
-- [ ] Owner reviews and approves the wording.
+- [x] Owner reviews and approves the wording.
