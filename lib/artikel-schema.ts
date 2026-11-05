@@ -54,11 +54,37 @@ const isIsoDate = (value: string) => {
   return new Date(`${value}T00:00:00.000Z`).toISOString().slice(0, 10) === value;
 };
 
+// Sumber Resmi hosts besides `.go.id`; keep in sync with docs/agents/article-writing.md.
+const sumberResmiDomains = ["fhcibumn.com", "danantaraindonesia.co.id"];
+
+const isSumberResmi = (url: string) => {
+  let hostname: string;
+  try {
+    const parsed = new URL(url);
+    if (parsed.protocol !== "https:" && parsed.protocol !== "http:") return false;
+    hostname = parsed.hostname.toLowerCase();
+  } catch {
+    return false;
+  }
+  return (
+    hostname.endsWith(".go.id") ||
+    sumberResmiDomains.some((domain) => hostname === domain || hostname.endsWith(`.${domain}`))
+  );
+};
+
+// Every http(s) URL in a Tabel Klaim counts as a cited source; stops at
+// whitespace and Markdown delimiters so table cells and links split cleanly.
+// Trailing sentence punctuation and emphasis marks are not part of the URL.
+const klaimUrls = (text: string) =>
+  new Set((text.match(/https?:\/\/[^\s<>()|\]"'`]+/g) ?? []).map((url) => url.replace(/[.,;:!?*_]+$/, "")));
+
 // Returns one message per broken rule; the loader throws on any, so a bad
 // entry fails the build instead of shipping.
 export const validateArtikel = (
   entries: Artikel[],
   bodySlugs: string[],
+  // Raw Tabel Klaim text, keyed by slug.
+  tabelKlaim: Record<string, string>,
 ): string[] => {
   const errors: string[] = [];
   const bodies = new Set(bodySlugs);
@@ -87,6 +113,20 @@ export const validateArtikel = (
     if (entry.status === "published") {
       if (!entry.publishedAt) errors.push(`Published "${slug}" has no publishedAt.`);
       if (entry.references.length === 0) errors.push(`Published "${slug}" has no references.`);
+      else if (!entry.references.some((reference) => isSumberResmi(reference.url))) {
+        errors.push(`Published "${slug}" cites no Sumber Resmi.`);
+      }
+    }
+    const klaimText = tabelKlaim[slug];
+    if (klaimText !== undefined) {
+      const cited = klaimUrls(klaimText);
+      const listed = new Set(entry.references.map((reference) => reference.url));
+      for (const url of cited) {
+        if (!listed.has(url)) errors.push(`"${slug}" Tabel Klaim cites ${url}, which is not in references.`);
+      }
+      for (const url of listed) {
+        if (!cited.has(url)) errors.push(`"${slug}" references ${url}, which its Tabel Klaim does not cite.`);
+      }
     }
     if (entry.publishedAt && !isIsoDate(entry.publishedAt)) errors.push(`"${slug}" publishedAt must be a valid YYYY-MM-DD date.`);
     if (entry.updatedAt && !isIsoDate(entry.updatedAt)) errors.push(`"${slug}" updatedAt must be a valid YYYY-MM-DD date.`);
@@ -109,6 +149,10 @@ export const validateArtikel = (
 
   for (const slug of bodySlugs) {
     if (!slugs.has(slug)) errors.push(`data/artikel/${slug}.mdx has no entry in data/artikel.ts.`);
+  }
+
+  for (const slug of Object.keys(tabelKlaim)) {
+    if (!slugs.has(slug)) errors.push(`docs/klaim/${slug}.md has no entry in data/artikel.ts.`);
   }
 
   return errors;

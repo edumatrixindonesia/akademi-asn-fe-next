@@ -1,4 +1,4 @@
-import { readdirSync, readFileSync } from "node:fs";
+import { existsSync, readdirSync, readFileSync } from "node:fs";
 import path from "node:path";
 import { artikel } from "@/data/artikel";
 import { kategori } from "@/data/kategori";
@@ -22,7 +22,17 @@ const bodySlugs = readdirSync(bodyDir)
   .filter((file) => file.endsWith(".mdx"))
   .map((file) => file.slice(0, -".mdx".length));
 
-const errors = validateArtikel(entries, bodySlugs);
+const klaimDir = path.join(process.cwd(), "docs", "klaim");
+
+const tabelKlaim: Record<string, string> = existsSync(klaimDir)
+  ? Object.fromEntries(
+      readdirSync(klaimDir)
+        .filter((file) => file.endsWith(".md"))
+        .map((file) => [file.slice(0, -".md".length), readFileSync(path.join(klaimDir, file), "utf8")]),
+    )
+  : {};
+
+const errors = validateArtikel(entries, bodySlugs, tabelKlaim);
 if (errors.length > 0) {
   throw new Error(`Invalid Artikel data:\n${errors.join("\n")}`);
 }
