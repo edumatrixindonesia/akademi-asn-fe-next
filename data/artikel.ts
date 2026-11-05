@@ -196,7 +196,6 @@ export const artikel = [
         accessedAt: "2026-10-20",
       },
     ],
-    updatedAt: "2026-11-05",
   },
   {
     slug: "pppk-paruh-waktu-jadi-penuh-waktu",
@@ -214,6 +213,7 @@ export const artikel = [
     penulis: "dimas-maulana",
     status: "published",
     publishedAt: "2026-10-16",
+    updatedAt: "2026-11-05",
     focusKeyword: "pppk paruh waktu jadi penuh waktu",
     related: ["perbedaan-cpns-dan-pppk"],
     references: [
