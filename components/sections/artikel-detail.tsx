@@ -10,7 +10,6 @@ export type ArtikelDetailProps = {
     name: string;
     href: string;
     jobTitle?: string;
-    bio: string;
     avatar: { src: string; alt: string };
     linkLabel: string;
   };
@@ -144,7 +143,6 @@ const ArtikelDetail = ({
           </Link>
         </p>
         {penulis.jobTitle && <p className="text-sm text-muted-foreground">{penulis.jobTitle}</p>}
-        <p className="mt-2 text-sm leading-relaxed">{penulis.bio}</p>
         <Link href={penulis.href} className="mt-2 inline-block text-sm font-medium text-primary hover:underline">
           {penulis.linkLabel}
         </Link>

@@ -74,7 +74,7 @@ Artikel column, in order:
 8. Body (MDX).
 9. Referensi: numbered list of `references`.
 10. "Masih ada pertanyaan?" block with a Konsultasi CTA (replaces comments).
-11. Author box: avatar, name, job title, bio, link to the Penulis page.
+11. Author box: avatar, name, job title, link to the Penulis page.
 12. Share row: WhatsApp, Facebook, X, LinkedIn, as plain links (no share SDKs).
 
 Sidebar: CTA Konsultasi card, search form, Artikel Terbaru (5, excluding the current one: thumbnail + title).

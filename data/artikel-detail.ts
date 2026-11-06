@@ -19,7 +19,6 @@ export const artikelDetail = (entry: Artikel, wordCount: number, konsultasiUrl: 
       name: penulis.name,
       href: penulisPath(penulis.slug),
       jobTitle: penulis.jobTitle,
-      bio: penulis.bio,
       avatar: penulis.avatar,
       linkLabel: `Lihat semua artikel ${penulis.name}`,
     },
