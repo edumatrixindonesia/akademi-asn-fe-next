@@ -3,19 +3,19 @@ import PaketCard, { type PaketCardProps } from "@/components/shared/paket-card";
 
 export type PaketProgramProps = {
   title: string;
-  offlineTitle: string;
+  privatTitle: string;
   onlineTitle: string;
   backgroundImage: string;
-  offlinePackages: PaketCardProps[];
+  privatPackages: PaketCardProps[];
   onlinePackages: PaketCardProps[];
 };
 
 const PaketProgram = ({
   title,
-  offlineTitle,
+  privatTitle,
   onlineTitle,
   backgroundImage,
-  offlinePackages,
+  privatPackages,
   onlinePackages,
 }: PaketProgramProps) => (
   <section
@@ -40,11 +40,11 @@ const PaketProgram = ({
       </h2>
 
       <p className="mt-8 text-center text-xl font-semibold md:text-2xl">
-        {offlineTitle}
+        {privatTitle}
       </p>
 
       <div className="mt-8 grid gap-5 md:grid-cols-4 md:[&>:last-child:nth-child(odd)]:col-start-2 lg:grid-cols-3 lg:[&>:last-child:nth-child(odd)]:col-start-auto">
-        {offlinePackages.map((paket) => (
+        {privatPackages.map((paket) => (
           <PaketCard key={paket.name} {...paket} variant="offline" />
         ))}
       </div>

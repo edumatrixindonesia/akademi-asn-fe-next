@@ -8,12 +8,14 @@ import {
 } from "@/data/daftar-produk";
 import { hargaEbookModulCpns, hargaTryoutCpns } from "@/data/produk-unggulan";
 import { officeAddress, officeHoursText } from "@/data/contact";
-import { paketPrivat } from "@/data/paket-program";
+import { menitPerSesiPrivat, paketPrivat } from "@/data/paket-program";
 import { tahunSeleksi } from "@/data/tahun-seleksi";
 import { formatRupiah } from "@/lib/utils";
 
 const [optima, maxima, ultima] = paketPrivat;
-const hargaPaketPrivat = `${optima.name} (${optima.sessions} sesi) ${optima.price}, ${maxima.name} (${maxima.sessions} sesi) ${maxima.price}, dan ${ultima.name} (${ultima.sessions} sesi) ${ultima.price}`;
+const hargaPaket = ({ name, sessions, onlinePrice, offlinePrice }: (typeof paketPrivat)[number]) =>
+  `${name} (${sessions} sesi) online ${onlinePrice}, offline ${offlinePrice}`;
+const hargaPaketPrivat = `${hargaPaket(optima)}; ${hargaPaket(maxima)}; dan ${hargaPaket(ultima)}`;
 const lamaPaketPrivat = `${optima.name} ${optima.sessions} sesi, ${maxima.name} ${maxima.sessions} sesi, ${ultima.name} ${ultima.sessions} sesi`;
 
 export const faqHome = {
@@ -73,7 +75,7 @@ export const faqCpns = {
     },
     {
       question: "Berapa lama program bimbel CPNS?",
-      answer: `Lama program bergantung pada paket yang dipilih: ${lamaPaketPrivat}, dan Bootcamp Online 24 sesi intensif. Pada les privat, jadwal setiap sesi bisa diatur sesuai waktu luang Anda.`,
+      answer: `Lama program bergantung pada paket yang dipilih: ${lamaPaketPrivat}, dan Bootcamp Online 24 sesi intensif. Pada les privat, setiap sesi berdurasi ${menitPerSesiPrivat} menit dan jadwalnya bisa diatur sesuai waktu luang Anda.`,
     },
     {
       question: "Apa perbedaan kelas SKD dan SKB?",

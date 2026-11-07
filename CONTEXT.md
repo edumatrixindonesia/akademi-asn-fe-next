@@ -39,7 +39,7 @@ The common reasons candidates fail the selection exam (e.g. poor time management
 _Avoid_: failure
 
 **Paket Program**:
-The tutoring packages offered for sale, shown as a section on every landing page. The private packages (Optima, Maxima, Ultima) can each be taken as Kelas Offline, Privat Home Visit, or Privat Online, at the same price. Bootcamp Online and tryout packages are available everywhere.
+The tutoring packages offered for sale, shown as a section on every landing page. The private packages (Optima, Maxima, Ultima) can each be taken as Kelas Offline, Privat Home Visit, or Privat Online. Each private package has two prices: the offline price covers Kelas Offline and Privat Home Visit, and the online price covers Privat Online. On the package cards, "Kelas Offline" also covers Privat Home Visit. Bootcamp Online and tryout packages are available everywhere.
 _Avoid_: pricing, plans
 
 **Kelas Offline**:

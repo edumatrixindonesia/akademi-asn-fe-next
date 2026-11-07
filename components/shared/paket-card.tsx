@@ -4,8 +4,7 @@ import { Button } from "@/components/ui/button";
 export type PaketCardProps = {
   name: string;
   sessions: string;
-  price?: string;
-  originalPrice?: string;
+  prices?: { label: string; amount: string }[];
   headerImage?: string;
   variant?: "offline" | "online";
   included: string[];
@@ -16,8 +15,7 @@ export type PaketCardProps = {
 const PaketCard = ({
   name,
   sessions,
-  price,
-  originalPrice,
+  prices,
   headerImage,
   variant = "offline",
   included,
@@ -45,24 +43,21 @@ const PaketCard = ({
       <h3 className="text-3xl font-bold">{name}</h3>
 
       <p
-        className={`text-sm font-medium py-1 px-3 rounded-full ${
+        className={`text-xs sm:text-sm font-medium py-1 px-3 rounded-full ${
           variant === "online" ? "bg-cta mt-4" : "bg-primary my-4"
         }`}
       >
         {sessions}
       </p>
 
-      {price && (
-        <>
-          {originalPrice && (
-            <del className="block text-sm">{originalPrice}</del>
-          )}
-
-          <p className="text-lg font-semibold bg-cta px-2.5 py-0.5 rounded-full">
-            {price}
-          </p>
-        </>
-      )}
+      {prices?.map(({ label, amount }) => (
+        <p
+          key={label}
+          className="text-xs sm:text-sm font-medium bg-cta py-1 px-3 rounded-full"
+        >
+          {label} {amount}
+        </p>
+      ))}
     </div>
 
     <div className="flex flex-1 flex-col p-6 pt-0">

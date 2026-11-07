@@ -2,7 +2,8 @@ import type { PaketProgramProps } from "@/components/sections/paket-program";
 import type { KonsultasiUrl } from "@/data/contact";
 import { formatRupiah } from "@/lib/utils";
 
-const offlineIncluded = [
+const privatIncluded = [
+  "Kelas Online atau Kelas Offline",
   "Sistem Belajar Kelas",
   "Progress Report",
   "Free Assesment",
@@ -13,32 +14,38 @@ const offlineIncluded = [
 // The Paket Program privat prices and session counts. FAQ copy derives from
 // these; see docs/business-facts.md.
 export const paketPrivat = [
-  { name: "Optima", sessions: 8, price: "Rp1.960.000", originalPrice: "Rp2.000.000", tryouts: 1 },
-  { name: "Maxima", sessions: 12, price: "Rp2.793.000", originalPrice: "Rp2.800.000", tryouts: 2 },
-  { name: "Ultima", sessions: 24, price: "Rp5.292.000", originalPrice: "Rp5.300.000", tryouts: 3 },
+  { name: "Optima", sessions: 10, onlinePrice: "Rp2.200.000", offlinePrice: "Rp2.500.000", tryouts: 1 },
+  { name: "Maxima", sessions: 14, onlinePrice: "Rp3.080.000", offlinePrice: "Rp3.430.000", tryouts: 2 },
+  { name: "Ultima", sessions: 20, onlinePrice: "Rp4.180.000", offlinePrice: "Rp4.650.000", tryouts: 3 },
 ] as const;
 
-const privatePrices = paketPrivat.map(({ price }) => Number(price.replace(/\D/g, "")));
+export const menitPerSesiPrivat = 90;
+
+const privatePrices = paketPrivat.flatMap(({ onlinePrice, offlinePrice }) =>
+  [onlinePrice, offlinePrice].map((price) => Number(price.replace(/\D/g, ""))),
+);
 export const bimbelPrivatPriceRange =
   `${formatRupiah(Math.min(...privatePrices))}–${formatRupiah(Math.max(...privatePrices))} (bimbel privat)`;
 
 export const paketProgram = (konsultasiUrl: KonsultasiUrl) =>
   ({
     title: "Paket Program Akademi ASN",
-    offlineTitle: "Program Bimbel Offline",
+    privatTitle: "Program Bimbel Privat",
     onlineTitle: "Program Bimbel Online & Tryout",
     backgroundImage: "/img/section/bg-bimbel-cpns-pppk-bumn.webp",
-    offlinePackages: paketPrivat.map(
-      ({ name, sessions, price, originalPrice, tryouts }) => ({
+    privatPackages: paketPrivat.map(
+      ({ name, sessions, onlinePrice, offlinePrice, tryouts }) => ({
         name,
-        sessions: `${sessions} Sesi Pembelajaran`,
-        price,
-        originalPrice,
+        sessions: `${sessions}x Sesi Belajar · ${menitPerSesiPrivat} Menit`,
+        prices: [
+          { label: "Online", amount: onlinePrice },
+          { label: "Offline", amount: offlinePrice },
+        ],
         headerImage: `/img/section/paket-${name.toLowerCase()}-bimbel-cpns-pppk-bumn-terbaik.webp`,
         included: [
-          `${sessions} Sesi Pembelajaran`,
+          `${sessions}x Sesi Belajar`,
           `Gratis Tryout ${tryouts}x`,
-          ...offlineIncluded,
+          ...privatIncluded,
         ],
         ctaLabel: "Tanyakan Kelas",
         ctaHref: konsultasiUrl(`Program ${name}`),
@@ -75,10 +82,10 @@ export const paketProgram = (konsultasiUrl: KonsultasiUrl) =>
     ],
   }) satisfies PaketProgramProps;
 
-// Privat Home Visit is available anywhere, so the offline heading can name
+// Privat Home Visit is available anywhere, so the privat heading can name
 // any location.
 export const paketProgramLocation = (konsultasiUrl: KonsultasiUrl, location: string) =>
   ({
     ...paketProgram(konsultasiUrl),
-    offlineTitle: `Program Bimbel Privat di ${location}`,
+    privatTitle: `Program Bimbel Privat di ${location}`,
   }) satisfies PaketProgramProps;

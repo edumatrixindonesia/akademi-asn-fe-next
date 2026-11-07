@@ -36,17 +36,24 @@ test("home HTML declares Indonesian and absolute canonical and Open Graph URLs",
   expect(html).toContain('alt="Pria berseragam cokelat menulis pada papan catatan"');
   expect(html).toContain("Konsultasi Pola Soal");
   expect(html).toMatch(/<h2\b[^>]*>Paket Program Akademi ASN<\/h2>/);
-  expect(html).toContain("Program Bimbel Offline");
+  expect(html).toContain("Program Bimbel Privat");
   expect(html).toContain("Program Bimbel Online &amp; Tryout");
-  for (const price of ["Rp1.960.000", "Rp2.000.000", "Rp2.793.000", "Rp2.800.000", "Rp5.292.000", "Rp5.300.000"]) {
-    expect(html).toContain(price);
+  for (const price of [
+    "Online Rp2.200.000", "Offline Rp2.500.000", "Online Rp3.080.000",
+    "Offline Rp3.430.000", "Online Rp4.180.000", "Offline Rp4.650.000",
+  ]) {
+    expect(html.replaceAll("<!-- -->", "")).toContain(price);
   }
+  expect(html).not.toContain("<del");
+  expect(html).toContain("10x Sesi Belajar");
+  expect(html).toContain("Kelas Online atau Kelas Offline");
+  expect(html).toContain("Tutor Datang ke Rumah/Office");
   expect([...html.matchAll(/>Tanyakan Kelas<\/a>/g)]).toHaveLength(6);
   expect(html.indexOf("Keunggulan Bimbel Akademi ASN")).toBeLessThan(
     html.indexOf("Program Persiapan Siap Lulus CPNS"),
   );
   expect(html.indexOf("Program Persiapan Siap Lulus CPNS")).toBeLessThan(
-    html.indexOf("Program Bimbel Offline"),
+    html.indexOf("Program Bimbel Privat"),
   );
   for (const item of [
     "Pengetahuan Umum", "Bahasa Indonesia", "Tes Kemampuan Dasar (TKD)",

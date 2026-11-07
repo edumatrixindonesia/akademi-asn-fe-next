@@ -11,9 +11,9 @@ Business numbers shown on the site. Code cannot verify that they stay true, so e
 | Sold: Modul Lolos CPNS & PPPK | 160 | `data/daftar-produk.ts` | Akademi ASN | 2026-10-08 | Dimas Maulana |
 | Sold: Paket Tryout SKD | 400 | `data/daftar-produk.ts` | Akademi ASN | 2026-10-08 | Dimas Maulana |
 | Sold: Buku Fisik BUMN Lengkap | 80 | `data/daftar-produk.ts` | Akademi ASN | 2026-10-08 | Dimas Maulana |
-| Paket Optima | Rp1.960.000, 8 sesi | `paketPrivat` in `data/paket-program.ts`; FAQ derives from it | Akademi ASN | 2026-10-05 | Dimas Maulana |
-| Paket Maxima | Rp2.793.000, 12 sesi | `paketPrivat` in `data/paket-program.ts`; FAQ derives from it | Akademi ASN | 2026-10-05 | Dimas Maulana |
-| Paket Ultima | Rp5.292.000, 24 sesi | `paketPrivat` in `data/paket-program.ts`; FAQ derives from it | Akademi ASN | 2026-10-05 | Dimas Maulana |
+| Paket Optima | Online Rp2.200.000, Offline Rp2.500.000, 10 sesi x 90 menit | `paketPrivat` in `data/paket-program.ts`; FAQ derives from it | Akademi ASN | 2026-11-07 | Dimas Maulana |
+| Paket Maxima | Online Rp3.080.000, Offline Rp3.430.000, 14 sesi x 90 menit | `paketPrivat` in `data/paket-program.ts`; FAQ derives from it | Akademi ASN | 2026-11-07 | Dimas Maulana |
+| Paket Ultima | Online Rp4.180.000, Offline Rp4.650.000, 20 sesi x 90 menit | `paketPrivat` in `data/paket-program.ts`; FAQ derives from it | Akademi ASN | 2026-11-07 | Dimas Maulana |
 
 Other single sources: office address and opening hours in `data/contact.ts` (`officeAddress`, `officeHours`), selection year in `data/tahun-seleksi.ts`.
 

@@ -20,10 +20,12 @@ test("Artikel JSON-LD dates include time and WIB, with update fallback and no dr
 
 test("LocalBusiness priceRange uses the published private tutoring prices", () => {
   const business = organizationJsonLd["@graph"].find((node) => node["@type"].includes("LocalBusiness"));
-  const prices = paketPrivat.map(({ price }) => Number(price.replace(/\D/g, "")));
+  const prices = paketPrivat
+    .flatMap(({ onlinePrice, offlinePrice }) => [onlinePrice, offlinePrice])
+    .map((price) => Number(price.replace(/\D/g, "")));
   const rupiah = (amount) => `Rp${amount.toLocaleString("id-ID")}`;
   expect(business.priceRange).toBe(`${rupiah(Math.min(...prices))}–${rupiah(Math.max(...prices))} (bimbel privat)`);
-  expect(business.priceRange).toBe("Rp1.960.000–Rp5.292.000 (bimbel privat)");
+  expect(business.priceRange).toBe("Rp2.200.000–Rp4.650.000 (bimbel privat)");
   expect(business.priceRange.length).toBeLessThan(100);
 });
 
