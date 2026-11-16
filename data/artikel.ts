@@ -55,7 +55,7 @@ export const artikel = [
       },
       {
         title:
-          "Karo Komlik BKN Wisudo Putro Nugroho: Poster Pembukaan CPNS 2026 yang Beredar Dipastikan HOAKS",
+          "Karo Komlik BKN: Wisudo Putro Nugroho: Poster Pembukaan CPNS 2026 yang Beredar Dipastikan HOAKS",
         url: "https://www.bkn.go.id/karo-komlik-bkn-wisudo-putro-nugroho-poster-pembukaan-cpns-2026-yang-beredar-dipastikan-hoaks/",
         publisher: "Badan Kepegawaian Negara",
         accessedAt: "2026-11-16",
@@ -136,9 +136,9 @@ export const artikel = [
     slug: "cpns-2027",
     title: "Seputar CPNS 2027 dari Jadwal Pendaftaran hingga Syarat Pelamar",
     description:
-      "CPNS 2027 kapan dibuka? Menteri PANRB pada 18 Agustus 2026 memperkirakan pendaftaran awal 2027. Cek status CPNS 2026, syarat, dan cara menghindari hoaks.",
+      "CPNS 2027 kapan dibuka? Per 16 November 2026, jadwal pendaftarannya belum ada di SSCASN. Cek kelompok yang diberi kesempatan, status CPNS 2026, dan syaratnya.",
     excerpt:
-      "Pada 18 Agustus 2026, Menteri PANRB memperkirakan pendaftaran CPNS 2027 dibuka awal 2027. Per 5 November 2026, jadwal, formasi, dan syaratnya belum ada di SSCASN.",
+      "Per 16 November 2026, jadwal pendaftaran CPNS 2027 belum ada di SSCASN. Siaran pers Kemendikdasmen dan Kementerian PANRB menyebut waktu seleksinya untuk kelompok tertentu, seperti guru PPPK penuh waktu.",
     kategori: ["informasi"],
     examTrack: ["cpns"],
     cover: {
@@ -148,94 +148,94 @@ export const artikel = [
     penulis: "dimas-maulana",
     status: "published",
     publishedAt: "2026-10-20",
-    updatedAt: "2026-11-05",
+    updatedAt: "2026-11-16",
     focusKeyword: "cpns 2027",
     related: [
+      "cpns-2026",
       "pppk-paruh-waktu-jadi-penuh-waktu",
       "perbedaan-cpns-dan-pppk",
-      "materi-tkp-cpns",
     ],
     references: [
+      {
+        title:
+          "Siaran Pers Nomor 378/HUMAS-MENPANRB/2026: Pemerintah dan DPR Sepakati Pengangkatan PPPK Paruh Waktu Menjadi Penuh Waktu, Rekrutmen CPNS Dibuka Tahun 2026",
+        url: "https://menpan.go.id/file-media/2026/11/08/final-press-release-penataan-dan-pengadaan-cpns.pdf",
+        publisher: "Kementerian PANRB",
+        accessedAt: "2026-11-16",
+      },
       {
         title:
           "Press Release: Mulai 2027, Pemerintah Buka Jalan Lebih Jelas bagi Karier Guru PPPK",
         url: "https://www.kemendikdasmen.go.id/siaran-pers/16055-mulai-2027-pemerintah-buka-jalan-lebih-jelas-bagi-karier-guru-pppk",
         publisher: "Kemendikdasmen",
-        accessedAt: "2026-11-05",
-      },
-      {
-        title: "Siap-siap Rekrutmen PNS! Menteri PANRB: Pendaftaran Awal 2027",
-        url: "https://www.cnbcindonesia.com/news/20260818201826-4-760436/siap-siap-rekrutmen-pns-menteri-panrb-pendaftaran-awal-2027",
-        publisher: "CNBC Indonesia",
-        accessedAt: "2026-11-05",
+        accessedAt: "2026-11-16",
       },
       {
         title: "SSCASN - Sistem Seleksi Calon Aparatur Sipil Negara",
         url: "https://sscasn.bkn.go.id/",
         publisher: "BKN",
-        accessedAt: "2026-11-05",
+        accessedAt: "2026-11-16",
       },
       {
         title:
           "Penataan Guru Jadi Fokus Pemerintah, Kepastian Status Disiapkan Mulai 2027",
         url: "https://www.kemendikdasmen.go.id/siaran-pers/16271-penataan-guru-jadi-fokus-pemerintah-kepastian-status-disiapkan-mulai-2027",
         publisher: "Kemendikdasmen",
-        accessedAt: "2026-11-05",
-      },
-      {
-        title:
-          "Pemerintah Siapkan Aturan PPPK Paruh Waktu Jadi PPPK, Tak Bisa Langsung Jadi PNS",
-        url: "https://surabaya.kompas.com/read/2026/10/19/071219578/pemerintah-siapkan-aturan-pppk-paruh-waktu-jadi-pppk-tak-bisa-langsung-jadi",
-        publisher: "Kompas.com",
-        accessedAt: "2026-11-05",
+        accessedAt: "2026-11-16",
       },
       {
         title:
           "Peraturan Menteri PANRB Nomor 6 Tahun 2024 tentang Pengadaan Pegawai Aparatur Sipil Negara",
         url: "https://jdih.menpan.go.id/dokumen-hukum/peraturan-menteri-pendayagunaan-aparatur-negara-dan-reformasi-birokrasi-nomor-6-tahun-2024-tentang-p-1849",
         publisher: "JDIH Kementerian PANRB",
-        accessedAt: "2026-11-05",
+        accessedAt: "2026-11-16",
       },
       {
         title:
           "Karo Komlik BKN: Wisudo Putro Nugroho: Poster Pembukaan CPNS 2026 yang Beredar Dipastikan HOAKS",
         url: "https://www.bkn.go.id/karo-komlik-bkn-wisudo-putro-nugroho-poster-pembukaan-cpns-2026-yang-beredar-dipastikan-hoaks/",
         publisher: "BKN",
-        accessedAt: "2026-11-05",
-      },
-      {
-        title:
-          "Lowongan CPNS Kemenag 2026 Belum Dibuka, Masyarakat Diminta Waspadai Info dan Link Rekrutmen Palsu",
-        url: "https://cahaya.kompas.com/aktual/26J10221814590/kemenag-belum-buka-lowongan-cpns-2026-masyarakat-diminta-waspadai-info-dan-link",
-        publisher: "Kompas.com",
-        accessedAt: "2026-11-05",
+        accessedAt: "2026-11-16",
       },
       {
         title: "Pemerintah Siapkan 4.770 Kebutuhan CPNS Sekolah Kedinasan 2026",
         url: "https://www.menpan.go.id/site/berita-terkini/pemerintah-siapkan-4-770-kebutuhan-cpns-sekolah-kedinasan-2026",
         publisher: "Kementerian PANRB",
-        accessedAt: "2026-11-05",
+        accessedAt: "2026-11-16",
       },
       {
         title:
           "Kepala BKN: Pantau Jadwalnya, Pendaftaran Seleksi Sekolah Kedinasan Tahun 2026 Dimulai 18 Agustus",
         url: "https://www.bkn.go.id/kepala-bkn-pantau-jadwalnya-pendaftaran-seleksi-sekolah-kedinasan-tahun-2026-dimulai-18-agustus/",
         publisher: "BKN",
-        accessedAt: "2026-11-05",
+        accessedAt: "2026-11-16",
       },
       {
         title:
           "Keputusan Menteri PANRB Nomor 321 Tahun 2024 tentang Nilai Ambang Batas SKD Pengadaan PNS Tahun Anggaran 2024",
         url: "https://jdih.menpan.go.id/dokumen-hukum/keputusan-menteri-pendayagunaan-aparatur-negara-dan-reformasi-birokrasi-nomor-321-tahun-2024-tentang-1851",
         publisher: "JDIH Kementerian PANRB",
-        accessedAt: "2026-11-05",
+        accessedAt: "2026-11-16",
       },
       {
         title:
           "Beredar Informasi Seleksi Kemenkes 2026, Prof. Zudan: Itu Hoaks, Rekrutmen ASN Terintegrasi dan Diawasi BKN",
         url: "https://www.bkn.go.id/beredar-informasi-seleksi-kemenkes-2026-prof-zudan-itu-hoaks-rekrutmen-asn-terintegrasi-dan-diawasi-bkn/",
         publisher: "BKN",
-        accessedAt: "2026-11-05",
+        accessedAt: "2026-11-16",
+      },
+      {
+        title:
+          "Peraturan Pemerintah (PP) Nomor 2 Tahun 2024 tentang Jenis dan Tarif atas Jenis Penerimaan Negara Bukan Pajak yang Berlaku pada Badan Kepegawaian Negara",
+        url: "https://peraturan.bpk.go.id/Details/274668/pp-no-2-tahun-2024",
+        publisher: "JDIH BPK",
+        accessedAt: "2026-11-16",
+      },
+      {
+        title: "Portal CAT BKN",
+        url: "https://cat.bkn.go.id/faq?page=25",
+        publisher: "BKN",
+        accessedAt: "2026-11-16",
       },
     ],
   },
