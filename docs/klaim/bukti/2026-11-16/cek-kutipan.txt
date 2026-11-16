@@ -1,0 +1,14 @@
+# Hasil cek kutipan otomatis, 16 November 2026
+
+## cpns-2026
+quotes 97 bad 0
+absence pendaftaran/jadwal/tanggal in PR: []
+
+## cpns-2027
+XX   menpan.go.id/file-media/2026/11/08/final :: pendaftaran
+XX   jdih.menpan.go.id/dokumen-hukum/peratura :: 1. Seleksi calon mahasiswa sekolah kedinasan ikatan dinas
+OK-OCR-punct a. tes wawasan kebangsaan (TWK); b. tes intelegensia umum (TIU); dan c
+OK-OCR-punct a. TWK terdiri dari 30 (tiga puluh) butir soal; b. TIU terdiri dari 35
+OK-OCR-punct a. 65 (enam puluh lima) untuk TWK; b. 80 (delapan puluh) untuk TIU; da
+OK-OCR-punct Seleksi Kompetensi Dasar (SKD) Pengadaan Pegawai Negeri Sipil Tahun An
+quotes 169 unmatched 2
