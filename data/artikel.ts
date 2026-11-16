@@ -4,6 +4,65 @@ import type { Artikel } from "@/lib/artikel-schema";
 // data/artikel/{slug}.mdx (lib/artikel.ts fails the build otherwise).
 export const artikel = [
   {
+    slug: "cpns-2026",
+    title: "Pemerintah Siapkan Rekrutmen CPNS 2026 untuk Program Prioritas",
+    description:
+      "CPNS 2026 akan dibuka untuk program prioritas Presiden. Cek formasi prioritas, status jadwal, syarat umum pelamar, dan tahapan seleksinya menurut sumber resmi.",
+    excerpt:
+      "Pemerintah akan membuka rekrutmen CPNS 2026 untuk mendukung program prioritas Presiden. Per 16 November 2026, jadwal tahapannya belum tercantum di beranda SSCASN.",
+    kategori: ["informasi"],
+    examTrack: ["cpns"],
+    cover: {
+      src: "/img/blog/cover-cpns-2026.jpg",
+      alt: "CPNS 2026: formasi prioritas, syarat, dan tahapan seleksi dari Akademi ASN",
+    },
+    penulis: "dimas-maulana",
+    status: "published",
+    publishedAt: "2026-11-16",
+    focusKeyword: "cpns 2026",
+    related: [
+      "perbedaan-cpns-dan-pppk",
+      "pppk-paruh-waktu-jadi-penuh-waktu",
+      "materi-tkp-cpns",
+    ],
+    references: [
+      {
+        title:
+          "Siaran Pers Nomor 378/HUMAS-MENPANRB/2026: Pemerintah dan DPR Sepakati Pengangkatan PPPK Paruh Waktu Menjadi Penuh Waktu, Rekrutmen CPNS Dibuka Tahun 2026",
+        url: "https://menpan.go.id/file-media/2026/11/08/final-press-release-penataan-dan-pengadaan-cpns.pdf",
+        publisher: "Kementerian PANRB",
+        accessedAt: "2026-11-16",
+      },
+      {
+        title:
+          "Peraturan Menteri PANRB Nomor 6 Tahun 2024 tentang Pengadaan Pegawai Aparatur Sipil Negara",
+        url: "https://peraturan.bpk.go.id/Details/294203/permen-panrb-no-6-tahun-2024",
+        publisher: "JDIH BPK",
+        accessedAt: "2026-11-16",
+      },
+      {
+        title: "SSCASN - Sistem Seleksi Calon Aparatur Sipil Negara",
+        url: "https://sscasn.bkn.go.id/",
+        publisher: "Badan Kepegawaian Negara",
+        accessedAt: "2026-11-16",
+      },
+      {
+        title:
+          "Pemerintah dan DPR Sepakat Tingkatkan Status PPPK Paruh Waktu Menjadi Penuh Waktu Mulai 2027",
+        url: "https://setneg.go.id/baca/index/pemerintah_dan_dpr_sepakat_tingkatkan_status_pppk_paruh_waktu_menjadi_penuh_waktu_mulai_2027",
+        publisher: "Kementerian Sekretariat Negara",
+        accessedAt: "2026-11-16",
+      },
+      {
+        title:
+          "Karo Komlik BKN Wisudo Putro Nugroho: Poster Pembukaan CPNS 2026 yang Beredar Dipastikan HOAKS",
+        url: "https://www.bkn.go.id/karo-komlik-bkn-wisudo-putro-nugroho-poster-pembukaan-cpns-2026-yang-beredar-dipastikan-hoaks/",
+        publisher: "Badan Kepegawaian Negara",
+        accessedAt: "2026-11-16",
+      },
+    ],
+  },
+  {
     slug: "gaji-pppk",
     title: "Rincian Gaji PPPK Golongan I hingga XVII beserta Tunjangannya",
     description:
