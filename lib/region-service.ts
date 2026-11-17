@@ -19,6 +19,7 @@ const isRegion = (value: unknown): value is Region =>
   isRecord(value) &&
   typeof value.kode === "string" &&
   typeof value.nama === "string" &&
+  typeof value.nama_singkat === "string" &&
   typeof value.slug === "string" &&
   typeof value.path === "string";
 
@@ -70,11 +71,7 @@ export const getLocationOrNotFound = async (slugs: string[]) => {
   return location;
 };
 
-export const getProvinces = async () =>
-  (await fetchRegionList("type=provinsi")).map((province) => ({
-    ...province,
-    nama: province.nama.trim(),
-  }));
+export const getProvinces = () => fetchRegionList("type=provinsi");
 
 // Only province pages are prerendered; the rest render on first visit (ISR).
 export const getProvinceParams = async () =>

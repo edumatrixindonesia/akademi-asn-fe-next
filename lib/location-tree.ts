@@ -1,4 +1,6 @@
-export type Region = { kode: string; nama: string; slug: string; path: string };
+// `nama_singkat` is the display name ("Bogor" for Kota Bogor); `nama` stays
+// full ("Kota Bandung") for a parent named next to its child.
+export type Region = { kode: string; nama: string; nama_singkat: string; slug: string; path: string };
 
 // The region-service lists that make up the page set: every province and
 // regency, districts of Kabupaten Besar, and villages of Jabodetabekjur.
@@ -29,8 +31,7 @@ export const buildLocationTree = (lists: RegionLists): LocationTree => {
   // Levels go top-down, so a region is added only when its parent is in the
   // page set. That drops, e.g., districts of a regency outside Kabupaten Besar.
   for (const level of [lists.provinsi, lists.kabupaten, lists.kecamatan, lists.kelurahan]) {
-    for (const raw of level) {
-      const region = { ...raw, nama: raw.nama.trim() };
+    for (const region of level) {
       const parent = level === lists.provinsi ? undefined : nodes.get(parentPath(region.path));
       if (level !== lists.provinsi && !parent) continue;
 
@@ -71,22 +72,22 @@ const villageType = (region: Region) =>
 export const locationLabel = ({ region, ancestors }: ResolvedLocation) => {
   const [, regency, district] = ancestors;
   if (district?.nama === region.nama) {
-    return `${villageType(region)} ${region.nama}, ${regency.nama}`;
+    return `${villageType(region)} ${region.nama_singkat}, ${regency.nama}`;
   }
   const parent = ancestors.at(-1);
-  return parent ? `${region.nama}, ${parent.nama}` : region.nama;
+  return parent ? `${region.nama_singkat}, ${parent.nama}` : region.nama_singkat;
 };
 
 // The location named in titles and h1s: provinces and regencies stand alone
 // (names are unique there), districts and villages keep the parent.
 export const headlineLabel = (location: ResolvedLocation) =>
-  location.ancestors.length < 2 ? location.region.nama : locationLabel(location);
+  location.ancestors.length < 2 ? location.region.nama_singkat : locationLabel(location);
 
 // What a region's level is called, indexed by its depth (ancestors.length).
 export const regionLevels = ["provinsi", "kabupaten/kota", "kecamatan", "kelurahan/desa"];
 
 // A link to a region's location page within a page family ("" for home).
 export const regionLink = (basePath: string) => (region: Region) => ({
-  name: region.nama,
+  name: region.nama_singkat,
   href: `${basePath}${region.path}`,
 });

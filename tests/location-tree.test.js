@@ -1,7 +1,19 @@
 import { expect, test } from "bun:test";
-import { buildLocationTree, locationLabel, resolveLocation } from "../lib/location-tree";
+import {
+  buildLocationTree,
+  headlineLabel,
+  locationLabel,
+  regionLink,
+  resolveLocation,
+} from "../lib/location-tree";
 
-const region = (kode, nama, path) => ({ kode, nama, slug: path.split("/").at(-1), path });
+const region = (kode, nama, path, nama_singkat = nama) => ({
+  kode,
+  nama,
+  nama_singkat,
+  slug: path.split("/").at(-1),
+  path,
+});
 
 // Lists as region-service returns them: kecamatan only for Kabupaten Besar,
 // kelurahan only for Jabodetabekjur.
@@ -12,10 +24,10 @@ const lists = {
     region("32", "Jawa Barat", "/jawa-barat"),
   ],
   kabupaten: [
-    region("11.01", "Kabupaten Aceh Selatan", "/aceh/kabupaten-aceh-selatan"),
-    region("31.72", "Kota Jakarta Utara ", "/dki-jakarta/kota-jakarta-utara"),
+    region("11.01", "Kabupaten Aceh Selatan", "/aceh/kabupaten-aceh-selatan", "Aceh Selatan"),
+    region("31.72", "Kota Jakarta Utara", "/dki-jakarta/kota-jakarta-utara", "Jakarta Utara"),
     region("32.04", "Kabupaten Bandung", "/jawa-barat/kabupaten-bandung"),
-    region("32.73", "Kota Bandung", "/jawa-barat/kota-bandung"),
+    region("32.73", "Kota Bandung", "/jawa-barat/kota-bandung", "Bandung"),
   ],
   kecamatan: [
     region("31.72.03", "Koja", "/dki-jakarta/kota-jakarta-utara/koja"),
@@ -89,9 +101,26 @@ test("paths outside the page set resolve to nothing", () => {
   expect(resolveLocation(tree, [])).toBeUndefined();
 });
 
-test("trailing whitespace in nama is trimmed", () => {
-  const found = resolveLocation(tree, ["dki-jakarta", "kota-jakarta-utara"]);
+test("a regency stands alone under its short name; a district keeps its parent's full name", () => {
+  const regency = resolveLocation(tree, ["jawa-barat", "kota-bandung"]);
+  const district = resolveLocation(tree, ["jawa-barat", "kota-bandung", "coblong"]);
 
-  expect(found.region.nama).toBe("Kota Jakarta Utara");
-  expect(locationLabel(found)).toBe("Kota Jakarta Utara, DKI Jakarta");
+  expect(headlineLabel(regency)).toBe("Bandung");
+  expect(locationLabel(regency)).toBe("Bandung, Jawa Barat");
+  expect(headlineLabel(district)).toBe("Coblong, Kota Bandung");
+  expect(regionLink("/bimbel-cpns")(regency.region)).toEqual({
+    name: "Bandung",
+    href: "/bimbel-cpns/jawa-barat/kota-bandung",
+  });
+});
+
+test("a district named after its regency's short name still reads with the full parent", () => {
+  const sleman = {
+    region: region("34.04.08", "Sleman", "/di-yogyakarta/kabupaten-sleman/sleman"),
+    ancestors: [
+      region("34", "DI Yogyakarta", "/di-yogyakarta"),
+      region("34.04", "Kabupaten Sleman", "/di-yogyakarta/kabupaten-sleman", "Sleman"),
+    ],
+  };
+  expect(locationLabel(sleman)).toBe("Sleman, Kabupaten Sleman");
 });

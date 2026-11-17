@@ -11,8 +11,8 @@ const pages = [
   },
   {
     path: "/bimbel-cpns/jawa-barat/kota-bandung",
-    title: "Bimbel CPNS Online &amp; Offline Terbaik di Kota Bandung - Persiapan SKD &amp; SKB | Akademi ASN",
-    h1: "Bimbel CPNS Online &amp; Offline Terbaik di Kota Bandung untuk Persiapan SKD &amp; SKB",
+    title: "Bimbel CPNS Online &amp; Offline Terbaik di Bandung - Persiapan SKD &amp; SKB | Akademi ASN",
+    h1: "Bimbel CPNS Online &amp; Offline Terbaik di Bandung untuk Persiapan SKD &amp; SKB",
   },
   {
     path: "/bimbel-pppk/jawa-barat/kota-bandung/coblong",
@@ -124,11 +124,11 @@ test("landing pages list the provinces in Jangkauan before CTA Footer", async ()
 
 test("a location page names the location in the intro and section variants", async () => {
   const html = await (await get("/bimbel-cpns/jawa-barat/kota-bandung")).text();
-  const label = "Kota Bandung, Jawa Barat";
+  const label = "Bandung, Jawa Barat";
 
   const intro = block(html, 'id="intro"');
-  expect(intro).toMatch(/<h2\b[^>]*>Bimbel CPNS di Kota Bandung<\/h2>/);
-  expect(intro).toContain("Peserta CPNS dari Kota Bandung menghadapi SKD");
+  expect(intro).toMatch(/<h2\b[^>]*>Bimbel CPNS di Bandung<\/h2>/);
+  expect(intro).toContain("Peserta CPNS dari Bandung menghadapi SKD");
   expect(html.indexOf('id="intro"')).toBeGreaterThan(html.indexOf("<h1"));
   expect(html.indexOf('id="intro"')).toBeLessThan(html.indexOf('id="keunggulan-title"'));
 

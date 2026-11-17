@@ -25,7 +25,7 @@ const jangkauanLanding = (track: string, basePath: string) => (provinces: Region
 const jangkauanLocation =
   (track: string, basePath: string) =>
   ({ region, ancestors, children }: ResolvedLocation) =>
-    jangkauan(track, basePath, region.nama, regionLevels[ancestors.length + 1], children);
+    jangkauan(track, basePath, region.nama_singkat, regionLevels[ancestors.length + 1], children);
 
 export const jangkauanHome = jangkauanLanding("Bimbel CPNS, PPPK & BUMN", "");
 export const jangkauanCpns = jangkauanLanding("Bimbel CPNS", "/bimbel-cpns");

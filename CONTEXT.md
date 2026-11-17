@@ -15,7 +15,7 @@ _Avoid_: program (reserved for Paket Program)
 A page that sells tutoring: the home page, an exam-track page (`/bimbel-cpns`, `/bimbel-pppk`, `/bimbel-bumn`), or any location variant of those. Every landing page contains the Paket Program and Testimoni sections.
 
 **Location page**:
-A landing page scoped to a region (province, regency, district, or village), with region names from region-service.
+A landing page scoped to a region (province, regency, district, or village), with region names from region-service. A region is named by its short name ("Bogor" for Kota Bogor, "Aceh Selatan" for Kabupaten Aceh Selatan, but "Kabupaten Bogor" stays full so it differs from Kota Bogor); a parent named next to its child keeps its full name ("Coblong, Kota Bandung").
 
 **Jangkauan**:
 The section that links to the location pages one level below the current page, within the same page family: provinces on the home and exam-track pages, then that region's regencies, districts, or villages on a location page. Pages at the deepest level show no Jangkauan.

@@ -193,7 +193,7 @@ const parentName = (region: ResolvedLocation["region"], parent?: ResolvedLocatio
 
 const baseText = ({ region, ancestors }: ResolvedLocation, texts: Record<string, string>) =>
   texts[region.kode] ??
-  `${region.nama} berada di ${parentName(region, ancestors.at(-1))}. Peserta dari ${region.nama} bisa belajar bersama Akademi ASN lewat kelas online atau les privat dengan tutor yang datang ke rumah.`;
+  `${region.nama_singkat} berada di ${parentName(region, ancestors.at(-1))}. Peserta dari ${region.nama_singkat} bisa belajar bersama Akademi ASN lewat kelas online atau les privat dengan tutor yang datang ke rumah.`;
 
 // Track sentences follow each page's base text on every location, down to
 // villages, so they only state what is true everywhere: the test content.
@@ -203,8 +203,8 @@ const introLocation =
   (track: string, trackSentence: (nama: string) => string) =>
   (location: ResolvedLocation, texts = introTexts) =>
     ({
-      title: `${track} di ${location.region.nama}`,
-      description: `${baseText(location, texts)} ${trackSentence(location.region.nama)}`,
+      title: `${track} di ${location.region.nama_singkat}`,
+      description: `${baseText(location, texts)} ${trackSentence(location.region.nama_singkat)}`,
     }) satisfies IntroProps;
 
 export const introHomeLocation = introLocation(
