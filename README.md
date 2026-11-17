@@ -71,8 +71,8 @@ hardcodes `/home/edumatrix/.local/bin/graphify`, and Claude Code names its memor
 folder after the project path, so the restored memory only loads at this path.
 
 ```bash
-mkdir -p ~/dimas-webdev/repo/cpns
-cd ~/dimas-webdev/repo/cpns
+mkdir -p ~/dimas-webdev/repo/clients/cpns
+cd ~/dimas-webdev/repo/clients/cpns
 git clone https://github.com/edumatrixindonesia/akademi-asn-fe-next.git
 cd akademi-asn-fe-next
 nvm install        # reads .nvmrc
