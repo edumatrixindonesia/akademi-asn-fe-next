@@ -1,0 +1,29 @@
+import type { Metadata } from "next";
+import HomeLocationPage from "@/components/pages/home-location";
+import { headlineLabel } from "@/lib/location-tree";
+import { getLocationOrNotFound, getProvinceParams } from "@/lib/region-service";
+import { openGraphBase } from "@/app/shared-metadata";
+
+export const generateStaticParams = getProvinceParams;
+
+export async function generateMetadata({
+  params,
+}: PageProps<"/[...locations]">): Promise<Metadata> {
+  const found = await getLocationOrNotFound((await params).locations);
+  const location = headlineLabel(found);
+  const url = `${found.region.path}`;
+
+  return {
+    title: {
+      absolute: `Bimbel CPNS PPPK BUMN Terbaik di ${location} | Akademi ASN`,
+    },
+    description: `Persiapkan seleksi CPNS, PPPK, dan Rekrutmen Bersama BUMN di ${location} bersama Akademi ASN. Tersedia kelas online & les privat, materi terarah, latihan soal, tryout CAT, dan pendampingan tutor.`,
+    alternates: { canonical: url },
+    openGraph: { ...openGraphBase, url },
+  };
+}
+
+export default async function Page({ params }: PageProps<"/[...locations]">) {
+  const found = await getLocationOrNotFound((await params).locations);
+  return <HomeLocationPage location={found} />;
+}

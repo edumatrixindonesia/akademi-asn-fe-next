@@ -117,7 +117,7 @@ Practical advice for passing the selection exam (e.g. prepare documents, practis
 A free chat with an Admin Konsultasi over WhatsApp. It is the primary call to action across the site.
 
 **Topik Konsultasi**:
-What the prefilled Konsultasi chat says the visitor wants to ask about, so the Admin Konsultasi knows where the click came from. It names the page ("Bimbel CPNS Akademi ASN", plus "wilayah <location>" on a location page) and, where the call to action is about one offer, that offer first ("Program Optima Bimbel CPNS Akademi ASN wilayah Coblong, Kota Bandung"). A call to action on a single product card (Daftar Produk, Produk Unggulan, Paket Hemat Komplit, the Tryout page buttons) names only the product ("Tryout CPNS"). On the Produk page, the general call to action names "Produk Akademi ASN". Tutoring calls to action on the Tryout and Produk pages name "Bimbel Akademi ASN". The navbar call to action always names "Bimbel Akademi ASN".
+What the prefilled Konsultasi chat says the visitor wants to ask about, so the Admin Konsultasi knows where the click came from. It names the page ("Bimbel CPNS Akademi ASN", plus "wilayah <location>" on a location page) and, where the call to action is about one offer, that offer first ("Program Optima Bimbel CPNS Akademi ASN wilayah Coblong, Kota Bandung"). A call to action on a single product card (Daftar Produk, Produk Unggulan, Paket Hemat Komplit, the Tryout page buttons) names only the product ("Tryout CPNS"). On the Produk page, the general call to action names "Produk Akademi ASN". Tutoring calls to action on the Tryout and Produk pages name "Bimbel Akademi ASN". The navbar call to action always names "Bimbel Akademi ASN". The Link Bio call to action names "Bimbel Akademi ASN dari Instagram", so the Admin Konsultasi knows the visitor came from the Instagram bio.
 _Avoid_: pesan, template
 
 **Admin Konsultasi**:
@@ -130,6 +130,10 @@ _Avoid_: shift, sesi
 
 **Nomor Call Center**:
 The one published Akademi ASN phone number, identical on every page and in structured data so local search sees a consistent NAP. Wherever it is shown, it links to that number on WhatsApp, never to the rotating Admin Konsultasi.
+
+**Link Bio**:
+The standalone page linked from the Akademi ASN Instagram bio. It sends visitors to Konsultasi, the exam-track landing pages, and the newest Artikel. It is not a landing page and is kept out of search results.
+_Avoid_: linktree, halaman links
 
 **Blog**:
 The part of the site that publishes Artikel. It is not a landing page.

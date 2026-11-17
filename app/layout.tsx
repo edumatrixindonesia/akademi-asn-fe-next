@@ -1,11 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import { GoogleAnalytics } from "@next/third-parties/google";
 import { Poppins } from "next/font/google";
-import Footer from "@/components/layouts/footer";
-import Navbar from "@/components/layouts/navbar";
-import { footerDefault } from "@/data/footer";
-import { navbarDefault } from "@/data/navbar";
-import { getKonsultasiUrl } from "@/data/contact";
 import { openGraphBase, organizationJsonLd, siteUrl } from "./shared-metadata";
 import "./globals.css";
 
@@ -54,7 +49,6 @@ export const viewport: Viewport = {
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
-  const konsultasiUrl = getKonsultasiUrl();
   const gaId = process.env.NEXT_PUBLIC_GA_ID;
 
   return (
@@ -67,11 +61,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
           }}
         />
 
-        <Navbar {...navbarDefault(konsultasiUrl)} />
-
         {children}
-
-        <Footer {...footerDefault()} />
       </body>
       {/* Unset in dev so local visits are not tracked. */}
       {gaId && <GoogleAnalytics gaId={gaId} />}

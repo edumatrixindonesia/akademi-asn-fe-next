@@ -38,13 +38,13 @@ Package manager is bun (not npm).
 ## Architecture
 
 ```
-app/                      # Routes only: thin page.tsx wrappers + `metadata`
+app/                      # Routes only: thin page.tsx wrappers + `metadata`; new routes go in (site)/ (ADR 0008)
 components/
   ui/                     # shadcn components only. Never edit by hand.
   shared/                 # Custom reusable pieces + small client leaves
   sections/               # Sections composed from ui/ + shared/
   pages/                  # Pages composed from sections/
-  layouts/                # Navbar, footer, etc. Rendered from app/layout.tsx
+  layouts/                # Navbar, footer, etc. Rendered from app/(site)/layout.tsx
 data/                     # Section props, one file per section
 public/                   # Static assets (e.g. logo-akademi-asn.webp)
 ```
