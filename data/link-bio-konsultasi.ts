@@ -5,7 +5,7 @@ import { getKonsultasiUrl, konsultasiPage } from "@/data/contact";
 export const linkBioKonsultasi = {
   title: "Chat Admin Konsultasi",
   label: "Konsultasi Gratis",
-  description: "Admin online, balas via WhatsApp",
+  description: "Via Whatsapp",
   ctaLabel: "Chat Sekarang",
   href: getKonsultasiUrl(`${konsultasiPage.home} dari Instagram`),
 } satisfies LinkBioKonsultasiProps;
