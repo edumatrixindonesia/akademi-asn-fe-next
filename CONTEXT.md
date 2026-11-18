@@ -15,7 +15,7 @@ _Avoid_: program (reserved for Paket Program)
 A page that sells tutoring: the home page, an exam-track page (`/bimbel-cpns`, `/bimbel-pppk`, `/bimbel-bumn`), or any location variant of those. Every landing page contains the Paket Program and Testimoni sections.
 
 **Location page**:
-A landing page scoped to a region (province, regency, district, or village), with region names from region-service. A region is named by its short name ("Bogor" for Kota Bogor, "Aceh Selatan" for Kabupaten Aceh Selatan, but "Kabupaten Bogor" stays full so it differs from Kota Bogor); a parent named next to its child keeps its full name ("Coblong, Kota Bandung").
+A landing page scoped to a region (province, regency, district, or village), with region names from region-service. A region is named by its short name ("Bogor" for Kota Bogor, "Aceh Selatan" for Kabupaten Aceh Selatan, but "Kabupaten Bogor" stays full so it differs from Kota Bogor); below the province level the parent's short name follows after a space ("Cengkareng Jakarta Barat"), unless the name already ends with it ("Gambir", "Kota Jambi").
 
 **Jangkauan**:
 The section that links to the location pages one level below the current page, within the same page family: provinces on the home and exam-track pages, then that region's regencies, districts, or villages on a location page. Pages at the deepest level show no Jangkauan.
@@ -117,7 +117,7 @@ Practical advice for passing the selection exam (e.g. prepare documents, practis
 A free chat with an Admin Konsultasi over WhatsApp. It is the primary call to action across the site.
 
 **Topik Konsultasi**:
-What the prefilled Konsultasi chat says the visitor wants to ask about, so the Admin Konsultasi knows where the click came from. It names the page ("Bimbel CPNS Akademi ASN", plus "wilayah <location>" on a location page) and, where the call to action is about one offer, that offer first ("Program Optima Bimbel CPNS Akademi ASN wilayah Coblong, Kota Bandung"). A call to action on a single product card (Daftar Produk, Produk Unggulan, Paket Hemat Komplit, the Tryout page buttons) names only the product ("Tryout CPNS"). On the Produk page, the general call to action names "Produk Akademi ASN". Tutoring calls to action on the Tryout and Produk pages name "Bimbel Akademi ASN". The navbar call to action always names "Bimbel Akademi ASN". The Link Bio call to action names "Bimbel Akademi ASN dari Instagram", so the Admin Konsultasi knows the visitor came from the Instagram bio.
+What the prefilled Konsultasi chat says the visitor wants to ask about, so the Admin Konsultasi knows where the click came from. It names the page ("Bimbel CPNS Akademi ASN", plus "wilayah <location>" on a location page) and, where the call to action is about one offer, that offer first ("Program Optima Bimbel CPNS Akademi ASN wilayah Coblong Bandung"). A call to action on a single product card (Daftar Produk, Produk Unggulan, Paket Hemat Komplit, the Tryout page buttons) names only the product ("Tryout CPNS"). On the Produk page, the general call to action names "Produk Akademi ASN". Tutoring calls to action on the Tryout and Produk pages name "Bimbel Akademi ASN". The navbar call to action always names "Bimbel Akademi ASN". The Link Bio call to action names "Bimbel Akademi ASN dari Instagram", so the Admin Konsultasi knows the visitor came from the Instagram bio.
 _Avoid_: pesan, template
 
 **Admin Konsultasi**:

@@ -29,11 +29,11 @@ test("Topik Konsultasi puts the offer before the page and the location last", ()
   );
   expect(
     topik(
-      pageKonsultasiUrl(konsultasiPage.cpns, "Coblong, Kota Bandung")(
+      pageKonsultasiUrl(konsultasiPage.cpns, "Coblong Bandung")(
         "Program Optima",
       ),
     ),
-  ).toBe("Program Optima Bimbel CPNS Akademi ASN wilayah Coblong, Kota Bandung");
+  ).toBe("Program Optima Bimbel CPNS Akademi ASN wilayah Coblong Bandung");
 });
 
 test(

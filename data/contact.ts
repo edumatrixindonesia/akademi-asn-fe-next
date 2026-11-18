@@ -79,7 +79,7 @@ export const getKonsultasiUrl = (topic: string = defaultKonsultasiTopic): string
 export type KonsultasiUrl = (offer?: string) => string;
 
 // Konsultasi links for one page: the offer a call to action is about comes
-// first ("Program Optima Bimbel CPNS Akademi ASN wilayah Coblong, Kota Bandung").
+// first ("Program Optima Bimbel CPNS Akademi ASN wilayah Coblong Bandung").
 export const pageKonsultasiUrl =
   (page: string, location?: string): KonsultasiUrl =>
   (offer) =>

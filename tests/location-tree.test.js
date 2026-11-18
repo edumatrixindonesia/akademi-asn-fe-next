@@ -52,7 +52,7 @@ test("a district resolves with its ancestors, children, and siblings", () => {
   expect(names(found.ancestors)).toEqual(["Jawa Barat", "Kota Bandung"]);
   expect(found.children).toEqual([]);
   expect(names(found.siblings)).toEqual(["Sukajadi", "Cidadap"]);
-  expect(locationLabel(found)).toBe("Coblong, Kota Bandung");
+  expect(locationLabel(found)).toBe("Coblong Bandung");
 });
 
 test("a province resolves with its regencies and the other provinces", () => {
@@ -70,25 +70,24 @@ test("a village resolves under Jabodetabekjur and is a leaf", () => {
   expect(names(found.ancestors)).toEqual(["DKI Jakarta", "Kota Jakarta Utara", "Koja"]);
   expect(found.children).toEqual([]);
   expect(names(found.siblings)).toEqual(["Tugu Utara", "Koja"]);
-  expect(locationLabel(found)).toBe("Lagoa, Koja");
+  expect(locationLabel(found)).toBe("Lagoa Koja");
 });
 
-test("a village named after its district is labelled with its type and the regency", () => {
+test("a region whose name ends with its parent's name stands alone", () => {
   const district = resolveLocation(tree, ["dki-jakarta", "kota-jakarta-utara", "koja"]);
   const village = resolveLocation(tree, ["dki-jakarta", "kota-jakarta-utara", "koja", "koja"]);
+  const jambi = region("15", "Jambi", "/jambi");
+  const kotaBandung = region("32.73", "Kota Bandung", "/jawa-barat/kota-bandung", "Bandung");
 
-  expect(locationLabel(district)).toBe("Koja, Kota Jakarta Utara");
-  expect(locationLabel(village)).toBe("Kelurahan Koja, Kota Jakarta Utara");
-
-  const desa = {
-    region: region("32.01.01.2001", "Cibinong", "/jawa-barat/kabupaten-bogor/cibinong/cibinong"),
-    ancestors: [
-      region("32", "Jawa Barat", "/jawa-barat"),
-      region("32.01", "Kabupaten Bogor", "/jawa-barat/kabupaten-bogor"),
-      region("32.01.01", "Cibinong", "/jawa-barat/kabupaten-bogor/cibinong"),
-    ],
-  };
-  expect(locationLabel(desa)).toBe("Desa Cibinong, Kabupaten Bogor");
+  expect(locationLabel(district)).toBe("Koja Jakarta Utara");
+  expect(locationLabel(village)).toBe("Koja");
+  expect(locationLabel({ region: region("15.71", "Kota Jambi", "/jambi/kota-jambi"), ancestors: [jambi] })).toBe("Kota Jambi");
+  expect(
+    locationLabel({
+      region: region("32.73.01", "Sumur Bandung", "/jawa-barat/kota-bandung/sumur-bandung"),
+      ancestors: [region("32", "Jawa Barat", "/jawa-barat"), kotaBandung],
+    }),
+  ).toBe("Sumur Bandung");
 });
 
 test("a regency outside Kabupaten Besar is a leaf", () => {
@@ -101,20 +100,20 @@ test("paths outside the page set resolve to nothing", () => {
   expect(resolveLocation(tree, [])).toBeUndefined();
 });
 
-test("a regency stands alone under its short name; a district keeps its parent's full name", () => {
+test("a regency headline stands alone; other labels add the parent's short name", () => {
   const regency = resolveLocation(tree, ["jawa-barat", "kota-bandung"]);
   const district = resolveLocation(tree, ["jawa-barat", "kota-bandung", "coblong"]);
 
   expect(headlineLabel(regency)).toBe("Bandung");
-  expect(locationLabel(regency)).toBe("Bandung, Jawa Barat");
-  expect(headlineLabel(district)).toBe("Coblong, Kota Bandung");
+  expect(locationLabel(regency)).toBe("Bandung Jawa Barat");
+  expect(headlineLabel(district)).toBe("Coblong Bandung");
   expect(regionLink("/bimbel-cpns")(regency.region)).toEqual({
     name: "Bandung",
     href: "/bimbel-cpns/jawa-barat/kota-bandung",
   });
 });
 
-test("a district named after its regency's short name still reads with the full parent", () => {
+test("a district named after its regency stands alone", () => {
   const sleman = {
     region: region("34.04.08", "Sleman", "/di-yogyakarta/kabupaten-sleman/sleman"),
     ancestors: [
@@ -122,5 +121,5 @@ test("a district named after its regency's short name still reads with the full 
       region("34.04", "Kabupaten Sleman", "/di-yogyakarta/kabupaten-sleman", "Sleman"),
     ],
   };
-  expect(locationLabel(sleman)).toBe("Sleman, Kabupaten Sleman");
+  expect(locationLabel(sleman)).toBe("Sleman");
 });

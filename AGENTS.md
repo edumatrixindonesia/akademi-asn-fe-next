@@ -15,7 +15,7 @@ This is a landing-page site for Akademi ASN. It targets people who search Google
 - Treat SEO as part of every change, not a later pass. Check `metadata`, the heading hierarchy (one `h1` per page), semantic HTML, and image `alt` text.
 - Keep page content in Server Components so it appears in the initial HTML that crawlers read.
 - Protect Core Web Vitals (LCP, CLS, INP). Avoid client JS on landing pages unless it is needed.
-- Location pages exist to capture local searches such as "bimbel cpns <city>". Hand-written unique copy is required for the 72 intro regions only. Template pages need a unique location name, hierarchy links, and Lokasi Lain (`docs/adr/0001-location-page-depth.md`).
+- Location pages exist to capture local searches such as "bimbel cpns <city>". Hand-written unique copy is required for the 72 intro regions only. Template pages need a unique location name, hierarchy links, and Lokasi Lain (`docs/adr/0001-location-page-depth.md`). The few location names that repeat because a region shares its parent's name are accepted; do not "fix" them (ADR 0001).
 
 ## Environment
 

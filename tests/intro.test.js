@@ -41,7 +41,7 @@ test("the home intro names all three tracks", () => {
   expect(intro.description).toContain("Jawa Barat berada di Indonesia.");
 });
 
-test("the template skips a parent that shares the region's name", () => {
+test("the template names a district parent with its level when it shares the region's name", () => {
   const koja = region("31.72.03", "Koja", "/dki-jakarta/kota-jakarta-utara/koja");
   const intro = introCpnsLocation(
     {
@@ -71,4 +71,18 @@ test("the template names a parent in full when it shares the region's short name
   );
 
   expect(intro.description).toContain("Sleman berada di Kabupaten Sleman.");
+});
+
+test("the template names the parent by its short name", () => {
+  const intro = introCpnsLocation(
+    {
+      region: region("32.73.21", "Coblong", "/jawa-barat/kota-bandung/coblong"),
+      ancestors: [jawaBarat, kotaBandung.region],
+      children: [],
+      siblings: [],
+    },
+    {},
+  );
+
+  expect(intro.description).toContain("Coblong berada di Bandung.");
 });

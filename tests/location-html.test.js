@@ -16,13 +16,13 @@ const pages = [
   },
   {
     path: "/bimbel-pppk/jawa-barat/kota-bandung/coblong",
-    title: "Bimbel PPPK Online &amp; Offline Terbaik di Coblong, Kota Bandung - Teknis Guru &amp; Kesehatan | Akademi ASN",
-    h1: "Bimbel PPPK di Coblong, Kota Bandung untuk Teknis Guru &amp; Tenaga Kesehatan",
+    title: "Bimbel PPPK Online &amp; Offline Terbaik di Coblong Bandung - Teknis Guru &amp; Kesehatan | Akademi ASN",
+    h1: "Bimbel PPPK di Coblong Bandung untuk Teknis Guru &amp; Tenaga Kesehatan",
   },
   {
     path: "/bimbel-bumn/dki-jakarta/kota-jakarta-pusat/gambir/gambir",
-    title: "Bimbel BUMN Terbaik di Kelurahan Gambir, Kota Jakarta Pusat - Persiapan Tes RBB TKD &amp; AKHLAK | Akademi ASN",
-    h1: "Bimbel BUMN di Kelurahan Gambir, Kota Jakarta Pusat untuk Persiapan Tes Rekrutmen Bersama BUMN",
+    title: "Bimbel BUMN Terbaik di Gambir - Persiapan Tes RBB TKD &amp; AKHLAK | Akademi ASN",
+    h1: "Bimbel BUMN di Gambir untuk Persiapan Tes Rekrutmen Bersama BUMN",
   },
 ];
 
@@ -92,7 +92,7 @@ test("a district page links up through the breadcrumb and sideways through Lokas
   expect(html).not.toContain('id="jangkauan"');
 
   const lokasiLain = block(html, 'id="lokasi-lain"');
-  expect(lokasiLain).toContain("Lokasi lain di Kota Bandung");
+  expect(lokasiLain).toContain("Lokasi lain di Bandung");
   expect(lokasiLain).toContain('href="/jawa-barat/kota-bandung/sukajadi"');
   expect(lokasiLain).not.toContain('href="/jawa-barat/kota-bandung/coblong"');
 });
@@ -124,7 +124,7 @@ test("landing pages list the provinces in Jangkauan before CTA Footer", async ()
 
 test("a location page names the location in the intro and section variants", async () => {
   const html = await (await get("/bimbel-cpns/jawa-barat/kota-bandung")).text();
-  const label = "Bandung, Jawa Barat";
+  const label = "Bandung Jawa Barat";
 
   const intro = block(html, 'id="intro"');
   expect(intro).toMatch(/<h2\b[^>]*>Bimbel CPNS di Bandung<\/h2>/);
@@ -190,9 +190,9 @@ test("location page Konsultasi links name the offer, page, and location", async 
   );
   for (const topic of [
     "Bimbel Akademi ASN",
-    "Bimbel PPPK Akademi ASN wilayah Coblong, Kota Bandung",
-    "Program Optima Bimbel PPPK Akademi ASN wilayah Coblong, Kota Bandung",
-    "kelas trial gratis Bimbel PPPK Akademi ASN wilayah Coblong, Kota Bandung",
+    "Bimbel PPPK Akademi ASN wilayah Coblong Bandung",
+    "Program Optima Bimbel PPPK Akademi ASN wilayah Coblong Bandung",
+    "kelas trial gratis Bimbel PPPK Akademi ASN wilayah Coblong Bandung",
   ]) {
     expect(topics).toContain(topic);
   }

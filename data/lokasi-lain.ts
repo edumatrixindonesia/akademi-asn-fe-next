@@ -7,8 +7,8 @@ const lokasiLainLocation =
     const parent = ancestors.at(-1);
     const level = regionLevels[ancestors.length];
     return {
-      title: parent ? `Lokasi lain di ${parent.nama}` : "Provinsi lain",
-      description: `${track} Akademi ASN juga tersedia di ${level} lain di ${parent?.nama ?? "Indonesia"}.`,
+      title: parent ? `Lokasi lain di ${parent.nama_singkat}` : "Provinsi lain",
+      description: `${track} Akademi ASN juga tersedia di ${level} lain di ${parent?.nama_singkat ?? "Indonesia"}.`,
       items: siblings.map(regionLink(basePath)),
     } satisfies LokasiLainProps;
   };

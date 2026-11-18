@@ -1,5 +1,5 @@
 // `nama_singkat` is the display name ("Bogor" for Kota Bogor); `nama` stays
-// full ("Kota Bandung") for a parent named next to its child.
+// full ("Kabupaten Sleman") for the Intro, where a parent shares the name.
 export type Region = { kode: string; nama: string; nama_singkat: string; slug: string; path: string };
 
 // The region-service lists that make up the page set: every province and
@@ -60,26 +60,20 @@ export const resolveLocation = (
   return { region: node.region, ancestors, children: node.children, siblings };
 };
 
-// Kemendagri village codes start with 1 for a kelurahan and 2 for a desa.
-const villageType = (region: Region) =>
-  region.kode.split(".")[3]?.startsWith("2") ? "Desa" : "Kelurahan";
-
-// District and village names repeat across regencies, so below the province
-// level the parent's name is added ("Coblong, Kota Bandung"). A village named
-// after its district takes its type and the regency instead ("Kelurahan Gambir,
-// Kota Jakarta Pusat"): "Gambir, Gambir" reads machine-made, and namesakes in
-// other regencies (Cipayung) would share a title.
+// Below the province level the parent's short name follows ("Cengkareng
+// Jakarta Barat"), matching how people type the query. A name that already
+// ends with its parent's ("Gambir" in Gambir, "Kota Jambi" in Jambi) stands
+// alone; the owner accepts the few duplicate titles this causes.
 export const locationLabel = ({ region, ancestors }: ResolvedLocation) => {
-  const [, regency, district] = ancestors;
-  if (district?.nama === region.nama) {
-    return `${villageType(region)} ${region.nama_singkat}, ${regency.nama}`;
-  }
-  const parent = ancestors.at(-1);
-  return parent ? `${region.nama_singkat}, ${parent.nama}` : region.nama_singkat;
+  const name = region.nama_singkat;
+  const parentName = ancestors.at(-1)?.nama_singkat;
+  return !parentName || name === parentName || name.endsWith(` ${parentName}`)
+    ? name
+    : `${name} ${parentName}`;
 };
 
 // The location named in titles and h1s: provinces and regencies stand alone
-// (names are unique there), districts and villages keep the parent.
+// (names are unique there); districts and villages use `locationLabel`.
 export const headlineLabel = (location: ResolvedLocation) =>
   location.ancestors.length < 2 ? location.region.nama_singkat : locationLabel(location);
 

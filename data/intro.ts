@@ -186,14 +186,19 @@ export const introTexts: Record<string, string> = {
   "96": "Provinsi Papua Barat Daya dibentuk pada tahun 2022 sebagai pemekaran dari Papua Barat, dengan ibu kota di Kota Sorong. Provinsi ini terdiri atas lima kabupaten dan satu kota, termasuk Kabupaten Raja Ampat. Peserta dari seluruh Papua Barat Daya bisa belajar bersama tutor Akademi ASN lewat Privat Home Visit atau kelas online.",
 };
 
-// A village named after its district names the district's level, so the
-// template never reads "Gambir berada di Gambir."
-const parentName = (region: ResolvedLocation["region"], parent?: ResolvedLocation["region"]) =>
-  !parent ? "Indonesia" : parent.nama === region.nama ? `Kecamatan ${parent.nama}` : parent.nama;
+// A parent sharing the region's name is named with its level, so the template
+// never reads "Gambir berada di Gambir." A regency's full `nama` carries its
+// level ("Kabupaten Sleman"); a district's (a village's parent) does not.
+const parentName = ({ region, ancestors }: ResolvedLocation) => {
+  const parent = ancestors.at(-1);
+  if (!parent) return "Indonesia";
+  if (parent.nama_singkat !== region.nama_singkat) return parent.nama_singkat;
+  return ancestors.length === 3 ? `Kecamatan ${parent.nama}` : parent.nama;
+};
 
-const baseText = ({ region, ancestors }: ResolvedLocation, texts: Record<string, string>) =>
-  texts[region.kode] ??
-  `${region.nama_singkat} berada di ${parentName(region, ancestors.at(-1))}. Peserta dari ${region.nama_singkat} bisa belajar bersama Akademi ASN lewat kelas online atau les privat dengan tutor yang datang ke rumah.`;
+const baseText = (location: ResolvedLocation, texts: Record<string, string>) =>
+  texts[location.region.kode] ??
+  `${location.region.nama_singkat} berada di ${parentName(location)}. Peserta dari ${location.region.nama_singkat} bisa belajar bersama Akademi ASN lewat kelas online atau les privat dengan tutor yang datang ke rumah.`;
 
 // Track sentences follow each page's base text on every location, down to
 // villages, so they only state what is true everywhere: the test content.
