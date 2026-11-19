@@ -4,6 +4,7 @@ import DaftarProduk from "@/components/sections/daftar-produk";
 import TipsLolos from "@/components/sections/tips-lolos";
 import PaketProgram from "@/components/sections/paket-program";
 import Keunggulan from "@/components/sections/keunggulan";
+import MasterTeacher from "@/components/sections/master-teacher";
 import Testimoni from "@/components/sections/testimoni";
 import CtaFooter from "@/components/sections/cta-footer";
 import MediaMassa from "@/components/sections/media-massa";
@@ -14,6 +15,7 @@ import { daftarProdukProduk } from "@/data/daftar-produk";
 import { tipsLolosProduk } from "@/data/tips-lolos";
 import { paketProgram } from "@/data/paket-program";
 import { keunggulan } from "@/data/keunggulan";
+import { masterTeacher } from "@/data/master-teacher";
 import { testimoni } from "@/data/testimoni";
 import { ctaFooter } from "@/data/cta-footer";
 import { mediaMassa } from "@/data/media-massa";
@@ -31,6 +33,7 @@ const Produk = () => {
       <TipsLolos {...tipsLolosProduk} />
       <PaketProgram {...paketProgram(konsultasiUrl)} />
       <Keunggulan {...keunggulan} />
+      <MasterTeacher {...masterTeacher} />
       <Testimoni {...testimoni} />
       <CtaFooter {...ctaFooter(konsultasiUrl)} />
       <MediaMassa {...mediaMassa} />

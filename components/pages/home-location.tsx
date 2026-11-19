@@ -2,6 +2,7 @@ import Breadcrumb from "@/components/sections/breadcrumb";
 import Jumbotron from "@/components/sections/jumbotron";
 import Intro from "@/components/sections/intro";
 import Keunggulan from "@/components/sections/keunggulan";
+import MasterTeacher from "@/components/sections/master-teacher";
 import Materi from "@/components/sections/materi";
 import PaketProgram from "@/components/sections/paket-program";
 import KelasOffline from "@/components/sections/kelas-offline";
@@ -21,6 +22,7 @@ import { breadcrumbHomeLocation } from "@/data/breadcrumb";
 import { jumbotronHomeLocation } from "@/data/jumbotron";
 import { introHomeLocation } from "@/data/intro";
 import { keunggulanLocation } from "@/data/keunggulan";
+import { masterTeacher } from "@/data/master-teacher";
 import { materiHome } from "@/data/materi";
 import { paketProgramLocation } from "@/data/paket-program";
 import { kelasOfflineLocation } from "@/data/kelas-offline";
@@ -66,6 +68,7 @@ const HomeLocation = ({ location }: HomeLocationProps) => {
       />
       <Intro {...introHomeLocation(location)} />
       <Keunggulan {...keunggulanLocation(label)} />
+      <MasterTeacher {...masterTeacher} />
       <Materi {...materiHome(konsultasiUrl)} />
       <PaketProgram {...paketProgramLocation(konsultasiUrl, label)} />
       {kelasOffline && <KelasOffline {...kelasOffline} />}

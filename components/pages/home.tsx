@@ -1,5 +1,6 @@
 import Jumbotron from "@/components/sections/jumbotron";
 import Keunggulan from "@/components/sections/keunggulan";
+import MasterTeacher from "@/components/sections/master-teacher";
 import Materi from "@/components/sections/materi";
 import PaketProgram from "@/components/sections/paket-program";
 import Seleksi from "@/components/sections/seleksi";
@@ -15,6 +16,7 @@ import Faq from "@/components/sections/faq";
 import MediaMassa from "@/components/sections/media-massa";
 import { jumbotronHome } from "@/data/jumbotron";
 import { keunggulan } from "@/data/keunggulan";
+import { masterTeacher } from "@/data/master-teacher";
 import { materiHome } from "@/data/materi";
 import { paketProgram } from "@/data/paket-program";
 import { seleksiBumn, seleksiCpns, seleksiPppk } from "@/data/seleksi";
@@ -48,6 +50,7 @@ const Home = ({ provinces }: HomeProps) => {
     <main className="flex-1">
       <Jumbotron {...jumbotronHome(konsultasiUrl)} />
       <Keunggulan {...keunggulan} />
+      <MasterTeacher {...masterTeacher} />
       <Materi {...materiHome(konsultasiUrl)} />
       <PaketProgram {...paketProgram(konsultasiUrl)} />
       <Seleksi {...seleksiCpns} />

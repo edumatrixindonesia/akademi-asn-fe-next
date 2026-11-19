@@ -3,6 +3,7 @@ import Jumbotron from "@/components/sections/jumbotron";
 import ProdukUnggulan from "@/components/sections/produk-unggulan";
 import PaketHematKomplit from "@/components/sections/paket-hemat-komplit";
 import Keunggulan from "@/components/sections/keunggulan";
+import MasterTeacher from "@/components/sections/master-teacher";
 import PaketProgram from "@/components/sections/paket-program";
 import Seleksi from "@/components/sections/seleksi";
 import PassingGrade from "@/components/sections/passing-grade";
@@ -17,6 +18,7 @@ import { jumbotronTryout } from "@/data/jumbotron";
 import { produkUnggulan } from "@/data/produk-unggulan";
 import { paketHematKomplit } from "@/data/paket-hemat-komplit";
 import { keunggulan } from "@/data/keunggulan";
+import { masterTeacher } from "@/data/master-teacher";
 import { paketProgram } from "@/data/paket-program";
 import { seleksiBumn, seleksiCpns, seleksiPppk } from "@/data/seleksi";
 import { passingGradeCpns } from "@/data/passing-grade";
@@ -38,6 +40,7 @@ const Tryout = () => {
       <ProdukUnggulan {...produkUnggulan(getKonsultasiUrl)} />
       <PaketHematKomplit {...paketHematKomplit(getKonsultasiUrl)} />
       <Keunggulan {...keunggulan} />
+      <MasterTeacher {...masterTeacher} />
       <PaketProgram {...paketProgram(konsultasiUrl)} />
       <Seleksi {...seleksiCpns} />
       <Seleksi {...seleksiPppk} />

@@ -1,6 +1,7 @@
 import Breadcrumb from "@/components/sections/breadcrumb";
 import Jumbotron from "@/components/sections/jumbotron";
 import Keunggulan from "@/components/sections/keunggulan";
+import MasterTeacher from "@/components/sections/master-teacher";
 import Materi from "@/components/sections/materi";
 import PaketProgram from "@/components/sections/paket-program";
 import Seleksi from "@/components/sections/seleksi";
@@ -17,6 +18,7 @@ import MediaMassa from "@/components/sections/media-massa";
 import { breadcrumbBumn } from "@/data/breadcrumb";
 import { jumbotronBumn } from "@/data/jumbotron";
 import { keunggulan } from "@/data/keunggulan";
+import { masterTeacher } from "@/data/master-teacher";
 import { materiBumn } from "@/data/materi";
 import { paketProgram } from "@/data/paket-program";
 import { seleksiBumn } from "@/data/seleksi";
@@ -43,6 +45,7 @@ const BimbelBumn = ({ provinces }: BimbelBumnProps) => {
       <Breadcrumb {...breadcrumbBumn} />
       <Jumbotron {...jumbotronBumn(konsultasiUrl)} />
       <Keunggulan {...keunggulan} />
+      <MasterTeacher {...masterTeacher} />
       <Materi {...materiBumn(konsultasiUrl)} />
       <PaketProgram {...paketProgram(konsultasiUrl)} />
       <Seleksi {...seleksiBumn} />

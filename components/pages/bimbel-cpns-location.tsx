@@ -2,6 +2,7 @@ import Breadcrumb from "@/components/sections/breadcrumb";
 import Jumbotron from "@/components/sections/jumbotron";
 import Intro from "@/components/sections/intro";
 import Keunggulan from "@/components/sections/keunggulan";
+import MasterTeacher from "@/components/sections/master-teacher";
 import Materi from "@/components/sections/materi";
 import PaketProgram from "@/components/sections/paket-program";
 import KelasOffline from "@/components/sections/kelas-offline";
@@ -21,6 +22,7 @@ import { breadcrumbCpnsLocation } from "@/data/breadcrumb";
 import { jumbotronCpnsLocation } from "@/data/jumbotron";
 import { introCpnsLocation } from "@/data/intro";
 import { keunggulanLocation } from "@/data/keunggulan";
+import { masterTeacher } from "@/data/master-teacher";
 import { materiCpns } from "@/data/materi";
 import { paketProgramLocation } from "@/data/paket-program";
 import { kelasOfflineLocation } from "@/data/kelas-offline";
@@ -58,6 +60,7 @@ const BimbelCpnsLocation = ({ location }: BimbelCpnsLocationProps) => {
       />
       <Intro {...introCpnsLocation(location)} />
       <Keunggulan {...keunggulanLocation(label)} />
+      <MasterTeacher {...masterTeacher} />
       <Materi {...materiCpns(konsultasiUrl)} />
       <PaketProgram {...paketProgramLocation(konsultasiUrl, label)} />
       {kelasOffline && <KelasOffline {...kelasOffline} />}
