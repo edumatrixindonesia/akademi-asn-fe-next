@@ -40,6 +40,13 @@ export const keunggulan = {
       description:
         "Gunakan materi dan latihan soal yang diperbarui untuk persiapan seleksi. Fokus belajar pada topik yang relevan dengan ujian Anda.",
     },
+    {
+      illustration:
+        "/img/section/kecocokan-belajar-tutor-dan-siswa-bimbel-les-privat-cpns-pppk-bumn-terbaik-di-indonesia.webp",
+      title: "Kecocokan Belajar antara Tutor dan Siswa",
+      description:
+        "Sampaikan preferensi tutor sebelum belajar dimulai. Jika kurang cocok di pertemuan pertama, Master Teacher akan diganti sampai Anda merasa cocok.",
+    },
   ],
 } satisfies KeunggulanProps;
 

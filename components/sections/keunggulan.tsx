@@ -22,26 +22,10 @@ const Keunggulan = ({ title, description, features }: KeunggulanProps) => (
         <p className="mt-3 text-foreground/80">{description}</p>
       </div>
 
-      <div className="grid grid-cols-1 gap-5 sm:grid-cols-4 lg:grid-cols-6">
-        {features.map((feature, index) => {
-          const isFourth = index === 3;
-          const isLast = index === features.length - 1;
-
-          return (
-            <div
-              key={feature.title}
-              className={
-                isLast
-                  ? "sm:col-span-2 sm:col-start-2 lg:col-start-auto"
-                  : isFourth
-                    ? "sm:col-span-2 lg:col-span-2 lg:col-start-2"
-                    : "sm:col-span-2 lg:col-span-2"
-              }
-            >
-              <FeatureCard {...feature} />
-            </div>
-          );
-        })}
+      <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
+        {features.map((feature) => (
+          <FeatureCard key={feature.title} {...feature} />
+        ))}
       </div>
     </div>
   </section>
