@@ -5,6 +5,11 @@ import nextTs from "eslint-config-next/typescript";
 const eslintConfig = defineConfig([
   ...nextVitals,
   ...nextTs,
+  // shadcn's generated carousel trips this rule; components/ui is never edited by hand.
+  {
+    files: ["components/ui/**"],
+    rules: { "react-hooks/set-state-in-effect": "off" },
+  },
   // Override default ignores of eslint-config-next.
   globalIgnores([
     // Default ignores of eslint-config-next:
