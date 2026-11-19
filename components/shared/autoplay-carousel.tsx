@@ -2,9 +2,7 @@
 
 import { useEffect, useState, type ReactNode } from "react";
 import Autoplay from "embla-carousel-autoplay";
-import { Pause, Play } from "lucide-react";
 import { cn } from "@/lib/utils";
-import { Button } from "@/components/ui/button";
 import {
   Carousel,
   CarouselContent,
@@ -19,55 +17,46 @@ const Controls = () => {
   const { api } = useCarousel();
   const [selected, setSelected] = useState(0);
   const [snaps, setSnaps] = useState(0);
-  const [playing, setPlaying] = useState(false);
 
   useEffect(() => {
     if (!api) return;
     const sync = () => {
       setSelected(api.selectedScrollSnap());
       setSnaps(api.scrollSnapList().length);
-      setPlaying(api.plugins().autoplay?.isPlaying() ?? false);
     };
     sync();
     // Autoplay starts here, not on init, so reduced-motion users never see it move.
     if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) api.plugins().autoplay?.play();
-    api.on("select", sync).on("reInit", sync).on("autoplay:play", sync).on("autoplay:stop", sync);
+    api.on("select", sync).on("reInit", sync);
     return () => {
-      api.off("select", sync).off("reInit", sync).off("autoplay:play", sync).off("autoplay:stop", sync);
+      api.off("select", sync).off("reInit", sync);
     };
   }, [api]);
-
-  const autoplay = api?.plugins().autoplay;
 
   return (
     <div className="mt-6 flex items-center justify-center gap-3">
       <CarouselPrevious className={controlClassName} aria-label="Sebelumnya" />
-      <div className="flex items-center gap-1.5">
+      <div className="flex items-center">
         {Array.from({ length: snaps }, (_, index) => (
+          // 24px hit area (WCAG target size) around a small visual dot.
           <button
             key={index}
             type="button"
             aria-label={`Ke slide ${index + 1}`}
             aria-current={index === selected}
             onClick={() => api?.scrollTo(index)}
-            className={cn(
-              "h-2 rounded-full transition-all",
-              index === selected ? "w-6 bg-primary" : "w-2 bg-primary/25 hover:bg-primary/50",
-            )}
-          />
+            className="group/dot flex h-6 min-w-6 items-center justify-center"
+          >
+            <span
+              className={cn(
+                "h-2 rounded-full transition-all",
+                index === selected ? "w-5 bg-primary" : "w-2 bg-primary/25 group-hover/dot:bg-primary/50",
+              )}
+            />
+          </button>
         ))}
       </div>
       <CarouselNext className={controlClassName} aria-label="Berikutnya" />
-      <Button
-        type="button"
-        variant="ghost"
-        size="icon-sm"
-        className="size-9 rounded-full"
-        aria-label={playing ? "Jeda putar otomatis" : "Putar otomatis"}
-        onClick={() => (playing ? autoplay?.stop() : autoplay?.play())}
-      >
-        {playing ? <Pause aria-hidden /> : <Play aria-hidden />}
-      </Button>
     </div>
   );
 };
@@ -75,6 +64,7 @@ const Controls = () => {
 type AutoplayCarouselProps = { label: string; children: ReactNode };
 
 // Slides come in as server-rendered `CarouselItem`s, so they are in the initial HTML.
+// Autoplay stops on hover, focus, and interaction, which stands in for a pause button.
 const AutoplayCarousel = ({ label, children }: AutoplayCarouselProps) => {
   const [autoplay] = useState(() => Autoplay({ delay: 4000, playOnInit: false, stopOnMouseEnter: true }));
   return (

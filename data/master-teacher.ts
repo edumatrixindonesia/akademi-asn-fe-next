@@ -15,7 +15,8 @@ const names = [
 
 export const masterTeacher = {
   title: "Master Teacher Akademi ASN",
-  description: "Dibimbing tutor berpengalaman lulusan S1 dan S2 PTN ternama.",
+  description:
+    "Persiapan CPNS, PPPK, dan BUMN dibimbing tutor berpengalaman lulusan S1 dan S2 PTN ternama.",
   role: "Master Teacher",
   teachers: names.map((name) => ({
     name,
