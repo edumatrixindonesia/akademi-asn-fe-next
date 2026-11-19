@@ -2,11 +2,13 @@ import type { Metadata } from "next";
 import HomePage from "@/components/pages/home";
 import { getProvinces } from "@/lib/region-service";
 import { openGraphBase } from "@/app/shared-metadata";
+import { jumbotronHomeText } from "@/data/jumbotron";
+
+const { title, description } = jumbotronHomeText();
 
 export const metadata: Metadata = {
-  title: { absolute: "Bimbel CPNS PPPK BUMN Terbaik | Akademi ASN" },
-  description:
-    "Persiapkan seleksi CPNS, PPPK, dan Rekrutmen Bersama BUMN bersama Akademi ASN. Tersedia kelas online & offline, materi terarah, latihan soal, tryout CAT, dan pendampingan tutor.",
+  title: { absolute: title },
+  description,
   alternates: { canonical: "/" },
   openGraph: { ...openGraphBase, url: "/" },
 };

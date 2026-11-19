@@ -4,11 +4,19 @@ import { hargaPaketTryoutSkd } from "@/data/daftar-produk";
 import { tahunSeleksi } from "@/data/tahun-seleksi";
 import { formatRupiah } from "@/lib/utils";
 
+// Home and Home location pages reuse this text as meta title and description.
+// Home omits the location; Home location pages pass it.
+export const jumbotronHomeText = (wilayah?: string) => {
+  const title = `Bimbel CPNS ${wilayah ? `di ${wilayah} ` : ""}Terbaik Bimbingan Persiapan CPNS PPPK BUMN`;
+  return {
+    title,
+    description: `${title}. Tersedia kelas online & les privat, materi terarah, latihan soal, tryout CAT, TWK, TIU, TKP, dan SKB lengkap.`,
+  };
+};
+
 export const jumbotronHome = (konsultasiUrl: KonsultasiUrl) =>
   ({
-    title: "Bimbel CPNS PPPK BUMN Terbaik untuk Persiapan Seleksi",
-    description:
-      "Persiapkan seleksi CPNS, PPPK, dan Rekrutmen Bersama BUMN melalui program belajar terarah, materi sesuai jenis tes, latihan soal, tryout, dan pendampingan tutor.",
+    ...jumbotronHomeText(),
     backgroundImage: "/img/section/bg-bimbel-cpns-pppk-bumn.webp",
     heroImage: "/img/section/bimbel-cpns-pppk-bumn-terbaik.webp",
     heroImageAlt: "Bimbel CPNS PPPK BUMN Terbaik",
@@ -75,8 +83,7 @@ export const jumbotronHomeLocation = (
 ) =>
   ({
     ...jumbotronHome(konsultasiUrl),
-    title: `Bimbel CPNS PPPK BUMN Terbaik di ${location} untuk Persiapan Seleksi`,
-    description: `Persiapkan seleksi CPNS, PPPK, dan Rekrutmen Bersama BUMN di ${location} melalui program belajar terarah, materi sesuai jenis tes, latihan soal, tryout, dan pendampingan tutor.`,
+    ...jumbotronHomeText(location),
     heroImageAlt: `Bimbel CPNS PPPK BUMN Terbaik di ${location}`,
   }) satisfies JumbotronProps;
 

@@ -6,13 +6,13 @@ const get = (path) => fetch(new URL(path, baseUrl));
 const pages = [
   {
     path: "/di-yogyakarta",
-    title: "Bimbel CPNS PPPK BUMN Terbaik di DI Yogyakarta | Akademi ASN",
-    h1: "Bimbel CPNS PPPK BUMN Terbaik di DI Yogyakarta untuk Persiapan Seleksi",
+    title: "Bimbel CPNS di DI Yogyakarta Terbaik Bimbingan Persiapan CPNS PPPK BUMN",
+    h1: "Bimbel CPNS di DI Yogyakarta Terbaik Bimbingan Persiapan CPNS PPPK BUMN",
   },
   {
     path: "/bimbel-cpns/jawa-barat/kota-bandung",
-    title: "Bimbel CPNS Online &amp; Offline Terbaik di Bandung - Persiapan SKD &amp; SKB | Akademi ASN",
-    h1: "Bimbel CPNS Online &amp; Offline Terbaik di Bandung untuk Persiapan SKD &amp; SKB",
+    title: "Bimbel CPNS di Bandung Bimbingan SKD [TWK, TIU &amp; TKP] CPNS",
+    h1: "Bimbel CPNS di Bandung Bimbingan SKD [TWK, TIU &amp; TKP] CPNS",
   },
   {
     path: "/bimbel-pppk/jawa-barat/kota-bandung/coblong",
