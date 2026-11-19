@@ -15,9 +15,9 @@ export async function generateMetadata({
 
   return {
     title: {
-      absolute: `Bimbel CPNS Online & Offline Terbaik di ${location} - Persiapan SKD & SKB | Akademi ASN`,
+      absolute: `Bimbel CPNS di ${location} Bimbingan SKD [TWK, TIU & TKP] CPNS`,
     },
-    description: `Ikuti bimbel CPNS online & offline terbaik di ${location} untuk persiapan SKD & SKB. Materi TWK, TIU, TKP, tryout CAT, pembahasan soal, dan pendampingan tutor.`,
+    description: `Bimbel CPNS di ${location} Terbaik. Bimbingan SKD [TWK, TIU & TKP] CPNS siap membantu lolos CPNS dengan metode Online dan ke Rumah sesuai kebutuhan Anda`,
     alternates: { canonical: url },
     openGraph: { ...openGraphBase, url },
   };

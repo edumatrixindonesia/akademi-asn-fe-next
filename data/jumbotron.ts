@@ -86,9 +86,9 @@ export const jumbotronCpnsLocation = (
 ) =>
   ({
     ...jumbotronCpns(konsultasiUrl),
-    title: `Bimbel CPNS Online & Offline Terbaik di ${location} untuk Persiapan SKD & SKB`,
-    description: `Kelas intensif persiapan tes CPNS di ${location} dengan materi TWK, TIU, TKP, latihan soal, tryout CAT, serta pendampingan tutor.`,
-    heroImageAlt: `Bimbel CPNS Online & Offline Terbaik di ${location}`,
+    title: `Bimbel CPNS di ${location} Bimbingan SKD [TWK, TIU & TKP] CPNS`,
+    description: `Bimbel CPNS di ${location} Terbaik. Bimbingan SKD [TWK, TIU & TKP] CPNS siap membantu lolos CPNS dengan metode Online dan ke Rumah sesuai kebutuhan Anda`,
+    heroImageAlt: `Bimbel CPNS di ${location}`,
   }) satisfies JumbotronProps;
 
 export const jumbotronPppkLocation = (
