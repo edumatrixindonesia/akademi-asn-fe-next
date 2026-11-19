@@ -14,8 +14,6 @@ const FeatureCard = ({ illustration, title, description }: FeatureCardProps) => 
       width={196}
       height={196}
       loading="lazy"
-      // Illustrations are animated WebP, which the optimizer passes through as-is.
-      unoptimized
       className="mx-auto mb-4 h-28 w-28"
     />
     <h3 className="text-lg font-semibold text-primary-dark">{title}</h3>
