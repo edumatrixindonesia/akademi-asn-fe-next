@@ -24,6 +24,10 @@ The section that links to the location pages one level below the current page, w
 The section on a location page that links to the other regions under the same parent, within the same page family (e.g. the other districts of Kota Bandung). Its heading names the parent ("Lokasi lain di Kota Bandung"), or reads "Provinsi lain" on a province page.
 _Avoid_: lokasi terdekat (siblings are not necessarily near)
 
+**Bimbel Lainnya**:
+The section that links to the other Akademi ASN offers: the three exam-track pages and the Tryout page, leaving out the page the visitor is on. On a location page, the exam-track links point to the same region in the other page families.
+_Avoid_: Program Unggulan (program is reserved for Paket Program; Unggulan is taken by Produk Unggulan)
+
 **Kabupaten Besar**:
 The regencies and cities whose districts get location pages. Every province and every regency gets a location page; districts only in Kabupaten Besar.
 
@@ -68,6 +72,10 @@ The news outlets that covered Akademi ASN, shown as a logo grid on every landing
 **Keunggulan**:
 The reasons to choose Akademi ASN tutoring (e.g. private 1-on-1 sessions, master teachers, flexible schedules), shown as a section on every landing page.
 _Avoid_: features, benefits
+
+**Master Teacher**:
+A tutor who teaches Akademi ASN students, an S1 or S2 graduate of a leading state university. Shown by name and photo in a section on every landing page and on the Tryout and Produk pages.
+_Avoid_: Master Tutor
 
 **Testimoni**:
 Reviews from past students, shown as a section on every landing page.
