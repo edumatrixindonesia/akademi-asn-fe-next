@@ -14,6 +14,7 @@ import Lembaga from "@/components/sections/lembaga";
 import Testimoni from "@/components/sections/testimoni";
 import Jangkauan from "@/components/sections/jangkauan";
 import LokasiLain from "@/components/sections/lokasi-lain";
+import BimbelLainnya from "@/components/sections/bimbel-lainnya";
 import CtaFooter from "@/components/sections/cta-footer";
 import ArtikelTerbaru from "@/components/sections/artikel-terbaru";
 import Faq from "@/components/sections/faq";
@@ -34,6 +35,7 @@ import { lembaga } from "@/data/lembaga";
 import { testimoni } from "@/data/testimoni";
 import { jangkauanBumnLocation } from "@/data/jangkauan";
 import { lokasiLainBumnLocation } from "@/data/lokasi-lain";
+import { bimbelLainnyaBumnLocation } from "@/data/bimbel-lainnya";
 import { ctaFooterLocation } from "@/data/cta-footer";
 import { faqBumn } from "@/data/faq";
 import { mediaMassa } from "@/data/media-massa";
@@ -72,6 +74,7 @@ const BimbelBumnLocation = ({ location }: BimbelBumnLocationProps) => {
       <Testimoni {...testimoni} />
       <Jangkauan {...jangkauanBumnLocation(location)} />
       <LokasiLain {...lokasiLainBumnLocation(location)} />
+      <BimbelLainnya {...bimbelLainnyaBumnLocation(location)} />
       <CtaFooter {...ctaFooterLocation(konsultasiUrl, label)} />
       <MediaMassa {...mediaMassa} />
       <Faq {...faqBumn} />

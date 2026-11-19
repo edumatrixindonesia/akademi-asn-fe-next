@@ -10,6 +10,7 @@ import PassingGrade from "@/components/sections/passing-grade";
 import TantanganSeleksi from "@/components/sections/tantangan-seleksi";
 import Lembaga from "@/components/sections/lembaga";
 import Testimoni from "@/components/sections/testimoni";
+import BimbelLainnya from "@/components/sections/bimbel-lainnya";
 import CtaFooter from "@/components/sections/cta-footer";
 import Faq from "@/components/sections/faq";
 import MediaMassa from "@/components/sections/media-massa";
@@ -25,6 +26,7 @@ import { passingGradeCpns } from "@/data/passing-grade";
 import { tantanganSeleksiHome } from "@/data/tantangan-seleksi";
 import { lembaga } from "@/data/lembaga";
 import { testimoni } from "@/data/testimoni";
+import { bimbelLainnyaTryout } from "@/data/bimbel-lainnya";
 import { ctaFooter } from "@/data/cta-footer";
 import { faqTryout } from "@/data/faq";
 import { mediaMassa } from "@/data/media-massa";
@@ -49,6 +51,7 @@ const Tryout = () => {
       <TantanganSeleksi {...tantanganSeleksiHome(konsultasiUrl)} />
       <Lembaga {...lembaga} />
       <Testimoni {...testimoni} />
+      <BimbelLainnya {...bimbelLainnyaTryout} />
       <CtaFooter {...ctaFooter(konsultasiUrl)} />
       <MediaMassa {...mediaMassa} />
       <Faq {...faqTryout} />

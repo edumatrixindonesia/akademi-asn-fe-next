@@ -6,6 +6,7 @@ import PaketProgram from "@/components/sections/paket-program";
 import Keunggulan from "@/components/sections/keunggulan";
 import MasterTeacher from "@/components/sections/master-teacher";
 import Testimoni from "@/components/sections/testimoni";
+import BimbelLainnya from "@/components/sections/bimbel-lainnya";
 import CtaFooter from "@/components/sections/cta-footer";
 import MediaMassa from "@/components/sections/media-massa";
 import Faq from "@/components/sections/faq";
@@ -17,6 +18,7 @@ import { paketProgram } from "@/data/paket-program";
 import { keunggulan } from "@/data/keunggulan";
 import { masterTeacher } from "@/data/master-teacher";
 import { testimoni } from "@/data/testimoni";
+import { bimbelLainnyaProduk } from "@/data/bimbel-lainnya";
 import { ctaFooter } from "@/data/cta-footer";
 import { mediaMassa } from "@/data/media-massa";
 import { faqProduk } from "@/data/faq";
@@ -35,6 +37,7 @@ const Produk = () => {
       <Keunggulan {...keunggulan} />
       <MasterTeacher {...masterTeacher} />
       <Testimoni {...testimoni} />
+      <BimbelLainnya {...bimbelLainnyaProduk} />
       <CtaFooter {...ctaFooter(konsultasiUrl)} />
       <MediaMassa {...mediaMassa} />
       <Faq {...faqProduk} />

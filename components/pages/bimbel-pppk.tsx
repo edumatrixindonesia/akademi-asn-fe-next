@@ -11,6 +11,7 @@ import TantanganSeleksi from "@/components/sections/tantangan-seleksi";
 import Lembaga from "@/components/sections/lembaga";
 import Testimoni from "@/components/sections/testimoni";
 import Jangkauan from "@/components/sections/jangkauan";
+import BimbelLainnya from "@/components/sections/bimbel-lainnya";
 import CtaFooter from "@/components/sections/cta-footer";
 import ArtikelTerbaru from "@/components/sections/artikel-terbaru";
 import Faq from "@/components/sections/faq";
@@ -28,6 +29,7 @@ import { tantanganSeleksiPppk } from "@/data/tantangan-seleksi";
 import { lembaga } from "@/data/lembaga";
 import { testimoni } from "@/data/testimoni";
 import { jangkauanPppk } from "@/data/jangkauan";
+import { bimbelLainnyaPppk } from "@/data/bimbel-lainnya";
 import { ctaFooter } from "@/data/cta-footer";
 import { faqPppk } from "@/data/faq";
 import { mediaMassa } from "@/data/media-massa";
@@ -55,6 +57,7 @@ const BimbelPppk = ({ provinces }: BimbelPppkProps) => {
       <Lembaga {...lembaga} />
       <Testimoni {...testimoni} />
       <Jangkauan {...jangkauanPppk(provinces)} />
+      <BimbelLainnya {...bimbelLainnyaPppk} />
       <CtaFooter {...ctaFooter(konsultasiUrl)} />
       <MediaMassa {...mediaMassa} />
       <Faq {...faqPppk} />

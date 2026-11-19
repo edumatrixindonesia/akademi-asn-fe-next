@@ -10,6 +10,7 @@ import TantanganSeleksi from "@/components/sections/tantangan-seleksi";
 import Lembaga from "@/components/sections/lembaga";
 import Testimoni from "@/components/sections/testimoni";
 import Jangkauan from "@/components/sections/jangkauan";
+import BimbelLainnya from "@/components/sections/bimbel-lainnya";
 import CtaFooter from "@/components/sections/cta-footer";
 import ArtikelTerbaru from "@/components/sections/artikel-terbaru";
 import Faq from "@/components/sections/faq";
@@ -34,6 +35,7 @@ import { tantanganSeleksiHome } from "@/data/tantangan-seleksi";
 import { lembaga } from "@/data/lembaga";
 import { testimoni } from "@/data/testimoni";
 import { jangkauanHome } from "@/data/jangkauan";
+import { bimbelLainnyaHome } from "@/data/bimbel-lainnya";
 import { ctaFooter } from "@/data/cta-footer";
 import { faqHome } from "@/data/faq";
 import { mediaMassa } from "@/data/media-massa";
@@ -66,6 +68,7 @@ const Home = ({ provinces }: HomeProps) => {
       <Lembaga {...lembaga} />
       <Testimoni {...testimoni} />
       <Jangkauan {...jangkauanHome(provinces)} />
+      <BimbelLainnya {...bimbelLainnyaHome} />
       <CtaFooter {...ctaFooter(konsultasiUrl)} />
       <MediaMassa {...mediaMassa} />
       <Faq {...faqHome} />
