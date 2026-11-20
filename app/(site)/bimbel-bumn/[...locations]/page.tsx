@@ -15,9 +15,9 @@ export async function generateMetadata({
 
   return {
     title: {
-      absolute: `Bimbel BUMN Terbaik di ${location} - Persiapan Tes RBB TKD & AKHLAK | Akademi ASN`,
+      absolute: `Bimbel BUMN di ${location} Terbaik - Persiapan Tes RBB TKD & AKHLAK | Akademi ASN`,
     },
-    description: `Persiapkan tes BUMN di ${location} bersama bimbel BUMN online & privat. Pelajari TKD, AKHLAK, Bahasa Inggris, Learning Agility, latihan soal, tryout, dan pembahasan.`,
+    description: `Bimbingan persiapkan tes BUMN di ${location} bersama bimbel BUMN online & privat. Pelajari TKD, AKHLAK, Bahasa Inggris, Learning Agility, latihan soal, tryout, dan pembahasan.`,
     alternates: { canonical: url },
     openGraph: { ...openGraphBase, url },
   };

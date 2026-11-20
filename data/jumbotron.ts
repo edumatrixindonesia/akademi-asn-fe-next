@@ -116,6 +116,6 @@ export const jumbotronBumnLocation = (
   ({
     ...jumbotronBumn(konsultasiUrl),
     title: `Bimbel BUMN di ${location} untuk Persiapan Tes Rekrutmen Bersama BUMN`,
-    description: `Persiapkan TKD, AKHLAK, Wawasan Kebangsaan, Bahasa Inggris, dan Learning Agility di ${location} bersama tutor melalui kelas online maupun les privat yang disesuaikan dengan kebutuhan belajar Anda.`,
+    description: `Bimbingan persiapkan seleksi BUMN di ${location}, TKD, AKHLAK, Wawasan Kebangsaan, Bahasa Inggris, dan Learning Agility bersama tutor melalui kelas online maupun les privat yang disesuaikan dengan kebutuhan belajar Anda.`,
     heroImageAlt: `Bimbel BUMN Terbaik di ${location}`,
   }) satisfies JumbotronProps;

@@ -7,7 +7,7 @@ import { jumbotronHomeText } from "@/data/jumbotron";
 const { title, description } = jumbotronHomeText();
 
 export const metadata: Metadata = {
-  title: { absolute: title },
+  title: { absolute: `${title} | Akademi ASN` },
   description,
   alternates: { canonical: "/" },
   openGraph: { ...openGraphBase, url: "/" },

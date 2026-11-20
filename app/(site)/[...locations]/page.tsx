@@ -16,7 +16,7 @@ export async function generateMetadata({
   const { title, description } = jumbotronHomeText(location);
 
   return {
-    title: { absolute: title },
+    title: { absolute: `${title} | Akademi ASN` },
     description,
     alternates: { canonical: url },
     openGraph: { ...openGraphBase, url },
