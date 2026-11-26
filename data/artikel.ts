@@ -148,7 +148,7 @@ export const artikel = [
     penulis: "dimas-maulana",
     status: "published",
     publishedAt: "2026-10-20",
-    updatedAt: "2026-11-16",
+    updatedAt: "2026-11-26",
     focusKeyword: "cpns 2027",
     related: [
       "cpns-2026",
